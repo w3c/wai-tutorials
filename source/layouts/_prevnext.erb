@@ -1,0 +1,8 @@
+<div role="navigation" id="tools">
+  <ul>
+    <% current_page.parent.children.sort_by { |resource| resource.data.order }.each do |item| %>
+      <% if item.data.order && item.data.order == current_page.data.order - 1 %><li class="prev"><%= nav_link(item.data.title, '/' + item.path, :relative => true) %></li><% end %>
+      <% if item.data.order && item.data.order-1 == current_page.data.order %><li class="next"><%= nav_link(item.data.title, '/' + item.path, :relative => true) %></li><% end %>
+    <% end %>
+  </ul>
+</div>

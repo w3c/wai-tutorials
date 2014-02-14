@@ -1,0 +1,162 @@
+---
+title: Table Summary
+status: draft
+order: 6
+---
+A summary is a brief description of how data is organized in a table. It
+may not be necessary in very simple tables but can be important where
+the data is laid out in an unusual order or the table structure is
+complex. In these cases, a summary should be provided to give brief
+orientation clues. In HTML4 the description can be marked up in the
+*summary* attribute of the \<table\> element, but as this is made
+obsolete in HTML5, the second example on this page shows how to put the
+description within the \<caption\> element.
+
+### Example 1: Table with data on both sides of a header column
+
+This table has an unusual table structure, the days of the week are in
+the center column, morning times to the left and afternoon times to the
+right. It has the *summary* attribute "Days are shown in the second
+column, morning opening hours in the first column and afternoon opening
+hours are in the third column", explaining the way the table is laid
+out.
+
+<%= sample_start %>
+
+{::nomarkdown}
+<table summary="Days are shown in the second column, morning opening hours in the first column and afternoon opening hours are in the third column">
+	<caption>
+		Surgery opening times
+	</caption>
+	<tr>
+		<th scope="col" id="m"> Morning</th>
+		<th scope="col" id="d">Day</th>
+		<th id="a"> Afternoon</th>
+	</tr>
+	<tr>
+		<td headers="m d1">Closed</td>
+		<th scope="row" id="d1"> Sunday</th>
+		<td headers="a d1"> 14:00 to 15:00</td>
+	</tr>
+	<tr>
+		<td headers="m d2"> 08:00 to 11:30</td>
+		<th id="d2"> Mon to Fri</th>
+		<td headers="a d2">15:00 to 19:00</td>
+	</th>
+	<tr>
+		<td headers="d3 m">09:30 to 12:00</td>
+		<th id="d3">Saturday</th>
+		<td headers="a d3">Closed</td>
+	</tr>
+</table>
+{:/nomarkdown}
+
+
+<%= sample_end %>
+
+
+### Code snippet
+
+` <table summary="Days are shown in the second column, morning opening hours in the first column and afternoon opening hours are in the third column"> `
+
+### Example 2: Table with a complex structure
+
+This is a complex table showing availability of different types and
+sizes of accommodation in two different locations. The \<caption\>
+element is used to describe the table layout as well as act as a heading
+for the table.
+
+Availability of holiday accommodation\
+ Column one has the location and size of accommodation, other columns
+show the type and number of properties available
+
+Studio
+
+Apt
+
+Chalet
+
+Villa
+
+Paris
+
+1 bedroom
+
+11
+
+20
+
+25
+
+23
+
+2 bedroom
+
+-
+
+43
+
+52
+
+32
+
+3 bedroom
+
+-
+
+13
+
+15
+
+40
+
+Rome
+
+1 bedroom
+
+13
+
+21
+
+22
+
+3
+
+2 bedroom
+
+-
+
+23
+
+43
+
+30
+
+3 bedroom
+
+-
+
+16
+
+32
+
+40
+
+Code snippet
+------------
+
+`<caption> Availability of holiday accommodation<br> <span>Column one has the location and size of accommodation, other columns show the type and number of properties available</span> </caption>`
+
+\
+
+**Note:** The technique used for example 2 is valid for both HTML4 and
+HTML5. @@@Should I also link here to the [other HTML5 table description
+techniques](http://www.w3.org/TR/html5/tabular-data.html#table-descriptions-techniques)?
+
+Related WCAG2.0 Technique
+-------------------------
+
+The following WCAG 2.0 technique was used in the example above:
+
+-   [H73: Using the summary attribute of the table
+    element](http://www.w3.org/TR/WCAG20-TECHS/H73)

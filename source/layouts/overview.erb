@@ -1,0 +1,37 @@
+<%= partial "layouts/header" %>
+<div class="navigation">
+  <nav role="navigation" aria-label="Navigate topics">
+    <div class="mainpage">
+      <%= nav_link('Tutorials home', '/index.html', :relative => true) %>
+    </div>
+    <h4 class="list-heading">
+      All Topics
+    </h4>
+    <ol>
+      <% sitemap.find_resource_by_path('/index.html').children.sort_by { |resource| resource.data.topic_order }.each do |item| %>
+      <li><%= nav_link(item.data.title, '/' + item.path, :relative => true) %></li>
+      <% end %>
+    </ol>
+  </div>
+  <div class="content <%= current_page.data.status %>">
+
+    <h2 class="tutorial-heading">
+      <%= current_page.data.title %>
+    </h2>
+
+    <% if current_page.data.status=="draft" %>
+
+    <div class="status">
+      <h3>Status - </h3>
+      <p>This is an in-progress, unapproved draft. Please send any suggestions, edits, or comments to the publicly-archived list: <a href="mailto:wai-eo-editors@w3.org">wai-eo-editors@w3.org.</a>
+      </p>
+    </div>
+    <% end %>
+
+    <div class="inner">
+
+      <%= yield %>
+    </div>
+  </div>
+</main>
+<%= partial "layouts/footer" %>

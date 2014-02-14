@@ -1,0 +1,55 @@
+---
+title: Groups of Images
+status: draft
+order: 7
+---
+
+A grouped collection of images is sometimes used to convey a single
+piece of information, for instance star images to denote a product
+rating. In this case, the text alternative for one of the images should
+convey the information conveyed by the entire group, all other images
+should have null (empty) *alt* attributes. For instance, as shown in
+example 1 below, the descriptive text alternative on one image should be
+"3.5 out of 5 stars", rather than "1 star", "Half star" or "Unfilled
+star" on each image.
+
+### Example 1: Group of images for rating
+
+This group of five images shows a product rating. There are five images,
+three filled stars, one half filled star and one empty star, indicating
+the overall rating. The text alternative for the first image is "Rating:
+3.5 out of 5 stars", all other images have a null (empty) *alt*
+attribute (alt="").
+
+<%= sample_start %>
+
+Rating: ![3.5 out of 5
+stars](star-full.png)![](../img/star-full.png)![](../img/star-full.png)![](star-half.png)![](star-empty.png)
+
+<%= sample_end %>
+
+<%= code_start %>
+
+~~~ html
+<p>
+	Rating:
+	<img src="star-full.jpg"  alt="3.5 out of 5 stars">
+	<img src="star-full.jpg"  alt="">
+	<img src="star-full.jpg"  alt="">
+	<img src="star-half.jpg"  alt="">
+	<img src="star-empty.jpg" alt="">
+</p>
+~~~
+
+<%= code_end %>
+
+### Related WCAG2.0 Techniques
+
+The following WCAG 2.0 techniques were used in the examples above:
+
+-   [G196: Using a text alternative on one item within a group of images
+    that describes all items in the
+    group](http://www.w3.org/TR/2012/NOTE-WCAG20-TECHS-20120103/G196)
+-   [H67: Using null alt text and no title attribute on img elements for
+    images that AT should
+    ignore](http://www.w3.org/TR/2012/NOTE-WCAG20-TECHS-20120103/H67.html)

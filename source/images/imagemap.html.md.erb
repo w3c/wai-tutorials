@@ -1,0 +1,73 @@
+---
+title: Image Maps
+status: draft
+order: 8
+---
+
+A client-side image map is an image divided into selectable regions
+defined by \<area\> elements ("hotspots") that allow user interaction,
+such as providing links to other pages. In this case, text alternatives
+are needed on the \<img\> element itself to convey the informative
+context and on each of the \<area\> elements to convey the link
+destination or the action that will be initiated if the link is
+followed.
+
+### Example 1: An organizational chart with links to individual pages
+
+The following organizational chart is used to provide links to each
+Director's home page. The text alternative for the image is "Board of
+Directors and related staff: ", and each linked \<area\> has a text
+alternative to identify the individual, such as "Davy Jones: Chairman".
+
+<%= sample_start %>
+
+![Board of directors and related staff: ](orgchart.png){:usemap="#Map"}
+
+<map name="Map" id="Map">
+	<area shape="rect" coords="176,14,323,58" href="../res/beyond" alt="Davy Jones: Chairman">
+	<area shape="rect" coords="81,75,226,114" href="../res/beyond" alt="Carole Brewster: Company Secretary">
+	<area shape="rect" coords="6,138,155,182" href="../res/beyond" alt="Harry H Brown: Marketing Director">
+	<area shape="rect" coords="175,138,323,182" href="../res/beyond" alt="Paula Holbein: Sales Director">
+	<area shape="rect" coords="345,136,496,186" href="../res/beyond" alt="Hugh Howard: Finance Director">
+</map>
+
+<%= sample_end %>
+
+<%= code_start %>
+
+~~~ html
+<img src="orgchart.png"
+     alt="Board of directors and related staff: "
+     usemap="#Map">
+<map id="Map" name="Map">
+	<area shape="rect"
+	      coords="176,14,323,58"
+	      href="…"
+	      alt="Davy Jones: Chairman">
+	[…]
+</map>
+~~~
+
+<%= code_end %>
+
+[Full code for Image map example ![(new
+window)](../img/new-win-icon.gif)](example1.txt)
+
+<%= notes_start %>
+
+**Note:** Image maps may not function correctly on some mobile devices
+if the coordinates for the areas are not scaled in the same proportion
+as the image. To overcome this you could provide redundant text links on
+the same page.
+
+<%= notes_end %>
+
+### Related WCAG2.0 Techniques
+
+
+The following WCAG 2.0 techniques were used in the examples above:
+
+-   [H37: Using alt attributes on img
+    elements](http://www.w3.org/TR/2012/NOTE-WCAG20-TECHS-20120103/H37.html)
+-   [H24: Providing text alternatives for the area elements of image
+    maps](http://www.w3.org/TR/2012/NOTE-WCAG20-TECHS-20120103/H24)

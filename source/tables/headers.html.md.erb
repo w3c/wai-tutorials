@@ -1,0 +1,167 @@
+---
+title: Header Cells
+status: draft
+order: 2
+---
+
+Header cells are those that contain the information that is critical to
+understanding the raw data in a table. For example the number 210 is
+meaningless on its own, but becomes information if you know that it is
+the data for a) the number of properties in b) a given street. The
+`<th>` element needs to be used for header cells so that they are
+distinguishable from and can be associated with the correct data `<td>`
+cells.
+
+### Example 1: Table with header cells in the top row only
+
+This table of concert dates only needs the cells in the top row marked
+up as `<th>` cells. This is partly because it is such a small table and
+partly because the data itself is distinctly different in each column.
+
+<%= sample_start %>
+
+**Concert dates:**
+
+<table>
+	<tr>
+		<th>Date</th>
+		<th>Event</th>
+		<th>Venue</th>
+	</tr>
+	<tr>
+		<td>12 Feb</td>
+		<td>Waltz with Strauss</td>
+		<td>Main Hall</td>
+	</tr>
+	<tr>
+		<td>24 Mar</td>
+		<td>The Obelisks</td>
+		<td>West Wing</td>
+	</tr>
+	<tr>
+		<td>14 Apr</td>
+		<td>The What</td>
+		<td>Main Hall</td>
+	</tr>
+</table>
+
+<%= sample_end %>
+
+<%= code_start %>
+
+~~~ html
+<table>
+	<tr>
+		<th>Date</th>
+		<th>Event</th>
+		<th>Venue</th>
+	</tr>
+	<tr>
+		<td>12 Feb</td>
+		<td>Waltz with Strauss</td>
+		<td>Main Hall</td>
+	</tr>
+	[…]
+</table>
+~~~
+
+<%= code_end %>
+
+[Full code for Example 1: Table with header cells in the top row only
+![(new window)](../img/new-win-icon.gif)](example1.txt)
+
+### Example 2: Table with header cells in the top row and first column
+
+This table of opening times has header information contained in both the
+top row and the first column. All header cells are marked up as `<th>`
+cells.
+
+<%= sample_start %>
+
+<table>
+	<tr>
+		<th>Delivery slots</th>
+		<th>Monday</th>
+		<th>Tuesday</th>
+		<th>Wednesday</th>
+		<th>Thursday</th>
+		<th>Friday</th>
+	</tr>
+	<tr>
+		<th>09:00 - 11:00</th>
+		<td>Closed</td>
+		<td>Open</td>
+		<td>Open</td>
+		<td>Closed</td>
+		<td>Closed</td>
+	</tr>
+	<tr>
+		<th>11:00 - 13:00</th>
+		<td>Open</td>
+		<td>Open</td>
+		<td>Closed</td>
+		<td>Closed</td>
+		<td>Closed</td>
+	</tr>
+	<tr>
+		<th>13:00 - 15:00</th>
+		<td>Open</td>
+		<td>Open</td>
+		<td>Open</td>
+		<td>Closed</td>
+		<td>Closed</td>
+	</tr>
+	<tr>
+		<th>15:00 - 17:00</th>
+		<td>Closed</td>
+		<td>Closed</td>
+		<td>Closed</td>
+		<td>Open</td>
+		<td>Open</td>
+	</tr>
+</table>
+
+<%= sample_end %>
+<%= code_start %>
+
+~~~ html
+<table>
+	<tr>
+		<th>Delivery slots</th>
+		<th>Monday</th>
+		<th>Tuesday</th>
+		<th>Wednesday</th>
+		<th>Thursday</th>
+		<th>Friday</th>
+	</tr>
+	<tr>
+		<th>09:00 - 11:00</th>
+		<td>Closed</td>
+		<td>Open</td>
+		<td>Open</td>
+		<td>Closed</td>
+		<td>Closed</td>
+	</tr>
+	<tr>
+		<th>11:00 - 13:00</th>
+		<td>Open</td>
+		<td>Open</td>
+		<td>Closed</td>
+		<td>Closed</td>
+		<td>Closed</td>
+	</tr>
+	[…]
+</table>
+~~~
+
+<%= code_end %>
+
+[Full code for Example 2: Table with header cells in the top row and
+first column ![(new window)](../img/new-win-icon.gif)](example5.txt)
+
+### Related WCAG2.0 Techniques
+
+The following WCAG 2.0 technique was used in the examples above:
+
+-   [H51 : Using table markup to present tabular
+    data](http://www.w3.org/TR/WCAG20-TECHS/H51)
