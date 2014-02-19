@@ -2,7 +2,13 @@
 <html class="no-js no-svg">
 <head>
   <meta charset="utf-8">
-  <title><%= current_page.data.title + " | WAI Tutorials" || "WAI Tutorials" %></title>
+  <title>
+  <%= current_page.data.title %>
+  <% if current_page.parent %>
+    <%= " | " + current_page.parent.data.title %>
+  <% end %>
+  | WAI Web Accessibility Tutorials
+  </title>
   <meta name="viewport" content="width=device-width">
   <%= stylesheet_link_tag "wai-act" %>
   <%= javascript_include_tag  "modernizr" %>
@@ -15,7 +21,6 @@
     </div>
   </header>
   <main role="main" class="with-side-menu">
-    <h1 class="page-title">
-      Web accessibility tutorials
-      <span class="subheading">Guidance on how to create websites that meet WCAG</span>
-    </h1>
+    <div class="page-title">
+      <%= nav_link('Web accessibility tutorials <span class="subheading">Guidance on how to create websites that meet WCAG</span>', '/index.html', :relative => true) %>
+    </div>

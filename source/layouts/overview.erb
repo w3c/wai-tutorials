@@ -1,23 +1,19 @@
 <%= partial "layouts/header" %>
 <div class="navigation">
-  <nav role="navigation" aria-label="Navigate topics">
-    <div class="mainpage">
-      <%= nav_link('Tutorials home', '/index.html', :relative => true) %>
-    </div>
-    <h4 class="list-heading">
-      All Topics
-    </h4>
-    <ol>
-      <% sitemap.find_resource_by_path('/index.html').children.sort_by { |resource| resource.data.topic_order }.each do |item| %>
-      <li><%= nav_link(item.data.title, '/' + item.path, :relative => true) %></li>
-      <% end %>
-    </ol>
+  <%= partial 'layouts/topic_navigation' %>
   </div>
   <div class="content <%= current_page.data.status %>">
 
-    <h2 class="tutorial-heading">
+     <header class="tutorial-heading">
+    <div class="breadcrumb">
+      <p>
+        &nbsp;
+      </p>
+    </div>
+    <h1>
       <%= current_page.data.title %>
-    </h2>
+    </h1>
+  </header>
 
     <% if current_page.data.status=="draft" %>
 
