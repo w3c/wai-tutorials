@@ -1,4 +1,86 @@
 ---
 title: Tables
+nav_title: Table concepts
 status: draft
+order: 1
+topic_order: 2
+type: intro
 ---
+
+All data tables need to have structural markup (coding) - elements and
+attributes that distinguish between header and data cells and define the
+relationships between them. . This tutorial shows you how to apply
+appropriate structural table markup. It includes the following pages:
+
+-   **[Header cells](headers/):** Identify the topic of a row or column –
+    header cells need to be marked up as `<th>` cells;
+-   **[Captions](caption/):** Describe the overall topic of a table —
+    best practice is to use the `<caption>` element;
+-   **[Scope of header cells](scope/):** Defines the range and
+    direction of the data cells to which a header applies – use
+    *scope*values that identify the appropriate scope;
+-   **[Multi-level tables](id-headers/):** A complex table structure
+    where a data cell needs to reference several levels of header cells – assign each header cell an *id* and each data cell a *headers*
+    attribute that lists all relevant header cell *id* values;
+-   **[Summary](summary/):** Provides orientation or navigation hints
+    in complex tables -- give a brief overview as the value of the
+    *summary* attribute of the `<table>` element or as part of the
+    table's `<caption>` element.
+
+<%= notes_start %>
+
+**Note:** The techniques in this tutorial should be applied only when a
+table is being used to display data in a grid: if a table is used for
+layout, (which is discouraged), none of these elements and attributes
+should be applied.
+
+<%= notes_end %>
+
+
+## Why is this important?
+
+When data is presented in tabular format, the position and styling of
+header cells may be sufficient to let most people know that these
+contain key information that gives meaning to related data cell content.
+However, the published style is not available to people who need to use
+personal stylesheets, and the position alone can't help screen readers
+identify the cells that contain the header information. The header cells
+need to be explicitly identified so that correct associations can be
+made to data cells. Correctly marked up tables mean that:
+
+-   **People using a screen reader:** Can have the row and column headers
+    read aloud as they navigate through the table. Screen readers speak
+    one cell at a time and can only distinguish header cells from data
+    cells if they are properly marked up.
+-   **People using personal stylesheets:** Can have header cells more
+    prominently styled for easy recognition when there is a difference
+    between the elements used for header and data cells.
+
+## How to make tables accessible
+
+Accessible tables have their header cells marked up using `<th>` and
+their data cells marked up using `<td>`. For more complex tables
+directional and explicit associations may be needed, using scope, id and
+headers attributes so that they can be interpreted by assistive
+technologies. The structural coding can also be used to represent data
+in different ways, for example by larger or differently colored text or
+backgrounds, Braille, speech and symbols. Many web authoring tools and
+content management systems (CMS) provide functions to define header
+cells during table creation without having to manually edit the code.
+Other formats available on the Web such as ODF, Word and PDF have
+similar mechanisms to mark-up table structure.
+
+## Relationship to WCAG 2.0
+
+Accessible tables are required by the following WCAG 2.0 Success
+Criterion:
+
+-   [1.3.1 Info and
+    Relationships](http://www.w3.org/WAI/WCAG20/quickref/#qr-content-structure-separation-programmatic):
+    Information, structure, and relationships conveyed through
+    presentation can be programmatically determined or are available in
+    text. (Level A)
+
+    More background in: [Understanding Success Criterion
+    1.3.1](http://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html).
+
