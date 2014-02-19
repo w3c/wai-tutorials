@@ -22,7 +22,7 @@ description, but only where it is important that the user understands
 the image construction. This page shows several possible approaches that
 can be used to provide both short and long descriptions.
 
-### Example 1: Image containing substantial information {#ex1}
+## Example 1: Image containing substantial information {#ex1}
 
 This bar chart of website visitor statistics has the short description "
 Bar chart showing monthly and total visitors for the first quarter 2013
@@ -39,7 +39,7 @@ text description](2013first_qtr_text)as well.
 ![Bar chart showing monthly and total visitors for the first quarter
 2013 for sites 1 to 3](../img/chart2.jpg)
 
-#### Approach 1: Providing a link to the long description via *longdesc* {#ap1}
+### Approach 1: Providing a link to the long description via *longdesc* {#ap1}
 
 Here the *longdesc* attribute contains the URI of the page containing
 the long description. Where appropriate, the *longdesc* value could
@@ -64,7 +64,7 @@ implementations that will make the *longdesc linked* long description
 location reachable by all users. In older or other browsers it is only
 available to screen reader users.
 
-#### Approach 2: A text link to the long description adjacent to the image {#ap2}
+### Approach 2: A text link to the long description adjacent to the image {#ap2}
 
 This approach provides a text link next to the image. The link text
 makes both the destination and the association with the image clear.
@@ -91,7 +91,7 @@ what browser or assistive technologies they may use.
 
 <%= notes_end %>
 
-#### Approach 3: Describing the location of the long description in the *alt* attribute {#ap3}
+### Approach 3: Describing the location of the long description in the *alt* attribute {#ap3}
 
 If the long description is on the same page as the image and its
 location can be accurately pinpointed by being described, the
@@ -110,7 +110,7 @@ location can be accurately pinpointed by being described, the
 
 <%= code_end %>
 
-#### Approach 4: Structurally associating the image and its adjacent long description (HTML5) {#ap4}
+### Approach 4: Structurally associating the image and its adjacent long description (HTML5) {#ap4}
 
 The HTML5 `<figure>` element can be used to enclose both the image and
 its long description. The long description, presented as headings, text
@@ -135,7 +135,7 @@ and a table, is explicitly associated to the image by using
 
 <%= code_end %>
 
-### Related WCAG2.0 Techniques
+## Related WCAG2.0 Techniques
 
 The following WCAG 2.0 techniques were used in the examples above:
 
