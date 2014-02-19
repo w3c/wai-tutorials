@@ -109,22 +109,36 @@ header[role=banner] {
 	}
 	li {
 		width: 45%;
+		line-height: 1.1;
+		box-sizing:border-box;
+		> span {
+			display:inline-block;
+			padding: .25em 0;
+			.dir {
+				font-size: 0.75em;
+				text-align: left;
+				display: block;
+			}
+		}
 		a {
 			display:block;
-			padding: .25em;
 			text-decoration: none;
+			position: relative;
 			&:hover, &:focus {
 				text-decoration: underline;
 			}
 			&:before, &:after {
-				color: #666;
 				font-size: 0.75em;
 				content: '';
+				position: absolute;
+				bottom:.25em;
 			}
 		}
 		&.prev {
 			float:left;
+			padding-left: 1em;
 			a:before {
+				left: -1.25em;
 				@extend .icon;
 				@extend .icon-arrow-left;
 				@extend .icon-with-visible-text;
@@ -133,7 +147,9 @@ header[role=banner] {
 		&.next {
 			float:right;
 			text-align: right;
+			padding-right: 1em;
 			a:after {
+				right: -1.25em;
 				@extend .icon;
 				@extend .icon-arrow-right;
 				@extend .icon-with-visible-text-before;
@@ -308,7 +324,7 @@ a {
 			width: 100%;
 			float: left;
 			@include generate_grid_positions(li, 4);
-			@include background(linear-gradient(to bottom, lighten(#036, 10%), #036));
+			@include background(linear-gradient(top, lighten(#036, 10%), #036));
 			li {
 				@include column(4);
 				margin-bottom: 0 !important;
@@ -330,7 +346,7 @@ a {
 				&.current {
 					position:relative;
 					overflow: visible;
-					@include background(linear-gradient(to bottom, #360, lighten(#360, 10%)));
+					@include background(linear-gradient(top, #360, lighten(#360, 10%)));
 					&:after {
 						position: absolute;
 						display: inline-block;
@@ -553,7 +569,7 @@ a {
 		clear: both;
 		float: left;
 		padding: 2em 0 1em;
-		@include background(linear-gradient(to bottom, #999, #fff 1em));
+		@include background(linear-gradient(top, #999, #fff 1em));
 	}
 	h2 {
 		margin-top:0;
@@ -809,7 +825,7 @@ select {
 // Buttons
 
 .btn-primary {
-	@include background(linear-gradient(to bottom, lighten(#036, 10%), #036));
+	@include background(linear-gradient(top, lighten(#036, 10%), #036));
 	color: #fff;
 	font-weight: normal;
 	font-size: 1.25em;
