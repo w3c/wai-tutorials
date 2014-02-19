@@ -42,8 +42,12 @@ activate :livereload
 helpers do
   def nav_link(link_text, url, options = {})
     options[:class] ||= ""
-    options[:class] << " current" if url == '/' + current_page.path
-    link_to(link_text, url, options)
+    if url == '/' + current_page.path
+      options[:class] << " current"
+      '<span class="current-a"><span class="visuallyhidden">Current: </span>' + link_text + '</span>'
+    else
+      link_to(link_text, url, options)
+    end
   end
 
   def code_start(status = "", title = "")
