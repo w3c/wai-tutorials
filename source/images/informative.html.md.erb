@@ -7,28 +7,26 @@ order: 2
 Informative images are those that convey a simple concept or information
 that can be expressed in a short phrase or sentence. In this case, the
 text alternative needs to convey the meaning or identification that is
-visually apparent, which isn't normally a literal description of the
+visually apparent, which isn’t normally a literal description of the
 image. In some situations a detailed literal description may be needed,
 but only where the composition of the image is all or part of the
 information being conveyed. Whether to treat an image as informative or
 [decorative](../decorative/) is a judgement that only the author can make,
 based on the reason for including the image on the page.
 
-## Example 1: Image used for identification
-{:#ex1}
+## Image used for identification
+{:.ex}
 
 This example shows two images, one of a telephone, one of a fax machine.
 Each image is followed by a phone number. Consistent with the visual
-presentation the text alternatives "Telephone: " and "Fax: " are used to
+presentation the text alternatives “Telephone:” and “Fax:” are used to
 identify which number is which.
 
-<%= sample_start('todo') %>
+<%= sample_start %>
 
-![Telephone: ](../img/placeholder.gif) 0123 456 7890 \
- @@@icon of a phone needed@@@\
+![Telephone:](phone.png){:style="vertical-align:middle;"} 0123 456 7890
 
-![Fax: ](../img/placeholder.gif) 0123 456 7891 \
- @@@icon of a fax needed@@@\
+![Fax:](fax.png){:style="vertical-align:middle;"} 0123 456 7891
 
 <%= sample_end %>
 
@@ -36,23 +34,23 @@ identify which number is which.
 
 ~~~ html
 <p>
-	<img src="../img/phone.gif" alt="Telephone: "> 0123 456 7890
+	<img src="phone.png" alt="Telephone:"> 0123 456 7890
 </p>
 <p>
-	<img src="../img/fax.gif" alt="Fax: ">  0123 456 7891
+	<img src="fax.png" alt="Fax:"> 0123 456 7891
 </p>
 ~~~
 
 <%= code_end %>
 
-## Example 2: Image with informative action
-{:#ex2}
+## Image with informative action
+{:.ex}
 
 The following image shows a dog wearing a bell. It supplements the
 adjacent text that explains the purpose of this bell. A short text
 alternative is sufficient to describe the information that is visually
 evident but not explained in the text; in this case the text alternative
-is "Dog with a bell attached to its collar.".
+is “Dog with a bell attached to its collar.”.
 
 <%= sample_start %>
 
@@ -73,22 +71,22 @@ is "Dog with a bell attached to its collar.".
 
 <%= notes_start %>
 
-**Note:** If the text included an explanation of how the dog wears a bell, the image might be considered [decorative](decorative). As this isn't mentioned in the text, the image is deemed to be informative.
+**Note:** If the text included an explanation of how the dog wears a bell, the image might be considered [decorative](../decorative/). As this isn’t mentioned in the text, the image is deemed to be informative.
 
 <%= notes_end %>
 
-## Example 3: Image conveying succinct information
-{:#ex3}
+## Image conveying succinct information
+{:.ex}
 
 This simple diagram illustrates an anti-clockwise direction for
 unscrewing a bottle top or cap. The information can be described in a
-short sentence, so the text alternative "Anti-clockwise diagram: Turn
-the cap from right to left" is given in the *alt* attribute.
+short sentence, so the text alternative “Anti-clockwise diagram: Turn
+the cap from right to left” is given in the `alt` attribute.
 
 <%= sample_start('todo') %>
 
 ![Anti-clockwise diagram: Turn the cap from right to left.
-](placeholder.gif)Turn counter-clockwise to unscrew the cap. \
+](placeholder.gif)Turn counter-clockwise to unscrew the cap.
  @@@ image needed (bottle top or cap with anti-clockwise arrow).
 
 <%= sample_end %>
@@ -97,7 +95,7 @@ the cap from right to left" is given in the *alt* attribute.
 
 ~~~ html
 <p>
-	<img src="../img/cap.png" alt="Anti-clockwise diagram: Turn the cap from right to left. ">
+	<img src="cap.png" alt="Anti-clockwise diagram: Turn the cap from right to left. ">
 </p>
 ~~~
 
@@ -105,31 +103,30 @@ the cap from right to left" is given in the *alt* attribute.
 
 <%= notes_start %>
 
-Note 1: An alternative technique would be to include all of the
+**Note 1:** An alternative technique would be to include all of the
 information in the visible text, using the image as a redundant
-([decorative](decorative)) effect, in which case the visual text could
-be ["Turn counter-clockwise (right to left) to unscrew the cap". This
+([decorative](../decorative/)) effect, in which case the visual text could
+be “Turn counter-clockwise (right to left) to unscrew the cap”. This
 makes all information available in text, while providing additional
 visual clues for people who find text more difficult to understand.
 
-**Not 2e:**If the information conveyed by the image is substantial, use
-one of the approaches described in [Complex images](complex).
+**Note 2:** If the information conveyed by the image is substantial, use
+one of the approaches described in [Complex images](../complex/).
 
 <%= notes_end %>
 
-## Example 4: Image conveying an impression or emotion
-{:#ex4}
+## Image conveying an impression or emotion
+{:.ex}
 
 This photograph shows a smiling family group, it is a stock image so the
 individuals don't need to be identified. It is being used to give the
 impression that the website or the company it represents is family
-friendly. The text alternative is "We're family friendly" as this best
+friendly. The text alternative is “We're family friendly” as this best
 describes the intended impression.
 
-<%= sample_start('todo') %>
+<%= sample_start %>
 
-![We're family friendly. ](../img/placeholder.gif)@@@ image needed
-(smiling family group).
+![We're family friendly.](family.jpg)
 
 <%= sample_end %>
 
@@ -137,7 +134,7 @@ describes the intended impression.
 
 ~~~ html
 <p>
-	<img src="../img/family.png" alt="We're family friendly. ">
+	<img src="family.jpg" alt="We're family friendly. ">
 </p>
 ~~~
 
@@ -145,20 +142,16 @@ describes the intended impression.
 
 <%= notes_start %>
 
-**Note:** If the purpose of this image was simply to improve the look of
-a page rather than convey an impression, it could be deemed to be
-decorative, as shown in [example 4 of Decorative
-images](decorative#ex4). The purpose for using the image needs to be
-determined by the author.
+**Note:** If the purpose of this image was simply to improve the look of a page rather than convey an impression, it could be deemed to be decorative, as shown in [Decorative Images &rarr; Image used for ambience](../decorative/#ex4). The purpose for using the image needs to be determined by the author.
 
 <%= notes_end %>
 
-## Example 5: Image conveying file format
-{:#ex5}
+## Image conveying file format
+{:.ex}
 
 In this example, a document is available to download in three different
 formats identified by format icons within text links. They have the text
-alternatives "HTML", "Word document" and "PDF" to distinguish the file
+alternatives “HTML”, “Word document” and “PDF” to distinguish the file
 type for each link:
 
 <%= sample_start %>
@@ -188,14 +181,9 @@ type for each link:
 
 <%= notes_start %>
 
-**Note 1:**If the format identification were written as part of the link
-text, the image may be considered [decorative](decorative) and have a
-null (empty *alt*attribute (alt="") but must be in the same link anchor
-as the text, as in [functional images, example 2](functional#ex2).
+**Note 1:** If the format identification were written as part of the link text, the image may be considered [decorative](../decorative/) and have a null (empty) `alt` attribute (`alt=""`) but must be in the same link anchor as the text, as in [Functional Images &rarr; Logo image within link text](../functional/#logo-image-within-link-text).
 
-**Note 2:**This particular example is similar to the [icon within linked
-in Functional images example 3](functional#ex3) in that the image
-conveys information that isn't given in the link text.\
+**Note 2:** This particular example is similar to the [icon within linked text in Functional Images](../functional/#icon-image-conveying-information-within-link-text) in that the image conveys information that isn’t given in the link text.
 
 <%= notes_end %>
 

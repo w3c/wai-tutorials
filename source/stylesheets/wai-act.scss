@@ -41,6 +41,7 @@ $container_margin:  0.5%;         // auto|px|%    //
 // Body
 
 body {
+	counter-reset: examples;
 	@extend .font-primary;
 	background-color: #F5F5F5;
 	color: #333;
@@ -59,6 +60,13 @@ body, h1, h2, h3, h4, h5, h6 {
 }
 
 h2 {
+	&.ex {
+		counter-increment: examples;
+		&:before {
+			content: 'Example ' counter(examples) ': ';
+			color: #930;
+		}
+	}
 	.content > .inner & {
 		padding-top: 1em;
 	}
@@ -258,6 +266,7 @@ a {
 	}
 	&:hover, &:focus {
 		color: #005A9C;
+		cursor: pointer;
 	}
 }
 
@@ -300,7 +309,6 @@ a {
 		font-size: percentage(13/18);
 	}
 }
-
 
 .list-heading {
 	@extend .font-primary;
@@ -825,7 +833,8 @@ select {
 // Buttons
 
 .btn-primary {
-	@include background(linear-gradient(top, lighten(#036, 10%), #036));
+	display:inline-block;
+	background: linear-gradient(to bottom, #004c99, #003366);
 	color: #fff;
 	font-weight: normal;
 	font-size: 1.25em;
@@ -836,10 +845,25 @@ select {
 	}
 }
 
+.btn-small {
+	padding: .1em .25em;
+}
+
 .btn-icon {
 	border: none;
 	background-color: transparent;
 	padding: 0;
+}
+
+.permalink {
+	@extend .font-primary;
+	display: inline-block;
+	color: #666;
+	font-size: 0.5em;
+	vertical-align: middle;
+	&:before {
+		content: '# ';
+	}
 }
 
 /* ====== ICONS   ======== EDIT ABOVE! ======== */
