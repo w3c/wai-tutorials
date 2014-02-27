@@ -4,19 +4,13 @@ status: draft
 order: 4
 ---
 
-*Scope* is the attribute used to define the direction and range of data
-cells that are covered by a header cell. For example a header cell that
-spans three columns with the *scope* value "colgroup" associates the
-header with the data cells in all three columns. The *scope attribute
-should be used for*all `<th>` cells where either the direction or range
-of data cell coverage needs to be clearly associated. **@@@Or always?@@@.**{:.todo}
-Possible values for the *scope attribute are* "row", "col", rowgroup" or
-"colgroup".
+`Scope` is the attribute used to define the direction and range of data cells that are covered by a header cell. For example a header cell that spans three columns with the `scope` value "colgroup" associates the header with the data cells in all three columns. The `scope` attribute should be used for all `<th>` cells where either the direction or range of data cell coverage needs to be clearly associated. **@@@Or always?@@@.**{:.todo} Possible values for the `scope` attribute are “`row`”, “`col`”, “`rowgroup`” or “`colgroup`”.
 
-## Example 1: Table with header cells in one column only
+## Table with header cells in one column only
+{:.ex}
 
 This example has `<th>` elements for all cells in the left column of a
-table. The *scope* value "row" is used on each `<th>` cell to ensure
+table. The `scope` value “`row`” is used on each `<th>` cell to ensure
 that it cannot be mistaken as a header for other cells in the same
 column.
 
@@ -74,14 +68,13 @@ column.
 
 <%= code_end %>
 
-[Full code Example 1:Table with header cells in one column only ![ (new
-window)](../img/new-win-icon.gif)](example3.txt)
+[Full code Example “Table with header cells in one column only”](../examples/scope-simple/)
 
-## Example 2: Table with an offset (@@@internal?@@@) column of header cells
-{:.todo}
+## Table with an offset (@@@internal?@@@) column of header cells
+{:.ex}
 
 In this table the row header cells are in the second column rather than
-the first. The *scope* values "row" and has been used on the `<th>`
+the first. The `scope` values "row" and has been used on the `<th>`
 second column cells to ensure that data cells in the first column, as
 well as those in cells to the right of the headers are correctly
 associated.
@@ -186,10 +179,10 @@ associated.
 
 <%= code_end %>
 
-[Full code for Example 2: Table with an offset column of header cells
-![(new window)](../img/new-win-icon.gif)](example3.txt)
+[Full code for “Table with an offset column of header cells”](../examples/scope-offset/)
 
-## Example 3: Table with headers spanning multiple rows or columns
+## Table with headers spanning multiple rows or columns
+{:.ex}
 
 In this example, some of the row header cells span two or more rows of
 data cells and one column header spans three columns.
@@ -262,8 +255,7 @@ data cells and one column header spans three columns.
 
 <%= code_end %>
 
-[Full code for Example 3: Table with headers spanning multiple rows or
-columns ![(new window)](../img/new-win-icon.gif)](example3.txt)
+[Full code for “Table with headers spanning multiple rows or columns”](../examples/scope-multiple/)
 
 ## Related WCAG2.0 Techniques
 

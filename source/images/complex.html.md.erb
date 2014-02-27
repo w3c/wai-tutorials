@@ -22,29 +22,24 @@ description, but only where it is important that the user understands
 the image construction. This page shows several possible approaches that
 can be used to provide both short and long descriptions.
 
-## Example 1: Image containing substantial information {#ex1}
+## Image containing substantial information
+{:.ex}
 
-This bar chart of website visitor statistics has the short description "
-Bar chart showing monthly and total visitors for the first quarter 2013
-for sites 1 to 3" as the *alt* attribute, identifying the image. The
-long description details the information, including scales, values,
-relationships and trends, that are represented visually. For example,
-the declining values for site 1, consistent values for site 2, and
-increasing values for site 3 are highlighted through the bar chart
-representation. This information needs to be made available in the [long
-text description](2013first_qtr_text)as well.
+This bar chart of website visitor statistics has the short description “Bar chart showing monthly and total visitors for the first quarter 2013 for sites 1 to 3” as the `alt` attribute, identifying the image. The long description details the information, including scales, values, relationships and trends, that are represented visually. For example, the declining values for site 1, consistent values for site 2, and increasing values for site 3 are highlighted through the bar chart representation. This information needs to be made available in the [long text description](2013first_qtr_text) as well.
+
+<%= sample_start('todo') %>
 
 **2013 first quarter example.com website visitors**
 
 ![Bar chart showing monthly and total visitors for the first quarter
 2013 for sites 1 to 3](../img/chart2.jpg)
 
-### Approach 1: Providing a link to the long description via *longdesc* {#ap1}
+<%= sample_end %>
 
-Here the *longdesc* attribute contains the URI of the page containing
-the long description. Where appropriate, the *longdesc* value could
-simply contain a hash link to the long description if it is published on
-the same page as the image.
+### Providing a link to the long description via *longdesc*
+{:.ap}
+
+Here the `longdesc` attribute contains the URI of the page containing the long description. Where appropriate, the `longdesc` value could simply contain a hash link to the long description if it is published on the same page as the image.
 
 <%= code_start %>
 
@@ -59,12 +54,17 @@ the same page as the image.
 
 <%= code_end %>
 
+<%= notes_start %>
+
 **Note:** Both Firefox and Chrome browsers are working on
 implementations that will make the *longdesc linked* long description
 location reachable by all users. In older or other browsers it is only
 available to screen reader users.
 
-### Approach 2: A text link to the long description adjacent to the image {#ap2}
+<%= notes_end %>
+
+### A text link to the long description adjacent to the image
+{:.ap}
 
 This approach provides a text link next to the image. The link text
 makes both the destination and the association with the image clear.
@@ -91,11 +91,12 @@ what browser or assistive technologies they may use.
 
 <%= notes_end %>
 
-### Approach 3: Describing the location of the long description in the *alt* attribute {#ap3}
+### Describing the location of the long description in the `alt` attribute
+{:.ap}
 
 If the long description is on the same page as the image and its
 location can be accurately pinpointed by being described, the
-*alt* attribute can include location information.
+`alt` attribute can include location information.
 
 <%= code_start %>
 
@@ -110,7 +111,8 @@ location can be accurately pinpointed by being described, the
 
 <%= code_end %>
 
-### Approach 4: Structurally associating the image and its adjacent long description (HTML5) {#ap4}
+### Structurally associating the image and its adjacent long description (HTML5)
+{:.ap}
 
 The HTML5 `<figure>` element can be used to enclose both the image and
 its long description. The long description, presented as headings, text

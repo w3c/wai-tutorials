@@ -4,20 +4,12 @@ status: draft
 order: 8
 ---
 
-A client-side image map is an image divided into selectable regions
-defined by \<area\> elements ("hotspots") that allow user interaction,
-such as providing links to other pages. In this case, text alternatives
-are needed on the \<img\> element itself to convey the informative
-context and on each of the \<area\> elements to convey the link
-destination or the action that will be initiated if the link is
-followed.
+A client-side image map is an image divided into selectable regions defined by `<area>` elements (“hotspots”) that allow user interaction, such as providing links to other pages. In this case, text alternatives are needed on the `<img>` element itself to convey the informative context and on each of the `<area>` elements to convey the link destination or the action that will be initiated if the link is followed.
 
-## Example 1: An organizational chart with links to individual pages
+## An organizational chart with links to individual pages
+{:.ex}
 
-The following organizational chart is used to provide links to each
-Director's home page. The text alternative for the image is "Board of
-Directors and related staff: ", and each linked \<area\> has a text
-alternative to identify the individual, such as "Davy Jones: Chairman".
+The following organizational chart is used to provide links to each Director's home page. The text alternative for the image is “Board of Directors and related staff:”, and each linked `<area>` has a text alternative to identify the individual, such as “Davy Jones: Chairman”.
 
 <%= sample_start %>
 
@@ -50,8 +42,7 @@ alternative to identify the individual, such as "Davy Jones: Chairman".
 
 <%= code_end %>
 
-[Full code for Image map example ![(new
-window)](../img/new-win-icon.gif)](example1.txt)
+[Full code for Image map example](../examples/imagemap/)
 
 <%= notes_start %>
 
