@@ -41,7 +41,7 @@ $container_margin:  0.5%;         // auto|px|%    //
 // Body
 
 body {
-	counter-reset: examples;
+	counter-reset: examples, approaches;
 	@extend .font-primary;
 	background-color: #F5F5F5;
 	color: #333;
@@ -59,14 +59,27 @@ body, h1, h2, h3, h4, h5, h6 {
   font-size-adjust: 0.5;
 }
 
-h2 {
-	&.ex {
-		counter-increment: examples;
-		&:before {
-			content: 'Example ' counter(examples) ': ';
-			color: #930;
-		}
+.ex, .ap {
+	&:before {
+		color: #930;
 	}
+}
+
+.ex {
+	counter-increment: examples;
+	&:before {
+		content: 'Example ' counter(examples) ': ';
+	}
+}
+
+.ap {
+	counter-increment: approaches;
+	&:before {
+		content: 'Approach ' counter(approaches) ': ';
+	}
+}
+
+h2 {
 	.content > .inner & {
 		padding-top: 1em;
 	}
@@ -207,6 +220,7 @@ footer {
 	@extend main;
 	border: 5px solid #993300;
 	border-width: 5px 0;
+	font-size: 0.8em;
 	h2 {
 		font-size: 1em;
 	}
@@ -596,13 +610,21 @@ a {
 		}
 	}
 	.inner {
-		@extend .two3rds;
+		@include mq($big) {
+			@include column(8);
+		}
 		padding:0 !important;
 	}
 	.annotation {
-		width: percentage(1/2) - 2%;
+		@include mq($medium) {
+			width: percentage(1/2) - 6%;
+			margin-left: 1%;
+		}
+		@include mq($big) {
+			width: percentage(1/2) - 4%;
+			margin-right: -1 * percentage(1/2);
+		}
 		padding-left:1%;
-		margin-right: -1 * percentage(1/2);
 		float:right;
 		border-left: 2px solid #930;
 		.annotation-header {
@@ -668,12 +690,21 @@ a {
 }
 
 figure {
+	clear: both;
+	@include mq($big) {
+		clear: none;
+	}
 	@extend .box;
 	.figcontent {
 		@extend .box-content;
 	}
 	figcaption {
 		@extend .box-caption;
+	}
+	p {
+		@extend .box-content;
+		padding-bottom: 0;
+		margin-bottom: 0;
 	}
 	&.code {
 		//width:150%;
@@ -832,27 +863,48 @@ select {
 
 // Buttons
 
-.btn-primary {
-	display:inline-block;
-	background: linear-gradient(to bottom, #004c99, #003366);
-	color: #fff;
+.btn {
+	@include background(linear-gradient(to bottom, lighten(#ccc, 10%), #ccc));
+	color: #333;
 	font-weight: normal;
-	font-size: 1.25em;
-	padding: .25em;
+	font-size: 1em;
+	padding: .25em .5em;
 	border: {
-		style: none;
+		color: #ccc;
+		width: 1px;
+		style: solid;
 		radius: .25em;
+	}
+	&:hover {
+		color: #333;
+	}
+}
+
+.btn-primary {
+	@extend .btn;
+	@include background(linear-gradient(to bottom, lighten(#036, 10%), #036));
+	color: #fff;
+	border-color: darken(#036, 10%);
+	&:hover, &:focus {
+		color: #fff;
+		text-decoration: underline;
 	}
 }
 
 .btn-small {
-	padding: .1em .25em;
+	@extend .btn;
+	padding: .15em .2em;
+	line-height: 1;
 }
 
 .btn-icon {
 	border: none;
 	background-color: transparent;
 	padding: 0;
+}
+
+.btn-next {
+	float:right;
 }
 
 .permalink {
