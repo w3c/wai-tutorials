@@ -42,8 +42,8 @@ effects (stylized text and green line) should not be described.
 	<div class="annotation-content">
 		<p>To display the full effect the browser needs to support the following web technologies:</p>
 		<ul>
-			<li><a href="http://www.w3.org/TR/css3-transforms/" class="spec wd">CSS3 Transformations</a></li>
-			<li><a href="http://www.w3.org/TR/css3-webfonts/" class="spec cr">Webfont embedding (WOFF, TTF or EOT format)</a></li>
+			<li><a href="http://www.w3.org/TR/css3-transforms/">CSS3 Transformations</a></li>
+			<li><a href="http://www.w3.org/TR/css3-webfonts/">Webfont embedding</a></li>
 		</ul>
 	</div>
 </aside>
@@ -141,7 +141,7 @@ The following image is the logo for the Web Accessibility Initiative. It is not 
 
 <%= sample_start %>
 
-![Web Accessibility initiative](wai.png)
+![Web Accessibility Initiative](wai.png)
 
 <%= sample_end %>
 
@@ -203,10 +203,12 @@ Math ML can be incorporated into both XHTML and HTML5: @@@Seems not to work in a
 <%= code_start %>
 
 ~~~ html
-<mstack stackalign="right">
-	<msline length="1"/>
-	<mn> 0.3333 </mn>
-</mstack>
+<math>
+	<mstack stackalign="right">
+		<msline length="1"/>
+		<mn> 0.3333 </mn>
+	</mstack>
+</math>
 ~~~
 
 <%= code_end %>
