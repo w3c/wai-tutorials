@@ -35,11 +35,102 @@ effects (stylized text and green line) should not be described.
 
 <%= code_end %>
 
+### Alternative approach
+
+<aside class="annotation">
+	<h4 class="annotation-header">Modern Browsers</h4>
+	<div class="annotation-content">
+		<p>To display the full effect the browser needs to support the following web technologies:</p>
+		<ul>
+			<li><a href="http://www.w3.org/TR/css3-transforms/" class="spec wd">CSS3 Transformations</a></li>
+			<li><a href="http://www.w3.org/TR/css3-webfonts/" class="spec cr">Webfont embedding (WOFF, TTF or EOT format)</a></li>
+		</ul>
+	</div>
+</aside>
+
+The visual effects in the above image can be produced using CSS3 and an embedded font. However some authors and developers may need to support older browsers and may find the image example useful.
+
+
+<%= sample_start %>
+
+<div class="background">
+	<div class="tagline"><span>Your access to the city</span></div>
+</div>
+<style>
+	/*@font-face {
+    font-family: 'Harabara Hand';
+
+  }*/
+	@font-face {
+    font-family: 'Harabara Hand';
+    src: url('../examples/harabarahand.eot#');
+    src: url(data:application/x-font-woff;charset=utf-8;base64,d09GRgABAAAAABYMABEAAAAAH7QAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAABGRlRNAAABgAAAABwAAAAcdFmUWEdERUYAAAGcAAAAHQAAACAASwAET1MvMgAAAbwAAAA+AAAAYC3BVyljbWFwAAAB/AAAAJkAAAGyW81jUmN2dCAAAAKYAAAABgAAAAYFGwBEZnBnbQAAAqAAAAECAAABcwZYnDZnYXNwAAADpAAAAAgAAAAIAAAAEGdseWYAAAOsAAAQLgAAF2wZh4yEaGVhZAAAE9wAAAAvAAAANgHaqGVoaGVhAAAUDAAAACAAAAAkC1oDlmhtdHgAABQsAAAAXAAAAHhWuQAfbG9jYQAAFIgAAAAnAAAAPnzyeHZtYXhwAAAUsAAAACAAAAAgAjUB7m5hbWUAABTQAAAAsAAAAS35EBdBcG9zdAAAFYAAAAB/AAAA5c0d4A1wcmVwAAAWAAAAAAQAAAAEuAAAK3dlYmYAABYEAAAABgAAAAYACVMOAAAAAQAAAADMPaLPSLgfAJAwIgAAAAAAzzOwiHjaY2BkYGDgA2IJBhBgYmAEQlkgZgHzGAAFiQBQAAAAeNpjYGbawjiBgZWBhQErYGJgZQZSnGB5ZmQZBSBgcGDgVf3DlvIvhYGBXYy5ACjMCJJj7oUoYWAEAPxVBmoAAHjaY2BgYGaAYBkGRgYQWAPkMYL5LAwTgLQCELKAZXiBrESGZIZUhkyGfIZShkqGBQpcCvoK8ap//v9HU5EBVFEEVsEAV8H4/+v/x/8X/1/0f+H/+f9n/Z/xf+r//AcC99/c33tLEWo7XsDIxgBXxsgEJJjQFUC8QhFgYWBlANrDzgHmcTIwcHHz8AJZfAxUBvxk6QIARbwnwAAAAAAKAEQFEQAAeNpdkD1OxDAQhcc4LOEGSBaSLSsUK6/oqVI4kVCaQCg8DT/SrkT2DkhpaFxwlqEzXS6GYJKNttjGM+/N6POzE4BrEuRt+BbiC5P4+0zgr38gB/nyvEkgnNZV70m8sjhzbKwNd9LpmmRRPwaLOup4v4261u9vW8qKufJgF/FWE3Sh5/MpGCpRHdsd4h1zsomTzZyITNgvhP1MYMAvL527RpO8acNDoMErKj0qY3RFYxto9Mog8tbqmJTrR3+1ZL7gzKs1N/mB0gUqFQHGeFDW0BCjivyORScYTwwBp0a5GPwTE1EWVRJDO48Ga9RkWGMN50TPd1+6pgsVJzW4+QciJGviAAAAAQAB//8AD3jabVhtiBxXdq1X7/V7qmu/drX7dT/oTpenultdkxnS6u9qpeVRJDRhEnl3YECLhAVjrMRYRMbBGwYkbKzgrJw1UWJjES8K2tiLFwd712DjZQ0LDgm7sMHJOiw4xGBIcIh/hCzOb8ca59zqsRPIotFMfb2Puvfcc86tIAxOBUH4O6UzgQxM0H9DBEeOvWmU+MXoDV368NibMsRh8IbkyyW+/KbR4WfH3hR8fVxJK4fTSnoqXNnvim/tP1w68+lrp9Q/BAFmw3zyWXkr+E7ws+CDIMiPiWnbdSa9afvufDRtr4tB3p6OZvkkax8Xg/FoPOv6yczXa25cH9e1KYvamuj8iqi1dcfpWlmYo6IsvGmJUT3fEPjxuD9oifZdQvOjdQwxzg/y2Vibnmn70WxcFh2eqcN/s77IsIlslt8rJveK2XQ43hDHxWSWY1xZit50MpsOjohB1pseFb1Oj0eaBCvJHHdmfjqZznq5m5UwC/ara+3hgqhrtydOhqEx5KyX2kgld4QdXlrt6kojbVYpVlIabTxtehuTUjbzTw9tq2JIIrxkpFEqqpCKiJy0DWOkJeskTrrUOkmt1Xg5gyLMaKVdr/avXH08PNvdCkUYdlfOffLA6YekWXPrj1+91NQUlxVt3P4U+5AK6xJp50VjE1NaTG30jc8sNaRpWKl215I+aZKqNXTy5Z3hfU5LFRu9tRo50kqVDCbAKxl9x53kqaJJVYmoYZMoolW8GmEsiVBKR+v3Y66WzTYb86cuzcMfK59NmtigMBndvrX30XHSms7vXVkzFCnFm9OWrryEuTUBLQyaX5UvBs8GN4JvB0H1ACOzvDMESHoFShbiS5DcAxgsYZJx4jIkbpIVaQtwzSNtM/wDSPRdYlAbmQFQ0u7UgaMOg20y5isO6DED8+tizKhhGBz8dJYHbQYM8NfLJrNS7ag4PMnwLCf+XIyUh6E0zdhJfeiQRM7T4SNZFwltUOqtPVk9fJ9BZFZbF/b/4/x0kaSPb+6c2d6magWZIYe4SKk5FMgtP9i0S5wQUoRDT34ekdOjS5OT65GiE9QNz9y+rSVQo8SrZeTFIp+mVHr+0zIlRjc1T3lumJKSrdV+g88y2v/05XPvLjZMmh0/sUupYcQRMgrYWQsE6FLJ2kOHtDeyAvCR6+NmOpcOf2Rrd/Gnx+QPrJS2qGkNrviWfDW4Gvxt8F4QHOaEHNQiqnBZi+7LQKMYJzmChZ0ua7EoUI2AoyiPCt1haOnOsJ2BA+oIcm+WjzJkfTZtZ6N80jkgBszeQ851bYjxuleU6zLD1Z4p6tv4IVKJtIE8ygUv3IMzU/eYjHNcA4FoHGJpjVu4qg84RICQeA3mmY54AS9aXtlJqBFrJTWwGyLa0sRS+lh5kogbUUVSRKPI4aSlIjdcd421kSRF91Wpuu6U5HpALL3hvOqTtyfy4tqc6Nq5qy8fRnaz1dXs8mb3r7uJ9KtRGRlFZVQ3MQZYsI6UlqWS0QAYkoVLmKQ62XLX5udWbv+95LIW161p7GQmJSTZ8A7xizRjoloue4t9VoyXBmTRRcTJG9vQxlmt093F9S0iK138BRHYveyB69nCPhi3ymffPXZKJbFsqXLUZBQiDBKLlE8Br5QQFuFrEfbJ25PbzpmN+ZkP9zcZLiSDO4GTkjxbejhQgkRFOOFFU3RFJo6ImTgmoDZVZ3ozUfcDXx/X6v8LH3dA5cz5+kvsdFC8X/K4KXi8l6Nap71sNmVRATOPZ3fnZQkOz8Yb8gguTfIaoAlmn2U5kMSYGphJ7oHDbFzUMJP8aJaNPE4701kOWToSjnvgkbynpyOPKXCCoSbDBnudDVHApId1a5hthLVBOuvC4PckBzrLIYMSL1DnS7rDT2HDG3I87fQ2+OZdwhcvIccZC1fJmRx7csW+zACoz3CSQ7pm0xGAvy6wN4SgMziOIuPF9VtVVREPShMKqdaa14Y2sSwLAGlsGsY7mZCJDfO8MyuUgDHSdSYZGbHUjN6RW2+//k2vWqtrAEB/tALhQTpTwIKUAZeI0DmAifhp4A/wlgVH6QZnV9aRYCvLCupESRnMb3mUiikDjYCMABV9OALDhNHQriUt0z1+wgF7THfeKJ5S0a+tu60zOw2tHtq7oOTVoTPqRCWWTEVW7v+URiateIAe7yi9zIFBq8RAskIaMmkhrxQC5qq1/11ei0lwu6ubXAooF2yXERpjSR3HIFOqKgtdphakOlf8QraiWYJi+Zx4cL387Ds/2aAHt+l05eKjF8B0qqocncAYlL1Jug77qvBlfZ+FGEKzmEIVGACvQ8a4qLxW4QPckq6bQNOMO12WlFpjL1STtGr7L7z4HHAEmUws1Fj5/ImLbnd3U9tzW75/+t/OdmlnY3QqvJN+IuVFY+aedF8yK/RJPpN4SiJxv9bHqdLcWamsBiG7K/GJqge7we/BWfWywb0QPiCWCwPVBD0cj0CYpiDFJev6+hdMDTu1JGqUV8/UzUGtGdSaHi9r7QsBLEyT6AHfzteNMzqF3FtV9r3eYn6/X11oldrG+dFwC9Roh65xbUorZcPcQJpDbVoyQbQbBuiwREiDJXk4agKaXWPFpl/zc+fNYpEyy8iy7Pa/8pWnn/qIKO/6E8Tpff3hR25NoyZFmHA7jXxhmkol8C1QogFADRPigHCzTLRNJBPf9xcWgIlsOlS60C7z+ftqV34j2AkuBk8Gge8tw5GDDCZFjXN8xokA3fBlRLLOIdRZu2CeQaEocAstgeqF9yi8A35plrQiYLAQSMRsXN8IoVHZ0lWOCvMy6LRrmtntnhC0l3Yp8s3Wdau4yACUSjW5ebKaJpvZ8BKEZdFwttE1r1y9YC2FYfPUSFMRTRhD0h9sqBWyTV9xkaW9G8804itDSrU/d/6EeMv2LUWV2AFChitCrzfPDLc3tn+0QODn8VSvLrpmjvldhgKWzlnyq085N3Qi3HxrkwufC4whHqXv4BFndpBzGZ9+6T9fsBWoX5Q88+ob4WVdqdoyPGt0CDIZEdu3UhB8flvGci/4Y7i4m8F3g9c4ztMZyzhCqk0+BskV9ivnY/DuQhQ3ZvkQfryg2Nn0LvAddBq2zo/YxRVeAnw+mg5gwfH8yE/GoFc+CY+L4gIcYYF1beoQCGbMtvk/fg662Da6BqUwWOJedgDtwlssD82g48a9JDGRt6phHF6CWP5Beg5E4aF9XsKea4trWpUW1i++trK1M8/IbrSe6SJqD22eogKacrHRbJgGVZsx7BSZyjTuZ4ciMOfqo279sUVz4hMw9wdswbTps5xjUuGXZl3+iGItNRCybquOZEqRMZFe19b3rYM3qMQgLqQ23Dsfr5PddsP+3Ft/6fYrWNu89NVtCUen9MZvtRKMbEYVnDYnjZTcBqYAKav4675/czvbTNd2Ehu2wDOK/rVUEhvwnJZ9eOnzjz//R7lAHn87uBT8QXA5+MMgyFjE9CzrczOUw4aDEXQOAulzfGsuCY3XR4Se5fWxztyMHd89QvdQBh3HAof6kSgLXx9xsWlTqHyvs/RtBjXFBdXJRzkfDnPUTfsw12bH1RrurV/8WMrNNLl8+bx+4NQTsLCxf4YojUaPzY+ffeHWhdFc3nmHXFPWN+2IXYt36lbaONM01ovQP/vy9csLZ+jqK69NJn+XddHkgIla4AmSVTIwNKmBqIkHwc9NuftHX0WntnXm5In+dJjOq10z9NRPVzOTSIr7ZOe/+xePFgLJLUzFQSugBVUzfAQHSE11ayp/ni5sunjiflqpILMweHDnKu7C2cWQMZJfi6RArCPUzPsyV98TV8QT4inxZ+LPxV+K74kfineCQPSYXGCCpohJb8JtDnesnRHMR4H7CVMVzC23OMP6GL+068z4adgyxC5HTJfNDczOuDjJ3RhnMM91D45i25tx0UFEsBassenpDP/NAFa6XUOfbGowzmOUCGqMK3eWw+HDzGVtf9Cf4z4Gag+Sy9otPsGaRTXWazjivCLPUBns041BoHiwc4TvO2AFpgw8Wq9xB1YMGkCBau1CsgpC0HXu/yFOdcy3wMY7taLvwxn29IV/RHUXvQd/CMDDB98BavwdID/wj3r5GQCt5BG2/ZP8qIBx3BAcgB6cFp4DpRTR0J6NGZp9bdgoFu0+1uAdom3EktjRoGNgzZiSOAI12L6DrwId1HEbp8LGv59KlwKOMCXJq+wu4EjgoUH5W9qdBHuyr0K1PtRi0yJCbojcEE4KPaRksawrZiHuwsHmcewWjoaPTqED8FpWc3fNnw2iMFQqtkVvgAE2xR0+4H4lBqGjyYwYr+j1JFsr4iYytomHWcEFlEGMMWztsJaD/8GeAG7ufmKNCUBNEMLmN0fR4Shiz1gq4Z10BrTD7biqMYcOGYI/aNBqfdNkaVKwp08vxeS4HUJ7yUPwSsPGpmzIaswfDbh5wTClw6OIkA3HBRfG2JGOlFhZthR5AlUyusJUZjQlEwQ0JZvJsk76VYfyXaVrrFmwAWV4Lm6iiqDychwH7QyElt8Mb1koLk9HkFYTl9Gf8dOkK8WfmGo1DKFYFVy+Q6hmuFYOBAwev4k1URHBUCBbVRZlHzu5XLKEdrx6GKY5JiRwnaqIc8LfN6y2XQfFtXToEMnTXeIII4gYE5lYRXfcWUagdEmh7bYpxFwnaN+RjXR+SWSJzGxqq6oI+30XzQaZObGTTBFjcE8fmxTfsA1LK3SePwlh67+BzDi9k+JFUtZmBZ75mZzJJ4OjwW/CA50Fu3DPks9QWpDou/M2ZFZ22qgPPpsZXVhJqC+XWq1oZXAumVvuKaRzOimKraj2di+v90AGcmU033u6Zf1u5UTj+X5V66dfvBGbaTdefDiUFnFxUdPa80l2cZjs6bWbLz3b3fY32dywCu5/oLRRHGW87HtMzk9Wn/ibT58n+7ZrkN8T8Q8M6bd//nra9f7b4pW9OKo0Eu/7Po4X2++cq84/Hppb7/509NjJ/bcRrVJp/2X+tAKOMTrQn3/02X8VMfiT4IXgO8FfBf8c/AusYS/I2RpM8g6/8P+Lw/SXxaFo+ArqGS/9IgjBgVjruc7qbHbqtdEk5+8jIKlB7g6615rjLlF3wKscyDqzqi9sS1mIpQaOMKY4hOE5iKuri1kVhMVfWyaFW522M3aak4KXmTMxzoOyaxrTSQHHlTmdtARCy01ba/XRpGLMtZeer8hFUuSiaI2SqLJMxWW5TIWb9IdffyolGJfMAsaqgfpNqg7GgD9RFryBGuvS5vV5vB65BJ6I2YW5pr85XPST3fBikU0l998HpaHsYS/+CWhV+8nlq/ypgrVyJ4ZRlyuAOvVjA8/aOHc6FReZaORtd1N8+DpcjlWtC//+3BcJr7SWCTfxL0+4qV5565PrsMRMhKCDgsOsjWKPDlGD54hZ01atSbby1W2Aa+t6wqgzVdSPXLx9+kziG6X7uSz3X6MlZj5b3xQnQEdl7Jv0ewXBminBqvM3HmZbG9945Ub4AajBcKMhimJrqAZ/0ayklVQ1/vtj/h8E/wPD4dKwAAB42mNgZACDr+9efornt/nKIM8B5p833tABo/8/+vOBJZ41A8jlYGACiQIAo4YOoQB42mNgZGBgF/szgYGBg+H/o3/PWeIZgCIoQA4AjwIF+3jaY3rD4MLBwMDA1s/AwGwCxPkMzMxWDAxMWxjYmAMZGBgvAvnuDOzMakA5tf/PmBaAaDD7EUg90zYGBtZcBM14HoijgQY+h+K1QL4okPaF0CA5FkkGBgBJ8BEfeNpjYGDQgUBGFyYxZg2WW6wlbGrsXOwHOL9wlXGvwAu3AQCJ0xBPAAABAAAAHgG/AAwAAAAAAAEAAAAAAAoAAAIAAC4AAAAAeNpNi80KglAQRo9pQYu2bfrBFm3FwoLaRlEvkItWmgpCKJh736Wnqbdq7vUW3mFmzp3DB4x4YaFed/b0btnW1LLD5M8D2VOxljMUcpgZ7olbGLY77Ej9uM+cpeGBJA6G34w5Gv7gc2vOURXF0ueoSNxLHT3yuxumcVYWdYNH21dSKp7klBS4ElTlmd0Qio/JtK3Fr7RT10R+J21d1mx1dseeDYFMlVZ3XxLBF7qlH0142n3Iyw7BQACF4XNaWnXXB/AM02Fclo1mImElKRb2JRGxsfD2yJy1f/MlPyL8bwowYowYFTy22GGPA2occcIZF7bYZsKUHWbsssc+BxxyxDEnzJPm/n5ei/T1uBljqmBpftrvkIW0cibn0smFXMqVXMsyaH3QBZ3ffACmVyi7ALgAACsAAVMOAAgAAA==) format('woff'),
+         url('../examples/harabarahand.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+	.background {
+		background-color: #FFF;
+		padding: 2em;
+	}
+	.tagline {
+		padding-left: 1em;
+		background-color: #DDD9D6;
+		font-family: 'Harabara Hand', cursive;
+		text-transform: lowercase;
+		color: #226C8E;
+		font-size: 1.5em;
+		box-shadow: 0 2px  4px rgba(0,0,0,.5);
+		letter-spacing: -1px;
+	}
+	.tagline span {
+		display: inline-block;
+		-webkit-transform: rotate(-10deg);
+  	-ms-transform: rotate(-10deg);
+  	transform: rotate(-10deg);
+	}
+</style>
+
+<%= sample_end %>
+
+<%= code_start %>
+
+**HTML:**
+
+~~~ html
+<div class="tagline"><span>Your access to the city</span></div>
+~~~
+
+**CSS:**
+
+~~~ css
+.background {
+	background-color: #FFF;
+	padding: 2em;
+}
+.tagline {
+	font-family: 'Harabara Hand', cursive;
+	text-transform: lowercase;
+	color: #226C8E;
+	font-size: 1.5em;
+	letter-spacing: -1px;
+	padding-left: 1em;
+	background-color: #DDD9D6;
+	box-shadow: 0 2px  4px rgba(0,0,0,.5);
+}
+.tagline span {
+	display: inline-block;
+	transform: rotate(-10deg);
+}
+~~~
+
+<%= code_end %>
+
 <%= notes_start %>
 
-**Note:** The visual effects in the above image could have been produced
-using CSS3 and an embedded font. However some authors and developers may
-need to support older browsers and may find this example useful.
+**Note 1:** The code snippet doesn’t show any vendor prefixes. **Do we need to link vendor prefixes to a description?**{:.todo} These should be added to increase compatibility with older versions of browsers.
+
+**Note 2:** The specific `@font-face` rule was left out intentionally as it is not important for the example.
 
 <%= notes_end %>
 
