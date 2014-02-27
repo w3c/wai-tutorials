@@ -336,6 +336,13 @@ a {
 	ul {
 		background-color: #ddd;
 		counter-reset: navli;
+		&.topics {
+			a, .current-a {
+				&:before {
+					content: "\00a0"; // Don’t display counter
+				}
+			}
+		}
 	}
 	&.tabbed {
 		@include container-full();
@@ -403,7 +410,7 @@ a {
 				counter-increment: none;
 				a, .current-a {
 					&:before {
-						content: "\00a0"; /* Display the counter */
+						content: "\00a0"; // Don’t display counter
 					}
 				}
 			}
@@ -864,7 +871,7 @@ select {
 // Buttons
 
 .btn {
-	@include background(linear-gradient(to bottom, lighten(#ccc, 10%), #ccc));
+	background: linear-gradient(to bottom, lighten(#ccc, 10%), #ccc);
 	color: #333;
 	font-weight: normal;
 	font-size: 1em;
@@ -882,7 +889,7 @@ select {
 
 .btn-primary {
 	@extend .btn;
-	@include background(linear-gradient(to bottom, lighten(#036, 10%), #036));
+	background: linear-gradient(to bottom, lighten(#036, 10%), #036);
 	color: #fff;
 	border-color: darken(#036, 10%);
 	&:hover, &:focus {
