@@ -3,9 +3,9 @@
   <nav role="navigation" aria-label="Navigate topic">
     <h4 class="list-heading">
       <% if current_page.data.order == 1 %>
-        <%= current_page.data.title %> Tutorial:
+        <%= current_page.data.tutorial_title %> Tutorial:
       <% else %>
-        <%= current_page.parent.data.title %> Tutorial:
+        <%= current_page.parent.data.tutorial_title %> Tutorial:
       <% end %>
     </h4>
     <ul>
