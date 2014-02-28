@@ -59,6 +59,14 @@ body, h1, h2, h3, h4, h5, h6 {
   font-size-adjust: 0.5;
 }
 
+p {margin-bottom: 0;}
+p+ul {
+	margin-top: .5em;
+	li:first-child p {
+		margin-top: 0;
+	}
+}
+
 .ex, .ap {
 	&:before {
 		color: #930;
@@ -275,8 +283,8 @@ h1, h2, h3, h4 {
 
 a {
 	color: #036;
-	&:visited {
-		// color: #A8BFCF;
+	.content &:visited {
+		color: #663366;
 	}
 	&:hover, &:focus {
 		color: #005A9C;
