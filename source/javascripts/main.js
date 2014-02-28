@@ -9,7 +9,7 @@
 (function ($) {
     'use strict';
 
-    $('h2').each(function(){
+    $('.content h2').each(function(){
     	var item = $(this);
     	item.append(' <a class="permalink" href="#' + item.attr('id') + '">Permalink</a>');
     });
