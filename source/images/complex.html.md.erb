@@ -25,14 +25,11 @@ can be used to provide both short and long descriptions.
 ## Image containing substantial information
 {:.ex}
 
-This bar chart of website visitor statistics has the short description “Bar chart showing monthly and total visitors for the first quarter 2013 for sites 1 to 3” as the `alt` attribute, identifying the image. The long description details the information, including scales, values, relationships and trends, that are represented visually. For example, the declining values for site 1, consistent values for site 2, and increasing values for site 3 are highlighted through the bar chart representation. This information needs to be made available in the [long text description](2013first_qtr_text) as well.
+This bar chart of website visitor statistics has the short description “Bar chart showing monthly and total visitors for the first quarter 2014 for sites 1 to 3” as the `alt` attribute, identifying the image. The long description details the information, including scales, values, relationships and trends, that are represented visually. For example, the declining values for site 1, consistent values for site 2, and increasing values for site 3 are highlighted through the bar chart representation. This information needs to be made available in the [long text description](../examples/2014-first-qtr/) as well.
 
-<%= sample_start('todo') %>
+<%= sample_start %>
 
-**2013 first quarter example.com website visitors**
-
-![Bar chart showing monthly and total visitors for the first quarter
-2013 for sites 1 to 3](../img/chart2.jpg)
+<img src="../../img/chart.png" alt="Bar chart showing monthly and total visitors for the first quarter 2014 for sites 1 to 3" longdesc="../examples/2014-first-qtr/">
 
 <%= sample_end %>
 
@@ -47,8 +44,8 @@ Here the `longdesc` attribute contains the URI of the page containing the long d
 <p>
 	<img
 		src="chart.png"
-		alt="Bar chart showing monthly and total visitors for the first quarter 2013 for sites 1 to 3"
-		longdesc="2013first_qtr_text.html">
+		alt="Bar chart showing monthly and total visitors for the first quarter 2014 for sites 1 to 3"
+		longdesc="2014-first-qtr.html">
 </p>
 ~~~
 
@@ -75,9 +72,9 @@ makes both the destination and the association with the image clear.
 <p>
 	<img
 		src="chart.png"
-		alt="Bar chart showing monthly and total visitors for the first quarter 2013 for sites 1 to 3">
+		alt="Bar chart showing monthly and total visitors for the first quarter 2014 for sites 1 to 3">
 	<br>
-	<a href="2013first_qtr_text.html">Example.com Site visitors Jan to March 2013 text description of the bar chart</a>
+	<a href="2014-first-qtr.html">Example.com Site visitors Jan to March 2014 text description of the bar chart</a>
 </p>
 ~~~
 
@@ -104,9 +101,10 @@ location can be accurately pinpointed by being described, the
 <p>
 	<img
 		src="chart.png"
-		alt="Bar chart showing monthly and total visitors for the first quarter 2013 for sites 1 to 3. Described under the heading Site visitors full text.">
+		alt="Bar chart showing monthly and total visitors for the first quarter 2014 for sites 1 to 3. Described under the heading Site visitors full text.">
 </p>
 <h4>Site visitors full text</h4>
+[…]
 ~~~
 
 <%= code_end %>
@@ -124,12 +122,12 @@ and a table, is explicitly associated to the image by using
 ~~~ html
 <figure role="group">
 	<img src="chart.png"
-		alt="Bar chart showing monthly and total visitors for the first quarter 2013 for sites 1 to 3, described in full below.">
+		alt="Bar chart showing monthly and total visitors for the first quarter 2014 for sites 1 to 3, described in full below.">
 	<h2>Trends</h2>
 	<p>Site visitors for the first  ...</p>
 	<h2>Statistics</h2>
 	<table>
-		<caption>Example.com Site visitors Jan to March 2013</caption>
+		<caption>Example.com Site visitors Jan to March 2014</caption>
 		<tr>…</tr>
 	</table>
 </figure>
@@ -141,16 +139,8 @@ and a table, is explicitly associated to the image by using
 
 The following WCAG 2.0 techniques were used in the examples above:
 
--   [G95: Providing short text alternatives that provide a brief
-    description of the non-text
-    content](http://www.w3.org/TR/WCAG20-TECHS/G95.html);
--   [G92: Providing long description for non-text content that serves
-    the same purpose and presents the same
-    information](http|//www.w3.org/TR/WCAG20-TECHS/G92.html);
--   [H45: Using longdesc](http://www.w3.org/TR/WCAG20-TECHS/H45.html);
--   [G73: Providing a long description in another location with a link
-    to it that is immediately adjacent to the non-text
-    content](http://www.w3.org/TR/WCAG20-TECHS/G73.html);
--   [G74: Providing a long description in text near the non-text
-    content, with a reference to the location of the long description in
-    the short description](http://www.w3.org/TR/WCAG20-TECHS/G74.html).
+-   [G95: Providing short text alternatives that provide a brief description of the non-text content](http://www.w3.org/TR/WCAG20-TECHS/G95.html)
+-   [G92: Providing long description for non-text content that serves the same purpose and presents the same information](http://www.w3.org/TR/WCAG20-TECHS/G92.html)
+-   [H45: Using longdesc](http://www.w3.org/TR/WCAG20-TECHS/H45.html)
+-   [G73: Providing a long description in another location with a link to it that is immediately adjacent to the non-text content](http://www.w3.org/TR/WCAG20-TECHS/G73.html)
+-   [G74: Providing a long description in text near the non-text content, with a reference to the location of the long description in the short description](http://www.w3.org/TR/WCAG20-TECHS/G74.html)
