@@ -41,6 +41,16 @@ decorative purpose.
 
 <%= code_end %>
 
+Screen readers also allow the use of WAI-ARIA to hide elements by using `role="presentation"`. Note that this feature is not as widely supported as using a null `alt` attribute.
+
+<%= code_start %>
+
+~~~ html
+<img src="topinfo_bg.png" role="presentation">
+~~~
+
+<%= code_end %>
+
 ## Decorative image as Part of a text link
 {:.ex}
 
