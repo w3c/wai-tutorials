@@ -13,8 +13,7 @@ This group of five images shows a product rating. There are five images, three f
 
 <%= sample_start %>
 
-Rating: ![3.5 out of 5
-stars](star-full.png)![](../img/star-full.png)![](../img/star-full.png)![](star-half.png)![](star-empty.png)
+Rating: ![3.5 out of 5 stars](star-full.png)![](../img/star-full.png)![](../img/star-full.png)![](star-half.png)![](star-empty.png)
 
 <%= sample_end %>
 
@@ -33,13 +32,70 @@ stars](star-full.png)![](../img/star-full.png)![](../img/star-full.png)![](star-
 
 <%= code_end %>
 
+## Captions for Image Groups
+{:.ex}
+
+If a group of images has a caption, a `figure` element can be used to group those images. If those images have a caption, `figure` and `figcaption` elements can be nested as well:
+
+<%= sample_start %>
+
+<figure role="group">
+<figcaption>The castle through the ages: 1423, 1756, and 1966 respectively.</figcaption>
+
+
+<figure role="group">
+<img src="../../img/castle-etching.jpg" alt="The castle has one tower, and a tall wall around it.">
+<figcaption>Charcoal on  wood. Anonymous, circa 1423.</figcaption>
+</figure>
+<figure role="group">
+<img src="../../img/castle-painting.jpg" alt="The castle now has two towers and two walls.">
+<figcaption>Oil-based paint on canvas. Eloisa Faulkner, 1756.</figcaption>
+</figure>
+<figure role="group">
+<img src="../../img/castle-fluro.jpg"
+alt="The castle lies in ruins, the original tower all that remains in one piece.">
+<figcaption>Film photograph. <span lang="fr">Séraphin Médéric Mieusement</span>, 1936.</figcaption>
+</figure>
+
+</figure>
+
+<%= sample_end %>
+
+<%= code_start %>
+
+~~~ html
+<figure role="group">
+	<figcaption>
+		The castle through the ages: 1423, 1756, and 1966 respectively.
+	</figcaption>
+
+
+	<figure role="group">
+		<img src="castle-etching.jpg"
+			alt="The castle has one tower, and a tall wall around it.">
+		<figcaption>Charcoal on  wood. Anonymous, circa 1423.</figcaption>
+	</figure>
+
+	<figure role="group">
+		<img src="castle-painting.jpg"
+			alt="The castle now has two towers and two walls.">
+		<figcaption>Oil-based paint on canvas. Eloisa Faulkner, 1756.</figcaption>
+	</figure>
+
+	<figure role="group">
+		<img src="castle-fluro.jpg"
+			alt="The castle lies in ruins, the original tower all that remains in one piece.">
+		<figcaption>Film photograph. <span lang="fr">Séraphin Médéric Mieusement</span>, 1936.</figcaption>
+	</figure>
+
+</figure>
+~~~
+
+<%= code_end %>
+
 ## Related WCAG2.0 Techniques
 
 The following WCAG 2.0 techniques were used in the examples above:
 
--   [G196: Using a text alternative on one item within a group of images
-    that describes all items in the
-    group](http://www.w3.org/TR/2012/NOTE-WCAG20-TECHS-20120103/G196)
--   [H67: Using null alt text and no title attribute on img elements for
-    images that AT should
-    ignore](http://www.w3.org/TR/2012/NOTE-WCAG20-TECHS-20120103/H67.html)
+-   [G196: Using a text alternative on one item within a group of images that describes all items in the group](http://www.w3.org/TR/2012/NOTE-WCAG20-TECHS-20120103/G196)
+-   [H67: Using null alt text and no title attribute on img elements for images that AT should ignore](http://www.w3.org/TR/2012/NOTE-WCAG20-TECHS-20120103/H67.html)
