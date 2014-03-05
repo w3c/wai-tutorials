@@ -305,19 +305,6 @@ a {
 	}
 }
 
-.learn h3 {
-	padding-left: 1.5em;
-	&:before {
-		@extend .icon;
-		@extend .icon-file;
-		content: '';
-		float: left;
-		margin-left: -1.5em;
-		position: relative;
-		top:5px;
-	}
-}
-
 .bulletless {
 	&, li {
 		list-style: none;
@@ -338,6 +325,12 @@ a {
 //	background-color: #aaa;
 //	padding:.25em 0 0;
 	font-weight: bold;
+}
+
+.alltutorials {
+	a {
+		@extend .btn;
+	}
 }
 
 .navigation {
@@ -611,17 +604,33 @@ a {
 	h2 {
 		margin-top:0;
 	}
-	&.draft h1 {
-		&:after {
-			display: inline-block;
-			@extend .font-primary;
-			font-weight: bold;
-			padding: 0 .2em;
-			vertical-align: middle;
-			content: "DRAFT";
-			font-size: .5em;
-			background-color: #CCFFCC;
-			margin-right: .25em;
+	&.draft, &.editors-draft{
+		h1 {
+			&:after {
+				display: inline-block;
+				@extend .font-primary;
+				font-weight: bold;
+				padding: 0 .2em;
+				vertical-align: middle;
+				font-size: .5em;
+				margin-right: .25em;
+			}
+		}
+	}
+	&.draft {
+		h1 {
+			&:after {
+				content: "DRAFT";
+				background-color: #CFC;
+			}
+		}
+	}
+	&.editors-draft {
+		h1 {
+			&:after {
+				content: "EDITOR’S DRAFT";
+				background-color: #FCC;
+			}
 		}
 	}
 	.inner {
@@ -657,14 +666,17 @@ a {
 }
 
 .status {
+	padding: .25em;
 	h3, p {
 		display:inline;
 		color: inherit;
 		font-size: 1em;
 	}
 	.draft & {
-		background-color: #CCFFCC;
-		padding: .25em;
+		background-color: #CFC;
+	}
+	.editors-draft & {
+		background-color:#FCC;
 	}
 }
 
@@ -706,15 +718,18 @@ a {
 
 figure {
 	clear: both;
+	margin: 1em 0;
 	@include mq($big) {
 		clear: none;
 	}
-	@extend .box;
-	.figcontent {
-		@extend .box-content;
-	}
-	figcaption {
-		@extend .box-caption;
+	&.sample, &.code {
+		@extend .box;
+		> figcaption {
+			@extend .box-caption;
+		}
+		> .figcontent {
+			@extend .box-content;
+		}
 	}
 	p {
 		@extend .box-content;
@@ -1079,61 +1094,4 @@ select {
 
 .flush.right {
 	float:right;
-}
-
-
-// Treevue
-
-.treevue, .treevue ul {
-	clear:both;
-	padding:0;
-	margin:0;
-	cursor: auto;
-	li {
-    list-style:none;
-    /* Create a little space to the left for the open/close images */
-    //padding-left:18px;
-  }
-}
-
-.treevue li {
-	padding-bottom: 0.25em;
-	padding-left: 3em;
-	@include mq($big) {
-		padding-left: 1em;
-	}
-	overflow:hidden;
-	input[type=checkbox] {
-		margin-right: .25em;
-	}
-	&:before {
-		width: 3em;
-		height:3em;
-		@include mq($big) {
-			width: 1.5em;
-			height:1.5em;
-		}
-		@extend .icon;
-		content: '';
-		margin-left: -1em;
-		float:left;
-	}
-}
-
-.treevue li.treevue-expanded {
-		cursor: pointer;
-    // background: url(../img/opened.png) no-repeat 0 .45em;
-    &:before {
-			@extend .icon-collapse;
-		}
-}
-.treevue li.treevue-collapsed {
-		cursor: pointer;
-    // background: url(../img/closed.png) no-repeat 0 .45em;
-    &:before {
-			@extend .icon-expand;
-		}
-}
-.treevue label:hover {
-    background:rgba(0,0,0, 0.05);
 }
