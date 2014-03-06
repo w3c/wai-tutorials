@@ -1,0 +1,113 @@
+---
+title: Structure
+status: editors-draft
+order: 2
+---
+
+- **What to do:**provide structural markup to identify the carousel on the page and each individual slide;
+- **Why:** to enable screen reader users to understand the relationship between the carousel and other page content and distinguish between slides;
+- **How:** position a heading at the start of the carousel and if slides contain text, a lower level heading at the start of each slide: if there is little or no text, then use list markup to distinguish between slides;
+- **Conformance:** required to meet [SC 1.3.1: Info and Relationships](http://www.w3.org/WAI/WCAG20/quickref/#qr-content-structure-separation-programmatic) and [SC 2.4.6 Headings and Labels](http://www.w3.org/WAI/WCAG20/quickref/#qr-navigation-mechanisms-descriptive).
+
+**Overall description of examples**{:.todo}
+
+## Head up the carousel
+
+The following heading might be used at the start of a carousel highlighting specific web pages:
+
+### Featured pages
+
+![Screenshot of carousel](../img/placeholder.gif) [screenshot of carousel needed here]
+
+The content that follows the carousel should then have a heading at the same level or higher:
+
+### Upcoming events (example)
+
+**(List of events)**{:.todo}
+
+### Code snippet
+
+Showing both the carousel heading and the one following the carousel:
+
+<%= code_start %>
+
+~~~ html
+<h3>Featured pages</h3>
+<div id="carousel">
+	… carousel slides and controls …
+</div>
+<h3>Upcoming events</h3>
+~~~
+
+<%= code_end %>
+
+## Headings for slides
+
+If slides contain enough text to require structure, each slide could begin with a heading at one level below the overall carousel heading:
+
+<%= sample_start %>
+
+
+### Featured products
+
+#### Clematis
+
+Scented or unperfumed, evergreen or deciduous, we have clematis for all aspects in your garden (slide 1 content)
+
+#### Fruit bushes
+
+Year after year, these shrubs will fill your garden with succulent fruit, choose from apricot, blueberry and raspberry (slide 2 content).
+
+<%= sample_end %>
+
+
+Slide structure using headings:
+
+<%= code_start %>
+
+~~~ html
+<h3>Featured products</h3>
+	<h4>Slide 1 heading</h4>
+		<p>Slide 1 description</p>
+	<h4>Slide 2 heading</h4>
+		<p>Slide 2 description</p>
+~~~
+<%= code_end %>
+
+## List of slides
+
+If slides contain just images, or images plus just a word or two of text, they can be presented in a list:
+
+### Featured products
+
+<%= sample_start %>
+
+- ![](../img/placeholder.gif) Clematis
+- ![](../img/placeholder.gif) Fruit bushes
+- ![](../img/placeholder.gif) Vegetables
+
+<%= sample_end %>
+
+### Code snippet
+
+Using a list where don’t contain much content:
+
+<%= code_start %>
+
+~~~ html
+<h3>Featured products</h3>
+<ul>
+	<li><img src="slide1img.png" alt=""> Slide 1 name</li>
+	<li><img src="slide2img.png" alt=""> Slide 2 name</li>
+	<li><img src="slide3img.png" alt=""> Slide 3 name</li>
+</ul>
+~~~
+
+<%= code_end %>
+
+
+## Related WCAG2.0 Techniques:
+
+- [G130: Providing descriptive headings](http://www.w3.org/TR/2012/NOTE-WCAG20-TECHS-20120103/G130)
+- [H42: Using h1-h6 to identify headings](http://www.w3.org/TR/2012/NOTE-WCAG20-TECHS-20120103/H42)
+- [H48: Using ol, ul and dl for lists or groups of links](http://www.w3.org/TR/2012/NOTE-WCAG20-TECHS-20120103/H48.html)
