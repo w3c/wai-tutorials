@@ -941,10 +941,36 @@ select {
 	@extend .font-primary;
 	display: inline-block;
 	color: #666;
-	font-size: 0.5em;
+	font-size: .8em;
 	vertical-align: middle;
+	position: relative;
+	span {
+		@extend .visuallyhidden;
+		position: absolute;
+		font-size: 0.75em;
+		line-height: 1.1;
+		left: 2.5em;
+		top:0%;
+		min-width: 9em;
+		padding: 3px 7px !important;
+		border-radius: 3px;
+		background-color: #555;
+		color: #fff;
+		&:after {
+			right: 100%; top: 50%; border: solid transparent; content: " "; height: 0; width: 0; position: absolute; pointer-events: none; border-color: rgba(85, 85, 85, 0); border-right-color: #555; border-width: 10px; margin-top: -10px;
+		}
+	}
+	&:hover, &:focus {
+		span {
+			clip: auto;
+			height: auto;
+			overflow: visible;
+		}
+	}
 	&:before {
-		content: '# ';
+		content: '';
+		@extend .icon;
+		@extend .icon-link;
 	}
 }
 
@@ -956,6 +982,7 @@ select {
 	width: 1em;
 	background-size: contain;
 	background-repeat:no-repeat;
+	background-position: center;
 	vertical-align: middle;
 }
 
@@ -967,9 +994,9 @@ select {
 	margin-left:.25em;
 }
 
-@import 'icons.data.png';
+@import 'icons-png';
 .svg {
-	@import 'icons.data.svg';
+	@import 'icons-svg';
 }
 
 /* ====== HELPERS ======== EDIT ABOVE! ======== */
@@ -994,6 +1021,7 @@ select {
 * when navigated to via the keyboard: h5bp.com/p
 */
 
+.visuallyhidden.hasfocus,
 .visuallyhidden.focusable:active,
 .visuallyhidden.focusable:focus {
 	clip: auto;
@@ -1005,12 +1033,8 @@ select {
 }
 
 // Grid System
-//
-// Styleguide 7
 
 // Column wrapper
-//
-// Styleguide 7.1
 
 .grid {
 	@include container();

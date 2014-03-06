@@ -11,7 +11,7 @@
 
     $('.content h2').each(function(){
     	var item = $(this);
-    	item.append(' <a class="permalink" href="#' + item.attr('id') + '">Permalink</a>');
+    	item.append(' <a class="permalink" href="#' + item.attr('id') + '"><span>Link to this section of the page</span></a>');
     });
 
 }(jQuery));
