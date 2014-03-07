@@ -50,6 +50,22 @@ helpers do
     end
   end
 
+  def topic_link(link_text, url, options = {})
+    if current_page.data.order == 1
+      if url == '/' + current_page.path
+        '<span class="current-a"><span class="visuallyhidden">Current: </span>' + link_text + '</span>'
+      else
+        link_to(link_text, url, options)
+      end
+    else
+      if url == '/' + current_page.parent.path
+        '<span class="current-a"><span class="visuallyhidden">Current: </span>' + link_text + '</span>'
+      else
+        link_to(link_text, url, options)
+      end
+    end
+  end
+
   def code_start(status = "", title = "")
     if title
     '{::nomarkdown}
