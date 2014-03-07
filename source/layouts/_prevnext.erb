@@ -2,16 +2,44 @@
   <ul>
     <% if current_page.data.type == 'intro' %>
       <% current_page.children.sort_by { |resource| resource.data.order }.each do |item| %>
-        <% if item.data.order && item.data.order == current_page.data.order - 1 %><li class="prev"><span><%= nav_link('<span class="dir">Previous:</span><span class="title">' + item.data.title + '</span>', '/' + item.path, :relative => true) %></span></li><% end %>
-        <% if item.data.order && item.data.order-1 == current_page.data.order %><li class="next"><span><%= nav_link('<span class="dir">Next:</span><span class="title">' + item.data.title + '</span>', '/' + item.path, :relative => true) %></span></li><% end %>
+      <% if item.data.nav_title
+            title = item.data.nav_title
+         else
+            title = item.data.title
+        end %>
+        <% if item.data.order && item.data.order == current_page.data.order - 1 %>
+          <li class="prev">
+            <span><%= nav_link('<span class="dir">Previous:</span><span class="title">' + title + '</span>', '/' + item.path, :relative => true) %></span>
+          </li>
+        <% end %>
+        <% if item.data.order && item.data.order-1 == current_page.data.order %>
+          <li class="next">
+            <span><%= nav_link('<span class="dir">Next:</span><span class="title">' + title + '</span>', '/' + item.path, :relative => true) %></span>
+          </li>
+        <% end %>
       <% end %>
     <% else %>
       <% if current_page.data.order == 2 %>
-        <li class="prev"><span><%= nav_link('<span class="dir">Previous:</span><span class="title">' + current_page.parent.data.title + '</span>', '/' + current_page.parent.path, :relative => true) %></span></li>
+        <li class="prev">
+          <span><%= nav_link('<span class="dir">Previous:</span><span class="title">' + current_page.parent.data.title + '</span>', '/' + current_page.parent.path, :relative => true) %></span>
+        </li>
       <% end %>
       <% current_page.parent.children.sort_by { |resource| resource.data.order }.each do |item| %>
-        <% if item.data.order && item.data.order == current_page.data.order - 1 %><li class="prev"><span><%= nav_link('<span class="dir">Previous:</span><span class="title">' + item.data.title + '</span>', '/' + item.path, :relative => true) %></span></li><% end %>
-        <% if item.data.order && item.data.order-1 == current_page.data.order %><li class="next"><span><%= nav_link('<span class="dir">Next:</span><span class="title">' + item.data.title + '</span>', '/' + item.path, :relative => true) %></span></li><% end %>
+        <% if item.data.nav_title
+            title = item.data.nav_title
+         else
+            title = item.data.title
+        end %>
+        <% if item.data.order && item.data.order == current_page.data.order - 1 %>
+          <li class="prev">
+            <span><%= nav_link('<span class="dir">Previous:</span><span class="title">' + title + '</span>', '/' + item.path, :relative => true) %></span>
+          </li>
+        <% end %>
+        <% if item.data.order && item.data.order-1 == current_page.data.order %>
+          <li class="next">
+            <span><%= nav_link('<span class="dir">Next:</span><span class="title">' + title + '</span>', '/' + item.path, :relative => true) %></span>
+          </li>
+        <% end %>
       <% end %>
     <% end %>
   </ul>
