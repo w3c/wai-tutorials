@@ -5,7 +5,9 @@
   <title>
   <%= current_page.data.title %>
   <% if current_page.parent %>
-    <%= " | " + current_page.parent.data.title %>
+    <% if current_page.parent.data.tutorial_title %>
+      <%= " | " + current_page.parent.data.tutorial_title %>
+    <% end %>
   <% end %>
   | WAI Web Accessibility Tutorials
   </title>
