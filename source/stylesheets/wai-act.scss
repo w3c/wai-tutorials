@@ -40,7 +40,12 @@ $container_margin:  0.5%;         // auto|px|%    //
 
 // Body
 
+html {
+	overflow-x:hidden;
+}
+
 body {
+	overflow-x:hidden;
 	counter-reset: examples, approaches;
 	@extend .font-primary;
 	background-color: #F5F5F5;
