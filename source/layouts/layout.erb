@@ -1,45 +1,4 @@
 <%= partial "layouts/header" %>
-<div class="navigation">
-  <nav role="navigation" aria-label="Navigation">
-    <p class="list-heading" id="list-heading-tutorials">
-      <% if current_page.data.order == 1 %>
-        <%= current_page.data.tutorial_title %> Tutorial
-      <% else %>
-        <%= current_page.parent.data.tutorial_title %> Tutorial
-      <% end %>
-    </p>
-    <ul aria-labelled-by="list-heading-tutorials">
-      <% if current_page.data.type == 'intro' %>
-      <% if current_page.data.nav_title %>
-          <li<%= ' class="' + current_page.data.type + '"' if current_page.data.type %>><%= nav_link(current_page.data.nav_title, '/' + current_page.path, :relative => true) %></li>
-        <% else %>
-          <li<%= ' class="' + current_page.data.type + '"' if current_page.data.type %>><%= nav_link(current_page.data.title, '/' + current_page.path, :relative => true) %></li>
-        <% end %>
-      <% current_page.children.sort_by { |resource| resource.data.order }.each do |item| %>
-      <% if item.data.nav_title %>
-      <li<%= ' class="' + item.data.type + '"' if item.data.type %>><%= nav_link(item.data.nav_title, '/' + item.path, :relative => true) %></li>
-      <% else %>
-      <li<%= ' class="' + item.data.type + '"' if item.data.type %>><%= nav_link(item.data.title, '/' + item.path, :relative => true) %></li>
-      <% end %>
-      <% end %>
-      <% else %>
-        <% if current_page.parent.data.nav_title %>
-          <li<%= ' class="' + current_page.parent.data.type + '"' if current_page.parent.data.type %>><%= nav_link(current_page.parent.data.nav_title, '/' + current_page.parent.path, :relative => true) %></li>
-        <% else %>
-          <li<%= ' class="' + current_page.parent.data.type + '"' if current_page.parent.data.type %>><%= nav_link(current_page.parent.data.title, '/' + current_page.parent.path, :relative => true) %></li>
-        <% end %>
-      <% current_page.parent.children.sort_by { |resource| resource.data.order }.each do |item| %>
-      <% if item.data.nav_title %>
-      <li<%= ' class="' + item.data.type + '"' if item.data.type %>><%= nav_link(item.data.nav_title, '/' + item.path, :relative => true) %></li>
-      <% else %>
-      <li<%= ' class="' + item.data.type + '"' if item.data.type %>><%= nav_link(item.data.title, '/' + item.path, :relative => true) %></li>
-      <% end %>
-      <% end %>
-      <% end %>
-    </ul>
-    <%= partial 'layouts/topic_navigation' %>
-  </nav>
-</div>
 <div class="content <%= current_page.data.status %>">
   <header class="tutorial-heading">
     <nav class="breadcrumb" aria-label="Breadcrumbs">
@@ -81,5 +40,45 @@
 <%= partial "layouts/prevnext" %>
                   </div>
                 </div>
-              </main>
+                <div class="navigation">
+  <nav role="navigation" aria-label="Navigation" id="nav">
+    <p class="list-heading" id="list-heading-tutorials">
+      <% if current_page.data.order == 1 %>
+        <%= current_page.data.tutorial_title %> Tutorial
+      <% else %>
+        <%= current_page.parent.data.tutorial_title %> Tutorial
+      <% end %>
+    </p>
+    <ul aria-labelled-by="list-heading-tutorials">
+      <% if current_page.data.type == 'intro' %>
+      <% if current_page.data.nav_title %>
+          <li<%= ' class="' + current_page.data.type + '"' if current_page.data.type %>><%= nav_link(current_page.data.nav_title, '/' + current_page.path, :relative => true) %></li>
+        <% else %>
+          <li<%= ' class="' + current_page.data.type + '"' if current_page.data.type %>><%= nav_link(current_page.data.title, '/' + current_page.path, :relative => true) %></li>
+        <% end %>
+      <% current_page.children.sort_by { |resource| resource.data.order }.each do |item| %>
+      <% if item.data.nav_title %>
+      <li<%= ' class="' + item.data.type + '"' if item.data.type %>><%= nav_link(item.data.nav_title, '/' + item.path, :relative => true) %></li>
+      <% else %>
+      <li<%= ' class="' + item.data.type + '"' if item.data.type %>><%= nav_link(item.data.title, '/' + item.path, :relative => true) %></li>
+      <% end %>
+      <% end %>
+      <% else %>
+        <% if current_page.parent.data.nav_title %>
+          <li<%= ' class="' + current_page.parent.data.type + '"' if current_page.parent.data.type %>><%= nav_link(current_page.parent.data.nav_title, '/' + current_page.parent.path, :relative => true) %></li>
+        <% else %>
+          <li<%= ' class="' + current_page.parent.data.type + '"' if current_page.parent.data.type %>><%= nav_link(current_page.parent.data.title, '/' + current_page.parent.path, :relative => true) %></li>
+        <% end %>
+      <% current_page.parent.children.sort_by { |resource| resource.data.order }.each do |item| %>
+      <% if item.data.nav_title %>
+      <li<%= ' class="' + item.data.type + '"' if item.data.type %>><%= nav_link(item.data.nav_title, '/' + item.path, :relative => true) %></li>
+      <% else %>
+      <li<%= ' class="' + item.data.type + '"' if item.data.type %>><%= nav_link(item.data.title, '/' + item.path, :relative => true) %></li>
+      <% end %>
+      <% end %>
+      <% end %>
+    </ul>
+    <%= partial 'layouts/topic_navigation' %>
+  </nav>
+</div>
               <%= partial "layouts/footer" %>
