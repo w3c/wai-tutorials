@@ -433,7 +433,6 @@ a {
 				}
 			}
 			a, .current-a {
-				line-height: 2em;
 				line-height: percentage(44/18);
 				&:before {
 					display:inline-block;
@@ -584,7 +583,6 @@ a {
 		@include container();
 	}
 	.navigation {
-		clear: both;
 		@include mq($medium) {
 			@include column(4);
 		}
@@ -916,6 +914,7 @@ select {
 	color: #333;
 	font-weight: normal;
 	font-size: 1em;
+	line-height: percentage(44/18);
 	padding: .25em .5em;
 	border: {
 		color: #ccc;
