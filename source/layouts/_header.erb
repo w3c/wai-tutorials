@@ -4,7 +4,11 @@
   <meta charset="utf-8">
   <title>
   <%= current_page.data.title %>
-  <% if current_page.parent %>
+  <% if current_page.data.order == 1 %>
+    <% if current_page.data.tutorial_title %>
+      <%= " | " + current_page.data.tutorial_title %>
+    <% end %>
+  <% else %>
     <% if current_page.parent.data.tutorial_title %>
       <%= " | " + current_page.parent.data.tutorial_title %>
     <% end %>
