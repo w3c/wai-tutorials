@@ -1,14 +1,14 @@
 <%= partial "layouts/header" %>
 <div class="navigation">
-  <nav role="navigation" aria-label="Navigate topic">
-    <h4 class="list-heading">
+  <nav role="navigation" aria-label="Navigation">
+    <p class="list-heading" id="list-heading-tutorials">
       <% if current_page.data.order == 1 %>
-        <%= current_page.data.tutorial_title %> Tutorial:
+        <%= current_page.data.tutorial_title %> Tutorial
       <% else %>
-        <%= current_page.parent.data.tutorial_title %> Tutorial:
+        <%= current_page.parent.data.tutorial_title %> Tutorial
       <% end %>
-    </h4>
-    <ul>
+    </p>
+    <ul aria-labelled-by="list-heading-tutorials">
       <% if current_page.data.type == 'intro' %>
       <% if current_page.data.nav_title %>
           <li<%= ' class="' + current_page.data.type + '"' if current_page.data.type %>><%= nav_link(current_page.data.nav_title, '/' + current_page.path, :relative => true) %></li>
