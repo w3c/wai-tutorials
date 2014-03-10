@@ -1,9 +1,4 @@
 <%= partial "layouts/header" %>
-<div class="navigation">
-  <nav role="navigation">
-  <a href="<%= current_page.data.source %>">Back to the example</a>
-  </nav>
-</div>
 <div class="content <%= current_page.data.status %>">
   <header class="tutorial-heading">
     <div class="breadcrumb">&nbsp;</div>
@@ -26,5 +21,9 @@
     <%= yield %>
   </div>
 </div>
-</main>
+<div class="navigation" id="nav">
+  <nav role="navigation">
+    <a class="btn" href="<%= current_page.data.source %>">Back to the example</a>
+  </nav>
+</div>
 <%= partial "layouts/footer" %>

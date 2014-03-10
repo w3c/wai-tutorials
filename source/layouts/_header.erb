@@ -9,7 +9,7 @@
       <%= " | " + current_page.data.tutorial_title %>
     <% end %>
   <% else %>
-    <% if current_page.parent.data.tutorial_title %>
+    <% if current_page.parent and current_page.parent.data.tutorial_title %>
       <%= " | " + current_page.parent.data.tutorial_title %>
     <% end %>
   <% end %>
