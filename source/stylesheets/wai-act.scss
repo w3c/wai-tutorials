@@ -302,16 +302,16 @@ a {
 }
 
 .notes {
-	padding-left: 1.5em;
-	color: #555;
+	// padding-left: 1.5em;
+	color: #444;
 	font-size: percentage(16/18);
-	&:before {
+	/*&:before {
 		@extend .icon;
 		@extend .icon-info;
 		content: '';
 		float: left;
 		margin-left: -1.5em;
-	}
+	}*/
 }
 
 .bulletless {
