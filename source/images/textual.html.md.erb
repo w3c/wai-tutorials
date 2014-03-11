@@ -160,11 +160,7 @@ The following image is the logo for the Web Accessibility Initiative. It is not 
 ## Image of a mathematical expression
 {:.ex}
 
-This math expression shows how to signify that a number is recurring.
-The `alt` text is “0.3333 recurring, (the recurrence is indicated by a
-line over the ‘3’ in the fourth decimal place)”. In this instance the
-way that the recurrence is shown is important, so forms part of the text
-alternative, this isn't the case with all math expressions.
+This math expression shows how to signify that a number is recurring. The `alt` text is “0.3333 recurring, (the recurrence is indicated by a line over the ‘3’ in the fourth decimal place)”. In this instance the way that the recurrence is shown is important, so forms part of the text alternative, this isn't the case with all math expressions.
 
 <%= sample_start %>
 
@@ -172,14 +168,6 @@ alternative, this isn't the case with all math expressions.
 in the fourth decimal place)](repeat1.png)
 
 <%= sample_end %>
-
-<%= notes_start %>
-
-**Note:** Images of math expressions should only be used in exceptional circumstances, for instance where the expression is an exception to the normal content for the page or website. In use cases where math forms a substantial part of page or website content, [Math ML](http://www.w3.org/Math/) should be used instead as it represents both presentation and content semantically, making it more accessible to a wider range of users as many assistive technologies can interpret the code. The simple example above illustrates the difficulty of describing both the content and presentation (the position and location of the over-line) in mathematical expressions succinctly and clearly, for more complex expressions or equations image text alternatives are unlikely to provide sufficient detail succinctly.
-
-<%= notes_end %>
-
-### Code snippet for image
 
 <%= code_start %>
 
@@ -191,10 +179,32 @@ in the fourth decimal place)](repeat1.png)
 
 <%= code_end %>
 
-### Code snippet for Math ML
+### MathML
 
-Math ML can be incorporated into both XHTML and HTML5: @@@Seems not to work in any browsers@@@
-{:.todo}
+Images of math expressions should only be used in *exceptional circumstances*, for instance where the expression is an exception to the normal content for the page or website.
+
+<aside class="annotation">
+	<h4 class="annotation-header">Compatibility</h4>
+	<div class="annotation-content">
+		<p>Most browsers need plugins to render MathML correctly, especially for the new MathML 3.0 features used in this example. To see the MathML example below, <a href="https://addons.mozilla.org/en-US/firefox/addon/mathml-mml3ff/">this Firefox plugin</a> may be needed.</p>
+		<p>Find more information about MathML <a href="https://trac.webkit.org/wiki/MathML">here for Webkit-based browsers</a> and <a href="https://developer.mozilla.org/en-US/docs/Mozilla/MathML_Project/Status">here for Mozilla-based browsers</a>.</p>
+	</div>
+</aside>
+
+If math forms are a substantial part of the page or website content, [Math ML](http://www.w3.org/Math/) should be used instead as it represents both presentation and content semantically, making it more accessible to a wider range of users as many assistive technologies can interpret the code.
+
+The simple example above illustrates the difficulty of describing both the content and presentation (the position and location of the over-line) in mathematical expressions succinctly and clearly, for more complex expressions or equations image text alternatives are unlikely to provide sufficient detail succinctly.
+
+<%= sample_start %>
+
+<math>
+	<mstack stackalign="right">
+		<msline length="1"/>
+		<mn> 0.3333 </mn>
+	</mstack>
+</math>
+
+<%= sample_end %>
 
 <%= code_start %>
 
@@ -211,8 +221,7 @@ Math ML can be incorporated into both XHTML and HTML5: @@@Seems not to work in a
 
 <%= notes_start %>
 
-**Note:** The above code includes semantic information that conveys both
-content and presentation to assistive technologies.
+**Note:** The above code includes semantic information that conveys both content and presentation to assistive technologies.
 
 <%= notes_end %>
 
