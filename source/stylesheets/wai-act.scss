@@ -1151,3 +1151,27 @@ select {
 .flush.right {
 	float:right;
 }
+
+.techniques {
+	span {
+		display: inline-block;
+		border-radius:1em;
+		line-height: 1;
+		padding-left: .45em;
+	}
+	.tech {
+		background-color: #ddd;
+		border: 1px solid;
+		span {
+			padding: .125em .25em .125em .125em;
+			border-radius: 0 1em 1em 0;
+		}
+		&.ok span {
+			background-color: green;
+			color: #fff;
+		}
+		&.wip span {
+			background-color: yellow;
+		}
+	}
+}

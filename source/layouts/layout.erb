@@ -38,6 +38,18 @@
 
   <div class="inner">
 
+  <% if current_page.data.techniques %>
+  <div class="techniques">
+    <p>Techniques in this tutorial:
+      <% current_page.data.techniques.sort_by! { |x| x.map { |key, value| key} }.each do |x| %>
+        <% x.map{ |key, value| '<span class="tech '+value.downcase+'">'+key+' <span>'+value+'</span></span>' }.each do |y| %>
+          <%= y %>
+        <% end%>
+      <% end %>
+    </p>
+  </div>
+  <% end %>
+
     <%= yield %>
 
 <%= partial "layouts/prevnext" %>
