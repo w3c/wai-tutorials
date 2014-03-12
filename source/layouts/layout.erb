@@ -38,21 +38,47 @@
 
   <div class="inner">
 
-  <% if current_page.data.techniques %>
-  <div class="techniques">
-    <p>Techniques in this tutorial:
-      <% current_page.data.techniques.sort_by! { |x| x.map { |key, value| key} }.each do |x| %>
-        <% x.map{ |key, value| '<span class="tech '+value.downcase+'">'+key+' <span>'+value+'</span></span>' }.each do |y| %>
-          <%= y %>
-        <% end%>
-      <% end %>
-    </p>
-  </div>
+  <% if false # current_page.data.technologies %>
+    <div class="technologies">
+      <p><strong>Used Technologies:</strong>
+        <% current_page.data.technologies.sort_by! { |x| x.map { |key, value| key} }.each do |x| %>
+          <% x.map{ |key, value| '<span class="tech">'+key+'</span>' }.each do |y| %>
+            <%= y %>
+          <% end%>
+        <% end %>
+      </p>
+    </div>
   <% end %>
+
+  <% if current_page.data.type == 'intro'  # current_page.data.technologies %>
+  <% technologies = Array.new
+    current_page.children.each do |x|
+      if x.data.technologies
+        x.data.technologies.split(',').each do |y|
+          technologies << y.strip
+        end
+      end
+    end
+    if technologies.length > 0  %>
+    <div class="technologies">
+      <p><strong>Technologies covered in this Tutorial:</strong>
+        <% technologies.sort.uniq.each do |z| %>
+          <span class="tech"><%= z %></span>
+        <% end %>
+      </p>
+    </div>
+    <% end %>
+  <% end %>
+
 
     <%= yield %>
 
 <%= partial "layouts/prevnext" %>
+
+<aside class="side-box github">
+  <header>Call for Contributions</header>
+  <span class="icon icon-github"></span> Whether you’ve found a typo or have an advanced WAI-ARIA example to be included in the tutorials, send suggestions to <a href="mailto:wai-eo-editors@w3.org?subject=[Tutorial%20Feedback]">this (publicly-archived) mailing list</a> or contibute directly to the code on <a href="https://github.com/w3c/wai-tutorials">Github</a>.
+</aside>
                   </div>
                 </div>
                 <div class="navigation">

@@ -1,9 +1,7 @@
 ---
 title: Complex Images
 status: draft
-techniques:
-- ARIA: OK
-- HTML5: OK
+technologies: WAI-ARIA, HTML5
 order: 6
 ---
 
@@ -134,6 +132,29 @@ and a table, is explicitly associated to the image by using
 		<tr>…</tr>
 	</table>
 </figure>
+~~~
+
+<%= code_end %>
+
+### Structurally associating image and long description with `aria-described-by`
+{:.ap}
+
+The WAI-ARIA `aria-described-by` attribute can be used to link the description to the image. The value of the attribute is the `ID` of the element with the description.
+
+<%= code_start %>
+
+~~~ html
+<img src="chart.png"
+	aria-described-by="image-description"
+	alt="Bar chart showing monthly and total visitors for the first quarter 2014 for sites 1 to 3, described in full below.">
+<div id="image-description">
+	<p><strong>Trends:</strong> Site visitors for the first  ...</p>
+	<p><strong>Statistics:</strong>
+	<table>
+		<caption>Example.com Site visitors Jan to March 2014</caption>
+		<tr>…</tr>
+	</table>
+</div>
 ~~~
 
 <%= code_end %>
