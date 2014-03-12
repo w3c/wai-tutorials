@@ -1152,17 +1152,23 @@ select {
 	float:right;
 }
 
-.techniques {
+.technologies {
+	@extend .annotation;
+	border:none !important;
+	margin-bottom: 2em;
+	strong {
+		display: block;
+	}
 	span {
 		display: inline-block;
 		border-radius:1em;
 		line-height: 1;
-		padding-left: .45em;
+		padding: 0 .45em;
 	}
 	.tech {
 		background-color: #ddd;
 		border: 1px solid;
-		span {
+	/*	span {
 			padding: .125em .25em .125em .125em;
 			border-radius: 0 1em 1em 0;
 		}
@@ -1172,6 +1178,21 @@ select {
 		}
 		&.wip span {
 			background-color: yellow;
-		}
+		}*/
+	}
+}
+
+.side-box {
+	border:1px solid #666 !important;
+	border-radius: .5em;
+	padding:1em;
+	margin-bottom: 2em;
+	header {
+		font-weight: bold;
+	}
+	.icon {
+		font-size: 3em;
+		float:right;
+		transform: rotate(15deg);
 	}
 }
