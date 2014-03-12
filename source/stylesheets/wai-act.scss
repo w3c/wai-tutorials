@@ -51,13 +51,15 @@ body {
 	background-color: #F5F5F5;
 	color: #333;
 	font-size: percentage(15/16);
+	max-width: 1680px;
+	margin: 0 auto;
+	line-height: 1.5;
 	@include mq($medium) {
 		font-size: 100%;
 	}
 	@include mq($big) {
   	font-size: 112.5%;
   }
-	line-height: 1.5;
 }
 
 body, h1, h2, h3, h4, h5, h6 {
@@ -363,60 +365,6 @@ a {
 			}
 		}
 	}
-	&.tabbed {
-		@include container-full();
-		ul {
-			margin:0;
-			padding:0;
-			list-style:none;
-			width: 100%;
-			float: left;
-			@include generate_grid_positions(li, 4);
-			@include background(linear-gradient(top, lighten(#036, 10%), #036));
-			li {
-				@include column(4);
-				margin-bottom: 0 !important;
-				//border-right: 1px solid #eee;
-				//box-sizing:border-box;
-				text-align: center;
-				a:hover, a:focus {
-					background-color: rgba(#fff, .1);
-				}
-				&:last-child {
-					border-right: none;
-				}
-				a {
-					display: block;
-					padding: 1em;
-					//background-color: #036;
-					color: #fff;
-				}
-				&.current {
-					position:relative;
-					overflow: visible;
-					@include background(linear-gradient(top, #360, lighten(#360, 10%)));
-					&:after {
-						position: absolute;
-						display: inline-block;
-						content: "";
-						border-width: 1em 1em;
-						height: 0;
-						width: 0;
-						border-color: #4D9900 transparent transparent transparent;
-						top: 100%;
-						left: 48%;
-						left: calc(50% - .5em);
-						border-style: solid;
-					}
-				}
-			}
-		}
-	}
-	&.main {
-		@include mq($big) {
-			font-size: 1.25em;
-		}
-	}
 	ul {
 		margin: 0;
 		padding: 0;
@@ -485,100 +433,6 @@ a {
 	}
 }
 
-.icon-navigation {
-	margin:0 0 1em;
-	.js & button {
-		display: block !important;
-	}
-	button {
-		background-color: #FFF;
-		border:none;
-		padding: .5em;
-		display: inline-block;
-		transition: all 600ms;
-		.icon {
-			// @extend .icon-menu;
-		}
-		.on {
-			display:none;
-		}
-		&.on {
-			background-color: #2F78AE;
-			color: #eee;
-			border-radius: .25em .25em 0 0;
-			.icon {
-				// @extend .icon-menu-active;
-			}
-			.on {
-				display:inline;
-			}
-			.off {
-				display:none;
-			}
-		}
-	}
-	ul {
-		.js & {
-			display: none;
-		}
-		border-radius: 0 .25em .25em;
-		list-style:none;
-		@include container();
-		margin:0 0 1em;
-		float:left;
-		width:100%;
-		padding:1em 1em 0;
-		box-sizing:border-box;
-		background-color: #2F78AE;
-		a {
-			color: #eee;
-			text-decoration: none;
-			padding: 1em 1em .5em;
-			border-radius: .5em;
-			display: inline-block;
-			&:hover, &:focus {
-				background-color: rgba(0,0,0,.3);
-			}
-		}
-		.icon {
-			display:block;
-			width: 3em;
-			height: 3em;
-			margin:0 auto .25em;
-		}
-		@include generate_grid_positions(li, 6);
-		li {
-			@include column(6);
-			text-align: center;
-			margin-bottom:1em !important;
-			&.current {
-				a {
-					color: #333;
-					background-color: rgba(#fff,.3);
-				}
-			}
-		}
-		@include mq($small) {
-			@include generate_grid_positions(li, 4);
-			li {
-				@include column(4);
-			}
-		}
-		@include mq($medium) {
-			@include generate_grid_positions(li, 2);
-			li {
-				@include column(2);
-			}
-		}
-		@include mq(large) {
-			@include generate_grid_positions(li, 1);
-			li {
-				@include column(1);
-			}
-		}
-	}
-}
-
 .with-side-menu {
 	@include mq($medium) {
 		@include container();
@@ -612,12 +466,6 @@ a {
 
 .content {
 	@include container-full();
-	.tabbed.main.navigation + & {
-		clear: both;
-		float: left;
-		padding: 2em 0 1em;
-		@include background(linear-gradient(top, #999, #fff 1em));
-	}
 	h2 {
 		margin-top:0;
 	}
