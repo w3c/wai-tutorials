@@ -13,17 +13,23 @@
   </header>
 
   <% if current_page.data.status=="draft" %>
-
   <div class="status">
-    <h3>Status - </h3>
-    <p>This is an in-progress, unapproved draft. Please send any suggestions, edits, or comments to the publicly-archived list: <a href="mailto:wai-eo-editors@w3.org">wai-eo-editors@w3.org.</a>
-    </p>
+    <p><strong>Status:</strong> This is an in-progress, unapproved draft.</p>
+  </div>
+  <% end %>
+  <% if current_page.data.status=="editors-draft" %>
+  <div class="status">
+    <p><strong>Status (not ready for review):</strong> This is an in-progress, unapproved editor’s draft. Content may change at any time without notice.</p>
   </div>
   <% end %>
 
   <div class="inner">
-
     <%= yield %>
+
+    <aside class="side-box github">
+      <header>We welcome your ideas</header>
+      <p>Send any ideas, suggestions or comments to <a href="mailto:wai-eo-editors@w3.org?subject=[Tutorial%20Feedback]">this (publicly-archived) mailing list</a> or contibute <a href="https://github.com/w3c/wai-tutorials" rel="nofollow">to the code directly on Github</a>.</p>
+    </aside>
   </div>
 </div>
 <div class="navigation" aria-label="Navigation" id="nav">
