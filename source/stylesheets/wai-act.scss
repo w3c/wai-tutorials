@@ -6,6 +6,8 @@
 @import "script";
 @import "grid";
 
+
+
 // MQ-Variables
 
 $small:  25em; //* 400px */
@@ -21,9 +23,6 @@ $gutter_width:      2%;         // px|%         // px = fixed, % = fluid
 $container_margin:  0.5%;         // auto|px|%    //
 
 // Font definitions
-//
-// Markup: <div class="font-primary">font-family: "Trebuchet MS", "HelveticaNeue", "Helvetica", "Arial", sans-serif;</div>
-// <div class="font-secondary">font-family: "Vollkorn", Georgia, Times, "Times New Roman", serif;</div>
 
 @include font-face("Vollkorn", font-files("vollkorn/vollkorn-regular.woff"), "vollkorn/vollkorn-regular.eot");
 @include font-face("Vollkorn", font-files("vollkorn/vollkorn-italic.woff"), "vollkorn/vollkorn-italic.eot", normal, italic);
@@ -51,9 +50,9 @@ body {
 	background-color: #F5F5F5;
 	color: #333;
 	font-size: percentage(15/16);
+	line-height: 1.5;
 	max-width: 1680px;
 	margin: 0 auto;
-	line-height: 1.5;
 	@include mq($medium) {
 		font-size: 100%;
 	}
@@ -132,8 +131,6 @@ header[role=banner] {
 }
 
 // Main
-//
-// Markup: <main role="main"></main>
 
 #tools {
 	@include container-full();
@@ -240,6 +237,7 @@ footer {
 	border: 5px solid #993300;
 	border-width: 5px 0;
 	font-size: 0.8em;
+	margin-top: 2em;
 	h2 {
 		font-size: 1em;
 	}
@@ -493,7 +491,7 @@ a {
 	&.editors-draft {
 		h1 {
 			&:after {
-				content: "EDITOR’S DRAFT";
+				content: "ROUGH DRAFT";
 				background-color: #FCC;
 			}
 		}
@@ -516,6 +514,7 @@ a {
 		padding-left:1%;
 		float:right;
 		border-left: 2px solid #930;
+		margin-top: 1em;
 		.annotation-header {
 			margin-top:0;
 			margin-bottom: 0;
@@ -1034,7 +1033,7 @@ select {
 	border:1px solid #666 !important;
 	border-radius: .5em;
 	padding:1em;
-	margin-bottom: 2em;
+	margin: 2em 0;
 	header {
 		font-weight: bold;
 	}
