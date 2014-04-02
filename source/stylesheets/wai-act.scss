@@ -1034,12 +1034,13 @@ select {
 	border-radius: .5em;
 	padding:1em;
 	margin: 2em 0;
-	header {
+	.heading {
 		font-weight: bold;
-	}
-	.icon {
-		font-size: 3em;
-		float:right;
-		transform: rotate(15deg);
+		font-size: 1em;
+		margin: 0 !important;
+		padding: 0 !important;
+		+ p {
+			margin-top: 0.5em;
+		}
 	}
 }

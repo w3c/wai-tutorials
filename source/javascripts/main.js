@@ -9,7 +9,7 @@
 (function ($) {
     'use strict';
 
-    $('.content h2, .ap').each(function(){
+    $('.content h2, .ap').not('aside h2').each(function(){
     	var item = $(this);
     	item.append(' <a class="permalink" href="#' + item.attr('id') + '"><span>Link to this section of the page</span></a>');
     });
