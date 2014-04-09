@@ -8,7 +8,7 @@ You can find the current draft state of the document on [this Github Pages site]
 
 This site uses [Middleman][] to create static HTML files. Please follow the [installation instructions on the Midleman web site][MMInst]. Windows users need to [install Ruby first][WinRuby].
 
-Also it is required to install the [Middleman-GH-Pages gem][MMGHP], if you want to push your changes to a github pages branch. You can contribute locally as well.
+Also it is required to install the [Middleman-GH-Pages gem][MMGHP], if you want to push your changes to a github pages branch. You can edit content and work on the files locally without this gem also.
 
 ### Local development
 
