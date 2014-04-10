@@ -6,11 +6,26 @@ You can find the current draft state of the document on [this Github Pages site]
 
 ## How to contribute
 
-This site uses [Middleman][] to create static HTML files. Please follow the [installation instructions on the Midleman web site][MMInst]. Windows users need to [install Ruby first][WinRuby].
+The tutorials use [Middleman][] to create static HTML files. However there is no need to get into installing Middleman on your computer if you want to contribute. The complete content is organized in Markdown files that you can edit using the edit button in the top right corner of the file’s detail page, if you’re logged into Github. [Here’s an example in the Images Tutorial.][exmpImg]
+
+![showing the toolbar, edit button marked.](_editbutton.png)
+
+You can start editing right away. We use the standard Markdown syntax. If you get the following note, this is expected behavior:
+
+> You are editing a file in a project you do not have write access to. We are forking this project for you (if one does not yet exist) to write your proposed changes to. Submitting a change to this file will write it to a new branch in your fork so you can send a pull request.
+
+It is technical for “All right, make your edits, we make sure you can send them in as a proposal!” 
+
+Don’t forget to add some descriptive text at the bottom that comments your change. Try to be concise. Klick the “Propose this change” button to continue. Then you get another comment field, you can write down your motivation for the change here. Once you click “Send pull request” the editor of the notified of your proposal and may adopt it.
+
+Note that the changes are not immediately reflected on any page. If you want to see your changes in HTML that way is more technical and is described briefly in the following part of the document. As we’re only editing simple Markdown, a preview isn’t needed in most cases.
+
+### Local development
+
+Please follow the [installation instructions on the Midleman web site][MMInst]. Windows users need to [install Ruby first][WinRuby].
 
 Also it is required to install the [Middleman-GH-Pages gem][MMGHP], if you want to push your changes to a github pages branch. You can edit content and work on the files locally without this gem also.
 
-### Local development
 
 Once you’ve cloned the repository to your computer, using the command line or a git client like [Sourcetree][], running the command `gem install` in the repository directory _should_ set everything up for you.
 
@@ -48,3 +63,4 @@ Use the `rake publish` command to publish your current version automatically. If
 [MMGHP]:https://github.com/neo/middleman-gh-pages
 [Sourcetree]:http://www.sourcetreeapp.com/
 [pullreq]:https://help.github.com/articles/using-pull-requests
+[exmpIMG]:https://github.com/w3c/wai-tutorials/blob/master/source/images/informative.html.md.erb
