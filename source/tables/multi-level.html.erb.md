@@ -116,11 +116,10 @@ column ![(new window)](../graphics/new-win-icon.gif)](example4.txt)
 {:.ex}
 
 This example shows availability of accommodation of a given type and size in two different locations. For the data to be understood, each
-`<td>` cell needs to be associated to three `<td>`{:.elem} cells (location, size and type of accommodation). To define these complex associations, each `<th>`{:.elem} cell has a unique `id`{:.attrib} attribute and all data cells have a `headers`{:.attrib} attribute listing the related cell `id`{:.attrib} values.
+`<td>`{:.elem} cell needs to be associated to three `<td>`{:.elem} cells (location, size and type of accommodation). To define these complex associations, each `<th>`{:.elem} cell has a unique `id`{:.attrib} attribute and all data cells have a `headers`{:.attrib} attribute listing the related cell `id`{:.attrib} values.
 
 {::nomarkdown}
 <%= sample_start %>
-{:/nomarkdown}
 
 <table summary="Column one has the location and size of accommodation, other columns show the type and number of properties available">
 <caption>
@@ -259,7 +258,6 @@ This example shows availability of accommodation of a given type and size in two
 </tbody>
 </table>
 
-{::nomarkdown}
 <%= sample_end %>
 {:/nomarkdown}
 
