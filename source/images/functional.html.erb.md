@@ -27,13 +27,13 @@ homepage. It has the text alternative “W3C home” to indicate where the
 link will take the user (see [“Logo image within link text” example](#logo-image-within-link-text) if there is other text in the
 link to identify the destination):
 
-<%= sample_start %>
+{::nomarkdown}<%= sample_start %>{:/nomarkdown}
 
 [![W3C home](w3c.png)](http://www.w3.org/)
 
-<%= sample_end %>
+{::nomarkdown}<%= sample_end %>{:/nomarkdown}
 
-<%= code_start %>
+{::nomarkdown}<%= code_start %>{:/nomarkdown}
 
 ~~~ html
 <a href="http://www.w3.org/">
@@ -41,7 +41,7 @@ link to identify the destination):
 </a>
 ~~~
 
-<%= code_end %>
+{::nomarkdown}<%= code_end %>{:/nomarkdown}
 
 <%= notes_start %>
 
@@ -66,13 +66,13 @@ The image must still contain an `alt` attribute though, so a null
 (empty) value is applied, (`alt=""`), to avoid redundancy or repetition.
 In effect the image is a decorative adjunct to the link text:
 
-<%= sample_start %>
+{::nomarkdown}<%= sample_start %>{:/nomarkdown}
 
 [![](../img/w3c.png){:style="vertical-align: middle; margin-right: 1em;"}W3C Home](http://www.w3.org/)
 
-<%= sample_end %>
+{::nomarkdown}<%= sample_end %>{:/nomarkdown}
 
-<%= code_start %>
+{::nomarkdown}<%= code_start %>{:/nomarkdown}
 
 ~~~ html
 <a href="http://www.w3.org/">
@@ -80,7 +80,7 @@ In effect the image is a decorative adjunct to the link text:
 </a>
 ~~~
 
-<%= code_end %>
+{::nomarkdown}<%= code_end %>{:/nomarkdown}
 
 <%= notes_start %>
 
@@ -99,13 +99,13 @@ In this example the image follows text within a link to inform users
 that the link will open in a new window. It has the text alternative
 “new window” to reflect the representation on the image:
 
-<%= sample_start %>
+{::nomarkdown}<%= sample_start %>{:/nomarkdown}
 
 [W3C Homepage ![new window](new-window.png)](http://www.w3.org/)
 
-<%= sample_end %>
+{::nomarkdown}<%= sample_end %>{:/nomarkdown}
 
-<%= code_start %>
+{::nomarkdown}<%= code_start %>{:/nomarkdown}
 
 ~~~ html
 <a href="http://www.w3.org/" target="_blank">
@@ -113,7 +113,7 @@ that the link will open in a new window. It has the text alternative
 </a>
 ~~~
 
-<%= code_end %>
+{::nomarkdown}<%= code_end %>{:/nomarkdown}
 
 <%= notes_start %>
 
@@ -126,13 +126,13 @@ that the link will open in a new window. It has the text alternative
 
 The following image is an icon representing a printer to denote print functionality. It has the text alternative “Print this page” because its purpose is to activate the print dialog when it is selected:
 
-<%= sample_start %>
+{::nomarkdown}<%= sample_start %>{:/nomarkdown}
 
 [![Print this page](print.png)](javascript:print())
 
-<%= sample_end %>
+{::nomarkdown}<%= sample_end %>{:/nomarkdown}
 
-<%= code_start %>
+{::nomarkdown}<%= code_start %>{:/nomarkdown}
 
 ~~~ html
 <a href="javascript:print()">
@@ -140,7 +140,7 @@ The following image is an icon representing a printer to denote print functional
 </a>
 ~~~
 
-<%= code_end %>
+{::nomarkdown}<%= code_end %>{:/nomarkdown}
 
 <%= notes_start %>
 
@@ -156,7 +156,7 @@ case it is the button to initiate a search request and is an icon
 representing a magnifying lens. The text alternative for the image is
 “search”:
 
-<%= sample_start %>
+{::nomarkdown}<%= sample_start %>{:/nomarkdown}
 
 <form action="#" method="post">
   <p>
@@ -166,15 +166,15 @@ representing a magnifying lens. The text alternative for the image is
   </p>
 </form>
 
-<%= sample_end %>
+{::nomarkdown}<%= sample_end %>{:/nomarkdown}
 
-<%= code_start %>
+{::nomarkdown}<%= code_start %>{:/nomarkdown}
 
 ~~~ html
 <input type="image" src="searchbutton.png" alt="Search">
 ~~~
 
-<%= code_end %>
+{::nomarkdown}<%= code_end %>{:/nomarkdown}
 
 ## Related WCAG2.0 Techniques
 

@@ -22,19 +22,19 @@ realized with CSS styling. The text alternative is the same as that
 presented in the image: “Your access to the city”. The decorative
 effects (stylized text and green line) should not be described.
 
-<%= sample_start %>
+{::nomarkdown}<%= sample_start %>{:/nomarkdown}
 
 ![City Lights: your access to the city.](bad-top-text.png)
 
-<%= sample_end %>
+{::nomarkdown}<%= sample_end %>{:/nomarkdown}
 
-<%= code_start %>
+{::nomarkdown}<%= code_start %>{:/nomarkdown}
 
 ~~~ html
 <img src="access-city.png" alt="Your access to the city.">
 ~~~
 
-<%= code_end %>
+{::nomarkdown}<%= code_end %>{:/nomarkdown}
 
 ### Alternative approach
 
@@ -52,7 +52,7 @@ effects (stylized text and green line) should not be described.
 The visual effects in the above image can be produced using CSS3 and an embedded font. However some authors and developers may need to support older browsers and may find the image example useful.
 
 
-<%= sample_start %>
+{::nomarkdown}<%= sample_start %>{:/nomarkdown}
 
 <div class="background">
 	<div class="tagline"><span>Your access to the city</span></div>
@@ -88,9 +88,9 @@ The visual effects in the above image can be produced using CSS3 and an embedded
 	}
 </style>
 
-<%= sample_end %>
+{::nomarkdown}<%= sample_end %>{:/nomarkdown}
 
-<%= code_start %>
+{::nomarkdown}<%= code_start %>{:/nomarkdown}
 
 **HTML:**
 
@@ -121,7 +121,7 @@ The visual effects in the above image can be produced using CSS3 and an embedded
 }
 ~~~
 
-<%= code_end %>
+{::nomarkdown}<%= code_end %>{:/nomarkdown}
 
 <%= notes_start %>
 
@@ -136,19 +136,19 @@ The visual effects in the above image can be produced using CSS3 and an embedded
 
 The following image is the logo for the Web Accessibility Initiative. It is not part of a link so the text alternative is “Web Accessibility Initiative”. There is no need to mention that it is a logo:
 
-<%= sample_start %>
+{::nomarkdown}<%= sample_start %>{:/nomarkdown}
 
 ![Web Accessibility Initiative](wai.png)
 
-<%= sample_end %>
+{::nomarkdown}<%= sample_end %>{:/nomarkdown}
 
-<%= code_start %>
+{::nomarkdown}<%= code_start %>{:/nomarkdown}
 
 ~~~ html
 <img src="wai.png" alt="Web Accessibility initiative">
 ~~~
 
-<%= code_end %>
+{::nomarkdown}<%= code_end %>{:/nomarkdown}
 
 <%= notes_start %>
 
@@ -163,13 +163,13 @@ The following image is the logo for the Web Accessibility Initiative. It is not 
 
 This math expression shows how to signify that a number is recurring. The `alt` text is “0.3333 recurring, (the recurrence is indicated by a line over the ‘3’ in the fourth decimal place)”. In this instance the way that the recurrence is shown is important, so forms part of the text alternative, this isn't the case with all math expressions.
 
-<%= sample_start %>
+{::nomarkdown}<%= sample_start %>{:/nomarkdown}
 
 ![0.3333 recurring, (the recurrence is indicated by a line over the '3' in the fourth decimal place)](repeat1.png)
 
-<%= sample_end %>
+{::nomarkdown}<%= sample_end %>{:/nomarkdown}
 
-<%= code_start %>
+{::nomarkdown}<%= code_start %>{:/nomarkdown}
 
 ~~~ html
 <img
@@ -177,7 +177,7 @@ This math expression shows how to signify that a number is recurring. The `alt` 
 	alt="0.3333 recurring, (the recurrence is indicated by a line over the ‘3’ in the fourth decimal place)">
 ~~~
 
-<%= code_end %>
+{::nomarkdown}<%= code_end %>{:/nomarkdown}
 
 ### MathML
 
@@ -195,7 +195,7 @@ If math forms are a substantial part of the page or website content, [Math ML](h
 
 The simple example above illustrates the difficulty of describing both the content and presentation (the position and location of the over-line) in mathematical expressions succinctly and clearly, for more complex expressions or equations image text alternatives are unlikely to provide sufficient detail succinctly.
 
-<%= sample_start %>
+{::nomarkdown}<%= sample_start %>{:/nomarkdown}
 
 <math>
 	<mstack stackalign="right">
@@ -204,9 +204,9 @@ The simple example above illustrates the difficulty of describing both the conte
 	</mstack>
 </math>
 
-<%= sample_end %>
+{::nomarkdown}<%= sample_end %>{:/nomarkdown}
 
-<%= code_start %>
+{::nomarkdown}<%= code_start %>{:/nomarkdown}
 
 ~~~ html
 <math>
@@ -217,7 +217,7 @@ The simple example above illustrates the difficulty of describing both the conte
 </math>
 ~~~
 
-<%= code_end %>
+{::nomarkdown}<%= code_end %>{:/nomarkdown}
 
 <%= notes_start %>
 

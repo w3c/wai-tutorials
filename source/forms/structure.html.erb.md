@@ -21,7 +21,7 @@ Some forms, such as for on-line purchasing are a typical example where topic div
 
 The fieldset element is needed to establish relationships between groups of form fields, to help users to focus on the particular topic in hand.
 
-<%= sample_start %>
+{::nomarkdown}<%= sample_start %>{:/nomarkdown}
 
 <form method="post" action="#">
 <fieldset>
@@ -32,9 +32,9 @@ The fieldset element is needed to establish relationships between groups of form
 </fieldset>
 </form>
 
-<%= sample_end %>
+{::nomarkdown}<%= sample_end %>{:/nomarkdown}
 
-<%= code_start %>
+{::nomarkdown}<%= code_start %>{:/nomarkdown}
 
 ~~~ html
 <form method="post" action="#">
@@ -54,7 +54,7 @@ The fieldset element is needed to establish relationships between groups of form
 </form>
 ~~~
 
-<%= code_end %>
+{::nomarkdown}<%= code_end %>{:/nomarkdown}
 
 
 

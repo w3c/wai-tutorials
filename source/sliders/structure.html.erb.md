@@ -29,7 +29,7 @@ The content that follows the carousel should then have a heading at the same lev
 
 Showing both the carousel heading and the one following the carousel:
 
-<%= code_start %>
+{::nomarkdown}<%= code_start %>{:/nomarkdown}
 
 ~~~ html
 <h3>Featured pages</h3>
@@ -39,13 +39,13 @@ Showing both the carousel heading and the one following the carousel:
 <h3>Upcoming events</h3>
 ~~~
 
-<%= code_end %>
+{::nomarkdown}<%= code_end %>{:/nomarkdown}
 
 ## Headings for slides
 
 If slides contain enough text to require structure, each slide could begin with a heading at one level below the overall carousel heading:
 
-<%= sample_start %>
+{::nomarkdown}<%= sample_start %>{:/nomarkdown}
 
 
 ### Featured products
@@ -58,12 +58,12 @@ Scented or unperfumed, evergreen or deciduous, we have clematis for all aspects 
 
 Year after year, these shrubs will fill your garden with succulent fruit, choose from apricot, blueberry and raspberry (slide 2 content).
 
-<%= sample_end %>
+{::nomarkdown}<%= sample_end %>{:/nomarkdown}
 
 
 Slide structure using headings:
 
-<%= code_start %>
+{::nomarkdown}<%= code_start %>{:/nomarkdown}
 
 ~~~ html
 <h3>Featured products</h3>
@@ -72,7 +72,7 @@ Slide structure using headings:
 	<h4>Slide 2 heading</h4>
 		<p>Slide 2 description</p>
 ~~~
-<%= code_end %>
+{::nomarkdown}<%= code_end %>{:/nomarkdown}
 
 ## List of slides
 
@@ -80,19 +80,19 @@ If slides contain just images, or images plus just a word or two of text, they c
 
 ### Featured products
 
-<%= sample_start %>
+{::nomarkdown}<%= sample_start %>{:/nomarkdown}
 
 - ![](../img/placeholder.gif) Clematis
 - ![](../img/placeholder.gif) Fruit bushes
 - ![](../img/placeholder.gif) Vegetables
 
-<%= sample_end %>
+{::nomarkdown}<%= sample_end %>{:/nomarkdown}
 
 ### Code snippet
 
 Using a list where don’t contain much content:
 
-<%= code_start %>
+{::nomarkdown}<%= code_start %>{:/nomarkdown}
 
 ~~~ html
 <h3>Featured products</h3>
@@ -103,7 +103,7 @@ Using a list where don’t contain much content:
 </ul>
 ~~~
 
-<%= code_end %>
+{::nomarkdown}<%= code_end %>{:/nomarkdown}
 
 
 ## Related WCAG2.0 Techniques:

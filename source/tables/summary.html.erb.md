@@ -22,7 +22,7 @@ column, morning opening hours in the first column and afternoon opening
 hours are in the third column”, explaining the way the table is laid
 out.
 
-<%= sample_start %>
+{::nomarkdown}<%= sample_start %>{:/nomarkdown}
 
 {::nomarkdown}
 <table summary="Days are shown in the second column, morning opening hours in the first column and afternoon opening hours are in the third column">
@@ -52,16 +52,16 @@ out.
 </table>
 {:/nomarkdown}
 
-<%= sample_end %>
+{::nomarkdown}<%= sample_end %>{:/nomarkdown}
 
-<%= code_start %>
+{::nomarkdown}<%= code_start %>{:/nomarkdown}
 
 ~~~ html
 <table
 	summary="Days are shown in the second column, morning opening hours in the first column and afternoon opening hours are in the third column">
 ~~~
 
-<%= code_end %>
+{::nomarkdown}<%= code_end %>{:/nomarkdown}
 
 ## Table with a complex structure
 {:.ex}
@@ -71,7 +71,7 @@ sizes of accommodation in two different locations. The `<caption>`
 element is used to describe the table layout as well as act as a heading
 for the table.
 
-<%= sample_start %>
+{::nomarkdown}<%= sample_start %>{:/nomarkdown}
 
 <table>
 <caption style="text-align: left;">
@@ -139,9 +139,9 @@ for the table.
             </tbody>
           </table>
 
-<%= sample_end %>
+{::nomarkdown}<%= sample_end %>{:/nomarkdown}
 
-<%= code_start %>
+{::nomarkdown}<%= code_start %>{:/nomarkdown}
 
 ~~~ html
 <caption>Availability of holiday accommodation <br>
@@ -149,7 +149,7 @@ for the table.
 </caption>
 ~~~
 
-<%= code_end %>
+{::nomarkdown}<%= code_end %>{:/nomarkdown}
 
 **Note:** The technique used for example 2 is valid for both HTML4 and HTML5. **@@@Should I also link here to the [other HTML5 table description techniques](http://www.w3.org/TR/html5/tabular-data.html#table-descriptions-techniques)?**{:.todo}
 

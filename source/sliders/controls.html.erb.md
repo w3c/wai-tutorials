@@ -21,7 +21,7 @@ If implementing a carousel from a script library that marks up the controls as l
 
 Using the `<button>` element:
 
-<%= code_start %>
+{::nomarkdown}<%= code_start %>{:/nomarkdown}
 
 ~~~ html
 <button class="carousel" type="button">
@@ -29,11 +29,11 @@ Using the `<button>` element:
 </button>
 ~~~
 
-<%= code_end %>
+{::nomarkdown}<%= code_end %>{:/nomarkdown}
 
 Applying the WAI-ARIA button `role` attribute to a link:
 
-<%= code_start %>
+{::nomarkdown}<%= code_start %>{:/nomarkdown}
 
 ~~~ html
 <ul>
@@ -50,7 +50,7 @@ Applying the WAI-ARIA button `role` attribute to a link:
 </ul>
 ~~~
 
-<%= code_end %>
+{::nomarkdown}<%= code_end %>{:/nomarkdown}
 
 ## Previous and Next buttons
 
@@ -58,15 +58,15 @@ Images of left and right arrows are most commonly used to visually distinguish b
 
 #### Featured products
 
-<%= sample_start %>
+{::nomarkdown}<%= sample_start %>{:/nomarkdown}
 
 [![Previous product](chevron-left.png)](#prev){:style="vertical-align:middle;"} Current product slide [![Next product](chevron-right.png)](#next){:style="vertical-align:middle;"}
 
-<%= sample_end %>
+{::nomarkdown}<%= sample_end %>{:/nomarkdown}
 
 The `alt` text for these two images is “Previous product” and “Next product”. Although only “Previous” and “Next” are essential as `alt` attribute values, it is good practice to provide the extra context to help users understand that they are still within the products carousel.
 
-<%= code_start %>
+{::nomarkdown}<%= code_start %>{:/nomarkdown}
 
 ~~~ html
 <a href="#prev" role="button">
@@ -78,7 +78,7 @@ The `alt` text for these two images is “Previous product” and “Next produc
 </a>
 ~~~
 
-<%= code_end %>
+{::nomarkdown}<%= code_end %>{:/nomarkdown}
 
 Slide list buttons
 ------------------
@@ -101,7 +101,7 @@ The script should be capable of identifying the current slide and rendering its 
 
 Where the generated code creates text links that the script then renders as images:
 
-<%= code_start %>
+{::nomarkdown}<%= code_start %>{:/nomarkdown}
 
 ~~~ html
 <ul>
@@ -121,7 +121,7 @@ Where the generated code creates text links that the script then renders as imag
 
 ~~~
 
-<%= code_end %>
+{::nomarkdown}<%= code_end %>{:/nomarkdown}
 
 ## Related WCAG2.0 Techniques:
 

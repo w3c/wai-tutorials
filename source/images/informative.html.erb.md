@@ -23,15 +23,15 @@ Each image is followed by a phone number. Consistent with the visual
 presentation the text alternatives “Telephone:” and “Fax:” are used to
 identify which number is which.
 
-<%= sample_start %>
+{::nomarkdown}<%= sample_start %>{:/nomarkdown}
 
 ![Telephone:](phone.png){:style="vertical-align:middle;"} 0123 456 7890
 
 ![Fax:](fax.png){:style="vertical-align:middle;"} 0123 456 7891
 
-<%= sample_end %>
+{::nomarkdown}<%= sample_end %>{:/nomarkdown}
 
-<%= code_start %>
+{::nomarkdown}<%= code_start %>{:/nomarkdown}
 
 ~~~ html
 <p>
@@ -42,7 +42,7 @@ identify which number is which.
 </p>
 ~~~
 
-<%= code_end %>
+{::nomarkdown}<%= code_end %>{:/nomarkdown}
 
 ## Image with informative action
 {:.ex}
@@ -53,13 +53,13 @@ alternative is sufficient to describe the information that is visually
 evident but not explained in the text; in this case the text alternative
 is “Dog with a bell attached to its collar.”.
 
-<%= sample_start %>
+{::nomarkdown}<%= sample_start %>{:/nomarkdown}
 
 ![Dog with a bell attached to its collar.](dog.jpg){:style="float: left; margin-right: 1em;"} Off-duty guide dogs often wear a bell, it's ring helps the blind owner keep track of the dog's location
 
-<%= sample_end %>
+{::nomarkdown}<%= sample_end %>{:/nomarkdown}
 
-<%= code_start %>
+{::nomarkdown}<%= code_start %>{:/nomarkdown}
 
 ~~~ html
 <p>
@@ -68,7 +68,7 @@ is “Dog with a bell attached to its collar.”.
 </p>
 ~~~
 
-<%= code_end %>
+{::nomarkdown}<%= code_end %>{:/nomarkdown}
 
 <%= notes_start %>
 
@@ -81,13 +81,13 @@ is “Dog with a bell attached to its collar.”.
 
 This simple diagram illustrates an anti-clockwise direction for unscrewing a bottle top or cap. The information can be described in a short sentence, so the text alternative “Anti-clockwise diagram: Push the cap down and turn it from right to left” is given in the `alt` attribute.
 
-<%= sample_start %>
+{::nomarkdown}<%= sample_start %>{:/nomarkdown}
 
 <img src="../../img/counter-clockwise.jpg" alt="Anti-clockwise diagram: Push the cap down and turn it from right to left." style="vertical-align: middle; margin-right: .5em;">
 
-<%= sample_end %>
+{::nomarkdown}<%= sample_end %>{:/nomarkdown}
 
-<%= code_start %>
+{::nomarkdown}<%= code_start %>{:/nomarkdown}
 
 ~~~ html
 <p>
@@ -96,7 +96,7 @@ it from right to left.">
 </p>
 ~~~
 
-<%= code_end %>
+{::nomarkdown}<%= code_end %>{:/nomarkdown}
 
 <%= notes_start %>
 
@@ -121,13 +121,13 @@ impression that the website or the company it represents is family
 friendly. The text alternative is “We're family friendly” as this best
 describes the intended impression.
 
-<%= sample_start %>
+{::nomarkdown}<%= sample_start %>{:/nomarkdown}
 
 ![We're family friendly.](family.jpg)
 
-<%= sample_end %>
+{::nomarkdown}<%= sample_end %>{:/nomarkdown}
 
-<%= code_start %>
+{::nomarkdown}<%= code_start %>{:/nomarkdown}
 
 ~~~ html
 <p>
@@ -135,7 +135,7 @@ describes the intended impression.
 </p>
 ~~~
 
-<%= code_end %>
+{::nomarkdown}<%= code_end %>{:/nomarkdown}
 
 <%= notes_start %>
 
@@ -151,13 +151,13 @@ formats identified by format icons within text links. They have the text
 alternatives “HTML”, “Word document” and “PDF” to distinguish the file
 type for each link:
 
-<%= sample_start %>
+{::nomarkdown}<%= sample_start %>{:/nomarkdown}
 
 [2012 Annual report and accounts ![HTML](html5logo.png) (43KB)](../beyond.html), also available in [![Word document](worddocument.png) (254KB)](../beyond.html) or [![PDF](../img/pdfdocument.png) (353KB)](../beyond.html) format.
 
-<%= sample_end %>
+{::nomarkdown}<%= sample_end %>{:/nomarkdown}
 
-<%= code_start %>
+{::nomarkdown}<%= code_start %>{:/nomarkdown}
 
 ~~~ html
 <p>
@@ -176,7 +176,7 @@ type for each link:
 </p>
 ~~~
 
-<%= code_end %>
+{::nomarkdown}<%= code_end %>{:/nomarkdown}
 
 <%= notes_start %>
 

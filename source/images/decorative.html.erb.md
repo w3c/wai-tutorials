@@ -28,29 +28,29 @@ styling rather than being in the HTML.
 This image is used as a border in the page design and has a purely
 decorative purpose.
 
-<%= sample_start %>
+{::nomarkdown}<%= sample_start %>{:/nomarkdown}
 
 ![](topinfo_bg.png)
 
-<%= sample_end %>
+{::nomarkdown}<%= sample_end %>{:/nomarkdown}
 
-<%= code_start %>
+{::nomarkdown}<%= code_start %>{:/nomarkdown}
 
 ~~~ html
 <img src="topinfo_bg.png" alt="">
 ~~~
 
-<%= code_end %>
+{::nomarkdown}<%= code_end %>{:/nomarkdown}
 
 Screen readers also allow the use of WAI-ARIA to hide elements by using `role="presentation"`. Note that this feature is not as widely supported as using a null `alt` attribute.
 
-<%= code_start %>
+{::nomarkdown}<%= code_start %>{:/nomarkdown}
 
 ~~~ html
 <img src="topinfo_bg.png" role="presentation">
 ~~~
 
-<%= code_end %>
+{::nomarkdown}<%= code_end %>{:/nomarkdown}
 
 ## Decorative image as Part of a text link
 {:.ex}
@@ -59,13 +59,13 @@ This illustration of a crocus bulb is used to make the link easier to
 identify and to increase the clickable area, but does not add to the
 information given in adjacent link text.
 
-<%= sample_start %>
+{::nomarkdown}<%= sample_start %>{:/nomarkdown}
 
 [![](crocus.jpg){:style="vertical-align: middle; margin-right: 1em;"}**Crocus bulbs**](../beyond.html)
 
-<%= sample_end %>
+{::nomarkdown}<%= sample_end %>{:/nomarkdown}
 
-<%= code_start %>
+{::nomarkdown}<%= code_start %>{:/nomarkdown}
 
 ~~~ html
 <a href="crocuspage.html">
@@ -74,7 +74,7 @@ information given in adjacent link text.
 </a>
 ~~~
 
-<%= code_end %>
+{::nomarkdown}<%= code_end %>{:/nomarkdown}
 
 <%= notes_start %>
 
@@ -97,9 +97,9 @@ to be repeated in the `alt` attribute.
 don't initiate trouble, if something that could be troublesome is quiet,
 then leave it alone.
 
-<%= sample_end %>
+{::nomarkdown}<%= sample_end %>{:/nomarkdown}
 
-<%= code_start %>
+{::nomarkdown}<%= code_start %>{:/nomarkdown}
 
 ~~~ html
 <p>
@@ -108,29 +108,29 @@ then leave it alone.
 </p>
 ~~~
 
-<%= code_end %>
+{::nomarkdown}<%= code_end %>{:/nomarkdown}
 
 ## Image used for ambience (eye-candy)
 {:.ex}
 
 This image is used to add ambience or visual interest to the page.
 
-<%= sample_start %>
+{::nomarkdown}<%= sample_start %>{:/nomarkdown}
 
 ![](kew.jpg){:style="float:left; margin-right: 1em;"} Don't miss the impressive Tropical House, which is a
 huge greenhouse building that displays examples of exotic plant-life
 from every tropical environment on the planet.
 
-<%= sample_end %>
+{::nomarkdown}<%= sample_end %>{:/nomarkdown}
 
 
-<%= code_start %>
+{::nomarkdown}<%= code_start %>{:/nomarkdown}
 
 ~~~ html
 <img src="tropical.jpg" alt="">
 ~~~
 
-<%= code_end %>
+{::nomarkdown}<%= code_end %>{:/nomarkdown}
 
 <%= notes_start %>
 

@@ -14,7 +14,7 @@ order: 2
 
 All fields marked * must be completed.
 
-<%= sample_start %>
+{::nomarkdown}<%= sample_start %>{:/nomarkdown}
 
 <form method="post" action="#">
 	<div>
@@ -25,7 +25,7 @@ All fields marked * must be completed.
 	</div>
 </form>
 
-<%= sample_end %>
+{::nomarkdown}<%= sample_end %>{:/nomarkdown}
 
 <%= notes_start %>
 
@@ -33,7 +33,7 @@ All fields marked * must be completed.
 
 <%= notes_end %>
 
-<%= code_start %>
+{::nomarkdown}<%= code_start %>{:/nomarkdown}
 
 ~~~ html
 <div>
@@ -46,7 +46,7 @@ All fields marked * must be completed.
 </div>
 ~~~
 
-<%= code_end %>
+{::nomarkdown}<%= code_end %>{:/nomarkdown}
 
 
 ## Label position

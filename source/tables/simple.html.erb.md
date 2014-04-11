@@ -13,7 +13,7 @@ Use header cells (`<th>`) as those that contain the information that is critical
 
 This table of concert dates only needs the cells in the top row marked up as `<th>` cells. This is partly because it is such a small table and partly because the data itself is distinctly different in each column.
 
-<%= sample_start %>
+{::nomarkdown}<%= sample_start %>{:/nomarkdown}
 
 **Concert dates:**
 
@@ -40,9 +40,9 @@ This table of concert dates only needs the cells in the top row marked up as `<t
 	</tr>
 </table>
 
-<%= sample_end %>
+{::nomarkdown}<%= sample_end %>{:/nomarkdown}
 
-<%= code_start %>
+{::nomarkdown}<%= code_start %>{:/nomarkdown}
 
 ~~~ html
 <p>
@@ -64,7 +64,7 @@ This table of concert dates only needs the cells in the top row marked up as `<t
 </table>
 ~~~
 
-<%= code_end %>
+{::nomarkdown}<%= code_end %>{:/nomarkdown}
 
 [Full code for “Table with header cells in the top row only”](examples/headertoprow.html)
 
@@ -73,7 +73,7 @@ This table of concert dates only needs the cells in the top row marked up as `<t
 
 This table of opening times has header information contained in both the top row and the first column. All header cells are marked up as `<th>` cells.
 
-<%= sample_start %>
+{::nomarkdown}<%= sample_start %>{:/nomarkdown}
 
 <table>
 	<tr>
@@ -118,8 +118,8 @@ This table of opening times has header information contained in both the top row
 	</tr>
 </table>
 
-<%= sample_end %>
-<%= code_start %>
+{::nomarkdown}<%= sample_end %>{:/nomarkdown}
+{::nomarkdown}<%= code_start %>{:/nomarkdown}
 
 ~~~ html
 <table>
@@ -151,7 +151,7 @@ This table of opening times has header information contained in both the top row
 </table>
 ~~~
 
-<%= code_end %>
+{::nomarkdown}<%= code_end %>{:/nomarkdown}
 
 [Full code for “Table with header cells in the top row and first column”](examples/headertoprowfirstcol.html)
 
@@ -169,7 +169,7 @@ This example has the table heading marked up using the `<caption>` element, its 
 
 ### Header cells in the top row only:
 
-<%= sample_start %>
+{::nomarkdown}<%= sample_start %>{:/nomarkdown}
 
 <table>
 	<caption>Concert dates</caption>
@@ -195,9 +195,9 @@ This example has the table heading marked up using the `<caption>` element, its 
 	</tr>
 </table>
 
-<%= sample_end %>
+{::nomarkdown}<%= sample_end %>{:/nomarkdown}
 
-<%= code_start %>
+{::nomarkdown}<%= code_start %>{:/nomarkdown}
 
 ~~~ html
 <table>
@@ -216,11 +216,11 @@ This example has the table heading marked up using the `<caption>` element, its 
 </table>
 ~~~
 
-<%= code_end %>
+{::nomarkdown}<%= code_end %>{:/nomarkdown}
 
 ### Header cells in the top row and first column:
 
-<%= sample_start %>
+{::nomarkdown}<%= sample_start %>{:/nomarkdown}
 
 <table>
 	<caption>Delivery slots</caption>
@@ -266,9 +266,9 @@ This example has the table heading marked up using the `<caption>` element, its 
 	</tr>
 </table>
 
-<%= sample_end %>
+{::nomarkdown}<%= sample_end %>{:/nomarkdown}
 
-<%= code_start %>
+{::nomarkdown}<%= code_start %>{:/nomarkdown}
 
 ~~~ html
 <table>
@@ -285,7 +285,7 @@ This example has the table heading marked up using the `<caption>` element, its 
 </table>
 ~~~
 
-<%= code_end %>
+{::nomarkdown}<%= code_end %>{:/nomarkdown}
 
 ## Related WCAG2.0 Techniques
 

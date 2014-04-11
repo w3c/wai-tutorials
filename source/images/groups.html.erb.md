@@ -12,13 +12,13 @@ A grouped collection of images is sometimes used to convey a single piece of inf
 
 This group of five images shows a product rating. There are five images, three filled stars, one half filled star and one empty star, indicating the overall rating. The text alternative for the first image is “Rating: 3.5 out of 5 stars”, all other images have a null (empty) `alt` attribute (`alt=""`).
 
-<%= sample_start %>
+{::nomarkdown}<%= sample_start %>{:/nomarkdown}
 
 Rating: ![3.5 out of 5 stars](star-full.png)![](../img/star-full.png)![](../img/star-full.png)![](star-half.png)![](star-empty.png)
 
-<%= sample_end %>
+{::nomarkdown}<%= sample_end %>{:/nomarkdown}
 
-<%= code_start %>
+{::nomarkdown}<%= code_start %>{:/nomarkdown}
 
 ~~~ html
 <p>
@@ -31,14 +31,14 @@ Rating: ![3.5 out of 5 stars](star-full.png)![](../img/star-full.png)![](../img/
 </p>
 ~~~
 
-<%= code_end %>
+{::nomarkdown}<%= code_end %>{:/nomarkdown}
 
 ## Captions for Image Groups
 {:.ex}
 
 If a group of images has a caption, a `figure` element can be used to group those images. If those images have a caption, `figure` and `figcaption` elements can be nested as well:
 
-<%= sample_start %>
+{::nomarkdown}<%= sample_start %>{:/nomarkdown}
 
 <figure role="group">
 <figcaption>The castle through the ages: 1423, 1756, and 1966 respectively.</figcaption>
@@ -60,9 +60,9 @@ alt="The castle lies in ruins, the original tower all that remains in one piece.
 
 </figure>
 
-<%= sample_end %>
+{::nomarkdown}<%= sample_end %>{:/nomarkdown}
 
-<%= code_start %>
+{::nomarkdown}<%= code_start %>{:/nomarkdown}
 
 ~~~ html
 <figure role="group">
@@ -92,7 +92,7 @@ alt="The castle lies in ruins, the original tower all that remains in one piece.
 </figure>
 ~~~
 
-<%= code_end %>
+{::nomarkdown}<%= code_end %>{:/nomarkdown}
 
 ## Related WCAG2.0 Techniques
 
