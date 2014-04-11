@@ -68,7 +68,7 @@ Screen readers also allow the use of WAI-ARIA to hide elements by using `role="p
 <%= code_end %>
 {:/nomarkdown}
 
-## Decorative image as Part of a text link
+## Decorative image as part of a text link
 {:.ex}
 
 This illustration of a crocus bulb is used to make the link easier to
@@ -119,11 +119,11 @@ This picture of “Poppy the guide dog” is already identified by the
 adjacent caption, this acts as the text alternative, which does not need
 to be repeated in the `alt` attribute.
 
- <%= sample_start %>
+{::nomarkdown}
+<%= sample_start %>
+{:/nomarkdown}
 
-![](../img/sleeping.jpg){:style="float:left; margin-right: 1em;"} **Let sleeping dogs lie:** A proverb meaning
-don't initiate trouble, if something that could be troublesome is quiet,
-then leave it alone.
+![](../img/sleeping.jpg){:style="float:left; margin-right: 1em;"} **Let sleeping dogs lie:** A proverb meaning “don't initiate trouble, if something that could be troublesome is quiet, then leave it alone”.
 
 {::nomarkdown}
 <%= sample_end %>
