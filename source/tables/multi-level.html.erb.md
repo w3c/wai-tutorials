@@ -10,7 +10,8 @@ Multi-level tables are those that have a structure that is too complex to suppor
 -   Those with three or more header cells related to each data cell
 -   Where some of the header cells aren't in direct horizontal or vertical alignment to related data cells.
 
-## Example 1: Table with multiple column headers in each column
+## Table with multiple column headers in each column
+{:.ex}
 
 This table shows contact details for six suppliers. To avoid producing an overly wide table the first row has `<th>`{:.elem} cells identifying the first three supply firms and the fourth row has the `<th>`{:.elem} cells identifying the other three. To ensure that data cells are associated with the correct firm, each `<th>`{:.elem} cell has a unique `id`{:.attrib} and each `<td>`{:.elem} cell has a headers attribute listing the `id`{:.attrib} values that relate to it.
 
@@ -111,7 +112,8 @@ This table shows contact details for six suppliers. To avoid producing an overly
 [Full code for Example 1: Table with multiple column headers in each
 column ![(new window)](../graphics/new-win-icon.gif)](example4.txt)
 
-## Example 2: Table with three headers related to each data cell
+## Table with three headers related to each data cell
+{:.ex}
 
 This example shows availability of accommodation of a given type and size in two different locations. For the data to be understood, each
 `<td>` cell needs to be associated to three `<td>`{:.elem} cells (location, size and type of accommodation). To define these complex associations, each `<th>`{:.elem} cell has a unique `id`{:.attrib} attribute and all data cells have a `headers`{:.attrib} attribute listing the related cell `id`{:.attrib} values.
