@@ -296,6 +296,170 @@ This example shows availability of accommodation of a given type and size in two
 [Full code for Example 2: Table with three headers related to each data
 cell ![(new window)](../graphics/new-win-icon.gif)](example4.txt)
 
+## Split up multi-level tables
+{:.ex}
+
+Most of the time it is possible to split complex tables up into simpler ones, which allows to have simpler and more easy to maintain HTML code. Also simple tables are much better supported by WYSIWYG editors (“What you see is what you get”).
+
+{::nomarkdown}
+<%= sample_start %>
+<p style="text-align:center;"><strong>Availability of holiday accommodation</strong></p>
+<table summary="Column one has the location and size of accommodation, other columns show the type and number of properties available">
+<caption>
+    Paris
+</caption>
+<thead>
+    <tr>
+        <td></td>
+        <th scope="col">
+            Studio
+        </th>
+        <th scope="col">
+            <abbr title="Apartment">Apt</abbr>
+        </th>
+        <th scope="col">
+            Chalet
+        </th>
+        <th scope="col">
+            Villa
+        </th>
+    </tr>
+</thead>
+<tbody>
+    <tr>
+        <th scope="row">
+            1 bedroom
+        </th>
+        <td>
+            11
+        </td>
+        <td>
+            20
+        </td>
+        <td>
+            25
+        </td>
+        <td>
+            23
+        </td>
+    </tr>
+    <tr>
+        <th scope="row">
+            2 bedroom
+        </th>
+        <td>
+            -
+        </td>
+        <td>
+            43
+        </td>
+        <td>
+            52
+        </td>
+        <td>
+            32
+        </td>
+    </tr>
+    <tr>
+        <th scope="row">
+            3 bedroom
+        </th>
+        <td>
+            -
+        </td>
+        <td>
+            13
+        </td>
+        <td>
+            15
+        </td>
+        <td>
+            40
+        </td>
+    </tr>
+  </tbody>
+</table>
+<table style="margin-top:1em;">
+<caption>
+    Rome
+</caption>
+<thead>
+    <tr>
+        <td></td>
+        <th scope="col">
+            Studio
+        </th>
+        <th scope="col">
+            <abbr title="Apartment">Apt</abbr>
+        </th>
+        <th scope="col">
+            Chalet
+        </th>
+        <th scope="col">
+            Villa
+        </th>
+    </tr>
+</thead>
+<tbody>
+    <tr>
+        <th id="rbed1">
+            1 bedroom
+        </th>
+        <td>
+            13
+        </td>
+        <td>
+            21
+        </td>
+        <td>
+            22
+        </td>
+        <td>
+            3
+        </td>
+    </tr>
+    <tr>
+        <th id="rbed2">
+            2 bedroom
+        </th>
+        <td>
+            -
+        </td>
+        <td>
+            23
+        </td>
+        <td>
+            43
+        </td>
+        <td>
+            30
+        </td>
+    </tr>
+    <tr>
+        <th id="rbed3">
+            3 bedroom
+        </th>
+        <td>
+            -
+        </td>
+        <td>
+            16
+        </td>
+        <td>
+            32
+        </td>
+        <td>
+            40
+        </td>
+    </tr>
+</tbody>
+</table>
+
+<%= sample_end %>
+{:/nomarkdown}
+
+
+
 ## Related WCAG2.0 Technique
 
 The following WCAG 2.0 technique was used in the examples above:
