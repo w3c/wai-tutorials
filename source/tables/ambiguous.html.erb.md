@@ -18,7 +18,9 @@ table. The `scope` value “`row`” is used on each `<th>` cell to ensure
 that it cannot be mistaken as a header for other cells in the same
 column.
 
-{::nomarkdown}<%= sample_start %>{:/nomarkdown}
+{::nomarkdown}
+<%= sample_start %>
+{:/nomarkdown}
 
 <table>
   <caption>
@@ -50,9 +52,13 @@ column.
   </tr>
 </table>
 
-{::nomarkdown}<%= sample_end %>{:/nomarkdown}
+{::nomarkdown}
+<%= sample_end %>
+{:/nomarkdown}
 
-{::nomarkdown}<%= code_start %>{:/nomarkdown}
+{::nomarkdown}
+<%= code_start %>
+{:/nomarkdown}
 
 ~~~ html
 <table>
@@ -70,7 +76,9 @@ column.
 </table>
 ~~~
 
-{::nomarkdown}<%= code_end %>{:/nomarkdown}
+{::nomarkdown}
+<%= code_end %>
+{:/nomarkdown}
 
 [Full code Example “Table with header cells in one column only”](examples/scope-simple.html)
 
@@ -79,7 +87,9 @@ column.
 
 In this table the row header cells are in the second column rather than the first. The `scope` values “`row`” and has been used on the `<th>` cells in the second column to ensure that data cells in the first column, as well as those in cells to the right of the headers are correctly associated.
 
-{::nomarkdown}<%= sample_start %>{:/nomarkdown}
+{::nomarkdown}
+<%= sample_start %>
+{:/nomarkdown}
 
 <table>
   <caption>
@@ -158,9 +168,13 @@ In this table the row header cells are in the second column rather than the firs
   </tbody>
 </table>
 
-{::nomarkdown}<%= sample_end %>{:/nomarkdown}
+{::nomarkdown}
+<%= sample_end %>
+{:/nomarkdown}
 
-{::nomarkdown}<%= code_start %>{:/nomarkdown}
+{::nomarkdown}
+<%= code_start %>
+{:/nomarkdown}
 
 ~~~ html
 […]
@@ -177,7 +191,9 @@ In this table the row header cells are in the second column rather than the firs
 […]
 ~~~
 
-{::nomarkdown}<%= code_end %>{:/nomarkdown}
+{::nomarkdown}
+<%= code_end %>
+{:/nomarkdown}
 
 [Full code for “Table with an offset column of header cells”](examples/scope-offset.html)
 
@@ -187,7 +203,9 @@ In this table the row header cells are in the second column rather than the firs
 In this example, some of the row header cells span two or more rows of
 data cells and one column header spans three columns.
 
-{::nomarkdown}<%= sample_start %>{:/nomarkdown}
+{::nomarkdown}
+<%= sample_start %>
+{:/nomarkdown}
 
 <table>
   <caption>
@@ -232,9 +250,13 @@ data cells and one column header spans three columns.
   </tr>
 </table>
 
-{::nomarkdown}<%= sample_end %>{:/nomarkdown}
+{::nomarkdown}
+<%= sample_end %>
+{:/nomarkdown}
 
-{::nomarkdown}<%= code_start %>{:/nomarkdown}
+{::nomarkdown}
+<%= code_start %>
+{:/nomarkdown}
 
 ~~~ html
 […]
@@ -253,7 +275,9 @@ data cells and one column header spans three columns.
 […]
 ~~~
 
-{::nomarkdown}<%= code_end %>{:/nomarkdown}
+{::nomarkdown}
+<%= code_end %>
+{:/nomarkdown}
 
 [Full code for “Table with headers spanning multiple rows or columns”](examples/scope-multiple.html)
 

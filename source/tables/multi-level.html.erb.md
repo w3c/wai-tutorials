@@ -14,7 +14,9 @@ Multi-level tables are those that have a structure that is too complex to suppor
 
 This table shows contact details for six suppliers. To avoid producing an overly wide table the first row has `<th>`{:.elem} cells identifying the first three supply firms and the fourth row has the `<th>`{:.elem} cells identifying the other three. To ensure that data cells are associated with the correct firm, each `<th>`{:.elem} cell has a unique `id`{:.attrib} and each `<td>`{:.elem} cell has a headers attribute listing the `id`{:.attrib} values that relate to it.
 
-{::nomarkdown}<%= sample_start %>{:/nomarkdown}
+{::nomarkdown}
+<%= sample_start %>
+{:/nomarkdown}
 
 <table>
   <caption>
@@ -70,9 +72,13 @@ This table shows contact details for six suppliers. To avoid producing an overly
   </tr>
 </table>
 
-{::nomarkdown}<%= sample_end %>{:/nomarkdown}
+{::nomarkdown}
+<%= sample_end %>
+{:/nomarkdown}
 
-{::nomarkdown}<%= code_start('', 'Assigning <strong>id</strong> attributes to <code>&lt;th></code> cells') %>{:/nomarkdown}
+{::nomarkdown}
+<%= code_start('', 'Assigning <strong>id</strong> attributes to <code>&lt;th></code> cells') %>
+{:/nomarkdown}
 
 ~~~ html
 […]
@@ -83,9 +89,13 @@ This table shows contact details for six suppliers. To avoid producing an overly
 […]
 ~~~
 
-{::nomarkdown}<%= code_end %>{:/nomarkdown}
+{::nomarkdown}
+<%= code_end %>
+{:/nomarkdown}
 
-{::nomarkdown}<%= code_start('', 'Assigning <strong>header</strong> attributes to <code>&lt;td></code> cells') %>{:/nomarkdown}
+{::nomarkdown}
+<%= code_start('', 'Assigning <strong>header</strong> attributes to <code>&lt;td></code> cells') %>
+{:/nomarkdown}
 
 ~~~ html
 […]
@@ -94,7 +104,9 @@ This table shows contact details for six suppliers. To avoid producing an overly
 […]
 ~~~
 
-{::nomarkdown}<%= code_end %>{:/nomarkdown}
+{::nomarkdown}
+<%= code_end %>
+{:/nomarkdown}
 
 [Full code for Example 1: Table with multiple column headers in each
 column ![(new window)](../graphics/new-win-icon.gif)](example4.txt)
@@ -104,7 +116,9 @@ column ![(new window)](../graphics/new-win-icon.gif)](example4.txt)
 This example shows availability of accommodation of a given type and size in two different locations. For the data to be understood, each
 `<td>` cell needs to be associated to three `<td>`{:.elem} cells (location, size and type of accommodation). To define these complex associations, each `<th>`{:.elem} cell has a unique `id`{:.attrib} attribute and all data cells have a `headers`{:.attrib} attribute listing the related cell `id`{:.attrib} values.
 
-{::nomarkdown}<%= sample_start %>{:/nomarkdown}
+{::nomarkdown}
+<%= sample_start %>
+{:/nomarkdown}
 
 <table summary="Column one has the location and size of accommodation, other columns show the type and number of properties available">
 <caption>
@@ -192,7 +206,7 @@ This example shows availability of accommodation of a given type and size in two
     <tr>
         <th id="rbed1" headers="rome">
             1 bedroom
-</th>
+        </th>
         <td headers="rome rbed1 stud">
             13
         </td>
@@ -209,7 +223,7 @@ This example shows availability of accommodation of a given type and size in two
     <tr>
         <th id="rbed2" headers="rome">
             2 bedroom
-</th>
+        </th>
         <td headers="rome rbed2 stud">
             -
         </td>
@@ -243,9 +257,13 @@ This example shows availability of accommodation of a given type and size in two
 </tbody>
 </table>
 
-{::nomarkdown}<%= sample_end %>{:/nomarkdown}
+{::nomarkdown}
+<%= sample_end %>
+{:/nomarkdown}
 
-{::nomarkdown}<%= code_start('', 'Assigning <strong>id</strong> attributes to <code>&lt;th></code> cells') %>{:/nomarkdown}
+{::nomarkdown}
+<%= code_start('', 'Assigning <code class="attrib">id</code> attributes to <code class="elem">&lt;th></code> cells') %>
+{:/nomarkdown}
 
 ~~~ html
 […]
@@ -256,9 +274,13 @@ This example shows availability of accommodation of a given type and size in two
 […]
 ~~~
 
-{::nomarkdown}<%= code_end %>{:/nomarkdown}
+{::nomarkdown}
+<%= code_end %>
+{:/nomarkdown}
 
-{::nomarkdown}<%= code_start('', 'Assigning <strong>header</strong> attributes to <code>&lt;td></code> cells') %>{:/nomarkdown}
+{::nomarkdown}
+<%= code_start('', 'Assigning <code class="attrib">header</code> attributes to <code class="elem">&lt;td></code> cells') %>
+{:/nomarkdown}
 
 ~~~ html
 […]
@@ -267,7 +289,9 @@ This example shows availability of accommodation of a given type and size in two
 […]
 ~~~
 
-{::nomarkdown}<%= code_end %>{:/nomarkdown}
+{::nomarkdown}
+<%= code_end %>
+{:/nomarkdown}
 
 [Full code for Example 2: Table with three headers related to each data
 cell ![(new window)](../graphics/new-win-icon.gif)](example4.txt)

@@ -16,21 +16,27 @@ Position instructions that are common to several fields ahead of the form itself
 
 Here are some instructions that should be positioned ahead of the form as a whole, or before a group of fields:
 
-{::nomarkdown}<%= sample_start %>{:/nomarkdown}
+{::nomarkdown}
+<%= sample_start %>
+{:/nomarkdown}
 
 - All fields marked * must be completed.
 - Dates should all be typed in the format dd/mm/yyy, (as in 21/07/2013).
 - Passwords must contain at least 8 letters and/or numbers.
 - Extra help can be found immediately after each field.
 
-{::nomarkdown}<%= sample_end %>{:/nomarkdown}
+{::nomarkdown}
+<%= sample_end %>
+{:/nomarkdown}
 
 ## In-line instructions
 {:.ex}
 
 Some in-line instructions, such as required field indicators must be part of the label itself, otherwise it might not be picked up by screen readers. Other instructions, such as format tips are most accessible as part of the label element, but might be positioned to the right of a field as long as this is included in the overview instruction, otherwise people who can’t see the screen won’t know whether the tip relates to the field before it or the one after.
 
-{::nomarkdown}<%= sample_start %>{:/nomarkdown}
+{::nomarkdown}
+<%= sample_start %>
+{:/nomarkdown}
 
 <form method="post" action="#">
   <div>
@@ -38,9 +44,13 @@ Some in-line instructions, such as required field indicators must be part of the
   </div>
 </form>
 
-{::nomarkdown}<%= sample_end %>{:/nomarkdown}
+{::nomarkdown}
+<%= sample_end %>
+{:/nomarkdown}
 
-{::nomarkdown}<%= code_start %>{:/nomarkdown}
+{::nomarkdown}
+<%= code_start %>
+{:/nomarkdown}
 
 ~~~ html
 <form method="post" action="#">
@@ -51,7 +61,9 @@ Some in-line instructions, such as required field indicators must be part of the
 </form>
 ~~~
 
-{::nomarkdown}<%= code_end %>{:/nomarkdown}
+{::nomarkdown}
+<%= code_end %>
+{:/nomarkdown}
 
 ## Related WCAG2.0 Techniques
 
