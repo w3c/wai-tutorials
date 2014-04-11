@@ -7,16 +7,9 @@ topic_order: 2
 type: intro
 ---
 
-All data tables need to have structural markup (coding) - elements and
-attributes that distinguish between header and data cells and define the
-relationships between them. This tutorial shows you how to apply
-appropriate structural table markup. It includes the following pages:
+All data tables need to have structural markup (coding): elements and attributes that distinguish between header and data cells and define the relationships between them. This tutorial shows you how to apply appropriate structural table markup. It includes the following pages:
 
--   **[Header cells](headers.html):** Identify the topic of a row or column –
-    header cells need to be marked up as `<th>` cells;
-
--   **[Captions](caption.html):** Describe the overall topic of a table —
-    best practice is to use the `<caption>` element;
+-   **[Simple Tables](simple.html):** Identify the topic of a row or column and denote those header cells with `<th>`{:.elem} elements in the markup. Also use the `<caption>`{:.elem} element to describe the overall topic of a table.
 
 -   **[Scope of header cells](scope.html):** Defines the range and
     direction of the data cells to which a header applies – use
@@ -31,14 +24,18 @@ appropriate structural table markup. It includes the following pages:
     *summary* attribute of the `<table>` element or as part of the
     table's `<caption>` element.
 
+{::nomarkdown}
 <%= notes_start %>
+{:/nomarkdown}
 
 **Note:** The techniques in this tutorial should be applied only when a
 table is being used to display data in a grid: if a table is used for
 layout, (which is discouraged), none of these elements and attributes
 should be applied.
 
+{::nomarkdown}
 <%= notes_end %>
+{:/nomarkdown}
 
 
 ## Why is this important?
