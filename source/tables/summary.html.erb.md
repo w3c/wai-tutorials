@@ -1,32 +1,19 @@
 ---
-title: Table Summary
+title: Summarize Tables
 status: editors-draft
-order: 6
+technologies: HTML4, HTML5
+order: 5
 ---
-A summary is a brief description of how data is organized in a table. It
-may not be necessary in very simple tables but can be important where
-the data is laid out in an unusual order or the table structure is
-complex. In these cases, a summary should be provided to give brief
-orientation clues. In HTML4 the description can be marked up in the
-`summary` attribute of the `<table>` element, but as this is made
-obsolete in HTML5, the second example on this page shows how to put the
-description within the `<caption>` element.
+A summary is a brief description of how data is organized in a table. It may not be necessary in very simple tables but can be important where the data is laid out in an unusual order or the table structure is complex. In these cases, a summary should be provided to give brief orientation clues. In HTML4 the description can be marked up in the `summary`{:.attrib} attribute of the `<table>`{:.elem} element, but as this is made obsolete in HTML5, the second example on this page shows how to put the description within the `<caption>`{:.elem} element.
 
 ## Table with data on both sides of a header column
 {:.ex}
 
-This table has an unusual table structure, the days of the week are in
-the center column, morning times to the left and afternoon times to the
-right. It has the `summary` attribute “Days are shown in the second
-column, morning opening hours in the first column and afternoon opening
-hours are in the third column”, explaining the way the table is laid
-out.
+This table has an _unusual table structure_, the days of the week are in the center column, morning times to the left and afternoon times to the right. It has the `summary`{:.attrib} attribute “Days are shown in the second column, morning opening hours in the first column and afternoon opening hours are in the third column”, explaining the way the table is laid out.
 
 {::nomarkdown}
 <%= sample_start %>
-{:/nomarkdown}
 
-{::nomarkdown}
 <table summary="Days are shown in the second column, morning opening hours in the first column and afternoon opening hours are in the third column">
 	<caption>
 		Surgery opening times
@@ -52,9 +39,7 @@ out.
 		<td headers="a d3">Closed</td>
 	</tr>
 </table>
-{:/nomarkdown}
 
-{::nomarkdown}
 <%= sample_end %>
 {:/nomarkdown}
 
@@ -74,10 +59,7 @@ out.
 ## Table with a complex structure
 {:.ex}
 
-This is a complex table showing availability of different types and
-sizes of accommodation in two different locations. The `<caption>`
-element is used to describe the table layout as well as act as a heading
-for the table.
+This is a complex table showing availability of different types and sizes of accommodation in two different locations. The `<caption>`{:.elem} element is used to describe the table layout as well as act as a heading for the table.
 
 {::nomarkdown}
 <%= sample_start %>
@@ -86,7 +68,7 @@ for the table.
 <table>
 <caption style="text-align: left;">
   Availability of holiday accommodation<br>
-            <span style="font-size: .75em;">Column one has the location and size of accommodation, other columns show the type and number of properties available</span>
+            <span style="font-size: .75em; display:block; line-height: 1.5;">Column one has the location and size of accommodation, other columns show the type and number of properties available</span>
             </caption>
 <thead>
               <tr>
