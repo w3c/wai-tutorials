@@ -65,7 +65,7 @@ is “Dog with a bell attached to its collar.”.
 <%= sample_start %>
 {:/nomarkdown}
 
-![Dog with a bell attached to its collar.](dog.jpg){:style="float: left; margin-right: 1em;"} Off-duty guide dogs often wear a bell, it's ring helps the blind owner keep track of the dog's location
+![Dog with a bell attached to its collar.](dog.jpg){:style="float: left; margin-right: 1em;"} Off-duty guide dogs often wear a bell, its ring helps the blind owner keep track of the dog's location
 
 {::nomarkdown}
 <%= sample_end %>
