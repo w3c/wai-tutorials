@@ -10,12 +10,12 @@ that can be expressed in a short phrase or sentence. In this case, the
 text alternative needs to convey the meaning or identification that is
 visually apparent, which isn’t normally a literal description of the
 image. In some situations a detailed literal description may be needed,
-but only where the composition of the image is all or part of the
+but only where content of the image is all or part of the
 information being conveyed. Whether to treat an image as informative or
 [decorative](decorative.html) is a judgement that only the author can make,
 based on the reason for including the image on the page.
 
-## Image used for identification
+## Image used to label other information
 {:.ex}
 
 This example shows two images, one of a telephone, one of a fax machine.
@@ -52,7 +52,7 @@ identify which number is which.
 <%= code_end %>
 {:/nomarkdown}
 
-## Image with informative action
+## Image used to supplement other information
 {:.ex}
 
 The following image shows a dog wearing a bell. It supplements the
