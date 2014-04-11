@@ -15,7 +15,7 @@ information being conveyed. Whether to treat an image as informative or
 [decorative](decorative.html) is a judgement that only the author can make,
 based on the reason for including the image on the page.
 
-## Image used for identification
+## Images used for identification
 {:.ex}
 
 This example shows two images, one of a telephone, one of a fax machine.
@@ -52,7 +52,7 @@ identify which number is which.
 <%= code_end %>
 {:/nomarkdown}
 
-## Image with informative action
+## Images with informative action
 {:.ex}
 
 The following image shows a dog wearing a bell. It supplements the
@@ -96,7 +96,7 @@ is “Dog with a bell attached to its collar.”.
 <%= notes_end %>
 {:/nomarkdown}
 
-## Image conveying succinct information
+## Images conveying succinct information
 {:.ex}
 
 This simple diagram illustrates an anti-clockwise direction for unscrewing a bottle top or cap. The information can be described in a short sentence, so the text alternative “Anti-clockwise diagram: Push the cap down and turn it from right to left” is given in the `alt` attribute.
@@ -144,7 +144,7 @@ one of the approaches described in [Complex images](complex.html).
 <%= notes_end %>
 {:/nomarkdown}
 
-## Image conveying an impression or emotion
+## Images conveying an impression or emotion
 {:.ex}
 
 This photograph shows a smiling family group, it is a stock image so the
@@ -187,7 +187,7 @@ describes the intended impression.
 <%= notes_end %>
 {:/nomarkdown}
 
-## Image conveying file format
+## Images conveying file format
 {:.ex}
 
 In this example, a document is available to download in three different
