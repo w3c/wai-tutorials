@@ -1,33 +1,20 @@
 ---
 title: Multi-level Tables
 status: editors-draft
-order: 5
+order: 4
 ---
 
-Multi-level tables are those that have a structure that is too complex
-to support strict horizontal or vertical association between header and
-data cells. In each case, the relationship between header and data cells
-needs to be defined by giving each `<th>` cell a unique id attribute,
-and each `<td>` a headers attribute that lists related id values,
-without any comma separation. Table structures that need to be marked up
-this way include:
+Multi-level tables are those that have a structure that is too complex to support strict horizontal or vertical association between header and data cells. In each case, the relationship between header and data cells needs to be defined by giving each `<th>`{:.elem} cell a unique id attribute, and each `<td>`{:.elem} a headers attribute that lists related id values, without any comma separation. Table structures that need to be marked up this way include:
 
--   Where column headers are repeated or changed part-way through the
-    table;
--   Those with three or more header cells related to each data cell;
--   Where some of the header cells aren't in direct horizontal or
-    vertical alignment to related data cells.
+-   Where column headers are repeated or changed part-way through the table
+-   Those with three or more header cells related to each data cell
+-   Where some of the header cells aren't in direct horizontal or vertical alignment to related data cells.
 
 ## Example 1: Table with multiple column headers in each column
 
-This table shows contact details for six suppliers. To avoid producing
-an overly wide table the first row has `<th>` cells identifying the
-first three supply firms and the fourth row has the `<th>` cells
-identifying the other three. To ensure that data cells are associated
-with the correct firm, each `<th>` cell has a unique *id* and each `<td>`
-cell has a headers attribute listing the *id* values that relate to it.
+This table shows contact details for six suppliers. To avoid producing an overly wide table the first row has `<th>`{:.elem} cells identifying the first three supply firms and the fourth row has the `<th>`{:.elem} cells identifying the other three. To ensure that data cells are associated with the correct firm, each `<th>`{:.elem} cell has a unique `id`{:.attrib} and each `<td>`{:.elem} cell has a headers attribute listing the `id`{:.attrib} values that relate to it.
 
-<%= sample_start %>
+{::nomarkdown}<%= sample_start %>{:/nomarkdown}
 
 <table>
   <caption>
@@ -83,9 +70,9 @@ cell has a headers attribute listing the *id* values that relate to it.
   </tr>
 </table>
 
-<%= sample_end %>
+{::nomarkdown}<%= sample_end %>{:/nomarkdown}
 
-<%= code_start('', 'Assigning <strong>id</strong> attributes to <code>&lt;th></code> cells') %>
+{::nomarkdown}<%= code_start('', 'Assigning <strong>id</strong> attributes to <code>&lt;th></code> cells') %>{:/nomarkdown}
 
 ~~~ html
 […]
@@ -96,9 +83,9 @@ cell has a headers attribute listing the *id* values that relate to it.
 […]
 ~~~
 
-<%= code_end %>
+{::nomarkdown}<%= code_end %>{:/nomarkdown}
 
-<%= code_start('', 'Assigning <strong>header</strong> attributes to <code>&lt;td></code> cells') %>
+{::nomarkdown}<%= code_start('', 'Assigning <strong>header</strong> attributes to <code>&lt;td></code> cells') %>{:/nomarkdown}
 
 ~~~ html
 […]
@@ -107,21 +94,17 @@ cell has a headers attribute listing the *id* values that relate to it.
 […]
 ~~~
 
-<%= code_end %>
+{::nomarkdown}<%= code_end %>{:/nomarkdown}
 
 [Full code for Example 1: Table with multiple column headers in each
 column ![(new window)](../graphics/new-win-icon.gif)](example4.txt)
 
 ## Example 2: Table with three headers related to each data cell
 
-This example shows availability of accommodation of a given type and
-size in two different locations. For the data to be understood, each
-`<td>` cell needs to be associated to three `<td>` cells (location, size
-and type of accommodation). To define these complex associations, each
-`<th>` cell has a unique *id* attribute and all data cells have a
-*headers* attribute listing the related cell *id* values.
+This example shows availability of accommodation of a given type and size in two different locations. For the data to be understood, each
+`<td>` cell needs to be associated to three `<td>`{:.elem} cells (location, size and type of accommodation). To define these complex associations, each `<th>`{:.elem} cell has a unique `id`{:.attrib} attribute and all data cells have a `headers`{:.attrib} attribute listing the related cell `id`{:.attrib} values.
 
-<%= sample_start %>
+{::nomarkdown}<%= sample_start %>{:/nomarkdown}
 
 <table summary="Column one has the location and size of accommodation, other columns show the type and number of properties available">
 <caption>
@@ -243,7 +226,7 @@ and type of accommodation). To define these complex associations, each
     <tr>
         <th id="rbed3" headers="rome">
             3 bedroom
-</th>
+        </th>
         <td headers="rome rbed3 stud">
             -
         </td>
@@ -260,9 +243,9 @@ and type of accommodation). To define these complex associations, each
 </tbody>
 </table>
 
-<%= sample_end %>
+{::nomarkdown}<%= sample_end %>{:/nomarkdown}
 
-<%= code_start('', 'Assigning <strong>id</strong> attributes to <code>&lt;th></code> cells') %>
+{::nomarkdown}<%= code_start('', 'Assigning <strong>id</strong> attributes to <code>&lt;th></code> cells') %>{:/nomarkdown}
 
 ~~~ html
 […]
@@ -273,9 +256,9 @@ and type of accommodation). To define these complex associations, each
 […]
 ~~~
 
-<%= code_end %>
+{::nomarkdown}<%= code_end %>{:/nomarkdown}
 
-<%= code_start('', 'Assigning <strong>header</strong> attributes to <code>&lt;td></code> cells') %>
+{::nomarkdown}<%= code_start('', 'Assigning <strong>header</strong> attributes to <code>&lt;td></code> cells') %>{:/nomarkdown}
 
 ~~~ html
 […]
@@ -284,7 +267,7 @@ and type of accommodation). To define these complex associations, each
 […]
 ~~~
 
-<%= code_end %>
+{::nomarkdown}<%= code_end %>{:/nomarkdown}
 
 [Full code for Example 2: Table with three headers related to each data
 cell ![(new window)](../graphics/new-win-icon.gif)](example4.txt)
