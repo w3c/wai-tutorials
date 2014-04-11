@@ -139,13 +139,17 @@ The visual effects in the above image can be produced using CSS3 and an embedded
 <%= code_end %>
 {:/nomarkdown}
 
+{::nomarkdown}
 <%= notes_start %>
+{:/nomarkdown}
 
 **Note 1:** The code snippet doesn’t show any [vendor prefixes](http://www.w3.org/TR/css-2010/#experimental). These should be added to increase compatibility with older versions of browsers.
 
 **Note 2:** The specific `@font-face` rule was left out intentionally as it is not important for the example.
 
+{::nomarkdown}
 <%= notes_end %>
+{:/nomarkdown}
 
 ## Image of text used as an unlinked logo
 {:.ex}
@@ -174,13 +178,17 @@ The following image is the logo for the Web Accessibility Initiative. It is not 
 <%= code_end %>
 {:/nomarkdown}
 
+{::nomarkdown}
 <%= notes_start %>
+{:/nomarkdown}
 
 **Note 1:** Images used as logos are exempt from some of the accessibility guidance that applies to other images of text, for instance there are no minimum color contrast and text size requirements.
 
 **Note 2:** If this logo were linked then it would become a functional image; See [“Functional Images”: “Image used alone as a linked logo”](functional.html#image-used-alone-as-a-linked-logo).
 
+{::nomarkdown}
 <%= notes_end %>
+{:/nomarkdown}
 
 ## Image of a mathematical expression
 {:.ex}
@@ -259,11 +267,15 @@ The simple example above illustrates the difficulty of describing both the conte
 <%= code_end %>
 {:/nomarkdown}
 
+{::nomarkdown}
 <%= notes_start %>
+{:/nomarkdown}
 
 **Note:** The above code includes semantic information that conveys both content and presentation to assistive technologies.
 
+{::nomarkdown}
 <%= notes_end %>
+{:/nomarkdown}
 
 ## Related WCAG2.0 Technique
 

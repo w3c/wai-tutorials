@@ -19,11 +19,15 @@ The “stop” function should also be called if the user activates any slide se
 
 The carousel should not resume scrolling until and unless the user activates the “play” button.
 
+{::nomarkdown}
 <%= notes_start %>
+{:/nomarkdown}
 
 **Note:** As discussed on the [controls](controls.html) page, all buttons in the carousel should be coded as buttons or have a WAI-ARIA `role` attribute of `button` to let users know that they are controls, not links.
 
+{::nomarkdown}
 <%= notes_end %>
+{:/nomarkdown}
 
 ## Related WCAG2.0 Technique:
 

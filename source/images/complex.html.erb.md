@@ -60,14 +60,18 @@ Here the `longdesc` attribute contains the URI of the page containing the long d
 <%= code_end %>
 {:/nomarkdown}
 
+{::nomarkdown}
 <%= notes_start %>
+{:/nomarkdown}
 
 **Note:** Both Firefox and Chrome browsers are working on
 implementations that will make the *longdesc linked* long description
 location reachable by all users. In older or other browsers it is only
 available to screen reader users.
 
+{::nomarkdown}
 <%= notes_end %>
+{:/nomarkdown}
 
 ### A text link to the long description adjacent to the image
 {:.ap}
@@ -93,13 +97,17 @@ makes both the destination and the association with the image clear.
 <%= code_end %>
 {:/nomarkdown}
 
+{::nomarkdown}
 <%= notes_start %>
+{:/nomarkdown}
 
 **Note:** This approach is well supported in all browsers and ensures
 that everyone has access to the data as well as the image, no matter
 what browser or assistive technologies they may use.
 
+{::nomarkdown}
 <%= notes_end %>
+{:/nomarkdown}
 
 ### Describing the location of the long description in the `alt` attribute
 {:.ap}

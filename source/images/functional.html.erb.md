@@ -7,7 +7,9 @@ order: 4
 
 Functional images are those that allow user interaction, such as when used as buttons or within links. In this case, the text alternative for the image needs to convey the action that will be initiated (the purpose of the image), rather than a description of the image. For instance, as shown in examples below, the text alternative should be “print this page” rather than “image of a printer”, “search” rather than “magnifying lens” or “Example.com homepage” rather than “Example.com logo”.
 
+{::nomarkdown}
 <%= notes_start %>
+{:/nomarkdown}
 
 **Note:** It's vital that images that act as stand alone links have the
 appropriate text value in their `alt` attributes. Missing or empty
@@ -17,7 +19,9 @@ alternative is provided they will announce the image filepath or the URI
 for the destination page, neither of which will let users know where the
 link leads.
 
+{::nomarkdown}
 <%= notes_end %>
+{:/nomarkdown}
 
 ## Image used alone as a linked logo
 {:.ex}
@@ -51,7 +55,9 @@ link to identify the destination):
 <%= code_end %>
 {:/nomarkdown}
 
+{::nomarkdown}
 <%= notes_start %>
+{:/nomarkdown}
 
 **Note 1:** In this situation the logo is also an image of the text
 “W3C” but in this case it is primarily a functional image linked to the
@@ -61,7 +67,9 @@ home page, so the word “home” was added to the text alternative.
 accessibility guidance that applies to other images of text, for
 instance there are no minimum color contrast and text size requirements.
 
+{::nomarkdown}
 <%= notes_end %>
+{:/nomarkdown}
 
 ## Logo image within link text
 {:.ex}
@@ -98,7 +106,9 @@ In effect the image is a decorative adjunct to the link text:
 <%= code_end %>
 {:/nomarkdown}
 
+{::nomarkdown}
 <%= notes_start %>
+{:/nomarkdown}
 
 **Note:** Where an image and text are both contained in a single link
 anchor, the image should be treated as decorative, although it functions
@@ -106,7 +116,9 @@ as part of the link, unless it contains additional information that is
 pertinent to the link (see example 3). Another example of this technique
 can be found under [decorative images](../decorative/).
 
+{::nomarkdown}
 <%= notes_end %>
+{:/nomarkdown}
 
 ## Icon image conveying information within link text
 {:.ex}
@@ -139,11 +151,15 @@ that the link will open in a new window. It has the text alternative
 <%= code_end %>
 {:/nomarkdown}
 
+{::nomarkdown}
 <%= notes_start %>
+{:/nomarkdown}
 
 **Note:** This type of icon is often used to indicate different file formats such as AVI, ODF, MP3, PDF, Word, and many more. In this case the text alternative should equally convey the format represented by each icon.
 
+{::nomarkdown}
 <%= notes_end %>
+{:/nomarkdown}
 
 ## Stand-alone icon image that has a function
 {:.ex}
@@ -174,11 +190,15 @@ The following image is an icon representing a printer to denote print functional
 <%= code_end %>
 {:/nomarkdown}
 
+{::nomarkdown}
 <%= notes_start %>
+{:/nomarkdown}
 
 **Note:** The same text alternative is applicable when such an icon is used in a button instead of in a link. the next example on this page explains how to code the text alternative for buttons.
 
+{::nomarkdown}
 <%= notes_end %>
+{:/nomarkdown}
 
 ## Image used in a button
 {:.ex}

@@ -94,18 +94,11 @@ helpers do
   end
 
   def notes_start(status = "")
-    '
-{::nomarkdown}
-  <div class="notes '+ status +'">
-{:/nomarkdown}'
+    '<div class="notes '+ status +'">'
   end
 
   def notes_end
-    '
-{::nomarkdown}
-  </div>
-{:/nomarkdown}
-'
+    '</div>'
   end
 
 end

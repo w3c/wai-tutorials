@@ -109,11 +109,15 @@ To convey the same quality of information to users who can’t see the screen, t
 
 The script should be capable of identifying the current slide and rendering its identification within the text or text alternative for the current button.
 
+{::nomarkdown}
 <%= notes_start %>
+{:/nomarkdown}
 
 **Note:** The buttons in the above image are numbered which is important for speech recognition software users. Unless each button has a visible label, these users cannot know what command to give their software to navigate to the desired slide.
 
+{::nomarkdown}
 <%= notes_end %>
+{:/nomarkdown}
 
 Where the generated code creates text links that the script then renders as images:
 

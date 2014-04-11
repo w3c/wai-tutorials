@@ -86,11 +86,15 @@ is “Dog with a bell attached to its collar.”.
 <%= code_end %>
 {:/nomarkdown}
 
+{::nomarkdown}
 <%= notes_start %>
+{:/nomarkdown}
 
 **Note:** If the text included an explanation of how the dog wears a bell, the image might be considered [decorative](../decorative/). As this isn’t mentioned in the text, the image is deemed to be informative.
 
+{::nomarkdown}
 <%= notes_end %>
+{:/nomarkdown}
 
 ## Image conveying succinct information
 {:.ex}
@@ -122,7 +126,9 @@ it from right to left.">
 <%= code_end %>
 {:/nomarkdown}
 
+{::nomarkdown}
 <%= notes_start %>
+{:/nomarkdown}
 
 **Note 1:** An alternative technique would be to include all of the
 information in the visible text, using the image as a redundant
@@ -134,7 +140,9 @@ visual clues for people who find text more difficult to understand.
 **Note 2:** If the information conveyed by the image is substantial, use
 one of the approaches described in [Complex images](complex.html).
 
+{::nomarkdown}
 <%= notes_end %>
+{:/nomarkdown}
 
 ## Image conveying an impression or emotion
 {:.ex}
@@ -169,11 +177,15 @@ describes the intended impression.
 <%= code_end %>
 {:/nomarkdown}
 
+{::nomarkdown}
 <%= notes_start %>
+{:/nomarkdown}
 
 **Note:** If the purpose of this image was simply to improve the look of a page rather than convey an impression, it could be deemed to be decorative, as shown in [“Decorative Images”: “Image used for ambience”](decorative.html#image-used-for-ambience-eye-candy). The purpose for using the image needs to be determined by the author.
 
+{::nomarkdown}
 <%= notes_end %>
+{:/nomarkdown}
 
 ## Image conveying file format
 {:.ex}
@@ -218,13 +230,17 @@ type for each link:
 <%= code_end %>
 {:/nomarkdown}
 
+{::nomarkdown}
 <%= notes_start %>
+{:/nomarkdown}
 
 **Note 1:** If the format identification were written as part of the link text, the image may be considered [decorative](decorative.html) and have a null (empty) `alt` attribute (`alt=""`) but must be in the same link anchor as the text, as in [“Functional Images”: “Logo image within link text”](functional.html#logo-image-within-link-text).
 
 **Note 2:** This particular example is similar to the [icon within linked text in Functional Images](functional.html#icon-image-conveying-information-within-link-text) in that the image conveys information that isn’t given in the link text.
 
+{::nomarkdown}
 <%= notes_end %>
+{:/nomarkdown}
 
 ## Related WCAG2.0 Techniques
 

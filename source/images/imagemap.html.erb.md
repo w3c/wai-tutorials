@@ -53,14 +53,18 @@ The following organizational chart is used to provide links to each Director's h
 
 [Full code for Image map example](examples/imagemap.html)
 
+{::nomarkdown}
 <%= notes_start %>
+{:/nomarkdown}
 
 **Note:** Image maps may not function correctly on some mobile devices
 if the coordinates for the areas are not scaled in the same proportion
 as the image. To overcome this you could provide redundant text links on
 the same page.
 
+{::nomarkdown}
 <%= notes_end %>
+{:/nomarkdown}
 
 ## Related WCAG2.0 Techniques
 

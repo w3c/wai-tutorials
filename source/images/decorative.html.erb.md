@@ -14,12 +14,16 @@ If the `alt` attribute is not included (even though empty) some screen readers w
 -   Illustrative of adjacent text but do not contribute information (“eye-candy”)
 -   Identified and described by surrounding text
 
+{::nomarkdown}
 <%= notes_start %>
+{:/nomarkdown}
 
 **Note:** Where possible decorative images should be part of the CSS
 styling rather than being in the HTML.
 
+{::nomarkdown}
 <%= notes_end %>
+{:/nomarkdown}
 
 
 ## Image used as part of page design
@@ -96,13 +100,17 @@ information given in adjacent link text.
 <%= code_end %>
 {:/nomarkdown}
 
+{::nomarkdown}
 <%= notes_start %>
+{:/nomarkdown}
 
 **Note:** The null or empty `alt` value can only be used on linked images
 if the image and text are part of a single link anchor and the image
 does not add visual information to the link.
 
+{::nomarkdown}
 <%= notes_end %>
+{:/nomarkdown}
 
 ## Image with adjacent text alternative
 {:.ex}
@@ -166,14 +174,18 @@ from every tropical environment on the planet.
 <%= code_end %>
 {:/nomarkdown}
 
+{::nomarkdown}
 <%= notes_start %>
+{:/nomarkdown}
 
 **Note:** If the purpose of this image was to identify a plant, or
 convey other information , rather than only to improve the look of the
 page, it should probably be treated as [informative](informative.html). The
 purpose for using the image needs to be determined by the author.
 
+{::nomarkdown}
 <%= notes_end %>
+{:/nomarkdown}
 
 ## Related WCAG2.0 Technique:
 
