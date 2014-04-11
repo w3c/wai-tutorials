@@ -5,7 +5,7 @@ technologies: HTML5
 order: 2
 ---
 
-Informative images are those that convey a simple concept or information
+Informative images are those that convey a simple concept or information,
 that can be expressed in a short phrase or sentence. In this case, the
 text alternative needs to convey the meaning or identification that is
 visually apparent, which isn’t normally a literal description of the
