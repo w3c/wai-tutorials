@@ -1,10 +1,14 @@
 ---
-title: Scope of Headers
+title: Ambiguous Tables
 status: editors-draft
-order: 4
+order: 3
 ---
 
-`Scope` is the attribute used to define the direction and range of data cells that are covered by a header cell. For example a header cell that spans three columns with the `scope` value "colgroup" associates the header with the data cells in all three columns. The `scope` attribute should be used for all `<th>` cells where either the direction or range of data cell coverage needs to be clearly associated. **@@@Or always?@@@.**{:.todo} Possible values for the `scope` attribute are “`row`”, “`col`”, “`rowgroup`” or “`colgroup`”.
+Sometimes it is hard for assistive technology to determine which columns or row to associate with a specific header cell.
+
+`Scope` is the attribute used to define the direction and range of data cells that are covered by a header cell. For example a header cell that spans three columns with the `scope` value “`colgroup`” associates the header with the data cells in all three columns. The `scope` attribute should be used for all `<th>` cells where either the direction or range of data cell coverage needs to be clearly associated.
+
+Possible values for the `scope` attribute are “`row`”, “`col`”, “`rowgroup`” or “`colgroup`”.
 
 ## Table with header cells in one column only
 {:.ex}
@@ -14,7 +18,9 @@ table. The `scope` value “`row`” is used on each `<th>` cell to ensure
 that it cannot be mistaken as a header for other cells in the same
 column.
 
+{::nomarkdown}
 <%= sample_start %>
+{:/nomarkdown}
 
 <table>
   <caption>
@@ -46,9 +52,13 @@ column.
   </tr>
 </table>
 
+{::nomarkdown}
 <%= sample_end %>
+{:/nomarkdown}
 
+{::nomarkdown}
 <%= code_start %>
+{:/nomarkdown}
 
 ~~~ html
 <table>
@@ -66,20 +76,20 @@ column.
 </table>
 ~~~
 
+{::nomarkdown}
 <%= code_end %>
+{:/nomarkdown}
 
 [Full code Example “Table with header cells in one column only”](examples/scope-simple.html)
 
-## Table with an offset (@@@internal?@@@) column of header cells
+## Table with an offset column of header cells
 {:.ex}
 
-In this table the row header cells are in the second column rather than
-the first. The `scope` values "row" and has been used on the `<th>`
-second column cells to ensure that data cells in the first column, as
-well as those in cells to the right of the headers are correctly
-associated.
+In this table the row header cells are in the second column rather than the first. The `scope` values “`row`” and has been used on the `<th>` cells in the second column to ensure that data cells in the first column, as well as those in cells to the right of the headers are correctly associated.
 
+{::nomarkdown}
 <%= sample_start %>
+{:/nomarkdown}
 
 <table>
   <caption>
@@ -89,7 +99,7 @@ associated.
   <thead>
 
   <tr>
-    <th scope="col">PayrollRef.   </th>
+    <th scope="col"><abbr title="Identification Number">ID</abbr></th>
     <th scope="col">Name</th>
     <th scope="col">Jul</th>
     <th scope="col">Aug</th>
@@ -158,9 +168,13 @@ associated.
   </tbody>
 </table>
 
+{::nomarkdown}
 <%= sample_end %>
+{:/nomarkdown}
 
+{::nomarkdown}
 <%= code_start %>
+{:/nomarkdown}
 
 ~~~ html
 […]
@@ -177,7 +191,9 @@ associated.
 […]
 ~~~
 
+{::nomarkdown}
 <%= code_end %>
+{:/nomarkdown}
 
 [Full code for “Table with an offset column of header cells”](examples/scope-offset.html)
 
@@ -187,7 +203,9 @@ associated.
 In this example, some of the row header cells span two or more rows of
 data cells and one column header spans three columns.
 
+{::nomarkdown}
 <%= sample_start %>
+{:/nomarkdown}
 
 <table>
   <caption>
@@ -232,9 +250,13 @@ data cells and one column header spans three columns.
   </tr>
 </table>
 
+{::nomarkdown}
 <%= sample_end %>
+{:/nomarkdown}
 
+{::nomarkdown}
 <%= code_start %>
+{:/nomarkdown}
 
 ~~~ html
 […]
@@ -253,7 +275,9 @@ data cells and one column header spans three columns.
 […]
 ~~~
 
+{::nomarkdown}
 <%= code_end %>
+{:/nomarkdown}
 
 [Full code for “Table with headers spanning multiple rows or columns”](examples/scope-multiple.html)
 

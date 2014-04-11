@@ -68,60 +68,37 @@ helpers do
 
   def code_start(status = "", title = "")
     if title
-    '{::nomarkdown}
-<figure class="code '+ status +'">
-  <figcaption>Code snippet: ' + title + '</figcaption>
-{:/nomarkdown}
-
-'
+    '<figure class="code '+ status +'">
+  <figcaption>Code snippet: ' + title + '</figcaption>'
     else
-      '{::nomarkdown}
-<figure class="code '+ status +'">
-  <figcaption>Code snippet</figcaption>
-{:/nomarkdown}
-
-'
+'<figure class="code '+ status +'">
+  <figcaption>Code snippet</figcaption>'
     end
   end
 
   def code_end
-    '{::nomarkdown}
-</figure>
-{:/nomarkdown}
-
-'
+    '</figure>'
   end
 
   def sample_start(status = "")
     '
-{::nomarkdown}
   <figure class="sample '+ status +'">
   <figcaption>Example</figcaption>
-  <div class="box-content">
-{:/nomarkdown}'
+  <div class="box-content">'
   end
 
   def sample_end
     '
-{::nomarkdown}
   </div></figure>
-{:/nomarkdown}
 '
   end
 
   def notes_start(status = "")
-    '
-{::nomarkdown}
-  <div class="notes '+ status +'">
-{:/nomarkdown}'
+    '<div class="notes '+ status +'">'
   end
 
   def notes_end
-    '
-{::nomarkdown}
-  </div>
-{:/nomarkdown}
-'
+    '</div>'
   end
 
 end

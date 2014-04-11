@@ -12,7 +12,9 @@ A client-side image map is an image divided into selectable regions defined by `
 
 The following organizational chart is used to provide links to each Director's home page. The text alternative for the image is “Board of Directors and related staff:”, and each linked `<area>` has a text alternative to identify the individual, such as “Davy Jones: Chairman”.
 
+{::nomarkdown}
 <%= sample_start %>
+{:/nomarkdown}
 
 ![Board of directors and related staff: ](orgchart.png){:usemap="#Map"}
 
@@ -24,9 +26,13 @@ The following organizational chart is used to provide links to each Director's h
 	<area shape="rect" coords="345,136,496,186" href="../res/beyond" alt="Hugh Howard: Finance Director">
 </map>
 
+{::nomarkdown}
 <%= sample_end %>
+{:/nomarkdown}
 
+{::nomarkdown}
 <%= code_start %>
+{:/nomarkdown}
 
 ~~~ html
 <img src="orgchart.png"
@@ -41,18 +47,24 @@ The following organizational chart is used to provide links to each Director's h
 </map>
 ~~~
 
+{::nomarkdown}
 <%= code_end %>
+{:/nomarkdown}
 
 [Full code for Image map example](examples/imagemap.html)
 
+{::nomarkdown}
 <%= notes_start %>
+{:/nomarkdown}
 
 **Note:** Image maps may not function correctly on some mobile devices
 if the coordinates for the areas are not scaled in the same proportion
 as the image. To overcome this you could provide redundant text links on
 the same page.
 
+{::nomarkdown}
 <%= notes_end %>
+{:/nomarkdown}
 
 ## Related WCAG2.0 Techniques
 

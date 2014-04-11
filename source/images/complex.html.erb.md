@@ -28,18 +28,24 @@ can be used to provide both short and long descriptions.
 
 This bar chart of website visitor statistics has the short description “Bar chart showing monthly and total visitors for the first quarter 2014 for sites 1 to 3” as the `alt` attribute, identifying the image. The long description details the information, including scales, values, relationships and trends, that are represented visually. For example, the declining values for site 1, consistent values for site 2, and increasing values for site 3 are highlighted through the bar chart representation. This information needs to be made available in the [long text description](examples/2014-first-qtr.html) as well.
 
+{::nomarkdown}
 <%= sample_start %>
+{:/nomarkdown}
 
 <img src="../../img/chart.png" alt="Bar chart showing monthly and total visitors for the first quarter 2014 for sites 1 to 3" longdesc="../examples/2014-first-qtr/">
 
+{::nomarkdown}
 <%= sample_end %>
+{:/nomarkdown}
 
 ### Providing a link to the long description via *longdesc*
 {:.ap}
 
 Here the `longdesc` attribute contains the URI of the page containing the long description. Where appropriate, the `longdesc` value could simply contain a hash link to the long description if it is published on the same page as the image.
 
+{::nomarkdown}
 <%= code_start %>
+{:/nomarkdown}
 
 ~~~ html
 <p>
@@ -50,16 +56,22 @@ Here the `longdesc` attribute contains the URI of the page containing the long d
 </p>
 ~~~
 
+{::nomarkdown}
 <%= code_end %>
+{:/nomarkdown}
 
+{::nomarkdown}
 <%= notes_start %>
+{:/nomarkdown}
 
 **Note:** Both Firefox and Chrome browsers are working on
 implementations that will make the *longdesc linked* long description
 location reachable by all users. In older or other browsers it is only
 available to screen reader users.
 
+{::nomarkdown}
 <%= notes_end %>
+{:/nomarkdown}
 
 ### A text link to the long description adjacent to the image
 {:.ap}
@@ -67,7 +79,9 @@ available to screen reader users.
 This approach provides a text link next to the image. The link text
 makes both the destination and the association with the image clear.
 
+{::nomarkdown}
 <%= code_start %>
+{:/nomarkdown}
 
 ~~~ html
 <p>
@@ -79,15 +93,21 @@ makes both the destination and the association with the image clear.
 </p>
 ~~~
 
+{::nomarkdown}
 <%= code_end %>
+{:/nomarkdown}
 
+{::nomarkdown}
 <%= notes_start %>
+{:/nomarkdown}
 
 **Note:** This approach is well supported in all browsers and ensures
 that everyone has access to the data as well as the image, no matter
 what browser or assistive technologies they may use.
 
+{::nomarkdown}
 <%= notes_end %>
+{:/nomarkdown}
 
 ### Describing the location of the long description in the `alt` attribute
 {:.ap}
@@ -96,7 +116,9 @@ If the long description is on the same page as the image and its
 location can be accurately pinpointed by being described, the
 `alt` attribute can include location information.
 
+{::nomarkdown}
 <%= code_start %>
+{:/nomarkdown}
 
 ~~~ html
 <p>
@@ -108,7 +130,9 @@ location can be accurately pinpointed by being described, the
 […]
 ~~~
 
+{::nomarkdown}
 <%= code_end %>
+{:/nomarkdown}
 
 ### Structurally associating the image and its adjacent long description (HTML5)
 {:.ap}
@@ -118,7 +142,9 @@ its long description. The long description, presented as headings, text
 and a table, is explicitly associated to the image by using
 `role="group"` on the containing `<figure>` element.
 
+{::nomarkdown}
 <%= code_start %>
+{:/nomarkdown}
 
 ~~~ html
 <figure role="group">
@@ -134,14 +160,18 @@ and a table, is explicitly associated to the image by using
 </figure>
 ~~~
 
+{::nomarkdown}
 <%= code_end %>
+{:/nomarkdown}
 
 ### Structurally associating image and long description with `aria-described-by`
 {:.ap}
 
 The WAI-ARIA `aria-described-by` attribute can be used to link the description to the image. The value of the attribute is the `ID` of the element with the description.
 
+{::nomarkdown}
 <%= code_start %>
+{:/nomarkdown}
 
 ~~~ html
 <img src="chart.png"
@@ -158,7 +188,9 @@ The WAI-ARIA `aria-described-by` attribute can be used to link the description t
 </div>
 ~~~
 
+{::nomarkdown}
 <%= code_end %>
+{:/nomarkdown}
 
 ## Related WCAG2.0 Techniques
 

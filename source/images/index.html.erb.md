@@ -37,8 +37,12 @@ many situations such as for:
 -   **Search engine optimization:** Images become indexable to search engines.
 
 
+{::nomarkdown}
 <%= notes_start %>
+{:/nomarkdown}
 
 **Note:** Images are essential for communicating information, illustration, and for decoration. They are critical for many website users, including people who enlarge their screen by zooming and use the images as cues for orientation, and people with some forms of learning disabilities for whom images, such as illustrations, make the text easier to read and understand. Removing images from websites (so called "text-only versions") make websites less accessible for these users.
 
+{::nomarkdown}
 <%= notes_end %>
+{:/nomarkdown}

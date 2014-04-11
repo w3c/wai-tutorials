@@ -14,7 +14,9 @@ order: 2
 
 All fields marked * must be completed.
 
+{::nomarkdown}
 <%= sample_start %>
+{:/nomarkdown}
 
 <form method="post" action="#">
 	<div>
@@ -25,15 +27,23 @@ All fields marked * must be completed.
 	</div>
 </form>
 
+{::nomarkdown}
 <%= sample_end %>
+{:/nomarkdown}
 
+{::nomarkdown}
 <%= notes_start %>
+{:/nomarkdown}
 
 **Note:** It’s essential that required field indicators, and any other important information is kept within the label element, screen readers will not read out any text that is outside explicitly associated labels, if a different color is wanted for the indicator, this can be positioned within a span element inside the label element.
 
+{::nomarkdown}
 <%= notes_end %>
+{:/nomarkdown}
 
+{::nomarkdown}
 <%= code_start %>
+{:/nomarkdown}
 
 ~~~ html
 <div>
@@ -46,7 +56,9 @@ All fields marked * must be completed.
 </div>
 ~~~
 
+{::nomarkdown}
 <%= code_end %>
+{:/nomarkdown}
 
 
 ## Label position

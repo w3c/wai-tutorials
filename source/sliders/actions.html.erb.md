@@ -29,11 +29,15 @@ Ensure that the script you are using either uses functions of the DOM to conditi
 
 When users select a slide control, the script should move focus onto the current slide. If the slide is a link, they will then be in a position to activate it if required. If the slide contains no link, the slide content can be given a `tabindex` attribute with a value of `-1, to ensure that it can receive focus.
 
+{::nomarkdown}
 <%= notes_start %>
+{:/nomarkdown}
 
 **Note:** Screen readers will announce the text or text equivalent that has received focus, so ensure that this would be sufficiently informative to let blind users know what the slide is about.
 
+{::nomarkdown}
 <%= notes_end %>
+{:/nomarkdown}
 
 ## Related WCAG2.0 Technique:
 

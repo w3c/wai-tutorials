@@ -21,7 +21,9 @@ If implementing a carousel from a script library that marks up the controls as l
 
 Using the `<button>` element:
 
+{::nomarkdown}
 <%= code_start %>
+{:/nomarkdown}
 
 ~~~ html
 <button class="carousel" type="button">
@@ -29,11 +31,15 @@ Using the `<button>` element:
 </button>
 ~~~
 
+{::nomarkdown}
 <%= code_end %>
+{:/nomarkdown}
 
 Applying the WAI-ARIA button `role` attribute to a link:
 
+{::nomarkdown}
 <%= code_start %>
+{:/nomarkdown}
 
 ~~~ html
 <ul>
@@ -50,7 +56,9 @@ Applying the WAI-ARIA button `role` attribute to a link:
 </ul>
 ~~~
 
+{::nomarkdown}
 <%= code_end %>
+{:/nomarkdown}
 
 ## Previous and Next buttons
 
@@ -58,15 +66,21 @@ Images of left and right arrows are most commonly used to visually distinguish b
 
 #### Featured products
 
+{::nomarkdown}
 <%= sample_start %>
+{:/nomarkdown}
 
 [![Previous product](chevron-left.png)](#prev){:style="vertical-align:middle;"} Current product slide [![Next product](chevron-right.png)](#next){:style="vertical-align:middle;"}
 
+{::nomarkdown}
 <%= sample_end %>
+{:/nomarkdown}
 
 The `alt` text for these two images is “Previous product” and “Next product”. Although only “Previous” and “Next” are essential as `alt` attribute values, it is good practice to provide the extra context to help users understand that they are still within the products carousel.
 
+{::nomarkdown}
 <%= code_start %>
+{:/nomarkdown}
 
 ~~~ html
 <a href="#prev" role="button">
@@ -78,7 +92,9 @@ The `alt` text for these two images is “Previous product” and “Next produc
 </a>
 ~~~
 
+{::nomarkdown}
 <%= code_end %>
+{:/nomarkdown}
 
 Slide list buttons
 ------------------
@@ -93,15 +109,21 @@ To convey the same quality of information to users who can’t see the screen, t
 
 The script should be capable of identifying the current slide and rendering its identification within the text or text alternative for the current button.
 
+{::nomarkdown}
 <%= notes_start %>
+{:/nomarkdown}
 
 **Note:** The buttons in the above image are numbered which is important for speech recognition software users. Unless each button has a visible label, these users cannot know what command to give their software to navigate to the desired slide.
 
+{::nomarkdown}
 <%= notes_end %>
+{:/nomarkdown}
 
 Where the generated code creates text links that the script then renders as images:
 
+{::nomarkdown}
 <%= code_start %>
+{:/nomarkdown}
 
 ~~~ html
 <ul>
@@ -121,7 +143,9 @@ Where the generated code creates text links that the script then renders as imag
 
 ~~~
 
+{::nomarkdown}
 <%= code_end %>
+{:/nomarkdown}
 
 ## Related WCAG2.0 Techniques:
 
