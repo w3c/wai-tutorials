@@ -7,60 +7,34 @@ type: tips
 ---
 
 Feedback on this page is welcome, if you have a question about tables
-that isn't answered by this tutorial, you can send it to
+that isn’t answered by this tutorial, you can send it to
 [wai-eo-editors@w3.org](mailto:wai-eo-editors@w3.org).
 
 ## Tips
 
--   **Layout tables:** If you're using a table for layout, rather than
-    as a grid to display data with headers, don't use any of the
-    structural elements and attributes discussed in this tutorial. Using
-    tables for layout is discouraged, it's much better to use Cascading
-    Style Sheets (CSS) for layout.
--   **Keep it simple:** Complex tables are more work for you as well as
-    being more confusing for users. it's better to use a number of
-    simple tables, each containing the data for one sub-topic.
--   **Data separation:** Make sure that each separate piece of data has
-    its own cell, (not headers in one row and all data in a second
-    row) otherwise it will be impossible for screen readers to work out
-    the relationships between data across columns. In addition, if the
-    table can't be viewed full-screen by sighted visitors, the data in
-    the pseudo-rows may no longer align correctly.
--   **Table separation:** If several tables follow one another, don't
-    use a single table and put in an additional row of `<th>` cells.
-    Screen readers may read aloud all `<th>` cells in a column,
-    resulting in confusion. Start a new `<table>` when the topic
-    changes.
--   **Alignment:** align text to the left and financial data to the
-    right, so that people using screen magnification, larger text sizes
-    or smaller screens will be able to find it. especially when a cell
-    spans more than one column. It's also helpful to give column
-    headings the same alignment as the data in the cells below
--   **Styling header cells:** Consider visually distinguishing the
-    `<th>` cells to make them more obvious.
+-   **Keep it simple:** Complex tables are more work for you as well as being more confusing for users. It’s better to use multiple simple tables, each containing the data for one sub-topic.
 
-## FAQ
+-   **Data separation:** Make sure that each separate piece of data has its own cell, otherwise it will be impossible for screen readers to work out the relationships between data across columns. In addition, if the table can’t be viewed full-screen by sighted visitors, the data in the pseudo-rows may no longer align correctly. Don’t use headers in one column and all data in a second column.
 
--   **My site uses a table layout for pages, a complete redesign using
-    CSS layout is planned for next year, is there something I can do
-    right now to make the layout tables more accessible?**
+-   **Table separation:** If several tables follow one another, don’t use a single table and put in an additional row of `<th>`{:.elem} cells. Screen readers may read aloud all `<th>`{:.elem} cells in a column, resulting in confusion. Start a new `<table>`{:.elem} when the topic changes.
 
-    Yes there is. You can give the `<table>` element a WAI-ARIA *role*
-    attribute of "presentation"(role="presentation"). This will hide it
-    from most screen readers in most modern browsers.
--   **I've used CSS to give a different background color for odd and
-    even rows in my tables, is this OK?**
+-   **Alignment:** Align text to the left and financial data to the right, so that people using screen magnification, larger text sizes or smaller screens will be able to find it. especially when a cell spans more than one column. It’s also helpful to give column headings the same alignment as the data in the cells below.
 
-    It certainly is, this can be a real help to people with reading
-    difficulties or who use screen magnification to enlarge text. It
-    acts as a visual guide, as well as looking cool. You could even
-    consider highlighting the cell (and row/column) on mouseover or
-    keyboard focus to help people see where they are. Make sure that the
-    color contrast is good for both color combinations though.
+-   **Styling header cells:** Consider visually distinguishing the `<th>`{:.elem} cells to make them more obvious.
+
+-   **Layout tables:** If you’re using a table for layout, rather than as a grid to display data with headers, don’t use any of the structural elements and attributes discussed in this tutorial. Using tables for layout is discouraged, it’s much better to use Cascading Style Sheets (CSS) for layout.
+
+
+## Frequently asked questions
+
+-   **My site uses a table layout for pages, a complete redesign using CSS layout is planned for next year, is there something I can do right now to make the layout tables more accessible?**
+
+    Yes there is. You can give the `<table>`{:.elem} element a WAI-ARIA `role`{:.attrib} attribute of `presentation`{:.value} (`role`{:.attrib}=`"presentation"`{:.value}). This will hide it from most screen readers in most modern browsers.
+
+-   **I’ve used CSS to give a different background color for odd and even rows in my tables, is this OK?**
+
+    It certainly is, this can be a real help to people with reading difficulties or who use screen magnification to enlarge text. It acts as a visual guide, as well as  looking cool. You could even consider highlighting the cell (and row/column) on mouseover or keyboard focus to help people see where they are. Make sure that the color contrast is good for both color combinations though.
 
 ## Other W3C Resources
 
--   Further background on [ensuring that information can be presented in
-    different
-    ways](http://www.w3.org/WAI/intro/people-use-web/principles#adaptable)
-    in How People with Disabilities Use the Web.
+-   Further background on [ensuring that information can be presented in different ways](http://www.w3.org/WAI/intro/people-use-web/principles#adaptable) in How People with Disabilities Use the Web.
