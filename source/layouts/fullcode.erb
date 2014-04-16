@@ -23,7 +23,7 @@
 </div>
 <div class="navigation" id="nav">
   <nav role="navigation">
-    <a class="btn" href="<%= current_page.data.source %>">Back to the example</a>
+    <%= nav_link('Back to the example', current_page.data.source) %>
   </nav>
 </div>
 <%= partial "layouts/footer" %>

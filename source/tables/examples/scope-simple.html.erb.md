@@ -1,7 +1,7 @@
 ---
 title: Complete “Table with header cells in one column only” Example
 status: editors-draft
-source: ../../scope/#table-with-header-cells-in-one-column-only
+source: ../ambiguous.html#table-with-header-cells-in-one-column-only
 layout: fullcode
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: Complete “Table with header cells in one column only” Example
 status: editors-draft
-source: ../../scope/#table-with-headers-spanning-multiple-rows-or-columns
+source: ../ambiguous.html#table-with-headers-spanning-multiple-rows-or-columns
 layout: fullcode
 ---
 
