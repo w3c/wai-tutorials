@@ -45,15 +45,7 @@ Other formats available on the Web such as ODF, Word and PDF have similar mechan
 
 ## Relationship to WCAG 2.0
 
-Accessible tables are required by the following WCAG 2.0 Success
-Criterion:
+Accessible tables are required by the following WCAG 2.0 Success Criterion:
 
--   [1.3.1 Info and
-    Relationships](http://www.w3.org/WAI/WCAG20/quickref/#qr-content-structure-separation-programmatic):
-    Information, structure, and relationships conveyed through
-    presentation can be programmatically determined or are available in
-    text. (Level A)
-
-    More background in: [Understanding Success Criterion
-    1.3.1](http://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html).
+-   [1.3.1 Info and Relationships](http://www.w3.org/WAI/WCAG20/quickref/#qr-content-structure-separation-programmatic): Information, structure, and relationships conveyed through presentation can be programmatically determined or are available in text. (Level A)
 

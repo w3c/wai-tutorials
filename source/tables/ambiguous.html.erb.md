@@ -6,21 +6,20 @@ order: 3
 
 Sometimes it is hard for assistive technology to determine which columns or row to associate with a specific header cell.
 
-`Scope` is the attribute used to define the direction and range of data cells that are covered by a header cell. For example a header cell that spans three columns with the `scope` value “`colgroup`” associates the header with the data cells in all three columns. The `scope` attribute should be used for all `<th>` cells where either the direction or range of data cell coverage needs to be clearly associated.
+`Scope`{:.attrib} is the attribute used to define the direction and range of data cells that are covered by a header cell. For example a header cell that spans three columns with the `scope`{:.attrib} value `colgroup`{:.value} associates the header with the data cells in all three columns. The `scope`{:.attrib} attribute should be used for all `<th>`{:.elem} cells where either the direction or range of data cell coverage needs to be clearly associated.
 
-Possible values for the `scope` attribute are “`row`”, “`col`”, “`rowgroup`” or “`colgroup`”.
+Possible values for the `scope`{:.attrib} attribute are `row`{:.value}, `col`{:.value}, `rowgroup`{:.value} or `colgroup`{:.value}.
 
 ## Table with header cells in one column only
 {:.ex}
 
-This example has `<th>` elements for all cells in the left column of a
-table. The `scope` value “`row`” is used on each `<th>` cell to ensure
+This example has `<th>`{:.elem} elements for all cells in the left column of a
+table. The `scope`{:.attrib} value `row`{:.value} is used on each `<th>`{:.elem} cell to ensure
 that it cannot be mistaken as a header for other cells in the same
 column.
 
 {::nomarkdown}
 <%= sample_start %>
-{:/nomarkdown}
 
 <table>
   <caption>
@@ -52,7 +51,6 @@ column.
   </tr>
 </table>
 
-{::nomarkdown}
 <%= sample_end %>
 {:/nomarkdown}
 
@@ -85,11 +83,10 @@ column.
 ## Table with an offset column of header cells
 {:.ex}
 
-In this table the row header cells are in the second column rather than the first. The `scope` values “`row`” and has been used on the `<th>` cells in the second column to ensure that data cells in the first column, as well as those in cells to the right of the headers are correctly associated.
+In this table the row header cells are in the second column rather than the first. The `scope`{:.attrib} values `row`{:.value} and has been used on the `<th>`{:.elem} cells in the second column to ensure that data cells in the first column, as well as those in cells to the right of the headers are correctly associated.
 
 {::nomarkdown}
 <%= sample_start %>
-{:/nomarkdown}
 
 <table>
   <caption>
@@ -168,7 +165,6 @@ In this table the row header cells are in the second column rather than the firs
   </tbody>
 </table>
 
-{::nomarkdown}
 <%= sample_end %>
 {:/nomarkdown}
 
@@ -205,7 +201,6 @@ data cells and one column header spans three columns.
 
 {::nomarkdown}
 <%= sample_start %>
-{:/nomarkdown}
 
 <table>
   <caption>
@@ -250,7 +245,6 @@ data cells and one column header spans three columns.
   </tr>
 </table>
 
-{::nomarkdown}
 <%= sample_end %>
 {:/nomarkdown}
 
@@ -285,5 +279,4 @@ data cells and one column header spans three columns.
 
 The following WCAG 2.0 technique was used in the examples above:
 
--   [H63: Using the scope attribute to associate header cells and data
-    cells in data tables](http://www.w3.org/TR/WCAG20-TECHS/H63.html)
+-   [H63: Using the scope attribute to associate header cells and data cells in data tables](http://www.w3.org/TR/WCAG20-TECHS/H63.html)
