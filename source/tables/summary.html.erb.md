@@ -1,63 +1,23 @@
 ---
-title: Summarize Tables
+title: Table Summary
 status: editors-draft
-technologies: HTML4, HTML5
+technologies: HTML4, HTML5, WAI-ARIA
 order: 5
 ---
 A summary is a brief description of how data is organized in a table. It may not be necessary in very simple tables but can be important where the data is laid out in an unusual order or the table structure is complex. In these cases, a summary should be provided to give brief orientation clues. In HTML4 the description can be marked up in the `summary`{:.attrib} attribute of the `<table>`{:.elem} element, but as this is made obsolete in HTML5, the second example on this page shows how to put the description within the `<caption>`{:.elem} element.
 
-## Table with data on both sides of a header column
-{:.ex}
-
-This table has an _unusual table structure_, the days of the week are in the center column, morning times to the left and afternoon times to the right. It has the `summary`{:.attrib} attribute “Days are shown in the second column, morning opening hours in the first column and afternoon opening hours are in the third column”, explaining the way the table is laid out.
-
-{::nomarkdown}
-<%= sample_start %>
-
-<table summary="Days are shown in the second column, morning opening hours in the first column and afternoon opening hours are in the third column">
-	<caption>
-		Surgery opening times
-	</caption>
-	<tr>
-		<th scope="col" id="m"> Morning</th>
-		<th scope="col" id="d">Day</th>
-		<th id="a"> Afternoon</th>
-	</tr>
-	<tr>
-		<td headers="m d1">Closed</td>
-		<th scope="row" id="d1"> Sunday</th>
-		<td headers="a d1"> 14:00 to 15:00</td>
-	</tr>
-	<tr>
-		<td headers="m d2"> 08:00 to 11:30</td>
-		<th id="d2"> Mon to Fri</th>
-		<td headers="a d2">15:00 to 19:00</td>
-	</th>
-	<tr>
-		<td headers="d3 m">09:30 to 12:00</td>
-		<th id="d3">Saturday</th>
-		<td headers="a d3">Closed</td>
-	</tr>
-</table>
-
-<%= sample_end %>
-{:/nomarkdown}
-
-{::nomarkdown}
-<%= code_start %>
-{:/nomarkdown}
-
-~~~ html
-<table
-	summary="Days are shown in the second column, morning opening hours in the first column and afternoon opening hours are in the third column">
-~~~
-
-{::nomarkdown}
-<%= code_end %>
-{:/nomarkdown}
-
 ## Table with a complex structure
 {:.ex}
+
+{::nomarkdown}
+<%= notes_start %>
+{/:nomarkdown}
+
+**Note:** The following approaches are only valid in HTML5.
+
+{::nomarkdown}
+<%= notes_end %>
+{/:nomarkdown}
 
 ### Nest summary into the `<caption>`{:.elem} element
 {:.ap}
@@ -293,6 +253,56 @@ Note: The technique used for approach 1 is valid for both HTML4 and HTML5.
 {:/nomarkdown}
 
 **Note:** The technique used for approach 3 is valid HTML5.
+
+## Table with data on both sides of a header column
+{:.ex}
+
+(HTML4 only) This table has an _unusual table structure_, the days of the week are in the center column, morning times to the left and afternoon times to the right. It has the `summary`{:.attrib} attribute “Days are shown in the second column, morning opening hours in the first column and afternoon opening hours are in the third column”, explaining the way the table is laid out.
+
+{::nomarkdown}
+<%= sample_start %>
+
+<table summary="Days are shown in the second column, morning opening hours in the first column and afternoon opening hours are in the third column">
+  <caption>
+    Surgery opening times
+  </caption>
+  <tr>
+    <th scope="col" id="m"> Morning</th>
+    <th scope="col" id="d">Day</th>
+    <th id="a"> Afternoon</th>
+  </tr>
+  <tr>
+    <td headers="m d1">Closed</td>
+    <th scope="row" id="d1"> Sunday</th>
+    <td headers="a d1"> 14:00 to 15:00</td>
+  </tr>
+  <tr>
+    <td headers="m d2"> 08:00 to 11:30</td>
+    <th id="d2"> Mon to Fri</th>
+    <td headers="a d2">15:00 to 19:00</td>
+  </th>
+  <tr>
+    <td headers="d3 m">09:30 to 12:00</td>
+    <th id="d3">Saturday</th>
+    <td headers="a d3">Closed</td>
+  </tr>
+</table>
+
+<%= sample_end %>
+{:/nomarkdown}
+
+{::nomarkdown}
+<%= code_start %>
+{:/nomarkdown}
+
+~~~ html
+<table
+  summary="Days are shown in the second column, morning opening hours in the first column and afternoon opening hours are in the third column">
+~~~
+
+{::nomarkdown}
+<%= code_end %>
+{:/nomarkdown}
 
 ## Related WCAG2.0 Technique
 
