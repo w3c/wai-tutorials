@@ -80,6 +80,16 @@ helpers do
     '</figure>'
   end
 
+
+  def editors_note_start
+    '<figure class="todo">
+  <figcaption>Editor’s Note:</figcaption><div class="figcontent">'
+  end
+
+  def editors_note_end
+    '</div></figure>'
+  end
+
   def sample_start(status = "")
     '
   <figure class="sample '+ status +'">
