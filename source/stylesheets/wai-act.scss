@@ -621,8 +621,8 @@ figure {
 		}
 	}
 	&.todo {
-		border-left-color: #f00 !important;
-		figcaption {background-color: #f00; color: #fff}
+		border-left-color: darken(#f00, 20%) !important;
+		figcaption {background-color: darken(#f00, 20%); color: #fff}
 		> .figcontent {background-color: lighten(#f00, 40%);}
 		&:before, &:after {display:none;}
 	}
