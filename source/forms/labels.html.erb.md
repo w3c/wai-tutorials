@@ -4,41 +4,35 @@ status: editors-draft
 order: 2
 ---
 
-- **What to do:** Form elements need clear, descriptive, well-positioned labels. Ideally labels should be explicitly associated with the form control.
-- **Why:** An explicit label becomes a clickable area that can be used to put focus into the field either by mouse or by voice input software, it also ensures that screen readers announce the correct text when a field has focus.
-- **How:** To associate a label and its form control, the `<label>` element must have a `for` attribute which exactly matches the value of an `id` attribute in its related field.
+Form elements need clear, descriptive, well-positioned labels, which should be explicitly associated with the form control. Such a label becomes a clickable area that can be used to put focus into the field either by mouse or by voice input software. It also ensures that screen readers announce the correct text when a field has focus.
+
+To associate a label and its form control, the `<label>`{:.elem} element must have a `for`{:.attrib} attribute which exactly matches the value of an `id`{:.attrib} attribute in its related field.
+
+<!--
 - **Conformance:** Providing descriptive, well positioned associated labels is required to meet [SC 1.3.1 Info and Relationships](http://www.w3.org/WAI/WCAG20/quickref/20120103/#content-structure-separation-programmatic), [SC 2.4.6 Headings and Labels](http://www.w3.org/WAI/WCAG20/quickref/20120103/#navigation-mechanisms-descriptive), [SC 3.3.2 Labels and Instructions](http://www.w3.org/WAI/WCAG20/quickref/20120103/#minimize-error-cues) or [SC 4.1.2 Name, Role, Value](http://www.w3.org/WAI/WCAG20/quickref/20120103/#ensure-compat-rsv).
+-->
+
 
 ## Explicitly associated label
 {:.ex}
 
-All fields marked * must be completed.
-
 {::nomarkdown}
 <%= sample_start %>
-{:/nomarkdown}
 
+<div>All fields marked (required) must be completed.</div>
 <form method="post" action="#">
 	<div>
-		<label for="firstname">First name: </label> <input type="text" name="firname" id="firstname">
+		<label for="firstname">First name: </label> <input type="text" name="firstname" id="firstname">
 	</div>
 	<div>
-		<label for="lastname">Last name: *</label> <input type="text" name="lastname" id="lastname">
+		<label for="lastname">Last name: (required)</label> <input type="text" name="lastname" id="lastname">
+	</div>
+	<div>
+		<input type="checkbox" id="premium" name="premium"> <label for="premium">Premium Membership</label>
 	</div>
 </form>
 
-{::nomarkdown}
 <%= sample_end %>
-{:/nomarkdown}
-
-{::nomarkdown}
-<%= notes_start %>
-{:/nomarkdown}
-
-**Note:** It’s essential that required field indicators, and any other important information is kept within the label element, screen readers will not read out any text that is outside explicitly associated labels, if a different color is wanted for the indicator, this can be positioned within a span element inside the label element.
-
-{::nomarkdown}
-<%= notes_end %>
 {:/nomarkdown}
 
 {::nomarkdown}
@@ -51,8 +45,12 @@ All fields marked * must be completed.
 	<input type="text" name="firstname" id="firstname">
 </div>
 <div>
-	<label for="lastname">Last name: *</label>
+	<label for="lastname">Last name: (required)</label>
 	<input type="text" name="lastname" id="lastname">
+</div>
+<div>
+	<input type="checkbox" id="premium" name="premium">
+	<label for="premium">Premium Membership</label>
 </div>
 ~~~
 
@@ -61,10 +59,9 @@ All fields marked * must be completed.
 {:/nomarkdown}
 
 
-## Label position
-
 To maximize predictability, (e.g. for people using high screen magnification), radio button and checkbox labels must be to the right of the field, labels for all other fields must be positioned to the left of the field.
 
+It’s essential that required field indicators, and any other important information, is kept within the label element: Screen readers will not read out _any text_ that is outside explicitly associated labels.
 
 ## Related WCAG2.0 Techniques:
 
