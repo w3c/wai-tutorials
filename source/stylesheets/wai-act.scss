@@ -1044,3 +1044,15 @@ select {
 		}
 	}
 }
+
+.editpage {
+	text-align: center;
+	margin-top: 1em;
+	padding: .5em 0 0;
+	border-top: 1px solid #ccc;
+}
+
+[fragmention]:focus {
+	box-shadow: 0 0 10px #036;
+	outline-color: #036;
+}

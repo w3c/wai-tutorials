@@ -1,7 +1,7 @@
 ---
 title: Complete “Table with header cells in the top row only” Example
 status: editors-draft
-source: ../../headers/#table-with-header-cells-in-the-top-row-only
+source: ../index.html#table-with-header-cells-in-the-top-row-only
 layout: fullcode
 ---
 

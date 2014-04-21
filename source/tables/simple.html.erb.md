@@ -6,18 +6,19 @@ order: 2
 
 If a table only contains zero or one row and zero or one column of headings which are in the first row/column, it is considered a simple table.
 
-Use header cells (`<th>`) as those that contain the information that is critical to understand the raw data in a table. For example the number 210 is meaningless on its own, but becomes information if you know that it is the data for a) the number of properties in b) a given street. The `<th>` element needs to be used for header cells so that they are distinguishable from and can be associated with the correct data `<td>` cells.
+Use header cells (`<th>`{:.elem}) as those that contain the information that is critical to understand the raw data in a table. For example the number 210 is meaningless on its own, but becomes information if you know that it is the data for <em>a)</em> the number of properties in <em>b)</em> a given street.
+
+The `<th>`{:.elem} element needs to be used for header cells so that they are distinguishable from and can be associated with the correct data `<td>`{:.elem} cells.
 
 ## Table with header cells in the top row only
 {:.ex}
 
-This table of concert dates only needs the cells in the top row marked up as `<th>` cells. This is partly because it is such a small table and partly because the data itself is distinctly different in each column.
+This table of concert dates only needs the cells in the top row marked up as `<th>`{:.elem} cells. This is partly because it is such a small table and partly because the data itself is distinctly different in each column.
 
 {::nomarkdown}
 <%= sample_start %>
-{:/nomarkdown}
 
-**Concert dates:**
+<p><strong>Concert dates:</strong></p>
 
 <table>
 	<tr>
@@ -42,7 +43,6 @@ This table of concert dates only needs the cells in the top row marked up as `<t
 	</tr>
 </table>
 
-{::nomarkdown}
 <%= sample_end %>
 {:/nomarkdown}
 
@@ -79,11 +79,10 @@ This table of concert dates only needs the cells in the top row marked up as `<t
 ## Table with header cells in the top row and first column
 {:.ex}
 
-This table of opening times has header information contained in both the top row and the first column. All header cells are marked up as `<th>` cells.
+This table of opening times has header information contained in both the top row and the first column. All header cells are marked up as `<th>`{:.elem} cells.
 
 {::nomarkdown}
 <%= sample_start %>
-{:/nomarkdown}
 
 <table>
 	<tr>
@@ -128,9 +127,9 @@ This table of opening times has header information contained in both the top row
 	</tr>
 </table>
 
-{::nomarkdown}
 <%= sample_end %>
 {:/nomarkdown}
+
 {::nomarkdown}
 <%= code_start %>
 {:/nomarkdown}
@@ -171,23 +170,22 @@ This table of opening times has header information contained in both the top row
 
 [Full code for “Table with header cells in the top row and first column”](examples/headertoprowfirstcol.html)
 
-## `<caption>` used as a table heading
+## `<caption>`{:.elem} used as a table heading
 {:.ex}
 
 We use different ways to provide headings in the above examples, a simple paragraph or using the top left cell.
 
 A table caption can be used to provide a heading for the table as a whole. This is not required to meet WCAG 2.0, but is considered best
-practice because the `<caption>` element is explicitly associated with the table. The `<caption>` value should be a succinct description of the content of the table.
+practice because the `<caption>`{:.elem} element is explicitly associated with the table. The `<caption>`{:.elem} value should be a succinct description of the content of the table.
 
-While the examples above don’t use it, this and all other examples in this tutorial apply the `<caption>` element to tables.
+While the examples above don’t use it, this and all other examples in this tutorial apply the `<caption>`{:.elem} element to tables.
 
-This example has the table heading marked up using the `<caption>` element, its value "Concert dates" tells users what information the table contains.
+This example has the table heading marked up using the `<caption>`{:.elem} element, its value "Concert dates" tells users what information the table contains.
 
 ### Header cells in the top row only:
 
 {::nomarkdown}
 <%= sample_start %>
-{:/nomarkdown}
 
 <table>
 	<caption>Concert dates</caption>
@@ -213,7 +211,6 @@ This example has the table heading marked up using the `<caption>` element, its 
 	</tr>
 </table>
 
-{::nomarkdown}
 <%= sample_end %>
 {:/nomarkdown}
 
@@ -246,7 +243,6 @@ This example has the table heading marked up using the `<caption>` element, its 
 
 {::nomarkdown}
 <%= sample_start %>
-{:/nomarkdown}
 
 <table>
 	<caption>Delivery slots</caption>
@@ -292,7 +288,6 @@ This example has the table heading marked up using the `<caption>` element, its 
 	</tr>
 </table>
 
-{::nomarkdown}
 <%= sample_end %>
 {:/nomarkdown}
 
