@@ -6,7 +6,9 @@ order: 2
 
 If a table only contains zero or one row and zero or one column of headings which are in the first row/column, it is considered a simple table.
 
-Use header cells (`<th>`{:.elem}) as those that contain the information that is critical to understand the raw data in a table. For example the number 210 is meaningless on its own, but becomes information if you know that it is the data for a) the number of properties in b) a given street. The `<th>`{:.elem} element needs to be used for header cells so that they are distinguishable from and can be associated with the correct data `<td>`{:.elem} cells.
+Use header cells (`<th>`{:.elem}) as those that contain the information that is critical to understand the raw data in a table. For example the number 210 is meaningless on its own, but becomes information if you know that it is the data for <em>a)</em> the number of properties in <em>b)</em> a given street.
+
+The `<th>`{:.elem} element needs to be used for header cells so that they are distinguishable from and can be associated with the correct data `<td>`{:.elem} cells.
 
 ## Table with header cells in the top row only
 {:.ex}
