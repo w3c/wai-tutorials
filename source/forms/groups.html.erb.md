@@ -14,7 +14,7 @@ Currently this is content from _Form structure_, which is now split into _Groups
 <%= editors_note_end %>
 {:/nomarkdown}
 
-Forms should be grouped into groups of logically related form controls to help orientation.
+Long forms should be grouped into groups of logically related form controls to help orientation. HTML provides `<fieldset>`{:.elem} and `<legend>`{:.elem} elements for that use case.
 
 - **What to do:** Build a logical structure into your forms. Split long forms over several topic organised pages, and code related groups of controls using structural elements to define the topic they have in common.
 - **Why:** Forms that are split into logical stages over several pages can make it easier for people with learning difficulties to concentrate. Grouping related fields can ensure that the topic as well as the individual label can be announced by screen readers.
