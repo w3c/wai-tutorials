@@ -1053,6 +1053,10 @@ select {
 	border-top: 1px solid #ccc;
 }
 
+[fragmention] {
+	box-shadow: 0 0 10px #aaa;
+}
+
 [fragmention]:focus {
 	box-shadow: 0 0 10px #036;
 	outline-color: #036;
