@@ -1,14 +1,14 @@
 ---
 title: Multi-level Tables
 status: editors-draft
+technologies: HTML5
 order: 4
 ---
 
 Multi-level tables are those that have a structure that is too complex to support strict horizontal or vertical association between header and data cells. In each case, the relationship between header and data cells needs to be defined by giving each `<th>`{:.elem} cell a unique id attribute, and each `<td>`{:.elem} a headers attribute that lists related id values, without any comma separation. Table structures that need to be marked up this way include:
 
--   Where column headers are repeated or changed part-way through the table
--   Those with three or more header cells related to each data cell
--   Where some of the header cells aren't in direct horizontal or vertical alignment to related data cells.
+-   Where column headers are repeated or changed part-way through the table.
+-   Those with three or more header cells related to each data cell.
 
 ## Table with multiple column headers in each column
 {:.ex}
