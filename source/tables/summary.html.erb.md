@@ -4,25 +4,26 @@ status: editors-draft
 technologies: HTML4, HTML5, WAI-ARIA
 order: 5
 ---
+
 A summary is a brief description of how data is organized in a table. It may not be necessary in very simple tables but can be important where the data is laid out in an unusual order or the table structure is complex. In these cases, a summary should be provided to give brief orientation clues. In HTML4 the description can be marked up in the `summary`{:.attrib} attribute of the `<table>`{:.elem} element, but as this is made obsolete in HTML5, the second example on this page shows how to put the description within the `<caption>`{:.elem} element.
 
 ## Table with a complex structure
 {:.ex}
 
-{::nomarkdown}
-<%= notes_start %>
-{/:nomarkdown}
-
-**Note:** The following approaches are only valid in HTML5.
-
-{::nomarkdown}
-<%= notes_end %>
-{/:nomarkdown}
-
 ### Nest summary into the `<caption>`{:.elem} element
 {:.ap}
 
 This is a complex table showing availability of different types and sizes of accommodation in two different locations. The `<caption>`{:.elem} element is used to describe the table layout as well as act as a heading for the table.
+
+{::nomarkdown}
+<%= notes_start %>
+{:/nomarkdown}
+
+**Note: The technique used for approach 1 is valid for both HTML4 and HTML5.**
+
+{::nomarkdown}
+<%= notes_end %>
+{:/nomarkdown}
 
 {::nomarkdown}
 <%= sample_start %>
@@ -113,10 +114,18 @@ This is a complex table showing availability of different types and sizes of acc
 <%= code_end %>
 {:/nomarkdown}
 
-Note: The technique used for approach 1 is valid for both HTML4 and HTML5.
-
 ### Use `aria-described-by`{:.attrib} to provide a table summary
 {:.ap}
+
+{::nomarkdown}
+<%= notes_start %>
+{:/nomarkdown}
+
+**Note: The technique used for approach 2 is only valid in HTML5.**
+
+{::nomarkdown}
+<%= notes_end %>
+{:/nomarkdown}
 
 {::nomarkdown}
 <%= sample_start %>
@@ -180,10 +189,18 @@ Note: The technique used for approach 1 is valid for both HTML4 and HTML5.
 <%= code_end %>
 {:/nomarkdown}
 
-**Note:** The technique used for approach 2 is valid HTML5.
-
 ### Useing the `<figure>`{:.elem} element to mark up a table summary
 {:.ap}
+
+{::nomarkdown}
+<%= notes_start %>
+{:/nomarkdown}
+
+**Note: The technique used for approach 3 is only valid in HTML5.**
+
+{::nomarkdown}
+<%= notes_end %>
+{:/nomarkdown}
 
 {::nomarkdown}
 <%= sample_start %>
@@ -252,12 +269,20 @@ Note: The technique used for approach 1 is valid for both HTML4 and HTML5.
 <%= code_end %>
 {:/nomarkdown}
 
-**Note:** The technique used for approach 3 is valid HTML5.
-
 ## Table with data on both sides of a header column
 {:.ex}
 
-(HTML4 only) This table has an _unusual table structure_, the days of the week are in the center column, morning times to the left and afternoon times to the right. It has the `summary`{:.attrib} attribute “Days are shown in the second column, morning opening hours in the first column and afternoon opening hours are in the third column”, explaining the way the table is laid out.
+{::nomarkdown}
+<%= notes_start %>
+{:/nomarkdown}
+
+**Note: This example is valid in HTML4 only.**
+
+{::nomarkdown}
+<%= notes_end %>
+{:/nomarkdown}
+
+This table has an unusual table structure, the days of the week are in the center column, morning times to the left and afternoon times to the right. It has the `summary`{:.attrib} attribute “Days are shown in the second column, morning opening hours in the first column and afternoon opening hours are in the third column”, explaining the way the table is laid out.
 
 {::nomarkdown}
 <%= sample_start %>

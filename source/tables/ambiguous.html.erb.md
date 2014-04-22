@@ -1,6 +1,7 @@
 ---
 title: Ambiguous Tables
 status: editors-draft
+technologies: HTML5
 order: 3
 ---
 
@@ -13,10 +14,7 @@ Possible values for the `scope`{:.attrib} attribute are `row`{:.value}, `col`{:.
 ## Table with header cells in one column only
 {:.ex}
 
-This example has `<th>`{:.elem} elements for all cells in the left column of a
-table. The `scope`{:.attrib} value `row`{:.value} is used on each `<th>`{:.elem} cell to ensure
-that it cannot be mistaken as a header for other cells in the same
-column.
+This example has `<th>`{:.elem} elements for all cells in the left column of a table. The `scope`{:.attrib} value `row`{:.value} is used on each `<th>`{:.elem} cell to ensure that it cannot be mistaken as a header for other cells in the same column.
 
 {::nomarkdown}
 <%= sample_start %>
@@ -196,8 +194,7 @@ In this table the row header cells are in the second column rather than the firs
 ## Table with headers spanning multiple rows or columns
 {:.ex}
 
-In this example, some of the row header cells span two or more rows of
-data cells and one column header spans three columns.
+In this example, some of the row header cells span two or more rows of data cells and one column header spans three columns.
 
 {::nomarkdown}
 <%= sample_start %>
