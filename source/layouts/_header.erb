@@ -2,19 +2,19 @@
 <html class="no-js no-svg" lang="en">
 <head>
   <meta charset="utf-8">
-  <title>
-  <%= current_page.data.title %>
-  <% if current_page.data.order == 1 %>
-    <% if current_page.data.tutorial_title %>
-      <%= " | " + current_page.data.tutorial_title %>
-    <% end %>
-  <% else %>
-    <% if current_page.parent and current_page.parent.data.tutorial_title %>
-      <%= " | " + current_page.parent.data.tutorial_title %>
-    <% end %>
-  <% end %>
-  | WAI Web Accessibility Tutorials
-  </title>
+  <%
+  # Building Title
+  $title = current_page.data.title
+  if current_page.data.order == 1
+    if current_page.data.tutorial_title
+      $title = $title + " | " + current_page.data.tutorial_title
+    end
+  else
+    if current_page.parent and current_page.parent.data.tutorial_title
+      $title = $title +  " | " + current_page.parent.data.tutorial_title
+    end
+  end
+  $title = $title + " | WAI Web Accessibility Tutorials" %><title><%= $title %></title>
   <meta name="viewport" content="width=device-width">
   <%= stylesheet_link_tag "wai-act" %>
   <%= javascript_include_tag  "modernizr" %>
