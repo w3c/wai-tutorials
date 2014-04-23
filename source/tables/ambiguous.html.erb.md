@@ -5,9 +5,7 @@ technologies: HTML5
 order: 3
 ---
 
-Sometimes it is hard for assistive technology to determine which columns or row to associate with a specific header cell.
-
-`Scope`{:.attrib} is the attribute used to define the direction and range of data cells that are covered by a header cell. For example a header cell that spans three columns with the `scope`{:.attrib} value `colgroup`{:.value} associates the header with the data cells in all three columns. The `scope`{:.attrib} attribute should be used for all `<th>`{:.elem} cells where either the direction or range of data cell coverage needs to be clearly associated.
+`Scope`{:.attrib} is the attribute used to define the direction and range of data cells that are covered by a header cell. For example, the `scope`{:.attrib} value `row`{:.value} denotes that a header cell applies to the entire row. Similarly, a header cell that spans three columns and has the `scope`{:.attrib} value `colgroup`{:.value} only applies to the data cells in the three columns that it spans. The `scope`{:.attrib} attribute should be used for all `<th>`{:.elem} cells where either the direction or range of data cell coverage needs to be clearly associated.
 
 Possible values for the `scope`{:.attrib} attribute are `row`{:.value}, `col`{:.value}, `rowgroup`{:.value} or `colgroup`{:.value}.
 
