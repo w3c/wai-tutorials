@@ -7,7 +7,7 @@ topic_order: 2
 type: intro
 ---
 
-Data tables need structural markup added to the table to distinguish between header and data cells and define the relationships between them. This tutorial shows you how to apply appropriate structural table markup. It includes the following pages:
+Data tables need structural markup to distinguish between header and data cells and define the relationships between them. This tutorial shows you how to apply appropriate structural markup to tables. It includes the following pages:
 
 -   **[Simple tables](simple.html):** Identify the topic of a row or column and denote those header cells with `<th>`{:.elem} elements in the markup. Also use the `<caption>`{:.elem} element to describe the overall topic of a table.
 
@@ -21,7 +21,7 @@ Data tables need structural markup added to the table to distinguish between hea
 <%= notes_start %>
 {:/nomarkdown}
 
-**Note:** The techniques in this tutorial should be applied only when a table is being used to display _data_ in a grid and don’t apply to presentational (layout) tables. You shouldn’t use tables for layout purposes.
+**Note:** The techniques in this tutorial should be applied only when a table is being used to display _data_ in a grid and don’t apply to presentational (layout) tables. You shouldn’t use tables for layout purposes. Instead, use Cascading Style Sheets (CSS) for visual presentation.
 
 {::nomarkdown}
 <%= notes_end %>
@@ -30,7 +30,7 @@ Data tables need structural markup added to the table to distinguish between hea
 
 ## Why is this important?
 
-When data is presented in tabular format, the position and styling of header cells may be sufficient to let most people know that these contain key information that gives meaning to related data cell content. However, the published style is not available to people who need to use personal stylesheets, and the position alone can’t help screen readers identify the cells that contain the header information. The header cells need to be explicitly identified so that correct associations can be made to data cells, especially in more complex tables. Correctly marked up tables mean that:
+When data is presented in tabular format, the position and styling of header cells may be sufficient to let most people know that these contain key information that gives meaning to related data cell content. However, the published style is not available to people who need to use personal stylesheets, and the position alone doesn't help screen readers identify the cells that contain the header information. The header cells need to be explicitly identified so that correct associations can be made to data cells, especially in more complex tables. Correctly marked up tables mean that:
 
 -   **People using a screen reader** can have the row and column headers read aloud as they navigate through the table. Screen readers speak one cell at a time and can only distinguish header cells from data cells if they are properly marked up.
 
