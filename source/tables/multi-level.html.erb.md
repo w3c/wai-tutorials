@@ -24,7 +24,7 @@ This table shows contact details for six suppliers. To avoid producing an overly
     Supplier contacts
   </caption>
   <tr>
-    <td>&nbsp;</td>
+    <td id="blank">&nbsp;</td>
     <th id="co1">Example1 Ltd</th>
     <th id="co2">Example2 Co</th>
     <th id="co3">Example 3 Inc</th>
@@ -49,9 +49,9 @@ This table shows contact details for six suppliers. To avoid producing an overly
   </tr>
   <tr>
     <td>&nbsp;</td>
-    <th id="co4">Example 4 Ltd</th>
-    <th id="co5">Example 5Inc</th>
-    <th id="co6">Example 6 Co</th>
+    <th id="co4" headers="blank">Example 4 Ltd</th>
+    <th id="co5" headers="blank">Example 5Inc</th>
+    <th id="co6" headers="blank">Example 6 Co</th>
   </tr>
   <tr>
     <th id="c2">Contact</th>
