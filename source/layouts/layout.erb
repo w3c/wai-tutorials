@@ -77,13 +77,13 @@
                 </div>
                 <div class="navigation">
   <nav role="navigation" aria-label="Navigation" id="nav">
-    <p class="list-heading" id="list-heading-tutorials">
+    <h2 class="list-heading" id="list-heading-tutorials">
       <% if current_page.data.order == 1 %>
         <%= current_page.data.tutorial_title %> Tutorial
       <% else %>
         <%= current_page.parent.data.tutorial_title %> Tutorial
       <% end %>
-    </p>
+    </h2>
     <ul aria-labelledby="list-heading-tutorials">
       <% if current_page.data.type == 'intro' %>
       <% if current_page.data.nav_title %>
