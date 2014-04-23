@@ -114,7 +114,7 @@ This is a complex table showing availability of different types and sizes of acc
 <%= code_end %>
 {:/nomarkdown}
 
-### Use `aria-described-by`{:.attrib} to provide a table summary
+### Use `aria-describedby`{:.attrib} to provide a table summary
 {:.ap}
 
 {::nomarkdown}
@@ -132,7 +132,7 @@ This is a complex table showing availability of different types and sizes of acc
 
 
 <p id="tblDesc" style="margin: 0 auto; max-width: 25.333333333em; font-size: .75em; lin-height: 1.5;">Column one has the location and size of accommodation, other columns show the type and number of properties available.</p>
-<table aria-described-by="tblDesc" tabindex="0">
+<table aria-describedby="tblDesc" tabindex="0">
   <caption style="text-align: left;">
     Paris: Availability of holiday accommodation<br>
   </caption>
@@ -179,11 +179,11 @@ This is a complex table showing availability of different types and sizes of acc
 
 ~~~ html
 <p id="tblDesc">Column one has the location and size of accommodation, other columns show the type and number of properties available.</p>
-<table aria-described-by="tblDesc" tabindex="0">
+<table aria-describedby="tblDesc" tabindex="0">
 […]
 ~~~
 
-**Note:** it is important to set the `tabindex`{:.attrib} to the value `0`{:.value} to make the text discoverable by screen readers.
+**Note:** To discover the description text the table needs to be in keyboard focus order, which we enable by adding a `tabindex`{:.attrib} attribute with the value `0`{:.value}.
 
 {::nomarkdown}
 <%= code_end %>
