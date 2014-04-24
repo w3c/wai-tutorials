@@ -10,6 +10,8 @@ Multi-level tables are those that have a structure that is too complex to suppor
 -   Where column headers are repeated or changed part-way through the table.
 -   Those with three or more header cells related to each data cell.
 
+Note: In many cases it is worth considering ways to restructre the information to the tables less complex for all readers, for example by separating the information in smaller, more manageable tables.
+
 ## Table with multiple column headers in each column
 {:.ex}
 
