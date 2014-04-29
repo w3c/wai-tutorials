@@ -5,8 +5,6 @@ technologies: HTML5
 order: 2
 ---
 
-A simple table consists of not more than one header row and/or header column.
-
 Use header cell elements (`<th>`{:.elem}) to point out the information that is critical to understand the data in a table. For example the number 210 is meaningless on its own, but becomes information if you know that it is the data for <em>a)</em> the number of properties in <em>b)</em> a given street.
 
 Those `<th>`{:.elem} elements make header cells distinguishable from and associated with the correct data cells (`<td>`{:.elem}).
@@ -18,8 +16,6 @@ This table of concert dates only needs the cells in the top row marked up as `<t
 
 {::nomarkdown}
 <%= sample_start %>
-
-<p><strong>Concert dates:</strong></p>
 
 <table>
 	<tr>
@@ -52,10 +48,6 @@ This table of concert dates only needs the cells in the top row marked up as `<t
 {:/nomarkdown}
 
 ~~~ html
-<p>
-	<strong>Concert dates:</strong>
-</p>
-
 <table>
 	<tr>
 		<th>Date</th>
@@ -87,7 +79,7 @@ This table of opening times has header information contained in both the top row
 
 <table>
 	<tr>
-		<th>Delivery slots</th>
+		<th>&nbsp;</th>
 		<th>Monday</th>
 		<th>Tuesday</th>
 		<th>Wednesday</th>
@@ -138,7 +130,7 @@ This table of opening times has header information contained in both the top row
 ~~~ html
 <table>
 	<tr>
-		<th>Delivery slots</th>
+		<th>&nsbp;</th>
 		<th>Monday</th>
 		<th>Tuesday</th>
 		<th>Wednesday</th>
@@ -171,17 +163,13 @@ This table of opening times has header information contained in both the top row
 
 [Full code for “Table with header cells in the top row and first column”](examples/headertoprowfirstcol.html)
 
-## `<caption>`{:.elem} used as a table heading
+## `<caption>`{:.elem} used to identify a table
 {:.ex}
 
-We use different ways to provide headings in the above examples, a simple paragraph or using the top left cell.
+A table caption can be used to identify a table. This is not required to meet WCAG 2.0, but is considered good
+practice. The `<caption>`{:.elem} value should be a succinct description of the content of the table.
 
-A table caption can be used to provide a heading for the table as a whole. This is not required to meet WCAG 2.0, but is considered best
-practice because the `<caption>`{:.elem} element is explicitly associated with the table. The `<caption>`{:.elem} value should be a succinct description of the content of the table.
-
-While the examples above don’t use it, this and all other examples in this tutorial apply the `<caption>`{:.elem} element to tables.
-
-This example has the table heading marked up using the `<caption>`{:.elem} element, its value "Concert dates" tells users what information the table contains.
+This example has the table captioned using the `<caption>`{:.elem} element. Its value "Concert dates" tells users what information the table contains.
 
 ### Header cells in the top row only:
 
@@ -231,81 +219,6 @@ This example has the table heading marked up using the `<caption>`{:.elem} eleme
 		<td>24 Mar</td>
 		<td>The Obelisks</td>
 		<td>West Wing</td>
-	</tr>
-	[…]
-</table>
-~~~
-
-{::nomarkdown}
-<%= code_end %>
-{:/nomarkdown}
-
-### Header cells in the top row and first column:
-
-{::nomarkdown}
-<%= sample_start %>
-
-<table>
-	<caption>Delivery slots</caption>
-	<tr>
-		<th>&nbsp;</th>
-		<th>Monday</th>
-		<th>Tuesday</th>
-		<th>Wednesday</th>
-		<th>Thursday</th>
-		<th>Friday</th>
-	</tr>
-	<tr>
-		<th>09:00 - 11:00</th>
-		<td>Closed</td>
-		<td>Open</td>
-		<td>Open</td>
-		<td>Closed</td>
-		<td>Closed</td>
-	</tr>
-	<tr>
-		<th>11:00 - 13:00</th>
-		<td>Open</td>
-		<td>Open</td>
-		<td>Closed</td>
-		<td>Closed</td>
-		<td>Closed</td>
-	</tr>
-	<tr>
-		<th>13:00 - 15:00</th>
-		<td>Open</td>
-		<td>Open</td>
-		<td>Open</td>
-		<td>Closed</td>
-		<td>Closed</td>
-	</tr>
-	<tr>
-		<th>15:00 - 17:00</th>
-		<td>Closed</td>
-		<td>Closed</td>
-		<td>Closed</td>
-		<td>Open</td>
-		<td>Open</td>
-	</tr>
-</table>
-
-<%= sample_end %>
-{:/nomarkdown}
-
-{::nomarkdown}
-<%= code_start %>
-{:/nomarkdown}
-
-~~~ html
-<table>
-	<caption>Delivery slots</caption>
-	<tr>
-		<th>&nbsp;</th>
-		<th>Monday</th>
-		<th>Tuesday</th>
-		<th>Wednesday</th>
-		<th>Thursday</th>
-		<th>Friday</th>
 	</tr>
 	[…]
 </table>
