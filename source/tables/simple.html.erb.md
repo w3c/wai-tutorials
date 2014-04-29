@@ -17,6 +17,7 @@ This table of concert dates only needs the cells in the top row marked up as `<t
 {::nomarkdown}
 <%= sample_start %>
 
+<p><strong>Concert dates:</strong></p>
 <table>
 	<tr>
 		<th>Date</th>
@@ -79,7 +80,7 @@ This table of opening times has header information contained in both the top row
 
 <table>
 	<tr>
-		<th>&nbsp;</th>
+		<th>Delivery slots</th>
 		<th>Monday</th>
 		<th>Tuesday</th>
 		<th>Wednesday</th>
@@ -130,7 +131,7 @@ This table of opening times has header information contained in both the top row
 ~~~ html
 <table>
 	<tr>
-		<th>&nsbp;</th>
+		<th>Delivery slots</th>
 		<th>Monday</th>
 		<th>Tuesday</th>
 		<th>Wednesday</th>
@@ -162,71 +163,6 @@ This table of opening times has header information contained in both the top row
 {:/nomarkdown}
 
 [Full code for “Table with header cells in the top row and first column”](examples/headertoprowfirstcol.html)
-
-## `<caption>`{:.elem} used to identify a table
-{:.ex}
-
-A table caption can be used to identify a table. This is not required to meet WCAG 2.0, but is considered good
-practice. The `<caption>`{:.elem} value should be a succinct description of the content of the table.
-
-This example has the table captioned using the `<caption>`{:.elem} element. Its value "Concert dates" tells users what information the table contains.
-
-### Header cells in the top row only:
-
-{::nomarkdown}
-<%= sample_start %>
-
-<table>
-	<caption>Concert dates</caption>
-	<tr>
-		<th>Date</th>
-		<th>Event</th>
-		<th>Venue</th>
-	</tr>
-	<tr>
-		<td>12 Feb</td>
-		<td>Waltz with Strauss</td>
-		<td>Main Hall</td>
-	</tr>
-	<tr>
-		<td>24 Mar</td>
-		<td>The Obelisks</td>
-		<td>West Wing</td>
-	</tr>
-	<tr>
-		<td>14 Apr</td>
-		<td>The What</td>
-		<td>Main Hall</td>
-	</tr>
-</table>
-
-<%= sample_end %>
-{:/nomarkdown}
-
-{::nomarkdown}
-<%= code_start %>
-{:/nomarkdown}
-
-~~~ html
-<table>
-	<caption>Concert dates</caption>
-	<tr>
-		<td>12 Feb</td>
-		<td>Waltz with Strauss</td>
-		<td>Main Hall</td>
-	</tr>
-	<tr>
-		<td>24 Mar</td>
-		<td>The Obelisks</td>
-		<td>West Wing</td>
-	</tr>
-	[…]
-</table>
-~~~
-
-{::nomarkdown}
-<%= code_end %>
-{:/nomarkdown}
 
 ## Related WCAG2.0 Techniques
 

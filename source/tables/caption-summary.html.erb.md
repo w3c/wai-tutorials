@@ -1,11 +1,76 @@
 ---
-title: Table Summary
+title: Caption & Summary
 status: editors-draft
 technologies: HTML4, HTML5, WAI-ARIA
 order: 5
 ---
 
 A summary is a brief description of how data is organized in a table. It may not be necessary in very simple tables but can be important where the data is laid out in an unusual order or the table structure is complex. In these cases, a summary should be provided to give brief orientation clues. In HTML4 the description can be marked up in the `summary`{:.attrib} attribute of the `<table>`{:.elem} element, but as this is made obsolete in HTML5, the second example on this page shows how to put the description within the `<caption>`{:.elem} element.
+
+## `<caption>`{:.elem} used to identify a table
+{:.ex}
+
+A table caption can be used to identify a table. This is not required to meet WCAG 2.0, but is considered good
+practice. The `<caption>`{:.elem} value should be a succinct description of the content of the table.
+
+This example has the table captioned using the `<caption>`{:.elem} element. Its value "Concert dates" tells users what information the table contains.
+
+### Header cells in the top row only:
+
+{::nomarkdown}
+<%= sample_start %>
+
+<table>
+  <caption>Concert dates</caption>
+  <tr>
+    <th>Date</th>
+    <th>Event</th>
+    <th>Venue</th>
+  </tr>
+  <tr>
+    <td>12 Feb</td>
+    <td>Waltz with Strauss</td>
+    <td>Main Hall</td>
+  </tr>
+  <tr>
+    <td>24 Mar</td>
+    <td>The Obelisks</td>
+    <td>West Wing</td>
+  </tr>
+  <tr>
+    <td>14 Apr</td>
+    <td>The What</td>
+    <td>Main Hall</td>
+  </tr>
+</table>
+
+<%= sample_end %>
+{:/nomarkdown}
+
+{::nomarkdown}
+<%= code_start %>
+{:/nomarkdown}
+
+~~~ html
+<table>
+  <caption>Concert dates</caption>
+  <tr>
+    <td>12 Feb</td>
+    <td>Waltz with Strauss</td>
+    <td>Main Hall</td>
+  </tr>
+  <tr>
+    <td>24 Mar</td>
+    <td>The Obelisks</td>
+    <td>West Wing</td>
+  </tr>
+  […]
+</table>
+~~~
+
+{::nomarkdown}
+<%= code_end %>
+{:/nomarkdown}
 
 ## Table with a complex structure
 {:.ex}
