@@ -1,5 +1,5 @@
 ---
-title: Ambiguous Tables
+title: Irregular Tables
 status: editors-draft
 technologies: HTML5
 order: 3
