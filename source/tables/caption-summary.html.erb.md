@@ -5,17 +5,17 @@ technologies: HTML4, HTML5, WAI-ARIA
 order: 5
 ---
 
-A summary is a brief description of how data is organized in a table. It may not be necessary in very simple tables but can be important where the data is laid out in an unusual order or the table structure is complex. In these cases, a summary should be provided to give brief orientation clues. In HTML4 the description can be marked up in the `summary`{:.attrib} attribute of the `<table>`{:.elem} element, but as this is made obsolete in HTML5, the second example on this page shows how to put the description within the `<caption>`{:.elem} element.
+Additional accessibility hints can be added to tables to help navigation between them:
 
-## `<caption>`{:.elem} used to identify a table
+* A **caption** is used to identify tables more easily by associating a table identifier (that acts like a heading) to whole table.
+* A **summary** conveys information about the organization of the data in the table and is usually used with more complex tables. It can also a brief explanation of how to navigate the table.
+
+Note that both attributes are _not required by WCAG 2.0_ for every table, but there are situation where captions and/or summaries are needed to comply with [Success Criterion 1.3.1 (Info and Relationships)](http://www.w3.org/TR/WCAG20/#content-structure-separation-programmatic). For more information see WCAG 2.0 techniques [H39](http://www.w3.org/TR/WCAG20-TECHS/H39) (Using caption elements to associate data table captions with data tables) and [H73](http://www.w3.org/TR/WCAG20-TECHS/H73) (Using the summary attribute of the table element to give an overview of data tables).
+
+## Identifying a table using a caption
 {:.ex}
 
-A table caption can be used to identify a table. This is not required to meet WCAG 2.0, but is considered good
-practice. The `<caption>`{:.elem} value should be a succinct description of the content of the table.
-
-This example has the table captioned using the `<caption>`{:.elem} element. Its value "Concert dates" tells users what information the table contains.
-
-### Header cells in the top row only:
+If used, the caption should be a succinct description of the content of the table. HTML has a dedicated `caption`{:.elem} element and in this example “Concert dates” tells users what information the table contains as the table otherwise may be ambiguous and also apply to an art exhibition, for example.
 
 {::nomarkdown}
 <%= sample_start %>
@@ -72,23 +72,89 @@ This example has the table captioned using the `<caption>`{:.elem} element. Its 
 <%= code_end %>
 {:/nomarkdown}
 
-## Table with a complex structure
+## Summaries for more complex tables
 {:.ex}
 
-### Nest summary into the `<caption>`{:.elem} element
-{:.ap}
+In HTML4 (and XHTML 1.x) the description can be marked up using the `summary`{:.attrib} attribute of the `<table>`{:.elem} element, but as this is made obsolete in HTML5, the approaches in this section show how to put the description within the `<caption>`{:.elem} element and using the WAI-ARIA `aria-describedby`{:.attrib} attribute or the `<figure>`{:.elem} element for the summary.
 
-This is a complex table showing availability of different types and sizes of accommodation in two different locations. The `<caption>`{:.elem} element is used to describe the table layout as well as act as a heading for the table.
+### Using the `summary`{:.attrib} attribute
+{:.ap}
 
 {::nomarkdown}
 <%= notes_start %>
 {:/nomarkdown}
 
-**Note: The technique used for approach 1 is valid for both HTML4 and HTML5.**
+**Note: This approach is valid in HTML4 and XHTML 1.x only.**
 
 {::nomarkdown}
 <%= notes_end %>
 {:/nomarkdown}
+
+This table has an unusual table structure, the days of the week are in the center column, morning times to the left and afternoon times to the right. It has the `summary`{:.attrib} attribute “Days are shown in the second column, morning opening hours in the first column and afternoon opening hours are in the third column”, explaining the way the table is laid out.
+
+The content of the summary attribute is not available to visual users.
+
+{::nomarkdown}
+<%= sample_start %>
+
+<table summary="Days are shown in the second column, morning opening hours in the first column and afternoon opening hours are in the third column">
+  <caption>
+    Surgery opening times
+  </caption>
+  <tr>
+    <th scope="col" id="m"> Morning</th>
+    <th scope="col" id="d">Day</th>
+    <th id="a"> Afternoon</th>
+  </tr>
+  <tr>
+    <td headers="m d1">Closed</td>
+    <th scope="row" id="d1"> Sunday</th>
+    <td headers="a d1"> 14:00 to 15:00</td>
+  </tr>
+  <tr>
+    <td headers="m d2"> 08:00 to 11:30</td>
+    <th id="d2"> Mon to Fri</th>
+    <td headers="a d2">15:00 to 19:00</td>
+  </th>
+  <tr>
+    <td headers="d3 m">09:30 to 12:00</td>
+    <th id="d3">Saturday</th>
+    <td headers="a d3">Closed</td>
+  </tr>
+</table>
+
+<%= sample_end %>
+{:/nomarkdown}
+
+{::nomarkdown}
+<%= code_start %>
+{:/nomarkdown}
+
+~~~ html
+<table
+  summary="Days are shown in the second column, morning opening hours in the first column and afternoon opening hours are in the third column">
+~~~
+
+{::nomarkdown}
+<%= code_end %>
+{:/nomarkdown}
+
+### Nest summary into the `<caption>`{:.elem} element
+{:.ap}
+
+{::nomarkdown}
+<%= notes_start %>
+{:/nomarkdown}
+
+**Note: The technique in this approach is valid for HTML4, XHTML 1.x and HTML5.**
+
+{::nomarkdown}
+<%= notes_end %>
+{:/nomarkdown}
+
+This complex table shows availability of different types and sizes of accommodation in two different locations. The `<caption>`{:.elem} element is used to describe the table layout as well as act as a heading for the table.
+
+The summary is available to visual users as well.
 
 {::nomarkdown}
 <%= sample_start %>
@@ -96,7 +162,7 @@ This is a complex table showing availability of different types and sizes of acc
 <table>
   <caption style="text-align: left;">
     Availability of holiday accommodation<br>
-    <span style="font-size: .75em; display:block; line-height: 1.5;">
+    <span style="font-size: .75em; display:block;">
       Column one has the location and size of accommodation, other columns show the type and number of properties available
     </span>
   </caption>
@@ -179,6 +245,16 @@ This is a complex table showing availability of different types and sizes of acc
 <%= code_end %>
 {:/nomarkdown}
 
+{::nomarkdown}
+<%= notes_start %>
+{:/nomarkdown}
+
+**Note:** We added a span element to style the summary differently from the caption. This is not required.
+
+{::nomarkdown}
+<%= notes_end %>
+{:/nomarkdown}
+
 ### Use `aria-describedby`{:.attrib} to provide a table summary
 {:.ap}
 
@@ -186,7 +262,7 @@ This is a complex table showing availability of different types and sizes of acc
 <%= notes_start %>
 {:/nomarkdown}
 
-**Note: The technique used for approach 2 is only valid in HTML5.**
+**Note: The technique used in this approach is only valid in HTML5.**
 
 {::nomarkdown}
 <%= notes_end %>
@@ -254,14 +330,14 @@ This is a complex table showing availability of different types and sizes of acc
 <%= code_end %>
 {:/nomarkdown}
 
-### Useing the `<figure>`{:.elem} element to mark up a table summary
+### Using the `<figure>`{:.elem} element to mark up a table summary
 {:.ap}
 
 {::nomarkdown}
 <%= notes_start %>
 {:/nomarkdown}
 
-**Note: The technique used for approach 3 is only valid in HTML5.**
+**Note: The technique used in this approach is only valid in HTML5.**
 
 {::nomarkdown}
 <%= notes_end %>
@@ -272,7 +348,7 @@ This is a complex table showing availability of different types and sizes of acc
 
 
 <figure>
-  <figcaption style="max-width: 19em; margin: 0 auto">
+  <figcaption style="max-width: 19em; margin: 0 auto; color: inherit;">
     <strong>Paris: Availability of holiday accommodation</strong><br>Column one has the location and size of accommodation, other columns show the type and number of properties available.
   </figcaption>
   <table>
@@ -334,68 +410,9 @@ This is a complex table showing availability of different types and sizes of acc
 <%= code_end %>
 {:/nomarkdown}
 
-## Table with data on both sides of a header column
-{:.ex}
-
-{::nomarkdown}
-<%= notes_start %>
-{:/nomarkdown}
-
-**Note: This example is valid in HTML4 only.**
-
-{::nomarkdown}
-<%= notes_end %>
-{:/nomarkdown}
-
-This table has an unusual table structure, the days of the week are in the center column, morning times to the left and afternoon times to the right. It has the `summary`{:.attrib} attribute “Days are shown in the second column, morning opening hours in the first column and afternoon opening hours are in the third column”, explaining the way the table is laid out.
-
-{::nomarkdown}
-<%= sample_start %>
-
-<table summary="Days are shown in the second column, morning opening hours in the first column and afternoon opening hours are in the third column">
-  <caption>
-    Surgery opening times
-  </caption>
-  <tr>
-    <th scope="col" id="m"> Morning</th>
-    <th scope="col" id="d">Day</th>
-    <th id="a"> Afternoon</th>
-  </tr>
-  <tr>
-    <td headers="m d1">Closed</td>
-    <th scope="row" id="d1"> Sunday</th>
-    <td headers="a d1"> 14:00 to 15:00</td>
-  </tr>
-  <tr>
-    <td headers="m d2"> 08:00 to 11:30</td>
-    <th id="d2"> Mon to Fri</th>
-    <td headers="a d2">15:00 to 19:00</td>
-  </th>
-  <tr>
-    <td headers="d3 m">09:30 to 12:00</td>
-    <th id="d3">Saturday</th>
-    <td headers="a d3">Closed</td>
-  </tr>
-</table>
-
-<%= sample_end %>
-{:/nomarkdown}
-
-{::nomarkdown}
-<%= code_start %>
-{:/nomarkdown}
-
-~~~ html
-<table
-  summary="Days are shown in the second column, morning opening hours in the first column and afternoon opening hours are in the third column">
-~~~
-
-{::nomarkdown}
-<%= code_end %>
-{:/nomarkdown}
-
 ## Related WCAG2.0 Technique
 
 The following WCAG 2.0 technique was used in the example above:
 
+-   [H39: Using caption elements to associate data table captions with data tables](http://www.w3.org/TR/WCAG20-TECHS/H39)
 -   [H73: Using the summary attribute of the table element](http://www.w3.org/TR/WCAG20-TECHS/H73)
