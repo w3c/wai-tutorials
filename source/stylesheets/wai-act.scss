@@ -45,12 +45,12 @@ html {
 
 body {
 	overflow-x:hidden;
-	counter-reset: examples, approaches;
+	counter-reset: examples approaches;
 	@extend .font-primary;
 	background-color: #F5F5F5;
 	color: #333;
 	font-size: percentage(15/16);
-	line-height: 1.5;
+	line-height: (24/18);
 	max-width: 1680px;
 	margin: 0 auto;
 	@include mq($medium) {
