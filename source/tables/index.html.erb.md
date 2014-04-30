@@ -30,7 +30,7 @@ Data tables need structural markup to distinguish between header and data cells 
 
 ## Why is this important?
 
-When data is presented in tabular format, the position and styling of header cells may be sufficient to let most people know that these contain key information that gives meaning to related data cell content. However, the published style is not available to people who need to use personal stylesheets, and the position alone doesn't help screen readers identify the cells that contain the header information. The header cells need to be explicitly identified so that correct associations can be made to data cells, especially in more complex tables. Correctly marked up tables mean that:
+Some people can determine the header cells of tabular data from the visual cues. However, screen reader users and people with user stylesheets might not get those visual cues. Therefore, header cells need to be explicitly identified in the markup so that they are clear to everyone. Correctly marked up tables mean that:
 
 -   **People using a screen reader** can have the row and column headers read aloud as they navigate through the table. Screen readers speak one cell at a time and can only distinguish header cells from data cells if they are properly marked up.
 
@@ -41,16 +41,6 @@ When data is presented in tabular format, the position and styling of header cel
 Accessible tables have their header cells marked up using `<th>` and their data cells marked up using `<td>`. For more complex tables directional and explicit associations may be needed, using `scope`, `id` and `headers` attributes so that they can be interpreted by assistive technologies.
 
 The structural coding can also be used to represent data in different ways, for example by larger or differently colored text or backgrounds, Braille, speech and symbols. Many web authoring tools and content management systems (CMS) provide functions to define header cells during table creation without having to manually edit the code.
-
-{::nomarkdown}
-<%= notes_start %>
-{:/nomarkdown}
-
-**Note:** Other formats available on the Web such as <abbr title="Open Document Format">ODF</abbr>, <abbr title="Portable Document Format">PDF</abbr> and Word have similar mechanisms to mark-up table structure.
-
-{::nomarkdown}
-<%= notes_end %>
-{:/nomarkdown}
 
 
 ## Relationship to WCAG 2.0
