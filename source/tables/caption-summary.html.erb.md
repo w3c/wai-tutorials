@@ -5,17 +5,20 @@ technologies: HTML4, HTML5, WAI-ARIA
 order: 5
 ---
 
-Additional accessibility hints can be added to tables to help navigation between them:
+Captions and summaries are accessibility hints can be added to tables to help navigating to and between them. They are not required for every table but are a convenient way to meet WCAG 2.0 requirements.
 
-* A **caption** is used to identify tables more easily by associating a table identifier (that acts like a heading) to whole table.
-* A **summary** conveys information about the organization of the data in the table and is usually used with more complex tables. It can also a brief explanation of how to navigate the table.
+* **Captions** can be used to identify tables more easily by associating a table identifier (that acts like a heading) to a table. For example, they are important if a screen reader user who choses to navigate from table to table directly loses the context of the table if no caption is present.
 
-Note that both attributes are _not required by WCAG 2.0_ for every table, but there are situation where captions and/or summaries are needed to comply with [Success Criterion 1.3.1 (Info and Relationships)](http://www.w3.org/TR/WCAG20/#content-structure-separation-programmatic). For more information see WCAG 2.0 techniques [H39](http://www.w3.org/TR/WCAG20-TECHS/H39) (Using caption elements to associate data table captions with data tables) and [H73](http://www.w3.org/TR/WCAG20-TECHS/H73) (Using the summary attribute of the table element to give an overview of data tables).
+  Captions are recommended in WCAG 2.0 technique [H39: Using caption elements to associate data table captions with data tables](http://www.w3.org/TR/WCAG20-TECHS/H39).
+
+* A **summary** conveys information about the organization of the data in the table and to help users navigate the table. For example, if a table has an unconventional structure (like in this example below), the user can be told content can be found in which row or column. It is usually needed with more complex tables.
+
+  Using summaries is recommended in WCAG 2.0 technique [H73: Using the summary attribute of the table element to give an overview of data tables](http://www.w3.org/TR/WCAG20-TECHS/H73).
 
 ## Identifying a table using a caption
 {:.ex}
 
-If used, the caption should be a succinct description of the content of the table. HTML has a dedicated `caption`{:.elem} element and in this example “Concert dates” tells users what information the table contains as the table otherwise may be ambiguous and also apply to an art exhibition, for example.
+If used, the caption should be a succinct description of the content of the table. HTML has a dedicated `caption` element and in this example “Concert dates” tells users what information the table contains as the table otherwise may be ambiguous and could also apply to an art exhibition, for example.
 
 {::nomarkdown}
 <%= sample_start %>
@@ -75,9 +78,9 @@ If used, the caption should be a succinct description of the content of the tabl
 ## Summaries for more complex tables
 {:.ex}
 
-In HTML4 (and XHTML 1.x) the description can be marked up using the `summary`{:.attrib} attribute of the `<table>`{:.elem} element, but as this is made obsolete in HTML5, the approaches in this section show how to put the description within the `<caption>`{:.elem} element and using the WAI-ARIA `aria-describedby`{:.attrib} attribute or the `<figure>`{:.elem} element for the summary.
+In HTML4 (and XHTML 1.x) the description can be marked up using the `summary` attribute of the `<table>` element, but as this is made obsolete in HTML5, the approaches in this section show how to put the description within the `<caption>` element and using the WAI-ARIA `aria-describedby` attribute or the `<figure>` element for the summary.
 
-### Using the `summary`{:.attrib} attribute
+### Using the `summary` attribute
 {:.ap}
 
 {::nomarkdown}
@@ -90,7 +93,7 @@ In HTML4 (and XHTML 1.x) the description can be marked up using the `summary`{:.
 <%= notes_end %>
 {:/nomarkdown}
 
-This table has an unusual table structure, the days of the week are in the center column, morning times to the left and afternoon times to the right. It has the `summary`{:.attrib} attribute “Days are shown in the second column, morning opening hours in the first column and afternoon opening hours are in the third column”, explaining the way the table is laid out.
+This table has an unusual table structure, the days of the week are in the center column, morning times to the left and afternoon times to the right. It has the `summary` attribute “Days are shown in the second column, morning opening hours in the first column and afternoon opening hours are in the third column”, explaining the way the table is laid out.
 
 The content of the summary attribute is not available to visual users.
 
@@ -139,7 +142,7 @@ The content of the summary attribute is not available to visual users.
 <%= code_end %>
 {:/nomarkdown}
 
-### Nest summary into the `<caption>`{:.elem} element
+### Nest summary into the `<caption>` element
 {:.ap}
 
 {::nomarkdown}
@@ -152,7 +155,7 @@ The content of the summary attribute is not available to visual users.
 <%= notes_end %>
 {:/nomarkdown}
 
-This complex table shows availability of different types and sizes of accommodation in two different locations. The `<caption>`{:.elem} element is used to describe the table layout as well as act as a heading for the table.
+This complex table shows availability of different types and sizes of accommodation in two different locations. The `<caption>` element is used to describe the table layout as well as act as a heading for the table.
 
 The summary is available to visual users as well.
 
@@ -255,7 +258,7 @@ The summary is available to visual users as well.
 <%= notes_end %>
 {:/nomarkdown}
 
-### Use `aria-describedby`{:.attrib} to provide a table summary
+### Use `aria-describedby` to provide a table summary
 {:.ap}
 
 {::nomarkdown}
@@ -324,13 +327,13 @@ The summary is available to visual users as well.
 […]
 ~~~
 
-**Note:** To discover the description text the table needs to be in keyboard focus order, which we enable by adding a `tabindex`{:.attrib} attribute with the value `0`{:.value}.
+**Note:** To discover the description text the table needs to be in keyboard focus order, which we enable by adding a `tabindex` attribute with the value `0`.
 
 {::nomarkdown}
 <%= code_end %>
 {:/nomarkdown}
 
-### Using the `<figure>`{:.elem} element to mark up a table summary
+### Using the `<figure>` element to mark up a table summary
 {:.ap}
 
 {::nomarkdown}
@@ -410,7 +413,7 @@ The summary is available to visual users as well.
 <%= code_end %>
 {:/nomarkdown}
 
-## Related WCAG2.0 Technique
+## Related WCAG2.0 Techniques
 
 The following WCAG 2.0 technique was used in the example above:
 

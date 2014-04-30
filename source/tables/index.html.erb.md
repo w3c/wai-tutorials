@@ -9,13 +9,13 @@ type: intro
 
 Data tables need structural markup to distinguish between header and data cells and define the relationships between them. This tutorial shows you how to apply appropriate structural markup to tables. It includes the following pages:
 
--   **[Simple tables](simple.html):** Identify the topic of a row or column and denote those header cells with `<th>`{:.elem} elements in the markup. Also use the `<caption>`{:.elem} element to describe the overall topic of a table.
+-   **[Simple tables](simple.html):** Identify the topic of a row or column and denote those header cells with `<th>` elements in the markup.
 
--   **[Ambiguous tables](ambiguous.html):** For tables where identifying header cells programmatically is not easy, they can be defined using the `scope`{:.attrib} attribute.
+-   **[Ambiguous tables](ambiguous.html):** For tables where identifying header cells programmatically is not easy, they can be defined using the `scope` attribute.
 
--   **[Multi-level tables](multi-level.html):** If the table structure is so complex that a data cell needs to reference several levels of header cells, each header cell is assigned an `id`{:.attrib} and each data cell a `headers`{:.attrib} attribute that lists all relevant header cell `id`{:.attrib} values.
+-   **[Multi-level tables](multi-level.html):** If the table structure is so complex that a data cell needs to reference several levels of header cells, each header cell is assigned an `id` and each data cell a `headers` attribute that lists all relevant header cell `id` values.
 
--   **[Table Summary](summary.html):** To provide orientation or navigation hints in complex tables, there are different techniques to provide a brief summary for the table’s layout.
+-   **[Captions & Summary](captions-summary.html):** Most tables benefit from the use of captions, to describe the overall topic of a table, and summariesto provide orientation or navigation hints in complex tables.
 
 {::nomarkdown}
 <%= notes_start %>
@@ -38,7 +38,7 @@ When data is presented in tabular format, the position and styling of header cel
 
 ## How to make tables accessible
 
-Accessible tables have their header cells marked up using `<th>`{:.elem} and their data cells marked up using `<td>`{:.elem}. For more complex tables directional and explicit associations may be needed, using `scope`{:.attrib}, `id`{:.attrib} and `headers`{:.attrib} attributes so that they can be interpreted by assistive technologies.
+Accessible tables have their header cells marked up using `<th>` and their data cells marked up using `<td>`. For more complex tables directional and explicit associations may be needed, using `scope`, `id` and `headers` attributes so that they can be interpreted by assistive technologies.
 
 The structural coding can also be used to represent data in different ways, for example by larger or differently colored text or backgrounds, Braille, speech and symbols. Many web authoring tools and content management systems (CMS) provide functions to define header cells during table creation without having to manually edit the code.
 
