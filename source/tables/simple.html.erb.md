@@ -5,14 +5,16 @@ technologies: HTML5
 order: 2
 ---
 
-Use header cell elements (`<th>`{:.elem}) to point out the information that is critical to understand the data in a table. For example the number 210 is meaningless on its own, but becomes information if you know that it is the data for <em>a)</em> the number of properties in <em>b)</em> a given street.
+Use header cell elements (`<th>`) to point out the information that is critical to understand the data in a table. For example the number 210 is meaningless on its own, but becomes information if you know that it is the data for <em>a)</em> the number of properties in <em>b)</em> a given street.
 
-Those `<th>`{:.elem} elements make header cells distinguishable from and associated with the correct data cells (`<td>`{:.elem}).
+Those `<th>` elements make header cells distinguishable from and associated with the correct data cells (`<td>`).
+
+Additionally, `<caption>` elements may be used to identify a table in the document which is a way for meeting WCAG 2.0 requirements in [specific situations](caption-summary.html).
 
 ## Table with header cells in the top row only
 {:.ex}
 
-This table of concert dates only needs the cells in the top row marked up as `<th>`{:.elem} cells. This is partly because it is such a small table and partly because the data itself is distinctly different in each column.
+This table of concert dates only needs the cells in the top row marked up as `<th>` cells. This is partly because it is such a small table and partly because the data itself is distinctly different in each column.
 
 {::nomarkdown}
 <%= sample_start %>
@@ -73,7 +75,7 @@ This table of concert dates only needs the cells in the top row marked up as `<t
 ## Table with header cells in the top row and first column
 {:.ex}
 
-This table of opening times has header information contained in both the top row and the first column. All header cells are marked up as `<th>`{:.elem} cells.
+This table of opening times has header information contained in both the top row and the first column. All header cells are marked up as `<th>` cells.
 
 {::nomarkdown}
 <%= sample_start %>
@@ -169,4 +171,3 @@ This table of opening times has header information contained in both the top row
 The following WCAG 2.0 technique was used in the examples above:
 
 -   [H51: Using table markup to present tabular data](http://www.w3.org/TR/WCAG20-TECHS/H51)
--   [H39: Using caption elements to associate data table captions with data tables](http://www.w3.org/TR/2012/NOTE-WCAG20-TECHS-20120103/H39)

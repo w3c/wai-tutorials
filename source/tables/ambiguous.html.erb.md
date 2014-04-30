@@ -7,14 +7,14 @@ order: 3
 
 Sometimes it is hard for assistive technology to determine which columns or row to associate with a specific header cell.
 
-`Scope`{:.attrib} is the attribute used to define the direction and range of data cells that are covered by a header cell. For example, the `scope`{:.attrib} value `row`{:.value} denotes that a header cell applies to the entire row. Similarly, a header cell that spans three columns and has the `scope`{:.attrib} value `colgroup`{:.value} only applies to the data cells in the three columns that it spans. The `scope`{:.attrib} attribute should be used for all `<th>`{:.elem} cells where either the direction or range of data cell coverage needs to be clearly associated.
+`Scope` is the attribute used to define the direction and range of data cells that are covered by a header cell. For example, the `scope` value `row` denotes that a header cell applies to the entire row. Similarly, a header cell that spans three columns and has the `scope` value `colgroup` only applies to the data cells in the three columns that it spans. The `scope` attribute should be used for all `<th>` cells where either the direction or range of data cell coverage needs to be clearly associated.
 
-Possible values for the `scope`{:.attrib} attribute are `row`{:.value}, `col`{:.value}, `rowgroup`{:.value} or `colgroup`{:.value}.
+Possible values for the `scope` attribute are `row`, `col`, `rowgroup` or `colgroup`.
 
 ## Table with header cells in one column only
 {:.ex}
 
-This example has `<th>`{:.elem} elements for all cells in the left column of a table. The `scope`{:.attrib} value `row`{:.value} is used on each `<th>`{:.elem} cell to ensure that it cannot be mistaken as a header for other cells in the same column.
+This example has `<th>` elements for all cells in the left column of a table. The `scope` value `row` is used on each `<th>` cell to ensure that it cannot be mistaken as a header for other cells in the same column.
 
 {::nomarkdown}
 <%= sample_start %>
@@ -81,7 +81,7 @@ This example has `<th>`{:.elem} elements for all cells in the left column of a t
 ## Table with an offset column of header cells
 {:.ex}
 
-In this table the row header cells are in the second column rather than the first. The `scope`{:.attrib} values `row`{:.value} and has been used on the `<th>`{:.elem} cells in the second column to ensure that data cells in the first column, as well as those in cells to the right of the headers are correctly associated.
+In this table the row header cells are in the second column rather than the first. The `scope` values `row` and has been used on the `<th>` cells in the second column to ensure that data cells in the first column, as well as those in cells to the right of the headers are correctly associated.
 
 {::nomarkdown}
 <%= sample_start %>

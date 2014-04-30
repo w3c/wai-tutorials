@@ -16,11 +16,11 @@ that isn’t answered by this tutorial, you can send it to
 
 -   **Data separation:** Make sure that each separate piece of data has its own cell, otherwise it will be impossible for screen readers to work out the relationships between data across columns. In addition, if the table can’t be viewed full-screen by sighted visitors, the data in the pseudo-rows may no longer align correctly. Don’t use headers in one column and all data in a second column.
 
--   **Table separation:** If several tables follow one another, don’t use a single table and put in an additional row of `<th>`{:.elem} cells. Screen readers may read aloud all `<th>`{:.elem} cells in a column, resulting in confusion. Start a new `<table>`{:.elem} when the topic changes.
+-   **Table separation:** If several tables follow one another, don’t use a single table and put in an additional row of `<th>` cells. Screen readers may read aloud all `<th>` cells in a column, resulting in confusion. Start a new `<table>` when the topic changes.
 
 -   **Alignment:** Align text to the left and financial data to the right, so that people using screen magnification, larger text sizes or smaller screens will be able to find it. especially when a cell spans more than one column. It’s also helpful to give column headings the same alignment as the data in the cells below.
 
--   **Styling header cells:** Consider visually distinguishing the `<th>`{:.elem} cells to make them more obvious.
+-   **Styling header cells:** Consider visually distinguishing the `<th>` cells to make them more obvious.
 
 -   **Layout tables:** If you’re using a table for layout, rather than as a grid to display data with headers, don’t use any of the structural elements and attributes discussed in this tutorial. Using tables for layout is discouraged, it’s much better to use Cascading Style Sheets (CSS) for layout.
 
@@ -29,7 +29,7 @@ that isn’t answered by this tutorial, you can send it to
 
 -   **My site uses a table layout for pages, a complete redesign using CSS layout is planned for next year, is there something I can do right now to make the layout tables more accessible?**
 
-    Yes there is. You can give the `<table>`{:.elem} element a WAI-ARIA `role`{:.attrib} attribute of `presentation`{:.value} (`role`{:.attrib}=`"presentation"`{:.value}). This will hide it from most screen readers in most modern browsers.
+    Yes there is. You can give the `<table>` element a WAI-ARIA `role` attribute of `presentation` (`role`=`"presentation"`). This will hide it from most screen readers in most modern browsers.
 
 -   **I’ve used CSS to give a different background color for odd and even rows in my tables, is this OK?**
 
