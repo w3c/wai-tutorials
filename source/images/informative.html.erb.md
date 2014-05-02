@@ -5,10 +5,10 @@ technologies: HTML5
 order: 2
 ---
 
-Informative images are those that convey a simple concept or information,
-that can be expressed in a short phrase or sentence. In this case, the
-text alternative needs to convey the meaning or identification that is
-visually apparent, which isn’t normally a literal description of the
+Informative images are those that convey a simple concept or information 
+that can be expressed in a short phrase or sentence. For informative images, the
+text alternative needs to convey the meaning or identification that is displayed 
+visually. Typically this is not a literal description of the
 image. In some situations a detailed literal description may be needed,
 but only where the composition of the image is all or part of the
 information being conveyed. Whether to treat an image as informative or
@@ -18,7 +18,7 @@ based on the reason for including the image on the page.
 ## Images used for identification
 {:.ex}
 
-This example shows two images, one of a telephone, one of a fax machine.
+This example shows two image icons -- one of a telephone, one of a fax machine.
 Each image is followed by a phone number. Consistent with the visual
 presentation the text alternatives “Telephone:” and “Fax:” are used to
 identify which number is which.
@@ -57,8 +57,8 @@ identify which number is which.
 
 The following image shows a dog wearing a bell. It supplements the
 adjacent text that explains the purpose of this bell. A short text
-alternative is sufficient to describe the information that is visually
-evident but not explained in the text; in this case the text alternative
+alternative is sufficient to describe the information that displays visually
+ but is not explained in the text; in this case the text alternative
 is “Dog with a bell attached to its collar.”.
 
 {::nomarkdown}
@@ -99,13 +99,13 @@ is “Dog with a bell attached to its collar.”.
 ## Images conveying succinct information
 {:.ex}
 
-This simple diagram illustrates an anti-clockwise direction for unscrewing a bottle top or cap. The information can be described in a short sentence, so the text alternative “Anti-clockwise diagram: Push the cap down and turn it from right to left” is given in the `alt` attribute.
+This simple diagram illustrates a counter-clockwise direction for unscrewing a bottle top or cap. The information can be described in a short sentence, so the text alternative “Counter-clockwise diagram: Push the cap down and turn it from right to left” is given in the `alt` attribute.
 
 {::nomarkdown}
 <%= sample_start %>
 {:/nomarkdown}
 
-<img src="../../img/counter-clockwise.jpg" alt="Anti-clockwise diagram: Push the cap down and turn it from right to left." style="vertical-align: middle; margin-right: .5em;">
+<img src="../../img/counter-clockwise.jpg" alt="Counter-clockwise diagram: Push the cap down and turn it from right to left." style="vertical-align: middle; margin-right: .5em;">
 
 {::nomarkdown}
 <%= sample_end %>
@@ -147,17 +147,17 @@ one of the approaches described in [Complex images](complex.html).
 ## Images conveying an impression or emotion
 {:.ex}
 
-This photograph shows a smiling family group, it is a stock image so the
-individuals don't need to be identified. It is being used to give the
-impression that the website or the company it represents is family
-friendly. The text alternative is “We're family friendly” as this best
+This photograph shows a smiling family group. It is a stock image so the
+individuals do not need to be identified. It is being used to give the
+impression that the website or the company it represents is family-friendly. 
+The text alternative is “We're family-friendly” as this best
 describes the intended impression.
 
 {::nomarkdown}
 <%= sample_start %>
 {:/nomarkdown}
 
-![We're family friendly.](family.jpg)
+![We're family-friendly.](family.jpg)
 
 {::nomarkdown}
 <%= sample_end %>
@@ -181,7 +181,7 @@ describes the intended impression.
 <%= notes_start %>
 {:/nomarkdown}
 
-**Note:** If the purpose of this image was simply to improve the look of a page rather than convey an impression, it could be deemed to be decorative, as shown in [“Decorative Images”: “Image used for ambience”](decorative.html#image-used-for-ambience-eye-candy). The purpose for using the image needs to be determined by the author.
+**Note:** If the purpose of this image were simply to improve the look of a page rather than convey an impression, it could be deemed to be decorative, as shown in [“Decorative Images: Image used for ambience”](decorative.html#image-used-for-ambience-eye-candy). The purpose for using the image needs to be determined by the author.
 
 {::nomarkdown}
 <%= notes_end %>
@@ -192,7 +192,7 @@ describes the intended impression.
 
 In this example, a document is available to download in three different
 formats identified by format icons within text links. They have the text
-alternatives “HTML”, “Word document” and “PDF” to distinguish the file
+alternatives “HTML”, “Word document”, and “PDF” to distinguish the file
 type for each link:
 
 {::nomarkdown}
@@ -234,7 +234,7 @@ type for each link:
 <%= notes_start %>
 {:/nomarkdown}
 
-**Note 1:** If the format identification were written as part of the link text, the image may be considered [decorative](decorative.html) and have a null (empty) `alt` attribute (`alt=""`) but must be in the same link anchor as the text, as in [“Functional Images”: “Logo image within link text”](functional.html#logo-image-within-link-text).
+**Note 1:** If the format identification were written as part of the link text, the image might be considered [decorative](decorative.html) and have a null (empty) `alt` attribute (`alt=""`) [@@ following clause needs clarification; ABL 1-May, 2014] but must be in the same link anchor as the text, as in [“Functional Images: Logo image within link text”](functional.html#logo-image-within-link-text).
 
 **Note 2:** This particular example is similar to the [icon within linked text in Functional Images](functional.html#icon-image-conveying-information-within-link-text) in that the image conveys information that isn’t given in the link text.
 
