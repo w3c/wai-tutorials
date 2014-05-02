@@ -11,11 +11,11 @@ Data tables need structural markup to distinguish between header and data cells 
 
 -   **[Simple tables](simple.html):** Identify the topic of a row or column and denote those header cells with `<th>` elements in the markup.
 
--   **[Irregular tables](ambiguous.html):** For tables where identifying header cells programmatically is not easy, they can be defined using the `scope` attribute.
+-   **[Irregular tables](irregular.html):** For tables where identifying header cells programmatically is not easy, they can be defined using the `scope` attribute.
 
 -   **[Multi-level tables](multi-level.html):** If the table structure is so complex that a data cell needs to reference several levels of header cells, each header cell is assigned an `id` and each data cell a `headers` attribute that lists all relevant header cell `id` values.
 
--   **[Captions & Summary](captions-summary.html):** Most tables benefit from the use of a caption to describe the overall topic of a table, and summaries to provide orientation or navigation hints in complex tables.
+-   **[Captions & Summary](caption-summary.html):** Most tables benefit from the use of a caption to describe the overall topic of a table, and summaries to provide orientation or navigation hints in complex tables.
 
 {::nomarkdown}
 <%= notes_start %>
