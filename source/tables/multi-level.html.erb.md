@@ -301,7 +301,7 @@ cell ![(new window)](../graphics/new-win-icon.gif)](example4.txt)
 ## Split up multi-level tables
 {:.ex}
 
-Most of the time it is possible to split complex tables up into simpler ones, which allows to have simpler and more easy to maintain HTML code. Also simple tables are much better supported by WYSIWYG editors (“What you see is what you get”).
+It's often possible to split complex tables up into simpler ones, which allows to have simpler and more easy to maintain HTML code. Also simple tables are much better supported by WYSIWYG editors (“What you see is what you get”).
 
 {::nomarkdown}
 <%= sample_start %>
