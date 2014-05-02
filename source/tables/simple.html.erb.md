@@ -8,7 +8,8 @@ order: 2
 A simple table has one header row and/or header column.
 
 Use header cell elements (`<th>`) to markup the header cells so that they are distinguishable from data cells and associated with the correct data cells.
-For example the number 210 is meaningless on its own, but becomes information if you know that it is the data for <em>a)</em> the number of properties in <em>b)</em> a given street.
+For example, in the second table below "Closed" is meaningless on its own, but makes sense when it is associated
+with the time (the row header) and the date (the column header).
 
 Additionally, `<caption>` elements may be used to identify a table in the document which is a way for meeting WCAG 2.0 requirements in [specific situations](caption-summary.html).
 
