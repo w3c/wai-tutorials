@@ -38,7 +38,7 @@ Some people can determine the header cells of tabular data from the visual cues.
 
 ## How to make tables accessible
 
-Accessible tables have their header cells marked up using `<th>` and their data cells marked up using `<td>`. For more complex tables directional and explicit associations may be needed, using `scope`, `id` and `headers` attributes so that they can be interpreted by assistive technologies.
+Accessible tables have their header cells marked up using `<th>` and their data cells marked up using `<td>`. For more complex tables, explicit associations may be needed using `scope` or `id` and `headers` attributes, so that they can be interpreted by assistive technologies.
 
 The structural coding can also be used to represent data in different ways, for example by larger or differently colored text or backgrounds, Braille, speech and symbols. Many web authoring tools and content management systems (CMS) provide functions to define header cells during table creation without having to manually edit the code.
 
