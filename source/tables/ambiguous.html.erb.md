@@ -157,7 +157,7 @@ In this table the row header cells are in the second column rather than the firs
     <td>8</td>
     <td>8</td>
     <td>8</td>
-    <td>&nbsp;</td>
+    <td>0</td>
     <td>4</td>
   </tr>
   </tbody>
