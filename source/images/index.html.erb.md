@@ -7,17 +7,17 @@ topic_order: 1
 type: intro
 ---
 
-Every image needs to have a *text alternative* that provides an equivalent alternative by describing the information or function represented in the image. The reason for this is [explained below](#why-is-this-important). The following tutorial pages show you how to provide appropriate text alternatives based on the purpose of the image:
+Every image should have a *text alternative* that provides an equivalent alternative by describing the information or function represented in the image. The reason for this is [explained below](#why-is-this-important). The following tutorial pages show you how to provide appropriate text alternatives based on the purpose of the image:
 
--   **[Informative images](informative.html)** used to graphically illustrate concepts and information, typically pictures and illustrations: The text alternative needs to be at least a short description conveying the essential information presented by the image.
+-   **[Informative images](informative.html)** used to graphically illustrate concepts and information, typically pictures and illustrations: The text alternative should be at least a short description conveying the essential information presented by the image.
 
 -   **[Decorative images](decorative.html)** used to add visual interest to the page, rather than to convey information that is important to understanding the text: The text alternative should be null (`alt=""`).
 
--   **[Functional images](functional.html)** used alone as a link or button to activate a function - for example, icons for printing and submitting forms: The text alternative needs to describe the function rather than the visual image.
+-   **[Functional images](functional.html)** used alone as a link or button to activate a function - for example, icons for printing and submitting forms: The text alternative should describe the function rather than the visual image.
 
--   **[Images of text](textual.html)** that provide readable text (sometimes used when special fonts are wanted): This is discouraged except for logos; however, if used, the text alternative needs to contain the same words as in the image.
+-   **[Images of text](textual.html)** that provide readable text (sometimes used when special fonts are wanted): This is discouraged except for logos; however, if used, the text alternative should contain the same words as in the image.
 
--   **[Complex images](complex.html) such as graphs and diagramst** that convey data or detailed information: The alternative needs to be a full text equivalent of the data and information provided in the image.
+-   **[Complex images](complex.html) such as graphs and diagramst** that convey data or detailed information: The alternative should be a full text equivalent of the data and information provided in the image.
 
 -   **[Groups of images](groups.html)** used to convey a single piece of information: The text alternative for one item should convey the information conveyed by the entire group.
 
