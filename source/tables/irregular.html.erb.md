@@ -14,7 +14,7 @@ Possible values for the `scope` attribute are `row`, `col`, `rowgroup` or `colgr
 ## Table with header cells in one column only
 {:.ex}
 
-This example has `<th>` elements for all cells in the left column of a table. The `scope` value `row` is used on each `<th>` cell to ensure that it cannot be mistaken as a header for other cells in the same column.
+This example has `<th>` elements for all cells in the left column of a table. The `scope` value `row` is used on each `<th>` cell to ensure that it cannot be mistaken as a header for other cells in the same column. In the table below, Belgium should not be mistaken as the heading for France, Holland, etc.
 
 {::nomarkdown}
 <%= sample_start %>
