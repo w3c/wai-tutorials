@@ -34,7 +34,7 @@ Some people can determine the header cells of tabular data from the visual cues.
 
 -   **People using a screen reader** can have the row and column headers read aloud as they navigate through the table. Screen readers speak one cell at a time and can only distinguish header cells from data cells if they are properly marked up.
 
--   **People using personal stylesheets** can have header cells more prominently styled for easy recognition when there is a difference between the elements used for header and data cells.
+-   **People using user stylesheets** can have header cells more prominently styled for easy recognition when there is a difference between the elements used for header and data cells.
 
 ## How to make tables accessible
 
