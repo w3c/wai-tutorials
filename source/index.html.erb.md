@@ -6,7 +6,7 @@ layout: overview
 order: 1
 ---
 
-These tutorials provide practical guidance, with examples, for creating websites that meet [WCAG 2.0](http://www.w3.org/WAI/intro/wcag) (Web Content Accessibility Guidelines 2.0). They are useful to a variety of users, including:
+Building accessible websites feels like a challenge for many web teams, regardless of experience. These tutorials will help to apply [Accessibility Principles](http://www.w3.org/WAI/intro/people-use-web/principles) in the every day workflow of website creators by providing practical guidance and examples that meet [WCAG 2.0](http://www.w3.org/WAI/intro/wcag) (Web Content Accessibility Guidelines 2.0). They are useful to a variety of people, including:
 
 * **Web developers** can find guidance and boilerplate solutions for many common development challenges.
 * **Web designers** can learn how to design web components that are easy to implement in an accessible way.
