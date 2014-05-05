@@ -5,13 +5,13 @@ technologies: HTML4, HTML5, WAI-ARIA
 order: 5
 ---
 
-Captions and summaries are accessibility hints can be added to tables to help navigating to and between them. They are not required for every table but are a convenient way to meet WCAG 2.0 requirements.
+Captions and summaries are accessibility hints that can be added to tables to help navigating to and between them. They are not required for every table but are a convenient way to meet WCAG 2.0 requirements.
 
-* **Captions** can be used to identify tables more easily by associating a table identifier (that acts like a heading) to a table. For example, they are important if a screen reader user who choses to navigate from table to table directly loses the context of the table if no caption is present.
+* **Captions** can be used to identify tables more easily by associating a table identifier (that acts like a heading) to a table. For example, they are important if a screen reader user who chooses to navigate from table to table directly, as they will miss the context of the table if no caption is present.
 
   Captions are recommended in WCAG 2.0 technique [H39: Using caption elements to associate data table captions with data tables](http://www.w3.org/TR/WCAG20-TECHS/H39).
 
-* A **summary** conveys information about the organization of the data in the table and to help users navigate the table. For example, if a table has an unconventional structure (like in this example below), the user can be told content can be found in which row or column. It is usually needed with more complex tables.
+* A **summary** conveys information about the organization of the data in a table and helps users navigate the table. For example, if a table has an unconventional structure (as in this example below), the user can be told in which row or column content can be found. It is usually needed with more complex tables.
 
   Using summaries is recommended in WCAG 2.0 technique [H73: Using the summary attribute of the table element to give an overview of data tables](http://www.w3.org/TR/WCAG20-TECHS/H73).
 
