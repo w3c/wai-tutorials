@@ -1,6 +1,6 @@
 ---
 title: Tutorials
-nav_title: Tutorials: Overview
+nav_title: "Tutorials: Overview"
 status: draft
 layout: overview
 order: 1
