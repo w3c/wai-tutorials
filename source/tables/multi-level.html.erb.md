@@ -111,8 +111,7 @@ This table shows contact details for six suppliers. To avoid producing an overly
 <%= code_end %>
 {:/nomarkdown}
 
-[Full code for Example 1: Table with multiple column headers in each
-column ![(new window)](../graphics/new-win-icon.gif)](example4.txt)
+[Full code for Example “Table with multiple column headers in each column”](examples/multiplecolumnheaders.html)
 
 ## Table with three headers related to each data cell
 {:.ex}
@@ -295,13 +294,12 @@ This example shows availability of accommodation of a given type and size in two
 <%= code_end %>
 {:/nomarkdown}
 
-[Full code for Example 2: Table with three headers related to each data
-cell ![(new window)](../graphics/new-win-icon.gif)](example4.txt)
+[Full code for Example “Table with three headers related to each data cell”](examples/threeheaders.html)
 
 ## Split up multi-level tables
 {:.ex}
 
-It's often possible to split complex tables up into simpler ones, which allows to have simpler and more easy to maintain HTML code. Also simple tables are much better supported by WYSIWYG editors (“What you see is what you get”).
+It's often possible to split complex tables up into simpler ones, which allows to have simpler and more easy to maintain HTML code. Also, simple tables are much better supported by WYSIWYG editors (“What you see is what you get”).
 
 {::nomarkdown}
 <%= sample_start %>
@@ -460,12 +458,8 @@ It's often possible to split complex tables up into simpler ones, which allows t
 <%= sample_end %>
 {:/nomarkdown}
 
-
-
 ## Related WCAG2.0 Technique
 
 The following WCAG 2.0 technique was used in the examples above:
 
--   [H43: Using id and headers attributes to associate data cells with
-    header cells in data
-    tables](http://www.w3.org/TR/WCAG20-TECHS/H43.html)
+-   [H43: Using id and headers attributes to associate data cells with header cells in data tables](http://www.w3.org/TR/WCAG20-TECHS/H43.html)
