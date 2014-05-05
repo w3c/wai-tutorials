@@ -194,7 +194,7 @@ In this table the row header cells are in the second column rather than the firs
 ## Table with headers spanning multiple rows or columns
 {:.ex}
 
-In this example, some of the row header cells span two or more rows of data cells and one column header spans three columns.
+In this example, some of the header cells span multiple rows or columns: the “Zodiac” row header spans 3 rows, and the “Sizes available” column header spans 3 columns.
 
 {::nomarkdown}
 <%= sample_start %>
