@@ -233,14 +233,26 @@ main {
 // Markup: <footer role="contentinfo"></footer>
 
 footer {
+	display: block;
 	clear:both;
-	@extend main;
 	border: 5px solid #993300;
 	border-width: 5px 0;
 	font-size: 0.8em;
 	margin-top: 2em;
+	padding: 1em 0;
+	>div {
+		@extend main;
+	}
 	h2 {
+		@extend .visuallyhidden;
 		font-size: 1em;
+	}
+	ul {
+		margin: 0;
+		padding: 0;
+	}
+	li {
+		list-style: none;
 	}
 }
 
