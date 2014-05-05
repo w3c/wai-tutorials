@@ -15,6 +15,8 @@ Captions and summaries are accessibility hints can be added to tables to help na
 
   Using summaries is recommended in WCAG 2.0 technique [H73: Using the summary attribute of the table element to give an overview of data tables](http://www.w3.org/TR/WCAG20-TECHS/H73).
 
+If both, caption and summary, are used in one table, the summary should not duplicate the caption.
+
 ## Identifying a table using a caption
 {:.ex}
 
