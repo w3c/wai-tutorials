@@ -5,13 +5,13 @@ technologies: WAI-ARIA, HTML5
 order: 3
 ---
 
-Decorative images are those that do not add information, for example because the information provided by the image is already provided by adjacent text or because the image is included for visual interest only. In these cases, a null (empty) `alt` text needs to be provided (`alt=""`) so that they can be ignored by assistive technologies such as screen readers. This is because text values used for this type of image would add audible clutter to the screen reader output, or could distract users if the topic is different from that in adjacent text.
+Decorative images are those that don't add information. For example, the information provided by the image might already be given using adjacent text or the image might be included for visual interest only. In these cases, a null (empty) `alt` text needs to be provided (`alt=""`) so that they can be ignored by assistive technologies such as screen readers. This is because text values used for this type of image would add audible clutter to screen reader output or could distract users if the topic is different from that in adjacent text.
 
 If the `alt` attribute is not included (even though empty) some screen readers will announce the image's file name. Whether to treat an image as decorative or [informative](informative.html) is a judgement that only the author can make, based on the reason for including the image on the page. Images may be decorative when they are:
 
 -   Visual styling such as borders, spacers, and corners
 -   Supplementary to link text to improve its appearance or increase the clickable area
--   Illustrative of adjacent text but do not contribute information (“eye-candy”)
+-   Illustrative of adjacent text but not contributing information (“eye-candy”)
 -   Identified and described by surrounding text
 
 {::nomarkdown}
@@ -72,7 +72,7 @@ Screen readers also allow the use of WAI-ARIA to hide elements by using `role="p
 {:.ex}
 
 This illustration of a crocus bulb is used to make the link easier to
-identify and to increase the clickable area, but does not add to the
+identify and to increase the clickable area, but doesn't add to the
 information given in adjacent link text.
 
 {::nomarkdown}
@@ -116,14 +116,14 @@ does not add visual information to the link.
 {:.ex}
 
 This picture of “Poppy the guide dog” is already identified by the
-adjacent caption, this acts as the text alternative, which does not need
+adjacent caption. The caption acts as the text alternative, so does not need
 to be repeated in the `alt` attribute.
 
 {::nomarkdown}
 <%= sample_start %>
 {:/nomarkdown}
 
-![](../img/sleeping.jpg){:style="float:left; margin-right: 1em;"} **Let sleeping dogs lie:** A proverb meaning “don't initiate trouble, if something that could be troublesome is quiet, then leave it alone”.
+![](../img/sleeping.jpg){:style="float:left; margin-right: 1em;"} **Let sleeping dogs lie.** This is a proverb that means: “Don't initiate trouble. If something that could be troublesome is quiet, then leave it alone”.
 
 {::nomarkdown}
 <%= sample_end %>
@@ -153,8 +153,8 @@ This image is used to add ambience or visual interest to the page.
 <%= sample_start %>
 {:/nomarkdown}
 
-![](kew.jpg){:style="float:left; margin-right: 1em;"} Don't miss the impressive Tropical House, which is a
-huge greenhouse building that displays examples of exotic plant-life
+![](kew.jpg){:style="float:left; margin-right: 1em;"} Don't miss the impressive Tropical House -- a
+huge greenhouse that displays examples of exotic plant-life
 from every tropical environment on the planet.
 
 {::nomarkdown}
@@ -178,8 +178,8 @@ from every tropical environment on the planet.
 <%= notes_start %>
 {:/nomarkdown}
 
-**Note:** If the purpose of this image was to identify a plant, or
-convey other information , rather than only to improve the look of the
+**Note:** If the purpose of this image was to identify a plant or
+convey other information, rather than to just improve the look of the
 page, it should probably be treated as [informative](informative.html). The
 purpose for using the image needs to be determined by the author.
 
