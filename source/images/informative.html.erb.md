@@ -8,9 +8,9 @@ order: 2
 Informative images are those that convey a simple concept or information 
 that can be expressed in a short phrase or sentence. For informative images, the
 text alternative needs to convey the meaning or identification that is displayed 
-visually. Typically this is not a literal description of the
+visually. Typically this isn't a literal description of the
 image. In some situations a detailed literal description may be needed,
-but only where the content of the image is all or part of the
+but only when the content of the image is all or part of the
 information being conveyed. Whether to treat an image as informative or
 [decorative](decorative.html) is a judgement that only the author can make,
 based on the reason for including the image on the page.
@@ -65,7 +65,7 @@ is “Dog with a bell attached to its collar.”.
 <%= sample_start %>
 {:/nomarkdown}
 
-![Dog with a bell attached to its collar.](dog.jpg){:style="float: left; margin-right: 1em;"} Off-duty guide dogs often wear a bell, its ring helps the blind owner keep track of the dog's location
+![Dog with a bell attached to its collar.](dog.jpg){:style="float: left; margin-right: 1em;"} Off-duty guide dogs often wear a bell. Its ring helps the blind owner keep track of the dog's location
 
 {::nomarkdown}
 <%= sample_end %>
@@ -147,8 +147,8 @@ one of the approaches described in [Complex images](complex.html).
 ## Images conveying an impression or emotion
 {:.ex}
 
-This photograph shows a smiling family group. It is a stock image so the
-individuals do not need to be identified. It is being used to give the
+This photograph shows a smiling family group. It's a stock image so the
+individuals do not need to be identified. It's being used to give the
 impression that the website or the company it represents is family-friendly. 
 The text alternative is “We're family-friendly” as this best
 describes the intended impression.
@@ -169,7 +169,7 @@ describes the intended impression.
 
 ~~~ html
 <p>
-	<img src="family.jpg" alt="We're family friendly. ">
+	<img src="family.jpg" alt="We're family-friendly. ">
 </p>
 ~~~
 
