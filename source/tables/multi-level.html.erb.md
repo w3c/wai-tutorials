@@ -1,5 +1,6 @@
 ---
 title: Multi-level Tables
+nav_title: "Complex: Multi-level"
 status: editors-draft
 technologies: HTML5
 order: 4

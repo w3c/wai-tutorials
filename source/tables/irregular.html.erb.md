@@ -1,5 +1,6 @@
 ---
 title: Irregular Tables
+nav_title: "Complex: Irregular"
 status: editors-draft
 technologies: HTML5
 order: 3
