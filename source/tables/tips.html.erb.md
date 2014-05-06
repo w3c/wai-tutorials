@@ -10,7 +10,11 @@ type: tips
 
 -   **Keep it simple:** Complex tables are more work for you as well as being more confusing for users. It’s better to use multiple simple tables, each containing the data for one sub-topic.
 
--   **Data separation:** Make sure that each separate piece of data has its own cell, otherwise it will be impossible for screen readers to work out the relationships between data across columns. In addition, if the table can’t be viewed full-screen by sighted visitors, the data in the pseudo-rows may no longer align correctly. Don’t use headers in one column and all data in a second column.
+-   **Data separation:** 
+
+    1.  *Make sure that each separate piece of data has its own cell.* Don’t use headers in one column and all data in a second column as it will make it impossible for screen readers to work out the relationships between data across columns.
+    
+        ![On the left, a table with two columns is shown. The header for the first column reads “Shirt” and the header for the second column reads “Sizes and amount in stock”. The second row reads “Blue” in the first column and “S: 6; M: 13, XL: 10”. In the second row, Sizes for a “Red” shirt are “M: 2; L: 9; XL: 10; XXL: 1”. On the right the table is split up in “Shirt”, “Size” and “Stock” columns.](headers-in-one-column-all-data-in-second.png)
 
 -   **Table separation:** If several tables follow one another, don’t use a single table and put in an additional row of `<th>` cells. Screen readers may read aloud all `<th>` cells in a column, resulting in confusion. Start a new `<table>` when the topic changes.
 

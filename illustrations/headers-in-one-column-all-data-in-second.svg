@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="672px" height="322px" viewBox="0 0 672 322" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.0.1 (7597) - http://www.bohemiancoding.com/sketch -->
+    <title>Group + Group 2</title>
+    <description>Created with Sketch.</description>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Group-+-Group-2" sketch:type="MSLayerGroup" transform="translate(0.000000, -11.000000)">
+            <g id="Group">
+                <rect id="Rectangle-1" stroke="#979797" fill="#D8D8D8" sketch:type="MSShapeGroup" x="0" y="76" width="90" height="38"></rect>
+                <rect id="Rectangle-2" stroke="#979797" fill="#FFFFFF" sketch:type="MSShapeGroup" x="89" y="76" width="320" height="38"></rect>
+                <text id="Blue" sketch:type="MSTextLayer" font-family="Fira Sans OT" font-size="26" font-weight="bold" fill="#000000">
+                    <tspan x="6" y="105">Blue</tspan>
+                </text>
+                <text id="S:-6;-M:-13;-XL:-10" sketch:type="MSTextLayer" font-family="Fira Sans OT" font-size="26" font-weight="normal" fill="#000000">
+                    <tspan x="95" y="104">S: 6; M: 13; XL: 10</tspan>
+                </text>
+                <rect id="Rectangle-6" stroke="#979797" fill="#D8D8D8" sketch:type="MSShapeGroup" x="0" y="113" width="90" height="38"></rect>
+                <rect id="Rectangle-5" stroke="#979797" fill="#FFFFFF" sketch:type="MSShapeGroup" x="89" y="113" width="320" height="38"></rect>
+                <text id="Red" sketch:type="MSTextLayer" font-family="Fira Sans OT" font-size="26" font-weight="bold" fill="#000000">
+                    <tspan x="6" y="142">Red</tspan>
+                </text>
+                <text id="M:-2;-L:-9;-XL:-10;-" sketch:type="MSTextLayer" font-family="Fira Sans OT" font-size="26" font-weight="normal" fill="#000000">
+                    <tspan x="95" y="141">M: 2; L: 9; XL: 10; XXL: 1</tspan>
+                </text>
+                <rect id="Rectangle-4" stroke="#979797" fill="#D8D8D8" sketch:type="MSShapeGroup" x="0" y="39" width="90" height="38"></rect>
+                <rect id="Rectangle-3" stroke="#979797" fill="#D8D8D8" sketch:type="MSShapeGroup" x="89" y="39" width="320" height="38"></rect>
+                <text id="Shirt" sketch:type="MSTextLayer" font-family="Fira Sans OT" font-size="26" font-weight="bold" fill="#000000">
+                    <tspan x="6" y="68">Shirt</tspan>
+                </text>
+                <text id="Wrong:" sketch:type="MSTextLayer" font-family="Fira Sans OT" font-size="26" font-weight="bold" fill="#D0011B">
+                    <tspan x="6" y="30">Wrong:</tspan>
+                </text>
+                <text id="Sizes-and-amount-in-" sketch:type="MSTextLayer" font-family="Fira Sans OT" font-size="26" font-weight="bold" fill="#000000">
+                    <tspan x="96" y="68">Sizes and amount in stock</tspan>
+                </text>
+            </g>
+            <g id="Group-2" transform="translate(438.000000, 0.000000)">
+                <rect id="Rectangle-1" stroke="#979797" fill="#D8D8D8" sketch:type="MSShapeGroup" x="0" y="76" width="90" height="109"></rect>
+                <rect id="Rectangle-2" stroke="#979797" fill="#FFFFFF" sketch:type="MSShapeGroup" x="89" y="76" width="73" height="38"></rect>
+                <rect id="Rectangle-7" stroke="#979797" fill="#FFFFFF" sketch:type="MSShapeGroup" x="89" y="113" width="73" height="38"></rect>
+                <rect id="Rectangle-8" stroke="#979797" fill="#FFFFFF" sketch:type="MSShapeGroup" x="89" y="147" width="73" height="38"></rect>
+                <text id="Blue" sketch:type="MSTextLayer" font-family="Fira Sans OT" font-size="26" font-weight="bold" fill="#000000">
+                    <tspan x="6" y="105">Blue</tspan>
+                </text>
+                <text id="S" sketch:type="MSTextLayer" font-family="Fira Sans OT" font-size="26" font-weight="normal" fill="#000000">
+                    <tspan x="120" y="107">S</tspan>
+                </text>
+                <text id="M" sketch:type="MSTextLayer" font-family="Fira Sans OT" font-size="26" font-weight="normal" fill="#000000">
+                    <tspan x="117" y="139">M</tspan>
+                </text>
+                <text id="XL" sketch:type="MSTextLayer" font-family="Fira Sans OT" font-size="26" font-weight="normal" fill="#000000">
+                    <tspan x="113" y="174">XL</tspan>
+                </text>
+                <rect id="Rectangle-6" stroke="#979797" fill="#D8D8D8" sketch:type="MSShapeGroup" x="0" y="184" width="90" height="149"></rect>
+                <rect id="Rectangle-5" stroke="#979797" fill="#FFFFFF" sketch:type="MSShapeGroup" x="89" y="184" width="73" height="38"></rect>
+                <rect id="Rectangle-9" stroke="#979797" fill="#FFFFFF" sketch:type="MSShapeGroup" x="89" y="221" width="73" height="38"></rect>
+                <rect id="Rectangle-10" stroke="#979797" fill="#FFFFFF" sketch:type="MSShapeGroup" x="89" y="258" width="73" height="38"></rect>
+                <rect id="Rectangle-11" stroke="#979797" fill="#FFFFFF" sketch:type="MSShapeGroup" x="89" y="295" width="73" height="38"></rect>
+                <text id="Red" sketch:type="MSTextLayer" font-family="Fira Sans OT" font-size="26" font-weight="bold" fill="#000000">
+                    <tspan x="9" y="215">Red</tspan>
+                </text>
+                <rect id="Rectangle-4" stroke="#979797" fill="#D8D8D8" sketch:type="MSShapeGroup" x="0" y="39" width="90" height="38"></rect>
+                <rect id="Rectangle-3" stroke="#979797" fill="#D8D8D8" sketch:type="MSShapeGroup" x="89" y="39" width="73" height="38"></rect>
+                <rect id="Rectangle-19" stroke="#979797" fill="#FFFFFF" sketch:type="MSShapeGroup" x="161" y="76" width="73" height="38"></rect>
+                <rect id="Rectangle-18" stroke="#979797" fill="#FFFFFF" sketch:type="MSShapeGroup" x="161" y="113" width="73" height="38"></rect>
+                <rect id="Rectangle-17" stroke="#979797" fill="#FFFFFF" sketch:type="MSShapeGroup" x="161" y="147" width="73" height="38"></rect>
+                <rect id="Rectangle-16" stroke="#979797" fill="#FFFFFF" sketch:type="MSShapeGroup" x="161" y="184" width="73" height="38"></rect>
+                <rect id="Rectangle-15" stroke="#979797" fill="#FFFFFF" sketch:type="MSShapeGroup" x="161" y="221" width="73" height="38"></rect>
+                <rect id="Rectangle-14" stroke="#979797" fill="#FFFFFF" sketch:type="MSShapeGroup" x="161" y="258" width="73" height="38"></rect>
+                <rect id="Rectangle-13" stroke="#979797" fill="#FFFFFF" sketch:type="MSShapeGroup" x="161" y="295" width="73" height="38"></rect>
+                <rect id="Rectangle-12" stroke="#979797" fill="#D8D8D8" sketch:type="MSShapeGroup" x="161" y="39" width="73" height="38"></rect>
+                <text id="Shirt" sketch:type="MSTextLayer" font-family="Fira Sans OT" font-size="26" font-weight="bold" fill="#000000">
+                    <tspan x="6" y="68">Shirt</tspan>
+                </text>
+                <text id="Correct:" sketch:type="MSTextLayer" font-family="Fira Sans OT" font-size="26" font-weight="bold" fill="#417505">
+                    <tspan x="6" y="30">Correct:</tspan>
+                </text>
+                <text id="Size" sketch:type="MSTextLayer" font-family="Fira Sans OT" font-size="26" font-weight="bold" fill="#000000">
+                    <tspan x="96" y="68">Size</tspan>
+                </text>
+                <text id="Stock" sketch:type="MSTextLayer" font-family="Fira Sans OT" font-size="26" font-weight="bold" fill="#000000">
+                    <tspan x="163" y="68">Stock</tspan>
+                </text>
+                <text id="M" sketch:type="MSTextLayer" font-family="Fira Sans OT" font-size="26" font-weight="normal" fill="#000000">
+                    <tspan x="117" y="215">M</tspan>
+                </text>
+                <text id="L" sketch:type="MSTextLayer" font-family="Fira Sans OT" font-size="26" font-weight="normal" fill="#000000">
+                    <tspan x="120" y="251">L</tspan>
+                </text>
+                <text id="XL-2" sketch:type="MSTextLayer" font-family="Fira Sans OT" font-size="26" font-weight="normal" fill="#000000">
+                    <tspan x="113" y="286">XL</tspan>
+                </text>
+                <text id="XXL" sketch:type="MSTextLayer" font-family="Fira Sans OT" font-size="26" font-weight="normal" fill="#000000">
+                    <tspan x="106" y="320">XXL</tspan>
+                </text>
+                <text id="6" sketch:type="MSTextLayer" font-family="Fira Sans OT" font-size="26" font-weight="normal" sketch:alignment="middle" fill="#000000">
+                    <tspan x="191.545" y="107">6</tspan>
+                </text>
+                <text id="13" sketch:type="MSTextLayer" font-family="Fira Sans OT" font-size="26" font-weight="normal" sketch:alignment="middle" fill="#000000">
+                    <tspan x="186.774" y="139">13</tspan>
+                </text>
+                <text id="10" sketch:type="MSTextLayer" font-family="Fira Sans OT" font-size="26" font-weight="normal" sketch:alignment="middle" fill="#000000">
+                    <tspan x="185.52" y="174">10</tspan>
+                </text>
+                <text id="2" sketch:type="MSTextLayer" font-family="Fira Sans OT" font-size="26" font-weight="normal" sketch:alignment="middle" fill="#000000">
+                    <tspan x="191.909" y="215">2</tspan>
+                </text>
+                <text id="9" opacity="0.9" sketch:type="MSTextLayer" font-family="Fira Sans OT" font-size="26" font-weight="normal" sketch:alignment="middle" fill="#000000">
+                    <tspan x="191.058" y="251">9</tspan>
+                </text>
+                <text id="10" sketch:type="MSTextLayer" font-family="Fira Sans OT" font-size="26" font-weight="normal" sketch:alignment="middle" fill="#000000">
+                    <tspan x="185.52" y="286">10</tspan>
+                </text>
+                <text id="1" sketch:type="MSTextLayer" font-family="Fira Sans OT" font-size="26" font-weight="normal" sketch:alignment="middle" fill="#000000">
+                    <tspan x="192.8" y="320">1</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>
