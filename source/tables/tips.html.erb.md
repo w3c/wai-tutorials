@@ -1,14 +1,10 @@
 ---
-title: Tips and Frequently asked questions
+title: Tips and Frequently Asked Questions (FAQ)
 nav_title: Tips and FAQ
 status: editors-draft
 order: 6
 type: tips
 ---
-
-Feedback on this page is welcome, if you have a question about tables
-that isn’t answered by this tutorial, you can send it to
-[wai-eo-editors@w3.org](mailto:wai-eo-editors@w3.org).
 
 ## Tips
 
@@ -25,7 +21,7 @@ that isn’t answered by this tutorial, you can send it to
 -   **Layout tables:** If you’re using a table for layout, rather than as a grid to display data with headers, don’t use any of the structural elements and attributes discussed in this tutorial. Using tables for layout is discouraged, it’s much better to use Cascading Style Sheets (CSS) for layout.
 
 
-## Frequently asked questions
+## Frequently Asked Questions
 
 -   **My site uses a table layout for pages, a complete redesign using CSS layout is planned for next year, is there something I can do right now to make the layout tables more accessible?**
 

@@ -1,23 +1,22 @@
 ---
-title: Tips and Frequently asked questions
+title: Tips and Frequently Asked Questions (FAQ)
 nav_title: Tips and FAQ
 status: draft
 order: 10
 type: tips
 ---
 
-Feedback on this page is welcome, if you have a question about images
-that isn’t answered by this tutorial, you can send it to
-[wai-eo-editors@w3.org](mailto:wai-eo-editors@w3.org).
-
 ## Tips
 
 -   **Logos:** Images of text that are used as logos are exempt from some of the accessibility guidance that applies to other images of text, for instance there is no minimum color contrast requirement;
+
 -   **Prioritize information in `alt` values:** Aim to put the most important information at the start of the `alt` value, as people using high screen magnification may be unable to see more than the first two or three words in the `alt` “tooltip” and people who can’t read quickly may not be able to read as far as the important part of the text alternative before the "tooltip" disappears.
+
 -   **Choosing appropriate text alternatives:** Imagine that you are reading the web page aloud over the phone to someone who needs to understand the page. This should help you decide what (if any) information or function the images have. If they appear to have no informative value and aren’t links or buttons, it is probably safe to treat them as [decorative](decorative.html).
+
 -   **Punctuation within `alt` attributes:** As in visible text, using punctuation within the text alternative can make it easier to understand. In addition, a space character may be needed within the `alt` value if there is no space between the image and adjacent text, to avoid having words run together when read by a screen reader.
 
-## FAQ
+## Frequently Asked Questions
 
 -   **I've been told to remove the `alt` from most of the images in my template, is that right?**
 
