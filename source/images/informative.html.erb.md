@@ -6,22 +6,12 @@ order: 2
 ---
 
 Informative images are those that convey a simple concept or information 
-that can be expressed in a short phrase or sentence. For informative images, the
-text alternative needs to convey the meaning or identification that is displayed 
-visually. Typically this isn't a literal description of the
-image. In some situations a detailed literal description may be needed,
-but only when the content of the image is all or part of the
-information being conveyed. Whether to treat an image as informative or
-[decorative](decorative.html) is a judgement that only the author can make,
-based on the reason for including the image on the page.
+that can be expressed in a short phrase or sentence. For informative images, the text alternative needs to convey the meaning or identification that is displayed visually. Typically this isn’t a literal description of the image. In some situations a detailed literal description may be needed, but only when the content of the image is all or part of the information being conveyed. Whether to treat an image as informative or [decorative](decorative.html) is a judgement that only the author can make, based on the reason for including the image on the page.
 
 ## Images used to label other information
 {:.ex}
 
-This example shows two image icons -- one of a telephone, one of a fax machine.
-Each image is followed by a phone number. Consistent with the visual
-presentation the text alternatives “Telephone:” and “Fax:” are used to
-identify which number is which.
+This example shows two image icons – one of a telephone, one of a fax machine. Each image is followed by a phone number. Consistent with the visual presentation the text alternatives “Telephone:” and “Fax:” are used to identify which number is which.
 
 {::nomarkdown}
 <%= sample_start %>
@@ -55,17 +45,13 @@ identify which number is which.
 ## Images used to supplement other information
 {:.ex}
 
-The following image shows a dog wearing a bell. It supplements the
-adjacent text that explains the purpose of this bell. A short text
-alternative is sufficient to describe the information that displays visually
- but is not explained in the text; in this case the text alternative
-is “Dog with a bell attached to its collar.”.
+The following image shows a dog wearing a bell. It supplements the adjacent text that explains the purpose of this bell. A short text alternative is sufficient to describe the information that displays visually but is not explained in the text; in this case the text alternative is “Dog with a bell attached to its collar.”.
 
 {::nomarkdown}
 <%= sample_start %>
 {:/nomarkdown}
 
-![Dog with a bell attached to its collar.](dog.jpg){:style="float: left; margin-right: 1em;"} Off-duty guide dogs often wear a bell. Its ring helps the blind owner keep track of the dog's location
+![Dog with a bell attached to its collar.](dog.jpg){:style="float: left; margin-right: 1em;"} Off-duty guide dogs often wear a bell. Its ring helps the blind owner keep track of the dog’s location
 
 {::nomarkdown}
 <%= sample_end %>
@@ -130,15 +116,9 @@ it from right to left.">
 <%= notes_start %>
 {:/nomarkdown}
 
-**Note 1:** An alternative technique would be to include all of the
-information in the visible text, using the image as a redundant
-([decorative](decorative.html)) effect, in which case the visual text could
-be “Turn counter-clockwise (right to left) to unscrew the cap”. This
-makes all information available in text, while providing additional
-visual clues for people who find text more difficult to understand.
+**Note 1:** An alternative technique would be to include all of the information in the visible text, using the image as a redundant ([decorative](decorative.html)) effect, in which case the visual text could be “Turn counter-clockwise (right to left) to unscrew the cap”. This makes all information available in text, while providing additional visual clues for people who find text more difficult to understand.
 
-**Note 2:** If the information conveyed by the image is substantial, use
-one of the approaches described in [Complex images](complex.html).
+**Note 2:** If the information conveyed by the image is substantial, use one of the approaches described in [Complex images](complex.html).
 
 {::nomarkdown}
 <%= notes_end %>
@@ -147,17 +127,13 @@ one of the approaches described in [Complex images](complex.html).
 ## Images conveying an impression or emotion
 {:.ex}
 
-This photograph shows a smiling family group. It's a stock image so the
-individuals do not need to be identified. It's being used to give the
-impression that the website or the company it represents is family-friendly. 
-The text alternative is “We're family-friendly” as this best
-describes the intended impression.
+This photograph shows a smiling family group. It’s a stock image so the individuals do not need to be identified. It’s being used to give the impression that the website or the company it represents is family-friendly. The text alternative is “We’re family-friendly” as this best describes the intended impression.
 
 {::nomarkdown}
 <%= sample_start %>
 {:/nomarkdown}
 
-![We're family-friendly.](family.jpg)
+![We’re family-friendly.](family.jpg)
 
 {::nomarkdown}
 <%= sample_end %>
@@ -169,7 +145,7 @@ describes the intended impression.
 
 ~~~ html
 <p>
-	<img src="family.jpg" alt="We're family-friendly. ">
+	<img src="family.jpg" alt="We’re family-friendly. ">
 </p>
 ~~~
 
@@ -246,8 +222,5 @@ type for each link:
 
 The following WCAG 2.0 techniques were used in the examples above:
 
--   [H37: Using alt attributes on img
-    elements](http://www.w3.org/TR/2012/NOTE-WCAG20-TECHS-20120103/H37.html)
--   [G94: Providing short text alternative for non-text content that
-    serves the same purpose and presents the same information as the
-    non-text content](http://www.w3.org/TR/WCAG20-TECHS/G94.html)
+-   [H37: Using alt attributes on img elements](http://www.w3.org/TR/2012/NOTE-WCAG20-TECHS-20120103/H37.html)
+-   [G94: Providing short text alternative for non-text content that serves the same purpose and presents the same information as the non-text content](http://www.w3.org/TR/WCAG20-TECHS/G94.html)
