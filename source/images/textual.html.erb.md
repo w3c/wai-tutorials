@@ -5,10 +5,10 @@ technologies: WAI-ARIA, HTML5, CSS Transforms, CSS Fonts, MathML
 order: 5
 ---
 
-Images of text are those that display text that is intended to be read.
+Images of text are those displaying text that's intended to be read.
 The strongest design technique is to use actual text – styled with CSS –
-rather than image-based text presentation. This is because actual text
-is flexible, it can be resized without losing clarity and the background
+rather than image-based text presentation. That's because actual text
+is flexible. It can be resized without losing clarity, and the background
 and text colors can be modified to suit users’ reading preferences.
 Images are more likely to distort and pixelate when resized. In those
 uncommon situations where images of text must be used, the text
@@ -18,7 +18,7 @@ alternative must contain the same text presented in the image.
 {:.ex}
 
 This slogan image contains text with decorative effects that cannot be
-realized with CSS styling. The text alternative is the same as that
+realized using CSS styling. The text alternative is the same as that
 presented in the image: “Your access to the city”. The decorative
 effects (stylized text and green line) should not be described.
 
@@ -51,8 +51,8 @@ effects (stylized text and green line) should not be described.
 	<div class="annotation-content">
 		<p>To display the full effect the browser needs to support the following web technologies:</p>
 		<ul>
-			<li><a href="http://www.w3.org/TR/css3-transforms/">CSS3 Transformations</a></li>
-			<li><a href="http://www.w3.org/TR/css3-webfonts/">Webfont embedding</a></li>
+			<li><a href="http://www.w3.org/TR/css3-transforms/">CSS3 transformations</a></li>
+			<li><a href="http://www.w3.org/TR/css3-webfonts/">Web font embedding</a></li>
 		</ul>
 	</div>
 </aside>
@@ -145,7 +145,7 @@ The visual effects in the above image can be produced using CSS3 and an embedded
 
 **Note 1:** The code snippet doesn’t show any [vendor prefixes](http://www.w3.org/TR/css-2010/#experimental). These should be added to increase compatibility with older versions of browsers.
 
-**Note 2:** The specific `@font-face` rule was left out intentionally as it is not important for the example.
+**Note 2:** The specific `@font-face` rule was left out intentionally. It's not important for the example.
 
 {::nomarkdown}
 <%= notes_end %>
@@ -154,7 +154,7 @@ The visual effects in the above image can be produced using CSS3 and an embedded
 ## Image of text used as an unlinked logo
 {:.ex}
 
-The following image is the logo for the Web Accessibility Initiative. It is not part of a link so the text alternative is “Web Accessibility Initiative”. There is no need to mention that it is a logo:
+The following image is the logo for the Web Accessibility Initiative. It's not part of a link, so the text alternative is “Web Accessibility Initiative”. There's no need to mention that it is a logo.
 
 {::nomarkdown}
 <%= sample_start %>
@@ -182,9 +182,9 @@ The following image is the logo for the Web Accessibility Initiative. It is not 
 <%= notes_start %>
 {:/nomarkdown}
 
-**Note 1:** Images used as logos are exempt from some of the accessibility guidance that applies to other images of text, for instance there are no minimum color contrast and text size requirements.
+**Note 1:** Images used as logos are exempt from some of the accessibility guidance that applies to other images of text. For example, there are no minimum color contrast and text size requirements.
 
-**Note 2:** If this logo were linked then it would become a functional image; See [“Functional Images”: “Image used alone as a linked logo”](functional.html#image-used-alone-as-a-linked-logo).
+**Note 2:** If this logo were linked then it would become a functional image. See [“Functional Images”: “Image used alone as a linked logo”](functional.html#image-used-alone-as-a-linked-logo).
 
 {::nomarkdown}
 <%= notes_end %>
@@ -193,13 +193,13 @@ The following image is the logo for the Web Accessibility Initiative. It is not 
 ## Image of a mathematical expression
 {:.ex}
 
-This math expression shows how to signify that a number is recurring. The `alt` text is “0.3333 recurring, (the recurrence is indicated by a line over the ‘3’ in the fourth decimal place)”. In this instance the way that the recurrence is shown is important, so forms part of the text alternative, this isn't the case with all math expressions.
+This math expression shows how to signify that a number is recurring. The `alt` text is “0.3333 recurring. (The recurrence is indicated by a line over the ‘3’ in the fourth decimal place)”. In this instance the way that the recurrence is shown is important, so it forms part of the text alternative. This isn't the case with all math expressions.
 
 {::nomarkdown}
 <%= sample_start %>
 {:/nomarkdown}
 
-![0.3333 recurring, (the recurrence is indicated by a line over the '3' in the fourth decimal place)](repeat1.png)
+![0.3333 recurring. (The recurrence is indicated by a line over the '3' in the fourth decimal place)](repeat1.png)
 
 {::nomarkdown}
 <%= sample_end %>
@@ -221,19 +221,19 @@ This math expression shows how to signify that a number is recurring. The `alt` 
 
 ### MathML
 
-Images of math expressions should only be used in *exceptional circumstances*, for instance where the expression is an exception to the normal content for the page or website.
+Images of math expressions should only be used in *exceptional circumstances* -- for example, when the expression is an exception to the normal content for the page or website.
 
 <aside class="annotation">
 	<h4 class="annotation-header">Compatibility</h4>
 	<div class="annotation-content">
-		<p>Most browsers need plugins to render MathML correctly, especially for the new MathML 3.0 features used in this example. To see the MathML example below, <a href="https://addons.mozilla.org/en-US/firefox/addon/mathml-mml3ff/">this Firefox plugin</a> may be needed.</p>
+		<p>Most browsers need plugins to render MathML correctly -- especially for the new MathML 3.0 features used in this example. To see the MathML example below, <a href="https://addons.mozilla.org/en-US/firefox/addon/mathml-mml3ff/">this Firefox plugin</a> may be needed.</p>
 		<p>Find more information about MathML <a href="https://trac.webkit.org/wiki/MathML">here for Webkit-based browsers</a> and <a href="https://developer.mozilla.org/en-US/docs/Mozilla/MathML_Project/Status">here for Mozilla-based browsers</a>.</p>
 	</div>
 </aside>
 
-If math forms are a substantial part of the page or website content, [Math ML](http://www.w3.org/Math/) should be used instead as it represents both presentation and content semantically, making it more accessible to a wider range of users as many assistive technologies can interpret the code.
+If math forms are a substantial part of the page or website content, [Math ML](http://www.w3.org/Math/) should be used instead.  Math ML represents both presentation and content semantically, making it more accessible to a wider range of users.  Many assistive technologies can interpret the code.
 
-The simple example above illustrates the difficulty of describing both the content and presentation (the position and location of the over-line) in mathematical expressions succinctly and clearly, for more complex expressions or equations image text alternatives are unlikely to provide sufficient detail succinctly.
+The simple example above illustrates the difficulty of describing both the content and presentation (the position and location of the over-line) in mathematical expressions succinctly and clearly. For more complex expressions or equations, image text alternatives are unlikely to provide sufficient detail succinctly.
 
 {::nomarkdown}
 <%= sample_start %>
