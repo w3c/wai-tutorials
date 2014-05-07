@@ -5,28 +5,28 @@ technologies: WAI-ARIA, HTML5
 order: 6
 ---
 
-Complex images are those that contain substantial information, more than
+Complex images contain substantial information -- more than
 can be conveyed in a short phrase or sentence. These are typically:
 
--   Graphs and charts, including flow charts and organizational charts;
--   Diagrams and illustrations where the page text relies on the user
+-   graphs and charts, including flow charts and organizational charts;
+-   diagrams and illustrations where the page text relies on the user
     being able to understand the image;
--   Maps showing locations or other information such as weather systems.
+-   maps showing locations or other information such as weather systems.
 
-In these situations a two-part text alternative is required, first the
+In these situations a two-part text alternative is required. The first required part is the
 short description to identify the image and, where appropriate, indicate
-the location of the second part, which is a long description of the
-image. The long description must be a textual representation of the
+the location of the long description. 
+The second required part is the long description -- a textual representation of the
 essential information conveyed by the image. In certain situations the
 composition of the image may also be needed as part of the long
-description, but only where it is important that the user understands
+description, but only where it’s important that the user understand
 the image construction. This page shows several possible approaches that
 can be used to provide both short and long descriptions.
 
 ## Image containing substantial information
 {:.ex}
 
-This bar chart of website visitor statistics has the short description “Bar chart showing monthly and total visitors for the first quarter 2014 for sites 1 to 3” as the `alt` attribute, identifying the image. The long description details the information, including scales, values, relationships and trends, that are represented visually. For example, the declining values for site 1, consistent values for site 2, and increasing values for site 3 are highlighted through the bar chart representation. This information needs to be made available in the [long text description](examples/2014-first-qtr.html) as well.
+This bar chart of website visitor statistics has a short description of “Bar chart showing monthly and total visitors for the first quarter 2014 for sites 1 to 3”. It's in the `alt` attribute and identifies the image. The long description details the information, including scales, values, relationships and trends that are represented visually. For example, since the declining values for site 1, consistent values for site 2, and increasing values for site 3 are highlighted through the bar chart, this information must also be included in the [long text description](examples/2014-first-qtr.html).
 
 {::nomarkdown}
 <%= sample_start %>
@@ -41,7 +41,7 @@ This bar chart of website visitor statistics has the short description “Bar ch
 ### Providing a link to the long description via *longdesc*
 {:.ap}
 
-Here the `longdesc` attribute contains the URI of the page containing the long description. Where appropriate, the `longdesc` value could simply contain a hash link to the long description if it is published on the same page as the image.
+Here the `longdesc` attribute contains the URI of a page containing the long description. If the long description is published on the same page as the image, the `longdesc` value can simply contain a hash link to the long description.
 
 {::nomarkdown}
 <%= code_start %>
@@ -66,7 +66,7 @@ Here the `longdesc` attribute contains the URI of the page containing the long d
 
 **Note:** Both Firefox and Chrome browsers are working on
 implementations that will make the *longdesc linked* long description
-location reachable by all users. In older or other browsers it is only
+location reachable by all users. In other browsers it’s only
 available to screen reader users.
 
 {::nomarkdown}
@@ -138,8 +138,8 @@ location can be accurately pinpointed by being described, the
 {:.ap}
 
 The HTML5 `<figure>` element can be used to enclose both the image and
-its long description. The long description, presented as headings, text
-and a table, is explicitly associated to the image by using
+its long description. The long description (presented as headings, text
+and a table) is explicitly associated to the image by using
 `role="group"` on the containing `<figure>` element.
 
 {::nomarkdown}
