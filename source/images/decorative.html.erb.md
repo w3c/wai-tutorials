@@ -5,7 +5,7 @@ technologies: WAI-ARIA, HTML5
 order: 3
 ---
 
-Decorative images are those that don't add information. For example, the information provided by the image might already be given using adjacent text or the image might be included for visual interest only. In these cases, a null (empty) `alt` text needs to be provided (`alt=""`) so that they can be ignored by assistive technologies such as screen readers. This is because text values used for this type of image would add audible clutter to screen reader output or could distract users if the topic is different from that in adjacent text.
+Decorative images are those that don’t add information. For example, the information provided by the image might already be given using adjacent text or the image might be included for visual interest only. In these cases, a null (empty) `alt` text needs to be provided (`alt=""`) so that they can be ignored by assistive technologies such as screen readers. This is because text values used for this type of image would add audible clutter to screen reader output or could distract users if the topic is different from that in adjacent text.
 
 If the `alt` attribute is not included (even though empty) some screen readers will announce the image's file name. Whether to treat an image as decorative or [informative](informative.html) is a judgement that only the author can make, based on the reason for including the image on the page. Images may be decorative when they are:
 
@@ -72,7 +72,7 @@ Screen readers also allow the use of WAI-ARIA to hide elements by using `role="p
 {:.ex}
 
 This illustration of a crocus bulb is used to make the link easier to
-identify and to increase the clickable area, but doesn't add to the
+identify and to increase the clickable area, but doesn’t add to the
 information given in adjacent link text.
 
 {::nomarkdown}
@@ -123,7 +123,7 @@ to be repeated in the `alt` attribute.
 <%= sample_start %>
 {:/nomarkdown}
 
-![](../img/sleeping.jpg){:style="float:left; margin-right: 1em;"} **Let sleeping dogs lie.** This is a proverb that means: “Don't initiate trouble. If something that could be troublesome is quiet, then leave it alone”.
+![](../img/sleeping.jpg){:style="float:left; margin-right: 1em;"} **Let sleeping dogs lie.** This is a proverb that means: “don’t initiate trouble. If something that could be troublesome is quiet, then leave it alone”.
 
 {::nomarkdown}
 <%= sample_end %>
@@ -153,7 +153,7 @@ This image is used to add ambience or visual interest to the page.
 <%= sample_start %>
 {:/nomarkdown}
 
-![](kew.jpg){:style="float:left; margin-right: 1em;"} Don't miss the impressive Tropical House -- a
+![](kew.jpg){:style="float:left; margin-right: 1em;"} don’t miss the impressive Tropical House -- a
 huge greenhouse that displays examples of exotic plant-life
 from every tropical environment on the planet.
 
@@ -187,7 +187,7 @@ purpose for using the image needs to be determined by the author.
 <%= notes_end %>
 {:/nomarkdown}
 
-## Related WCAG2.0 Technique:
+## Related WCAG2.0 Techniques
 
 -   [H67: Using null alt text and no title attribute on img elements for images that AT should ignore](http://www.w3.org/TR/2012/NOTE-WCAG20-TECHS-20120103/H67)
 -   [H2: Combining adjacent image and text links for the same resource.](http://www.w3.org/TR/2012/NOTE-WCAG20-TECHS-20120103/H2)
