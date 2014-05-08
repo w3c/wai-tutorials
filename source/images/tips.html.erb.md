@@ -8,32 +8,32 @@ type: tips
 
 ## Tips
 
--   **Logos:** Images of text that are used as logos are exempt from some of the accessibility guidance that applies to other images of text, for instance there is no minimum color contrast requirement;
+-   **Logos:** Logo images with text are exempt from some of the accessibility guidelines for images with text. For instance, there is no minimum color contrast requirement.
 
--   **Prioritize information in `alt` values:** Aim to put the most important information at the start of the `alt` value, as people using high screen magnification may be unable to see more than the first two or three words in the `alt` “tooltip” and people who can’t read quickly may not be able to read as far as the important part of the text alternative before the "tooltip" disappears.
+-   **Prioritize information in `alt` values:** Aim to put the most important information at the start of the `alt` value. People using high screen magnification may be unable to see more than the first two or three words in the `alt` “tooltip”. Also people who can’t read quickly may be unable to read as far as the important part of the text alternative before the "tooltip" disappears.
 
--   **Choosing appropriate text alternatives:** Imagine that you are reading the web page aloud over the phone to someone who needs to understand the page. This should help you decide what (if any) information or function the images have. If they appear to have no informative value and aren’t links or buttons, it is probably safe to treat them as [decorative](decorative.html).
+-   **Choosing appropriate text alternatives:** Imagine that you’re reading the web page aloud over the phone to someone who needs to understand the page. This should help you decide what (if any) information or function the images have. If they appear to have no informative value and aren’t links or buttons, it’s probably safe to treat them as [decorative](decorative.html).
 
--   **Punctuation within `alt` attributes:** As in visible text, using punctuation within the text alternative can make it easier to understand. In addition, a space character may be needed within the `alt` value if there is no space between the image and adjacent text, to avoid having words run together when read by a screen reader.
+-   **Punctuation within `alt` attributes:** As in visible text, using punctuation in the text alternative can make it easier to understand. In addition, to avoid having words run together when read by a screen reader, if there’s no space between the image and adjacent text, a space character may be needed within the `alt` value.
 
 ## Frequently Asked Questions
 
--   **I've been told to remove the `alt` from most of the images in my template, is that right?**
+-   **I've been told to remove the `alt` from most of the images in my template. Is that right?**
 
-    No that's incorrect, the `alt` is a required attribute. If the images are part of the page design, and don’t convey information, you can remove any text values, leaving just the quotes (`alt=""`).
+    No that's incorrect. The `alt` is a required attribute. If the images are part of the page design and don’t convey information, you can remove any text values, leaving just the quotes (`alt=""`).
 
 -   **I can’t remember – should the alt be a space or null (empty) if a description is not needed?**
 
-    It should be null (empty) `alt` text (`alt=""`), with no space between the quotes. Having a space between the quotes doesn’t effectively hide the image from all assistive technologies, for instance some screen readers will still announce the presence of an image if a space is put between the quotes.
+    It should be null (empty) `alt` text (`alt=""`), with no space between the quotes. Having a space between the quotes doesn’t effectively hide the image from all assistive technologies. For instance, some screen readers will still announce the presence of an image if a space is put between the quotes.
 
 
--   **My CMS system puts in a default `alt` of “image of”, can I just add to that?**
+-   **My CMS system puts in a default `alt` of “image of”. Can I just add to that?**
 
-    It will depend on the function of the image, but default values may result in inappropriate alternative text. Normally there's no need to include words like “image”, “icon” or “picture” in the `alt` text, people who can see will know this already and screen readers announce the presence of an image. There's a good case for including text that describes the type of image if it is a painting, photograph or illustration, but it's best to avoid the more generic terms.
+    It will depend on the function of the image. However, default values may result in inappropriate alternative text. Normally there's no need to include words like “image”, “icon” or “picture” in the `alt` text. People who can see will know this already and screen readers announce the presence of an image. If it's a painting, photograph or illustration, that may be a good case for including text that describes the type of image, but it's best to avoid the more generic terms.
 
--   **How long can the `alt` text be, is it up to 90 words?**
+-   **How long can the `alt` text be? Is it up to 90 words?**
 
-    The `alt` text should be the briefest, most concise description of the image's purpose as possible. If anything more than a short phrase or sentence is needed, it would be better to use one of the long description methods discussed on the [complex images](complex.html) page. People using high screen magnification may be able to see only two or three short words in their magnified view of the `alt`: tooltip and screen readers are likely to truncate or break any long `alt` value.
+    The `alt` text should be the most concise description possible of the image's purpose. If anything more than a short phrase or sentence is needed, it would be better to use one of the long description methods discussed in [complex images](complex.html). People using high screen magnification may be able to see only two or three words in their magnified view of the `alt`, and tooltip and screen readers are likely to truncate or break a long `alt` value.
 
 ## Other W3C Resources
 
