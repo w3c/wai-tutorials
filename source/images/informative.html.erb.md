@@ -210,7 +210,7 @@ type for each link:
 <%= notes_start %>
 {:/nomarkdown}
 
-**Note 1:** If the format identification were written as part of the link text, the image might be considered [decorative](decorative.html) and have a null (empty) `alt` attribute (`alt=""`) [@@ following clause needs clarification; ABL 1-May, 2014] but must be in the same link anchor as the text, as in [“Functional Images: Logo image within link text”](functional.html#logo-image-within-link-text).
+**Note 1:** If the format identification were written as part of the link text, the image might be considered [decorative](decorative.html) and have a null (empty) `alt` attribute (`alt=""`) but must be in the same link element (`<a>`) as the text, see [“Functional Images: Logo image within link text”](functional.html#logo-image-within-link-text) for details.
 
 **Note 2:** This particular example is similar to the [icon within linked text in Functional Images](functional.html#icon-image-conveying-information-within-link-text) in that the image conveys information that isn’t given in the link text.
 
