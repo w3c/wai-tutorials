@@ -18,7 +18,7 @@ In certain situations the composition of the image may also be needed as part of
 ## Image containing substantial information
 {:.ex}
 
-This bar chart of website visitor statistics has a short description of “Bar chart showing monthly and total visitors for the first quarter 2014 for sites 1 to 3”. It's in the `alt` attribute and identifies the image. The long description details the information, including scales, values, relationships and trends that are represented visually. For example, since the declining values for site 1, consistent values for site 2, and increasing values for site 3 are highlighted through the bar chart, this information must also be included in the [long text description](examples/2014-first-qtr.html).
+This bar chart of website visitor statistics has a short description of “Bar chart showing monthly and total visitors for the first quarter 2014 for sites 1 to 3”. It’s in the `alt` attribute and identifies the image. The long description details the information, including scales, values, relationships and trends that are represented visually. For example, since the declining values for site 1, consistent values for site 2, and increasing values for site 3 are highlighted through the bar chart, this information must also be included in the [long text description](examples/2014-first-qtr.html).
 
 {::nomarkdown}
 <%= sample_start %>
