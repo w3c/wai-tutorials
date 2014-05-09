@@ -112,9 +112,7 @@ makes both the destination and the association with the image clear.
 <%= notes_start %>
 {:/nomarkdown}
 
-**Note:** This approach is well supported in all browsers and ensures
-that everyone has access to the data as well as the image, no matter
-what browser or assistive technologies they may use.
+**Note:** This approach is well supported in all browsers and ensures that everyone has access to the data as well as the image, no matter what browser or assistive technologies they may use.
 
 {::nomarkdown}
 <%= notes_end %>
@@ -123,9 +121,7 @@ what browser or assistive technologies they may use.
 ### Describing the location of the long description in the `alt` attribute
 {:.ap}
 
-If the long description is on the same page as the image and its
-location can be accurately pinpointed by being described, the
-`alt` attribute can include location information.
+If the long description is on the same page as the image and its location can be accurately pinpointed by being described, the `alt` attribute can include location information.
 
 {::nomarkdown}
 <%= code_start %>
@@ -137,6 +133,7 @@ location can be accurately pinpointed by being described, the
 		src="chart.png"
 		alt="Bar chart showing monthly and total visitors for the first quarter 2014 for sites 1 to 3. Described under the heading Site visitors full text.">
 </p>
+[…]
 <h4>Site visitors full text</h4>
 […]
 ~~~
