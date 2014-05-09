@@ -77,7 +77,7 @@ The following image shows a dog wearing a bell. It supplements the adjacent text
 <%= notes_start %>
 {:/nomarkdown}
 
-**Note:** If the text included an explanation of how the dog wears a bell, the image might be considered [decorative](../decorative/). As this isn’t mentioned in the text, the image is deemed to be informative.
+**Note:** If the text included an explanation of how the dog wears a bell, the image might be considered redundant and therefore [decorative](decorative.html). As this isn’t mentioned in the text, the image is deemed to be informative.
 
 {::nomarkdown}
 <%= notes_end %>
