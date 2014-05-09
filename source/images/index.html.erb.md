@@ -13,11 +13,11 @@ Every image should have a *text alternative* that provides an equivalent alterna
 
 -   **[Decorative images](decorative.html)** used to add visual interest to the page, rather than to convey information that is important to understanding the text: The text alternative should be null (`alt=""`).
 
--   **[Functional images](functional.html)** used alone as a link or button to activate a function - for example, icons for printing and submitting forms: The text alternative should describe the function rather than the visual image.
+-   **[Functional images](functional.html)** used alone as a link or button to activate a function – for example, icons for printing and submitting forms: The text alternative should describe the function rather than the visual image.
 
--   **[Images of text](textual.html)** that provide readable text (sometimes used when special fonts are wanted): This is discouraged except for logos; however, if used, the text alternative should contain the same words as in the image.
+-   **[Images of text](textual.html)** that provide readable text (sometimes used when special fonts are wanted) are discouraged except for logos. However, if images of text are used, the text alternative should contain the same words as in the image.
 
--   **[Complex images](complex.html) such as graphs and diagramst** that convey data or detailed information: The alternative should be a full text equivalent of the data and information provided in the image.
+-   **[Complex images](complex.html) such as graphs and diagrams** that convey data or detailed information: The alternative should be a full text equivalent of the data and information provided in the image.
 
 -   **[Groups of images](groups.html)** used to convey a single piece of information: The text alternative for one item should convey the information conveyed by the entire group.
 
@@ -40,7 +40,7 @@ many situations such as for:
 <%= notes_start %>
 {:/nomarkdown}
 
-**Note:** Images are often important for communicating information and interacting with web pages. For example, for people with some types of learning disabilities, illustrations make it much easier to understand information; some people who enlarge web pages use images as cues for orientation. Removing images from websites (so called "text-only versions") makes websites less accessible for these users.
+**Note:** Images are often important for communicating information and interacting with web pages. Illustrations make it much easier to understand information for people with some types of learning disabilities. Some people who enlarge web pages use images as cues for orientation. Removing images from websites (so called “text-only versions”) makes websites less accessible for these users.
 
 {::nomarkdown}
 <%= notes_end %>
