@@ -5,12 +5,12 @@ technologies: WAI-ARIA, HTML5
 order: 7
 ---
 
-A grouped collection of images is sometimes used to convey a single piece of information, for instance star images to denote a product rating. In this case, the text alternative for one of the images should convey the information conveyed by the entire group, all other images should have null (empty) `alt` attributes. For instance, as shown in example 1 below, the descriptive text alternative on one image should be “3.5 out of 5 stars”, rather than “1 star”, “Half star” or “Unfilled star” on each image.
+A grouped collection of images is sometimes used to convey a single piece of information. For instance, five star images are often grouped to denote a product rating. When images are a grouped collection, the text alternative for one of the images should convey the information for the entire group; all other images should have null (empty) `alt` attributes. For example, as shown in example 1 below, the descriptive text alternative on one image should be “3.5 out of 5 stars”, rather than “1 star”, “half star” or “unfilled star” on each image.
 
 ## Group of images for rating
 {:.ex}
 
-This group of five images shows a product rating. There are five images, three filled stars, one half filled star and one empty star, indicating the overall rating. The text alternative for the first image is “Rating: 3.5 out of 5 stars”, all other images have a null (empty) `alt` attribute (`alt=""`).
+This group of five images shows a product rating. There are five images (three filled stars, one half-filled star and one empty star) indicating the overall rating. The text alternative for the first image is “Rating: 3.5 out of 5 stars”; all other images have a null (empty) `alt` attribute (`alt=""`).
 
 {::nomarkdown}
 <%= sample_start %>
@@ -44,7 +44,7 @@ Rating: ![3.5 out of 5 stars](star-full.png)![](../img/star-full.png)![](../img/
 ## Captions for Image Groups
 {:.ex}
 
-If a group of images has a caption, a `figure` element can be used to group those images. If those images have a caption, `figure` and `figcaption` elements can be nested as well:
+If a group of images has a caption, a `figure` element can be used to group those images. If individual images also have captions, `figure` and `figcaption` elements can be nested.
 
 {::nomarkdown}
 <%= sample_start %>
