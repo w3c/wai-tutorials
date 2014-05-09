@@ -94,9 +94,7 @@ In this example the W3C logo is contained within a text link that leads to the W
 ## Icon image conveying information within link text
 {:.ex}
 
-In this example the image follows text within a link to inform users
-that the link will open in a new window. It has the text alternative
-“new window” to reflect the representation on the image:
+In this example the image follows text within a link to inform users that the link will open in a new window. It has the text alternative “new window” to reflect the representation on the image:
 
 {::nomarkdown}
 <%= sample_start %>
@@ -174,10 +172,7 @@ The following image is an icon representing a printer to denote print functional
 ## Image used in a button
 {:.ex}
 
-The following image is used to give the button a distinct style. In this
-case it is the button to initiate a search request and is an icon
-representing a magnifying lens. The text alternative for the image is
-“search”:
+The following image is used to give the button a distinct style. In this case it is the button to initiate a search request and is an icon representing a magnifying lens. The text alternative for the image is “search”:
 
 {::nomarkdown}
 <%= sample_start %>
