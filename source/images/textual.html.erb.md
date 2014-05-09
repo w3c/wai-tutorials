@@ -5,14 +5,9 @@ technologies: WAI-ARIA, HTML5, CSS Transforms, CSS Fonts, MathML
 order: 5
 ---
 
-Images of text are those displaying text that’s intended to be read.
-The strongest design technique is to use actual text – styled with CSS –
-rather than image-based text presentation. That’s because actual text
-is flexible. It can be resized without losing clarity, and the background
-and text colors can be modified to suit users’ reading preferences.
-Images are more likely to distort and pixelate when resized. In those
-uncommon situations where images of text must be used, the text
-alternative must contain the same text presented in the image.
+Images of text display text that’s intended to be read. The strongest design technique is to use actual text – styled with CSS – rather than image-based text presentation.
+
+Actual text is much more flexible than images: It can be resized without losing clarity, and background and text colors can be modified to suit users’ reading preferences. Images are more likely to distort and pixelate when resized. In those uncommon situations where images of text must be used, the text alternative must contain the same text presented in the image.
 
 ## Image of styled text with decorative effect
 {:.ex}
