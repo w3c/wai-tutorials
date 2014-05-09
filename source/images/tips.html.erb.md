@@ -16,6 +16,12 @@ type: tips
 
 -   **Punctuation within `alt` attributes:** As in visible text, using punctuation in the text alternative can make it easier to understand. In addition, to avoid having words run together when read by a screen reader, if there’s no space between the image and adjacent text, a space character may be needed within the `alt` value.
 
+-   **SVG graphics:** 
+
+    * SVG graphics can be referenced in the `src` attribute of an `<img>` element like other image formats (PNG, JPEG, GIF). In this case the examples of this tutorial apply can be used with SVG as well.
+
+    * As SVG images consists of tags like HTML, their code can also be used in HTML5 directly. In this case you can provide alternative text in a `title`-Element within the SVG image.
+
 ## Frequently Asked Questions
 
 -   **I've been told to remove the `alt` from most of the images in my template. Is that right?**
