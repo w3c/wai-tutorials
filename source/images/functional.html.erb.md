@@ -5,17 +5,11 @@ technologies: HTML5
 order: 4
 ---
 
-Functional images are those that allow user interaction, such as when used as buttons or within links. In this case, the text alternative for the image needs to convey the action that will be initiated (the purpose of the image), rather than a description of the image. For instance, as shown in examples below, the text alternative should be “print this page” rather than “image of a printer”, “search” rather than “magnifying lens” or “Example.com homepage” rather than “Example.com logo”.
+Users can interact with functional images, for example if they are used as buttons or within links. The text alternative for the image needs to convey the action that will be initiated (the purpose of the image), rather than a description of the image. 
 
-{::nomarkdown}
-<%= notes_start %>
-{:/nomarkdown}
+For instance, as shown in examples below, the text alternative should be “print this page” rather than “(image of a) printer”, “search” rather than “magnifying lens” or “Example.com homepage” rather than “Example.com logo”.
 
-**Note:** It’s vital that images that act as stand alone links have the appropriate text value in their `alt` attributes. Missing or empty `alt` values for stand alone linked images create real problems for screen reader users as the reader cannot ignore links, and if no text alternative is provided they will announce the image filepath or the URI for the destination page, neither of which will let users know where the link leads.
-
-{::nomarkdown}
-<%= notes_end %>
-{:/nomarkdown}
+If images act as stand alone links, they need to have the appropriate text value in their `alt` attributes. Missing or empty `alt` values create real problems for screen reader users as links cannot be ignored. The screen reader will announce the image filepath or the URL for the destination page which won’t help users know where the link leads to.
 
 ## Image used alone as a linked logo
 {:.ex}
