@@ -49,7 +49,7 @@ This slogan image contains text with decorative effects that used to be impossib
 	</div>
 </aside>
 
-The visual effects in the above image can be produced using CSS3 and an embedded font. However some authors and developers may need to support older browsers and may find the image example useful.
+The visual effects in the above image can be produced using CSS3 and an embedded font. Authors and developers that need to support older browsers may find the image example useful, if a less styled fallback text isn’t an option.
 
 {::nomarkdown}
 <%= sample_start %>
