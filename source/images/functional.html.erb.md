@@ -44,7 +44,7 @@ The following image is the only content of a link that leads to the W3C homepage
 <%= notes_start %>
 {:/nomarkdown}
 
-**Note 1:** In this situation the logo is also an image of the text “W3C” but in this case it is primarily a functional image linked to the home page, so the word “home” was added to the text alternative.
+**Note 1:** In this situation the logo is also an image of the text “W3C” but in this case its primary function is to link to the home page, so the word “home” was added to the text alternative.
 
 **Note 2:** Images used as logos are exempt from some of the accessibility guidance that applies to other images of text, for instance there are no minimum color contrast and text size requirements.
 
