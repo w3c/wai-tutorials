@@ -5,12 +5,12 @@ technologies: HTML5
 order: 8
 ---
 
-A client-side image map is an image divided into selectable regions defined by `<area>` elements (“hotspots”) that allow user interaction, such as providing links to other pages. In this case, text alternatives are needed on the `<img>` element itself to convey the informative context and on each of the `<area>` elements to convey the link destination or the action that will be initiated if the link is followed.
+A client-side image map is an image divided into selectable regions defined by `<area>` elements (“hotspots”) that allow user interaction. Usually the selectable regions are links to other pages. For image maps, text alternatives are needed on both the `<img>` element itself (to convey the informative context) and on each of the `<area>` elements (to convey the link destination or the action that will be initiated if the link is followed).
 
 ## An organizational chart with links to individual pages
 {:.ex}
 
-The following organizational chart is used to provide links to each Director's home page. The text alternative for the image is “Board of Directors and related staff:”, and each linked `<area>` has a text alternative to identify the individual, such as “Davy Jones: Chairman”.
+The following organizational chart is used to provide links to each director's home page. The text alternative for the image is “Board of Directors and related staff:”. Each linked `<area>` has a text alternative to identify the individual -- for example, “Davy Jones: Chairman”.
 
 {::nomarkdown}
 <%= sample_start %>
@@ -58,8 +58,8 @@ The following organizational chart is used to provide links to each Director's h
 {:/nomarkdown}
 
 **Note:** Image maps may not function correctly on some mobile devices
-if the coordinates for the areas are not scaled in the same proportion
-as the image. To overcome this you could provide redundant text links on
+if the coordinates for the areas are not scaled using the same proportions
+as the image. To compensate for this you could provide redundant text links on
 the same page.
 
 {::nomarkdown}
