@@ -5,7 +5,7 @@ technologies: WAI-ARIA, HTML5
 order: 7
 ---
 
-A grouped collection of images is sometimes used to convey a single piece of information. For instance, five star images are often grouped to denote a product rating. When images are a grouped collection, the text alternative for one of the images should convey the information for the entire group; all other images should have null (empty) `alt` attributes. For example, as shown in example 1 below, the descriptive text alternative on one image should be “3.5 out of 5 stars”, rather than “1 star”, “half star” or “unfilled star” on each image.
+A grouped collection of images is sometimes used to convey a single piece of information. For instance, five star images are often used to denote a product rating. When images are a grouped collection, the text alternative for one of the images should convey the information for the entire group; all other images should have null (empty) `alt` attributes. For example, as shown in example 1 below, the descriptive text alternative on one image should be “3.5 out of 5 stars”, rather than “1 star”, “half star” or “unfilled star” on each image.
 
 ## Group of images for rating
 {:.ex}
@@ -27,14 +27,12 @@ Rating: ![3.5 out of 5 stars](star-full.png)![](../img/star-full.png)![](../img/
 {:/nomarkdown}
 
 ~~~ html
-<p>
-	Rating:
-	<img src="star-full.jpg"  alt="3.5 out of 5 stars">
-	<img src="star-full.jpg"  alt="">
-	<img src="star-full.jpg"  alt="">
-	<img src="star-half.jpg"  alt="">
-	<img src="star-empty.jpg" alt="">
-</p>
+Rating:
+<img src="star-full.jpg"  alt="3.5 out of 5 stars">
+<img src="star-full.jpg"  alt="">
+<img src="star-full.jpg"  alt="">
+<img src="star-half.jpg"  alt="">
+<img src="star-empty.jpg" alt="">
 ~~~
 
 {::nomarkdown}
