@@ -12,10 +12,7 @@ Actual text is much more flexible than images: It can be resized without losing 
 ## Image of styled text with decorative effect
 {:.ex}
 
-This slogan image contains text with decorative effects that cannot be
-realized using CSS styling. The text alternative is the same as that
-presented in the image: “Your access to the city”. The decorative
-effects (stylized text and green line) should not be described.
+This slogan image contains text with decorative effects that used to be impossible to be realized consistently across browsers by using CSS styling only. The text alternative is the same as that presented in the image: “Your access to the city”. The decorative effects (stylized text and shadow) should not be described.
 
 {::nomarkdown}
 <%= sample_start %>
