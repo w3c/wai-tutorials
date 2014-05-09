@@ -5,9 +5,11 @@ technologies: WAI-ARIA, HTML5
 order: 3
 ---
 
-Decorative images are those that don’t add information. For example, the information provided by the image might already be given using adjacent text or the image might be included for visual interest only. In these cases, a null (empty) `alt` text needs to be provided (`alt=""`) so that they can be ignored by assistive technologies such as screen readers. This is because text values used for this type of image would add audible clutter to screen reader output or could distract users if the topic is different from that in adjacent text.
+Decorative images don’t add information to the content of a page. For example, the information provided by the image might already be given using adjacent text or the image might be included for visual interest only. 
 
-If the `alt` attribute is not included (even though empty) some screen readers will announce the image's file name. Whether to treat an image as decorative or [informative](informative.html) is a judgement that only the author can make, based on the reason for including the image on the page. Images may be decorative when they are:
+In these cases, a null (empty) `alt` text needs to be provided (`alt=""`) so that they can be ignored by assistive technologies such as screen readers. Text values for this type of images would add audible clutter to screen reader output or could distract users if the topic is different from that in adjacent text.
+
+If the `alt` attribute is not used at all some screen readers will announce the image’s file name. Whether to treat an image as decorative or [informative](informative.html) is a judgement that only the author can make, based on the reason for including the image on the page. Images may be decorative when they are:
 
 -   Visual styling such as borders, spacers, and corners
 -   Supplementary to link text to improve its appearance or increase the clickable area
