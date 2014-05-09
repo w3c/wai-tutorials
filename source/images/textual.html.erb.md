@@ -217,8 +217,8 @@ Images of math expressions should only be used in *exceptional circumstances* â€
 <aside class="annotation">
 	<h4 class="annotation-header">Compatibility</h4>
 	<div class="annotation-content">
-		<p>Most browsers need plugins to render MathML correctly -- especially for the new MathML 3.0 features used in this example. To see the MathML example below, <a href="https://addons.mozilla.org/en-US/firefox/addon/mathml-mml3ff/">this Firefox plugin</a> may be needed.</p>
-		<p>Find more information about MathML <a href="https://trac.webkit.org/wiki/MathML">here for Webkit-based browsers</a> and <a href="https://developer.mozilla.org/en-US/docs/Mozilla/MathML_Project/Status">here for Mozilla-based browsers</a>.</p>
+		<p>Most browsers need plugins to render MathML correctly â€“ especially for the new MathML 3.0 features used in this example. To see the MathML example below, <a href="https://addons.mozilla.org/en-US/firefox/addon/mathml-mml3ff/">this Firefox plugin</a> may be needed.</p>
+		<p>Find more information about the state of MathML <a href="https://trac.webkit.org/wiki/MathML">in Webkit-based</a> and <a href="https://developer.mozilla.org/en-US/docs/Mozilla/MathML_Project/Status">in Mozilla-based browsers</a>.</p>
 	</div>
 </aside>
 
