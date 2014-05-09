@@ -106,6 +106,16 @@ alt="The castle lies in ruins, the original tower all that remains in one piece.
 <%= code_end %>
 {:/nomarkdown}
 
+{::nomarkdown}
+<%= notes_start %>
+{:/nomarkdown}
+
+**Note:** We also use the WAI-ARIA attribute `role` with the value of `group` to indicate grouping to assistive technology.
+
+{::nomarkdown}
+<%= notes_end %>
+{:/nomarkdown}
+
 ## Related WCAG2.0 Techniques
 
 The following WCAG 2.0 techniques were used in the examples above:
