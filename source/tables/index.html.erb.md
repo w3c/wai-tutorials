@@ -13,7 +13,7 @@ Data tables need structural markup to distinguish between header and data cells 
 
 -   **[Complex Irregular Tables](irregular.html):** For tables where identifying header cells programmatically is not easy, they can be defined using the `scope` attribute:
 
-    ![Schematic table with arrows pointing at the cells affected by the scope value](img-scope.png)
+    ![Schematic table with arrows pointing at the cells affected by the scope value](img-irreg.png)
 
 -   **[Complex Multi-level tables](multi-level.html):** If the table structure is so complex that a data cell needs to reference several levels of header cells, each header cell is assigned an `id` and each data cell a `headers` attribute that lists all relevant header cell `id` values.
 
