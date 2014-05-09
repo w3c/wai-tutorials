@@ -46,7 +46,6 @@ If a group of images has a caption, a `figure` element can be used to group thos
 
 {::nomarkdown}
 <%= sample_start %>
-{:/nomarkdown}
 
 <figure role="group">
 <figcaption>The castle through the ages: 1423, 1756, and 1966 respectively.</figcaption>
@@ -68,7 +67,6 @@ alt="The castle lies in ruins, the original tower all that remains in one piece.
 
 </figure>
 
-{::nomarkdown}
 <%= sample_end %>
 {:/nomarkdown}
 
