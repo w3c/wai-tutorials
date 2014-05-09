@@ -87,8 +87,7 @@ available to screen reader users.
 ### A text link to the long description adjacent to the image
 {:.ap}
 
-This approach provides a text link next to the image. The link text
-makes both the destination and the association with the image clear.
+This approach provides a text link next to the image. The link text makes both the destination and the association with the image clear.
 
 {::nomarkdown}
 <%= code_start %>
