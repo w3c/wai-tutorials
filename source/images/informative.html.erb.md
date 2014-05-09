@@ -5,8 +5,9 @@ technologies: HTML5
 order: 2
 ---
 
-Informative images are those that convey a simple concept or information 
-that can be expressed in a short phrase or sentence. For informative images, the text alternative needs to convey the meaning or identification that is displayed visually. Typically this isn’t a literal description of the image. In some situations a detailed literal description may be needed, but only when the content of the image is all or part of the information being conveyed. Whether to treat an image as informative or [decorative](decorative.html) is a judgement that only the author can make, based on the reason for including the image on the page.
+Informative images convey a simple concept or information  that can be expressed in a short phrase or sentence. The text alternative needs to convey the meaning or identification that is displayed visually which typically isn’t a literal description of the image. 
+
+In some situations a detailed literal description may be needed, but only when the content of the image is all or part of the information being conveyed. Whether to treat an image as informative or [decorative](decorative.html) is a judgement that only the author can make, based on the reason for including the image on the page.
 
 ## Images used to label other information
 {:.ex}
