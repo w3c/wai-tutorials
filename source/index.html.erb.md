@@ -16,4 +16,4 @@ Building accessible websites feels like a challenge for many web teams, regardle
 
 The tutorials introduce accessibility topics, including advanced aspects. They are a good starting point for learning and addressing WCAG. To ensure that you meet the WCAG requirements, you will still have to use WCAG resources directly.
 
-Most of the examples are HTML-based, but the underlying principles apply to other formats as well.
+Most of the examples are HTML-based and the underlying principles apply to other formats as well.
