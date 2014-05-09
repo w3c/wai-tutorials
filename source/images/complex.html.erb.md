@@ -174,7 +174,7 @@ and a table) is explicitly associated to the image by using
 ### Structurally associating image and long description with `aria-described-by`
 {:.ap}
 
-The WAI-ARIA `aria-described-by` attribute can be used to link the description to the image. The value of the attribute is the `ID` of the element with the description.
+The WAI-ARIA `aria-described-by` attribute can be used to link the description to the image. The value of the attribute is the `ID` of the element with the description. (This approach is only valid in HTML5.)
 
 {::nomarkdown}
 <%= code_start %>
