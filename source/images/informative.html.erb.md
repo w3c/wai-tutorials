@@ -102,10 +102,7 @@ This simple diagram illustrates a counter-clockwise direction for unscrewing a b
 {:/nomarkdown}
 
 ~~~ html
-<p>
-	<img src="cap.png" alt="Anti-clockwise diagram: Push the cap down and turn
-it from right to left.">
-</p>
+<img src="cap.png" alt="Anti-clockwise diagram: Push the cap down and turn it from right to left.">
 ~~~
 
 {::nomarkdown}
@@ -144,9 +141,7 @@ This photograph shows a smiling family group. It’s a stock image so the indivi
 {:/nomarkdown}
 
 ~~~ html
-<p>
-	<img src="family.jpg" alt="We’re family-friendly. ">
-</p>
+<img src="family.jpg" alt="We’re family-friendly. ">
 ~~~
 
 {::nomarkdown}
