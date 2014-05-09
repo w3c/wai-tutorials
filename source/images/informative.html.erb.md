@@ -90,11 +90,9 @@ This simple diagram illustrates a counter-clockwise direction for unscrewing a b
 
 {::nomarkdown}
 <%= sample_start %>
-{:/nomarkdown}
 
 <img src="../../img/counter-clockwise.jpg" alt="Counter-clockwise diagram: Push the cap down and turn it from right to left." style="vertical-align: middle; margin-right: .5em;">
 
-{::nomarkdown}
 <%= sample_end %>
 {:/nomarkdown}
 
