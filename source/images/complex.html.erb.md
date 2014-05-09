@@ -33,19 +33,38 @@ This bar chart of website visitor statistics has a short description of “Bar c
 ### Providing a link to the long description via *longdesc*
 {:.ap}
 
-Here the `longdesc` attribute contains the URI of a page containing the long description. If the long description is published on the same page as the image, the `longdesc` value can simply contain a hash link to the long description.
+Here the `longdesc` attribute contains the URI of a page containing the long description.
 
 {::nomarkdown}
 <%= code_start %>
 {:/nomarkdown}
 
 ~~~ html
-<p>
-	<img
-		src="chart.png"
-		alt="Bar chart showing monthly and total visitors for the first quarter 2014 for sites 1 to 3"
-		longdesc="2014-first-qtr.html">
-</p>
+<img
+	src="chart.png"
+	alt="Bar chart showing monthly and total visitors for the first quarter 2014 for sites 1 to 3"
+	longdesc="2014-first-qtr.html">
+~~~
+
+{::nomarkdown}
+<%= code_end %>
+{:/nomarkdown}
+
+If the long description is published on the same page as the image, the `longdesc` value can simply contain a fragment identifier (“hash link”) to the long description.
+
+{::nomarkdown}
+<%= code_start %>
+{:/nomarkdown}
+
+~~~ html
+<img
+	src="chart.png"
+	alt="Bar chart showing monthly and total visitors for the first quarter 2014 for sites 1 to 3"
+	longdesc="#chart-longdesc">
+[…]
+<div id="chart-longdesc">
+	[…]
+</div>
 ~~~
 
 {::nomarkdown}
