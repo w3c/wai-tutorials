@@ -75,10 +75,7 @@ If the long description is published on the same page as the image, the `longdes
 <%= notes_start %>
 {:/nomarkdown}
 
-**Note:** Both Firefox and Chrome browsers are working on
-implementations that will make the *longdesc linked* long description
-location reachable by all users. In other browsers it’s only
-available to screen reader users.
+**Note:** Both Firefox and Chrome browsers are working on implementations that will make the *longdesc linked* long description location reachable by all users. Currently, and in other browsers, it’s only available to screen reader users.
 
 {::nomarkdown}
 <%= notes_end %>
