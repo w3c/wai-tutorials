@@ -42,7 +42,7 @@ Rating:
 ## Captions for Image Groups
 {:.ex}
 
-If a group of images has a caption, a `figure` element can be used to group those images. If individual images also have captions, `figure` and `figcaption` elements can be nested.
+If a group of images has a caption, a `figure` element can be used to group those images. If individual images also have captions, `figure` and `figcaption` elements can be nested. (This example is only valid in HTML5.)
 
 {::nomarkdown}
 <%= sample_start %>
