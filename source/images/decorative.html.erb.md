@@ -165,14 +165,11 @@ This image is used to add ambience or visual interest to the page.
 <%= sample_start %>
 {:/nomarkdown}
 
-![](kew.jpg){:style="float:left; margin-right: 1em;"} don’t miss the impressive Tropical House -- a
-huge greenhouse that displays examples of exotic plant-life
-from every tropical environment on the planet.
+![](kew.jpg){:style="float:left; margin-right: 1em;"} don’t miss the impressive Tropical House – a huge greenhouse that displays examples of exotic plant-life from every tropical environment on the planet.
 
 {::nomarkdown}
 <%= sample_end %>
 {:/nomarkdown}
-
 
 {::nomarkdown}
 <%= code_start %>
@@ -190,10 +187,7 @@ from every tropical environment on the planet.
 <%= notes_start %>
 {:/nomarkdown}
 
-**Note:** If the purpose of this image was to identify a plant or
-convey other information, rather than to just improve the look of the
-page, it should probably be treated as [informative](informative.html). The
-purpose for using the image needs to be determined by the author.
+**Note:** If the purpose of this image was to identify a plant or convey other information, rather than to just improve the look of the page, it should probably be treated as [informative](informative.html). The purpose for using the image needs to be determined by the author.
 
 {::nomarkdown}
 <%= notes_end %>
