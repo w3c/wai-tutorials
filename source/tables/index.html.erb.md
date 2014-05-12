@@ -11,7 +11,7 @@ Data tables need structural markup to distinguish between header and data cells 
 
 -   **[Simple tables![ typically have one header row and/or one header column](img-simple.png){:style="float:left; clear:left; margin-right: .5em;"}](simple.html):** Identify the topic of a row or column and denote those header cells with `<th>` elements in the markup.
 
--   **[Complex Irregular Tables![ have some kind of heading cell or row that is expected at a different location](img-irreg.png){:style="float:left; clear:left; margin-right: .5em;"}](irregular.html):**  For tables where identifying header cells programmatically is not easy, they can be defined using the `scope` attribute.
+-   **[Complex Irregular tables![ have some kind of heading cell or row that is expected at a different location](img-irreg.png){:style="float:left; clear:left; margin-right: .5em;"}](irregular.html):**  For tables where identifying header cells programmatically is not easy, they can be defined using the `scope` attribute.
 
 -   **[Complex Multi-level tables![ have multiple header cells per data cell, most of the time header cells have to be associated explicitly to the table cell.](img-multi.png){:style="float:left; clear:left; margin-right: .5em;"}](multi-level.html):** If the table structure is so complex that a data cell needs to reference several levels of header cells, each header cell is assigned an `id` and each data cell a `headers` attribute that lists all relevant header cell `id` values.
 
