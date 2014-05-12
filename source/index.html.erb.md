@@ -6,13 +6,14 @@ layout: overview
 order: 1
 ---
 
-Building accessible websites feels like a challenge for many web teams, regardless of experience. These tutorials will help to apply [Accessibility Principles](http://www.w3.org/WAI/intro/people-use-web/principles) in the every day workflow of website creators by providing practical guidance and examples that meet [WCAG 2.0](http://www.w3.org/WAI/intro/wcag) (Web Content Accessibility Guidelines 2.0). They are useful to a variety of people, including:
+Welcome to the web accessibility tutorials. We designed these tutorials to help websites to reach the widest possible audience and make the web a better place at the same time. They will help to apply [Accessibility Principles](http://www.w3.org/WAI/intro/people-use-web/principles) in the every day workflow of website creators by providing practical guidance and examples that meet [WCAG 2.0](http://www.w3.org/WAI/intro/wcag) (Web Content Accessibility Guidelines 2.0). They are designed for a variety of people:
 
-* **Web developers** can find guidance and boilerplate solutions for many common development challenges.
-* **Web designers** can learn how to design web components that are easy to implement in an accessible way.
-* **Web trainers** can find compelling examples to teach people about accessible web design and development.
-* **Content authors** can learn concepts and techniques for preparing their content in an accessible way.
-* **Project managers** can gain understanding of accessibility approaches to help with project planning.
+* **Web developers** will find guidance and boilerplate solutions for many common coding challenges.
+* **Web designers** will learn how to design web components that are easy to implement in an accessible way.
+* **Web trainers** will find compelling examples to teach people about accessible web design and development.
+* **Content authors** will learn concepts and techniques for preparing their content in an accessible way.
+* **Project managers** will gain understanding of accessibility approaches to help with project planning.
+* Whatever your role is, **you**’ll find valuable resources.
 
 The tutorials introduce accessibility topics, including advanced aspects. They are a good starting point for learning and addressing WCAG. To ensure that you meet the WCAG requirements, you will still have to use WCAG resources directly.
 
