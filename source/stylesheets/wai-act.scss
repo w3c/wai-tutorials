@@ -170,6 +170,7 @@ header[role=banner] {
 		a {
 			display:block;
 			text-decoration: none;
+			border: none;
 			position: relative;
 			&:hover, &:focus {
 				text-decoration: underline;
@@ -315,12 +316,20 @@ h1, h2, h3, h4 {
 
 a {
 	color: #036;
-	.content &:visited {
-		color: #663366;
+	.content & {
+		border-bottom: 1px solid;
+		text-decoration: none;
+		color: #036;
+		&:visited {
+			color: lighten(#535, 10%);
+		}
 	}
 	&:hover, &:focus {
 		color: #005A9C;
 		cursor: pointer;
+		.content & {
+			border-bottom: 3px solid;
+		}
 	}
 }
 
@@ -846,6 +855,7 @@ select {
 	font-size: .8em;
 	vertical-align: middle;
 	position: relative;
+	border: none !important;
 	span {
 		@extend .visuallyhidden;
 		position: absolute;
