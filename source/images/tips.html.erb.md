@@ -20,7 +20,7 @@ type: tips
 
     * SVG graphics can be referenced in the `src` attribute of an `<img>` element like other image formats (PNG, JPEG, GIF). In this case the examples of this tutorial apply can be used with SVG as well.
 
-    * As SVG images consists of tags like HTML, their code can also be used in HTML5 directly. In this case you can provide alternative text in a `title`-Element within the SVG image.
+    * As SVG images consists of tags like HTML, their code can also be used in HTML5 directly. In this case you can provide alternative text in a `<title>` element within the SVG image.
 
 ## Frequently Asked Questions
 
