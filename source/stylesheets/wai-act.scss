@@ -73,6 +73,15 @@ p+ul {
 	}
 }
 
+ul {
+	&.nobullets {
+		padding: 0;
+		li {
+			list-style: none;
+		}
+	}
+}
+
 .ex, .ap {
 	&:before {
 		color: #930;
@@ -255,6 +264,7 @@ footer {
 		list-style: none;
 	}
 }
+
 
 
 // Headings

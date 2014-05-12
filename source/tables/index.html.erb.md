@@ -9,15 +9,15 @@ type: intro
 
 Data tables need structural markup to distinguish between header and data cells and define the relationships between them. This tutorial shows you how to apply appropriate structural markup to tables. It includes the following pages:
 
--   **[Simple tables](simple.html):** Identify the topic of a row or column and denote those header cells with `<th>` elements in the markup.
+-   **[Simple tables![ typically have one header row and/or one header column](img-simple.png){:style="float:left; clear:left; margin-right: .5em;"}](simple.html):** Identify the topic of a row or column and denote those header cells with `<th>` elements in the markup.
 
--   **[Complex Irregular Tables](irregular.html):** For tables where identifying header cells programmatically is not easy, they can be defined using the `scope` attribute:
+-   **[Complex Irregular Tables![ have some kind of heading cell or row that is expected at a different location](img-irreg.png){:style="float:left; clear:left; margin-right: .5em;"}](irregular.html):**  For tables where identifying header cells programmatically is not easy, they can be defined using the `scope` attribute.
 
-    ![Schematic table with arrows pointing at the cells affected by the scope value](img-irreg.png)
-
--   **[Complex Multi-level tables](multi-level.html):** If the table structure is so complex that a data cell needs to reference several levels of header cells, each header cell is assigned an `id` and each data cell a `headers` attribute that lists all relevant header cell `id` values.
+-   **[Complex Multi-level tables![ have multiple header cells per data cell, most of the time header cells have to be associated explicitly to the table cell.](img-multi.png){:style="float:left; clear:left; margin-right: .5em;"}](multi-level.html):** If the table structure is so complex that a data cell needs to reference several levels of header cells, each header cell is assigned an `id` and each data cell a `headers` attribute that lists all relevant header cell `id` values.
 
 -   **[Captions & Summary](caption-summary.html):** Most tables benefit from the use of a caption to describe the overall topic of a table, and summaries to provide orientation or navigation hints in complex tables.
+{:.nobullets}
+
 
 {::nomarkdown}
 <%= notes_start %>
