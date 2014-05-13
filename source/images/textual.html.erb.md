@@ -222,7 +222,7 @@ Images of math expressions should only be used in *exceptional circumstances* â€
 	</div>
 </aside>
 
-If math forms are a substantial part of the page or website content, [Math ML](http://www.w3.org/Math/) should be used instead.  Math ML represents both presentation and content semantically, making it more accessible to a wider range of users.  Many assistive technologies can interpret the code.
+If math forms are a substantial part of the page or website content, [MathML](http://www.w3.org/Math/) should be used instead.  MathML represents both presentation and content semantically, making it more accessible to a wider range of users.  Many assistive technologies can interpret the code.
 
 The simple example above illustrates the difficulty of describing both the content and presentation (the position and location of the over-line) in mathematical expressions succinctly and clearly. For more complex expressions or equations, image text alternatives are unlikely to provide sufficient detail succinctly.
 
