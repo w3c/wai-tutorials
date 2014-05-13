@@ -19,6 +19,8 @@ type: tips
         ![On the left, a table with two columns is shown. The header for the first column reads “Shirt” and the header for the second column reads “Sizes and amount in stock”. The second row reads “Blue” in the first column and “S: 6; M: 13, XL: 10”. In the second row, Sizes for a “Red” shirt are “M: 2; L: 9; XL: 10; XXL: 1”. On the right the table is split up in “Shirt”, “Size” and “Stock” columns.](headers-in-one-column-all-data-in-second.png)
 
     2. You should not use line breaks (`<br>`) to create table rows as the data in the pseudo-rows may no longer align correctly when resizing the text.
+    
+         ![On the top there is a table where the content and header cells are not marked up correctly. Line breaks are usedto make items look like they align correctly. When resizing the text (bottom) the items don’t like up anymore](table-text-resize.png)
 
 -   **Alignment:** Align text to the left and financial data to the right, so that people using screen magnification, larger text sizes or smaller screens will be able to find it, especially when a cell spans more than one column. It’s  helpful to give column headings the same alignment as the data in the cells below.
 
