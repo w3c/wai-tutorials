@@ -2,6 +2,9 @@
 title: Images of Text
 status: draft
 technologies: WAI-ARIA, HTML5, CSS Transforms, CSS Fonts, MathML
+wcag_techniques: 
+  - C22
+  - G94
 order: 5
 ---
 
@@ -267,9 +270,3 @@ The simple example above illustrates the difficulty of describing both the conte
 {::nomarkdown}
 <%= notes_end %>
 {:/nomarkdown}
-
-## Related WCAG2.0 Techniques
-
--   [G94: Providing short text alternative for non-text content](http://www.w3.org/TR/2012/NOTE-WCAG20-TECHS-20120103/G95) that serves the same purpose and presents the same information as the non-text content
--   [C22: Using CSS to control visual presentation of text](http://www.w3.org/TR/2013/NOTE-WCAG20-TECHS-20130905/C22)
-

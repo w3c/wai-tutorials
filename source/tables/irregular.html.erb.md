@@ -3,6 +3,8 @@ title: Irregular Tables
 nav_title: "Complex: Irregular"
 status: editors-draft
 technologies: HTML5
+wcag_techniques:
+  - H63
 order: 3
 ---
 
@@ -272,9 +274,3 @@ In this example, some of the header cells span multiple rows or columns: the “
 {:/nomarkdown}
 
 [Full code for “Table with headers spanning multiple rows or columns”](examples/scope-multiple.html)
-
-## Related WCAG2.0 Techniques
-
-The following WCAG 2.0 technique was used in the examples above:
-
--   [H63: Using the scope attribute to associate header cells and data cells in data tables](http://www.w3.org/TR/WCAG20-TECHS/H63.html)

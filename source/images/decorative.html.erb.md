@@ -2,6 +2,9 @@
 title: Decorative Images
 status: draft
 technologies: WAI-ARIA, HTML5
+wcag_techniques: 
+  - H2
+  - H67
 order: 3
 ---
 
@@ -192,8 +195,3 @@ This image is used to add ambience or visual interest to the page.
 {::nomarkdown}
 <%= notes_end %>
 {:/nomarkdown}
-
-## Related WCAG2.0 Techniques
-
--   [H67: Using null alt text and no title attribute on img elements for images that AT should ignore](http://www.w3.org/TR/2012/NOTE-WCAG20-TECHS-20120103/H67)
--   [H2: Combining adjacent image and text links for the same resource.](http://www.w3.org/TR/2012/NOTE-WCAG20-TECHS-20120103/H2)

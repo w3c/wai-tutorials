@@ -2,6 +2,9 @@
 title: Informative Images
 status: draft
 technologies: HTML5
+wcag_techniques: 
+  - H37
+  - G94
 order: 2
 ---
 
@@ -211,10 +214,3 @@ type for each link:
 {::nomarkdown}
 <%= notes_end %>
 {:/nomarkdown}
-
-## Related WCAG2.0 Techniques
-
-The following WCAG 2.0 techniques were used in the examples above:
-
--   [H37: Using alt attributes on img elements](http://www.w3.org/TR/2012/NOTE-WCAG20-TECHS-20120103/H37.html)
--   [G94: Providing short text alternative for non-text content that serves the same purpose and presents the same information as the non-text content](http://www.w3.org/TR/WCAG20-TECHS/G94.html)

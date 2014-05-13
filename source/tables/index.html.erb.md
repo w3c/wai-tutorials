@@ -1,6 +1,8 @@
 ---
 title: Tables Concepts
 tutorial_title: Tables
+wcag_success_criteria: 
+  - 1.3.1
 status: editors-draft
 order: 1
 topic_order: 2
@@ -43,11 +45,3 @@ Some people can determine the header cells of tabular data from the visual cues.
 Accessible tables have their header cells marked up using `<th>` and their data cells marked up using `<td>`. For more complex tables, explicit associations may be needed using `scope` or `id` and `headers` attributes, so that they can be interpreted by assistive technologies.
 
 The structural coding can also be used to represent data in different ways, for example by larger or differently colored text or backgrounds, Braille, speech and symbols. Many web authoring tools and content management systems (CMS) provide functions to define header cells during table creation without having to manually edit the code.
-
-
-## Relationship to WCAG 2.0
-
-Accessible tables are required by the following WCAG 2.0 Success Criterion:
-
--   [1.3.1 Info and Relationships](http://www.w3.org/WAI/WCAG20/quickref/#qr-content-structure-separation-programmatic): Information, structure, and relationships conveyed through presentation can be programmatically determined or are available in text. (Level A)
-

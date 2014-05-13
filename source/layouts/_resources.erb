@@ -1,0 +1,29 @@
+<% if (current_page.data.wcag_success_criteria || current_page.data.wcag_techniques) %>
+<div role="techniques">
+  <h2 id="related">Related WCAG2.0 Resources</h2>
+  <% if current_page.data.wcag_success_criteria %>
+    <p><strong>Success Criteria:</strong></p>
+    <ul>
+      <% data.wcag.successcriteria.each do |f| %>
+        <% f.each do |key, value| %>
+          <% if current_page.data.wcag_success_criteria.index(key) %>
+            <li><a href="http://www.w3.org/WAI/WCAG20/quickref/#qr-<%=value.slug%>"><%=key%>: <%=value.title%></a> <%=value.desc%> (Level: <%=value.level%>)</li>
+          <% end %>
+        <% end %>
+      <% end %>
+    </ul>
+  <% end %>
+  <% if current_page.data.wcag_techniques %>
+    <p><strong>Techniques:</strong></p>
+    <ul>
+      <% data.techniques.techniques.each do |f| %>
+        <% f.map do |key, value| %>
+          <% if current_page.data.wcag_techniques.index(key) %>
+            <li><a href="http://www.w3.org/TR/WCAG20-TECHS/<%=key%>"><%=key%>: <%=value%></a></li>
+          <% end %>
+        <% end %>
+      <% end %>
+    </ul>
+  <% end %>
+</div>
+<% end %>

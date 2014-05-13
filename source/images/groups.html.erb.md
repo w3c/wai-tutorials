@@ -2,6 +2,9 @@
 title: Groups of Images
 status: draft
 technologies: WAI-ARIA, HTML5
+wcag_techniques: 
+  - G196
+  - H67
 order: 7
 ---
 
@@ -115,10 +118,3 @@ alt="The castle lies in ruins, the original tower all that remains in one piece.
 {::nomarkdown}
 <%= notes_end %>
 {:/nomarkdown}
-
-## Related WCAG2.0 Techniques
-
-The following WCAG 2.0 techniques were used in the examples above:
-
--   [G196: Using a text alternative on one item within a group of images that describes all items in the group](http://www.w3.org/TR/2012/NOTE-WCAG20-TECHS-20120103/G196)
--   [H67: Using null alt text and no title attribute on img elements for images that AT should ignore](http://www.w3.org/TR/2012/NOTE-WCAG20-TECHS-20120103/H67.html)

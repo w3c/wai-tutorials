@@ -3,6 +3,8 @@ title: Multi-level Tables
 nav_title: "Complex: Multi-level"
 status: editors-draft
 technologies: HTML5
+wcag_techniques: 
+  - H43
 order: 4
 ---
 
@@ -458,9 +460,3 @@ It's often possible to split complex tables up into simpler ones, which allows t
 
 <%= sample_end %>
 {:/nomarkdown}
-
-## Related WCAG2.0 Technique
-
-The following WCAG 2.0 technique was used in the examples above:
-
--   [H43: Using id and headers attributes to associate data cells with header cells in data tables](http://www.w3.org/TR/WCAG20-TECHS/H43.html)

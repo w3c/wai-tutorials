@@ -2,6 +2,9 @@
 title: Caption & Summary
 status: editors-draft
 technologies: HTML4, HTML5, WAI-ARIA
+wcag_techniques: 
+  - H73
+  - H39
 order: 5
 ---
 
@@ -413,10 +416,3 @@ By using an HTML5 `<figure>` element, the association between the caption/summar
 {::nomarkdown}
 <%= code_end %>
 {:/nomarkdown}
-
-## Related WCAG2.0 Techniques
-
-The following WCAG 2.0 technique was used in the example above:
-
--   [H39: Using caption elements to associate data table captions with data tables](http://www.w3.org/TR/WCAG20-TECHS/H39)
--   [H73: Using the summary attribute of the table element](http://www.w3.org/TR/WCAG20-TECHS/H73)

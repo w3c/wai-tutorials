@@ -2,6 +2,9 @@
 title: Image Maps
 status: draft
 technologies: HTML5
+wcag_techniques: 
+  - H37
+  - H24
 order: 8
 ---
 

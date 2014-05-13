@@ -2,6 +2,12 @@
 title: Complex Images
 status: draft
 technologies: WAI-ARIA, HTML5
+wcag_techniques: 
+  - G95
+  - G92
+  - H45
+  - G73
+  - G74
 order: 6
 ---
 
@@ -195,13 +201,3 @@ The WAI-ARIA `aria-described-by` attribute can be used to link the description t
 {::nomarkdown}
 <%= code_end %>
 {:/nomarkdown}
-
-## Related WCAG2.0 Techniques
-
-The following WCAG 2.0 techniques were used in the examples above:
-
--   [G95: Providing short text alternatives that provide a brief description of the non-text content](http://www.w3.org/TR/WCAG20-TECHS/G95.html)
--   [G92: Providing long description for non-text content that serves the same purpose and presents the same information](http://www.w3.org/TR/WCAG20-TECHS/G92.html)
--   [H45: Using longdesc](http://www.w3.org/TR/WCAG20-TECHS/H45.html)
--   [G73: Providing a long description in another location with a link to it that is immediately adjacent to the non-text content](http://www.w3.org/TR/WCAG20-TECHS/G73.html)
--   [G74: Providing a long description in text near the non-text content, with a reference to the location of the long description in the short description](http://www.w3.org/TR/WCAG20-TECHS/G74.html)

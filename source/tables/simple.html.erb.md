@@ -3,15 +3,15 @@ title: Simple Tables
 status: editors-draft
 technologies: HTML5
 order: 2
+wcag_techniques: 
+  - H51
 ---
 
 A simple table has one header row and/or header column.
 
-Use header cell elements (`<th>`) to markup the header cells so that they are distinguishable from data cells and associated with the correct data cells.
-For example, in the second table below "Closed" is meaningless on its own, but makes sense when it is associated
-with the time (the row header) and the date (the column header).
+Use header cell elements (`<th>`) to markup the header cells so that they are distinguishable from data cells and associated with the correct data cells. For example, in the [second table below](#table-with-header-cells-in-the-top-row-and-first-column) “Closed” is meaningless on its own, but makes sense when it’s associated with time (the row header) and day (the column header).
 
-Additionally, `<caption>` elements may be used to identify a table in the document which is a way for meeting WCAG 2.0 requirements in [specific situations](caption-summary.html).
+Additionally, `<caption>` elements may be used to identify a table in the document. That’s a way for meeting WCAG 2.0 requirements in [specific situations](caption-summary.html).
 
 ## Table with header cells in the top row only
 {:.ex}
@@ -167,9 +167,3 @@ This table of opening times has header information contained in both the top row
 {:/nomarkdown}
 
 [Full code for “Table with header cells in the top row and first column”](examples/headertoprowfirstcol.html)
-
-## Related WCAG2.0 Techniques
-
-The following WCAG 2.0 technique was used in the examples above:
-
--   [H51: Using table markup to present tabular data](http://www.w3.org/TR/WCAG20-TECHS/H51)

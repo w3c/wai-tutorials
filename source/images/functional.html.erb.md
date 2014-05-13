@@ -2,6 +2,9 @@
 title: Functional Images
 status: draft
 technologies: HTML5
+wcag_techniques: 
+  - H37
+  - H36
 order: 4
 ---
 
@@ -201,10 +204,3 @@ The following image is used to give the button a distinct style. In this case it
 {::nomarkdown}
 <%= code_end %>
 {:/nomarkdown}
-
-## Related WCAG2.0 Techniques
-
-The following WCAG 2.0 techniques were used in the examples above:
-
--   [H37: Using alt attributes on img elements](http://www.w3.org/TR/2012/NOTE-WCAG20-TECHS-20120103/H37.html)
--   [H36: Using alt attributes on images used as submit buttons](http://www.w3.org/TR/2012/NOTE-WCAG20-TECHS-20120103/H36.html)
