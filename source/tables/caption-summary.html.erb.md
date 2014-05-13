@@ -267,7 +267,7 @@ The summary is available to visual users as well.
 <%= notes_start %>
 {:/nomarkdown}
 
-**Note: The technique used in this approach is only valid in HTML5.**
+**Note: The technique used in this approach is only valid in HTML5.** This WAI-ARIA feature may not be as widely supported as other approaches for summaries on this page.
 
 {::nomarkdown}
 <%= notes_end %>
@@ -277,7 +277,7 @@ The summary is available to visual users as well.
 <%= sample_start %>
 
 
-<p id="tblDesc" style="margin: 0 auto; max-width: 25.333333333em; font-size: .75em; lin-height: 1.5;">Column one has the location and size of accommodation, other columns show the type and number of properties available.</p>
+<p id="tblDesc" style="max-width: 25.333333333em; font-size: .75em; lin-height: 1.5;">Column one has the location and size of accommodation, other columns show the type and number of properties available.</p>
 <table aria-describedby="tblDesc" tabindex="0">
   <caption style="text-align: left;">
     Paris: Availability of holiday accommodation<br>
@@ -346,12 +346,13 @@ The summary is available to visual users as well.
 <%= notes_end %>
 {:/nomarkdown}
 
+By using an HTML5 `<figure>` element, the association between the caption/summary is indirectly applied to the table. Screen reader users navigating from table to table probably won’t get the context from the caption/summary. You can explicitly associate the `<figcaption>` to the table by using the `aria-labelledby` and/or `aria-describedby` attributes.
+
 {::nomarkdown}
 <%= sample_start %>
 
-
 <figure>
-  <figcaption style="max-width: 19em; margin: 0 auto; color: inherit;">
+  <figcaption style="max-width: 19em; color: inherit;">
     <strong>Paris: Availability of holiday accommodation</strong><br>Column one has the location and size of accommodation, other columns show the type and number of properties available.
   </figcaption>
   <table>
