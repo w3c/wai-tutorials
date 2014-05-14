@@ -306,7 +306,7 @@ It's often possible to split complex tables up into simpler ones, which allows t
 
 {::nomarkdown}
 <%= sample_start %>
-<p style="text-align:center;"><strong>Availability of holiday accommodation</strong></p>
+<p><strong>Availability of holiday accommodation</strong></p>
 <table summary="Column one has the location and size of accommodation, other columns show the type and number of properties available">
 <caption>
     Paris
