@@ -1,7 +1,7 @@
 ---
-title: Complete “Table with header cells in one column only” Example
-source: ../ambiguous.html#table-with-headers-spanning-multiple-rows-or-columns
+title: Complete “Table with headers spanning multiple rows or columns” Example
 status: draft
+source: ../irregular.html#table-with-headers-spanning-multiple-rows-or-columns
 layout: fullcode
 ---
 

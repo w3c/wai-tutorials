@@ -1,7 +1,7 @@
 ---
-title: Complete “Table with header cells in one column only” Example
-source: ../ambiguous.html#table-with-an-offset-internal-column-of-header-cells
+title: Complete “Table with an offset column of header cells” Example
 status: draft
+source: ../irregular.html#table-with-an-offset-column-of-header-cells
 layout: fullcode
 ---
 

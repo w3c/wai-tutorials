@@ -1,7 +1,7 @@
 ---
 title: Complete “Table with header cells in one column only” Example
-source: ../ambiguous.html#table-with-header-cells-in-one-column-only
 status: draft
+source: ../irregular.html#table-with-header-cells-in-one-column-only
 layout: fullcode
 ---
 
