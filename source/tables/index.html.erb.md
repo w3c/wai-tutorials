@@ -3,7 +3,7 @@ title: Tables Concepts
 tutorial_title: Tables
 wcag_success_criteria: 
   - 1.3.1
-status: editors-draft
+status: draft
 order: 1
 topic_order: 2
 type: intro

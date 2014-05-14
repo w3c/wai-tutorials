@@ -1,6 +1,6 @@
 ---
 title: Caption & Summary
-status: editors-draft
+status: draft
 technologies: HTML4, HTML5, WAI-ARIA
 wcag_techniques: 
   - H73

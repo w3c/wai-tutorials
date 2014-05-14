@@ -1,7 +1,7 @@
 ---
 title: Irregular Tables
 nav_title: "Complex: Irregular"
-status: editors-draft
+status: draft
 technologies: HTML5
 wcag_techniques:
   - H63

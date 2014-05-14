@@ -1,6 +1,6 @@
 ---
 title: Complete “Table with three headers related to each data cell” Example
-status: editors-draft
+status: draft
 source: ../multi-level.html#table-with-three-headers-related-to-each-data-cell
 layout: fullcode
 ---

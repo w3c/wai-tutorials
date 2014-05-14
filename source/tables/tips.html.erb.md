@@ -1,7 +1,7 @@
 ---
 title: Tips and Frequently Asked Questions (FAQ)
 nav_title: Tips and FAQ
-status: editors-draft
+status: draft
 order: 6
 type: tips
 ---

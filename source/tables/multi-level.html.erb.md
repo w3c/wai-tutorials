@@ -1,7 +1,7 @@
 ---
 title: Multi-level Tables
 nav_title: "Complex: Multi-level"
-status: editors-draft
+status: draft
 technologies: HTML5
 wcag_techniques: 
   - H43

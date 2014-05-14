@@ -1,6 +1,6 @@
 ---
 title: Simple Tables
-status: editors-draft
+status: draft
 technologies: HTML5
 order: 2
 wcag_techniques: 
