@@ -1,6 +1,6 @@
 ---
-title: Tables Concepts
-tutorial_title: Tables
+title: Tables Concepts (alt alt alt)
+tutorial_title: Tables (alt alt alt)
 wcag_success_criteria: 
   - 1.3.1
 status: draft
@@ -18,7 +18,6 @@ Data tables need structural markup to distinguish between header and data cells 
 -   **[Complex Multi-level tables![ have multiple header cells per data cell, most of the time header cells have to be associated explicitly to the table cell.](img-multi.png){:style="float:left; clear:left; margin-right: .5em;"}](multi-level.html):** If the table structure is so complex that a data cell needs to reference several levels of header cells, each header cell is assigned an `id` and each data cell a `headers` attribute that lists all relevant header cell `id` values.
 
 -   **[Captions & Summary](caption-summary.html):** Most tables benefit from the use of a caption to describe the overall topic of a table, and summaries to provide orientation or navigation hints in complex tables.
-
 
 {::nomarkdown}
 <%= notes_start %>
