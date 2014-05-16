@@ -25,7 +25,7 @@ Data tables need structural markup to distinguish between header and data cells 
 <%= notes_start %>
 {:/nomarkdown}
 
-**Note:** The techniques in this tutorial should be applied only when a table is being used to display _data_ in a grid and don’t apply to presentational (layout) tables. You shouldn’t use tables for layout purposes. Instead, use Cascading Style Sheets (CSS) for visual presentation.
+**Note:** The techniques in this tutorial should be applied only when a table is being used to display _data_ in a grid; these techniques don’t apply to layout tables. You shouldn’t use tables for layout purposes. Instead, use Cascading Style Sheets (CSS) for visual presentation.
 
 {::nomarkdown}
 <%= notes_end %>
@@ -38,10 +38,10 @@ Some people can determine the header cells of tabular data from the visual cues.
 
 -   **People using a screen reader** can have the row and column headers read aloud as they navigate through the table. Screen readers speak one cell at a time and can only distinguish header cells from data cells if they are properly marked up.
 
--   **People using user stylesheets** can have header cells more prominently styled for easy recognition when there is a difference between the elements used for header and data cells.
+-   **People using user stylesheets** can style the header cells and data cells differently to make them easier to distinguish.
 
 ## How to make tables accessible
 
-Accessible tables have their header cells marked up using `<th>` and their data cells marked up using `<td>`. For more complex tables, explicit associations may be needed using `scope` or `id` and `headers` attributes, so that they can be interpreted by assistive technologies.
+Accessible tables have their header cells marked up with `<th>` and their data cells marked up with `<td>`. For more complex tables, explicit associations may be needed using `scope` or `id` and `headers` attributes, so that they can be interpreted by assistive technologies.
 
-The structural coding can also be used to represent data in different ways, for example by larger or differently colored text or backgrounds, Braille, speech and symbols. Many web authoring tools and content management systems (CMS) provide functions to define header cells during table creation without having to manually edit the code.
+The structural coding can also be used to represent data in different ways, for example, by larger or different colored text or backgrounds, Braille, speech, and symbols. Many web authoring tools and content management systems (CMS) provide functions to define header cells during table creation without having to manually edit the code.
