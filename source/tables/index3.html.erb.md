@@ -1,6 +1,6 @@
 ---
 title: Tables Concepts (alt alt)
-tutorial_title: Tables
+tutorial_title: Tables (alt alt)
 wcag_success_criteria: 
   - 1.3.1
 status: draft
