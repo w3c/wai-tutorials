@@ -39,13 +39,13 @@ type: tips
 
 ## Frequently Asked Questions
 
--   **My site uses a table layout for pages, a complete redesign using CSS layout is planned for next year. Is there something I can do right now to make the layout tables more accessible?**
+-   **My site uses a table layout for pages. A complete redesign using CSS layout is planned for next year. Is there something I can do right now to make the layout tables more accessible?**
 
     Yes there is. You can give the `<table>` element a WAI-ARIA `role` attribute of `presentation` (`role="presentation"`). This will hide the table markup from most screen readers and browsers that support WAI-ARIA.
 
 -   **I’ve used CSS to give a different background color for odd and even rows in my tables. Is this OK?**
 
-    It certainly is, this can be a real help to people with reading difficulties or who use screen magnification to enlarge text. It acts as a visual guide, as well as looking cool. You could even consider highlighting the cell (and row/column) on mouseover and keyboard focus to help people see where they are. Make sure that the contrast ratio (“color contrast”) is good for both color combinations though. [Here is how to check your contrast ratio.](http://www.w3.org/WAI/eval/preliminary#contrast)
+    It certainly is. This can be a real help to people who have reading difficulties or who use screen magnification to enlarge text. It acts as a visual guide, as well as looking cool. You could even consider highlighting the cell (and row/column) on mouseover and keyboard focus to help people see where they are. Make sure that the contrast ratio (“color contrast”) is good for both color combinations though. [Here is how to check your contrast ratio.](http://www.w3.org/WAI/eval/preliminary#contrast)
 
 ## Other W3C Resources
 
