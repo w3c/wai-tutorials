@@ -9,7 +9,7 @@ topic_order: 2
 type: intro
 ---
 
-Data tables need structural markup to distinguish between header and data cells and define the relationships between them. This tutorial shows you how to apply appropriate structural markup to tables. It includes the following pages:
+Data tables need special HTML markup that shows the difference between header and data cells and also ties the two together. This tutorial shows you how to apply appropriate structural markup to tables. It includes the following pages:
 
 -   **[Simple tables![ typically have one header row and/or one header column](img-simple.png){:style="float:left; clear:left; margin-right: .5em;"}](simple.html):** Identify the topic of a row or column and denote those header cells with `<th>` elements in the markup.
 
