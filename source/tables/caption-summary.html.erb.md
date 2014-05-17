@@ -18,18 +18,18 @@ Captions and summaries provide information that can help navigate and understand
 
   Summaries are recommended in WCAG 2.0 technique [H73: Using the summary attribute of the table element to give an overview of data tables](http://www.w3.org/TR/WCAG20-TECHS/H73).
 
-If both caption and summary are provided in one table, the summary should not duplicate the caption.
+If both caption and summary are provided for one table, the summary should not duplicate the caption.
 
 ## Identifying a table using a caption
 {:.ex}
 
-If used, the caption should be a succinct description of the content of the table. In this example “Concert dates” tells users what information the table contains as the table otherwise may be ambiguous and could also apply to an art exhibition, for example.
+If used, the caption should be a succinct description of the content of the table. In this example “Concerts” tells users what information the table contains as the table otherwise may be ambiguous and could also apply to an art exhibition, for example.
 
 {::nomarkdown}
 <%= sample_start %>
 
 <table>
-  <caption>Concert dates</caption>
+  <caption>Concerts</caption>
   <tr>
     <th>Date</th>
     <th>Event</th>
@@ -61,7 +61,7 @@ If used, the caption should be a succinct description of the content of the tabl
 
 ~~~ html
 <table>
-  <caption>Concert dates</caption>
+  <caption>Concerts</caption>
   <tr>
     <td>12 Feb</td>
     <td>Waltz with Strauss</td>
@@ -83,7 +83,7 @@ If used, the caption should be a succinct description of the content of the tabl
 ## Summaries for more complex tables
 {:.ex}
 
-In HTML4 (and XHTML 1.x) the description can be marked up using the `summary` attribute of the `<table>` element, but as this is made obsolete in HTML5, the approaches in this section show how to put the description within the `<caption>` element and using the WAI-ARIA `aria-describedby` attribute or the `<figure>` element for the summary.
+In HTML4 (and XHTML 1.x) the description can be marked up using the `summary` attribute of the `<table>` element. It’s obsolete in HTML5. The other approaches below show how to put the description in the `<caption>` element, and use the WAI-ARIA `aria-describedby` attribute or the `<figure>` element for the summary.
 
 ### Using the `summary` attribute
 {:.ap}
@@ -98,7 +98,7 @@ In HTML4 (and XHTML 1.x) the description can be marked up using the `summary` at
 <%= notes_end %>
 {:/nomarkdown}
 
-This table has an unusual table structure, the days of the week are in the center column, morning times to the left and afternoon times to the right. It has the `summary` attribute “Days are shown in the second column, morning opening hours in the first column and afternoon opening hours are in the third column”, explaining the way the table is laid out.
+This table has an unusual table structure: the days of the week are in the center column, morning times to the left, and afternoon times to the right. It has the `summary` attribute “Days are in the second column, morning opening hours in the first column, and afternoon opening hours are in the third column”, explaining the way the table is laid out.
 
 The content of the summary attribute is not available to visual users.
 

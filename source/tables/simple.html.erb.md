@@ -16,12 +16,12 @@ Additionally, `<caption>` elements may be used to identify a table in the docume
 ## Table with header cells in the top row only
 {:.ex}
 
-This table of concert dates only needs the cells in the top row marked up as `<th>` cells. This is partly because it is such a small table and partly because the data itself is distinctly different in each column.
+This table of concerts only needs the cells in the top row marked up as `<th>` cells. This is partly because it is such a small table and partly because the data itself is distinctly different in each column.
 
 {::nomarkdown}
 <%= sample_start %>
 
-<p><strong>Concert dates:</strong></p>
+<p><strong>Concerts:</strong></p>
 <table>
 	<tr>
 		<th>Date</th>

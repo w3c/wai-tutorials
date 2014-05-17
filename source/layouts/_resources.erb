@@ -7,7 +7,7 @@
       <% data.wcag.successcriteria.each do |f| %>
         <% f.each do |key, value| %>
           <% if current_page.data.wcag_success_criteria.index(key) %>
-            <li><a href="http://www.w3.org/WAI/WCAG20/quickref/#qr-<%=value.slug%>"><%=key%>: <%=value.title%></a> <%=value.desc%> (Level: <%=value.level%>)</li>
+            <li><a href="http://www.w3.org/WAI/WCAG20/quickref/#qr-<%=value.slug%>"><%=key%> <%=value.title%>:</a> <%=value.desc%> (Level <%=value.level%>)</li>
           <% end %>
         <% end %>
       <% end %>

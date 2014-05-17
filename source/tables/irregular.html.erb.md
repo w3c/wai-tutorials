@@ -84,7 +84,7 @@ This example has `<th>` elements for all cells in the left column of a table. Th
 ## Table with an offset column of header cells
 {:.ex}
 
-In this table the row header cells are in the second column rather than the first. The `scope` values `row` and has been used on the `<th>` cells in the second column to ensure that data cells in the first column, as well as those in cells to the right of the headers are correctly associated.
+In this table, the row header cells are in the second column rather than the first. The `<th>` cells in the second column have `scope="row"`  to ensure that data cells in the first columnand the data cells to the right of the headers are correctly associated.
 
 {::nomarkdown}
 <%= sample_start %>

@@ -18,7 +18,7 @@ In many cases it is worth considering ways to restructure the information to the
 ## Table with multiple column headers in each column
 {:.ex}
 
-This table shows contact details for six suppliers. To avoid producing an overly wide table the first row has `<th>` cells identifying the first three supply firms and the fourth row has the `<th>` cells identifying the other three. To ensure that data cells are associated with the correct firm, each `<th>` cell has a unique `id` and each `<td>` cell has a headers attribute listing the `id` values that relate to it.
+This table shows contact details for six suppliers. To avoid producing an overly wide table, the first row has `<th>` cells identifying the first three supply firms and the fourth row has the `<th>` cells identifying the other three. To ensure that data cells are associated with the correct firm, each `<th>` cell has a unique `id` and each `<td>` cell has a headers attribute listing the `id` values that relate to it.
 
 {::nomarkdown}
 <%= sample_start %>
@@ -120,7 +120,7 @@ This table shows contact details for six suppliers. To avoid producing an overly
 {:.ex}
 
 This example shows availability of accommodation of a given type and size in two different locations. For the data to be understood, each
-`<td>` cell needs to be associated to three `<td>` cells (location, size and type of accommodation). To define these complex associations, each `<th>` cell has a unique `id` attribute and all data cells have a `headers` attribute listing the related cell `id` values.
+`<td>` cell needs to be associated to three `<td>` cells (location, size, and type of accommodation). To define these complex associations, each `<th>` cell has a unique `id` attribute and all data cells have a `headers` attribute listing the related cell `id` values.
 
 {::nomarkdown}
 <%= sample_start %>
