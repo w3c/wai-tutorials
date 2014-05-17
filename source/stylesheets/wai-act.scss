@@ -80,6 +80,19 @@ ul {
 			list-style: none;
 		}
 	}
+	&.withicons {
+		padding-left: 80px;
+		li {
+			float:left;
+			width: 100%;
+		}
+		img {
+			margin-left: -80px;
+			margin-bottom: .5em;
+			float: left;
+			clear: left;
+		}
+	}
 }
 
 .ex, .ap {
