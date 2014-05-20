@@ -15,6 +15,6 @@ Welcome to the web accessibility tutorials. We’ve designed these tutorials to 
 * **Project managers** will gain understanding of accessibility approaches to help with project planning.
 * Whatever your role is, **you**’ll find valuable resources.
 
-The tutorials introduce accessibility topics, including advanced aspects. They are a good starting point for learning and addressing WCAG. To ensure that you meet the WCAG requirements, you will still have to use WCAG resources directly.
+The tutorials cover various accessibility topics, including some advanced concepts. We've designed them as way to start learning and addressing WCAG. If you want to be sure that you meet WCAG requirements, you'll of course need to use WCAG resources directly.
 
-Most of the examples are HTML-based and the underlying principles apply to other formats as well.
+Most examples are HTML-based, though the underlying principles apply to other formats as well.
