@@ -133,7 +133,6 @@ header[role=banner] {
 	@include container();
 	border-top: 5px solid #930;
 	div {
-		background-color: #005A9C;
 		margin: 0 auto;
 		@include mq($medium) {
 			float: right;
@@ -142,14 +141,11 @@ header[role=banner] {
 	img {
 		display:inline-block;
 		vertical-align: middle;
-		background: #2471AA;
 	}
 	a {
 			text-decoration: none;
 			display: inline-block;
 			&:hover, &:focus {text-decoration: underline;}
-	}
-	.wai {
 	}
 }
 
