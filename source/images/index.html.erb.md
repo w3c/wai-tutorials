@@ -21,7 +21,7 @@ Every image should have a *text alternative* that provides an equivalent alterna
 
 -   **[Groups of images](groups.html)** used to convey a single piece of information: The text alternative for one item should convey the information conveyed by the entire group.
 
--   **[Image maps](imagemap.html)** that contain multiple clickable areas: The text alternative for the image as a whole should provide an overall context for the links, and text alternatives for the clickable areas need to describe the purpose or destination of the links.
+-   **[Image maps](imagemap.html)** that contain multiple clickable areas: The text alternative for the image as a whole should provide an overall context for the links, and text alternatives for the clickable areas should describe the purpose or destination of the links.
 
 ## Why is this important?
 

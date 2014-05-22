@@ -10,7 +10,7 @@ order: 3
 
 Decorative images don’t add information to the content of a page. For example, the information provided by the image might already be given using adjacent text or the image might be included for visual interest only. 
 
-In these cases, a null (empty) `alt` text needs to be provided (`alt=""`) so that they can be ignored by assistive technologies such as screen readers. Text values for this type of images would add audible clutter to screen reader output or could distract users if the topic is different from that in adjacent text.
+In these cases, a null (empty) `alt` text should be provided (`alt=""`) so that they can be ignored by assistive technologies such as screen readers. Text values for this type of images would add audible clutter to screen reader output or could distract users if the topic is different from that in adjacent text.
 
 If the `alt` attribute is not used at all some screen readers will announce the image’s file name. Whether to treat an image as decorative or [informative](informative.html) is a judgement that only the author can make, based on the reason for including the image on the page. Images may be decorative when they are:
 
@@ -131,8 +131,7 @@ does not add visual information to the link.
 {:.ex}
 
 This picture of “Poppy the guide dog” is already identified by the
-adjacent caption. The caption acts as the text alternative, so does not need
-to be repeated in the `alt` attribute.
+adjacent caption. The caption acts as the text alternative and should not be repeated in the `alt` attribute.
 
 {::nomarkdown}
 <%= sample_start %>
@@ -190,7 +189,7 @@ This image is used to add ambience or visual interest to the page.
 <%= notes_start %>
 {:/nomarkdown}
 
-**Note:** If the purpose of this image was to identify a plant or convey other information, rather than to just improve the look of the page, it should probably be treated as [informative](informative.html). The purpose for using the image needs to be determined by the author.
+**Note:** If the purpose of this image was to identify a plant or convey other information, rather than to just improve the look of the page, it should probably be treated as [informative](informative.html). The author determines the purpose for the use of the image.
 
 {::nomarkdown}
 <%= notes_end %>

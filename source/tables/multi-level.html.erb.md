@@ -8,7 +8,7 @@ wcag_techniques:
 order: 4
 ---
 
-Multi-level tables are those that have a structure that is too complex to support strict horizontal or vertical association between header and data cells. In each case, the relationship between header and data cells needs to be defined by giving each `<th>` cell a unique id attribute, and each `<td>` a headers attribute that lists related id values, without any comma separation. Table structures that need to be marked up this way include:
+Multi-level tables are those that have a structure that is too complex to support strict horizontal or vertical association between header and data cells. In each case, the relationship between header and data cells should be defined by giving each `<th>` cell a unique id attribute, and each `<td>` a headers attribute that lists related id values, without any comma separation. Table structures that should be marked up this way include:
 
 -   Where column headers are repeated or changed part-way through the table.
 -   Those with three or more header cells related to each data cell.
@@ -120,7 +120,7 @@ This table shows contact details for six suppliers. To avoid producing an overly
 {:.ex}
 
 This example shows availability of accommodation of a given type and size in two different locations. For the data to be understood, each
-`<td>` cell needs to be associated to three `<td>` cells (location, size, and type of accommodation). To define these complex associations, each `<th>` cell has a unique `id` attribute and all data cells have a `headers` attribute listing the related cell `id` values.
+`<td>` cell should be associated to three `<td>` cells (location, size, and type of accommodation). To define these complex associations, each `<th>` cell has a unique `id` attribute and all data cells have a `headers` attribute listing the related cell `id` values.
 
 {::nomarkdown}
 <%= sample_start %>

@@ -8,11 +8,11 @@ wcag_techniques:
 order: 4
 ---
 
-Users can interact with functional images, for example if they are used as buttons or within links. The text alternative for the image needs to convey the action that will be initiated (the purpose of the image), rather than a description of the image. 
+Users can interact with functional images, for example if they are used as buttons or within links. The text alternative for the image should convey the action that will be initiated (the purpose of the image), rather than a description of the image. 
 
 For instance, as shown in examples below, the text alternative should be “print this page” rather than “(image of a) printer”, “search” rather than “magnifying lens” or “Example.com homepage” rather than “Example.com logo”.
 
-If images act as stand alone links, they need to have the appropriate text value in their `alt` attributes. Missing or empty `alt` values create real problems for screen reader users as links cannot be ignored. The screen reader will announce the image filepath or the URL for the destination page which won’t help users know where the link leads to.
+Images acting as stand alone links should have the appropriate text value in the `alt` attribute. Missing or empty `alt` values create real problems for screen reader users as links cannot be ignored. The screen reader will announce the image filepath or the URL for the destination page which won’t help users know where the link leads to.
 
 ## Image used alone as a linked logo
 {:.ex}

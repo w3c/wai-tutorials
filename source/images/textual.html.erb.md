@@ -44,7 +44,7 @@ This slogan image contains text with decorative effects that used to be impossib
 <aside class="annotation">
 	<h4 class="annotation-header">Modern Browsers</h4>
 	<div class="annotation-content">
-		<p>To display the full effect the browser needs to support the following web technologies:</p>
+		<p>To display the full effect the browser is required to support the following web technologies:</p>
 		<ul>
 			<li><a href="http://www.w3.org/TR/css3-transforms/">CSS Transforms</a></li>
 			<li><a href="http://www.w3.org/TR/css3-webfonts/">CSS Fonts</a></li>

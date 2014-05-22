@@ -15,7 +15,7 @@ Data tables need special HTML markup that shows the difference between header an
 
 -   **[Complex Irregular tables![ have some kind of heading cell or row that is expected at a different location](img-irreg.png)](irregular.html):**  For tables where identifying header cells programmatically is not easy, they can be defined using the `scope` attribute.
 
--   **[Complex Multi-level tables![ have multiple header cells per data cell, most of the time header cells have to be associated explicitly to the table cell.](img-multi.png)](multi-level.html):** If the table structure is so complex that a data cell needs to reference several levels of header cells, each header cell is assigned an `id` and each data cell a `headers` attribute that lists all relevant header cell `id` values.
+-   **[Complex Multi-level tables![ have multiple header cells per data cell, most of the time header cells have to be associated explicitly to the table cell.](img-multi.png)](multi-level.html):** If the table structure is so complex that a data cell is required to reference several levels of header cells, each header cell is assigned an `id` and each data cell a `headers` attribute that lists all relevant header cell `id` values.
 
 -   **[Captions & Summary](caption-summary.html):** Most tables benefit from the use of a caption to describe the overall topic of a table, and summaries to provide orientation or navigation hints in complex tables.
 {:.withicons.nobullets}
@@ -34,7 +34,7 @@ Data tables need special HTML markup that shows the difference between header an
 
 ## Why is this important?
 
-Some people can determine the header cells of tabular data from the visual cues. However, screen reader users and people with user stylesheets might not get those visual cues. Therefore, header cells need to be explicitly identified in the markup so that they are clear to everyone. Correctly marked up tables mean that:
+Some people can determine the header cells of tabular data from the visual cues. However, screen reader users and people with user stylesheets might not get those visual cues. Therefore, header cells should be explicitly identified in the markup so that they are clear to everyone. Correctly marked up tables mean that:
 
 -   **People using a screen reader** can have the row and column headers read aloud as they navigate through the table. Screen readers speak one cell at a time and can only distinguish header cells from data cells if they are properly marked up.
 

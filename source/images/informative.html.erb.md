@@ -8,7 +8,7 @@ wcag_techniques:
 order: 2
 ---
 
-Informative images convey a simple concept or information  that can be expressed in a short phrase or sentence. The text alternative needs to convey the meaning or identification that is displayed visually which typically isn’t a literal description of the image. 
+Informative images convey a simple concept or information  that can be expressed in a short phrase or sentence. The text alternative should convey the meaning or identification that is displayed visually which typically isn’t a literal description of the image. 
 
 In some situations a detailed literal description may be needed, but only when the content of the image is all or part of the information being conveyed. Whether to treat an image as informative or [decorative](decorative.html) is a judgement that only the author can make, based on the reason for including the image on the page.
 
@@ -126,7 +126,7 @@ This simple diagram illustrates a counter-clockwise direction for unscrewing a b
 ## Images conveying an impression or emotion
 {:.ex}
 
-This photograph shows a smiling family group. It’s a stock image so the individuals do not need to be identified. It’s being used to give the impression that the website or the company it represents is family-friendly. The text alternative is “We’re family-friendly” as this best describes the intended impression.
+This photograph shows a smiling family group. It’s a stock image so the individuals should not be identified. It’s being used to give the impression that the website or the company it represents is family-friendly. The text alternative is “We’re family-friendly” as this best describes the intended impression.
 
 {::nomarkdown}
 <%= sample_start %>
@@ -154,7 +154,7 @@ This photograph shows a smiling family group. It’s a stock image so the indivi
 <%= notes_start %>
 {:/nomarkdown}
 
-**Note:** If the purpose of this image were simply to improve the look of a page rather than convey an impression, it could be deemed to be decorative, as shown in [“Decorative Images: Image used for ambience”](decorative.html#image-used-for-ambience-eye-candy). The purpose for using the image needs to be determined by the author.
+**Note:** If the purpose of this image were simply to improve the look of a page rather than convey an impression, it could be deemed to be decorative, as shown in [“Decorative Images: Image used for ambience”](decorative.html#image-used-for-ambience-eye-candy). The author determines the purpose for using the image.
 
 {::nomarkdown}
 <%= notes_end %>
