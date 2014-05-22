@@ -7,11 +7,13 @@ wcag_techniques:
   - H51
 ---
 
-A simple table has one header row and/or header column.
+A simple table has one header row and a maximum of one header column. They ar the first row and column of the table.
 
 Use header cell elements (`<th>`) to markup the header cells so that they are distinguishable from data cells and associated with the correct data cells. For example, in the [second table below](#table-with-header-cells-in-the-top-row-and-first-column) “Closed” is meaningless on its own, but makes sense when it’s associated with time (the row header) and day (the column header).
 
 Additionally, `<caption>` elements may be used to identify a table in the document. That’s a way for meeting WCAG 2.0 requirements in [specific situations](caption-summary.html).
+
+If the table has only a header column, see the [first example of the Irregular Tables tutorial](irreguler.html#table-with-header-cells-in-one-column-only).
 
 ## Table with header cells in the top row only
 {:.ex}

@@ -10,14 +10,14 @@ order: 3
 
 Sometimes it is hard for assistive technology to determine which columns or row to associate with a specific header cell.
 
-`Scope` is the attribute used to define the direction and range of data cells that are covered by a header cell. For example, the `scope` value `row` denotes that a header cell applies to the entire row. Similarly, a header cell that spans three columns and has the `scope` value `colgroup` only applies to the data cells in the three columns that it spans. The `scope` attribute should be used for all `<th>` cells where either the direction or range of data cell coverage needs to be clearly associated.
+`Scope` is the attribute used to define the direction and range of data cells that are covered by a header cell. For example, the `scope` value `row` denotes that a header cell applies to the entire row. Similarly, a header cell that spans three columns and has the `scope` value `colgroup` only applies to the data cells in the three columns that it spans. The `scope` attribute should be used for all `<th>` cells where either the direction or range of data cell coverage should be clearly associated.
 
 Possible values for the `scope` attribute are `row`, `col`, `rowgroup` or `colgroup`.
 
 ## Table with header cells in one column only
 {:.ex}
 
-This example has `<th>` elements for all cells in the left column of a table. The `scope` value `row` is used on each `<th>` cell to ensure that it cannot be mistaken as a header for other cells in the same column. In the table below, Belgium should not be mistaken as the heading for France, Holland, etc.
+This example has `<th>` elements for all cells in the left column of a table. Due to how some assistive technology works, the `scope` attribute with a value of `row` should be used on each `<th>` cell to ensure that it cannot be mistaken as a header for other cells in the same column. In the table below, Belgium should not be mistaken as the heading for France, Holland, etc.
 
 {::nomarkdown}
 <%= sample_start %>
