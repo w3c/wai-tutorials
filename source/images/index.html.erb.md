@@ -7,21 +7,21 @@ topic_order: 1
 type: intro
 ---
 
-Every image should have a *text alternative* that provides an equivalent alternative by describing the information or function represented in the image. The reason for this is [explained below](#why-is-this-important). The following tutorial pages show you how to provide appropriate text alternatives based on the purpose of the image:
+Every image should have a text alternative that provides an equivalent alternative by describing the information or function represented in the image. Those alternatives improve the situation for [people with various disabilities](#why-is-this-important). The following tutorial pages show you how to provide appropriate text alternatives based on the purpose of the image:
 
--   **[Informative images](informative.html)** used to graphically illustrate concepts and information, typically pictures and illustrations: The text alternative should be at least a short description conveying the essential information presented by the image.
+-   **[Informative images](informative.html)**: Images that graphically illustrate concepts and information, typically pictures and illustrations. The text alternative should be at least a short description conveying the essential information presented by the image.
 
--   **[Decorative images](decorative.html)** used to add visual interest to the page, rather than to convey information that is important to understanding the text: The text alternative should be null (`alt=""`).
+-   **[Decorative images](decorative.html)**: If the only purpose of an image is to add visual interest to the page, rather than to convey information that is important to understanding the text, the text alternative should be null (`alt=""`).
 
--   **[Functional images](functional.html)** used alone as a link or button to activate a function – for example, icons for printing and submitting forms: The text alternative should describe the function rather than the visual image.
+-   **[Functional images](functional.html)**: Used alone as a link or button to activate a function, like an icon for printing or submitting forms, the image’s text alternative should describe the function rather than the visual image.
 
--   **[Images of text](textual.html)** that provide readable text (sometimes used when special fonts are wanted) are discouraged except for logos. However, if images of text are used, the text alternative should contain the same words as in the image.
+-   **[Images of text](textual.html)**: Readable text in images (sometimes used when special fonts are wanted) is discouraged except for logos. However, if images of text are used, the text alternative should contain the same words as in the image.
 
--   **[Complex images](complex.html) such as graphs and diagrams** that convey data or detailed information: The alternative should be a full text equivalent of the data and information provided in the image.
+-   **[Complex images](complex.html) such as graphs and diagrams**: To convey data or detailed information, the text alternative should be a full text equivalent of the data and information provided in the image.
 
--   **[Groups of images](groups.html)** used to convey a single piece of information: The text alternative for one item should convey the information conveyed by the entire group.
+-   **[Groups of images](groups.html)**: If multiple images convey a single piece of information, the text alternative for one item should convey the information conveyed by the entire group.
 
--   **[Image maps](imagemap.html)** that contain multiple clickable areas: The text alternative for the image as a whole should provide an overall context for the links, and text alternatives for the clickable areas should describe the purpose or destination of the links.
+-   **[Image maps](imagemap.html)**: The text alternative for an image that contains multiple clickable areas should provide an overall context for the links. Each individual clickable area should describe the purpose or destination of the links in its alternative text.
 
 ## Why is this important?
 
