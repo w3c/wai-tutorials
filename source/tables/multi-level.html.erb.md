@@ -8,12 +8,14 @@ wcag_techniques:
 order: 4
 ---
 
-Multi-level tables are those that have a structure that is too complex to support strict horizontal or vertical association between header and data cells. In each case, the relationship between header and data cells should be defined by giving each `<th>` cell a unique id attribute, and each `<td>` a headers attribute that lists related id values, without any comma separation. Table structures that should be marked up this way include:
+Multi-level tables are too complex to identify a strict horizontal or vertical association between header and data cells. The relationship between those cells should be defined by giving each `<th>` cell a unique `id` attribute, and each `<td>` a `headers` attribute. That `headers` attribute lists related `id` values, separated by spaces. Tables that should be marked up this way include:
 
 -   Where column headers are repeated or changed part-way through the table.
 -   Those with three or more header cells related to each data cell.
 
 In many cases it is worth considering ways to restructure the information to the tables to make them less complex for all readers, for example by separating the information in smaller, more manageable tables.
+
+Multi-level tables should have [a caption and a summary](caption-summary) to describe the layout of the table.
 
 ## Table with multiple column headers in each column
 {:.ex}
@@ -22,7 +24,6 @@ This table shows contact details for six suppliers. To avoid producing an overly
 
 {::nomarkdown}
 <%= sample_start %>
-{:/nomarkdown}
 
 <table>
   <caption>
@@ -32,53 +33,44 @@ This table shows contact details for six suppliers. To avoid producing an overly
     <td id="blank">&nbsp;</td>
     <th id="co1" headers="blank">Example 1 Ltd</th>
     <th id="co2" headers="blank">Example 2 Co</th>
-    <th id="co3" headers="blank">Example 3 Inc</th>
   </tr>
   <tr>
     <th id="c1" headers="blank">Contact</th>
     <td headers="co1 c1">James Phillips</td>
     <td headers="co2 c1">Marie Beauchamp</td>
-    <td headers="co3 c1">Andrew Bruce</td>
   </tr>
   <tr>
     <th id="p1"  headers="blank">Position</th>
     <td headers="co1 p1">Sales Director</td>
     <td headers="co2 p1">Sales Manager</td>
-    <td headers="co3 p1">Client Support Officer</td>
   </tr>
   <tr>
     <th id="e1"  headers="blank">Email</th>
     <td headers="co1 e1">jp@example1.co.uk</td>
     <td headers="co2 e1">marie@example2.co.fr</td>
-    <td headers="co3 e1">sales@example3.com</td>
   </tr>
   <tr>
     <td>&nbsp;</td>
-    <th id="co4" headers="blank">Example 4 Ltd</th>
-    <th id="co5" headers="blank">Example 5 Inc</th>
-    <th id="co6" headers="blank">Example 6 Co</th>
+    <th id="co3" headers="blank">Example 3 Ltd</th>
+    <th id="co4" headers="blank">Example 4 Inc</th>
   </tr>
   <tr>
     <th id="c2"  headers="blank">Contact</th>
-    <td headers="co4 c2">Suzette Jones</td>
-    <td headers="co5 c2">Alex Howe</td>
-    <td headers="co6 c2">Axel Gaunt</td>
+    <td headers="co3 c2">Suzette Jones</td>
+    <td headers="co4 c2">Alex Howe</td>
   </tr>
   <tr>
     <th id="p2" headers="blank">Position</th>
-    <td headers="co4 p2">Sales Officer</td>
-    <td headers="co5 p2">Sales Director</td>
-    <td headers="co6 p2">Proprietor</td>
+    <td headers="co3 p2">Sales Officer</td>
+    <td headers="co4 p2">Sales Director</td>
   </tr>
   <tr>
     <th id="e2" headers="blank">Email</th>
-    <td headers="co4 e2">Suz@example4.co.uk</td>
-    <td headers="co5 e2">howe@example5.com</td>
-    <td headers="co6 e2">sales@example6.co.eu</td>
+    <td headers="co3 e2">Suz@example3.co.uk</td>
+    <td headers="co4 e2">howe@example4.com</td>
   </tr>
 </table>
 
-{::nomarkdown}
 <%= sample_end %>
 {:/nomarkdown}
 
@@ -302,7 +294,7 @@ This example shows availability of accommodation of a given type and size in two
 ## Split up multi-level tables
 {:.ex}
 
-It's often possible to split complex tables up into simpler ones, which allows to have simpler and more easy to maintain HTML code. Also, simple tables are much better supported by WYSIWYG editors (“What you see is what you get”).
+It’s often possible to split up a complex table into multiple simple tables, which is usually better for users and easier for coding. The two tables below provide the same information as the mutli-level table in [the example above](#table-with-three-headers-related-to-each-data-cell). Also, simple tables are much better supported by WYSIWYG editors (“What you see is what you get”).
 
 {::nomarkdown}
 <%= sample_start %>

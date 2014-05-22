@@ -11,17 +11,16 @@ layout: fullcode
   <caption>
     Holidays taken in the last six months
   </caption >
-
   <thead>
     <tr>
-      <th scope="col">PayrollRef.   </th>
-      <th scope="col">Name</th>
-      <th scope="col">Jul</th>
-      <th scope="col">Aug</th>
-      <th scope="col">Sept</th>
-      <th scope="col">Oct</th>
-      <th scope="col">Nov</th>
-      <th scope="col">Dec</th>
+      <th><abbr title="Identification Number">ID</abbr></th>
+      <th>Name</th>
+      <th>Jul</th>
+      <th>Aug</th>
+      <th>Sept</th>
+      <th>Oct</th>
+      <th>Nov</th>
+      <th>Dec</th>
     </tr>
   </thead>
 
@@ -77,7 +76,7 @@ layout: fullcode
       <td>8</td>
       <td>8</td>
       <td>8</td>
-      <td>&nbsp;</td>
+      <td>0</td>
       <td>4</td>
     </tr>
   </tbody>

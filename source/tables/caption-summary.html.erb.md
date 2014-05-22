@@ -8,15 +8,15 @@ wcag_techniques:
 order: 5
 ---
 
-Captions and summaries provide information that can help navigate and understand tables. While not required in every case to meet WCAG2.0, captions and summaries are relatively simple ways to add information that help many.
+Captions and summaries provide information that can help navigate and understand tables. While they are not required in every case to meet WCAG 2.0, captions and summaries are relatively simple ways to add information that helps many people.
 
-* **Captions** can be used to identify tables more easily by associating a table identifier (that acts like a heading) to a table. For example, if a screen reader user chooses to navigate from table to table directly the table may be explicitly identified by the caption. HTML has a dedicated `<caption>` element for this use case.
+* A **caption** is like a heading for a table. Most screen readers announce captions and their users can choose between tables. The caption is provided `<caption>` element.
 
-  Captions are recommended in WCAG 2.0 technique [H39: Using caption elements to associate data table captions with data tables](http://www.w3.org/TR/WCAG20-TECHS/H39).
+  See WCAG 2.0 technique [H39: Using caption elements to associate data table captions with data tables](http://www.w3.org/TR/WCAG20-TECHS/H39) for advice on captions.
 
-* A **summary** conveys information about the organization of the data in a table and helps users navigate the table. For example, if a table has an unconventional structure (as in the examples below), the user can be told in which row or column content can be found. It is usually needed with more complex tables. HTML4 (and XHTML 1.x) provides a `summary` attribute, take a look at the examples below to see [solutions for HTML5](#summaries-for-more-complex-tables).
+* A **summary** conveys information about the organization of the data in a table and helps users navigate the table. For example, if a table has an unconventional structure (as in the examples below), the user can be told in which row or column content can be found. A summary is usually needed for complex tables. HTML4 (and XHTML 1.x) provides a `summary` attribute. Solutions for HTML5 are below.
 
-  Summaries are recommended in WCAG 2.0 technique [H73: Using the summary attribute of the table element to give an overview of data tables](http://www.w3.org/TR/WCAG20-TECHS/H73).
+  See WCAG 2.0 technique [H73: Using the summary attribute of the table element to give an overview of data tables](http://www.w3.org/TR/WCAG20-TECHS/H73) for advice on the summary attribute.
 
 If both caption and summary are provided for one table, the summary should not duplicate the caption.
 

@@ -10,9 +10,9 @@ order: 3
 
 Sometimes it is hard for assistive technology to determine which columns or row to associate with a specific header cell.
 
-`Scope` is the attribute used to define the direction and range of data cells that are covered by a header cell. For example, the `scope` value `row` denotes that a header cell applies to the entire row. Similarly, a header cell that spans three columns and has the `scope` value `colgroup` only applies to the data cells in the three columns that it spans. The `scope` attribute should be used for all `<th>` cells where either the direction or range of data cell coverage should be clearly associated.
+`Scope` is the attribute used to define the direction and range of data cells that are covered by a header cell. For example, a `scope` value `row` denotes that a header cell applies to the entire row. Similarly, a header cell that spans three columns and has the `scope` value `colgroup` only applies to the data cells in the three columns that it spans. 
 
-Possible values for the `scope` attribute are `row`, `col`, `rowgroup` or `colgroup`.
+The `scope` attribute should be used for all `<th>` cells where either the direction or range of data cell coverage should be clearly associated. Possible values for the `scope` attribute are `row`, `col`, `rowgroup` or `colgroup`.
 
 ## Table with header cells in one column only
 {:.ex}
@@ -93,76 +93,74 @@ In this table, the row header cells are in the second column rather than the fir
   <caption>
     Holidays taken in the last six months
   </caption >
-
   <thead>
-
-  <tr>
-    <th scope="col"><abbr title="Identification Number">ID</abbr></th>
-    <th scope="col">Name</th>
-    <th scope="col">Jul</th>
-    <th scope="col">Aug</th>
-    <th scope="col">Sept</th>
-    <th scope="col">Oct</th>
-    <th scope="col">Nov</th>
-    <th scope="col">Dec</th>
-  </tr>
+    <tr>
+      <th><abbr title="Identification Number">ID</abbr></th>
+      <th>Name</th>
+      <th>Jul</th>
+      <th>Aug</th>
+      <th>Sept</th>
+      <th>Oct</th>
+      <th>Nov</th>
+      <th>Dec</th>
+    </tr>
   </thead>
 
   <tbody>
-  <tr>
-    <td>215</td>
-    <th scope="row">Abel</th>
-    <td>5</td>
-    <td>2</td>
-    <td>0</td>
-    <td>0</td>
-    <td>0</td>
-    <td>3</td>
-  </tr>
+    <tr>
+      <td>215</td>
+      <th scope="row">Abel</th>
+      <td>5</td>
+      <td>2</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>3</td>
+    </tr>
 
-  <tr>
-    <td>231</td>
-    <th scope="row">Annette </th>
-    <td>0</td>
-    <td>5</td>
-    <td>3</td>
-    <td>0</td>
-    <td>0</td>
-    <td>6</td>
-  </tr>
+    <tr>
+      <td>231</td>
+      <th scope="row">Annette </th>
+      <td>0</td>
+      <td>5</td>
+      <td>3</td>
+      <td>0</td>
+      <td>0</td>
+      <td>6</td>
+    </tr>
 
-  <tr>
-    <td>173</td>
-    <th scope="row">Bernard</th>
-    <td>2</td>
-    <td>0</td>
-    <td>0</td>
-    <td>5</td>
-    <td>0</td>
-    <td>0</td>
-  </tr>
+    <tr>
+      <td>173</td>
+      <th scope="row">Bernard</th>
+      <td>2</td>
+      <td>0</td>
+      <td>0</td>
+      <td>5</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
 
-  <tr>
-    <td>141</td>
-    <th scope="row">Gerald</th>
-    <td>0</td>
-    <td>10</td>
-    <td>0</td>
-    <td>0</td>
-    <td>0</td>
-    <td>8</td>
-  </tr>
+    <tr>
+      <td>141</td>
+      <th scope="row">Gerald</th>
+      <td>0</td>
+      <td>10</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>8</td>
+    </tr>
 
-  <tr>
-    <td>99</td>
-    <th scope="row">Michael</th>
-    <td>8</td>
-    <td>8</td>
-    <td>8</td>
-    <td>8</td>
-    <td>0</td>
-    <td>4</td>
-  </tr>
+    <tr>
+      <td>99</td>
+      <th scope="row">Michael</th>
+      <td>8</td>
+      <td>8</td>
+      <td>8</td>
+      <td>8</td>
+      <td>0</td>
+      <td>4</td>
+    </tr>
   </tbody>
 </table>
 
@@ -197,7 +195,9 @@ In this table, the row header cells are in the second column rather than the fir
 ## Table with headers spanning multiple rows or columns
 {:.ex}
 
-In this example, some of the header cells span multiple rows or columns: the “Zodiac” row header spans 3 rows, and the “Sizes available” column header spans 3 columns.
+In this example, some of the header cells span multiple rows or columns: the “Zodiac” row header spans 3 rows, and the “Sizes available” column header spans 3 columns. `Colspan`, `rowspan`, and `colgroup` indicate the headers that span multiple rows and columns.
+
+A [summary](caption-summary.html) can be used to explicitly describe the layout of the table.
 
 {::nomarkdown}
 <%= sample_start %>
