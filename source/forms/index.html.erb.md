@@ -7,13 +7,14 @@ topic_order: 3
 type: intro
 ---
 
-## Overview
+Forms are the main interaction component in web sites. They are used to send information to the server or to receive input for on-page JavaScript interaction. There are a few simple rules to help making forms better accessible:
 
-To create an accessible form you will need to provide:
+- **[Descriptive labels](labels.html)** help users to know which data to put into each form field and if the field is required or not.
 
-- **[Descriptive labels](labels.html):** So that the user is in no doubt about what input they should provide and whether or not the field is mandatory;
-- **[Clear instructions](instructions.html):** To ensure that the user is aware of indicators or formats they need to use to complete the form;
-- **[Understandable structure](structure.html):** Especially where the form is presented to the user over several pages, or there are multiple form controls covered by one single question;
+- **[Clear instructions](instructions.html):** To ensure that the user is aware of indicators or formats they need to use to complete the form.
+
+- **[Understandable structure](structure.html):** Especially where the form is presented to the user over several pages, or there are multiple form controls covered by one single question.
+
 - **[Error prevention](error-prevention.html) or help with [error correction](error-messages.html):** To assure successful submission.
 
 ## Who benefits

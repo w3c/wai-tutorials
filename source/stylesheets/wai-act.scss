@@ -645,7 +645,7 @@ figure {
 	@include mq($big) {
 		clear: none;
 	}
-	&.sample, &.code {
+	&.sample, &.code, &.todo {
 		@extend .box;
 		> figcaption {
 			@extend .box-caption;
@@ -674,6 +674,12 @@ figure {
 		figcaption {
 			color: #036;
 		}
+	}
+	&.todo {
+		border-left-color: darken(#f00, 20%) !important;
+		figcaption {background-color: darken(#f00, 20%); color: #fff}
+		> .figcontent {background-color: lighten(#f00, 40%);}
+		&:before, &:after {display:none;}
 	}
 }
 

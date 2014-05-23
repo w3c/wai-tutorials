@@ -1,8 +1,18 @@
 ---
-title: Structure
+title: Complex Forms
 status: editors-draft
-order: 3
+order: 7
 ---
+
+{::nomarkdown}
+<%= editors_note_start %>
+{:/nomarkdown}
+
+Currently this is content from _Form structure_, which is now split into _Groups of Fields_ and _Complex Forms_ (this page).
+
+{::nomarkdown}
+<%= editors_note_end %>
+{:/nomarkdown}
 
 - **What to do:** Build a logical structure into your forms. Split long forms over several topic organised pages, and code related groups of controls using structural elements to define the topic they have in common.
 - **Why:** Forms that are split into logical stages over several pages can make it easier for people with learning difficulties to concentrate. Grouping related fields can ensure that the topic as well as the individual label can be announced by screen readers.
@@ -23,7 +33,6 @@ The fieldset element is needed to establish relationships between groups of form
 
 {::nomarkdown}
 <%= sample_start %>
-{:/nomarkdown}
 
 <form method="post" action="#">
 <fieldset>
@@ -34,7 +43,6 @@ The fieldset element is needed to establish relationships between groups of form
 </fieldset>
 </form>
 
-{::nomarkdown}
 <%= sample_end %>
 {:/nomarkdown}
 
