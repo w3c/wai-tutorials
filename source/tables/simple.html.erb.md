@@ -13,7 +13,7 @@ Use header cell elements (`<th>`) to markup the header cells so that they are di
 
 Additionally, you can use the [`<caption> element`](caption-summary.html) to identify the table, which in some cases might be a WCAG 2.0 requirement.
 
-If the table has only a header column, see the [first example of the Irregular Tables tutorial](irreguler.html#table-with-header-cells-in-one-column-only).
+If the table has only a header column, see the [first example of the Irregular Tables tutorial](irregular.html#table-with-header-cells-in-one-column-only).
 
 ## Table with header cells in the top row only
 {:.ex}

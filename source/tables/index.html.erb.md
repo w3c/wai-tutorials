@@ -15,11 +15,11 @@ It includes the following pages:
 
 -   **[Simple tables![ typically have one header row and/or one header column](img-simple.png)](simple.html):** For simple tables, mark up header cells with `<th>` elements.
 
--   **[Complex Irregular tables![ have some kind of heading cell or row that is expected at a different location](img-irreg.png)](irregular.html):**  For tables where identifying header cells programmatically is not easy, markup header cells with the `scope` attribute.
+-   **[Irregular tables![ have some kind of heading cell or row that is expected at a different location](img-irreg.png)](irregular.html):**  For tables where identifying header cells programmatically is ambiguous, markup header cells with the `scope` attribute.
 
--   **[Complex Multi-level tables![ have multiple header cells per data cell, most of the time header cells have to be associated explicitly to the table cell.](img-multi.png)](multi-level.html):**  For multi-level tables where a data cell is related to more than one header cell, markup each header cell with an `id` and each data cell with a `headers` attribute that lists all relevant header cell `id` values.
+-   **[Multi-level tables![ have multiple header cells per data cell, most of the time header cells have to be associated explicitly to the table cell](img-multi.png)](multi-level.html):**  For multi-level tables where a data cell is related to more than one header cell, markup each header cell with an `id` and each data cell with a `headers` attribute that lists all relevant header cell `id` values.
 
--   **[Caption & Summary](caption-summary.html):** Most tables benefit from the use of a caption to describe the overall topic of a table, and summaries to provide orientation or navigation hints in complex tables.
+-   **[Caption & Summary](caption-summary.html):** Most tables benefit from a header-like caption to identify the overall topic of a table, and a summary to provide orientation or navigation hints in complex tables.
 {:.withicons.nobullets}
 
 

@@ -23,7 +23,7 @@ If both caption and summary are provided for one table, the summary should not d
 ## Identifying a table using a caption
 {:.ex}
 
-If used, the caption should be a succinct description of the content of the table. In this example “Concerts” tells users what information the table contains as the table otherwise may be ambiguous and could also apply to an art exhibition, for example.
+If used, the caption should be a succinct heading for the table content. In this example “Concerts” tells users what information is in the table (it could be something else such as an art exhibition).
 
 {::nomarkdown}
 <%= sample_start %>
