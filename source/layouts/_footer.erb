@@ -3,7 +3,14 @@
     <div>
 		<h2>Document info</h2>
 		<ul>
-			<li><strong>Status:</strong> [DRAFT] <%= Time.now.day %> <%= Time.now.strftime('%B') %> <%= Time.now.year %> (see <a href="http://www.w3.org/WAI/EO/changelogs/cl-app-notes">changelog</a>)
+			<li><strong>Last Modification:</strong>
+      <% if current_page.data.status=="draft" %>
+        [DRAFT]
+      <% end %>
+      <% if current_page.data.status=="editors-draft" %>
+        [EDITOR’S DRAFT]
+      <% end %>
+      <%= File.mtime(Dir.glob("source/#{request.path}*")[0]).strftime("%d %B %Y") %><%# (see <a href="http://www.w3.org/WAI/EO/changelogs/cl-app-notes">changelog</a>)%>
 			</li>
       <li><strong>Editors:</strong> <a href="http://www.w3.org/People/yatil/">Eric Eggert</a>, Bim Egan, <a href="http://www.w3.org/People/shadi/">Shadi Abou Zahra</a> and the <a href="http://www.w3.org/WAI/EO/">Education and Outreach Working Group (EOWG)</a> [<%= nav_link('Attributions', '/attributions.html', :relative => true) %>].</li>
       <li><strong>Developed with support</strong> from the <a href="http://www.w3.org/WAI/ACT/">WAI-ACT</a> project, co-funded by the European Commission <abbr title="Information Society Technologies">IST</abbr> Programme.</li>
