@@ -27,7 +27,9 @@ It includes the following pages:
 <%= notes_start %>
 {:/nomarkdown}
 
-**Note:** This tutorial applies to tables used to display data in a grid. It doesn’t apply to layout tables. Tables shouldn’t be used for layout purposes. Instead, use Cascading Style Sheets (CSS) for visual presentation.
+**Notes:** This tutorial applies to tables used to display data in a grid. It doesn’t apply to layout tables. Tables shouldn’t be used for layout purposes. Instead, use Cascading Style Sheets (CSS) for visual presentation.
+
+Structural coding can also be used to represent data in different ways, for example, by larger or different colored text or backgrounds, Braille, speech, and symbols.
 
 {::nomarkdown}
 <%= notes_end %>
@@ -49,6 +51,6 @@ Tables without structural markup to differentiate between header and data cells,
 
 Accessible tables have their header cells marked up with `<th>` and their data cells marked up with `<td>`. For more complex tables, explicit associations may be needed using `scope` or `id` and `headers` attributes, so that they can be interpreted by assistive technologies.
 
-The structural coding can also be used to represent data in different ways, for example, by larger or different colored text or backgrounds, Braille, speech, and symbols. Many web authoring tools and content management systems (CMS) provide functions to define header cells during table creation without having to manually edit the code.
+Many web authoring tools and content management systems (CMS) provide functions to define header cells during table creation without having to manually edit the code.
 
 {::nomarkdown}</div>{:/nomarkdown}
