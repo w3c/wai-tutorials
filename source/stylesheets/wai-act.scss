@@ -608,11 +608,12 @@ a {
 		transform-origin: left bottom;
 		transform: rotate(90deg);
 		top:-1em;
-		left: calc(100% - 1.5em);
+		left: 100%;
 	}
 	&:before {
+		border-radius: 0 .5em .5em 0;
 		content: '';
-		right: 0;
+		left: 100%;
 		top:0;
 		width:1.5em;
 		bottom:0;
