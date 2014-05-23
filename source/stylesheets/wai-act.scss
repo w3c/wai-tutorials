@@ -73,6 +73,11 @@ p+ul {
 	}
 }
 
+ul + p, ul + div {
+	clear:both;
+	padding-top: .5em;
+}
+
 ul {
 	&.nobullets {
 		padding: 0;
