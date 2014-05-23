@@ -33,7 +33,7 @@ It includes the following pages:
 <%= notes_end %>
 {:/nomarkdown}
 
-Some document formats other than HTML, such as PDF, may provide similar mechanisms to markup table structures. Most word processing applications do not provide such mechanisms to markup tables. Tables markup is also often lost when converting from one format to another, though some programs may provide functionality to assist converting table markup.
+Some document formats other than HTML, such as PDF, may provide similar mechanisms to markup table structures. Most word processing applications however do not provide mechanisms to markup tables. Tables markup is also often lost when converting from one format to another, though some programs may provide functionality to assist converting table markup.
 
 ## Why is this important?
 
