@@ -40,28 +40,38 @@ activate :livereload
 
 # Methods defined in the helpers block are available in templates
 helpers do
+  def x_link_to(link_text, url, options = {})
+    options[:class] ||= ""
+    if url == '/' + current_page.path
+      options[:class] << " current"
+      '<span class="current-a">' + link_text + '</span>'
+    else
+      link_to(link_text, url, options)
+    end
+  end
+
   def nav_link(link_text, url, options = {})
     options[:class] ||= ""
     if url == '/' + current_page.path
       options[:class] << " current"
-      '<span class="current-a"><span class="visuallyhidden">Current: </span>' + link_text + '</span>'
+      '<span class="current-a"><span class="count"></span><span class="txt"><span class="visuallyhidden">Current: </span>' + link_text + '</span></span>'
     else
-      link_to(link_text, url, options)
+      link_to('<span class="count"></span><span class="txt">' + link_text + '</span>', url, options)
     end
   end
 
   def topic_link(link_text, url, options = {})
     if current_page.data.order == 1
       if url == '/' + current_page.path
-        '<span class="current-a"><span class="visuallyhidden">Current: </span>' + link_text + '</span>'
+        '<span class="current-a"><span class="count"></span><span class="txt"><span class="visuallyhidden">Current: </span>' + link_text + '</span></span>'
       else
-        link_to(link_text, url, options)
+        link_to('<span class="count"></span><span class="txt">' + link_text + '</span>', url, options)
       end
     else
       if url == '/' + current_page.parent.path
-        '<span class="current-a"><span class="visuallyhidden">Current: </span>' + link_text + '</span>'
+        '<span class="current-a"><span class="count"></span><span class="txt"><span class="visuallyhidden">Current: </span>' + link_text + '</span></span>'
       else
-        link_to(link_text, url, options)
+        link_to('<span class="count"></span><span class="txt">'+link_text+'</span>', url, options)
       end
     end
   end

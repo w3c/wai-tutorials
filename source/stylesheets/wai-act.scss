@@ -404,7 +404,7 @@ a {
 		counter-reset: navli;
 		&.topics {
 			a, .current-a {
-				&:before {
+				.count:before {
 					content: "\00a0"; // Don’t display counter
 				}
 			}
@@ -416,47 +416,54 @@ a {
 		/*border: 1px solid #aaa;
 		border-width: 1px 2px;*/
 		li {
+			display: table;
+			width: 100%;
 			list-style-type: none;
 			counter-increment: navli;     /* Increment the section counter */
 			&.intro, &.tips {
 				counter-increment: none;
-				a, .current-a {
-					&:before {
-						content: "\00a0"; // Don’t display counter
-					}
+				.count:before {
+					content: "\00a0"; // Don’t display counter
 				}
 			}
 			a, .current-a {
+				display: table-row;
 				line-height: percentage(44/18);
-				&:before {
-					display:inline-block;
-					width: 1.75em;
-					margin-right: 0.75em;
-					text-align: center;
-					border-right: 1px solid #777;
-					content: counter(navli); /* Display the counter */
-				}
 				text-decoration: none;
-				//padding: (.25em * 1.5);
-				display:block;
-				/*border: 1px solid #aaa;
-				border-width: 1px 0;*/
-				position: relative;
+				width: 100%;
 			}
 			a {
 				&:hover, &:focus {
-					text-decoration: underline;
+					.txt {
+						text-decoration: underline;
+					}
 				}
 			}
+			.count {
+				display: table-cell;
+				width: 1.75em;
+				margin-right: 0.75em;
+				text-align: center;
+				border-right: 1px solid #777;
+				&:before {
+					content: counter(navli); /* Display the counter */
+				}
+			}
+			.txt {
+				display: table-cell;
+				position: relative;
+				padding: 0 0 0 12px;
+			}
+
 			.current-a {
 				background-color: #fff;
 				color: #333;
-				&:before {
+				.count {
 					background-color: #777;
 					color: #fff;
 				}
-				&:after {
-					left: 1.75em; top: 50%; border: solid transparent; content: " "; height: 0; width: 0; position: absolute; pointer-events: none; border-color: rgba(0, 0, 0, 0); border-left-color: #777; border-width: 7px; margin-top: -7px;
+				.txt:after {
+					left:0;top: 50%; border: solid transparent; content: " "; height: 0; width: 0; position: absolute; pointer-events: none; border-color: rgba(0, 0, 0, 0); border-left-color: #777; border-width: 7px; margin-top: -7px;
 				}
 			}
 		}
