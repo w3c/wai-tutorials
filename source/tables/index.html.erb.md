@@ -9,9 +9,11 @@ topic_order: 2
 type: intro
 ---
 
-Data tables are used to organize data in grids. They need special HTML markup that indicates the difference between header and data cells, and also ties the two together. This tutorial shows you how to apply appropriate structural markup to tables. 
+Data tables are used to organize data in grids.  Accessible tables need special HTML markup that indicates the difference between header cells and data cells, and also ties the two together. 
 
-It includes the following pages:
+To make any table accessible, header cells must be marked up with `<th>` and data cells marked up with `<td>`. or more complex tables, explicit associations may be needed using `scope` or `id` and `headers` attributes, so that they can be interpreted by assistive technologies.
+
+This tutorial shows you how to apply appropriate structural markup to tables.  It includes the following pages:
 
 -   **[Simple tables![ typically have one header row and/or one header column](img-simple.png)](simple.html):** For simple tables, mark up header cells with `<th>` elements.
 
@@ -46,8 +48,6 @@ Tables without structural markup to differentiate between header and data cells,
 {::nomarkdown}<div class="todo">{:/nomarkdown}
 
 ## How to make tables accessible 
-
-Accessible tables have their header cells marked up with `<th>` and their data cells marked up with `<td>`. For more complex tables, explicit associations may be needed using `scope` or `id` and `headers` attributes, so that they can be interpreted by assistive technologies.
 
 The structural coding can also be used to represent data in different ways, for example, by larger or different colored text or backgrounds, Braille, speech, and symbols. Many web authoring tools and content management systems (CMS) provide functions to define header cells during table creation without having to manually edit the code.
 
