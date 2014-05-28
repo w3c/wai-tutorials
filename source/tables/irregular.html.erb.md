@@ -8,7 +8,7 @@ wcag_techniques:
 order: 3
 ---
 
-Sometimes it is hard for assistive technology to determine which columns or row to associate with a specific header cell.
+Sometimes it is impossible for assistive technology to determine which columns or row to associate with a specific header cell.
 
 `Scope` is the attribute used to define the direction and range of data cells that are covered by a header cell. For example, a `scope` value `row` denotes that a header cell applies to the entire row. Similarly, a header cell that spans three columns and has the `scope` value `colgroup` only applies to the data cells in the three columns that it spans. 
 
