@@ -24,18 +24,21 @@ This tutorial shows you how to apply appropriate structural markup to tables.  I
 -   **[Caption & Summary](caption-summary.html):** Most tables benefit from a header-like caption to identify the overall topic of a table, and a summary to provide orientation or navigation hints in complex tables.
 {:.withicons.nobullets}
 
+Some document formats other than HTML, such as PDF, may provide similar mechanisms to markup table structures. Most word processing applications however do not provide mechanisms to markup tables. Tables markup is also often lost when converting from one format to another, though some programs may provide functionality to assist converting table markup.
+
+Many web authoring tools and content management systems (CMS) provide functions to define header cells during table creation without having to manually edit the code.
 
 {::nomarkdown}
 <%= notes_start %>
 {:/nomarkdown}
 
-**Note:** This tutorial applies to tables used to display data in a grid. It doesn’t apply to layout tables. Tables shouldn’t be used for layout purposes. Instead, use Cascading Style Sheets (CSS) for visual presentation.
+**Notes:** This tutorial applies to tables used to display data in a grid. It doesn’t apply to layout tables. Tables shouldn’t be used for layout purposes. Instead, use Cascading Style Sheets (CSS) for visual presentation.
+
+Structural coding can also be used to represent data in different ways, for example, by larger or different colored text or backgrounds, Braille, speech, and symbols.
 
 {::nomarkdown}
 <%= notes_end %>
 {:/nomarkdown}
-
-Some document formats other than HTML, such as PDF, may provide similar mechanisms to markup table structures. Most word processing applications however do not provide mechanisms to markup tables. Tables markup is also often lost when converting from one format to another, though some programs may provide functionality to assist converting table markup.
 
 ## Why is this important?
 
@@ -44,11 +47,3 @@ Tables without structural markup to differentiate between header and data cells,
 -   **People using screen readers** can have the row and column headers read aloud as they navigate through the table. Screen readers speak one cell at a time and reference the associated header cells, so the user never loses context.
 
 -   **People using custom stylesheets** can have header cells more prominently styled for easy recognition when there is a difference between the  elements used for header and data cells. People may also use stylesheets to present the information to read the data cells as lists below their corresponding headers rather than in a matrix.
-
-{::nomarkdown}<div class="todo">{:/nomarkdown}
-
-## How to make tables accessible 
-
-The structural coding can also be used to represent data in different ways, for example, by larger or different colored text or backgrounds, Braille, speech, and symbols. Many web authoring tools and content management systems (CMS) provide functions to define header cells during table creation without having to manually edit the code.
-
-{::nomarkdown}</div>{:/nomarkdown}
