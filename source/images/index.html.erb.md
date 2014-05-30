@@ -26,8 +26,8 @@ Every image should have a text alternative that provides an equivalent alternati
 ## Why is this important?
 
 Images are used extensively on websites and can create major barriers
-when they are not made accessible. Accessible images are beneficial in
-many situations such as for:
+when they are not made accessible. Accessible images provide beneficial in
+many situations such as:
 
 -   **People using screen readers:** The text alternative can be read aloud or rendered as Braille,
 -   **People using speech input software:** Users can put the focus onto a button or linked image with a single voice command,
