@@ -8,7 +8,7 @@ type: tips
 
 ## Tips
 
--   **Logos:** Logo images with text are exempt from some of the accessibility guidelines for images with text. For instance, there is no minimum color contrast requirement.
+-   **Logos:** Logo images with text are exempt from some of the accessibility guidelines for images with text. For instance, there is no minimum contrast requirement.
 
 -   **Prioritize information in `alt` values:** Aim to put the most important information at the start of the `alt` value.
 
