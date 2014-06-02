@@ -32,7 +32,7 @@ Many web authoring tools and content management systems (CMS) provide functions 
 <%= notes_start %>
 {:/nomarkdown}
 
-**Notes:** This tutorial applies to tables used to display data in a grid. It doesn’t apply to layout tables. Tables shouldn’t be used for layout purposes. Instead, use Cascading Style Sheets (CSS) for visual presentation.
+**Notes:** This tutorial provides guidance for creating tables used to display data in a grid. This guidance is not applicable to layout tables. As a general rule, tables aren't meant to be used for layout purposes. Instead, best practice is to use Cascading Style Sheets (CSS) for visual presentation.
 
 Structural coding can also be used to represent data in different ways, for example, by larger or different colored text or backgrounds, Braille, speech, and symbols.
 
