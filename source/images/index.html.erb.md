@@ -7,15 +7,15 @@ topic_order: 1
 type: intro
 ---
 
-Every image should have a text alternative that provides an equivalent alternative by describing the information or function represented in the image. Those alternatives improve the situation for [people with various disabilities](#why-is-this-important). The following tutorial pages show you how to provide appropriate text alternatives based on the purpose of the image:
+Image content must have text alternatives that provide equivalent meaning by describing the information or function represented in the image. Those alternatives improve the situation for [people with various disabilities](#why-is-this-important). This tutorial demonstrates how to provide appropriate text alternatives based on the purpose of the image:
 
 -   **[Informative images](informative.html)**: Images that graphically illustrate concepts and information, typically pictures and illustrations. The text alternative should be at least a short description conveying the essential information presented by the image.
 
 -   **[Decorative images](decorative.html)**: If the only purpose of an image is to add visual interest to the page, rather than to convey information that is important to understanding the text, the text alternative should be null (`alt=""`).
 
--   **[Functional images](functional.html)**: The text alternative of images that are used as a link or as a button to activate a function should describe the functionality rather than the visual image. Examples for such images are an icon for printing or a button to submit a form.
+-   **[Functional images](functional.html)**: The text alternative of images that are used as a link or as a button to activate a function should describe the functionality rather than the visual image. Examples for such images are a printer icon to represent the print function or a button for submission of a form.
 
--   **[Images of text](textual.html)**: Readable text in images (sometimes used when special fonts are wanted) is discouraged except for logos. However, if images of text are used, the text alternative should contain the same words as in the image.
+-   **[Images of text](textual.html)**: Readable text is sometimes presented within an image.  This practice is discouraged except for logos. However, if images of text are used, the text alternative should contain the same words as in the image.
 
 -   **[Complex images](complex.html) such as graphs and diagrams**: To convey data or detailed information, the text alternative should be a full text equivalent of the data and information provided in the image.
 
@@ -40,7 +40,7 @@ many situations such as for:
 <%= notes_start %>
 {:/nomarkdown}
 
-**Note:** Images are often important for communicating information and interacting with web pages. Illustrations make it much easier to understand information for people with some types of learning disabilities. Some people who enlarge web pages use images as cues for orientation. Removing images from websites (so called “text-only versions”) makes websites less accessible for these users.
+**Note:** Images are often important for communicating information and interacting with web pages. Illustrations make it much easier to understand information for certain types of learners. Some people who enlarge web pages use images as cues for orientation. Removing images from websites (so called “text-only versions”) makes websites less accessible for these users.
 
 {::nomarkdown}
 <%= notes_end %>
