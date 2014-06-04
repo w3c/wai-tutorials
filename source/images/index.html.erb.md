@@ -7,7 +7,7 @@ topic_order: 1
 type: intro
 ---
 
-Image content must have text alternatives that provide equivalent meaning by describing the information or function represented in the image. Those alternatives improve the situation for [people with various disabilities](#why-is-this-important). This tutorial demonstrates how to provide appropriate text alternatives based on the purpose of the image:
+Image content must have text alternatives that describes the information or function represented in the image. Those alternatives improve the situation for [people with various disabilities](#why-is-this-important). This tutorial demonstrates how to provide appropriate text alternatives based on the purpose of the image:
 
 -   **[Informative images](informative.html)**: Images that graphically illustrate concepts and information, typically pictures and illustrations. The text alternative should be at least a short description conveying the essential information presented by the image.
 
