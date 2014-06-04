@@ -68,11 +68,3 @@ the same page.
 {::nomarkdown}
 <%= notes_end %>
 {:/nomarkdown}
-
-## Related WCAG2.0 Techniques
-
-
-The following WCAG 2.0 techniques were used in the examples above:
-
--   [H37: Using alt attributes on img elements](http://www.w3.org/TR/2012/NOTE-WCAG20-TECHS-20120103/H37.html)
--   [H24: Providing text alternatives for the area elements of image maps](http://www.w3.org/TR/2012/NOTE-WCAG20-TECHS-20120103/H24)
