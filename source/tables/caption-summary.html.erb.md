@@ -100,7 +100,7 @@ In HTML4 (and XHTML 1.x) the description can be marked up using the `summary` at
 
 This table has an unusual table structure: the days of the week are in the center column, morning times to the left, and afternoon times to the right. It has the `summary` attribute “Days are in the second column, morning opening hours in the first column, and afternoon opening hours are in the third column”, explaining the way the table is laid out.
 
-The content of the summary attribute is not available to visual users.
+The content of the summary attribute is not available to sighted users.
 
 {::nomarkdown}
 <%= sample_start %>
