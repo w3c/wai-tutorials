@@ -1,16 +1,23 @@
 changes:
   - 2014-06-06:
+      - desc: "Add Changelog (this document)"
+        page: images/index.html
+        by:
+          - Shadi
+          - Shawn
+        commit: b73aeae375c46434b283f36c60e5009d100dae26
+        issue:
       - desc: "Put “logos” to the bottom of the list"
         page: images/index.html
         by:
           - Shadi
-        commit:
+        commit: c4757e98cff58b7a69f5ef903c56198cd988ed67
         issue:
       - desc: "Using example.com instead of .co.fr for the made up email addresses"
         page: tables/multi-level.html
         by:
           - Shadi
-        commit:
+        commit: 678b52a49128b2a3af5cdf1a3720734a6d22f122
         issue:
       - desc: "Fix link to captions & summaries"
         page: tables/multi-level.html
