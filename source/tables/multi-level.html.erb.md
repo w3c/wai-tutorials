@@ -15,7 +15,7 @@ Multi-level tables are too complex to identify a strict horizontal or vertical a
 
 In many cases it is worth considering ways to restructure the information to the tables to make them less complex for all readers, for example by separating the information in smaller, more manageable tables.
 
-Multi-level tables should have [a caption and a summary](caption-summary) to describe the layout of the table.
+Multi-level tables should have [a caption and a summary](caption-summary.html) to describe the layout of the table.
 
 ## Table with multiple column headers in each column
 {:.ex}
@@ -46,8 +46,8 @@ This table shows contact details for six suppliers. To avoid producing an overly
   </tr>
   <tr>
     <th id="e1"  headers="blank">Email</th>
-    <td headers="co1 e1">jp@example1.co.uk</td>
-    <td headers="co2 e1">marie@example2.co.fr</td>
+    <td headers="co1 e1">jp@1ltd.example.com</td>
+    <td headers="co2 e1">marie@2co.example.com</td>
   </tr>
   <tr>
     <td>&nbsp;</td>
@@ -66,8 +66,8 @@ This table shows contact details for six suppliers. To avoid producing an overly
   </tr>
   <tr>
     <th id="e2" headers="blank">Email</th>
-    <td headers="co3 e2">Suz@example3.co.uk</td>
-    <td headers="co4 e2">howe@example4.com</td>
+    <td headers="co3 e2">Suz@ltd3.example.com</td>
+    <td headers="co4 e2">howe@4inc.example.com</td>
   </tr>
 </table>
 
