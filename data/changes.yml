@@ -1,0 +1,21 @@
+changes:
+  - 2014-06-06:
+      - desc: "Put “logos” to the bottom of the list"
+        page: images/index.html
+        by:
+          - Shadi
+        commit:
+        issue:
+      - desc: "Using example.com instead of .co.fr for the made up email addresses"
+        page: tables/multi-level.html
+        by:
+          - Shadi
+        commit:
+        issue:
+      - desc: "Fix link to captions & summaries"
+        page: tables/multi-level.html
+        by:
+          - Andrew
+        commit:
+        issue:
+

@@ -1,0 +1,95 @@
+<%= partial "layouts/header" %>
+<div class="content <%= current_page.data.status %>">
+
+  <header class="tutorial-heading">
+    <div class="breadcrumb">
+      <p>
+        &nbsp;
+      </p>
+    </div>
+    <h1>
+      <%= current_page.data.title %>
+    </h1>
+  </header>
+
+  <% if current_page.data.status=="draft" %>
+  <div class="status">
+    <p><strong>Status:</strong> This is an in-progress, unapproved draft.</p>
+  </div>
+  <% end %>
+  <% if current_page.data.status=="editors-draft" %>
+  <div class="status">
+    <p><strong>Status (not ready for review):</strong> This is an in-progress, unapproved editor’s draft. Content may change at any time without notice.</p>
+  </div>
+  <% end %>
+
+  <div class="inner">
+    <%= yield %>
+      <% data.changes.changes.each do |f| %>
+        <% f.each do |key, value| %>
+          <table>
+            <caption>Changes on <%=key%></caption>
+            <thead>
+              <tr>
+                <th>Change</th>
+                <th>Page</th>
+                <th>Suggested by</th>
+                <th>Links</th>
+              </tr>
+            </thead>
+            <tbody>
+                <% value.each do |v| %>
+                <tr>
+                    <td><%=v.desc%></td>
+                    <td>
+                      <% if sitemap.find_resource_by_path('/' + v.page).parent && sitemap.find_resource_by_path('/' + v.page).parent.data.title != 'Tutorials' %>
+                        <%
+                        item = sitemap.find_resource_by_path('/' + v.page).parent
+                        if item.data.nav_title
+                            letitle = item.data.nav_title
+                        else
+                            letitle = item.data.title
+                        end %>
+                        <%tuttitle = letitle + ' » '%>
+                      <%else%>
+                        <%tuttitle = ''%>
+                      <%end%>
+                      <%
+                      item = sitemap.find_resource_by_path('/' + v.page)
+                      if item.data.nav_title
+                          letitle = item.data.nav_title
+                      else
+                          letitle = item.data.title
+                      end %>
+                      <%= nav_link( tuttitle + sitemap.find_resource_by_path('/' + v.page).data.title, '/' + v.page, :relative => true) %>
+                    </td>
+                    <td>
+                      <%=v.by.join(", ")%>
+                    </td>
+                    <td>
+                    <% if v.commit %>
+                      <a class="btn-small" href="https://github.com/w3c/wai-tutorials/commit/<%=v.commit%>" rel="nofollow">Commit</a>
+                    <% end %>
+                    <% if v.issue %>
+                      <a class="btn-small" href="https://github.com/w3c/wai-tutorials/issues/<%=v.issue%>" rel="nofollow">Issue</a>
+                    <% end %>
+                    <% if v.link %>
+                      <a class="btn-small" href="<%=v.link%>" rel="nofollow">Link</a>
+                    <% end %>
+                    </td>
+                  </tr>
+                <% end %>
+            </tbody>
+          </table>
+        <% end %>
+      <% end %>
+
+    <%= partial "layouts/resources" %>
+
+    <%= partial "layouts/contribute" %>
+  </div>
+</div>
+<div class="navigation" aria-label="Navigation" id="nav">
+  <%= partial 'layouts/topic_navigation' %>
+</div>
+<%= partial "layouts/footer" %>
