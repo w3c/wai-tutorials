@@ -8,8 +8,6 @@ type: tips
 
 ## Tips
 
--   **Logos:** Logo images with text are exempt from some of the accessibility guidelines for images with text. For instance, there is no minimum contrast requirement.
-
 -   **Prioritize information in `alt` values:** Aim to put the most important information at the start of the `alt` value.
 
 -   **Choosing appropriate text alternatives:** Imagine that you’re reading the web page aloud over the phone to someone who needs to understand the page. This should help you decide what (if any) information or function the images have. If they appear to have no informative value and aren’t links or buttons, it’s probably safe to treat them as [decorative](decorative.html).
@@ -21,6 +19,8 @@ type: tips
     * SVG graphics can be referenced in the `src` attribute of an `<img>` element like other image formats (PNG, JPEG, GIF). In this case the examples of this tutorial apply can be used with SVG as well.
 
     * As SVG images consists of tags like HTML, their code can also be used in HTML5 directly. In this case you can provide alternative text in a `<title>` element within the SVG image.
+
+-   **Logos:** Logo images with text are exempt from some of the accessibility guidelines for images with text. For instance, there is no minimum contrast requirement.
 
 ## Frequently Asked Questions
 
