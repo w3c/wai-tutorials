@@ -1,7 +1,7 @@
 changes:
   - 2014-06-06:
       - desc: "Add Changelog (this document)"
-        page: images/index.html
+        page: changelog.html
         by:
           - Shadi
           - Shawn

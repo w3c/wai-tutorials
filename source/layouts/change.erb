@@ -45,8 +45,8 @@
                       <% if sitemap.find_resource_by_path('/' + v.page).parent && sitemap.find_resource_by_path('/' + v.page).parent.data.title != 'Tutorials' %>
                         <%
                         item = sitemap.find_resource_by_path('/' + v.page).parent
-                        if item.data.nav_title
-                            letitle = item.data.nav_title
+                        if item.data.tutorial_title
+                            letitle = item.data.tutorial_title
                         else
                             letitle = item.data.title
                         end %>
@@ -61,7 +61,7 @@
                       else
                           letitle = item.data.title
                       end %>
-                      <%= nav_link( tuttitle + sitemap.find_resource_by_path('/' + v.page).data.title, '/' + v.page, :relative => true) %>
+                      <%= link_to( tuttitle + sitemap.find_resource_by_path('/' + v.page).data.title, '/' + v.page, :relative => true) %>
                     </td>
                     <td>
                       <%=v.by.join(", ")%>
