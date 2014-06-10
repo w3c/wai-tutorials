@@ -195,7 +195,7 @@ In this table, the row header cells are in the second column rather than the fir
 ## Table with headers spanning multiple rows or columns
 {:.ex}
 
-In this example, some of the header cells span multiple rows or columns: the “Zodiac” row header spans 3 rows, and the “Sizes available” column header spans 3 columns. `Colspan`, `rowspan`, and `colgroup` indicate the headers that span multiple rows and columns.
+In this example, some of the header cells span multiple rows or columns: the “Zodiac” row header spans 3 rows, and the “Sizes available” column header spans 3 columns. `Colgroup` and `rowgroup` indicate the headers that span multiple rows and columns.
 
 A [summary](caption-summary.html) can be used to explicitly describe the layout of the table.
 
