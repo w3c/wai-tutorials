@@ -60,8 +60,14 @@
                           letitle = item.data.nav_title
                       else
                           letitle = item.data.title
-                      end %>
-                      <%= link_to( tuttitle + sitemap.find_resource_by_path('/' + v.page).data.title, '/' + v.page, :relative => true) %>
+		      end
+		      if v.fragment
+			fragment = v.fragment
+		      else
+			fragment = ''
+		      end
+		      %>
+		      <%= link_to( tuttitle + sitemap.find_resource_by_path('/' + v.page).data.title, '/' + v.page + fragment, :relative => true) %>
                     </td>
                     <td>
                       <%=v.by.join(", ")%>
