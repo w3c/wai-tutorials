@@ -27,14 +27,14 @@
     <%= yield %>
       <% data.changes.changes.each do |f| %>
         <% f.each do |key, value| %>
-          <table>
+	  <table class="changes">
             <caption>Changes on <%=key%></caption>
             <thead>
               <tr>
-                <th>Change</th>
-                <th>Page</th>
-                <th>Suggested by</th>
-                <th>Links</th>
+		<th width="50%">Change</th>
+		<th width="22%">Page</th>
+		<th width="14%">Suggested by</th>
+		<th width="14 %">Links</th>
               </tr>
             </thead>
             <tbody>
@@ -50,7 +50,7 @@
                         else
                             letitle = item.data.title
                         end %>
-                        <%tuttitle = letitle + ' » '%>
+			<%tuttitle = '<small>' + letitle + ':</small><br> '%>
                       <%else%>
                         <%tuttitle = ''%>
                       <%end%>

@@ -725,6 +725,17 @@ figure {
 // Table
 
 table {
+	&.changes {
+		margin-bottom: 2em;
+		caption {
+			background-color: #ccc;
+			border: 1px solid #999;
+			border-width: 1px 1px 0;
+			padding: .5em;
+			font-weight: bold;
+			text-align: left;
+		}
+	}
 	th {
 		text-align: left;
 		background-color: #ccc;
