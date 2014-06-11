@@ -20,7 +20,10 @@ Additionally, you can use the [`<caption>` element](caption-summary.html) to ide
 ## Table with header cells in the top row only
 {:.ex}
 
-This table of concerts only needs the cells in the top row marked up as `<th>` cells. This is partly because it is such a small table and partly because the data itself is distinctly different in each column.
+### Using only `<th>` elements
+{:.ap}
+
+This table of concerts has the cells in the top row marked up as `<th>` cells. This is partly because it is such a small table and partly because the data itself is distinctly different in each column.
 
 {::nomarkdown}
 <%= sample_start %>
@@ -62,6 +65,69 @@ This table of concerts only needs the cells in the top row marked up as `<th>` c
 		<th>Date</th>
 		<th>Event</th>
 		<th>Venue</th>
+	</tr>
+	<tr>
+		<td>12 Feb</td>
+		<td>Waltz with Strauss</td>
+		<td>Main Hall</td>
+	</tr>
+	[…]
+</table>
+~~~
+
+{::nomarkdown}
+<%= code_end %>
+{:/nomarkdown}
+
+[Full code for “Table with header cells in the top row only”](examples/headertoprow.html)
+
+### Explicitly define relation with the `scope` attribute
+{:.ap}
+
+While this table is looking visually the same as the one above, we have added `scope` attributes to be more explicit about the relation of the `<th>` cells. This helps assistive technology to give better instructions for the user.
+
+When a user selects the “Venue” header cell in the example above, some screen readers misinterpret the “Date” and “Event” header cell to be headers for this cell, too. They read “Data – Event – Venue” instead of “Venue”. Using `scope="col"` leads to the desired outcome.
+
+{::nomarkdown}
+<%= sample_start %>
+
+<p><strong>Concerts:</strong></p>
+<table>
+	<tr>
+		<th scope="col">Date</th>
+		<th scope="col">Event</th>
+		<th scope="col">Venue</th>
+	</tr>
+	<tr>
+		<td>12 Feb</td>
+		<td>Waltz with Strauss</td>
+		<td>Main Hall</td>
+	</tr>
+	<tr>
+		<td>24 Mar</td>
+		<td>The Obelisks</td>
+		<td>West Wing</td>
+	</tr>
+	<tr>
+		<td>14 Apr</td>
+		<td>The What</td>
+		<td>Main Hall</td>
+	</tr>
+</table>
+
+<%= sample_end %>
+{:/nomarkdown}
+
+{::nomarkdown}
+<%= code_start %>
+{:/nomarkdown}
+
+~~~ html
+<table>
+	<tr>
+		<th scope="col">Date</th>
+		<th scope="col">Event</th>
+		<th scope="col">Venue</th>
 	</tr>
 	<tr>
 		<td>12 Feb</td>
