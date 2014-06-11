@@ -30,12 +30,12 @@ In this table, the row header cells are in the second column rather than the fir
     <tr>
       <th><abbr title="Identification Number">ID</abbr></th>
       <th>Name</th>
-      <th>Jul</th>
-      <th>Aug</th>
-      <th>Sept</th>
-      <th>Oct</th>
-      <th>Nov</th>
-      <th>Dec</th>
+      <th>July</th>
+      <th>August</th>
+      <th>September</th>
+      <th>October</th>
+      <th>November</th>
+      <th>December</th>
     </tr>
   </thead>
 
