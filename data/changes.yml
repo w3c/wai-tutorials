@@ -6,20 +6,20 @@ changes:
         by:
           - EO WG
           - WCAG WG
-        commit: cd61083e2ab5ee8da6410be47444079513e9e897
+        commit: f38a28f4c5
         issue:
       - desc: "Expand example 1 with an approach that uses scope"
         page: tables/simple.html
         by:
           - Eric
-        commit: c13cad8c0749a9890e4283864c44642a12afeeed
+        commit: 8799b531ab
         issue:
       - desc: Expand month names in table
         page: tables/irregular.html
         fragment: "#table-with-an-offset-column-of-header-cells"
         by:
           - WCAG WG
-        commit: 627f8f7
+        commit: fac740a119
   - 2014-06-06:
       - desc: "Add Changelog (this document)"
         page: changelog.html
