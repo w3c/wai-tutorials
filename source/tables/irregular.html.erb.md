@@ -125,6 +125,67 @@ In this table, the row header cells are in the second column rather than the fir
 
 [Full code for “Table with an offset column of header cells”](examples/scope-offset.html)
 
+## Table with two tier headings
+{:.ex}
+
+{::nomarkdown}
+<%= sample_start %>
+
+<table width="200" border="1">
+  <tr>
+    <td rowspan="2"></td>
+    <th colspan="2" scope="col">Sales US</th>
+    <th colspan="2" scope="col">Sales Europe</th>
+  </tr>
+  <tr>
+    <th scope="col">Actual</th>
+    <th scope="col">Budget</th>
+    <th scope="col">Actual</th>
+    <th scope="col">Budget</th>
+  </tr>
+  <tr>
+  <th scope="row">Compact&nbsp;cars</th>
+    <td>$30,000</td>
+    <td>$50,000</td>
+    <td>€80,000</td>
+    <td>€100,000</td>
+  </tr>
+  <tr>
+  <th scope="row">SUVs</th>
+    <td>$5,000</td>
+    <td>$10,000</td>
+    <td>€9,000</td>
+    <td>€12,000</td>
+  </tr>
+</table>
+<%= sample_end %>
+{:/nomarkdown}
+
+{::nomarkdown}
+<%= code_start %>
+{:/nomarkdown}
+
+~~~ html
+[…]
+<tr>
+  <th scope="col">Poster name</th>
+  <th scope="col">Color</th>
+  <th colspan="3" scope="colgroup">Sizes available</th>
+  </tr>
+<tr>
+  <th rowspan="3" scope="rowgroup">Zodiac</th>
+  <td>Full color</td>
+  <td>A2</td>
+  <td>A3</td>
+  <td>A4</td>
+</tr>
+[…]
+~~~
+
+{::nomarkdown}
+<%= code_end %>
+{:/nomarkdown}
+
 ## Table with headers spanning multiple rows or columns
 {:.ex}
 

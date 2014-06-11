@@ -20,6 +20,12 @@ changes:
         by:
           - WCAG WG
         commit: fac740a119
+      - desc: Add table with two tier headings
+        page: tables/irregular.html
+        fragment: "#table-with-two-tier-headings"
+        by:
+          - WCAG WG
+        commit:
   - 2014-06-06:
       - desc: "Add Changelog (this document)"
         page: changelog.html
