@@ -1,5 +1,26 @@
 changes:
   - 2014-06-11:
+      - desc: "Apply EO WG feedback"
+        page: tables/multi-level.html
+        fragment:
+        by:
+          - EO WG
+        commit: ad0469281325eca9023dc465d76e3a7b0ab64b7d
+        issue:
+      - desc: "Apply EO WG feedback"
+        page: tables/irregular.html
+        fragment:
+        by:
+          - EO WG
+        commit: f58e0be60da0b619195bf85585fa099cef8db4fb
+        issue:
+      - desc: "Apply EO WG feedback"
+        page: tables/simple.html
+        fragment:
+        by:
+          - EO WG
+        commit: a1e6536ccbfd0e0da4f8564183b01b03903de625
+        issue:
       - desc: "Add an icon for caption/summary, change other icons to match the new situation"
         page: tables/index.html
         fragment: "##Caption"
