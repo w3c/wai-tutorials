@@ -11,17 +11,17 @@ type: intro
 
 Data tables are used to organize data in grids.  Accessible tables need special HTML markup that indicates the difference between header cells and data cells, and also ties the two together. 
 
-To make any table accessible, header cells must be marked up with `<th>` and data cells marked up with `<td>`. or more complex tables, explicit associations may be needed using `scope` or `id` and `headers` attributes, so that they can be interpreted by assistive technologies.
+To make any table accessible, header cells must be marked up with `<th>` and data cells marked up with `<td>`. For more complex tables, explicit associations may be needed using `scope` or `id` and `headers` attributes, so that they can be interpreted by assistive technologies.
 
 This tutorial shows you how to apply appropriate structural markup to tables.  It includes the following pages:
 
--   **[Simple tables![ typically have one header row and/or one header column](img-simple.png)](simple.html):** For simple tables, mark up header cells with `<th>` elements.
+-   **[Simple tables![ typically have one header row and/or one header column](img-simple.png)](simple.html):** For simple tables, mark up header cells with `<th>` elements and define their direction with the `scope` attribute’s `col` and `row` values.
 
--   **[Irregular tables![ have some kind of headers that are expected at a different location](img-irreg.png)](irregular.html):**  For tables where identifying header cells programmatically is ambiguous, markup header cells with the `scope` attribute.
+-   **[Irregular tables![ have some kind of headers that are expected at a different location](img-irreg.png)](irregular.html):**  For tables where identifying header cells programmatically is ambiguous, define column and row groups and set the range of header cells using the `scope` attribute with the `colgroup` and `rowgroup` values.
 
 -   **[Multi-level tables![ have multiple header cells associated per data cell, most of the time header cells need to be associated explicitly to the table cell](img-multi.png)](multi-level.html):**  For multi-level tables where a data cell is related to more than one header cell, markup each header cell with an `id` and each data cell with a `headers` attribute that lists all relevant header cell `id` values.
 
--   **[Caption & Summary](caption-summary.html):** Most tables benefit from a header-like caption to identify the overall topic of a table, and a summary to provide orientation or navigation hints in complex tables.
+-   **[Caption & Summary![](img-caption.png)](caption-summary.html):** Most tables benefit from a header-like caption to identify the overall topic of a table, and a summary to provide orientation or navigation hints in complex tables.
 {:.withicons.nobullets}
 
 Some document formats other than HTML, such as PDF, may provide similar mechanisms to markup table structures. Most word processing applications however do not provide mechanisms to markup tables. Tables markup is also often lost when converting from one format to another, though some programs may provide functionality to assist converting table markup.
