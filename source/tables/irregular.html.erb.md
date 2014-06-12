@@ -8,11 +8,9 @@ wcag_techniques:
 order: 3
 ---
 
-Sometimes it is impossible for assistive technology to determine which columns or row to associate with a specific header cell.
-
 Additionally to the direction (see [simple tables](simple.html)), the `scope` attribute can be used to define the range of data cells that are covered by a header cell. A header cell that spans three columns and has the `scope` value `colgroup` only applies to the data cells in the three columns that it spans. `rowgroup` works the same way for table headers that span multiple rows.
 
-The `scope` attribute should be used for all `<th>` cells where either the direction or range of data cell coverage should be clearly associated.
+The `scope` attribute should be used for all `<th>` cells where either the direction or range of data cell coverage needs to be clearly associated.
 
 To be able to associate a table header cell to a column group and/or row group, the groups have to be defined first:
 
@@ -105,9 +103,9 @@ If a table consists of a heading that spans more multiple columns/rows of header
 ## Table with headers spanning multiple rows or columns
 {:.ex}
 
-In this example, some of the header cells span multiple rows or columns: the “Zodiac” row header spans 3 rows, and the “Sizes available” column header spans 3 columns. `Colgroup` and `rowgroup` indicate the headers that span multiple rows and columns.
+In this example, some of the header cells span multiple rows or columns: the “Zodiac” row header spans 3 rows, and the “Sizes available” column header spans 3 columns. `Colgroup` and `rowgroup` indicate that the headers belong to their column or row group – defined by the `<colgroup>` and `<tbody>` elements.
 
-A [summary](caption-summary.html) can be used to explicitly describe the layout of the table.
+Due to the complexity of the table a [summary technique](caption-summary.html) should be used to explicitly describe the layout of the table.
 
 {::nomarkdown}
 <%= sample_start %>
@@ -129,19 +127,19 @@ A [summary](caption-summary.html) can be used to explicitly describe the layout 
   <tbody>
     <tr>
       <th rowspan="3" scope="rowgroup">Zodiac</th>
-      <td>Full color</td>
+      <th scope="row">Full color</th>
       <td>A2</td>
       <td>A3</td>
       <td>A4</td>
     </tr>
     <tr>
-      <td>Black and white</td>
+      <th scope="row">Black and white</th>
       <td>A1</td>
       <td>A2</td>
       <td>A3</td>
     </tr>
     <tr>
-      <td>Sepia</td>
+      <th scope="row">Sepia</th>
       <td>A3</td>
       <td>A4</td>
       <td>A5</td>
@@ -150,13 +148,13 @@ A [summary](caption-summary.html) can be used to explicitly describe the layout 
   <tbody>
     <tr>
       <th rowspan="2" scope="rowgroup">Angels</th>
-      <td>Black and white</td>
+      <th scope="row">Black and white</th>
       <td>A1</td>
       <td>A3</td>
       <td>A4</td>
     </tr>
     <tr>
-      <td>Sepia</td>
+      <th scope="row">Sepia</th>
       <td>A2</td>
       <td>A3</td>
       <td>A5</td>
