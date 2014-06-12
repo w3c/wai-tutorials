@@ -1,4 +1,44 @@
 changes:
+  - 2014-06-11:
+      - desc: "Add an icon for caption/summary, change other icons to match the new situation"
+        page: tables/index.html
+        fragment: "##Caption"
+        by:
+          - Shadi
+          - Eric
+        commit: 2eea75f09be262ca32a4e12ba9b316b788d5aaef
+        issue:
+      - desc: "Add notes on direction and range"
+        page: tables/index.html
+        fragment:
+        by:
+          - Shadi
+          - Eric
+        commit: 75895b7ea9eb455c480994fd56b5ef560f1730d0
+        issue:
+      - desc: "Move “Offset Column” example from irregular tables"
+        page: tables/simple.html
+        fragment: "#table-with-an-offset-column-of-header-cells"
+        by:
+          - Eric
+        commit: 1dc606b53bde47d267607ae15c338063c426522a
+        issue:
+      - desc: "Clarify wording for the different use cases of scope"
+        page: tables/simple.html
+        fragment:
+        by:
+          - Shadi
+          - WCAG WG
+        commit: a5aeca17b18e357c92d2daa1bcf06f84e9e2b389
+        issue:
+      - desc: "Clarify two tier heading example and spanning multiple row/columns example"
+        page: tables/irregular.html
+        fragment:
+        by:
+          - Shadi
+          - WCAG WG
+        commit: 281f878cce31b0b998bfc175e96bd465b0d54c4a
+        issue:
   - 2014-06-10:
       - desc: "Rearrange table examples to include the irregular tables example one as example two on the page about simple tables. Also add scope to the delivery slots example. Change intro text."
         page: tables/simple.html
