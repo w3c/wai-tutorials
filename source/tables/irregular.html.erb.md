@@ -25,14 +25,19 @@ To be able to associate a table header cell to a column group and/or row group, 
 ## Table with two tier headings
 {:.ex}
 
+If a table consists of a heading that spans more multiple columns/rows of header cells, `scope="colgroup"` and `scope="rowgroup"` should be used, respectively.
+
 {::nomarkdown}
 <%= sample_start %>
-
-<table width="200" border="1">
+<style>.numbers td {text-align:right;font-variant-numeric: tabular-nums; whitespace: no-wrap;}</style>
+<table>
+  <colgroup></colgroup>
+  <colgroup span="2"></colgroup>
+  <colgroup span="2"></colgroup>
   <tr>
     <td rowspan="2"></td>
-    <th colspan="2" scope="col">Sales US</th>
-    <th colspan="2" scope="col">Sales Europe</th>
+    <th colspan="2" scope="colgroup">Sales US</th>
+    <th colspan="2" scope="colgroup">Sales Europe</th>
   </tr>
   <tr>
     <th scope="col">Actual</th>
@@ -40,19 +45,19 @@ To be able to associate a table header cell to a column group and/or row group, 
     <th scope="col">Actual</th>
     <th scope="col">Budget</th>
   </tr>
-  <tr>
-  <th scope="row">Compact&nbsp;cars</th>
-    <td>$30,000</td>
-    <td>$50,000</td>
-    <td>€80,000</td>
-    <td>€100,000</td>
+  <tr class="numbers">
+    <th scope="row">Compact&nbsp;cars</th>
+    <td>$&nbsp;300,000</td>
+    <td>$&nbsp;500,000</td>
+    <td>€&nbsp;800,000</td>
+    <td>€&nbsp;1,000,000</td>
   </tr>
-  <tr>
-  <th scope="row">SUVs</th>
-    <td>$5,000</td>
-    <td>$10,000</td>
-    <td>€9,000</td>
-    <td>€12,000</td>
+  <tr class="numbers">
+    <th scope="row">SUVs</th>
+    <td>$&nbsp;50,000</td>
+    <td>$&nbsp;100,000</td>
+    <td>€&nbsp;90,000</td>
+    <td>€&nbsp;120,000</td>
   </tr>
 </table>
 <%= sample_end %>
@@ -63,20 +68,34 @@ To be able to associate a table header cell to a column group and/or row group, 
 {:/nomarkdown}
 
 ~~~ html
-[…]
-<tr>
-  <th scope="col">Poster name</th>
-  <th scope="col">Color</th>
-  <th colspan="3" scope="colgroup">Sizes available</th>
-  </tr>
-<tr>
-  <th rowspan="3" scope="rowgroup">Zodiac</th>
-  <td>Full color</td>
-  <td>A2</td>
-  <td>A3</td>
-  <td>A4</td>
-</tr>
-[…]
+<table>
+  <colgroup></colgroup>
+  <colgroup span="2"></colgroup>
+  <colgroup span="2"></colgroup>
+  <thead>
+    <tr>
+      <td rowspan="2"></td>
+      <th colspan="2" scope="colgroup">Sales US</th>
+      <th colspan="2" scope="colgroup">Sales Europe</th>
+    </tr>
+    <tr>
+      <th scope="col">Actual</th>
+      <th scope="col">Budget</th>
+      <th scope="col">Actual</th>
+      <th scope="col">Budget</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Compact cars</th>
+      <td>$ 300,000</td>
+      <td>$ 500,000</td>
+      <td>€ 800,000</td>
+      <td>€ 1,000,000</td>
+    </tr>
+    […]
+  </tbody>
+</table>
 ~~~
 
 {::nomarkdown}
@@ -97,43 +116,52 @@ A [summary](caption-summary.html) can be used to explicitly describe the layout 
   <caption>
     Poster availability
   </caption>
-  <tr>
-    <th scope="col">Poster name</th>
-    <th scope="col">Color</th>
-    <th colspan="3" scope="colgroup">Sizes available</th>
+  <colgroup></colgroup>
+  <colgroup></colgroup>
+  <colgroup span="3"></colgroup>
+  <thead>
+    <tr>
+      <th scope="col">Poster name</th>
+      <th scope="col">Color</th>
+      <th colspan="3" scope="colgroup">Sizes available</th>
     </tr>
-  <tr>
-    <th rowspan="3" scope="rowgroup">Zodiac</th>
-    <td>Full color</td>
-    <td>A2</td>
-    <td>A3</td>
-    <td>A4</td>
-  </tr>
-  <tr>
-    <td>Black and white</td>
-    <td>A1</td>
-    <td>A2</td>
-    <td>A3</td>
-  </tr>
-  <tr>
-    <td>Sepia</td>
-    <td>A3</td>
-    <td>A4</td>
-    <td>A5</td>
-  </tr>
-  <tr>
-    <th rowspan="2" scope="rowgroup">Angels</th>
-    <td>Black and white</td>
-    <td>A1</td>
-    <td>A3</td>
-    <td>A4</td>
-  </tr>
-  <tr>
-    <td>Sepia</td>
-    <td>A2</td>
-    <td>A3</td>
-    <td>A5</td>
-  </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th rowspan="3" scope="rowgroup">Zodiac</th>
+      <td>Full color</td>
+      <td>A2</td>
+      <td>A3</td>
+      <td>A4</td>
+    </tr>
+    <tr>
+      <td>Black and white</td>
+      <td>A1</td>
+      <td>A2</td>
+      <td>A3</td>
+    </tr>
+    <tr>
+      <td>Sepia</td>
+      <td>A3</td>
+      <td>A4</td>
+      <td>A5</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <th rowspan="2" scope="rowgroup">Angels</th>
+      <td>Black and white</td>
+      <td>A1</td>
+      <td>A3</td>
+      <td>A4</td>
+    </tr>
+    <tr>
+      <td>Sepia</td>
+      <td>A2</td>
+      <td>A3</td>
+      <td>A5</td>
+    </tr>
+  </tbody>
 </table>
 
 <%= sample_end %>
@@ -144,24 +172,59 @@ A [summary](caption-summary.html) can be used to explicitly describe the layout 
 {:/nomarkdown}
 
 ~~~ html
-[…]
-<tr>
-  <th scope="col">Poster name</th>
-  <th scope="col">Color</th>
-  <th colspan="3" scope="colgroup">Sizes available</th>
-  </tr>
-<tr>
-  <th rowspan="3" scope="rowgroup">Zodiac</th>
-  <td>Full color</td>
-  <td>A2</td>
-  <td>A3</td>
-  <td>A4</td>
-</tr>
-[…]
+<table>
+  <caption>
+    Poster availability
+  </caption>
+  <colgroup></colgroup>
+  <colgroup></colgroup>
+  <colgroup span="3"></colgroup>
+  <thead>
+    <tr>
+      <th scope="col">Poster name</th>
+      <th scope="col">Color</th>
+      <th colspan="3" scope="colgroup">Sizes available</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th rowspan="3" scope="rowgroup">Zodiac</th>
+      <td>Full color</td>
+      <td>A2</td>
+      <td>A3</td>
+      <td>A4</td>
+    </tr>
+    <tr>
+      <td>Black and white</td>
+      <td>A1</td>
+      <td>A2</td>
+      <td>A3</td>
+    </tr>
+    <tr>
+      <td>Sepia</td>
+      <td>A3</td>
+      <td>A4</td>
+      <td>A5</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <th rowspan="2" scope="rowgroup">Angels</th>
+      <td>Black and white</td>
+      <td>A1</td>
+      <td>A3</td>
+      <td>A4</td>
+    </tr>
+    <tr>
+      <td>Sepia</td>
+      <td>A2</td>
+      <td>A3</td>
+      <td>A5</td>
+    </tr>
+  </tbody>
+</table>
 ~~~
 
 {::nomarkdown}
 <%= code_end %>
 {:/nomarkdown}
-
-[Full code for “Table with headers spanning multiple rows or columns”](examples/scope-multiple.html)
