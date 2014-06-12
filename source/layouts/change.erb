@@ -27,8 +27,8 @@
     <%= yield %>
       <% data.changes.changes.each do |f| %>
         <% f.each do |key, value| %>
-	  <table class="changes">
-            <caption>Changes on <%=key%></caption>
+	  <table class="changes" id="★<%=key%>">
+            <caption>Changes on <%=key%> <a href="#★<%=key%>" class="btn-small" style="float:right;">Permalink</a></caption>
             <thead>
               <tr>
 		<th width="50%">Change</th>
