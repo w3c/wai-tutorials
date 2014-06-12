@@ -7,11 +7,11 @@ wcag_techniques:
   - H51
 ---
 
-A simple table has one header row and/or a header column. They are usually in the first row and column of the table.
+A simple table has one header row and/or a header column. They are usually in the first row and column of the table and don’t span columns/rows.
 
 Use `<th>` elements to markup the header cells so that they are distinguishable from the data cells. Due to current interpretation of tables by assistive technologies it is useful to use the `scope` attribute on simple tables. It’s used to declare the direction of the header cell. A `scope` value of `row` or `col` denotes that the header cell applies to the entire row or column, respectively. 
 
-Additionally, you can use the [`<caption>` element](caption-summary.html) to identify the table, which in some cases might be a WCAG 2.0 requirement.
+Additionally, you can use add a [caption](caption-summary.html) to identify the table in a document,  which is particularly useful for screen-reader users browsing the web page in “tables mode”. This is a way to meet WCAG 2.0 requirements in specific situations.
 
 ## Table with header cells in the top row only
 {:.ex}
@@ -19,9 +19,9 @@ Additionally, you can use the [`<caption>` element](caption-summary.html) to ide
 ### Using only `<th>` elements
 {:.ap}
 
-This table of concerts has the cells in the top row marked up as `<th>` cells without any `scope direction`. This is partly because it is such a small table and partly because the data itself is distinctly different in each column.
+This table of concerts has the cells in the first row marked up as `<th>` cells without any `scope` direction. Some screen readers will read “Date – Event – Venue” on the “Venue” cell in the table below because the direction of the `<th>` elements is ambiguous. 
 
-Some screen readers will read “Date – Event – Venue” on the “Venue” cell in the table below because the direction of the `<th>` elements is ambiguous.
+This is acceptable because it is such a small table and the data itself is distinctly different in each column.
 
 {::nomarkdown}
 <%= sample_start %>
