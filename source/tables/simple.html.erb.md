@@ -309,3 +309,114 @@ This table of opening times has header information contained in both the top row
 {:/nomarkdown}
 
 [Full code for “Table with header cells in the top row and first column”](examples/headertoprowfirstcol.html)
+
+## Table with an offset column of header cells
+{:.ex}
+
+In this table, the row header cells are in the second column rather than the first. The `<th>` cells in the second column have `scope="row"`  to ensure that data cells on both sides are correctly associated.
+
+{::nomarkdown}
+<%= sample_start %>
+
+<table>
+  <caption>
+    Holidays taken in the last six months
+  </caption >
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Name</th>
+      <th scope="col">July</th>
+      <th scope="col">August</th>
+      <th scope="col">September</th>
+      <th scope="col">October</th>
+      <th scope="col">November</th>
+      <th scope="col">December</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>215</td>
+      <th scope="row">Abel</th>
+      <td>5</td>
+      <td>2</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>3</td>
+    </tr>
+
+    <tr>
+      <td>231</td>
+      <th scope="row">Annette </th>
+      <td>0</td>
+      <td>5</td>
+      <td>3</td>
+      <td>0</td>
+      <td>0</td>
+      <td>6</td>
+    </tr>
+
+    <tr>
+      <td>173</td>
+      <th scope="row">Bernard</th>
+      <td>2</td>
+      <td>0</td>
+      <td>0</td>
+      <td>5</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+
+    <tr>
+      <td>141</td>
+      <th scope="row">Gerald</th>
+      <td>0</td>
+      <td>10</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>8</td>
+    </tr>
+
+    <tr>
+      <td>99</td>
+      <th scope="row">Michael</th>
+      <td>8</td>
+      <td>8</td>
+      <td>8</td>
+      <td>8</td>
+      <td>0</td>
+      <td>4</td>
+    </tr>
+  </tbody>
+</table>
+
+<%= sample_end %>
+{:/nomarkdown}
+
+{::nomarkdown}
+<%= code_start %>
+{:/nomarkdown}
+
+~~~ html
+[…]
+<tr>
+  <td>215</td>
+  <th scope="row">Abel</th>
+  <td>5</td>
+  <td>2</td>
+  <td>0</td>
+  <td>0</td>
+  <td>0</td>
+  <td>3</td>
+</tr>
+[…]
+~~~
+
+{::nomarkdown}
+<%= code_end %>
+{:/nomarkdown}
+
+[Full code for “Table with an offset column of header cells”](examples/scope-offset.html)
