@@ -8,14 +8,18 @@ wcag_techniques:
 order: 4
 ---
 
-Multi-level tables are too complex to identify a strict horizontal or vertical association between header and data cells. The relationship between those cells should be defined by giving each `<th>` cell a unique `id` attribute, and each `<td>` a `headers` attribute. That `headers` attribute lists related `id` values, separated by spaces. Tables that should be marked up this way include:
+Multi-level tables are too complex to identify a strict horizontal or vertical association between header and data cells. 
 
--   Where column headers are repeated or changed part-way through the table.
--   Those with three or more header cells related to each data cell.
+To associate a data cell with a header cell, each header cell has an (document-wide) unique `id`. Data cells that refer to a header cell have a `headers` attibute that lists the `id` values of those header cells, separated by spaces. 
 
-In many cases it is worth considering ways to restructure the information to the tables to make them less complex for all readers, for example by separating the information in smaller, more manageable tables.
+Tables that should be marked up this way include:
 
-Multi-level tables should have [a caption and a summary](caption-summary.html) to describe the layout of the table.
+- Tables with column headers that repeat or change part-way through the table.
+- Tables with three or more header cells associated to each data cell.
+
+Multi-level tables may also need to have a caption to identify it and a summary to describe the layout of the table, see [Caption & Summary](caption-summary.html).
+
+In many cases it is worth considering ways to restructure the information in such tables to make them less complex for all readers. For example by splitting the information in smaller, more manageable tables.
 
 ## Table with multiple column headers in each column
 {:.ex}
@@ -294,7 +298,7 @@ This example shows availability of accommodation of a given type and size in two
 ## Split up multi-level tables
 {:.ex}
 
-It’s often possible to split up a complex table into multiple simple tables, which is usually better for users and easier for coding. The two tables below provide the same information as the mutli-level table in [the example above](#table-with-three-headers-related-to-each-data-cell). Also, simple tables are much better supported by WYSIWYG editors (“What you see is what you get”).
+The two tables below provide the same information as the mutli-level table in [the example above](#table-with-three-headers-related-to-each-data-cell). This makes the information easier to understand by everyone and easier to code, too. Also, simple tables are much better supported by WYSIWYG editors (“What you see is what you get”).
 
 {::nomarkdown}
 <%= sample_start %>
