@@ -7,13 +7,9 @@ wcag_techniques:
   - H51
 ---
 
-A simple table has one header row, or a header row and header column. They are the first row and column of the table.
+A simple table has one header row and/or a header column. They are usually in the first row and column of the table.
 
-Use header cell elements (`<th>`) to markup the header cells so that they are distinguishable from data cells and associated with the correct data cells. For example, in the [third example below](#table-with-header-cells-in-the-top-row-and-first-column) “Closed” is meaningless on its own, but makes sense when it’s associated with time (the row header) and day (the column header).
-
-To explicitly associate header cells to data cells, it is usually useful to use the `scope` attribute. If the `scope` value is `row`, the heading is only a heading for other cells in this row, if the value is `col` it is the heading only for other cells in this column.
-
-For more complex examples on the use of `scope`, see the [Irregular Tables tutorial](irregular.html).
+Use `<th>` elements to markup the header cells so that they are distinguishable from the data cells. Due to current interpretation of tables by assistive technologies it is useful to use the `scope` attribute on simple tables. It’s used to declare the direction of the header cell. A `scope` value of `row` or `col` denotes that the header cell applies to the entire row or column, respectively. 
 
 Additionally, you can use the [`<caption>` element](caption-summary.html) to identify the table, which in some cases might be a WCAG 2.0 requirement.
 
@@ -23,7 +19,9 @@ Additionally, you can use the [`<caption>` element](caption-summary.html) to ide
 ### Using only `<th>` elements
 {:.ap}
 
-This table of concerts has the cells in the top row marked up as `<th>` cells. This is partly because it is such a small table and partly because the data itself is distinctly different in each column.
+This table of concerts has the cells in the top row marked up as `<th>` cells without any `scope direction`. This is partly because it is such a small table and partly because the data itself is distinctly different in each column.
+
+Some screen readers will read “Date – Event – Venue” on the “Venue” cell in the table below because the direction of the `<th>` elements is ambiguous.
 
 {::nomarkdown}
 <%= sample_start %>
@@ -84,9 +82,9 @@ This table of concerts has the cells in the top row marked up as `<th>` cells. T
 ### Explicitly define relation with the `scope` attribute
 {:.ap}
 
-While this table is looking visually the same as the one above, we have added `scope` attributes to be more explicit about the relation of the `<th>` cells. This helps assistive technology to give better instructions for the user.
+While this table is looking visually the same as the one above, it uses  `scope` attributes to be more explicit about the direction of the `<th>` cells which helps assistive technology convey the relationship to the user.
 
-When a user selects the “Venue” header cell in the example above, some screen readers misinterpret the “Date” and “Event” header cell to be headers for this cell, too. They read “Data – Event – Venue” instead of “Venue”. Using `scope="col"` leads to the desired outcome.
+Using `scope="col"` on the `<th>` cells associates them to all the data cells in the column. Therefore, when a user selects the “Venue” cell, it is only read out as “Venue” rather than “Date – Event – Venue” as in the previous approach.
 
 {::nomarkdown}
 <%= sample_start %>
