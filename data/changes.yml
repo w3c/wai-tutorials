@@ -1,5 +1,31 @@
 changes:
-  - 2014-06-11:
+  - 2014-06-13:
+      - desc: "Changed phone/fax icons to make them more easily distinguishable"
+        page: images/informative.html
+        by:
+          - Shadi Abou-Zhara
+        commit: fa0773cb3753bc666a7df4024384584cdbcd9cef
+      - desc: "Add success criteria, reference alt decision tree"
+        page: images/index.html
+        by:
+          - Andrew Arch
+          - Shawn Henry
+        commit: a06b081c489af03075cc18243d933823c4f50fb7
+      - desc: "Apply EO WG feedback"
+        page: tables/caption-summary.html
+        fragment:
+        by:
+          - EO WG
+        commit: 7e0fcb7f8aceadf66c62e0d1880ef591089273f6
+        issue:
+      - desc: "Apply EO WG feedback"
+        page: tables/tips.html
+        fragment:
+        by:
+          - EO WG
+        commit: 0edeb43051f48c9b8ea8b6aed8834f94a42c41d1
+        issue:
+  - 2014-06-12:
       - desc: "Apply EO WG feedback"
         page: tables/multi-level.html
         fragment:
@@ -21,20 +47,21 @@ changes:
           - EO WG
         commit: a1e6536ccbfd0e0da4f8564183b01b03903de625
         issue:
+  - 2014-06-11:
       - desc: "Add an icon for caption/summary, change other icons to match the new situation"
         page: tables/index.html
         fragment: "##Caption"
         by:
-          - Shadi
-          - Eric
+          - Shadi Abou-Zhara
+          - Eric Eggert
         commit: 2eea75f09be262ca32a4e12ba9b316b788d5aaef
         issue:
       - desc: "Add notes on direction and range"
         page: tables/index.html
         fragment:
         by:
-          - Shadi
-          - Eric
+          - Shadi Abou-Zhara
+          - Eric Eggert
         commit: 75895b7ea9eb455c480994fd56b5ef560f1730d0
         issue:
       - desc: "Move “Offset Column” example from irregular tables"
@@ -48,7 +75,7 @@ changes:
         page: tables/simple.html
         fragment:
         by:
-          - Shadi
+          - Shadi Abou-Zhara
           - WCAG WG
         commit: a5aeca17b18e357c92d2daa1bcf06f84e9e2b389
         issue:
@@ -56,7 +83,7 @@ changes:
         page: tables/irregular.html
         fragment:
         by:
-          - Shadi
+          - Shadi Abou-Zhara
           - WCAG WG
         commit: 281f878cce31b0b998bfc175e96bd465b0d54c4a
         issue:
@@ -91,26 +118,26 @@ changes:
       - desc: "Add Changelog (this document)"
         page: changelog.html
         by:
-          - Shadi
-          - Shawn
+          - Shadi Abou-Zhara
+          - Shawn Henry
         commit: b73aeae375c46434b283f36c60e5009d100dae26
         issue:
       - desc: "Put “logos” to the bottom of the list"
         page: images/index.html
         by:
-          - Shadi
+          - Shadi Abou-Zhara
         commit: c4757e98cff58b7a69f5ef903c56198cd988ed67
         issue:
       - desc: "Using example.com instead of .co.fr for the made up email addresses"
         page: tables/multi-level.html
         by:
-          - Shadi
+          - Shadi Abou-Zhara
         commit: 678b52a49128b2a3af5cdf1a3720734a6d22f122
         issue:
       - desc: "Fix link to captions & summaries"
         page: tables/multi-level.html
         by:
-          - Andrew
+          - Andrew Arch
         commit:
         issue:
 
