@@ -22,16 +22,15 @@ type: tips
     
          ![On the top there is a table where the content and header cells are not marked up correctly. Line breaks are usedto make items look like they align correctly. When resizing the text (bottom) the items don’t line up anymore](table-text-resize.png)
 
--   **Alignment:** Align text to the left and financial data to the right, so that people using screen magnification, larger text sizes, or smaller screens will be able to find it, especially when a cell spans more than one column. It’s  helpful to give column headings the same alignment as the data in the cells below.
+-   **Alignment:** Align text to the left and numeric data to the right (in left-to-right languages), so that people using screen magnification, larger text sizes, or smaller screens will be able to find it, especially when a cell spans more than one column. It’s  helpful to give column headings the same alignment as the data in the cells below.
 
 -   **Styling header cells:** You should use `<th>` elements for header cells, not a `<td>` with different styling. It is helpful to differentiate `<th>` and `<td>` cells visually. For example, on these tutorial pages header cells have a dark gray background.
-
 
 {::nomarkdown}
 <%= notes_start %>
 {:/nomarkdown}
 
-**A note on layout tables:** You shouldn’t use tables for layout purposes. It’s much better to use Cascading Style Sheets (CSS) for layout. If you do use layout tables, don’t use any of the structural elements and attributes discussed in this tutorial, and do add `role="presentation"` to the `<table>` element.
+**A note on layout tables:** You shouldn’t use tables for layout purposes. Use Cascading Style Sheets (CSS) for layout. If you do use layout tables, don’t use any of the structural elements and attributes discussed in this tutorial, and do add `role="presentation"` to the `<table>` element.
 
 {::nomarkdown}
 <%= notes_end %>
@@ -39,13 +38,13 @@ type: tips
 
 ## Frequently Asked Questions
 
+-   **I’ve used CSS to give a different background color for odd and even rows in my tables. Is this OK?**
+
+    It certainly is. This can be a real help to people who have reading difficulties or who use screen magnification to enlarge text. It acts as a visual guide. You could even consider highlighting the cell (and row/column) on mouseover and keyboard focus to help people see where they are. Make sure that the contrast ratio between the text and background is good for both headers and data cells. [Here is how to check your contrast ratio.](http://www.w3.org/WAI/eval/preliminary#contrast)
+
 -   **My site uses a table layout to position information on pages. A complete redesign using CSS layout is planned for next year. Is there something I can do right now to make the layout tables more accessible?**
 
     Yes there is. You can give the `<table>` element a WAI-ARIA `role` attribute of `presentation` (`role="presentation"`). This will hide the table markup from most screen readers and browsers that support WAI-ARIA.
-
--   **I’ve used CSS to give a different background color for odd and even rows in my tables. Is this OK?**
-
-    It certainly is. This can be a real help to people who have reading difficulties or who use screen magnification to enlarge text. It acts as a visual guide. You could even consider highlighting the cell (and row/column) on mouseover and keyboard focus to help people see where they are. Make sure that the contrast ratio (“color contrast”) between the text and background is good for both headers and data cells. [Here is how to check your contrast ratio.](http://www.w3.org/WAI/eval/preliminary#contrast)
 
 ## Other W3C Resources
 
