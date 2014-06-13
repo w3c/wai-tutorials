@@ -7,6 +7,8 @@ order: 1
 
 These tutorials contain graphics from the following sources:
 
+* [Phone designed by Tom Walsh from the Noun Project](http://thenounproject.com/term/phone/52971/)
+* [Fax designed by Vasily Ledovsky from the Noun Project](http://thenounproject.com/term/fax/8017/)
 * [Farm Fresh Web Icons](http://www.fatcow.com/free-icons)
 
 The following photos are used:
