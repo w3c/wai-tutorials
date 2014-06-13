@@ -2,7 +2,7 @@
 title: Tips and Frequently Asked Questions (FAQ)
 nav_title: Tips and FAQ
 status: draft
-order: 6
+order: 7
 type: tips
 ---
 

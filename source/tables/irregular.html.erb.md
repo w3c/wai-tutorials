@@ -1,14 +1,14 @@
 ---
-title: Irregular Tables
-nav_title: "Complex: Irregular"
+title: Single-level (Irregular) Tables
+nav_title: "Complex: Single-level"
 status: draft
 technologies: HTML5
 wcag_techniques:
   - H63
-order: 3
+order: 4
 ---
 
-Additionally to the direction (see [simple tables](simple.html)), the `scope` attribute can be used to define the range of data cells that are covered by a header cell. A header cell that spans three columns and has the `scope` value `colgroup` only applies to the data cells in the three columns that it spans. `rowgroup` works the same way for table headers that span multiple rows.
+Additionally to the direction (see [large simple tables](simple.html)), the `scope` attribute can be used to define the range of data cells that are covered by a header cell. A header cell that spans three columns and has the `scope` value `colgroup` only applies to the data cells in the three columns that it spans. `rowgroup` works the same way for table headers that span multiple rows.
 
 The `scope` attribute should be used for all `<th>` cells where either the direction or range of data cell coverage needs to be clearly associated.
 

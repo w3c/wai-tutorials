@@ -5,7 +5,7 @@ status: draft
 technologies: HTML5
 wcag_techniques: 
   - H43
-order: 4
+order: 5
 ---
 
 Multi-level tables are too complex to identify a strict horizontal or vertical association between header and data cells. 

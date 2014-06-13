@@ -5,7 +5,7 @@ technologies: HTML4, HTML5, WAI-ARIA
 wcag_techniques: 
   - H73
   - H39
-order: 5
+order: 6
 ---
 
 Captions and summaries provide information that can help users find, navigate, and understand tables. While they are not required in every case to meet WCAG 2.0, captions and summaries are relatively simple ways to provide information that improves understandability many people.
