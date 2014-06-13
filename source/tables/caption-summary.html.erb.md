@@ -8,13 +8,13 @@ wcag_techniques:
 order: 5
 ---
 
-Captions and summaries provide information that can help navigate and understand tables. While they are not required in every case to meet WCAG 2.0, captions and summaries are relatively simple ways to add information that helps many people.
+Captions and summaries provide information that can help users find, navigate, and understand tables. While they are not required in every case to meet WCAG 2.0, captions and summaries are relatively simple ways to provide information that improves understandability many people.
 
-* A **caption** is like a heading for a table. Most screen readers announce captions and their users can choose between tables. The caption is provided `<caption>` element.
+* A **caption** is like a heading for a table. Most screen readers announce the content of captions, which helps users to find a table and understand what it’s about and chose if they want to read it. If the user decides to use “Tables Mode”, captions are the primary mechanism to identify tables. The caption is provided `<caption>` element.
 
   See WCAG 2.0 technique [H39: Using caption elements to associate data table captions with data tables](http://www.w3.org/TR/WCAG20-TECHS/H39) for advice on captions.
 
-* A **summary** conveys information about the organization of the data in a table and helps users navigate the table. For example, if a table has an unconventional structure (as in the examples below), the user can be told in which row or column content can be found. A summary is usually needed for complex tables. HTML4 (and XHTML 1.x) provides a `summary` attribute. Solutions for HTML5 are below.
+* A **summary** conveys information about the organization of the data in a table and helps users navigate the table. For example, if a table has an unconventional structure (as in the examples below), information about in which row or column content can be found can be provided to the user. A summary is usually needed for complex tables.
 
   See WCAG 2.0 technique [H73: Using the summary attribute of the table element to give an overview of data tables](http://www.w3.org/TR/WCAG20-TECHS/H73) for advice on the summary attribute.
 
@@ -83,82 +83,10 @@ If used, the caption should be a succinct heading for the table content. In this
 ## Summaries for more complex tables
 {:.ex}
 
-In HTML4 (and XHTML 1.x) the description can be marked up using the `summary` attribute of the `<table>` element. It’s obsolete in HTML5. The other approaches below show how to put the description in the `<caption>` element, and use the WAI-ARIA `aria-describedby` attribute or the `<figure>` element for the summary.
-
-### Using the `summary` attribute
-{:.ap}
-
-{::nomarkdown}
-<%= notes_start %>
-{:/nomarkdown}
-
-**Note: This approach is valid in HTML4 and XHTML 1.x only.**
-
-{::nomarkdown}
-<%= notes_end %>
-{:/nomarkdown}
-
-This table has an unusual table structure: the days of the week are in the center column, morning times to the left, and afternoon times to the right. It has the `summary` attribute “Days are in the second column, morning opening hours in the first column, and afternoon opening hours are in the third column”, explaining the way the table is laid out.
-
-The content of the summary attribute is not available to sighted users.
-
-{::nomarkdown}
-<%= sample_start %>
-
-<table summary="Days are shown in the second column, morning opening hours in the first column and afternoon opening hours are in the third column">
-  <caption>
-    Surgery opening times
-  </caption>
-  <tr>
-    <th scope="col" id="m"> Morning</th>
-    <th scope="col" id="d">Day</th>
-    <th id="a"> Afternoon</th>
-  </tr>
-  <tr>
-    <td headers="m d1">Closed</td>
-    <th scope="row" id="d1"> Sunday</th>
-    <td headers="a d1"> 14:00 to 15:00</td>
-  </tr>
-  <tr>
-    <td headers="m d2"> 08:00 to 11:30</td>
-    <th id="d2"> Mon to Fri</th>
-    <td headers="a d2">15:00 to 19:00</td>
-  </th>
-  <tr>
-    <td headers="d3 m">09:30 to 12:00</td>
-    <th id="d3">Saturday</th>
-    <td headers="a d3">Closed</td>
-  </tr>
-</table>
-
-<%= sample_end %>
-{:/nomarkdown}
-
-{::nomarkdown}
-<%= code_start %>
-{:/nomarkdown}
-
-~~~ html
-<table
-  summary="Days are shown in the second column, morning opening hours in the first column and afternoon opening hours are in the third column">
-~~~
-
-{::nomarkdown}
-<%= code_end %>
-{:/nomarkdown}
+There are different ways to provide summaries for tables.
 
 ### Nest summary into the `<caption>` element
 {:.ap}
-
-{::nomarkdown}
-<%= notes_start %>
-{:/nomarkdown}
-
-**Note: The technique in this approach is valid for HTML4, XHTML 1.x and HTML5.**
-
-{::nomarkdown}
-<%= notes_end %>
-{:/nomarkdown}
 
 This complex table shows availability of different types and sizes of accommodation in two different locations. The `<caption>` element is used to describe the table layout as well as act as a heading for the table.
 
@@ -270,7 +198,7 @@ The summary is available to visual users as well.
 <%= notes_start %>
 {:/nomarkdown}
 
-**Note: The technique used in this approach is only valid in HTML5.** This WAI-ARIA feature may not be as widely supported as other approaches for summaries on this page.
+**Note:** This WAI-ARIA feature may not be as widely supported as other approaches for summaries on this page.
 
 {::nomarkdown}
 <%= notes_end %>
@@ -339,16 +267,6 @@ The summary is available to visual users as well.
 ### Using the `<figure>` element to mark up a table summary
 {:.ap}
 
-{::nomarkdown}
-<%= notes_start %>
-{:/nomarkdown}
-
-**Note: The technique used in this approach is only valid in HTML5.**
-
-{::nomarkdown}
-<%= notes_end %>
-{:/nomarkdown}
-
 By using an HTML5 `<figure>` element, the association between the caption/summary is indirectly applied to the table. Screen reader users navigating from table to table probably won’t get the context from the caption/summary. You can explicitly associate the `<figcaption>` to the table by using the `aria-labelledby` and/or `aria-describedby` attributes.
 
 {::nomarkdown}
@@ -411,6 +329,68 @@ By using an HTML5 `<figure>` element, the association between the caption/summar
 […]
   </table>
 </figure>
+~~~
+
+{::nomarkdown}
+<%= code_end %>
+{:/nomarkdown}
+
+### Using the `summary` attribute
+{:.ap}
+
+{::nomarkdown}
+<%= notes_start %>
+{:/nomarkdown}
+
+**Note: The `summary` attribute is deprecated in HTML5.**
+
+{::nomarkdown}
+<%= notes_end %>
+{:/nomarkdown}
+
+This table has an unusual table structure: the days of the week are in the center column, morning times to the left, and afternoon times to the right. It has the `summary` attribute “Days are in the second column, morning opening hours in the first column, and afternoon opening hours are in the third column”, explaining the way the table is laid out.
+
+The content of the summary attribute is not available to sighted users.
+
+{::nomarkdown}
+<%= sample_start %>
+
+<table summary="Days are shown in the second column, morning opening hours in the first column and afternoon opening hours are in the third column">
+  <caption>
+    Surgery opening times
+  </caption>
+  <tr>
+    <th scope="col" id="m"> Morning</th>
+    <th scope="col" id="d">Day</th>
+    <th id="a"> Afternoon</th>
+  </tr>
+  <tr>
+    <td headers="m d1">Closed</td>
+    <th scope="row" id="d1"> Sunday</th>
+    <td headers="a d1"> 14:00 to 15:00</td>
+  </tr>
+  <tr>
+    <td headers="m d2"> 08:00 to 11:30</td>
+    <th id="d2"> Mon to Fri</th>
+    <td headers="a d2">15:00 to 19:00</td>
+  </th>
+  <tr>
+    <td headers="d3 m">09:30 to 12:00</td>
+    <th id="d3">Saturday</th>
+    <td headers="a d3">Closed</td>
+  </tr>
+</table>
+
+<%= sample_end %>
+{:/nomarkdown}
+
+{::nomarkdown}
+<%= code_start %>
+{:/nomarkdown}
+
+~~~ html
+<table
+  summary="Days are shown in the second column, morning opening hours in the first column and afternoon opening hours are in the third column">
 ~~~
 
 {::nomarkdown}
