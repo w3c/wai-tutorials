@@ -1,6 +1,20 @@
 successcriteria:
+  - 1.1.1:
+      title: Non-text Content
+      desc: "All non-text content that is presented to the user has a text alternative that serves the equivalent purpose, except for the situations listed[…]."
+      level: A
   - 1.3.1:
       desc: "Information, structure, and relationships conveyed through presentation can be programmatically determined or are available in text."
       level: A
       title: Info and Relationships
       slug: content-structure-separation-programmatic
+  - 1.4.5:
+      title: Images of Text
+      desc: "If the technologies being used can achieve the visual presentation, text is used to convey information rather than images of text except [for customizable and essential images]"
+      level: AA
+      slug: visual-audio-contrast-text-presentation
+  - 1.4.9:
+      title: Images of Text (No Exception)
+      desc: "Images of text are only used for pure decoration or where a particular presentation of text is essential to the information being conveyed"
+      level: AAA
+      slug: visual-audio-contrast-text-images
