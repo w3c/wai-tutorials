@@ -4,6 +4,10 @@ tutorial_title: Images
 status: draft
 order: 1
 topic_order: 1
+wcag_success_criteria:
+  - 1.1.1
+  - 1.4.5
+  - 1.4.9
 type: intro
 ---
 
@@ -22,6 +26,8 @@ Image content must have text alternatives that describes the information or func
 -   **[Groups of images](groups.html)**: If multiple images convey a single piece of information, the text alternative for one item should convey the information conveyed by the entire group.
 
 -   **[Image maps](imagemap.html)**: The text alternative for an image that contains multiple clickable areas should provide an overall context for the links. Each individual clickable area should describe the purpose or destination of the links in its alternative text.
+
+For guidance on deciding which category a specific image fits into, see the [`alt` Decision Tree](decision-tree.html).
 
 ## Why is this important?
 
