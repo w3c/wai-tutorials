@@ -42,32 +42,36 @@
                 <tr>
                     <td><%=v.desc%></td>
                     <td>
-                      <% if sitemap.find_resource_by_path('/' + v.page).parent && sitemap.find_resource_by_path('/' + v.page).parent.data.title != 'Tutorials' %>
+                      <% if v.page == 'all' %>
+                        Site wide
+                      <% else %>
+                        <% if sitemap.find_resource_by_path('/' + v.page).parent && sitemap.find_resource_by_path('/' + v.page).parent.data.title != 'Tutorials' %>
+                          <%
+                          item = sitemap.find_resource_by_path('/' + v.page).parent
+                          if item.data.tutorial_title
+                              letitle = item.data.tutorial_title
+                          else
+                              letitle = item.data.title
+                          end %>
+  			<%tuttitle = '<small>' + letitle + ':</small><br> '%>
+                        <%else%>
+                          <%tuttitle = ''%>
+                        <%end%>
                         <%
-                        item = sitemap.find_resource_by_path('/' + v.page).parent
-                        if item.data.tutorial_title
-                            letitle = item.data.tutorial_title
+                        item = sitemap.find_resource_by_path('/' + v.page)
+                        if item.data.nav_title
+                            letitle = item.data.nav_title
                         else
                             letitle = item.data.title
-                        end %>
-			<%tuttitle = '<small>' + letitle + ':</small><br> '%>
-                      <%else%>
-                        <%tuttitle = ''%>
-                      <%end%>
-                      <%
-                      item = sitemap.find_resource_by_path('/' + v.page)
-                      if item.data.nav_title
-                          letitle = item.data.nav_title
-                      else
-                          letitle = item.data.title
-		      end
-		      if v.fragment
-			fragment = v.fragment
-		      else
-			fragment = ''
-		      end
-		      %>
-		      <%= link_to( tuttitle + sitemap.find_resource_by_path('/' + v.page).data.title, '/' + v.page + fragment, :relative => true) %>
+  		      end
+  		      if v.fragment
+  			fragment = v.fragment
+  		      else
+  			fragment = ''
+  		      end
+  		      %>
+  		      <%= link_to( tuttitle + sitemap.find_resource_by_path('/' + v.page).data.title, '/' + v.page + fragment, :relative => true) %>
+            <%end%>
                     </td>
                     <td>
                       <%=v.by.join(", ")%>

@@ -1,4 +1,10 @@
 changes:
+  - 2014-06-17:
+      - desc: "Add TOC, reduced font size in code examples"
+        page: all
+        by:
+          - Shawn Henry
+        commit: 993e5ef977f6d8512b09c88e1be3948a4214dc44
   - 2014-06-13:
       - desc: "Changed phone/fax icons to make them more easily distinguishable"
         page: images/informative.html
