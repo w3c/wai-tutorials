@@ -113,6 +113,10 @@ ul {
 	}
 }
 
+h2.first, h3.first {
+	counter-reset: examples approaches;
+}
+
 .ap {
 	counter-increment: approaches;
 	&:before {
@@ -570,6 +574,7 @@ a {
 		float:right;
 		border-left: 2px solid #930;
 		margin-top: 1em;
+		clear: both;
 		.annotation-header {
 			margin-top:0;
 			margin-bottom: 0;
@@ -646,7 +651,7 @@ figure {
 	@include mq($big) {
 		clear: none;
 	}
-	&.sample, &.code, &.todo {
+	&.sample, &.code, &.todo, &.toc {
 		@extend .box;
 		> figcaption {
 			@extend .box-caption;
@@ -665,7 +670,7 @@ figure {
 		@extend .box-secondary;
 		pre {
 			background: none;
-			font-size: 0.9em;
+			font-size: 0.75em;
 			margin: 0;
 			@extend .box-content;
 		}
@@ -681,6 +686,27 @@ figure {
 		figcaption {background-color: darken(#f00, 20%); color: #fff}
 		> .figcontent {background-color: lighten(#f00, 40%);}
 		&:before, &:after {display:none;}
+	}
+	&.toc {
+		@extend .annotation;
+		> .figcontent {
+			font-size: 0.8em;
+			a {
+				display:block;
+				padding: .2em 0;
+				border-bottom: none;
+				&:hover, &:focus {
+					text-decoration: underline;
+				}
+			}
+			> ul {
+				padding-left: 1.5em;
+				list-style-type: disc;
+				ul {
+					padding-left: 1.5em;
+				}
+			}
+		}
 	}
 }
 
