@@ -680,6 +680,12 @@ figure {
 		figcaption {
 			color: #036;
 		}
+		.box-content {
+			font-weight: .8em;
+			th, td, caption {
+				padding: .1em .25em;
+			}
+		}
 	}
 	&.todo {
 		border-left-color: darken(#f00, 20%) !important;
