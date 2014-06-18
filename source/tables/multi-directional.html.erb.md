@@ -13,7 +13,7 @@ In addition to mark table headers up using `<th>` elements it is necessary to us
 
 Additionally, you can use add a [caption](caption-summary.html) to identify the table in a document, which is particularly useful for screen-reader users browsing the web page in “tables mode” where they can navigate from table to table. The caption is a way to meet WCAG 2.0 requirements in specific situations.
 
-## Table with ambigous data
+## Table with ambiguous data
 {:.ex}
 
 In this example the first and last names and cities are impossible to tell apart from one another. By using the `scope` element the header cells are clearly associated with their respective column.
