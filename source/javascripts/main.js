@@ -96,50 +96,55 @@ document.addEventListener('DOMContentLoaded', function(){
 
 	var firstheading = document.querySelectorAll('.content h2[id], .ap')[0];
 
-	if (firstheading.classList)
-		firstheading.classList.add('first');
-	else
-		firstheading.className += ' ' + ('first');
+	if (firstheading) {
+		if (firstheading.classList)
+			firstheading.classList.add('first');
+		else
+			firstheading.className += ' ' + ('first');
 
 
 
-	var toc_elements = document.querySelectorAll('.content h2[id], .ap'); // $('.content h2[id], .ap')
-	var toc_outer = document.createElement('figure');
-	toc_outer.innerHTML = '<figcaption>Table of Contents</figcaption><div class="figcontent"></div>';
-	if (toc_outer.classList)
-		toc_outer.classList.add('toc');
-	else
-		toc_outer.className += ' ' + ('toc');
-	var toc_wrap = document.createElement('ul');
-	var toc_elem = document.createElement('li');
-	var nesting = false;
-	var sub_wrap;
-	Array.prototype.forEach.call(toc_elements, function(el, i){	// … .each(…)
-		console.log(el.localName + ': ' + el.textContent + ' // ' + nesting);
-		var cur_elem = toc_elem.cloneNode(true);
-		if ((el.localName==="h3") && (nesting===false)) {
-			sub_wrap = toc_wrap.cloneNode(false);
-		}
-		if ((el.localName==="h2") && (nesting===true)) {
-			toc_wrap.querySelectorAll('li:last-child')[0].appendChild(sub_wrap);
-			nesting = false;
-		}
-		cur_elem.innerHTML = '<a class="' + el.getAttribute('class') + '" href="#' + el.getAttribute('id') + '">' + el.innerHTML + '</a>';
+		var toc_elements = document.querySelectorAll('.content h2[id], .ap'); // $('.content h2[id], .ap')
+		var toc_outer = document.createElement('figure');
+		toc_outer.setAttribute('role', 'navigation');
+		toc_outer.setAttribute('aria-describedby', 'toc_desc');
+		toc_outer.innerHTML = '<figcaption id="toc_desc">On this page</figcaption><div class="figcontent"></div>';
+		if (toc_outer.classList)
+			toc_outer.classList.add('toc');
+		else
+			toc_outer.className += ' ' + ('toc');
+		var toc_wrap = document.createElement('ul');
+		var toc_elem = document.createElement('li');
+		var nesting = false;
+		var sub_wrap;
+		Array.prototype.forEach.call(toc_elements, function(el, i){	// … .each(…)
+			// console.log(el.localName + ': ' + el.textContent + ' // ' + nesting);
+			var cur_elem = toc_elem.cloneNode(true);
+			if ((el.localName==="h3") && (nesting===false)) {
+				sub_wrap = toc_wrap.cloneNode(false);
+			}
+			if ((el.localName==="h2") && (nesting===true)) {
+				toc_wrap.querySelectorAll('li:last-child')[0].appendChild(sub_wrap);
+				nesting = false;
+			}
+			cur_elem.innerHTML = '<a class="' + el.getAttribute('class') + '" href="#' + el.getAttribute('id') + '">' + el.innerHTML + '</a>';
 
-		console.log(cur_elem);
+			// console.log(cur_elem);
 
-		if (el.localName==="h3") {
-			sub_wrap.appendChild(cur_elem);
-			nesting = true;
-		} else {
-			toc_wrap.appendChild(cur_elem);
-		}
-	});
+			if (el.localName==="h3") {
+				sub_wrap.appendChild(cur_elem);
+				nesting = true;
+			} else {
+				toc_wrap.appendChild(cur_elem);
+			}
+		});
 
-	toc_outer.querySelectorAll('.figcontent')[0].innerHTML = toc_wrap.outerHTML;
+		toc_outer.querySelectorAll('.figcontent')[0].innerHTML = toc_wrap.outerHTML;
 
-	var inner = document.querySelectorAll('.inner > :first-child')[0];
-	inner.insertAdjacentHTML('beforebegin', toc_outer.outerHTML);
+		var inner = document.querySelectorAll('.inner > :first-child')[0];
+		inner.insertAdjacentHTML('beforebegin', toc_outer.outerHTML);
+
+	}
 
 	var plel = document.createElement('a');
 	addclass(plel, 'permalink');
