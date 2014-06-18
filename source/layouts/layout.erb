@@ -56,13 +56,14 @@
       end
     end
     if technologies.length > 0  %>
-    <div class="technologies">
-      <p><strong>Technologies covered in this Tutorial:</strong>
+    <aside class="technologies">
+      <strong>Technologies covered in this Tutorial:</strong>
+      <div>
         <% technologies.sort.uniq.each do |z| %>
           <span class="tech"><%= z %></span>
         <% end %>
-      </p>
-    </div>
+      </div>
+    </aside>
     <% end %>
   <% end %>
 
