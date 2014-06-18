@@ -11,7 +11,7 @@ type: intro
 
 Data tables are used to organize data in grids.  Accessible tables need HTML markup that indicates the difference between header cells and data cells, and that indicates the relationship between them. 
 
-To make any table accessible, header cells must be marked up with `<th>` and data cells marked up with `<td>`. For more complex tables, explicit associations may be needed using `scope` or `id` and `headers` attributes, so that they can be interpreted by assistive technologies.
+To make any table accessible, header cells must be marked up with `<th>` and data cells marked up with `<td>`. For more complex tables, explicit associations may be needed using `scope` or `id` and `headers` attributes.
 
 This tutorial shows you how to apply appropriate structural markup to tables.  It includes the following pages:
 
