@@ -563,8 +563,8 @@ a {
 	}
 	.annotation {
 		@include mq($medium) {
-			width: percentage(1/2) - 6%;
-			margin-left: 1%;
+			width: percentage(1/2) - 8%;
+			margin-left: 3%;
 		}
 		@include mq($big) {
 			width: percentage(1/2) - 4%;
@@ -651,7 +651,7 @@ figure {
 	@include mq($big) {
 		clear: none;
 	}
-	&.sample, &.code, &.todo, &.toc {
+	&.sample, &.code, &.todo {
 		@extend .box;
 		> figcaption {
 			@extend .box-caption;
@@ -695,11 +695,23 @@ figure {
 	}
 	&.toc {
 		@extend .annotation;
+		border:none !important;
+		font-size: 0.9em;
+		ul {
+			margin: 0;
+		}
+		figcaption {
+			padding:.5em .5em 0;
+			font-weight: bold;
+			background-color: #eee;
+			border-radius: .25em .25em 0 0;
+		}
 		> .figcontent {
-			font-size: 0.8em;
+			padding:.5em;
+			background: linear-gradient(to bottom, #eee, rgba(#eee, 0));
 			a {
 				display:block;
-				padding: .2em 0;
+				padding: 0 0 .1em;
 				border-bottom: none;
 				&:hover, &:focus {
 					text-decoration: underline;
@@ -769,6 +781,9 @@ table {
 			text-align: left;
 		}
 	}
+	caption {
+		text-align: left;
+	}
 	th {
 		text-align: left;
 		background-color: #ccc;
@@ -783,6 +798,12 @@ table {
 		.result {
 			text-align: center;
 		}
+	}
+}
+
+table, tr {
+	&.numbers td {
+		text-align: right;
 	}
 }
 
@@ -1106,14 +1127,19 @@ select {
 
 .technologies {
 	@extend .annotation;
+	font-size: 0.9em;
 	border:none !important;
 	margin-bottom: 2em;
-	strong {
+	strong, div {
+		padding: .5em;
 		display: block;
+	}
+	strong {
+		padding-bottom: 0;
 	}
 	span {
 		display: inline-block;
-		border-radius:1em;
+		border-radius: 1em;
 		line-height: 1;
 		padding: 0 .45em;
 	}
