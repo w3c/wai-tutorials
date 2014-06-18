@@ -9,7 +9,7 @@ wcag_techniques:
 
 The content of a simple table is so descriptive on its own, that only a header row is needed to give the user an impression of the data in the table. `<th>` elements are used to markup the header cells so that they are distinguishable from the data cells.
 
-If the table is larger or its content is more ambiguous, the `scope` attribute should be used to avoid confusion, see [Directional Tables](multi-directional.html);
+If the table is larger or its content is more ambiguous, the `scope` attribute should be used to avoid confusion, see [Directional Tables](multi-directional.html).
 
 ## Table with header cells in the top row only
 {:.ex}
