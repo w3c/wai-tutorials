@@ -417,8 +417,6 @@ a {
 	ul {
 		margin: 0;
 		padding: 0;
-		/*border: 1px solid #aaa;
-		border-width: 1px 2px;*/
 		li {
 			display: table;
 			width: 100%;
@@ -432,7 +430,6 @@ a {
 			}
 			a, .current-a {
 				display: table-row;
-				line-height: percentage(44/18);
 				text-decoration: none;
 				width: 100%;
 			}
@@ -456,7 +453,7 @@ a {
 			.txt {
 				display: table-cell;
 				position: relative;
-				padding: 0 0 0 12px;
+				padding: .25em .25em .25em 12px;
 				line-height: 1.5;
 			}
 
