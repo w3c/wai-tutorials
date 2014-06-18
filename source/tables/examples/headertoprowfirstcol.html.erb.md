@@ -9,7 +9,7 @@ layout: fullcode
 
 <table>
 	<tr>
-		<th>Delivery slots</th>
+		<td></td>
 		<th>Monday</th>
 		<th>Tuesday</th>
 		<th>Wednesday</th>

@@ -12,6 +12,10 @@ layout: fullcode
     Capital cities
   </caption>
   <tr>
+    <th scope="col">Country</th>
+    <th scope="col">Capital city</th>
+  </tr>
+  <tr>
     <th scope="row">Belgium</th>
     <td>Brussels</td>
   </tr>
