@@ -1,5 +1,5 @@
 ---
-title: Large Simple Tables
+title: Multi-Directional Tables
 status: draft
 technologies: HTML5
 order: 3
@@ -7,44 +7,42 @@ wcag_techniques:
   - H51
 ---
 
-A large simple table has one header row and/or a header column. They are usually in the first row and column of the table and don’t span columns/rows.
+A multi directional table usually has one header row and a header column. Most of the times, they are in the first row and column of the table. They don’t span columns/rows.
 
-In addition to mark table headers up using `<th>` elements it is useful to use the `scope` attribute on simple tables. It’s used to declare the direction of the header cell. A `scope` value of `row` or `col` denotes that the header cell applies to the entire row or column, respectively. 
+In addition to mark table headers up using `<th>` elements it is necessary to use the `scope` attribute on these tables. It’s used to declare the direction of the header cell. A `scope` value of `row` or `col` denotes that the header cell applies to the entire row or column, respectively. The direction of a table heading is especially important when the content in the table isn’t easy to distinguish.
 
-Additionally, you can use add a [caption](caption-summary.html) to identify the table in a document,  which is particularly useful for screen-reader users browsing the web page in “tables mode”. This is a way to meet WCAG 2.0 requirements in specific situations.
+Additionally, you can use add a [caption](caption-summary.html) to identify the table in a document, which is particularly useful for screen-reader users browsing the web page in “tables mode” where they can navigate from table to table. The caption is a way to meet WCAG 2.0 requirements in specific situations.
 
-## Table with header cells in the top row only
+## Table with ambigous data
 {:.ex}
 
-While this table is looking visually the same as the [small simple table exampe](simple.html), it uses  `scope` attributes to be more explicit about the direction of the `<th>` cells which helps assistive technology convey the relationship to the user.
-
-Using `scope="col"` on the `<th>` cells associates them to all the data cells in the column. Therefore, when a user selects the “Venue” cell, it is only read out as “Venue” rather than “Date – Event – Venue” as in the previous approach.
+In this example the first and last names and cities are impossible to tell apart from one another. By using the `scope` element the header cells are clearly associated with their respective column.
 
 {::nomarkdown}
 <%= sample_start %>
 
-<p><strong>Concerts:</strong></p>
+<p><strong>Teddy bear collectors:</strong></p>
 <table>
-	<tr>
-		<th scope="col">Date</th>
-		<th scope="col">Event</th>
-		<th scope="col">Venue</th>
-	</tr>
-	<tr>
-		<td>12 Feb</td>
-		<td>Waltz with Strauss</td>
-		<td>Main Hall</td>
-	</tr>
-	<tr>
-		<td>24 Mar</td>
-		<td>The Obelisks</td>
-		<td>West Wing</td>
-	</tr>
-	<tr>
-		<td>14 Apr</td>
-		<td>The What</td>
-		<td>Main Hall</td>
-	</tr>
+  <tr>
+    <th scope="col">Last Name</th>
+    <th scope="col">First Name</th>
+    <th scope="col">City</th>
+  </tr>
+  <tr>
+    <td>John</td>
+    <td>Martin</td>
+    <td>Henry</td>
+  </tr>
+  <tr>
+    <td>Shawn</td>
+    <td>Oliver</td>
+    <td>George</td>
+  </tr>
+  <tr>
+    <td>Wilson</td>
+    <td>Kelly</td>
+    <td>Hope</td>
+  </tr>
 </table>
 
 <%= sample_end %>
@@ -56,25 +54,32 @@ Using `scope="col"` on the `<th>` cells associates them to all the data cells in
 
 ~~~ html
 <table>
-	<tr>
-		<th scope="col">Date</th>
-		<th scope="col">Event</th>
-		<th scope="col">Venue</th>
-	</tr>
-	<tr>
-		<td>12 Feb</td>
-		<td>Waltz with Strauss</td>
-		<td>Main Hall</td>
-	</tr>
-	[…]
+  <tr>
+    <th scope="col">Last Name</th>
+    <th scope="col">First Name</th>
+    <th scope="col">City</th>
+  </tr>
+  <tr>
+    <td>John</td>
+    <td>Martin</td>
+    <td>Henry</td>
+  </tr>
+  <tr>
+    <td>Shawn</td>
+    <td>Oliver</td>
+    <td>George</td>
+  </tr>
+  <tr>
+    <td>Wilson</td>
+    <td>Kelly</td>
+    <td>Hope</td>
+  </tr>
 </table>
 ~~~
 
 {::nomarkdown}
 <%= code_end %>
 {:/nomarkdown}
-
-[Full code for “Table with header cells in the top row only”](examples/headertoprow.html)
 
 ## Table with header cells in one column only
 {:.ex}
@@ -117,6 +122,48 @@ This example has `<th>` elements for all cells in the left column of a table. As
 <%= sample_end %>
 {:/nomarkdown}
 
+A header row can be used to clarify the table even further:
+
+{::nomarkdown}
+<%= sample_start %>
+
+<table>
+  <caption>
+    Capital cities
+  </caption>
+  <tr>
+    <th scope="col">Country</th>
+    <th scope="col">Capital city</th>
+  </tr>
+  <tr>
+    <th scope="row">Belgium</th>
+    <td>Brussels</td>
+  </tr>
+  <tr>
+    <th scope="row">France</th>
+    <td>Paris</td>
+  </tr>
+  <tr>
+    <th scope="row">Holland</th>
+    <td>Amsterdam</td>
+  </tr>
+  <tr>
+    <th scope="row">Luxembourg</th>
+    <td>Luxembourg</td>
+  </tr>
+  <tr>
+    <th scope="row">Spain</th>
+    <td>Madrid</td>
+  </tr>
+  <tr>
+    <th scope="row">UK</th>
+    <td>London</td>
+  </tr>
+</table>
+
+<%= sample_end %>
+{:/nomarkdown}
+
 {::nomarkdown}
 <%= code_start %>
 {:/nomarkdown}
@@ -124,6 +171,10 @@ This example has `<th>` elements for all cells in the left column of a table. As
 ~~~ html
 <table>
   <caption>Capital cities</caption>
+  <tr>
+    <th scope="col">Country</th>
+    <th scope="col">Capital city</th>
+  </tr>
   <tr>
     <th scope="row">Belgium</th>
     <td>Brussels</td>
@@ -209,7 +260,7 @@ This table of opening times has header information contained in both the top row
 ~~~ html
 <table>
 	<tr>
-		<th scope="col">Delivery slots</th>
+		<td></td>
 		<th scope="col">Monday</th>
 		<th scope="col">Tuesday</th>
 		<th scope="col">Wednesday</th>
@@ -250,7 +301,7 @@ In this table, the row header cells are in the second column rather than the fir
 {::nomarkdown}
 <%= sample_start %>
 
-<table>
+<table class="numbers">
   <caption>
     Holidays taken in the last six months
   </caption >
