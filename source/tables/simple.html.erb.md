@@ -1,5 +1,5 @@
 ---
-title: Small Simple Tables
+title: Simple Tables
 status: draft
 technologies: HTML5
 order: 2
@@ -7,16 +7,16 @@ wcag_techniques:
   - H51
 ---
 
-A small simple table has one header row and not more than about 5 columns.
+The content of a simple table is so descriptive on its own, that only a header row is needed to give the user an impression of the data in the table. `<th>` elements are used to markup the header cells so that they are distinguishable from the data cells.
 
-Use `<th>` elements to markup the header cells so that they are distinguishable from the data cells.
+If the table is larger or its content is more ambiguous, the `scope` attribute should be used to avoid confusion, see [Directional Tables](multi-directional.html);
 
 ## Table with header cells in the top row only
 {:.ex}
 
 This table of concerts has the cells in the first row marked up as `<th>` cells without any `scope` direction. Some screen readers will read “Date – Event – Venue” on the “Venue” cell in the table below because the direction of the `<th>` elements is ambiguous. 
 
-This is acceptable because it is such a small table and the data itself is distinctly different in each column. See the first example in [large simple tables](simple-large.html) for advice on explicitly defining header directions.
+This is only acceptable because it is such a small table and the data itself is distinctly different in each column.
 
 {::nomarkdown}
 <%= sample_start %>
@@ -29,17 +29,17 @@ This is acceptable because it is such a small table and the data itself is disti
 		<th>Venue</th>
 	</tr>
 	<tr>
-		<td>12 Feb</td>
+		<td>12 February</td>
 		<td>Waltz with Strauss</td>
 		<td>Main Hall</td>
 	</tr>
 	<tr>
-		<td>24 Mar</td>
+		<td>24 March</td>
 		<td>The Obelisks</td>
 		<td>West Wing</td>
 	</tr>
 	<tr>
-		<td>14 Apr</td>
+		<td>14 April</td>
 		<td>The What</td>
 		<td>Main Hall</td>
 	</tr>
