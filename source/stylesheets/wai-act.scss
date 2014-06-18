@@ -935,6 +935,10 @@ select {
 	@include mq($medium) {
 		position: absolute;
 		left: -1000em;
+		&:focus {
+			position: static;
+			left:0;
+		}
 	}
 }
 
