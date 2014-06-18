@@ -1,6 +1,6 @@
 ---
 title: Multi-level Tables
-nav_title: "Complex: Multi-level"
+nav_title: "Complex Multi-level Tables"
 status: draft
 technologies: HTML5
 wcag_techniques: 
@@ -121,7 +121,7 @@ This example shows availability of accommodation of a given type and size in two
 {::nomarkdown}
 <%= sample_start %>
 
-<table summary="Column one has the location and size of accommodation, other columns show the type and number of properties available">
+<table class="numbers" summary="Column one has the location and size of accommodation, other columns show the type and number of properties available">
 <caption>
     Availability of holiday accommodation
 </caption>
@@ -303,7 +303,7 @@ The two tables below provide the same information as the mutli-level table in [t
 {::nomarkdown}
 <%= sample_start %>
 <p><strong>Availability of holiday accommodation</strong></p>
-<table summary="Column one has the location and size of accommodation, other columns show the type and number of properties available">
+<table class="numbers" summary="Column one has the location and size of accommodation, other columns show the type and number of properties available">
 <caption>
     Paris
 </caption>
@@ -378,7 +378,7 @@ The two tables below provide the same information as the mutli-level table in [t
     </tr>
   </tbody>
 </table>
-<table style="margin-top:1em;">
+<table  class="numbers" style="margin-top:1em;">
 <caption>
     Rome
 </caption>
