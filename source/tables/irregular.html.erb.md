@@ -1,6 +1,5 @@
 ---
 title: Irregular Tables
-nav_title: "Complex Irregular Tables"
 status: draft
 technologies: HTML5
 wcag_techniques:

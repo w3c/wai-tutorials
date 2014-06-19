@@ -1,6 +1,5 @@
 ---
 title: Multi-level Tables
-nav_title: "Complex Multi-level Tables"
 status: draft
 technologies: HTML5
 wcag_techniques: 
