@@ -1,6 +1,91 @@
 changes:
+  - 2014-06-19:
+      - desc: "Remove “not valid in HTML5” warning"
+        page: images/complex.html
+        by:
+          - WCAG WG
+        commit: 66879ddb3f88b26bdaa87408ab6fc7938b547401
+      - desc: "Add tip on tables in mobile context"
+        page: tables/tips.html
+        by:
+          - EO WG
+          - Shadi Abou-Zahra
+        commit: b6363eb4daf426f3a723ffea2fd1424d76e799dc
+      - desc: "Change decision tree wording"
+        page: images/decision-tree.html
+        by:
+          - WCAG WG
+        commit: e5882562e036bd5ea9b40788ed629728a97bafcc
+      - desc: "Add WAI-ARIA compatibility note"
+        page: images/groups.html
+        by:
+          - WCAG WG
+        commit: cdb8c14c6ac0b8876ccdb1620077728db43f1486
+      - desc: "Reference WCAG 2.0 techniques from the text, on appropriate position"
+        page: tables/caption-summary.html
+        by:
+          - WCAG WG
+        commit: 39b4e2b0aa70e0cfbc99938da8151c5956038743
+      - desc: "Visual bugfixes (introduced with “On this page feature” and different link styling)"
+        page: all
+        commit: 3cd48d7fcd2911ead54740e953468b69346133d4
+      - desc: "Add an example to the simple tables page that has the headers in the first columns"
+        page: tables/simple.html
+        by:
+          - EO WG
+        commit: bbda593d3ce4a11199bd3ced387ec068fa3c0d37
+      - desc: "New icons for the tables concepts page, optimized images (site-wide)"
+        page: tables/index.html
+        commit: f7432110aea7303d7016aa0319fdd5f29f1a2f5b
+      - desc: "Reflect changes to the tables tutorial on the tables concepts page"
+        page: tables/index.html
+        commit: 48524385749583c2d6fd3122c18a18fea5a7ed2e
+  - 2014-06-18:
+      - desc: "Display “Skip to navigation” link on focus"
+        page: all
+        by:
+          - Bim Egan
+        commit: 79dd3102dc956386aa4f69c385531d8102c36fac
+      - desc: "Clarification on tables concepts page"
+        page: tables/index.html
+        by:
+          - Shadi Abou-Zhara
+        commit: 3bf04aca45e74859b22223c09459988689058b99
+      - desc: "Fixed display of navigation active links with two lines of text"
+        page: all
+        commit: 30742f086c8d32959e701f61b06474293c33df02
+      - desc: "Consistent formatting of tables with numeric values"
+        page: all
+        commit: 08c39cd89cc9bf337eb7e3e9c9b5ee85300ee4c5
+      - desc: "Clarification of the whole page"
+        page: tables/irregular.html
+        by:
+          - Shadi Abou-Zhara
+          - Eric Eggert
+        commit: 4947376b543218b6d2558f7eeeb4feed2fe766cf
+      - desc: "Clarification of the whole page"
+        page: tables/multi-directional.html
+        by:
+          - Shadi Abou-Zhara
+          - Eric Eggert
+        commit: 7bbc58ac1eda52cfb64d8dfcf6bf2d84a7f7e8ed
+      - desc: "More clear intro"
+        page: tables/simple.html
+        by:
+          - Shadi Abou-Zhara
+        commit: 61524e20cdfb2267a857d37ffef6fd01de8e7cc8
+      - desc: "Design “On this page” to look les obtrusive"
+        page: all
+        by:
+          - Shawn Henry
+        commit: 993e5ef977f6d8512b09c88e1be3948a4214dc44
   - 2014-06-17:
-      - desc: "Add TOC, reduced font size in code examples"
+      - desc: "Changed table layouts to improve readability"
+        page: all
+        by:
+          - Shawn Henry
+        commit: 7fdd5ea5e5
+      - desc: "Add “On this page”, reduced font size in code examples"
         page: all
         by:
           - Shawn Henry

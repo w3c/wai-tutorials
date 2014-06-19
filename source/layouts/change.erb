@@ -27,14 +27,14 @@
     <%= yield %>
       <% data.changes.changes.each do |f| %>
         <% f.each do |key, value| %>
-	  <table class="changes" id="★<%=key%>">
-            <caption>Changes on <%=key%> <a href="#★<%=key%>" class="btn-small" style="float:right;">Permalink</a></caption>
+	  <table class="changes" id="date-<%=key%>">
+            <caption>Changes on <%=key%> <a href="#date-<%=key%>" class="btn-small" style="float:right;">Permalink</a></caption>
             <thead>
               <tr>
 		<th width="50%">Change</th>
 		<th width="22%">Page</th>
-		<th width="14%">Suggested by</th>
-		<th width="14 %">Links</th>
+		<th width="18%">Suggested by</th>
+		<th width="10%">Links</th>
               </tr>
             </thead>
             <tbody>
@@ -74,7 +74,9 @@
             <%end%>
                     </td>
                     <td>
-                      <%=v.by.join(", ")%>
+                      <% if v.by %>
+                        <%=v.by.join(", ")%>
+                      <% end %>
                     </td>
                     <td>
                     <% if v.commit %>
