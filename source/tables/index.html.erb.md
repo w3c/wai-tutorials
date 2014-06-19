@@ -21,7 +21,7 @@ This tutorial shows you how to apply appropriate structural markup to tables.  I
 
 -   **[Irregular tables![](img-irreg.png)](irregular.html):**  For tables where header cells span multiple rows or columns, define column and row groups and set the range of header cells using the `colgroup` and `rowgroup` values of the `scope` attribute.
 
--   **[Multi-level tables![ have multiple header cells associated per data cell](img-multi.png)](multi-level.html):**  For tables that are so complex that header cells can’t be accociated in a strictly horizontal or vertical way, `headers` and `id` attributes should be used to explicitly associate header and data cells.
+-   **[Multi-level tables![ have multiple header cells associated per data cell](img-multi.png)](multi-level.html):**  For tables that are so complex that header cells can’t be accociated in a strictly horizontal or vertical way, use `headers` and `id` attributes to explicitly associate header and data cells.
 
 -   **[Caption & Summary![](img-caption.png)](caption-summary.html):** A caption identifies the overall topic of a table and is useful in most situations. A summary provides orientation or navigation hints in complex tables.
 {:.withicons.nobullets}
