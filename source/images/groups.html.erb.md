@@ -113,7 +113,7 @@ alt="The castle lies in ruins, the original tower all that remains in one piece.
 <%= notes_start %>
 {:/nomarkdown}
 
-**Note:** We also use the WAI-ARIA attribute `role` with the value of `group` to indicate grouping to assistive technology.
+**Note:** We also use the WAI-ARIA attribute `role` with the value of `group` to indicate grouping to assistive technology. The support for this particular WAI-ARIA attribute and value varies. 
 
 {::nomarkdown}
 <%= notes_end %>
