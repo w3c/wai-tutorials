@@ -74,7 +74,7 @@ p+ul {
 }
 
 ul + p, ul + div {
-	clear:both;
+	clear:left;
 	padding-top: .5em;
 }
 
@@ -682,6 +682,10 @@ figure {
 			th, td, caption {
 				padding: .3em;
 			}
+		}
+		a, a:hover {
+			border: none;
+			text-decoration: underline;
 		}
 	}
 	&.todo {
