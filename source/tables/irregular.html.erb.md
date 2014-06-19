@@ -29,8 +29,7 @@ If a table consists of a heading that spans more multiple columns/rows of header
 
 {::nomarkdown}
 <%= sample_start %>
-<style>.numbers td {text-align:right;font-variant-numeric: tabular-nums; whitespace: no-wrap;}</style>
-<table>
+<table class="numbers">
   <colgroup></colgroup>
   <colgroup span="2"></colgroup>
   <colgroup span="2"></colgroup>
@@ -40,24 +39,24 @@ If a table consists of a heading that spans more multiple columns/rows of header
     <th colspan="2" scope="colgroup">Venus</th>
   </tr>
   <tr>
-    <th scope="col">Actual</th>
-    <th scope="col">Budget</th>
-    <th scope="col">Actual</th>
-    <th scope="col">Budget</th>
+    <th scope="col">Produced</th>
+    <th scope="col">Sold</th>
+    <th scope="col">Produced</th>
+    <th scope="col">Sold</th>
   </tr>
-  <tr class="numbers">
+  <tr>
     <th scope="row">Teddy&nbsp;Bears</th>
-    <td>¤&nbsp;300,000</td>
-    <td>¤&nbsp;500,000</td>
-    <td>¤&nbsp;800,000</td>
-    <td>¤&nbsp;1,000,000</td>
+    <td>50,000</td>
+    <td>30,000</td>
+    <td>100,000</td>
+    <td>80,000</td>
   </tr>
-  <tr class="numbers">
+  <tr>
     <th scope="row">Board&nbsp;Games</th>
-    <td>¤&nbsp;50,000</td>
-    <td>¤&nbsp;100,000</td>
-    <td>¤&nbsp;90,000</td>
-    <td>¤&nbsp;120,000</td>
+    <td>10,000</td>
+    <td>5,000</td>
+    <td>12,000</td>
+    <td>9,000</td>
   </tr>
 </table>
 <%= sample_end %>
@@ -72,29 +71,31 @@ If a table consists of a heading that spans more multiple columns/rows of header
   <colgroup></colgroup>
   <colgroup span="2"></colgroup>
   <colgroup span="2"></colgroup>
-  <thead>
-    <tr>
-      <td rowspan="2"></td>
-      <th colspan="2" scope="colgroup">Sales US</th>
-      <th colspan="2" scope="colgroup">Sales Europe</th>
-    </tr>
-    <tr>
-      <th scope="col">Actual</th>
-      <th scope="col">Budget</th>
-      <th scope="col">Actual</th>
-      <th scope="col">Budget</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">Product 1</th>
-      <td>¤ 300,000</td>
-      <td>¤ 500,000</td>
-      <td>¤ 800,000</td>
-      <td>¤ 1,000,000</td>
-    </tr>
-    […]
-  </tbody>
+  <tr>
+    <td rowspan="2"></td>
+    <th colspan="2" scope="colgroup">Mars</th>
+    <th colspan="2" scope="colgroup">Venus</th>
+  </tr>
+  <tr>
+    <th scope="col">Produced</th>
+    <th scope="col">Sold</th>
+    <th scope="col">Produced</th>
+    <th scope="col">Sold</th>
+  </tr>
+  <tr>
+    <th scope="row">Teddy Bears</th>
+    <td>50,000</td>
+    <td>30,000</td>
+    <td>100,000</td>
+    <td>80,000</td>
+  </tr>
+  <tr>
+    <th scope="row">Board Games</th>
+    <td>10,000</td>
+    <td>5,000</td>
+    <td>12,000</td>
+    <td>9,000</td>
+  </tr>
 </table>
 ~~~
 
