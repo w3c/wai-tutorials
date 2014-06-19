@@ -26,7 +26,7 @@ type: tips
 
 -   **Styling header cells:** You should use `<th>` elements for header cells, not a `<td>` with different styling. It is helpful to differentiate `<th>` and `<td>` cells visually. For example, on these tutorial pages header cells have a dark gray background.
 
--   **On mobile:** Due to the layout model of tables, they sometimes don’t fit on small screens. In such circumstances it’s important that the table isn’t cut of (for example by using `overflow: hidden` in CSS). By using `overflow: scroll` on a wrapper element, a table that is too wide won’t break the layout of the page while being completely accessible.
+-   **On mobile:** Due to the layout model of tables, they sometimes don’t fit on small screens. In such circumstances it’s important that the table isn’t cut of (for example by using `overflow: hidden` in CSS). By using `overflow: scroll` on an element wrapping a wide table, the table won’t break the layout of the page while being completely accessible.
 
 {::nomarkdown}
 <%= notes_start %>
