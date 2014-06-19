@@ -32,7 +32,7 @@ For guidance on deciding which category a specific image fits into, see the [`al
 ## Why is this important?
 
 Images are used extensively on websites and can create major barriers
-when they are not made accessible. Accessible images provide beneficial in
+when they are not made accessible. Accessible images prove to be beneficial in
 many situations such as:
 
 -   **People using screen readers:** The text alternative can be read aloud or rendered as Braille,
