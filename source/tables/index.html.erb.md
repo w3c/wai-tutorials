@@ -15,11 +15,13 @@ To make any table accessible, header cells must be marked up with `<th>` and dat
 
 This tutorial shows you how to apply appropriate structural markup to tables.  It includes the following pages:
 
--   **[Simple tables![ typically have one header row and/or one header column](img-simple.png)](simple.html):** For simple tables, mark up header cells with `<th>` elements and define their direction with the `scope` attribute’s `col` and `row` values.
+-   **[Simple tables![ typically have one header row and/or one header column](img-simple.png)](simple.html):** For simple tables with content that is easy to distinguish, mark up header cells with `<th>` elements.
 
--   **[Irregular tables![ have some kind of headers that are expected at a different location](img-irreg.png)](irregular.html):**  For tables where identifying header cells programmatically is ambiguous, define column and row groups and set the range of header cells using the `scope` attribute with the `colgroup` and `rowgroup` values.
+-   **[Multi-Directional Tables![ have usually have headers for rows and columns](img-multidir.png)](irregular.html):**  For tables with headings in two directions, define their direction by setting the `scope` attribute to `col` or `row`.
 
--   **[Multi-level tables![ have multiple header cells associated per data cell](img-multi.png)](multi-level.html):**  For tables that have a structure that is too complex to support strict horizontal or vertical association between header and data cells an explicit association (using `headers` and `id` attributes) should be used.
+-   **[Irregular tables![](img-irreg.png)](irregular.html):**  For tables where header cells span multiple rows or columns, define column and row groups and set the range of header cells using the `colgroup` and `rowgroup` values of the `scope` attribute.
+
+-   **[Multi-level tables![ have multiple header cells associated per data cell](img-multi.png)](multi-level.html):**  For tables that are so complex that header cells can’t be accociated in a strictly horizontal or vertical way, `headers` and `id` attributes should be used to explicitly associate header and data cells.
 
 -   **[Caption & Summary![](img-caption.png)](caption-summary.html):** A caption identifies the overall topic of a table and is useful in most situations. A summary provides orientation or navigation hints in complex tables.
 {:.withicons.nobullets}
