@@ -5,9 +5,10 @@ technologies: HTML5
 order: 2
 wcag_techniques: 
   - H51
+  - H63
 ---
 
-The content of a simple table is so descriptive on its own, that only a header row is needed to give the user an impression of the data in the table. `<th>` elements are used to markup the header cells so that they are distinguishable from the data cells.
+When the content of a simple table is so descriptive on its own, then only a header row is needed to give the user an impression of the data in the table.
 
 If the table is larger or its content is more ambiguous, the `scope` attribute should be used to avoid confusion, see [Directional Tables](multi-directional.html).
 
@@ -60,7 +61,7 @@ This is only acceptable because it is such a small table and the data itself is 
 		<th>Venue</th>
 	</tr>
 	<tr>
-		<td>12 Feb</td>
+		<td>12 February</td>
 		<td>Waltz with Strauss</td>
 		<td>Main Hall</td>
 	</tr>
