@@ -17,7 +17,7 @@ This tutorial shows you how to apply appropriate structural markup to tables. It
 
 -   **[Basic tables![ typically have one header row and/or one header column](img-simple.png)](basic.html):** For simple tables with content that is easy to distinguish, mark up header cells with `<th>` elements.
 
--   **[Multi-Directional Tables![ have usually have headers for rows and columns](img-multidir.png)](irregular.html):**  For tables with headings in two directions, define their direction by setting the `scope` attribute to `col` or `row`.
+-   **[Multi-Directional Tables![ have usually have headers for rows and columns](img-multidir.png)](multi-directional.html):**  For tables with headings in two directions, define their direction by setting the `scope` attribute to `col` or `row`.
 
 -   **[Irregular tables![](img-irreg.png)](irregular.html):**  For tables where header cells span multiple rows or columns, define column and row groups and set the range of header cells using the `colgroup` and `rowgroup` values of the `scope` attribute.
 
