@@ -72,3 +72,67 @@ This is only acceptable because it is such a small table and the data itself is 
 {::nomarkdown}
 <%= code_end %>
 {:/nomarkdown}
+
+## Table with header cells in the first column only
+{:.ex}
+
+In this example the same data is laid out differently, with a header column on the left.
+
+{::nomarkdown}
+<%= sample_start %>
+
+<p><strong>Concerts:</strong></p>
+<table>
+	<tr>
+		<th>Date</th>
+		<td>12 February</td>
+		<td>24 March</td>
+		<td>14 April</td>
+	</tr>
+	<tr>
+		<th>Event</th>
+		<td>Waltz with Strauss</td>
+		<td>The Obelisks</td>
+		<td>The What</td>
+	</tr>
+	<tr>
+		<th>Venue</th>
+		<td>Main Hall</td>
+		<td>West Wing</td>
+		<td>Main Hall</td>
+	</tr>
+</table>
+
+<%= sample_end %>
+{:/nomarkdown}
+
+{::nomarkdown}
+<%= code_start %>
+{:/nomarkdown}
+
+~~~ html
+<table>
+	<tr>
+		<th>Date</th>
+		<td>12 February</td>
+		<td>24 March</td>
+		<td>14 April</td>
+	</tr>
+	<tr>
+		<th>Event</th>
+		<td>Waltz with Strauss</td>
+		<td>The Obelisks</td>
+		<td>The What</td>
+	</tr>
+	<tr>
+		<th>Venue</th>
+		<td>Main Hall</td>
+		<td>West Wing</td>
+		<td>Main Hall</td>
+	</tr>
+</table>
+~~~
+
+{::nomarkdown}
+<%= code_end %>
+{:/nomarkdown}
