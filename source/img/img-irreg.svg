@@ -19,8 +19,7 @@
             <rect id="Rectangle-24" fill="#FFFFFF" sketch:type="MSShapeGroup" x="15" y="45" width="16" height="16"></rect>
             <rect id="Rectangle-23" fill="#FFFFFF" sketch:type="MSShapeGroup" x="30" y="45" width="16" height="16"></rect>
             <rect id="Rectangle-22" fill="#FFFFFF" sketch:type="MSShapeGroup" x="45" y="45" width="16" height="16"></rect>
-            <rect id="Rectangle-13" fill="#777777" sketch:type="MSShapeGroup" x="0" y="15" width="16" height="16"></rect>
-            <rect id="Rectangle-14" fill="#777777" sketch:type="MSShapeGroup" x="0" y="30" width="16" height="16"></rect>
+            <rect id="Rectangle-13" fill="#777777" sketch:type="MSShapeGroup" x="0" y="15" width="16" height="31"></rect>
             <rect id="Rectangle-15" fill="#777777" sketch:type="MSShapeGroup" x="0" y="45" width="16" height="16"></rect>
             <rect id="Rectangle-10" fill="#777777" sketch:type="MSShapeGroup" x="15" y="0" width="46" height="8"></rect>
         </g>
