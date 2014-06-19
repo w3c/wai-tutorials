@@ -12,13 +12,11 @@ Captions and summaries provide information that can help users find, navigate, a
 
 * A **caption** is like a heading for a table. Most screen readers announce the content of captions, which helps users to find a table and understand what it’s about and chose if they want to read it. If the user decides to use “Tables Mode”, captions are the primary mechanism to identify tables. The caption is provided `<caption>` element.
 
-  See WCAG 2.0 technique [H39: Using caption elements to associate data table captions with data tables](http://www.w3.org/TR/WCAG20-TECHS/H39) for advice on captions.
-
 * A **summary** conveys information about the organization of the data in a table and helps users navigate the table. For example, if a table has an unconventional structure (as in the examples below), information about in which row or column content can be found can be provided to the user. A summary is usually needed for complex tables.
 
-  See WCAG 2.0 technique [H73: Using the summary attribute of the table element to give an overview of data tables](http://www.w3.org/TR/WCAG20-TECHS/H73) for advice on the summary attribute.
-
 If both caption and summary are provided for one table, the summary should not duplicate the caption.
+
+See WCAG 2.0 technique [H39: Using caption elements to associate data table captions with data tables](http://www.w3.org/TR/WCAG20-TECHS/H39) for more advice on captions.
 
 ## Identifying a table using a caption
 {:.ex}
@@ -351,6 +349,8 @@ By using an HTML5 `<figure>` element, the association between the caption/summar
 This table has an unusual table structure: the days of the week are in the center column, morning times to the left, and afternoon times to the right. It has the `summary` attribute “Days are in the second column, morning opening hours in the first column, and afternoon opening hours are in the third column”, explaining the way the table is laid out.
 
 The content of the summary attribute is not available to sighted users.
+
+See WCAG 2.0 technique [H73: Using the summary attribute of the table element to give an overview of data tables](http://www.w3.org/TR/WCAG20-TECHS/H73) for advice on the summary attribute.
 
 {::nomarkdown}
 <%= sample_start %>
