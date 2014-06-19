@@ -8,7 +8,7 @@ wcag_techniques:
   - H63
 ---
 
-When the content of a simple table is so descriptive on its own, then only a header row is needed to give the user an impression of the data in the table.
+If content of a simple table is descriptive on its own, only a header row is needed to give the user an impression of the data in the table.
 
 If the table is larger or its content is more ambiguous, the `scope` attribute should be used to avoid confusion, see [Directional Tables](multi-directional.html).
 
