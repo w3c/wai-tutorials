@@ -45,7 +45,9 @@ Rating:
 ## Captions for Image Groups
 {:.ex}
 
-If a group of images has a caption, a `figure` element can be used to group those images. If individual images also have captions, `figure` and `figcaption` elements can be nested.
+If a group of images has a caption, a `figure` element can be used to group those images. The WAI-ARIA attribute `role` with the value of `group` to indicate grouping to assistive technology. If individual images also have captions, `figure` and `figcaption` elements can be nested.
+
+The support for this particular WAI-ARIA attribute and value varies.
 
 {::nomarkdown}
 <%= sample_start %>
@@ -107,14 +109,4 @@ alt="The castle lies in ruins, the original tower all that remains in one piece.
 
 {::nomarkdown}
 <%= code_end %>
-{:/nomarkdown}
-
-{::nomarkdown}
-<%= notes_start %>
-{:/nomarkdown}
-
-**Note:** We also use the WAI-ARIA attribute `role` with the value of `group` to indicate grouping to assistive technology. The support for this particular WAI-ARIA attribute and value varies. 
-
-{::nomarkdown}
-<%= notes_end %>
 {:/nomarkdown}
