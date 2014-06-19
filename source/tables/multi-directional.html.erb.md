@@ -5,6 +5,7 @@ technologies: HTML5
 order: 3
 wcag_techniques: 
   - H51
+  - H63
 ---
 
 A multi directional table usually has one header row and a header column. Most of the times, they are in the first row and column of the table. They don’t span columns/rows.
@@ -29,19 +30,19 @@ In this example the first and last names and cities are impossible to tell apart
     <th scope="col">City</th>
   </tr>
   <tr>
-    <td>John</td>
-    <td>Martin</td>
+    <td>Phoenix</td>
+    <td>Imari</td>
     <td>Henry</td>
   </tr>
   <tr>
-    <td>Shawn</td>
-    <td>Oliver</td>
-    <td>George</td>
+    <td>Zeki</td>
+    <td>Rome</td>
+    <td>Min</td>
   </tr>
   <tr>
-    <td>Wilson</td>
+    <td>Apirka</td>
     <td>Kelly</td>
-    <td>Hope</td>
+    <td>Brynn</td>
   </tr>
 </table>
 
@@ -60,19 +61,19 @@ In this example the first and last names and cities are impossible to tell apart
     <th scope="col">City</th>
   </tr>
   <tr>
-    <td>John</td>
-    <td>Martin</td>
+    <td>Phoenix</td>
+    <td>Imari</td>
     <td>Henry</td>
   </tr>
   <tr>
-    <td>Shawn</td>
-    <td>Oliver</td>
-    <td>George</td>
+    <td>Zeki</td>
+    <td>Rome</td>
+    <td>Min</td>
   </tr>
   <tr>
-    <td>Wilson</td>
+    <td>Apirka</td>
     <td>Kelly</td>
-    <td>Hope</td>
+    <td>Brynn</td>
   </tr>
 </table>
 ~~~
