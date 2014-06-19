@@ -1,5 +1,5 @@
 ---
-title: Simple Tables
+title: Basic Tables
 status: draft
 technologies: HTML5
 order: 2
