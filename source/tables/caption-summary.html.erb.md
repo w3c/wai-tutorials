@@ -83,7 +83,7 @@ If used, the caption should be a succinct heading for the table content. In this
 
 There are different ways to provide summaries for tables.
 
-### Nest summary into the `<caption>` element
+### Nesting summary inside the `<caption>` element
 {:.ap}
 
 This complex table shows availability of different types and sizes of accommodation in two different locations. The `<caption>` element is used to describe the table layout as well as act as a heading for the table.
@@ -189,7 +189,7 @@ The summary is available to visual users as well.
 <%= notes_end %>
 {:/nomarkdown}
 
-### Use `aria-describedby` to provide a table summary
+### Using `aria-describedby` to provide a table summary
 {:.ap}
 
 {::nomarkdown}
