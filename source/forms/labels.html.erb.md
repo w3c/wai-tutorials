@@ -127,13 +127,178 @@ To explicitly associate a label and its form control, the `<label>`{:.elem} elem
 ## Additional descriptions
 {:.newap}
 
-Sometimes it is necessary to add additional, auxiliary to an input field to make it easier for users to enter the correct value into the form field.
+Sometimes it is necessary to add additional, auxiliary information to an input field to make it easier for users to enter the correct value into the form field.
 
-### Multiple labels
+### Nest in label
 {:.ap}
 
-### Placeholder text
+For simple use cases, nesting the description into the label may be enough. This approach limits the possibilities to style the description.
+
+{::nomarkdown}
+<%= sample_start %>
+
+<form method="post" action="#">
+  <div>
+    <label for="expire">Expiry date (MM/YYYY): </label> <input type="text" name="expire" id="expire">
+  </div>
+</form>
+
+<%= sample_end%>
+{:/nomarkdown}
+
+{::nomarkdown}
+<%= code_start %>
+{:/nomarkdown}
+
+~~~ html
+<label for="expire">Expiry date (MM/YYYY): </label> <input type="text" name="expire" id="expire">
+~~~
+
+{::nomarkdown}
+<%= code_end %>
+{:/nomarkdown}
+
+###Using multiple labels
 {:.ap}
+
+For more complex use cases, or when styling is important, it is possible to use multiple labels with their `for` attributes pointing at the `id` of the form element.
+
+{::nomarkdown}
+<%= sample_start %>
+
+<style>
+  #ex1 span {
+    display: inline-block;
+    vertical-align: top;
+  }
+  #ex1 span label {
+    display: block;
+    font-size: 0.8em;
+  }
+</style>
+<form method="post" action="#" id="ex1">
+  <div>
+    <label for="expire2">Expiry date:</label> 
+    <span>
+      <input type="text" name="expire" id="expire2"> 
+      <label for="expire2">MM/YYYY</label>
+    </span>
+  </div>
+</form>
+
+<%= sample_end%>
+{:/nomarkdown}
+
+{::nomarkdown}
+<%= code_start %>
+{:/nomarkdown}
+
+~~~ html
+<label for="expire">Expiry date:</label> 
+<span>
+  <input type="text" name="expire" id="expire"> 
+  <label for="expire">MM/YYYY</label>
+</span>
+~~~
+
+{::nomarkdown}
+<%= code_end %>
+{:/nomarkdown}
+
+### Using WAI-ARIA
+{:.ap}
+
+Another approach is to use WAI-ARIA attributes to provide additional information _specifically to screen readers_.
+
+`Aria-labelledby` produces a result that is similar to the [multiple labels approach](#multiple-labels) above: The text is immediately read when the form field gets focus.
+
+{::nomarkdown}
+<%= sample_start %>
+
+<style>
+  #ex2 span {
+    display: inline-block;
+    vertical-align: top;
+  }
+  #ex2 span span {
+    display: block;
+    font-size: 0.8em;
+  }
+</style>
+<form method="post" action="#" id="ex2">
+  <div>
+    <label for="expire3">Expiry date:</label>
+    <span>
+      <input type="text" name="expire" id="expire3" aria-labelledby="expDesc"> 
+      <span id="expDesc">MM/YYYY</span>
+    </span>
+  </div>
+</form>
+
+<%= sample_end%>
+{:/nomarkdown}
+
+{::nomarkdown}
+<%= code_start %>
+{:/nomarkdown}
+
+~~~ html
+<label for="expire">Expiry date:</label>
+<span>
+  <input type="text" name="expire" id="expire" aria-labelledby="expDesc"> 
+  <span id="expDesc">MM/YYYY</span>
+</span>
+~~~
+
+{::nomarkdown}
+<%= code_end %>
+{:/nomarkdown}
+
+`Aria-describedby` provides the additional text on demand to the screen reader user.
+
+{::nomarkdown}
+<%= sample_start %>
+
+<style>
+  #ex3 span {
+    display: inline-block;
+    vertical-align: top;
+  }
+  #ex3 span span {
+    display: block;
+    font-size: 0.8em;
+  }
+</style>
+<form method="post" action="#" id="ex3">
+  <div>
+    <label for="expire4">Expiry date:</label>
+    <span>
+      <input type="text" name="expire" id="expire4" aria-describedby="expDesc2"> 
+      <span id="expDesc2">MM/YYYY</span>
+    </span>
+  </div>
+</form>
+
+<%= sample_end%>
+{:/nomarkdown}
+
+{::nomarkdown}
+<%= code_start %>
+{:/nomarkdown}
+
+~~~ html
+<label for="expire">Expiry date:</label>
+<span>
+  <input type="text" name="expire" id="expire" aria-describedby="expDesc"> 
+  <span id="expDesc">MM/YYYY</span>
+</span>
+~~~
+
+{::nomarkdown}
+<%= code_end %>
+{:/nomarkdown}
+
+## Placeholder text
 
 Placeholder text is a short hint of the kind of data to put into a field. It’s usually shown as low-contrast text inside the form field. **It’s not a replacement for a label**, especially they are not treated as labels by assistive technology.
 
@@ -169,6 +334,3 @@ If the placeholder text is customized, it should have distinctively less contras
 {::nomarkdown}
 <%= code_end %>
 {:/nomarkdown}
-
-### Assign a description using WAI-ARIA
-{:.ap}
