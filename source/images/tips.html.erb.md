@@ -40,9 +40,9 @@ type: tips
 
     The `alt` text should be the most concise description possible of the image’s purpose. If anything more than a short phrase or sentence is needed, it would be better to use one of the long description methods discussed in [complex images](complex.html).
 
--   **When I plan new content for my website, should I use text instead of images more often?**
+-   **I heard that text-only versions are bad? Is that true?**
 
-    In many situations images and graphics can make content easier to understand, especially for persons that are unable to read or understand written language. Make sure that the image is properly described with an alternative text or long description to provide easy access to your content to as many people as possible.
+    Yes. In many situations images and graphics can make content easier to understand. They can also help visually impaired people to orient themselves on the page and even screen reader users if no other structure is available. Make sure that the image is properly described with an alternative text or long description to provide easy access to your content to as many people as possible.
 
 ## Other W3C Resources
 
