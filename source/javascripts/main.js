@@ -103,7 +103,6 @@ document.addEventListener('DOMContentLoaded', function(){
 			firstheading.className += ' ' + ('first');
 
 
-
 		var toc_elements = document.querySelectorAll('.content h2[id], .ap'); // $('.content h2[id], .ap')
 		var toc_outer = document.createElement('figure');
 		toc_outer.setAttribute('role', 'navigation');
@@ -116,7 +115,7 @@ document.addEventListener('DOMContentLoaded', function(){
 		var toc_wrap = document.createElement('ul');
 		var toc_elem = document.createElement('li');
 		var nesting = false;
-		var sub_wrap;
+		var sub_wrap, last_elem;
 		Array.prototype.forEach.call(toc_elements, function(el, i){	// … .each(…)
 			// console.log(el.localName + ': ' + el.textContent + ' // ' + nesting);
 			var cur_elem = toc_elem.cloneNode(true);
@@ -124,7 +123,7 @@ document.addEventListener('DOMContentLoaded', function(){
 				sub_wrap = toc_wrap.cloneNode(false);
 			}
 			if ((el.localName==="h2") && (nesting===true)) {
-				toc_wrap.querySelectorAll('li:last-child')[0].appendChild(sub_wrap);
+				last_elem.appendChild(sub_wrap);
 				nesting = false;
 			}
 			cur_elem.innerHTML = '<a class="' + el.getAttribute('class') + '" href="#' + el.getAttribute('id') + '">' + el.innerHTML + '</a>';
@@ -136,6 +135,7 @@ document.addEventListener('DOMContentLoaded', function(){
 				nesting = true;
 			} else {
 				toc_wrap.appendChild(cur_elem);
+				last_elem = cur_elem;
 			}
 		});
 
@@ -148,14 +148,15 @@ document.addEventListener('DOMContentLoaded', function(){
 
 	var plel = document.createElement('a');
 	addclass(plel, 'permalink');
-	plel.innerHTML = '<span>Link to this section of the page</span>';
+	plel.innerHTML = 'Permalink';
 
 	var elements = document.querySelectorAll('.content h2[id], h2.ap, h3.ap'); // $('.content h2[id], .ap')
 	Array.prototype.forEach.call(elements, function(el, i){	// … .each(…)
 		var cplel = plel.cloneNode(true);
 		cplel.setAttribute('href', '#' + el.id);
-		el.appendChild(spc.cloneNode(true));
-		el.appendChild(cplel);
+		//el.appendChild(spc.cloneNode(true));
+
+		el.insertAdjacentHTML('beforeend', cplel.outerHTML);
 
 	});
 
