@@ -18,7 +18,7 @@ Tables that should be marked up this way include:
 
 Multi-level tables may also need to have a caption to identify it and a summary to describe the layout of the table, see [Caption & Summary](caption-summary.html).
 
-In many cases it is worth considering ways to restructure the information in such tables to make them less complex for all readers. For example by splitting the information in smaller, more manageable tables.
+In many cases it is worth considering ways to restructure the information in such tables to make them less complex for all readers. For example by splitting the information in smaller, more manageable tables as shown in [Example 3](#split-up-multi-level-tables).
 
 ## Table with multiple column headers in each column
 {:.ex}
