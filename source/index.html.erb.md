@@ -6,7 +6,7 @@ layout: overview
 order: 1
 ---
 
-Welcome to the web accessibility tutorials. These tutorials are designed to help people create websites with improved code to reach the widest possible audience. The tutorials follow the [Accessibility Principles](http://www.w3.org/WAI/intro/people-use-web/principles) and provide website creators with practical guidance and examples that meet the [WCAG 2.0](http://www.w3.org/WAI/intro/wcag) (Web Content Accessibility Guidelines 2.0) standard.
+Welcome to the web accessibility tutorials. These tutorials are designed to help people create websites with improved code to reach the widest possible audience. The tutorials follow the [Accessibility Principles](http://www.w3.org/WAI/intro/people-use-web/principles) and provide website creators with practical guidance and examples that meet the [Web Content Accessibility Guidelines (WCAG) 2.0](http://www.w3.org/WAI/intro/wcag) standard.
 
 The tutorials provide valuable resources for a variety of roles, including:
 
