@@ -21,6 +21,7 @@ techniques:
   - H51: Using table markup to present tabular data
   - H63: Using the scope attribute to associate header cells and data cells in data tables
   - H67: Using null alt text and no title attribute on img elements for images that AT should ignore
+  - H71: Providing a description for groups of form controls using fieldset and legend elements
   - H73: Using the summary attribute of the table element
   - H93: Ensuring that id attributes are unique on a Web page
 
