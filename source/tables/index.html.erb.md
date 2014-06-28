@@ -9,9 +9,9 @@ topic_order: 2
 type: intro
 ---
 
-Data tables are used to organize data in grids. Accessible tables need HTML markup that indicates the difference between header cells and data cells, and that indicates the relationship between them.
+Data tables are used to organize data in grids. To be accessible, tables need HTML markup that indicates the difference between header cells and data cells and identifies the relationship between them.
 
-To make any table accessible, header cells must be marked up with `<th>` and data cells marked up with `<td>`. For more complex tables, explicit associations may be needed using `scope` or `id` and `headers` attributes.
+To markip any table with basic accessibility, header cells must be marked up with `<th>` and data cells marked up with `<td>`. For more complex tables, explicit associations may be needed using `scope` or `id` and `headers` attributes. Additional clarity can be added with the `caption` and `summary` attributes
 
 This tutorial shows you how to apply appropriate structural markup to tables. It includes the following pages:
 
@@ -26,7 +26,7 @@ This tutorial shows you how to apply appropriate structural markup to tables. It
 -   **[Caption & Summary![](img-caption.png)](caption-summary.html):** A caption identifies the overall topic of a table and is useful in most situations. A summary provides orientation or navigation hints in complex tables.
 {:.withicons.nobullets}
 
-Some document formats other than HTML, such as PDF, may provide similar mechanisms to markup table structures. Word processing applications may also provide mechanisms to markup tables. Tables markup is also often lost when converting from one format to another, though some programs may provide functionality to assist converting table markup.
+In addition to HTML, some document formats such as PDF may provide similar mechanisms to markup table structures. Word processing applications may also provide mechanisms to markup tables although usually not to the same extent. Table markup is also often lost when converting from one format to another, though some programs may provide functionality to assist converting table markup.
 
 Many web authoring tools and content management systems (CMS) provide functions to define header cells during table creation without having to manually edit the code.
 
