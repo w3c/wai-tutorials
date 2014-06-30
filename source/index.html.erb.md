@@ -8,9 +8,9 @@ order: 1
 
 These tutorials tutorials show you how to create web content that is accessible to people with disabilities and improves the user experience for all audiences.
 
--   **[Images](images/index.html):** Graphics and images are an important part of almost every web page. In this tutorial, you can learn where to use which kind of alternative text and how handle image groups and complex images.
+-   **[Images](images/index.html):** Graphics and images are an important part of website design. In this tutorial, you can learn how to make images accessible, including decorative, linked, and grouped images.
 
--   **[Tables](tables/index.html):** Tables are a great way to show the relationship between certain data points. Find out how you can add structural information to tables to help assistive technology to resolve those relationships.
+-   **[Tables](tables/index.html):** Tables are essential for displaying data and the relationship between data points. Find out how you can add structural information to tables so that assistive technology to identify those relationships.
 
 Additional tutorials are planned and will be added here once they are ready for public consumption.
 
