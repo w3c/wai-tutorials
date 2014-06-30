@@ -8,9 +8,7 @@ wcag_techniques:
   - H63
 ---
 
-A multi directional table usually has one header row and a header column. Most of the times, they are in the first row and column of the table. They don’t span columns/rows.
-
-In addition to mark table headers up using `<th>` elements it is necessary to use the `scope` attribute on these tables. It’s used to declare the direction of the header cell. A `scope` value of `row` or `col` denotes that the header cell applies to the entire row or column, respectively. The direction of a table heading is especially important when the content in the table isn’t easy to distinguish.
+When a table is larger or the direction of its headers is not easy to distinguish, it is necessary to mark up the tables headers using the `th` element and use the `scope` attribute to declare the direction of each header. Use the values of `row` or `col` of the `scope` attribute to denote that a header applies to the entire row or column, respectively.
 
 Additionally, you can use add a [caption](caption-summary.html) to identify the table in a document, which is particularly useful for screen-reader users browsing the web page in “tables mode” where they can navigate from table to table. The caption is a way to meet WCAG 2.0 requirements in specific situations.
 
