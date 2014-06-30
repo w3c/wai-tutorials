@@ -8,16 +8,24 @@ wcag_techniques:
   - H63
 ---
 
-If content of a simple table is descriptive on its own, only a header row is needed to give the user an impression of the data in the table.
+When the content of a simple table is descriptive on its own, only a header row or column is needed to give the user an impression of the data in the table.
 
-If the table is larger or its content is more ambiguous, the `scope` attribute should be used to avoid confusion, see [Directional Tables](multi-directional.html).
+If the table is larger or its content is more ambiguous, the `scope` attribute should be used to avoid confusion, see [Directional Tables](multi-directional.html) for more guidance on such tables.
 
 ## Table with header cells in the top row only
 {:.ex}
 
-This table of concerts has the cells in the first row marked up as `<th>` cells without any `scope` direction. Some screen readers will read “Date – Event – Venue” on the “Venue” cell in the table below because the direction of the `<th>` elements is ambiguous. 
+The following table of concerts has the cells in the first row marked up as `<th>` cells without any `scope` direction. This is only acceptable because it is such a small table and the data itself is distinctly different in each column.
 
-This is only acceptable because it is such a small table and the data itself is distinctly different in each column.
+{::nomarkdown}
+<%= notes_start %>
+{:/nomarkdown}
+
+**Note:** Some screen readers will read “Date – Event – Venue” on the “Venue” cell  because the direction of the `<th>` elements is ambiguous. 
+
+{::nomarkdown}
+<%= notes_end %>
+{:/nomarkdown}
 
 {::nomarkdown}
 <%= sample_start %>
@@ -76,7 +84,7 @@ This is only acceptable because it is such a small table and the data itself is 
 ## Table with header cells in the first column only
 {:.ex}
 
-In this example the same data is laid out differently, with a header column on the left.
+In the following table the data from the previous example is laid out differently, with a header column on the left. Also in this situation it is acceptable because it is such a small table and the data itself is distinctly different in each row.
 
 {::nomarkdown}
 <%= sample_start %>
