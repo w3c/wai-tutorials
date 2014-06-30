@@ -85,6 +85,8 @@ In this example the first and last names and cities can’t be distinguished fro
 
 The following tables of countries and their capital cities has the first column with the country names marked up as `<th>` cells. It needs the `scope` attribute with the value of `row` to declare the applicability of each header cell. Otherwise some screen readers will associate header cells with other header cells because they are in the same column. For example in the cell marked “Holland” some screen readers will read “Belgium – France – Holland” if the `scope` attribute is not provided.
 
+For very simple tables, a scope attribute may not be required, see [Basic Tables](basic.html) for such examples.
+
 {::nomarkdown}
 <%= sample_start %>
 
