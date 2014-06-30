@@ -1,11 +1,9 @@
 ---
-title: Tips
+title: Tips and Tricks
 status: draft
 order: 7
 type: tips
 ---
-
-## Tips
 
 -   **Keep it simple:** Complex tables are more work for you as well as being more confusing for users. It’s usually better to [break up multi-level tables into simple tables](multi-level.html#split-up-multi-level-tables), each containing the data for one sub-topic.
 

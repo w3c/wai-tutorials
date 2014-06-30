@@ -17,7 +17,7 @@ type: tips
 -   Does the image contribute meaning to the current page or context?
     -   **Yes**, and it’s a simple graphic or photograph. The `alt` attribute should briefly describe the image in a way that conveys that meaning. See [Informative Images](informative.html).
     -   **Yes**, and it’s a graph or complex piece of information. Include the information contained in the image elsewhere on the page. See [Complex Images](complex.html).
-    -   **Yes**, but it shows content that is redundant to *real* text nearby. The `alt` attribute should be empty. See [Functional Images](functional.html#logo-image-within-link-text).
+    -   **Yes**, and it shows content that is redundant to *real* text nearby. The `alt` attribute should be empty. See [Functional Images](functional.html#logo-image-within-link-text).
     -   **No**: Continue.
 -   Is the image purely decorative or not intended for the user?
     -   Use an empty `alt` attribute. See [Decorative Images](decorative.html).
