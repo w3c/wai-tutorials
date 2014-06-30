@@ -46,6 +46,4 @@ Tables without structural markup to differentiate between header and data cells,
 
 -   **People using screen readers** can have the row and column headers read aloud as they navigate through the table. Screen readers speak one cell at a time and reference the associated header cells, so the reader doesn’t lose context.
 
--   **People using custom stylesheets** can have header cells more prominently styled for easer recognition when there is a difference between the elements used for header and data cells. People may also use stylesheets to present the information to read the data cells as lists below their corresponding headers rather than in a matrix.
-
 -    **People using alternate ways to access the data**, for example by using custom stylesheets to display header cells more prominently, to change text size and colors, and to display the information as lists rather than grids. This can be accomplished by ensuring proper structural coding of tables, so that data can be represented in different ways.
