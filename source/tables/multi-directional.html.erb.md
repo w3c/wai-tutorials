@@ -8,9 +8,9 @@ wcag_techniques:
   - H63
 ---
 
-When a table is more complex or the direction of its headers is not easy to distinguish, it is necessary to mark up the table headers using the `th` element and use the `scope` attribute to declare the direction of each header. Use the values of `row` or `col` of the `scope` attribute to denote that a header applies to the entire row or column, respectively.
+When a table is more complex or the direction of its headers is not easy to distinguish, it is necessary to mark up the table headers using the `<th>` element and use the `scope` attribute to declare the direction of each header. Use the values of `row` or `col` of the `scope` attribute to denote that a header applies to the entire row or column, respectively.
 
-Additionally, you can use add a [caption](caption-summary.html) to identify the table in a document, which is particularly useful for screen-reader users browsing the web page in “tables mode” where they can navigate from table to table. The caption is a way to meet WCAG 2.0 requirements in specific situations.
+Additionally, you can use a [caption](caption-summary.html) to identify the table in a document. This is particularly useful for screen-reader users browsing the web page in “tables mode” where they can navigate from table to table. The caption is a way to meet WCAG 2.0 requirements in specific situations.
 
 ## Table with ambiguous data
 {:.ex}
