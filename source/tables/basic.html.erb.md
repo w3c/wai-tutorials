@@ -84,7 +84,7 @@ The following table of concerts has the cells in the first row marked up as `<th
 ## Table with header cells in the first column only
 {:.ex}
 
-In the following table the data from the previous example is laid out differently, with a header column on the left. Also in this situation it is acceptable because it is such a small table and the data itself is distinctly different in each row.
+In the following table the data from the previous example is laid out differently, with a header column on the left. Also in this situation it is acceptable not to use `scope` because it is such a small table and the data itself is distinctly different in each row.
 
 {::nomarkdown}
 <%= sample_start %>
