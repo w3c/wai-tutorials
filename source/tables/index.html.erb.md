@@ -9,19 +9,19 @@ topic_order: 2
 type: intro
 ---
 
-Data tables are used to organize data in grids. Accessible tables need HTML markup that indicates the difference between header cells and data cells, and that indicates the relationship between them.
+Data tables are used to organize data in grids. Accessible tables need HTML markup that indicates the difference between header cells and data cells, and indicate the relationship between them.
 
-To make any table accessible, header cells must be marked up with `<th>` and data cells marked up with `<td>`. For more complex tables, explicit associations may be needed using `scope` or `id` and `headers` attributes.
+To make tables accessible, header cells must be marked up with `<th>` and data cells marked up with `<td>`. For more complex tables, explicit associations may be needed using `scope`, `id` and `headers` attributes.
 
 This tutorial shows you how to apply appropriate structural markup to tables. It includes the following pages:
 
--   **[Basic tables![ typically have one header row and/or one header column](img-simple.png)](basic.html):** For simple tables with content that is easy to distinguish, mark up header cells with `<th>` elements.
+-   **[Basic Tables![ typically have one header row and/or one header column](img-simple.png)](basic.html):** For simple tables with content that is easy to distinguish, mark up header cells with `<th>` elements.
 
--   **[Multi-Directional Tables![ have usually have headers for rows and columns](img-multidir.png)](multi-directional.html):**  For tables with headings in two directions, define their direction by setting the `scope` attribute to `col` or `row`.
+-   **[Multi-directional Tables![ usually have headers for rows and columns](img-multidir.png)](multi-directional.html):** For tables with unclear heading directions, define the direction of each heading by setting the `scope` attribute to `col` or `row`.
 
--   **[Irregular tables![](img-irreg.png)](irregular.html):**  For tables where header cells span multiple rows or columns, define column and row groups and set the range of header cells using the `colgroup` and `rowgroup` values of the `scope` attribute.
+-   **[Irregular Tables![](img-irreg.png)](irregular.html):** For tables where header cells span multiple rows or columns, define column and row groups and set the range of the header cells using the `colgroup` and `rowgroup` values of the `scope` attribute.
 
--   **[Multi-level tables![ have multiple header cells associated per data cell](img-multi.png)](multi-level.html):**  For tables that are so complex that header cells can’t be accociated in a strictly horizontal or vertical way, use `headers` and `id` attributes to explicitly associate header and data cells.
+-   **[Multi-level Tables![ have multiple header cells associated per data cell](img-multi.png)](multi-level.html):**  For tables that are so complex that header cells can’t be accociated in a strictly horizontal or vertical way, use `id` and `headers` attributes to explicitly associate header and data cells.
 
 -   **[Caption & Summary![](img-caption.png)](caption-summary.html):** A caption identifies the overall topic of a table and is useful in most situations. A summary provides orientation or navigation hints in complex tables.
 {:.withicons.nobullets}
@@ -36,8 +36,6 @@ Many web authoring tools and content management systems (CMS) provide functions 
 
 **Notes:** This tutorial provides guidance for creating tables used to display data in a grid. This guidance is not applicable to layout tables. As a general rule, tables aren't meant to be used for layout purposes. Instead, best practice is to use Cascading Style Sheets (CSS) for visual presentation.
 
-Structural coding can also be used to represent data in different ways, for example, by larger or different colored text or backgrounds, Braille, speech, and symbols.
-
 {::nomarkdown}
 <%= notes_end %>
 {:/nomarkdown}
@@ -48,4 +46,6 @@ Tables without structural markup to differentiate between header and data cells,
 
 -   **People using screen readers** can have the row and column headers read aloud as they navigate through the table. Screen readers speak one cell at a time and reference the associated header cells, so the reader doesn’t lose context.
 
--   **People using custom stylesheets** can have header cells more prominently styled for easer recognition when there is a difference between the  elements used for header and data cells. People may also use stylesheets to present the information to read the data cells as lists below their corresponding headers rather than in a matrix.
+-   **People using custom stylesheets** can have header cells more prominently styled for easer recognition when there is a difference between the elements used for header and data cells. People may also use stylesheets to present the information to read the data cells as lists below their corresponding headers rather than in a matrix.
+
+-    **People using alternate ways to access the data**, for example by using custom stylesheets to display header cells more prominently, to change text size and colors, and to display the information as lists rather than grids. This can be accomplished by ensuring proper structural coding of tables, so that data can be represented in different ways.
