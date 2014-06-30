@@ -15,7 +15,7 @@ Additionally, you can use the `<caption>` element to identify the table in a doc
 ## Table with ambiguous data
 {:.ex}
 
-In this example the first and last names and cities are impossible to tell apart from one another. By using the `scope` element the header cells are clearly associated with their respective column.
+In this example the first and last names and cities can’t be distinguished from one another without the appropriate header information. By using the `scope` element with the value `col`, the data cells are clearly associated with their header cells “Last Name”, “First Name” and “City”.
 
 {::nomarkdown}
 <%= sample_start %>
