@@ -6,7 +6,7 @@ layout: overview
 order: 1
 ---
 
-These tutorials tutorials show you how to create web content that is accessible to people with disabilities and improves the user experience for all audiences.
+These tutorials show you how to create web content that is accessible to people with disabilities and improves the user experience for all audiences.
 
 -   **[Images](images/index.html):** Graphics and images are an important part of website design. In this tutorial, you can learn how to make images accessible, including decorative, linked, and grouped images.
 
