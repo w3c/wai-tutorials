@@ -8,12 +8,6 @@ order: 1
 
 These tutorials show you how to create web content that is accessible to people with disabilities and improves the user experience for all audiences.
 
--   **[Images](images/index.html):** Graphics and images are an important part of website design. In this tutorial, you can learn how to make images accessible, including decorative, linked, and grouped images.
-
--   **[Tables](tables/index.html):** Tables are essential for displaying data and the relationship between data points. Find out how you can add structural information to tables so that assistive technology can identify those relationships.
-
-Additional tutorials are planned and will be added here once they are completed and reviewed.
-
 The tutorials provide valuable resources for a variety of roles, including:
 
 * **Web developers** will find guidance and boilerplate solutions for many common coding challenges.
@@ -26,7 +20,13 @@ The tutorials provide valuable resources for a variety of roles, including:
 
 Web authoring tools, including Content Management Systems (CMS), <abbr title="What you see is what you get">WYSIWYG</abbr> editors, word processors, and other tools, can help you create content that is accessible and inclusive as shown in these tutorials. More background and guidance is provided in [Selecting and Using Authoring Tools for Web Accessibility](http://w3.org/wai/impl/software).
 
-## Further Resources
+-   **[Images](images/index.html):** In this tutorial, you can learn how to make images accessible, including decorative, linked, and grouped images.
+
+-   **[Tables](tables/index.html):** Find out how you can add structural information to tables so that assistive technology can identify those relationships.
+
+Additional tutorials are planned and will be added here once they are completed and reviewed.
+
+## Additional Resources
 
 * **[How People with Disabilities Use the Web](http://www.w3.org/WAI/intro/people-use-web/Overview):** Introduces how people with disabilities, including people with age-related impairments, use the Web
 * **[Accessibility Principles](http://www.w3.org/WAI/intro/people-use-web/principles):** Introduces some of the web accessibility requirements for websites, web applications, browsers, and other tools
