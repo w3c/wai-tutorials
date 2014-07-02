@@ -20,6 +20,8 @@ The tutorials provide valuable resources for a variety of roles, including:
 
 Web authoring tools, including Content Management Systems (CMS), <abbr title="What you see is what you get">WYSIWYG</abbr> editors, word processors, and other tools, can help you create content that is accessible and inclusive as shown in these tutorials. More background and guidance is provided in [Selecting and Using Authoring Tools for Web Accessibility](http://w3.org/wai/impl/software).
 
+## All Tutorials
+
 -   **[Images](images/index.html):** In this tutorial, you can learn how to make images accessible, including decorative, linked, and grouped images.
 
 -   **[Tables](tables/index.html):** Find out how you can add structural information to tables so that assistive technology can identify those relationships.
