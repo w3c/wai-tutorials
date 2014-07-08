@@ -1179,3 +1179,38 @@ select {
 	box-shadow: 0 0 10px #036;
 	outline-color: #036;
 }
+
+ul.inline {
+	display:inline;
+	li {
+		display:inline;
+		&:before {
+			content: ", "
+		}
+		&:first-child {
+			&:before {
+				content: '';
+			}
+		}
+		&:last-child {
+			&:before {
+				content: ', and ';
+			}
+			&:after {
+				content: '.';
+			}
+		}
+		&:last-child {
+			&:nth-child(2) {
+				&:before {
+					content: " and ";
+				}
+			}
+			&:first-child {
+				&:before {
+					content: '';
+				}
+			}
+		}
+	}
+}
