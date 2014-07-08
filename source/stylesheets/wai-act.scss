@@ -976,6 +976,7 @@ select {
 	> li {
 		margin-bottom: 1em;
 		padding: .5em .5em 0;
+		font-weight: bold;
 		> ul {
 			margin: .5em 0 0;
 			padding:0;
@@ -984,8 +985,10 @@ select {
 			flex-direction: row;
 			flex-wrap: wrap;
 			align-items: stretch;
+			border: 1px solid #aaa;
 			> li {
 				box-sizing: border-box;
+				font-weight: normal;
 				// font-size: 0.8em;
 				// flex: 1;
 				width: 50%;
