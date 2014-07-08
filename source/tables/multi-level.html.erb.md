@@ -28,7 +28,7 @@ In many cases it is worth to consider to restructure the information in such tab
 ## Table with multiple column headers in each column
 {:.ex}
 
-In the table below, the headers for the top half of the tables are different to the headers of the bottom half. The header changes halfway through the table which makes the headings in columns ambiguous. To ensure each data cell is associated with the correct heading, each `<th>` element has an unique `id` and each `<td>` cell has a `headers` attribute that lists the `id` values of the associated header cells.
+In the table below, the headers for the top half of the tables are different to the headers of the bottom half. The header changes halfway through the table which makes the headers in columns ambiguous. To ensure each data cell is associated with the correct header, each `<th>` element has an unique `id` and each `<td>` cell has a `headers` attribute that lists the `id` values of the associated header cells.
 
 {::nomarkdown}
 <%= sample_start %>

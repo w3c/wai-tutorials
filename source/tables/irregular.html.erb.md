@@ -26,7 +26,7 @@ To associate a table header cell to a column group and/or row group using `scope
 
 If neither a column nor a row group is defined in the markup, the header cell is not in a group and there will be no or an incorrect association with data cells.
 
-## Table with two tier headings
+## Table with two tier headers
 {:.ex}
 
 In the table below, header cells span two columns (by using the `colspan` attribute). They need to be in a column group to associate them to the data cells.

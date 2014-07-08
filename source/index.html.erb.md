@@ -17,13 +17,13 @@ support: <strong>Developed with support</strong> from the <a href="http://www.w3
 
 ---
 
-These tutorials show you how to create web content that is accessible to people with disabilities and improves the user experience for all audiences.
+These tutorials show you how to create web content that is accessible to people with disabilities and improve the user experience for all audiences.
 
-The tutorials provide valuable resources for a variety of roles, including:
+They provide valuable resources for a variety of roles, including:
 
 * **Web developers** will find guidance and boilerplate solutions for many common coding challenges.
 * **Web designers** will learn how to create web page components with built-in accessible and inclusive design practice.
-* **Web trainers** will find compelling examples to teach people about accessible web design and development.
+* **Web trainers** will find examples to teach people about accessible web design and development.
 * **Content authors** will learn concepts and techniques for preparing their content in an accessible way.
 * **Project managers** will gain an understanding of ways to integrate accessibility into their project planning.
 
@@ -33,9 +33,9 @@ Web authoring tools, including Content Management Systems (CMS), <abbr title="Wh
 
 ## All Tutorials
 
--   **[Images](images/index.html):** In this tutorial, you can learn how to make images accessible, including decorative, linked, and grouped images.
+-   **[Images](images/index.html):** Learn how to use images in an accessible way, including decorative, linked, and grouped images.
 
--   **[Tables](tables/index.html):** Find out how you can add structural information to tables so that assistive technology can identify those relationships.
+-   **[Tables](tables/index.html):** Find out how you can add structural information to tables so that assistive technology can identify the relationship between table headers and data.
 
 Additional tutorials are planned and will be added here once they are completed and reviewed.
 

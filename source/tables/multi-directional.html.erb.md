@@ -211,7 +211,7 @@ Building on the example above, adding a header row can help to make the table ev
 
 The following table of opening times has header information in both, the top row and the first column. All header cells are marked up as `<th>` cells with add `scope` attributes added. 
 
-In the header row, the `col` value for `scope` associates each heading cell with the data cells in the column. In the header column, the `row` value associates the individual headings with their rows.
+In the header row, the `col` value for `scope` associates each header cell with the data cells in the column. In the header column, the `row` value associates the individual headers with their rows.
 
 {::nomarkdown}
 <%= sample_start %>
@@ -307,7 +307,7 @@ In the header row, the `col` value for `scope` associates each heading cell with
 ## Table with an offset column of header cells
 {:.ex}
 
-In this table, the row header cells are in the second rather than in the first column. The approach is very similar to the examples above: The scope of the heading cells in the top row is set to `col`. By using the `row` value for `scope` assigns the header cells in the second column to data cells on the left and the right of the individual header cell.
+In this table, the row header cells are in the second rather than in the first column. The approach is very similar to the examples above: The scope of the header cells in the top row is set to `col`. By using the `row` value for `scope` assigns the header cells in the second column to data cells on the left and the right of the individual header cell.
 
 {::nomarkdown}
 <%= sample_start %>
