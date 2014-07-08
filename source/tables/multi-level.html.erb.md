@@ -1,15 +1,20 @@
 ---
 title: Multi-level Tables
+order: 5
 status: draft
 technologies: HTML5
 wcag_techniques: 
   - H43
-order: 5
+editors:
+  - Eric Eggert: "http://w3.org/People/yatil/"
+  - Shadi Abou-Zhara: "http://w3.org/People/shadi/"
+contributors:
+  - Anna Belle Leiserson
+  - the Education and Outreach Working Group (<a href="http://www.w3.org/WAI/EO/">EOWG</a>)
+support: <strong>Developed with support</strong> from the <a href="http://www.w3.org/WAI/ACT/">WAI-ACT</a> project, co-funded by the European Commission <abbr title="Information Society Technologies">IST</abbr> Programme.
 ---
 
-Multi-level tables are too complex to identify a strict horizontal or vertical association between header and data cells. 
-
-To associate a data cell with a header cell, each header cell has an (document-wide) unique `id`. Data cells that refer to a header cell have a `headers` attibute that lists the `id` values of those header cells, separated by spaces. 
+Multi-level tables are too complex to identify a strict horizontal or vertical association between header and data cells. In such tables, each table header is identified with an (document-wide) unique `id`. Data cells refer to those `id`s by listing one or more in their `headers` attribute, separated by spaces.
 
 Tables that should be marked up this way include:
 
@@ -18,12 +23,12 @@ Tables that should be marked up this way include:
 
 Multi-level tables may also need to have a caption to identify it and a summary to describe the layout of the table, see [Caption & Summary](caption-summary.html).
 
-In many cases it is worth considering ways to restructure the information in such tables to make them less complex for all readers. For example by splitting the information in smaller, more manageable tables as shown in [Example 3](#split-up-multi-level-tables).
+In many cases it is worth to consider to restructure the information in such tables to make them less complex for all readers, for example by splitting the information in smaller, more manageable tables as shown in [Example 3](#split-up-multi-level-tables).
 
 ## Table with multiple column headers in each column
 {:.ex}
 
-This table shows contact details for six suppliers. To avoid producing an overly wide table, the first row has `<th>` cells identifying the first three supply firms and the fourth row has the `<th>` cells identifying the other three. To ensure that data cells are associated with the correct firm, each `<th>` cell has a unique `id` and each `<td>` cell has a headers attribute listing the `id` values that relate to it.
+In the table below, the headers for the top half of the tables are different to the headers of the bottom half. The header changes halfway through the table which makes the headings in columns ambiguous. To ensure each data cell is associated with the correct heading, each `<th>` element has an unique `id` and each `<td>` cell has a `headers` attribute that lists the `id` values of the associated header cells.
 
 {::nomarkdown}
 <%= sample_start %>
@@ -114,8 +119,7 @@ This table shows contact details for six suppliers. To avoid producing an overly
 ## Table with three headers related to each data cell
 {:.ex}
 
-This example shows availability of accommodation of a given type and size in two different locations. For the data to be understood, each
-`<td>` cell should be associated to three `<td>` cells (location, size, and type of accommodation). To define these complex associations, each `<th>` cell has a unique `id` attribute and all data cells have a `headers` attribute listing the related cell `id` values.
+In this example table headers are used as subheadings to describe what the next section of the table is about. Without these headers, the information would be unclear. Using the `headers` attribute, all three headers can be properly associated with the data cell.
 
 {::nomarkdown}
 <%= sample_start %>
@@ -297,7 +301,7 @@ This example shows availability of accommodation of a given type and size in two
 ## Split up multi-level tables
 {:.ex}
 
-The two tables below provide the same information as the mutli-level table in [the example above](#table-with-three-headers-related-to-each-data-cell). This makes the information easier to understand by everyone and easier to code, too. Also, simple tables are much better supported by WYSIWYG editors (“What you see is what you get”).
+The two tables below provide the same information as the mutli-level table in [the example above](#table-with-three-headers-related-to-each-data-cell). This makes the information easier to understand by everyone and easier to code. Also, simple tables are much better supported by tools to create web content, including WYSIWYG (“What you see is what you get”) editors.
 
 {::nomarkdown}
 <%= sample_start %>

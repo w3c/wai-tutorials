@@ -1,35 +1,46 @@
 ---
 title: Irregular Tables
+order: 4
 status: draft
 technologies: HTML5
 wcag_techniques:
   - H63
-order: 4
+editors:
+  - Eric Eggert: "http://w3.org/People/yatil/"
+  - Shadi Abou-Zhara: "http://w3.org/People/shadi/"
+contributors:
+  - The Education and Outreach Working Group (<a href="http://www.w3.org/WAI/EO/">EOWG</a>)
+support: <strong>Developed with support</strong> from the <a href="http://www.w3.org/WAI/ACT/">WAI-ACT</a> project, co-funded by the European Commission <abbr title="Information Society Technologies">IST</abbr> Programme.
 ---
 
-Irregular tables’ header cells that span multiple columns or rows. The `scope` attribute can be used to define the range of data cells that are covered by a header cell.
+Irregular tables have header cells that span multiple columns and/or rows. The `scope` attribute can be used to define the range of data cells covered by a header cell.
 
-For example, a header cell that spans three columns, and has the `scope` value `colgroup`, only applies to the data cells in the three columns that it spans. `rowgroup` works the same way for table headers that span multiple rows.
+For example, a header cell that span0s three columns should be associated to data cells in this column group of three columns using the `colgroup` value in the `scope` attribute. The same principle applies to a header cell spanning multiple rows. It is associated with its row group by using the `scope` value of `rowgroup`.
 
-To be able to associate a table header cell to a column group and/or row group, the groups have to be defined first:
+To associate a table header cell to a column group and/or row group using `scope`, the groups have to be explicitly defined in the table markup:
 
 * A column group is defined using the `<colgroup>` element in the table.
 * A row group is defined by the `<thead>`, `<tfoot>` and `<tbody>` elements.
   - `<thead>` and  `<tfoot>` elements can be used once.
   - Every `<tbody>` element defines a row group.
-* If neither a column nor a row group is defined in the markup, the whole table is grouped.
 
-The `scope` attribute should be used for all `<th>` cells where either the direction or range of data cell coverage needs to be clearly associated.
+If neither a column nor a row group is defined in the markup, the header cell is not in a group and there will be no or an incorrect association with data cells.
 
 ## Table with two tier headings
 {:.ex}
 
-If a table consists of a heading that spans more multiple columns/rows of header cells, `scope="colgroup"` and `scope="rowgroup"` should be used, respectively.
+In the table below, header cells span two columns (by using the `colspan` attribute). They need to be in a column group to associate them to the data cells.
+
+For each column there should be a `<col>` element (for individual columns) or a `<colgroup>` element (for columns with headers spanning multiple columns) at the beginning of the table markup. A `span` attribute defines how many columns are spanned by the column group. 
+
+Combined the number of `<col>` elements and the sum of the numbers in the `span` attributes of `<colgroup>` elements should be equal to the columns in the table.
+
+Use the `colgroup` value of the `scope` attribute to assign a table header cell (`<th>`) to all other cells in the column group.
 
 {::nomarkdown}
 <%= sample_start %>
 <table class="numbers">
-  <colgroup></colgroup>
+  <col></col>
   <colgroup span="2"></colgroup>
   <colgroup span="2"></colgroup>
   <tr>
@@ -67,7 +78,7 @@ If a table consists of a heading that spans more multiple columns/rows of header
 
 ~~~ html
 <table>
-  <colgroup></colgroup>
+  <col></col>
   <colgroup span="2"></colgroup>
   <colgroup span="2"></colgroup>
   <tr>
@@ -105,9 +116,11 @@ If a table consists of a heading that spans more multiple columns/rows of header
 ## Table with headers spanning multiple rows or columns
 {:.ex}
 
-In this example, some of the header cells span multiple rows or columns: the “Zodiac” row header spans 3 rows, and the “Sizes available” column header spans 3 columns. `colgroup` and `rowgroup` indicate that the headers belong to their column or row group – defined by the `<colgroup>` and `<tbody>` elements.
+In the example below, the table consists of two individual columns and one column group spanning three columns. It’s also subdivided in multiple row groups using `<thead>` and `<tbody>` elements which contain table rows. 
 
-Due to the complexity of the table a [summary technique](caption-summary.html) should be used to explicitly describe the layout of the table.
+The first row, that consists of the column headers, is wrapped in the `<thead>` (table header) element. The next three rows are wrapped in one `<tbody>` element to define the second row group. By setting `scope` of the header cell spanning those three rows to `rowgroup`, it applies to all other cells in the group.
+
+Due to the complexity of the table a [summary technique](caption-summary.html) could be used to describe the layout of the table in detail.
 
 {::nomarkdown}
 <%= sample_start %>
@@ -116,8 +129,8 @@ Due to the complexity of the table a [summary technique](caption-summary.html) s
   <caption>
     Poster availability
   </caption>
-  <colgroup></colgroup>
-  <colgroup></colgroup>
+  <col></col>
+  <col></col>
   <colgroup span="3"></colgroup>
   <thead>
     <tr>
@@ -176,8 +189,8 @@ Due to the complexity of the table a [summary technique](caption-summary.html) s
   <caption>
     Poster availability
   </caption>
-  <colgroup></colgroup>
-  <colgroup></colgroup>
+  <col></col>
+  <col></col>
   <colgroup span="3"></colgroup>
   <thead>
     <tr>

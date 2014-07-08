@@ -1,11 +1,17 @@
 ---
 title: Multi-Directional Tables
+order: 3
 status: draft
 technologies: HTML5
-order: 3
 wcag_techniques: 
   - H51
   - H63
+editors:
+  - Eric Eggert: "http://w3.org/People/yatil/"
+  - Shadi Abou-Zhara: "http://w3.org/People/shadi/"
+contributors:
+  - The Education and Outreach Working Group (<a href="http://www.w3.org/WAI/EO/">EOWG</a>)
+support: <strong>Developed with support</strong> from the <a href="http://www.w3.org/WAI/ACT/">WAI-ACT</a> project, co-funded by the European Commission <abbr title="Information Society Technologies">IST</abbr> Programme.
 ---
 
 When a table is more complex or the direction of its headers is not easy to distinguish, it is necessary to mark up the table headers using the `<th>` element and use the `scope` attribute to declare the direction of each header. Use the values of `row` or `col` of the `scope` attribute to denote that a header applies to the entire row or column, respectively.
@@ -123,7 +129,9 @@ For very simple tables, a scope attribute may not be required, see [Basic Tables
 <%= sample_end %>
 {:/nomarkdown}
 
-A header row can be used to clarify the table even further:
+### Further improvement
+
+Building on the example above, adding a header row can help to make the table even clearer and describe the content of the data cells better.
 
 {::nomarkdown}
 <%= sample_start %>
@@ -201,7 +209,9 @@ A header row can be used to clarify the table even further:
 ## Table with header cells in the top row and first column
 {:.ex}
 
-This table of opening times has header information contained in both the top row and the first column. All header cells are marked up as `<th>` cells, additionally we add `scope` attributes with the values `col` (to the top row header cells) and `row` (to the first column header cells).
+The following table of opening times has header information in both, the top row and the first column. All header cells are marked up as `<th>` cells with add `scope` attributes added. 
+
+In the header row, the `col` value for `scope` associates each heading cell with the data cells in the column. In the header column, the `row` value associates the individual headings with their rows.
 
 {::nomarkdown}
 <%= sample_start %>
@@ -209,46 +219,46 @@ This table of opening times has header information contained in both the top row
 <p><strong>Delivery slots:</strong></p>
 
 <table>
-	<tr>
-		<td></td>
-		<th scope="col">Monday</th>
-		<th scope="col">Tuesday</th>
-		<th scope="col">Wednesday</th>
-		<th scope="col">Thursday</th>
-		<th scope="col">Friday</th>
-	</tr>
-	<tr>
-		<th scope="row">09:00 - 11:00</th>
-		<td>Closed</td>
-		<td>Open</td>
-		<td>Open</td>
-		<td>Closed</td>
-		<td>Closed</td>
-	</tr>
-	<tr>
-		<th scope="row">11:00 - 13:00</th>
-		<td>Open</td>
-		<td>Open</td>
-		<td>Closed</td>
-		<td>Closed</td>
-		<td>Closed</td>
-	</tr>
-	<tr>
-		<th scope="row">13:00 - 15:00</th>
-		<td>Open</td>
-		<td>Open</td>
-		<td>Open</td>
-		<td>Closed</td>
-		<td>Closed</td>
-	</tr>
-	<tr>
-		<th scope="row">15:00 - 17:00</th>
-		<td>Closed</td>
-		<td>Closed</td>
-		<td>Closed</td>
-		<td>Open</td>
-		<td>Open</td>
-	</tr>
+  <tr>
+    <td></td>
+    <th scope="col">Monday</th>
+    <th scope="col">Tuesday</th>
+    <th scope="col">Wednesday</th>
+    <th scope="col">Thursday</th>
+    <th scope="col">Friday</th>
+  </tr>
+  <tr>
+    <th scope="row">09:00 - 11:00</th>
+    <td>Closed</td>
+    <td>Open</td>
+    <td>Open</td>
+    <td>Closed</td>
+    <td>Closed</td>
+  </tr>
+  <tr>
+    <th scope="row">11:00 - 13:00</th>
+    <td>Open</td>
+    <td>Open</td>
+    <td>Closed</td>
+    <td>Closed</td>
+    <td>Closed</td>
+  </tr>
+  <tr>
+    <th scope="row">13:00 - 15:00</th>
+    <td>Open</td>
+    <td>Open</td>
+    <td>Open</td>
+    <td>Closed</td>
+    <td>Closed</td>
+  </tr>
+  <tr>
+    <th scope="row">15:00 - 17:00</th>
+    <td>Closed</td>
+    <td>Closed</td>
+    <td>Closed</td>
+    <td>Open</td>
+    <td>Open</td>
+  </tr>
 </table>
 
 <%= sample_end %>
@@ -260,31 +270,31 @@ This table of opening times has header information contained in both the top row
 
 ~~~ html
 <table>
-	<tr>
-		<td></td>
-		<th scope="col">Monday</th>
-		<th scope="col">Tuesday</th>
-		<th scope="col">Wednesday</th>
-		<th scope="col">Thursday</th>
-		<th scope="col">Friday</th>
-	</tr>
-	<tr>
-		<th scope="row">09:00 - 11:00</th>
-		<td>Closed</td>
-		<td>Open</td>
-		<td>Open</td>
-		<td>Closed</td>
-		<td>Closed</td>
-	</tr>
-	<tr>
-		<th scope="row">11:00 - 13:00</th>
-		<td>Open</td>
-		<td>Open</td>
-		<td>Closed</td>
-		<td>Closed</td>
-		<td>Closed</td>
-	</tr>
-	[…]
+  <tr>
+    <td></td>
+    <th scope="col">Monday</th>
+    <th scope="col">Tuesday</th>
+    <th scope="col">Wednesday</th>
+    <th scope="col">Thursday</th>
+    <th scope="col">Friday</th>
+  </tr>
+  <tr>
+    <th scope="row">09:00 - 11:00</th>
+    <td>Closed</td>
+    <td>Open</td>
+    <td>Open</td>
+    <td>Closed</td>
+    <td>Closed</td>
+  </tr>
+  <tr>
+    <th scope="row">11:00 - 13:00</th>
+    <td>Open</td>
+    <td>Open</td>
+    <td>Closed</td>
+    <td>Closed</td>
+    <td>Closed</td>
+  </tr>
+  […]
 </table>
 ~~~
 
@@ -297,7 +307,7 @@ This table of opening times has header information contained in both the top row
 ## Table with an offset column of header cells
 {:.ex}
 
-In this table, the row header cells are in the second column rather than the first. The `<th>` cells in the second column have `scope="row"`  to ensure that data cells on both sides are correctly associated.
+In this table, the row header cells are in the second rather than in the first column. The approach is very similar to the examples above: The scope of the heading cells in the top row is set to `col`. By using the `row` value for `scope` assigns the header cells in the second column to data cells on the left and the right of the individual header cell.
 
 {::nomarkdown}
 <%= sample_start %>
