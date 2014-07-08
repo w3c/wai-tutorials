@@ -6,6 +6,13 @@ wcag_techniques:
   - C22
   - G94
 order: 5
+editors:
+  - Eric Eggert: "http://w3.org/People/yatil/"
+  - Shadi Abou-Zhara: "http://w3.org/People/shadi/"
+contributors:
+  - Anna Bell Leiserson
+  - the Education and Outreach Working Group (<a href="http://www.w3.org/WAI/EO/">EOWG</a>)
+support: <strong>Developed with support</strong> from the <a href="http://www.w3.org/WAI/ACT/">WAI-ACT</a> project, co-funded by the European Commission <abbr title="Information Society Technologies">IST</abbr> Programme.
 ---
 
 Images of text display text that’s intended to be read. The strongest design technique is to use actual text – styled with CSS – rather than image-based text presentation.

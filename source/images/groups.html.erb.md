@@ -6,6 +6,13 @@ wcag_techniques:
   - G196
   - H67
 order: 7
+editors:
+  - Eric Eggert: "http://w3.org/People/yatil/"
+  - Shadi Abou-Zhara: "http://w3.org/People/shadi/"
+contributors:
+  - Anna Bell Leiserson
+  - the Education and Outreach Working Group (<a href="http://www.w3.org/WAI/EO/">EOWG</a>)
+support: <strong>Developed with support</strong> from the <a href="http://www.w3.org/WAI/ACT/">WAI-ACT</a> project, co-funded by the European Commission <abbr title="Information Society Technologies">IST</abbr> Programme.
 ---
 
 A grouped collection of images is sometimes used to convey a single piece of information. For instance, five star images are often used to denote a product rating. When images are a grouped collection, the text alternative for one of the images should convey the information for the entire group; all other images should have null (empty) `alt` attributes. For example, as shown in example 1 below, the descriptive text alternative on one image should be “3.5 out of 5 stars”, rather than “1 star”, “half star” or “unfilled star” on each image.

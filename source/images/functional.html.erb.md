@@ -6,6 +6,13 @@ wcag_techniques:
   - H37
   - H36
 order: 4
+editors:
+  - Eric Eggert: "http://w3.org/People/yatil/"
+  - Shadi Abou-Zhara: "http://w3.org/People/shadi/"
+contributors:
+  - Anna Bell Leiserson
+  - the Education and Outreach Working Group (<a href="http://www.w3.org/WAI/EO/">EOWG</a>)
+support: <strong>Developed with support</strong> from the <a href="http://www.w3.org/WAI/ACT/">WAI-ACT</a> project, co-funded by the European Commission <abbr title="Information Society Technologies">IST</abbr> Programme.
 ---
 
 Users can interact with functional images, for example if they are used as buttons or within links. The text alternative for the image should convey the action that will be initiated (the purpose of the image), rather than a description of the image. 

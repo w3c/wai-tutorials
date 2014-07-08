@@ -6,6 +6,14 @@ wcag_techniques:
   - H37
   - G94
 order: 2
+editors:
+  - Eric Eggert: "http://w3.org/People/yatil/"
+  - Shadi Abou-Zhara: "http://w3.org/People/shadi/"
+contributors:
+  - Anna Bell Leiserson
+  - Liam McGee
+  - the Education and Outreach Working Group (<a href="http://www.w3.org/WAI/EO/">EOWG</a>)
+support: <strong>Developed with support</strong> from the <a href="http://www.w3.org/WAI/ACT/">WAI-ACT</a> project, co-funded by the European Commission <abbr title="Information Society Technologies">IST</abbr> Programme.
 ---
 
 Informative images convey a simple concept or information that can be expressed in a short phrase or sentence. The text alternative should convey the meaning or identification that is displayed visually which typically isn’t a literal description of the image. 

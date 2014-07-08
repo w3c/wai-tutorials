@@ -4,6 +4,17 @@ nav_title: "Tutorials: Overview"
 status: draft
 layout: overview
 order: 1
+editors:
+  - Eric Eggert: "http://w3.org/People/yatil/"
+  - Shadi Abou-Zhara: "http://w3.org/People/shadi/"
+contributors:
+  - Shawn Lawton Henry: "http://www.w3.org/People/Shawn/"
+  - Anna Belle Leiserson
+  - Sharron Rush
+  - Bim Egan
+  - the Education and Outreach Working Group (<a href="http://www.w3.org/WAI/EO/">EOWG</a>)
+support: <strong>Developed with support</strong> from the <a href="http://www.w3.org/WAI/ACT/">WAI-ACT</a> project, co-funded by the European Commission <abbr title="Information Society Technologies">IST</abbr> Programme.
+
 ---
 
 These tutorials show you how to create web content that is accessible to people with disabilities and improves the user experience for all audiences.

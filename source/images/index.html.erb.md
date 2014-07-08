@@ -9,6 +9,16 @@ wcag_success_criteria:
   - 1.4.5
   - 1.4.9
 type: intro
+editors:
+  - Eric Eggert: "http://w3.org/People/yatil/"
+  - Shadi Abou-Zhara: "http://w3.org/People/shadi/"
+contributors:
+  - Shawn Lawton Henry: "http://www.w3.org/People/Shawn/"
+  - Howard Kramer
+  - Sharron Rush
+  - Bim Egan
+  - the Education and Outreach Working Group (<a href="http://www.w3.org/WAI/EO/">EOWG</a>)
+support: <strong>Developed with support</strong> from the <a href="http://www.w3.org/WAI/ACT/">WAI-ACT</a> project, co-funded by the European Commission <abbr title="Information Society Technologies">IST</abbr> Programme.
 ---
 
 Image content must have text alternatives that describes the information or function represented in the image. Those alternatives improve the situation for [people with various disabilities](#why-is-this-important). This tutorial demonstrates how to provide appropriate text alternatives based on the purpose of the image:

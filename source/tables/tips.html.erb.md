@@ -1,8 +1,15 @@
 ---
 title: Tips and Tricks
-status: draft
 order: 7
+status: draft
 type: tips
+editors:
+  - Eric Eggert: "http://w3.org/People/yatil/"
+  - Shadi Abou-Zhara: "http://w3.org/People/shadi/"
+contributors:
+  - Anna Belle Leiserson
+  - the Education and Outreach Working Group (<a href="http://www.w3.org/WAI/EO/">EOWG</a>)
+support: <strong>Developed with support</strong> from the <a href="http://www.w3.org/WAI/ACT/">WAI-ACT</a> project, co-funded by the European Commission <abbr title="Information Society Technologies">IST</abbr> Programme.
 ---
 
 -   **Keep it simple:** Complex tables are more work for you as well as being more confusing for users. It’s usually better to [break up multi-level tables into simple tables](multi-level.html#split-up-multi-level-tables), each containing the data for one sub-topic.

@@ -1,12 +1,21 @@
 ---
 title: Tables Concepts
+order: 1
+topic_order: 2
 tutorial_title: Tables
 wcag_success_criteria: 
   - 1.3.1
 status: draft
-order: 1
-topic_order: 2
 type: intro
+editors:
+  - Eric Eggert: "http://w3.org/People/yatil/"
+  - Shadi Abou-Zhara: "http://w3.org/People/shadi/"
+contributors:
+  - Anna Bell Leiserson
+  - Shawn Lawton Henry: http://www.w3.org/People/Shawn/
+  - Sharron Rush
+  - the Education and Outreach Working Group (<a href="http://www.w3.org/WAI/EO/">EOWG</a>)
+support: <strong>Developed with support</strong> from the <a href="http://www.w3.org/WAI/ACT/">WAI-ACT</a> project, co-funded by the European Commission <abbr title="Information Society Technologies">IST</abbr> Programme.
 ---
 
 Data tables are used to organize data in grids. Accessible tables need HTML markup that indicates the difference between header cells and data cells, and indicate the relationship between them.

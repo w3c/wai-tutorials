@@ -1,11 +1,17 @@
 ---
 title: Basic Tables
+order: 2
 status: draft
 technologies: HTML5
-order: 2
 wcag_techniques: 
   - H51
   - H63
+editors:
+  - Eric Eggert: "http://w3.org/People/yatil/"
+  - Shadi Abou-Zhara: "http://w3.org/People/shadi/"
+contributors:
+  - The Education and Outreach Working Group (<a href="http://www.w3.org/WAI/EO/">EOWG</a>)
+support: <strong>Developed with support</strong> from the <a href="http://www.w3.org/WAI/ACT/">WAI-ACT</a> project, co-funded by the European Commission <abbr title="Information Society Technologies">IST</abbr> Programme.
 ---
 
 When the content of a simple table is descriptive on its own, only a header row or column is needed to give the user an impression of the data in the table.
