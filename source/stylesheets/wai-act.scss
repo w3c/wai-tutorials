@@ -598,6 +598,13 @@ a {
 			}
 		}
 	}
+	a[href^="http"]:after {
+		@extend .icon;
+		@extend .icon-external-link;
+		content: "";
+		display: inline-block;
+		margin-left: 0.5em;
+	}
 }
 
 .status {
