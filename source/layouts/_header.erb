@@ -6,14 +6,14 @@
   <%= current_page.data.title %>
   <% if current_page.data.order == 1 %>
     <% if current_page.data.tutorial_title %>
-      <%= " &bullet; " + current_page.data.tutorial_title %>
+      <%= " &bull; " + current_page.data.tutorial_title %>
     <% end %>
   <% else %>
     <% if current_page.parent and current_page.parent.data.tutorial_title %>
-      <%= " &bullet; " + current_page.parent.data.tutorial_title %>
+      <%= " &bull; " + current_page.parent.data.tutorial_title %>
     <% end %>
   <% end %>
-  &bullet; WAI Web Accessibility Tutorials
+  &bull; WAI Web Accessibility Tutorials
   </title>
   <meta name="viewport" content="width=device-width">
   <%= stylesheet_link_tag "wai-act" %>
