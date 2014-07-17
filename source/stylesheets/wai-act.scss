@@ -979,8 +979,14 @@ select {
 	margin: 1em 0;
 	padding:0;
 	> li {
-		margin-bottom: 1em;
+		text-indent: .5em;
 		font-weight: bold;
+		padding-top: 1em;
+		border: 2px solid #999;
+		border-top:none;
+		&:first-child {
+			border-top:2px solid #999;
+		}
 		> ul {
 			margin: .5em 0 0;
 			padding:0;
@@ -991,29 +997,71 @@ select {
 				flex-wrap: wrap;
 				align-items: stretch;
 			}
-			border: 1px solid #aaa;
+			border-top: 1px solid #aaa;
 			> li {
+				display:flex;
+				text-indent: 0;
 				box-sizing: border-box;
 				font-weight: normal;
 				.flexbox & {
 					width: 50%;
 				}
 				padding: .5em;
-				border: 1px solid #aaa;
+				// border: 1px solid #aaa;
+				&:nth-child(odd) {
+					border-right:1px solid #aaa;
+				}
 				&:nth-child(odd):last-child {
+					display:block;
 					width:100%;
+				}
+				li {
+					list-style: none;
+					padding: 0;
+					padding-bottom: 0.25em;
+					margin-bottom: 0.25em;
+					border-bottom: 1px solid #888;
+					&:last-child {
+						border-bottom-style: none;
+					}
 				}
 			}
 		}
 	}
 	.yes {
 		background-color: #D9EDF7;
+		border-bottom: none;
 	}
 	.no {
 		background-color: #F2DEDE;
+		border-bottom: none;
 		position: relative;
 		&:after { top: 100%; left: 50%; border: solid transparent; content: " "; height: 0; width: 0; position: absolute; pointer-events: none; border-color: rgba(119, 119, 119, 0); border-top-color: #F2DEDE; border-width: 1em; margin-left: -.5em; z-index: 500; }
-		&:before { top: 100%; left: 50%; border: solid transparent; content: " "; height: 0; width: 0; position: absolute; pointer-events: none; border-color: rgba(119, 119, 119, 0); border-top-color: #aaa; border-width: 1.2em; margin-left: -.7em; z-index: 400; }
+		&:before { top: 100%; left: 50%; border: solid transparent; content: " "; height: 0; width: 0; position: absolute; pointer-events: none; border-color: rgba(119, 119, 119, 0); border-top-color: #999; border-width: 1.2em; margin-left: -.7em; z-index: 400; }
+	}
+}
+
+/*
+.decision-tree {
+	&, ul {
+		padding: 0;
+	}
+	li {
+		list-style:none;
+	}
+	> li {
+		border-left: 1em solid #777;
+		padding: .5em 0 0 .5em;
+		font-weight: bold;
+		background-color: #777;
+		color: #fff;
+		li {
+			font-weight: normal;
+			background-color: #F5F5F5;
+			color: #777;
+			border-bottom: 1px solid #777;
+			padding: .5em 0 .5em .5em;
+		}
 	}
 }
 
