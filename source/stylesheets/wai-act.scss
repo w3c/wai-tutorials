@@ -1053,6 +1053,13 @@ select {
 	.yes {
 		background-color: #D9EDF7;
 		border-bottom: none;
+		li {
+			list-style: disc;
+			margin-left: 1em;
+			&:only-child {
+				list-style: none;
+			}
+		}
 	}
 	.no {
 		background-color: #F2DEDE;
