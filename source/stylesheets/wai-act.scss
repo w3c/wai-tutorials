@@ -1023,6 +1023,8 @@ select {
 					border-bottom: 1px solid #888;
 					&:last-child {
 						border-bottom-style: none;
+						padding-bottom: 0;
+						margin-bottom: 0;
 					}
 				}
 			}
