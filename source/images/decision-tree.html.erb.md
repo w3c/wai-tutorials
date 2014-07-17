@@ -14,30 +14,35 @@ contributors:
 support: <strong>Developed with support</strong> from the <a href="http://www.w3.org/WAI/ACT/">WAI-ACT</a> project, co-funded by the European Commission <abbr title="Information Society Technologies">IST</abbr> Programme.
 ---
 
--   Is the complete content of a link or button defined by this image (or multiple images)?
+-   **Is the complete content of a link or button defined by this image (or multiple images)?**
     -   {:.yes} **Yes:**
-        - Use the `alt` attribute to communicate the destination of the link or action taken. See [Functional Images](functional.html). 
+        - _Use the `alt` attribute to communicate the destination of the link or action taken. See [Functional Images](functional.html)._
     -   {:.no} **No:**
         - Continue.
--   Does this image contain text?
+-   **Does this image contain text?**
     -   {:.yes} **Yes:**
-        -   … and the text in the image is also present as *real* text nearby. The `alt` attribute should be empty.
-        -   … and the text is only shown for visual effects. The `alt` attribute should be empty.
-        -   … and the text in the image is not present otherwise. Use the `alt` attribute to include the text of the image. See [Images of Text](textual.html#image-of-styled-text-with-decorative-effect).
+        -   **… and the text in the image is also present as *real* text nearby.** 
+            _Use an empty `alt` attribute._
+        -   **… and the text is only shown for visual effects.**
+            _Use an empty `alt` attribute._
+        -   **… and the text in the image is not present otherwise.** _Use the `alt` attribute to include the text of the image. See [Images of Text](textual.html#image-of-styled-text-with-decorative-effect)._
     -   {:.no} **No:**
         - Continue.
--   Does the image contribute meaning to the current page or context?
+-   **Does the image contribute meaning to the current page or context?**
     -   {:.yes} **Yes:** 
-        -   … and it’s a simple graphic or photograph. The `alt` attribute should briefly describe the image in a way that conveys that meaning. See [Informative Images](informative.html).
-        -   … and it’s a graph or complex piece of information. Include the information contained in the image elsewhere on the page. See [Complex Images](complex.html).
-        -   … and it shows content that is redundant to *real* text nearby. The `alt` attribute should be empty. See [Functional Images](functional.html#logo-image-within-link-text).
+        -   **… and it’s a simple graphic or photograph.**
+            _Use a brief description of the image in a way that conveys that meaning in the `alt` attribute. See [Informative Images](informative.html)._
+        -   **… and it’s a graph or complex piece of information.**
+            _Include the information contained in the image elsewhere on the page. See [Complex Images](complex.html)._
+        -   **… and it shows content that is redundant to *real* text nearby.**
+            _Use an empty `alt` attribute. See [Functional Images](functional.html#logo-image-within-link-text)._
     -   {:.no} **No:**
         -   Continue.
--   Is the image purely decorative or not intended for the user?
+-   **Is the image purely decorative or not intended for the user?**
     -   {:.yes} **Yes:** 
-        - Use an empty `alt` attribute. See [Decorative Images](decorative.html).
+        - _Use an empty `alt` attribute. See [Decorative Images](decorative.html)._
     -   {:.no} **No:** 
         - Continue.
--   Is the image’s use not listed above or it’s unclear what `alt` text to provide?
+-   **Is the image’s use not listed above or it’s unclear what `alt` text to provide?**
     -   {:.yes} This decision tree **does not** cover all cases. For detailed information on the provision of text alternatives refer to the [Image Concepts Page](index.html).
 {:.decision-tree}

@@ -979,16 +979,16 @@ select {
 	margin: 1em 0;
 	padding:0;
 	> li {
-		text-indent: .5em;
-		font-weight: bold;
-		padding-top: 1em;
+		> strong {
+			display: block;
+			padding: 1em .5em;
+		}
 		border: 2px solid #999;
 		border-top:none;
 		&:first-child {
 			border-top:2px solid #999;
 		}
 		> ul {
-			margin: .5em 0 0;
 			padding:0;
 			list-style: none;
 			.flexbox & {
@@ -997,30 +997,50 @@ select {
 				flex-wrap: wrap;
 				align-items: stretch;
 			}
-			border-top: 1px solid #aaa;
+			border-top: 1px dotted #aaa;
 			> li {
-				display:flex;
 				text-indent: 0;
 				box-sizing: border-box;
 				font-weight: normal;
 				.flexbox & {
-					width: 50%;
+					width: 25%;
 				}
 				padding: .5em;
 				// border: 1px solid #aaa;
 				&:nth-child(odd) {
-					border-right:1px solid #aaa;
+					border-right:1px dotted #aaa;
+					.flexbox & {
+						width: 75%;
+					}
 				}
 				&:nth-child(odd):last-child {
 					display:block;
 					width:100%;
 				}
+				ul {
+					padding:0;
+					margin:0;
+				}
 				li {
-					list-style: none;
 					padding: 0;
 					padding-bottom: 0.5em;
 					margin-bottom: 0.5em;
 					border-bottom: 1px solid #888;
+					list-style: none;
+					> em {
+						display: block;
+						padding-left: 1.5em;
+						position: relative;
+						margin-top: .25em;
+						&:before {
+							position:absolute;
+							@extend .icon;
+							@extend .icon-arrow-right;
+							content: '';
+							top:.2em;
+							margin-left: -1.5em;
+						}
+					}
 					&:last-child {
 						border-bottom-style: none;
 						padding-bottom: 0;
