@@ -1032,6 +1032,7 @@ select {
 						padding-left: 1.5em;
 						position: relative;
 						margin-top: .25em;
+						font-style: normal;
 						&:before {
 							position:absolute;
 							@extend .icon;
