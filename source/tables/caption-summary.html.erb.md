@@ -279,7 +279,7 @@ The element containing the summary doesn’t need to be in front of the table in
 
 In this approach the table is wrapped in a `<figure>` element. The `<figcaption>` element contains the caption and summary text. 
 
-Screen reader users navigating in “Tables Mode” are usually unable identify a table by a caption applied like this. The caption part of the `<figcaption>` element can be explicitly associated to the table by using the `aria-labelledby` attribute and the summary part by using the `aria-describedby` attributes. This could lead to caption and summary to be read out multiple times.
+Screen reader users navigating in “Tables Mode” are usually unable to identify a table by a caption applied like this. The caption part of the `<figcaption>` element can be explicitly associated to the table by using the `aria-labelledby` attribute and the summary part by using the `aria-describedby` attributes. This could lead to caption and summary to be read out multiple times.
 
 {::nomarkdown}
 <%= notes_start %>
