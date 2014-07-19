@@ -103,7 +103,7 @@ document.addEventListener('DOMContentLoaded', function(){
 			firstheading.className += ' ' + ('first');
 
 
-		var toc_elements = document.querySelectorAll('.content h2[id], .ap'); // $('.content h2[id], .ap')
+		var toc_elements = document.querySelectorAll('.content h2[id], .content h3[id]'); // $('.content h2[id], .ap')
 		var toc_outer = document.createElement('figure');
 		toc_outer.setAttribute('role', 'navigation');
 		toc_outer.setAttribute('aria-describedby', 'toc_desc');
@@ -150,7 +150,7 @@ document.addEventListener('DOMContentLoaded', function(){
 	addclass(plel, 'permalink');
 	plel.innerHTML = 'Permalink';
 
-	var elements = document.querySelectorAll('.content h2[id], h2.ap, h3.ap'); // $('.content h2[id], .ap')
+	var elements = document.querySelectorAll('.content h2[id], h2.ap, h3.ap, h3.ex'); // $('.content h2[id], .ap')
 	Array.prototype.forEach.call(elements, function(el, i){	// … .each(…)
 		var cplel = plel.cloneNode(true);
 		cplel.setAttribute('href', '#' + el.id);
