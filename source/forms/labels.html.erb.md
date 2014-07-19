@@ -1,5 +1,5 @@
 ---
-title: Labels and Descriptions
+title: Labels
 status: editors-draft
 order: 2
 wcag_success_criteria: 
@@ -20,12 +20,10 @@ Form elements need clear, descriptive, well-positioned labels, which should be a
 
 To maximize predictability, labels must be positioned on the right of radio buttons and checkboxes and on the top or left for every other field (in left-to-right languages). For people using high screen magnification and in mobile context labels above form fields are often preferred.
 
-It’s essential that required field indicators and other important information is kept within the label element: Screen readers will not read out _any text_ that is outside labels.
+It’s essential that required field indicators and other important information is kept within the label element: Screen readers will usually not read out _any text_ that is outside labels if in “Forms Mode”.
 
-## Associating labels
-
-### Implicit labels
-{:.ap}
+## Using Implicit Labels
+{:.ex}
 
 The most basic way to associate a descriptive text to a form field is to wrap them in a `label` element:
 
@@ -77,8 +75,8 @@ The most basic way to associate a descriptive text to a form field is to wrap th
 <%= code_end %>
 {:/nomarkdown}
 
-### Explicit labels
-{:.ap}
+## Using Explicit Labels
+{:.ex}
 
 To explicitly associate a label and its form control, the `<label>`{:.elem} element must have a `for`{:.attrib} attribute which exactly matches the value of an `id`{:.attrib} attribute in its related field.
 
@@ -117,217 +115,6 @@ To explicitly associate a label and its form control, the `<label>`{:.elem} elem
 <div>
 	<input type="checkbox" id="premium" name="premium">
 	<label for="premium">Premium Membership</label>
-</div>
-~~~
-
-{::nomarkdown}
-<%= code_end %>
-{:/nomarkdown}
-
-## Additional descriptions
-{:.newap}
-
-Sometimes it is necessary to add additional, auxiliary information to an input field to make it easier for users to enter the correct value into the form field.
-
-### Nest in label
-{:.ap}
-
-For simple use cases, nesting the description into the label may be enough. This approach limits the possibilities to style the description.
-
-{::nomarkdown}
-<%= sample_start %>
-
-<form method="post" action="#">
-  <div>
-    <label for="expire">Expiry date (MM/YYYY): </label> <input type="text" name="expire" id="expire">
-  </div>
-</form>
-
-<%= sample_end%>
-{:/nomarkdown}
-
-{::nomarkdown}
-<%= code_start %>
-{:/nomarkdown}
-
-~~~ html
-<label for="expire">Expiry date (MM/YYYY): </label> <input type="text" name="expire" id="expire">
-~~~
-
-{::nomarkdown}
-<%= code_end %>
-{:/nomarkdown}
-
-###Using multiple labels
-{:.ap}
-
-For more complex use cases, or when styling is important, it is possible to use multiple labels with their `for` attributes pointing at the `id` of the form element.
-
-{::nomarkdown}
-<%= sample_start %>
-
-<style>
-  #ex1 span {
-    display: inline-block;
-    vertical-align: top;
-  }
-  #ex1 span label {
-    display: block;
-    font-size: 0.8em;
-  }
-</style>
-<form method="post" action="#" id="ex1">
-  <div>
-    <label for="expire2">Expiry date:</label> 
-    <span>
-      <input type="text" name="expire" id="expire2"> 
-      <label for="expire2">MM/YYYY</label>
-    </span>
-  </div>
-</form>
-
-<%= sample_end%>
-{:/nomarkdown}
-
-{::nomarkdown}
-<%= code_start %>
-{:/nomarkdown}
-
-~~~ html
-<label for="expire">Expiry date:</label> 
-<span>
-  <input type="text" name="expire" id="expire"> 
-  <label for="expire">MM/YYYY</label>
-</span>
-~~~
-
-{::nomarkdown}
-<%= code_end %>
-{:/nomarkdown}
-
-### Using WAI-ARIA
-{:.ap}
-
-Another approach is to use WAI-ARIA attributes to provide additional information _specifically to screen readers_.
-
-`Aria-labelledby` produces a result that is similar to the [multiple labels approach](#multiple-labels) above: The text is immediately read when the form field gets focus.
-
-{::nomarkdown}
-<%= sample_start %>
-
-<style>
-  #ex2 span {
-    display: inline-block;
-    vertical-align: top;
-  }
-  #ex2 span span {
-    display: block;
-    font-size: 0.8em;
-  }
-</style>
-<form method="post" action="#" id="ex2">
-  <div>
-    <label for="expire3">Expiry date:</label>
-    <span>
-      <input type="text" name="expire" id="expire3" aria-labelledby="expDesc"> 
-      <span id="expDesc">MM/YYYY</span>
-    </span>
-  </div>
-</form>
-
-<%= sample_end%>
-{:/nomarkdown}
-
-{::nomarkdown}
-<%= code_start %>
-{:/nomarkdown}
-
-~~~ html
-<label for="expire">Expiry date:</label>
-<span>
-  <input type="text" name="expire" id="expire" aria-labelledby="expDesc"> 
-  <span id="expDesc">MM/YYYY</span>
-</span>
-~~~
-
-{::nomarkdown}
-<%= code_end %>
-{:/nomarkdown}
-
-`Aria-describedby` provides the additional text on demand to the screen reader user.
-
-{::nomarkdown}
-<%= sample_start %>
-
-<style>
-  #ex3 span {
-    display: inline-block;
-    vertical-align: top;
-  }
-  #ex3 span span {
-    display: block;
-    font-size: 0.8em;
-  }
-</style>
-<form method="post" action="#" id="ex3">
-  <div>
-    <label for="expire4">Expiry date:</label>
-    <span>
-      <input type="text" name="expire" id="expire4" aria-describedby="expDesc2"> 
-      <span id="expDesc2">MM/YYYY</span>
-    </span>
-  </div>
-</form>
-
-<%= sample_end%>
-{:/nomarkdown}
-
-{::nomarkdown}
-<%= code_start %>
-{:/nomarkdown}
-
-~~~ html
-<label for="expire">Expiry date:</label>
-<span>
-  <input type="text" name="expire" id="expire" aria-describedby="expDesc"> 
-  <span id="expDesc">MM/YYYY</span>
-</span>
-~~~
-
-{::nomarkdown}
-<%= code_end %>
-{:/nomarkdown}
-
-## Placeholder text
-
-Placeholder text is a short hint of the kind of data to put into a field. It’s usually shown as low-contrast text inside the form field. **It’s not a replacement for a label**, especially they are not treated as labels by assistive technology.
-
-If the placeholder text is customized, it should have distinctively less contrast than regular text input so it is not mistaken as pre-populated while obeying the contrast ratio rules.
-
-{::nomarkdown}
-<%= sample_start %>
-<form method="post" action="#">
-  <div>
-    <label for="search">Search:</label> <input type="text" name="search" id="search" placeholder="e.g. Apple Pie">
-  </div>
-  <div>
-    <label for="email">Email: </label> <input type="text" name="email" id="email" placeholder="joe@example.com">
-  </div>
-</form>
-
-<%= sample_end %>
-{:/nomarkdown}
-
-{::nomarkdown}
-<%= code_start %>
-{:/nomarkdown}
-
-~~~ html
-<div>
-  <label for="search">Search:</label> <input type="text" name="search" id="search" placeholder="e.g. Apple Pie">
-</div>
-<div>
-  <label for="email">Email: </label> <input type="text" name="email" id="email" placeholder="joe@example.com">
 </div>
 ~~~
 
