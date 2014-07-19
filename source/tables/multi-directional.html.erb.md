@@ -1,5 +1,5 @@
 ---
-title: Multi-Directional Tables
+title: Multi-directional Tables
 order: 3
 status: draft
 technologies: HTML5
