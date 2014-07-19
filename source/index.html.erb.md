@@ -17,7 +17,7 @@ support: <strong>Developed with support</strong> from the <a href="http://www.w3
 
 ---
 
-These tutorials show you how to create web content that is accessible to people with disabilities and improve the user experience for all audiences.
+These tutorials show you how to develop web content that is accessible to people with disabilities and that provides a better user experience for everyone.
 
 They provide valuable resources for a variety of roles, including:
 
@@ -29,9 +29,9 @@ They provide valuable resources for a variety of roles, including:
 
 <img src="http://www.w3.org/html/logo/badge/html5-badge-h-css3-graphics-multimedia-semantics.png" width="229" height="64" alt="HTML5 Powered with CSS3 / Styling, Graphics, 3D &amp; Effects, Multimedia, and Semantics" title="HTML5 Powered with CSS3 / Styling, Graphics, 3D &amp; Effects, Multimedia, and Semantics" style="float: right; margin-left: 1em;"> The tutorials cover various accessibility topics that are task-based rather than technology-based. For example, they show you how to provide accessible images and tables using a variety of web technologies, including HTML4, HTML5, CSS3, WAI-ARIA, MathML, and SVG. The concepts and techniques explained in the tutorials apply to other formats as well.
 
-Web authoring tools, including Content Management Systems (CMS), <abbr title="What you see is what you get">WYSIWYG</abbr> editors, word processors, and other tools can help you create content that is accessible and inclusive as shown in these tutorials. More background and guidance is provided in [Selecting and Using Authoring Tools for Web Accessibility](http://w3.org/wai/impl/software).
+Web authoring tools (Content Management Systems (CMS), <abbr title="What you see is what you get">WYSIWYG</abbr> editors, word processors, etc.) can help you create content that is accessible as shown in these tutorials.
 
-## All Tutorials
+## Tutorial Topics
 
 -   **[Images](images/index.html):** Learn how to use images in an accessible way, including decorative, linked, and grouped images.
 
