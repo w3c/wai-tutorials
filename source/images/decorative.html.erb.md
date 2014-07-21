@@ -137,7 +137,7 @@ does not add visual information to the link.
 ## Image with adjacent text alternative
 {:.ex}
 
-This picture of “Poppy the guide dog” is already identified by the
+This picture of a sleeping dog is already identified by the
 adjacent caption. The caption acts as the text alternative and should not be repeated in the `alt` attribute.
 
 {::nomarkdown}
