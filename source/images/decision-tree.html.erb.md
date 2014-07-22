@@ -1,5 +1,5 @@
 ---
-title: A simple alt decision tree
+title: An alt decision tree
 nav_title: <code>alt</code> Decision Tree
 status: draft
 order: 9

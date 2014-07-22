@@ -993,7 +993,7 @@ select {
 			list-style: none;
 			.flexbox & {
 				display:flex;
-				flex-direction: row;
+				flex-direction: row-reverse;
 				flex-wrap: wrap;
 				align-items: stretch;
 			}
@@ -1003,14 +1003,13 @@ select {
 				box-sizing: border-box;
 				font-weight: normal;
 				.flexbox & {
-					width: 25%;
+					flex-basis: 25%;
 				}
 				padding: .5em;
 				// border: 1px solid #aaa;
 				&:nth-child(odd) {
-					border-right:1px dotted #aaa;
 					.flexbox & {
-						width: 75%;
+						flex-basis: 75%;
 					}
 				}
 				&:nth-child(odd):last-child {
@@ -1063,6 +1062,7 @@ select {
 		}
 	}
 	.no {
+		border-right:1px dotted #aaa;
 		background-color: #F2DEDE;
 		border-bottom: none;
 		position: relative;
