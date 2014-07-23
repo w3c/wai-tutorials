@@ -21,7 +21,7 @@ contributors:
 support: <strong>Developed with support</strong> from the <a href="http://www.w3.org/WAI/ACT/">WAI-ACT</a> project, co-funded by the European Commission <abbr title="Information Society Technologies">IST</abbr> Programme.
 ---
 
-Image content must have text alternatives that describe the information or function represented in the image. They improve the situation for [people with various disabilities](#why-is-this-important). This tutorial demonstrates how to provide appropriate text alternatives based on the purpose of the image:
+Images must have text alternatives that describe the information or function represented in the images. This ensures that images can be used by [people with various disabilities](#why-is-this-important). This tutorial demonstrates how to provide appropriate text alternatives based on the purpose of the image:
 
 -   **[Informative images](informative.html)**: Images that graphically illustrate concepts and information, typically pictures and illustrations. The text alternative should be at least a short description conveying the essential information presented by the image.
 
@@ -29,15 +29,15 @@ Image content must have text alternatives that describe the information or funct
 
 -   **[Functional images](functional.html)**: The text alternative of an image used as a link or as a button should describe the functionality of the link or button rather than the visual image. Examples for such images are a printer icon to represent the print function or a button to submit of a form.
 
--   **[Images of text](textual.html)**: Readable text is sometimes presented within an image. It the image is not a logo, text in images should be avoided. However, if images of text are used, the text alternative should contain the same words as in the image.
+-   **[Images of text](textual.html)**: Readable text is sometimes presented within an image. If the image is not a logo, text in images should be avoided. However, if images of text are used, the text alternative should contain the same words as in the image.
 
 -   **[Complex images](complex.html) such as graphs and diagrams**: To convey data or detailed information, the text alternative should be a full text equivalent of the data or information provided in the image.
 
 -   **[Groups of images](groups.html)**: If multiple images convey a single piece of information, the text alternative for one image should convey the information conveyed by the entire group.
 
--   **[Image maps](imagemap.html)**: The text alternative for an image that contains multiple clickable areas should provide an overall context for the links. Each individual clickable area should describe the purpose or destination of the links in its alternative text.
+-   **[Image maps](imagemap.html)**: The text alternative for an image that contains multiple clickable areas should provide an overall context for the set of links. In addition, each individual clickable area should have alternative text that describes the purpose or destination of the link.
 
-For guidance on deciding which category a specific image fits into, see the [`alt` Decision Tree](decision-tree.html).
+For quick overview on deciding which category a specific image fits into, see the [`alt` Decision Tree](decision-tree.html).
 
 ## Why is this important?
 
