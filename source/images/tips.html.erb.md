@@ -26,12 +26,12 @@ support: <strong>Developed with support</strong> from the <a href="http://www.w3
 
 -   **Punctuation within `alt` attributes:**
 
-    * As in visible text, using punctuation in the text alternative can make it easier to understand. In addition, to avoid having words run together when read by a screen reader, if there’s no space between the image and adjacent text, a space character may be needed within the `alt` value.
+    * As for any text, using punctuation in the text alternative makes the information easier to understand. In particular, remember to add space characters in the `alt` text when there’s no space character between the image and adjacent text, to avoid having words running together when they are read by a screen reader.
     
-    * If you use a null alternative (`alt=""`) text to hide decorative images, make sure that there is no space character in between the quotes. If a space character is present, the image may not be effectivly hidden from assistive technologies. For instance, some screen readers will still announce the presence of an image if a space is put between the quotes.
+    * If you use a null (empty) text alternative (`alt=""`) to hide decorative images, make sure that there is no space character in between the quotes. If a space character is present, the image may not be effectivly hidden from assistive technologies. For instance, some screen readers will still announce the presence of an image if a space is put between the quotes.
 
 -   **Superfluous information in alternative text:** <br>
-    Usually there’s no need to include words like “image”, “icon” or “picture” in the alt text. People who can see will know this already and screen readers announce the presence of an image. If it’s a painting, photograph or illustration, that may be a good case for including text that describes the type of image, but it’s best to avoid the more generic terms.
+    Usually there’s no need to include words like “image”, “icon” or “picture” in the alt text. People who can see will know this already, and screen readers announce the presence of an image. In some situations it is important to distinguish between a painting, photograph, or illustration etc., but it’s best to avoid the more generic use of the terms.
 
 -   **SVG graphics:** 
 
@@ -40,13 +40,10 @@ support: <strong>Developed with support</strong> from the <a href="http://www.w3
     * As SVG images consists of tags like HTML, their code can also be used in HTML5 directly. In this case you can provide alternative text in a `<title>` element within the SVG image.
 
 -   **Logos:** <br>
-    Logo images with text are exempt from some of the accessibility guidelines for images with text. For instance, there is no minimum contrast requirement.
+    Logo images with text are exempt from some of the accessibility requirements. For instance, there is no minimum contrast requirement.
 
-## Frequently Asked Questions
-
--   **I heard that text-only versions are bad? Is that true?**
-
-    Yes. In many situations images and graphics can make content easier to understand. They can also help visually impaired people to orient themselves on the page and even screen reader users if no other structure is available. Make sure that the image is properly described with an alternative text or long description to provide easy access to your content to as many people as possible.
+-   **Images are important:**<br>
+    Images and graphics make content more pleasant and easier to understand for everyone, and in particular for people with cognitive and learning disabilities. They also serve as cues that visually impaired people who are using screen magnification often use to orient themselves in the content. Also screen reader users can benefit from these cues and structure that images sometimes add to the content. Make sure that images are properly described with appropriate text alternatives to provide easy access to your content to as many people as possible.
 
 ## Other W3C Resources
 
