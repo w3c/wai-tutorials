@@ -29,13 +29,11 @@ If neither a column nor a row group is defined in the markup, the header cell is
 ## Table with two tier headers
 {:.ex}
 
-In the table below, header cells span two columns (by using the `colspan` attribute). They need to be in a column group to associate them to the data cells.
+In the table below, there are two pairs of column headers. Each pair of column headers, "Produced" and "Sold" is associated with a first-level header that identifies the pair; "Mars" and "Venus". These first-level headers are made to span two columns by using the `colspan` attribute with the value of `2`. The value of the `scope` attribute in the first-level headers is set to `colgroup` so that it is associated with the entire group of columns. The second-level headers only apply to the corresponding column so the `scope` attribute is set to `col` as shown in previous examples.
 
-For each column there should be a `<col>` element (for individual columns) or a `<colgroup>` element (for columns with headers spanning multiple columns) at the beginning of the table markup. A `span` attribute defines how many columns are spanned by the column group. 
+@@@ needs explanation @@@ For each column there should be a `<col>` element (for individual columns) or a `<colgroup>` element (for columns with headers spanning multiple columns) at the beginning of the table markup. A `span` attribute defines how many columns are spanned by the column group. 
 
-Combined the number of `<col>` elements and the sum of the numbers in the `span` attributes of `<colgroup>` elements should be equal to the columns in the table.
-
-Use the `colgroup` value of the `scope` attribute to assign a table header cell (`<th>`) to all other cells in the column group.
+Note: The combined sum of `<col>` elements and column elements indicated by the `span` attributes of the `<colgroup>` elements should be equal to the total number of columns in the table.
 
 {::nomarkdown}
 <%= sample_start %>
@@ -116,7 +114,7 @@ Use the `colgroup` value of the `scope` attribute to assign a table header cell 
 ## Table with headers spanning multiple rows or columns
 {:.ex}
 
-In the example below, the table consists of two individual columns and one column group spanning three columns. It’s also subdivided in multiple row groups using `<thead>` and `<tbody>` elements which contain table rows. 
+In the example below, the table consists of two individual columns and one column group spanning three columns. It’s also subdivided in multiple row groups using `<thead>` and `<tbody>` elements which contain table rows. @@@ needs explanation @@@ 
 
 The first row, that consists of the column headers, is wrapped in the `<thead>` (table header) element. The next three rows are wrapped in one `<tbody>` element to define the second row group. By setting `scope` of the header cell spanning those three rows to `rowgroup`, it applies to all other cells in the group.
 
