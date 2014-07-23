@@ -20,11 +20,11 @@ support: <strong>Developed with support</strong> from the <a href="http://www.w3
 
 Data tables are used to organize data in grids. Accessible tables need HTML markup that indicates the difference between header cells and data cells, and indicate the relationship between them.
 
-To make tables accessible, header cells must be marked up with `<th>` and data cells marked up with `<td>`. For more complex tables, explicit associations may be needed using `scope`, `id` and `headers` attributes.
+To make tables accessible, header cells must be marked up with `<th>`, and data cells with `<td>`. For more complex tables, explicit associations may be needed using `scope`, `id` and `headers` attributes.
 
 This tutorial shows you how to apply appropriate structural markup to tables. It includes the following pages:
 
--   **[Basic Tables![ typically have one header row and/or one header column](img-simple.png)](basic.html):** For simple tables with content that is easy to distinguish, mark up header cells with `<th>` elements.
+-   **[Basic Tables![ typically have one header row and/or one header column](img-simple.png)](basic.html):** For simple tables with content that is easy to distinguish, mark up header cells with `<th>` and data cells with `<td>`  elements.
 
 -   **[Multi-directional Tables![ usually have headers for rows and columns](img-multidir.png)](multi-directional.html):** For tables with unclear header directions, define the direction of each header by setting the `scope` attribute to `col` or `row`.
 
@@ -35,7 +35,7 @@ This tutorial shows you how to apply appropriate structural markup to tables. It
 -   **[Caption & Summary![](img-caption.png)](caption-summary.html):** A caption identifies the overall topic of a table and is useful in most situations. A summary provides orientation or navigation hints in complex tables.
 {:.withicons.nobullets}
 
-Some document formats other than HTML, such as PDF, may provide similar mechanisms to markup table structures. Word processing applications may also provide mechanisms to markup tables. Tables markup is also often lost when converting from one format to another, though some programs may provide functionality to assist converting table markup.
+Some document formats other than HTML, such as PDF, may provide similar mechanisms to markup table structures. Word processing applications may also provide mechanisms to markup tables. Tables markup is often lost when converting from one format to another, though some programs may provide functionality to assist converting table markup.
 
 Many web authoring tools and content management systems (CMS) provide functions to define header cells during table creation without having to manually edit the code.
 
@@ -43,7 +43,7 @@ Many web authoring tools and content management systems (CMS) provide functions 
 <%= notes_start %>
 {:/nomarkdown}
 
-**Notes:** This tutorial provides guidance for creating tables used to display data in a grid. This guidance is not applicable to layout tables. As a general rule, tables aren't meant to be used for layout purposes. Instead, best practice is to use Cascading Style Sheets (CSS) for visual presentation.
+**Notes:** This tutorial provides guidance for creating tables used to display data in a grid. This tutorial does not apply to tables used for layout. As a general rule, tables aren't meant to be used for layout purposes. Instead, best practice is to use Cascading Style Sheets (CSS) for visual presentation.
 
 {::nomarkdown}
 <%= notes_end %>
@@ -51,7 +51,7 @@ Many web authoring tools and content management systems (CMS) provide functions 
 
 ## Why is this important?
 
-Tables without structural markup to differentiate between header and data cells, and to define the relationship between them, create accessibility barriers. Visual clues only are not sufficient to create an accessible table. With structural markup, headers and data cells can be programmatically determined by software, which means that:
+Tables without structural markup to differentiate between header and data cells, and to define the relationship between them, create accessibility barriers. Relying on visual cues alone is not sufficient to create an accessible table. With structural markup, headers and data cells can be programmatically determined by software, which means that:
 
 -   **People using screen readers** can have the row and column headers read aloud as they navigate through the table. Screen readers speak one cell at a time and reference the associated header cells, so the reader doesn’t lose context.
 
