@@ -17,9 +17,9 @@ support: <strong>Developed with support</strong> from the <a href="http://www.w3
 
 Decorative images don’t add information to the content of a page. For example, the information provided by the image might already be given using adjacent text or the image might be included for visual interest only. 
 
-In these cases, a null (empty) `alt` text should be provided (`alt=""`) so that they can be ignored by assistive technologies such as screen readers. Text values for this type of images would add audible clutter to screen reader output or could distract users if the topic is different from that in adjacent text.
+In these cases, a null (empty) `alt` text should be provided (`alt=""`) so that they can be ignored by assistive technologies such as screen readers. Text values for this type of images would add audible clutter to screen reader output or could distract users if the topic is different from that in adjacent text. Leaving out the `alt` attribute is  also not an option because when it is not provided, some screen readers will announce the image’s file name instead.
 
-If the `alt` attribute is not used at all some screen readers will announce the image’s file name. Whether to treat an image as decorative or [informative](informative.html) is a judgement that only the author can make, based on the reason for including the image on the page. Images may be decorative when they are:
+Whether to treat an image as decorative or [informative](informative.html) is a judgement that only the author can make, based on the reason for including the image on the page. Images may be decorative when they are:
 
 -   Visual styling such as borders, spacers, and corners
 -   Supplementary to link text to improve its appearance or increase the clickable area
@@ -93,9 +93,7 @@ Screen readers also allow the use of WAI-ARIA to hide elements by using `role="p
 ## Decorative image as part of a text link
 {:.ex}
 
-This illustration of a crocus bulb is used to make the link easier to
-identify and to increase the clickable area, but doesn’t add to the
-information given in adjacent link text.
+This illustration of a crocus bulb is used to make the link easier to identify and to increase the clickable area, but doesn’t add to the information already provided in the adjacent link text (of the same anchor). In this case a null (empty) `alt` value can be used for the image.
 
 {::nomarkdown}
 <%= sample_start %>
@@ -122,29 +120,16 @@ information given in adjacent link text.
 <%= code_end %>
 {:/nomarkdown}
 
-{::nomarkdown}
-<%= notes_start %>
-{:/nomarkdown}
-
-**Note:** The null or empty `alt` value can only be used on linked images
-if the image and text are part of a single link anchor and the image
-does not add visual information to the link.
-
-{::nomarkdown}
-<%= notes_end %>
-{:/nomarkdown}
-
 ## Image with adjacent text alternative
 {:.ex}
 
-This picture of a sleeping dog is already identified by the
-adjacent caption. The caption acts as the text alternative and should not be repeated in the `alt` attribute.
+This picture of a sleeping dog is already sufficiently described by the adjacent text. There is no need to repeat this information and a null (empty) `alt` value can be used for this image.
 
 {::nomarkdown}
 <%= sample_start %>
 {:/nomarkdown}
 
-![](../img/sleeping.jpg){:style="float:left; margin-right: 1em;"} **Let sleeping dogs lie.** This is a proverb that means: “don’t initiate trouble. If something that could be troublesome is quiet, then leave it alone”.
+![](../img/sleeping.jpg){:style="float:left; margin-right: 1em;"} **The sleeping dog:** Let sleeping dogs lie is a proverb that means “don’t initiate trouble. If something that could be troublesome is quiet, then leave it alone”.
 
 {::nomarkdown}
 <%= sample_end %>
@@ -168,13 +153,13 @@ adjacent caption. The caption acts as the text alternative and should not be rep
 ## Image used for ambience (eye-candy)
 {:.ex}
 
-This image is used to add ambience or visual interest to the page.
+This image is used only to add ambience or visual interest to the page.
 
 {::nomarkdown}
 <%= sample_start %>
 {:/nomarkdown}
 
-![](kew.jpg){:style="float:left; margin-right: 1em;"} don’t miss the impressive Tropical House – a huge greenhouse that displays examples of exotic plant-life from every tropical environment on the planet.
+![](kew.jpg){:style="float:left; margin-right: 1em;"} Don’t miss the impressive Tropical House – a huge greenhouse that displays examples of exotic plant-life from every tropical environment on the planet.
 
 {::nomarkdown}
 <%= sample_end %>
