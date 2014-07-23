@@ -57,7 +57,7 @@ This example shows two image icons – one of a telephone, one of a fax machine.
 ## Images used to supplement other information
 {:.ex}
 
-The following image shows a dog wearing a bell. It supplements the adjacent text that explains the purpose of this bell. A short text alternative is sufficient to describe the information that displays visually but is not explained in the text; in this case the text alternative is “Dog with a bell attached to its collar.”.
+The following image shows a dog wearing a bell. It supplements the adjacent text that explains the purpose of this bell. A short text alternative is sufficient to describe the information that is displayed visually but is not explained in the text; in this case the text alternative is “Dog with a bell attached to its collar.”.
 
 {::nomarkdown}
 <%= sample_start %>
@@ -123,9 +123,9 @@ This simple diagram illustrates a counter-clockwise direction for unscrewing a b
 <%= notes_start %>
 {:/nomarkdown}
 
-**Note 1:** An alternative technique would be to include all of the information in the visible text, using the image as a redundant ([decorative](decorative.html)) effect, in which case the visual text could be “Turn counter-clockwise (right to left) to unscrew the cap”. This makes all information available in text, while providing additional visual clues for people who find text more difficult to understand.
+**Note 1:** An alternative technique would be to provide the instructions within the main content rather than as a text alternative to the image. This makes all information available in text for everyone, while providing an illustration for people who prefer to view the information visually.
 
-**Note 2:** If the information conveyed by the image is substantial, use one of the approaches described in [Complex images](complex.html).
+**Note 2:** If more information than that of the diagram is intended to be conveyed by the image, for example if the fact that this diagram appears on the bottle or if the shape and size of the bottle were relevant pieces of information, then it may be better to follow one of the approaches described in [Complex images](complex.html).
 
 {::nomarkdown}
 <%= notes_end %>
@@ -215,9 +215,9 @@ type for each link:
 <%= notes_start %>
 {:/nomarkdown}
 
-**Note 1:** If the format identification were written as part of the link text, the image might be considered [decorative](decorative.html) and have a null (empty) `alt` attribute (`alt=""`) but could be in the same link element (`<a>`) as the text to include it into the clickable area that is expected. See [“Functional Images: Logo image within link text”](functional.html#logo-image-within-link-text) for details.
+**Note 1:** If the format identification were written as part of the link text, the image might be considered [decorative](decorative.html) and have a null (empty) `alt` attribute (`alt=""`). It could still remain in the same link element (`<a>`) as the text, to include it in the clickable area. Further discussion is provided in [“Functional Images: Logo image within link text”](functional.html#logo-image-within-link-text).
 
-**Note 2:** This particular example is similar to the [icon within linked text in Functional Images](functional.html#icon-image-conveying-information-within-link-text) in that the image conveys information that isn’t given in the link text.
+**Note 2:** This particular example is similar to the [Functional Images: icon within linked text in ](functional.html#icon-image-conveying-information-within-link-text) in that the image conveys information that isn’t given in the link text.
 
 {::nomarkdown}
 <%= notes_end %>
