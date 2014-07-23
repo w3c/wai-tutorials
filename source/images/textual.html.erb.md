@@ -15,14 +15,12 @@ contributors:
 support: <strong>Developed with support</strong> from the <a href="http://www.w3.org/WAI/ACT/">WAI-ACT</a> project, co-funded by the European Commission <abbr title="Information Society Technologies">IST</abbr> Programme.
 ---
 
-Images of text display text that’s intended to be read. The strongest design technique is to use actual text – styled with CSS – rather than image-based text presentation.
-
-Actual text is much more flexible than images: It can be resized without losing clarity, and background and text colors can be modified to suit users’ reading preferences. Images are more likely to distort and pixelate when resized. In those uncommon situations where images of text must be used, the text alternative must contain the same text presented in the image.
+Images of text display text that is intended to be read. With the current CSS capabilities in most web browsers, it is good design practice to use actual text that is styled with CSS rather than image-based text presentation. Actual text is much more flexible than images: It can be resized without losing clarity, and background and text colors can be modified to suit users’ reading preferences. Images are more likely to distort and pixelate when resized. In those uncommon situations where images of text must be used, the text alternative must contain the same text presented in the image.
 
 ## Image of styled text with decorative effect
 {:.ex}
 
-This slogan image contains text with decorative effects that used to be impossible to be realized consistently across browsers by using CSS styling only. The text alternative is the same as that presented in the image: “Your access to the city”. The decorative effects (stylized text and shadow) should not be described.
+This following image is used to convey a slogan text with decorative effects. Previously it was not possible to create such text using CSS styling, and that would be rendered consistently across browsers, which is why an image of text approach was selected. The text alternative is the same as that presented in the image: “Your access to the city”. The decorative effects (stylized text and shadow) are not be described because they are not relevant.
 
 {::nomarkdown}
 <%= sample_start %>
@@ -183,7 +181,7 @@ The following image is the logo for the Web Accessibility Initiative. It’s not
 <%= notes_start %>
 {:/nomarkdown}
 
-**Note 1:** Images used as logos are exempt from some of the accessibility guidance that applies to other images of text. For example, there are no minimum color contrast and text size requirements.
+**Note 1:** Images used as logos are exempt from some of the accessibility requirements that apply to other images of text. For example, there are no minimum color contrast and text size requirements.
 
 **Note 2:** If this logo were linked then it would become a functional image. See [“Functional Images”: “Image used alone as a linked logo”](functional.html#image-used-alone-as-a-linked-logo).
 
@@ -194,7 +192,7 @@ The following image is the logo for the Web Accessibility Initiative. It’s not
 ## Image of a mathematical expression
 {:.ex}
 
-This math expression shows how to signify that a number is recurring. The `alt` text is “0.3333 recurring. (The recurrence is indicated by a line over the ‘3’ in the fourth decimal place)”. In this instance the way that the recurrence is shown is important, so it forms part of the text alternative. This isn’t the case with all math expressions.
+This math expression shows how to signify that a number is recurring. The `alt` text is “0.3333 recurring. (The recurrence is indicated by a line over the ‘3’ in the fourth decimal place)”. In this particular example the way that the recurrence is shown is important, so it is equally described in the text alternative. As with all images, the author is in the best position to determine what information is intended to be conveyed by the image and construct the text alternative accordingly.
 
 {::nomarkdown}
 <%= sample_start %>
@@ -232,9 +230,9 @@ Images of math expressions should only be used in *exceptional circumstances* �
 	</div>
 </aside>
 
-If math forms are a substantial part of the page or website content, [MathML](http://www.w3.org/Math/) should be used instead.  MathML represents both presentation and content semantically, making it more accessible to a wider range of users.  Many assistive technologies can interpret the code.
+If math forms are a substantial part of the page or website content, for example for online maths courses, [MathML](http://www.w3.org/Math/) should be used instead. MathML represents both presentation and content semantically, making it more accessible to a wider range of users. Many assistive technologies can interpret the code.
 
-The simple example above illustrates the difficulty of describing both the content and presentation (the position and location of the over-line) in mathematical expressions succinctly and clearly. For more complex expressions or equations, image text alternatives are unlikely to provide sufficient detail succinctly.
+The simple example above illustrates the difficulty of describing both the content and presentation (the position and location of the over-line representing recurrence) in mathematical expressions succinctly and clearly. For more complex expressions or equations, text alternatives for images are unlikely to provide sufficient detail succinctly. MathML helps provide such semantics within the code rather than as text.
 
 {::nomarkdown}
 <%= sample_start %>
