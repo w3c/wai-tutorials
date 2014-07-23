@@ -154,10 +154,7 @@ If the long description is on the same page as the image and its location can be
 ### Structurally associating the image and its adjacent long description (HTML5)
 {:.ap}
 
-The HTML5 `<figure>` element can be used to enclose both the image and
-its long description. The long description (presented as headings, text
-and a table) is explicitly associated to the image by using
-`role="group"` on the containing `<figure>` element.
+The HTML5 `<figure>` element can be used to enclose both the image and its long description. The long description (presented as headings, text, and a table) is explicitly associated to the image by using `role="group"` on the containing `<figure>` element.
 
 {::nomarkdown}
 <%= code_start %>
