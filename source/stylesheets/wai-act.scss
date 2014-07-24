@@ -1014,7 +1014,7 @@ select {
 				}
 				&:nth-child(odd):last-child {
 					display:block;
-					width:100%;
+					flex-basis:100%;
 				}
 				ul {
 					padding:0;
