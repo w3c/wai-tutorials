@@ -52,7 +52,7 @@ Rating:
 ## Captions for Image Groups
 {:.ex}
 
-If a group of images has a caption, a `figure` element can be used to group those images. The WAI-ARIA attribute `role` with the value of `group` to indicate grouping to assistive technology. If individual images also have captions, `figure` and `figcaption` elements can be nested.
+If a group of images has a caption, a `<figure>` element can be used to group those images. A nested `<figcaption>` element contains the caption for the whole group. The WAI-ARIA attribute `role` with the value of `group` indicates grouping to assistive technologies. If individual images also have captions, additional `<figure>` elements with individual `<figcaption>`s can be nested.
 
 The support for this particular WAI-ARIA attribute and value varies.
 
