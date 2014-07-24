@@ -31,7 +31,9 @@ If neither a column nor a row group is defined in the markup, the header cell is
 
 In the table below, there are two pairs of column headers. Each pair of column headers, “Produced” and “Sold” is associated with a first-level header that identifies the pair: “Mars” and “Venus”. These first-level headers are made to span two columns by using the `colspan` attribute with the value of `2`. The value of the `scope` attribute in the first-level headers is set to `colgroup` so that it is associated with the entire group of columns. The second-level headers only apply to the corresponding column so the `scope` attribute is set to `col` as shown in previous examples.
 
-To identify groups of columns properly, they need to be defined at the beginning of the table. A `<col>` element identifies each column, beginning on the left. If a header spans two or more columns, use a `<colgroup>` element instead and the number of columns spanned is noted in the `span` attribute. 
+In addition, the column structure needs to be defined at the beginning of the table. A `<col>` element identifies each column, beginning on the left. If a header spans two or more columns, use a `<colgroup>` element instead of that number of `<col>` elements and the number of columns spanned is noted in the `span` attribute. A `<colgroup>` element can contain a `<col>` element to identify individual columns in the group.
+
+<!--
 
 For example, if a table has four columns and a header is spanning column two and three, the columns and column groups would be defined by the following code:
 
@@ -49,7 +51,7 @@ For example, if a table has four columns and a header is spanning column two and
 <%= code_end %>
 {:/nomarkdown}
 
-Note: The combined sum of `<col>` elements and column elements indicated by the `span` attributes of the `<colgroup>` elements should be equal to the total number of columns in the table. It is possible to nest a `<col>` element for each column inside a column group inside the `<colgroup>` element to be able to add styles to each column.
+-->
 
 {::nomarkdown}
 <%= sample_start %>
@@ -125,6 +127,16 @@ Note: The combined sum of `<col>` elements and column elements indicated by the 
 
 {::nomarkdown}
 <%= code_end %>
+{:/nomarkdown}
+
+{::nomarkdown}
+<%= notes_start %>
+{:/nomarkdown}
+
+Note: The combined sum of `<col>` elements and column elements indicated by the `span` attributes of the `<colgroup>` elements should be equal to the total number of columns in the table.
+
+{::nomarkdown}
+<%= notes_end %>
 {:/nomarkdown}
 
 ## Table with headers spanning multiple rows or columns
