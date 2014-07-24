@@ -1,4 +1,15 @@
 changes:
+  - 2014-07-21:
+      - desc: "Polish texts and finish them up"
+        page: all
+        by:
+          - Shadi Abou-Zahra
+          - EO WG
+      - desc: "Change layout of the alt decision tree"
+        page: images/decision-tree.html
+        by:
+          - EO WG
+        commit: f644dd3ccae3872f39782afc2a172d3970166599
   - 2014-06-19:
       - desc: "Rename simple tables to basic tables"
         page: tables/basic.html
