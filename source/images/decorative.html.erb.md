@@ -93,7 +93,7 @@ Screen readers also allow the use of WAI-ARIA to hide elements by using `role="p
 ## Decorative image as part of a text link
 {:.ex}
 
-This illustration of a crocus bulb is used to make the link easier to identify and to increase the clickable area, but doesn’t add to the information already provided in the adjacent link text (of the same anchor). In this case a null (empty) `alt` value can be used for the image.
+This illustration of a crocus bulb is used to make the link easier to identify and to increase the clickable area, but doesn’t add to the information already provided in the adjacent link text (of the same anchor). In this case a null (empty) `alt` value should be used for the image.
 
 {::nomarkdown}
 <%= sample_start %>
