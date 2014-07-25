@@ -15,12 +15,12 @@ contributors:
 support: <strong>Developed with support</strong> from the <a href="http://www.w3.org/WAI/ACT/">WAI-ACT</a> project, co-funded by the European Commission <abbr title="Information Society Technologies">IST</abbr> Programme.
 ---
 
-A grouped collection of images is sometimes used to convey a single piece of information. For instance, five star images are often used to denote a product rating. When images are a grouped collection, the text alternative for one of the images should convey the information for the entire group; all other images should have null (empty) `alt` attributes. For example, as shown in example 1 below, the descriptive text alternative on one image should be “3.5 out of 5 stars”, rather than “1 star”, “half star” or “unfilled star” on each image.
+Depending on the information conveyed, images can be grouped in different ways. Groups of images that communicate one piece of information don’t need each image described individually if the information is outlined in one of the images. If each image in a collection of related images can be used elsewhere on its own, each image should be described individually as well as their relationship in the group.
 
-## Group of images for rating
+## Multiple images conveying a single piece of information
 {:.ex}
 
-This group of five images shows a product rating. There are five images (three filled stars, one half-filled star and one empty star) indicating the overall rating. The text alternative for the first image is “Rating: 3.5 out of 5 stars”; all other images have a null (empty) `alt` attribute (`alt=""`).
+This group of five images combined show a product rating. There are five images (three filled stars, one half-filled star and one empty star) indicating the overall rating. The text alternative for the first image is “Rating: 3.5 out of 5 stars”. All other images have a null (empty) `alt` attribute (`alt=""`).
 
 {::nomarkdown}
 <%= sample_start %>
@@ -49,10 +49,10 @@ Rating:
 <%= code_end %>
 {:/nomarkdown}
 
-## Captions for Image Groups
+## A collection of images
 {:.ex}
 
-If a group of images has a caption, a `<figure>` element can be used to group those images. A nested `<figcaption>` element contains the caption for the whole group. The WAI-ARIA attribute `role` with the value of `group` indicates grouping to assistive technologies. If individual images also have captions, additional `<figure>` elements with individual `<figcaption>`s can be nested.
+If a collection of images has a caption, a `<figure>` element can be used to group those images. A nested `<figcaption>` element contains the caption for the whole group. The WAI-ARIA attribute `role` with the value of `group` indicates grouping to assistive technologies. If individual images also have captions, additional `<figure>` elements with individual `<figcaption>`s can be nested.
 
 The support for this particular WAI-ARIA attribute and value varies.
 
