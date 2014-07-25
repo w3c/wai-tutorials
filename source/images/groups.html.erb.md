@@ -15,7 +15,9 @@ contributors:
 support: <strong>Developed with support</strong> from the <a href="http://www.w3.org/WAI/ACT/">WAI-ACT</a> project, co-funded by the European Commission <abbr title="Information Society Technologies">IST</abbr> Programme.
 ---
 
-Depending on the information conveyed, images can be grouped in different ways. Groups of images that communicate one piece of information don’t need each image described individually if the information is outlined in one of the images. If each image in a collection of related images can be used elsewhere on its own, each image should be described individually as well as their relationship in the group.
+Sometimes groups of images are used together to represent one piece of information. For example, a collection of star icons that together represent a rating. In this case only one of the images needs a text alternative that describes the entire collection, and the other images have a null (empty) `alt` attribute so that they are ignored by assistive technology.
+
+In other cases a group of images may represent a collection of related images. For example, showing a collection of art impressions that are thematically related. In this case each image needs its own text alternative that describes it individually, as well as its relationship within the group.
 
 ## Multiple images conveying a single piece of information
 {:.ex}
@@ -52,9 +54,9 @@ Rating:
 ## A collection of images
 {:.ex}
 
-If a collection of images has a caption, a `<figure>` element can be used to group those images. A nested `<figcaption>` element contains the caption for the whole group. The WAI-ARIA attribute `role` with the value of `group` indicates grouping to assistive technologies. If individual images also have captions, additional `<figure>` elements with individual `<figcaption>`s can be nested.
+In the example below, the HTML5 `<figure>` and `<figcaption>` elements are used to provide a caption for each individual image in a collection. The `<figure>` element can be nested, which is used in the example to provide a caption for the entire collection of images. The WAI-ARIA attribute `role` with the value of `group` is used to indicate this grouping to assistive technologies.
 
-The support for this particular WAI-ARIA attribute and value varies.
+Note: The web browser and assistive technology support varies for this particular WAI-ARIA attribute and value.
 
 {::nomarkdown}
 <%= sample_start %>
