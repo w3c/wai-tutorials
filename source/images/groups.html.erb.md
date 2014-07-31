@@ -62,7 +62,7 @@ Note: The web browser and assistive technology support varies for this particula
 <%= sample_start %>
 
 <figure role="group">
-<figcaption>The castle through the ages: 1423, 1756, and 1966 respectively.</figcaption>
+<figcaption>The castle through the ages: 1423, 1756, and 1936 respectively.</figcaption>
 
 
 <figure role="group">
