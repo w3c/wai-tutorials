@@ -1,5 +1,5 @@
 ---
-title: An alt decision tree
+title: Alt decision tree
 nav_title: <code>alt</code> Decision Tree
 status: draft
 order: 9
@@ -14,7 +14,7 @@ contributors:
 support: <strong>Developed with support</strong> from the <a href="http://www.w3.org/WAI/ACT/">WAI-ACT</a> project, co-funded by the European Commission <abbr title="Information Society Technologies">IST</abbr> Programme.
 ---
 
--   **Is the complete content of a link or button defined by this image (or multiple images)?**
+-   **Is this image (or group of images) used as a link or button?**
     -   {:.yes} **Yes:**
         - _Use the `alt` attribute to communicate the destination of the link or action taken. See [Functional Images](functional.html)._
     -   {:.no} **No:**
@@ -38,7 +38,7 @@ support: <strong>Developed with support</strong> from the <a href="http://www.w3
             _Use an empty `alt` attribute. See [Functional Images](functional.html#logo-image-within-link-text)._
     -   {:.no} **No:**
         -   Continue.
--   **Is the image purely decorative or not intended for the user?**
+-   **Is the image purely decorative or not intended to provide information to the user?**
     -   {:.yes} **Yes:** 
         - _Use an empty `alt` attribute. See [Decorative Images](decorative.html)._
     -   {:.no} **No:** 
