@@ -13,7 +13,7 @@ contributors:
 support: <strong>Developed with support</strong> from the <a href="http://www.w3.org/WAI/ACT/">WAI-ACT</a> project, co-funded by the European Commission <abbr title="Information Society Technologies">IST</abbr> Programme.
 ---
 
--   **Does this image contain text?**
+-   **Does the image contain text?**
     -   {:.yes} **Yes:**
         -   **… and the text in the image is also present as *real* text nearby.** 
             _Use an empty `alt` attribute._
