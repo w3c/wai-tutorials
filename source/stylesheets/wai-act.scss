@@ -605,6 +605,11 @@ a {
 		display: inline-block;
 		margin-left: 0.5em;
 	}
+	.sample {
+		a[href^="http"]:after {
+			display:none;
+		}
+	}
 }
 
 .status {
