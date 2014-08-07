@@ -183,7 +183,7 @@ The following image is the logo for the Web Accessibility Initiative. It’s not
 
 **Note 1:** Images used as logos are exempt from some of the accessibility requirements that apply to other images of text. For example, there are no minimum color contrast and text size requirements.
 
-**Note 2:** If this logo were linked then it would become a functional image. See [“Functional Images”: “Image used alone as a linked logo”](functional.html#image-used-alone-as-a-linked-logo).
+**Note 2:** If this logo were linked then it would become a functional image. See [Functional Images: Image used alone as a linked logo](functional.html#image-used-alone-as-a-linked-logo).
 
 {::nomarkdown}
 <%= notes_end %>
