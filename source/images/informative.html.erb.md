@@ -97,12 +97,12 @@ The following image shows a dog wearing a bell. It supplements the adjacent text
 ## Images conveying succinct information
 {:.ex}
 
-This simple diagram illustrates a counter-clockwise direction for unscrewing a bottle top or cap. The information can be described in a short sentence, so the text alternative “Counter-clockwise diagram: Push the cap down and turn it from right to left” is given in the `alt` attribute.
+This simple diagram illustrates a counter-clockwise direction for unscrewing a bottle top or cap. The information can be described in a short sentence, so the text alternative “Push the cap down and turn it counter-clockwise (from right to left)” is given in the `alt` attribute.
 
 {::nomarkdown}
 <%= sample_start %>
 
-<img src="../../img/counter-clockwise.jpg" alt="Counter-clockwise diagram: Push the cap down and turn it from right to left." style="vertical-align: middle; margin-right: .5em;">
+<img src="../../img/counter-clockwise.jpg" alt="Push the cap down and turn it counter-clockwise (from right to left)" style="vertical-align: middle; margin-right: .5em;">
 
 <%= sample_end %>
 {:/nomarkdown}
@@ -112,7 +112,7 @@ This simple diagram illustrates a counter-clockwise direction for unscrewing a b
 {:/nomarkdown}
 
 ~~~ html
-<img src="cap.png" alt="Anti-clockwise diagram: Push the cap down and turn it from right to left.">
+<img src="cap.png" alt="Push the cap down and turn it counter-clockwise (from right to left)">
 ~~~
 
 {::nomarkdown}
