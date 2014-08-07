@@ -1,6 +1,5 @@
 ---
 title: An alt decision tree
-nav_title: <code>alt</code> Decision Tree
 status: draft
 order: 9
 type: tips
@@ -14,11 +13,6 @@ contributors:
 support: <strong>Developed with support</strong> from the <a href="http://www.w3.org/WAI/ACT/">WAI-ACT</a> project, co-funded by the European Commission <abbr title="Information Society Technologies">IST</abbr> Programme.
 ---
 
--   **Is the complete content of a link or button defined by this image (or multiple images)?**
-    -   {:.yes} **Yes:**
-        - _Use the `alt` attribute to communicate the destination of the link or action taken. See [Functional Images](functional.html)._
-    -   {:.no} **No:**
-        - Continue.
 -   **Does this image contain text?**
     -   {:.yes} **Yes:**
         -   **… and the text in the image is also present as *real* text nearby.** 
@@ -26,6 +20,11 @@ support: <strong>Developed with support</strong> from the <a href="http://www.w3
         -   **… and the text is only shown for visual effects.**
             _Use an empty `alt` attribute._
         -   **… and the text in the image is not present otherwise.** _Use the `alt` attribute to include the text of the image. See [Images of Text](textual.html#image-of-styled-text-with-decorative-effect)._
+    -   {:.no} **No:**
+        - Continue.
+-   **Is the image used in a link or a button, and would it be hard or impossible to understand what the link or the button does, if the image wasn’t there?**
+    -   {:.yes} **Yes:**
+        - _Use the `alt` attribute to communicate the destination of the link or action taken. See [Functional Images](functional.html)._
     -   {:.no} **No:**
         - Continue.
 -   **Does the image contribute meaning to the current page or context?**
