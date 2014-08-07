@@ -25,7 +25,7 @@ Images must have text alternatives that describe the information or function rep
 
 -   **[Informative images](informative.html)**: Images that graphically illustrate concepts and information, typically pictures and illustrations. The text alternative should be at least a short description conveying the essential information presented by the image.
 
--   **[Decorative images](decorative.html)**: If the only purpose of an image is to add visual interest to the page, rather than to convey information that is important to understanding the text, the text alternative should be null (`alt=""`).
+-   **[Decorative images](decorative.html)**: If the only purpose of an image is to add visual interest to the page, rather than to convey information that is important to understanding the page, the text alternative should be null (`alt=""`).
 
 -   **[Functional images](functional.html)**: The text alternative of an image used as a link or as a button should describe the functionality of the link or button rather than the visual image. Examples for such images are a printer icon to represent the print function or a button to submit of a form.
 
@@ -37,7 +37,7 @@ Images must have text alternatives that describe the information or function rep
 
 -   **[Image maps](imagemap.html)**: The text alternative for an image that contains multiple clickable areas should provide an overall context for the set of links. In addition, each individual clickable area should have alternative text that describes the purpose or destination of the link.
 
-For quick overview on deciding which category a specific image fits into, see the [`alt` Decision Tree](decision-tree.html).
+For quick overview on deciding which category a specific image fits into, see the [An alt Decision Tree](decision-tree.html).
 
 ## Why is this important?
 
@@ -45,11 +45,11 @@ Images are used extensively on websites and can create major barriers
 when they are not accessible. Accessible images prove to be beneficial in
 many situations such as:
 
--   **People using screen readers:** The text alternative can be read aloud or rendered as Braille,
--   **People using speech input software:** Users can put the focus onto a button or linked image with a single voice command,
--   **People browsing speech-enabled websites:** The text alternative can be read aloud,
--   **Mobile web users:** Images can be turned off, especially for data-roaming,
--   **Search engine optimization:** Images become indexable by search engines.
+-   **People using screen readers:** The text alternative can be read aloud or rendered as Braille
+-   **People using speech input software:** Users can put the focus onto a button or linked image with a single voice command
+-   **People browsing speech-enabled websites:** The text alternative can be read aloud
+-   **Mobile web users:** Images can be turned off, especially for data-roaming
+-   **Search engine optimization:** Images become indexable by search engines
 
 
 {::nomarkdown}
