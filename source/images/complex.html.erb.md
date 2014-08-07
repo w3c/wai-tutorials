@@ -63,7 +63,7 @@ Here the `longdesc` attribute contains the URI of a page containing the long des
 <%= code_end %>
 {:/nomarkdown}
 
-If the long description is published within an html element, such as a div, on the same page as the image, the `longdesc` value can simply contain a fragment identifier (“hash link”) to the long description.
+If the long description is published within an HTML element on the same page as the image, the `longdesc` value can simply contain a fragment identifier (“hash link”) to the element containing the long description. This fragment identifier consists of an `#` and the value of the `id` attribute of the longdescription element.
 
 {::nomarkdown}
 <%= code_start %>
