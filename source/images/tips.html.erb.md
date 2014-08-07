@@ -43,7 +43,7 @@ support: <strong>Developed with support</strong> from the <a href="http://www.w3
     Logo images with text are exempt from some of the accessibility requirements. For instance, there is no minimum contrast requirement.
 
 -   **Images are important:**<br>
-    Images and graphics make content more pleasant and easier to understand for everyone, and in particular for people with cognitive and learning disabilities. They also serve as cues that visually impaired people who are using screen magnification often use to orient themselves in the content. Also screen reader users can benefit from these cues and structure that images sometimes add to the content. Make sure that images are properly described with appropriate text alternatives to provide easy access to your content to as many people as possible.
+    Images and graphics make content more pleasant and easier to understand for everyone, and in particular for people with cognitive and learning disabilities. They serve as cues that visually impaired people who are using screen magnification often use to orient themselves in the content. Also, screen reader users can benefit from these cues and structure that images sometimes add to the content. Make sure that images are properly described with appropriate text alternatives to provide easy access to your content to as many people as possible.
 
 ## Other W3C Resources
 
