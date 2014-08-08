@@ -28,6 +28,8 @@ In these situations a two-part text alternative is required. The first part is t
 
 In certain situations the composition of the image may also be needed as part of the long description, but only where it’s important that the user understand the image construction. This page shows several possible approaches that can be used to provide both short and long descriptions.
 
+Also it’s good practice to refer to more complex images from the accompanying text to describe the overall data, for example: „The following graph shows that visitors were lost in the first quarter, but the numbers recovered in the second quarter“.
+
 ## Image containing substantial information
 {:.ex}
 
