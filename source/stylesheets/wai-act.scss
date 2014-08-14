@@ -146,6 +146,7 @@ code {
 
 header[role=banner] {
 	@include container();
+	margin-bottom: 1em;
 	border-top: 5px solid #930;
 	div {
 		margin: 0 auto;
@@ -259,6 +260,7 @@ header[role=banner] {
 
 main {
 	display:block;
+	clear: both;
 	@include container();
 }
 
@@ -327,7 +329,9 @@ h4 {
 	margin-bottom: 1em;
 	line-height: 1;
 	padding: .25em 0 0;
-	float:none;
+	header div& {
+		float:none;
+	}
 	.subheading {
 		padding: .25em 0 0;
 		display:block;
