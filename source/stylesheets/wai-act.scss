@@ -329,9 +329,7 @@ h4 {
 	margin-bottom: 1em;
 	line-height: 1;
 	padding: .25em 0 0;
-	header div& {
-		float:none;
-	}
+	float:none !important;
 	.subheading {
 		padding: .25em 0 0;
 		display:block;
