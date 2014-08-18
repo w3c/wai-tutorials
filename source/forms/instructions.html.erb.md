@@ -37,6 +37,17 @@ Instructions that are common to several fields should be positioned ahead of the
 <%= sample_end %>
 {:/nomarkdown}
 
+{::nomarkdown}
+<%= notes_start %>
+{:/nomarkdown}
+
+**Note:** Apart from adding instructions to the form fields, [submission errors can be prevented](errors.html) by the browser programatically if the HTML5 form validation markup is used.
+
+{::nomarkdown}
+<%= notes_end %>
+{:/nomarkdown}
+
+
 ## In-line Instructions
 
 Some in-line instructions, such as required field indicators, must be part of the label itself to be picked immediately by assistive technologies like screen readers.
