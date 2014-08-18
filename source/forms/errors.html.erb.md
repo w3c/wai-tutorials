@@ -1,8 +1,8 @@
 ---
 title: Error Handling
 status: editors-draft
-order: 5
-wcag_success_criteria: 
+order: 4
+wcag_success_criteria:
   - 3.3.4
 wcag_techniques:
 ---
@@ -34,7 +34,7 @@ The label of required fields should always show that the field is required. This
 {:/nomarkdown}
 
 ~~~ html
-<label for="name">Name (required): </label> 
+<label for="name">Name (required): </label>
 <input type="text" name="name" id="name" required>
 ~~~
 
@@ -47,7 +47,7 @@ To inform users of assistive technology about required fields, you can use `aria
 ### Specifying the format of form fields
 {:.ex}
 
-HTML5 provides some new input types that require the user to input the correct information, like `email`, `url`, `number`, `range`, `date` and `time`. Capable browsers may show field specific controls or a different on-screen keyboard. If a browser is not capable of displaying one if the controls, it falls back to a simple `text` input. 
+HTML5 provides some new input types that require the user to input the correct information, like `email`, `url`, `number`, `range`, `date` and `time`. Capable browsers may show field specific controls or a different on-screen keyboard. If a browser is not capable of displaying one if the controls, it falls back to a simple `text` input.
 
 {::nomarkdown}
 <%= sample_start %>
