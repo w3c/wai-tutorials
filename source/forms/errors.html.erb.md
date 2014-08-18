@@ -3,18 +3,28 @@ title: Error Handling
 status: editors-draft
 order: 4
 wcag_success_criteria:
+  - 3.3.1
+  - 3.3.3
   - 3.3.4
 wcag_techniques:
+  - G164
+  - G98
+  - G83
+  - G85
+  - G155
+  - G168
 ---
 
 ## Preventing Errors
 
-The best way to avoid errors in forms is to inform users about potential errors as soon as possible. With HTML5 browsers have implemented a whole range of validation options that notify users instantly and in their language about possible errors. It also prevents the user from submitting the form, so additional server-side roundtrips can be avoided.
+The best way to avoid errors in forms is to inform users about potential errors as soon as possible. HTML5 provides a range of validation options that gives browsers the possibility to notify users instantly about possible errors. It also prevents the user from submitting the form, so unnecessary back and forth to the server is avoided.
+
+If possible interpret content in fields as loosely as possible. A credit card number, for example, consists of 16 digits but is often written with spaces after every four digits. Consider accepting both notations.
 
 ### Marking up required fields
 {:.ex}
 
-The label of required fields should always show that the field is required. This is the most broadly supported way to inform the user. Additionally in HTML5, the `required` attribute can be added to the form field, so browsers can handle required fields accordingly by validating that there is data in the form field.
+The label of required fields should always show that the field is required. This is the most broadly supported way to inform the user. Additionally, in HTML5, the `required` attribute can be added to the form field to prevent the user from submitting empty fields.
 
 {::nomarkdown}
 <%= sample_start %>
@@ -47,33 +57,39 @@ To inform users of assistive technology about required fields, you can use `aria
 ### Specifying the format of form fields
 {:.ex}
 
-HTML5 provides some new input types that require the user to input the correct information, like `email`, `url`, `number`, `range`, `date` and `time`. Capable browsers may show field specific controls or a different on-screen keyboard. If a browser is not capable of displaying one if the controls, it falls back to a simple `text` input.
+HTML5 also provides input types that require the user to enter information, like `email`, `url`, `number`, `range`, `date` and `time`, in a specific format. Capable browsers may show field specific controls or a different on-screen keyboard. If a browser is not capable of displaying one if the controls, it falls back to a simple `text` input.
 
 {::nomarkdown}
 <%= sample_start %>
 
 <form method="post" action="#">
   <div>
-    <label for="email">Email: </label> <input type="email" name="email" id="email">
-	</div>
-	<div>
-    <label for="url">Website: </label> <input type="url" name="url" id="url">
-	</div>
-	<div>
-    <label for="number">Number: </label> <input type="number" name="number" id="number" min="0" max="100" step="10" value="0">
-	</div>
-	<div>
-    <label for="range">Range: </label> <input type="range" name="range" id="range" min="0" max="100" step="10" value="0">
-	</div>
-	<div>
-    <label for="date">Date: </label> <input type="date" name="date" id="date">
-	</div>
-	<div>
-    <label for="time">Time: </label> <input type="time" name="time" id="time">
-	</div>
-	<div>
-		<input type="submit" value="Submit">
-	</div>
+    <label for="email">Email: </label>
+    <input type="email" name="email" id="email">
+  </div>
+  <div>
+    <label for="url">Website: </label>
+    <input type="url" name="url" id="url">
+  </div>
+  <div>
+    <label for="number">Number: </label>
+    <input type="number" name="number" id="number" min="0" max="100" step="10" value="0">
+  </div>
+  <div>
+    <label for="range">Range: </label>
+    <input type="range" name="range" id="range" min="0" max="100" step="10" value="0">
+  </div>
+  <div>
+    <label for="date">Date: </label>
+    <input type="date" name="date" id="date">
+  </div>
+  <div>
+    <label for="time">Time: </label>
+    <input type="time" name="time" id="time">
+  </div>
+  <div>
+    <input type="submit" value="Submit">
+  </div>
 </form>
 
 <%= sample_end%>
@@ -85,50 +101,56 @@ HTML5 provides some new input types that require the user to input the correct i
 
 ~~~ html
 <div>
-    <label for="email">Email: </label> <input type="email" name="email" id="email">
-	</div>
-	<div>
-    <label for="url">Website: </label> <input type="url" name="url" id="url">
-	</div>
-	<div>
-    <label for="number">Number: </label> <input type="number" name="number" id="number" min="0" max="100" step="10" value="0">
-	</div>
-	<div>
-    <label for="range">Range: </label> <input type="range" name="range" id="range" min="0" max="100" step="10" value="0">
-	</div>
-	<div>
-    <label for="date">Date: </label> <input type="date" name="date" id="date">
-	</div>
-	<div>
-    <label for="time">Time: </label> <input type="time" name="time" id="time">
-	</div>
-	<div>
-		<input type="submit" value="Submit">
-	</div>
+  <label for="email">Email: </label>
+  <input type="email" name="email" id="email">
+</div>
+<div>
+  <label for="url">Website: </label>
+  <input type="url" name="url" id="url">
+</div>
+<div>
+  <label for="number">Number: </label>
+  <input type="number" name="number" id="number" min="0" max="100" step="10" value="0">
+</div>
+<div>
+  <label for="range">Range: </label>
+  <input type="range" name="range" id="range" min="0" max="100" step="10" value="0">
+</div>
+<div>
+  <label for="date">Date: </label>
+  <input type="date" name="date" id="date">
+</div>
+<div>
+  <label for="time">Time: </label>
+  <input type="time" name="time" id="time">
+</div>
 ~~~
 
 {::nomarkdown}
 <%= code_end %>
 {:/nomarkdown}
 
-There are a number of HTML attributes that can help users to prevent errors:
+Some additional HTML attributes can help users to prevent errors:
 
 * `maxlength` defines the maximum length of a text field.
-* `min` and `max` define the minimum and maximum of number and range fields.
+* `min` and `max` define the minimum and maximum of `number` and `range` fields.
 * `steps` defines in what steps number and range fields can be incremented and decremented.
 
-Additionally you can define your own patterns of input with the `pattern` attribute:
+The `pattern` attribute allows to use a regular expression to define the format of the input, which is useful for serial numbers or similar data.
+
+For example in Germany license plate consist of one to three letters for the city the car is registered in, followed by a space, two to four random letters, another space and a one to four random numbers. Especially the first space makes a difference, as “K LM 123” is a car registered in Cologne but “KL M 123” is not.
 
 {::nomarkdown}
 <%= sample_start %>
 
 <form method="post" action="#">
   <div>
-    <label for="license">German License Plate (CCC XXXX 9999):</label> <input type="text" id="license" pattern="[A-Z]{1,3}( )[A-Z]{2,4}( )[0-9]{1,4}" />
+    <label for="license">German License Plate (CCC XXXX 9999):</label> <input type="text" id="license" pattern="[A-ZÖÄÜ]{1,3}( )[A-Z]{2,4}( )[0-9]{1,4}" />
   </div>
   <div>
   </div>
 </form>
+
 <%= sample_end%>
 {:/nomarkdown}
 
@@ -138,88 +160,100 @@ Additionally you can define your own patterns of input with the `pattern` attrib
 
 ~~~ html
 <div>
-    <label for="email">Email: </label> <input type="email" name="email" id="email">
-	</div>
-	<div>
-    <label for="url">Website: </label> <input type="url" name="url" id="url">
-	</div>
-	<div>
-    <label for="number">Number: </label> <input type="number" name="number" id="number" min="0" max="100" step="10" value="0">
-	</div>
-	<div>
-    <label for="range">Range: </label> <input type="range" name="range" id="range" min="0" max="100" step="10" value="0">
-	</div>
-	<div>
-    <label for="date">Date: </label> <input type="date" name="date" id="date">
-	</div>
-	<div>
-    <label for="time">Time: </label> <input type="time" name="time" id="time">
-	</div>
-	<div>
-		<input type="submit" value="Submit">
-	</div>
+  <input type="text" id="license"
+    pattern="[A-ZÖÄÜ]{1,3}( )[A-Z]{2,4}( )[0-9]{1,4}"
+  >
+</div>
 ~~~
 
 {::nomarkdown}
 <%= code_end %>
 {:/nomarkdown}
 
+{::nomarkdown}
+<%= notes_start %>
+{:/nomarkdown}
 
-To help users correct errors, a layer of protection is needed, especially when a form has significant consequences for the user. Those consequences could be some legally binding agreement, like in an online shop, a financial transaction, deleting of data from the database, or submitting responses of a test. Users should have a possibility to correct errors before such submissions are finally accepted, in one or more of the following ways:
+**Note:** Although HTML5 enabled browsers won’t allow users to submit forms with such validation features, non-HTML5 browsers may allow submitting the form, so validation must be carried out server-side as well.
 
-- **Reversible:** Users are able to cancel transactions or undo recent changes to a database.
-- **Checked:** Data entered by the user is checked for input errors and the user is given an opportunity to make corrections.
-- **Confirmed:** The information can be reviewed, confirmed, and corrected before finalizing the submission.
+{::nomarkdown}
+<%= notes_end %>
+{:/nomarkdown}
 
-### Reversing a transaction
+### Undo reversible changes
 
-* An online shopping Website lets users cancel purchases up to 24 hours after the order is submitted. The Web site explains their policy, and includes a summary of the policy on the purchase receipt emailed to the user. After 24 hours, the purchase will be shipped to the user and can no longer be canceled.
+If a change by the user can be easily reversible or cancelled, it is useful to provide this functionality. For example:
+
+* A Content Management System (CMS) has the ability to delete unwanted comments. Instead of deleting them right away, they get stored in a ”trash” folder and can be easily restored.
 
 * A web email application allows users to “undo” sending of an email for a few seconds. This is useful if the user forget to attach a file or wanted to send the email to the wrong recipient.
 
-### Checking input
+* An online shopping website lets users cancel purchases up to 24 hours after the order is submitted. The website explains their policy, and includes a summary of the policy on the purchase receipt emailed to the user. After 24 hours, the purchase will be shipped to the user and can no longer be canceled.
 
-* asd
+### Confirm irreversible changes
 
-### Confirmed
+Instant and irreversible transactions, especially if carried out on a single page, can provide users with a checkbox or a confirmation dialog box to confirm that they want the requested action to take place.
 
-*  Instant and irreversible transactions, especially if carried out on a single page, can provide users with a checkbox to confirm that they do want the requested action to take place. For instance currency conversion transactions, where charges or changes in exchange rates would not permit the transaction to be reversed without cost to the user. After collecting the account and amount data, and before the submit button, a checkbox with a label like “I have checked that the amount I wish to transfer is correct”. The form should then fail to validate unless the checkbox is checked.
+* In a Content Management System (CMS) comments can be deleted (for good) from the trash folder. When the user clicks on the “Empty trash”, a confirmation dialog box shows up asking the user “Are you sure to delete 42 comments?” The action is only carried out if the user choses the “OK” button.
+
+* A bank won’t be able to revert a currency exchange transaction as charges or changes in exchange rates would burden a cost to the user. After collecting the account and amount data, and before the submit button, a checkbox with a label like “I have checked that the amount I wish to transfer is correct” is placed. The form should then fail to validate unless the checkbox is checked.
 
 * The checkout page on a shopping website includes a form that collects order, shipping and billing information. After submitting the form, the user is taken to another page where the information they have submitted is summarized for review. Below the summary, The user must activate a “complete order” button on the review page to complete the transaction.
 
-### Related WCAG2.0 Technique
-
-The following WCAG 2.0 technique was used in the examples above:
-
-- [G164: Providing a stated time within which an online request (or transaction) may be amended or canceled by the user after making the request;](http://www.w3.org/TR/2012/NOTE-WCAG20-TECHS-20120103/G164)
-- [G98: Providing the ability for the user to review and correct answers before submitting](http://www.w3.org/TR/2012/NOTE-WCAG20-TECHS-20120103/G98);
-- [G155: Providing a checkbox in addition to a submit button](http://www.w3.org/TR/2012/NOTE-WCAG20-TECHS-20120103/G155);
-- [G168: Requesting confirmation to continue with selected action](http://www.w3.org/TR/2012/NOTE-WCAG20-TECHS-20120103/G168).
-
-
 ## Error Messages
 
-- **What to do:** When a form is in error, provide error messages that users can find easily and that accurately describe in text which fields are in error and why;
-- **Why:** When users have made errors, clearly they need more help. Some users, such as blind people, may not even be aware that an error has occurred. Other users may not have understood the initial instructions, and further help, such as a format example, may be needed so that they understand what is to do;
-- **How:** If an error is detected, provide error messages that are easy to locate and understand;
-- **Conformance:**Required to meet [SC 3.3.1 Error Identification](http://www.w3.org/WAI/WCAG20/quickref/20120103/#minimize-error-identified) and [SC 3.3.3 Error Suggestion](http://www.w3.org/WAI/WCAG20/quickref/20120103/#minimize-error-suggestions)
+If an error couldn’t be prevented, the resulting error messages should be easy to find and accurately describe which fields are in error and why. The set of error messages should have a descriptive heading, so they are easy to locate for visual and screen reader users alike. Each error should use an in-page link to the respective field using a fragment identifier (“hash link” with the ID of the form field that is erroneous).
 
-## Error messages should be text descriptions that identify:
+### Usage
 
-- **Each field in error:** It’s best to use the same wording as used for the label, (the error message can also be an in-page link to the error field).
-- **The cause of the error:** Whether it’s a required field that’s been left empty or a required format that hasn’t been used for instance.
-- **How to fix it:** By using example, description or a corrected sample of the user’s data (and information on how to use the sample).
+The error message should consist of the following elements to be as helpful as possible for the user:
 
-## Example error messages
+* Use the _same wording_ that is used on the label in the error message. This helps users to identify the exact form element that contains the error.
+* Describe the _cause of error_, for example mention that the field was required or that the format was wrong.
+* Tell the user _how to fix_ the error, consider using a more elaborate example as there is now more space available than in the labels of the form.
 
-The links here don’t go anywhere, but should reference the id attribute value of each related error field:
+### Examples
 
-- [The First name field is empty, it is a required field and must be filled in.](#)
-- [The Date field is in the wrong format, it should be similar to 17/09/2013, (using a / to separate day , month and year)](#).
+{::nomarkdown}
+<%= sample_start %>
 
-## Related WCAG2.0 Technique
+<h4>2 Errors in this form</h4>
+<ul>
+  <li>
+    <a href="#firstname">
+      The First name field is empty, it is a required field and must be filled in.
+    </a>
+  </li>
+  <li>
+    <a href="birthdate">
+      The Date field is in the wrong format, it should be similar to 17/09/2013 (use a / to separate day, month, and year)
+    </a>
+  </li>
+</ul>
 
-The following WCAG 2.0 technique was used in the example above:
+<%= sample_end%>
+{:/nomarkdown}
 
-- [G83: Providing text descriptions to identify required fields that were not completed](http://www.w3.org/TR/2012/NOTE-WCAG20-TECHS-20120103/G83)
-- [G85: Providing a text description when user input falls outside the required format or values](http://www.w3.org/TR/2012/NOTE-WCAG20-TECHS-20120103/G85.html)
+{::nomarkdown}
+<%= code_start %>
+{:/nomarkdown}
+
+~~~ html
+<h4>2 Errors in this form</h4>
+<ul>
+  <li>
+    <a href="#firstname">
+      The First name field is empty, it is a required field and must be filled in.
+    </a>
+  </li>
+  <li>
+    <a href="birthdate">
+      The Date field is in the wrong format, it should be similar to 17/09/2013 (use a / to separate day, month, and year).
+    </a>
+  </li>
+</ul>
+~~~
+
+{::nomarkdown}
+<%= code_end %>
+{:/nomarkdown}
