@@ -18,6 +18,11 @@ successcriteria:
       desc: "Images of text are only used for pure decoration or where a particular presentation of text is essential to the information being conveyed"
       level: AAA
       slug: visual-audio-contrast-text-images
+  - 2.2.1:
+      title: Timing Adjustable
+      desc: 'For each time limit that is set by the content, at least one of the following is true:<ul><li>Turn off: The user is allowed to turn off the time limit before encountering it; or</li>Adjust: The user is allowed to adjust the time limit before encountering it over a wide range that is at least ten times the length of the default setting; or</li><li>Extend: The user is warned before time expires and given at least 20 seconds to extend the time limit with a simple action (for example, "press the space bar"), and the user is allowed to extend the time limit at least ten times; or</li><li>Real-time Exception: The time limit is a required part of a real-time event (for example, an auction), and no alternative to the time limit is possible; or</li><li>Essential Exception: The time limit is essential and extending it would invalidate the activity; or</li><li>20 Hour Exception: The time limit is longer than 20 hours. </li></ul>'
+      level: A
+      slug: time-limits-required-behaviors
   - 2.4.6:
       title: "Headings and Labels"
       desc: "Headings and labels describe topic or purpose."
