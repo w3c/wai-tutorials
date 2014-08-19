@@ -5,7 +5,7 @@ order: 2
 contributors:
   - HTML5 Boilerplate
   - the Education and Outreach Working Group (<a href="http://www.w3.org/WAI/EO/">EOWG</a>)
-wcag_success_criteria: 
+wcag_success_criteria:
   - 1.3.1
   - 2.4.6
   - 3.3.2
@@ -17,6 +17,7 @@ wcag_techniques:
   - G162
   - G17
   - G18
+  - G167
 ---
 
 Each form element needs a clear, descriptive, well-positioned, and properly associated label. Labels increase the clickable area that puts the cursor into text fields or check checkboxes, when the label is clicked. Also it helps people using voice input software setting the focus into the input field and also ensures that screen readers announce the correct description when they encounter a form field.
@@ -83,44 +84,89 @@ The most basic way to associate a descriptive text to a form field is to wrap te
 ## Explicit labels
 {:.ex}
 
-To explicitly associate a label and its form control, the `<label>`element must have a `for` attribute which exactly matches the value of an `id` attribute in its related field.
+To explicitly associate a label and its form control, the `<label>` element must have a `for` attribute which exactly matches the value of an `id` attribute in its related field.
+
+This is especially useful if label and form field are not in the same element, for example because it should be formatted like a table. Also it creates a more direct connection between the fomr field and its label, which means it won’t break easily if the markup changes.
 
 {::nomarkdown}
 <%= sample_start %>
 
 <div>All fields marked (required) must be completed.</div>
-<form method="post" action="#">
-	<div>
-		<label for="firstname">First name: </label> <input type="text" name="firstname" id="firstname">
-	</div>
-	<div>
-		<label for="lastname">Last name: (required)</label> <input type="text" name="lastname" id="lastname">
-	</div>
-	<div>
-		<input type="checkbox" id="premium" name="premium"> <label for="premium">Premium Membership</label>
-	</div>
+<form method="post" action="#" id="expl_label_form">
+  <div>
+    <div>
+      <label for="firstname">First name: </label>
+    </div>
+    <div>
+      <input type="text" name="firstname" id="firstname">
+    </div>
+  </div>
+  <div>
+    <div>
+      <label for="lastname">Last name: (required)</label>
+    </div>
+    <div>
+      <input type="text" name="lastname" id="lastname">
+    </div>
+  </div>
+  <div>
+    <div>
+      <input type="checkbox" id="premium" name="premium"> <label for="premium">Premium Membership</label>
+    </div>
+  </div>
 </form>
+
+<style>
+  #expl_label_form {display:table}
+  #expl_label_form>div {display:table-row}
+  #expl_label_form>div>div {display:table-cell;}
+</style>
 
 <%= sample_end %>
 {:/nomarkdown}
 
 {::nomarkdown}
-<%= code_start %>
+<%= code_start('', 'HTML') %>
 {:/nomarkdown}
 
 ~~~ html
-<div>
-	<label for="firstname">First name:</label>
-	<input type="text" name="firstname" id="firstname">
-</div>
-<div>
-	<label for="lastname">Last name: (required)</label>
-	<input type="text" name="lastname" id="lastname">
-</div>
-<div>
-	<input type="checkbox" id="premium" name="premium">
-	<label for="premium">Premium Membership</label>
-</div>
+<form method="post" action="#" id="expl_label_form">
+  <div>
+    <div>
+      <label for="firstname">First name: </label>
+    </div>
+    <div>
+      <input type="text" name="firstname" id="firstname">
+    </div>
+  </div>
+  <div>
+    <div>
+      <label for="lastname">Last name: (required)</label>
+    </div>
+    <div>
+      <input type="text" name="lastname" id="lastname">
+    </div>
+  </div>
+  <div>
+    <div>
+      <input type="checkbox" id="premium" name="premium"> <label for="premium">Premium Membership</label>
+    </div>
+  </div>
+</form>
+~~~
+
+{::nomarkdown}
+<%= code_end %>
+{:/nomarkdown}
+
+{::nomarkdown}
+<%= code_start('', 'CSS') %>
+{:/nomarkdown}
+
+~~~ css
+#expl_label_form {display:table}
+#expl_label_form>div {display:table-row}
+#expl_label_form>div>div {display:table-cell;}
 ~~~
 
 {::nomarkdown}
@@ -144,8 +190,8 @@ In the example below, the search field does not need a visual label as the butto
 
 <form method="post" action="#">
   <div>
-    <label for="search" class="visuallyhidden">Search: </label> 
-    <input type="text" name="search" id="search"> 
+    <label for="search" class="visuallyhidden">Search: </label>
+    <input type="text" name="search" id="search">
     <button type="button">Search</button>
   </div>
 </form>
@@ -158,8 +204,8 @@ In the example below, the search field does not need a visual label as the butto
 {:/nomarkdown}
 
 ~~~ html
-<label for="search" class="visuallyhidden">Search: </label> 
-<input type="text" name="search" id="search"> 
+<label for="search" class="visuallyhidden">Search: </label>
+<input type="text" name="search" id="search">
 <button type="submit">Search</button>
 ~~~
 
@@ -203,19 +249,19 @@ In the following example, the layout and example text in the form fields indicat
 {:/nomarkdown}
 
 ~~~ html
-<label for="day">Date of birth: </label> 
+<label for="day">Date of birth: </label>
 
-<label for="day" class="visuallyhidden">Day</label> 
+<label for="day" class="visuallyhidden">Day</label>
 <input type="text" id="day" maxlength="2" placeholder="01">
 
-<label for="month" class="visuallyhidden">Month: </label> 
+<label for="month" class="visuallyhidden">Month: </label>
 <select name="month" id="month">
   <option value="01">January</option>
   <option value="02">Febuary</option>
   […]
 </select>
 
-<label for="year" class="visuallyhidden">Year: </label> 
+<label for="year" class="visuallyhidden">Year: </label>
 <input type="text" id="year" maxlength="4" placeholder="1970">
 ~~~
 
@@ -258,7 +304,7 @@ Another way to tell non-visual users about the label is to use the `title` attri
 
 <form method="post" action="#">
   <div>
-    <input title="Search" type="text" name="search" id="search2"> 
+    <input title="Search" type="text" name="search" id="search2">
     <button type="button">Search</button>
   </div>
 </form>
@@ -271,7 +317,7 @@ Another way to tell non-visual users about the label is to use the `title` attri
 {:/nomarkdown}
 
 ~~~ html
-<input title="Search" type="text" name="search" id="search"> 
+<input title="Search" type="text" name="search" id="search">
 <button type="submit">Search</button>
 ~~~
 
