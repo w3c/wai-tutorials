@@ -1,29 +1,21 @@
 ---
-title: Forms in Disguise
+title: Custom Controls
 status: editors-draft
-order: 5
+order: 8
 wcag_success_criteria:
 wcag_techniques:
 ---
 
-Forms do usually consist of checkboxes, text input fields, and similar controls, but sometimes forms are differently visualized: A sharing button or a star rating, for example, can be represented by form controls as well. Using standard, (hidden) form controls for such interactive elements can help assistive technologies to operate those controls.
-
-{::nomarkdown}
-<%= notes_start %>
-{:/nomarkdown}
-
-**Note:** This tutorial is not dealing with other aspects of the forms, like security. For brevity, the following examples only work in modern browsers.
-
-{::nomarkdown}
-<%= notes_end %>
-{:/nomarkdown}
+Where possible, use stylized form elements to provide custom controls. For example, a social media "share button" and "star rating" widget can be built using standard form controls. Using such progressive enhancement techniques helps keep such widgets usable when they are rendered differently, such as by certain assistive technologies.
 
 ## A Share Button
 {:.ex}
 
-A sharing button of a social network has two functions: It shows how many people have already shared the link to the website, and it allows the user to click on the button to share it themselves, most likely without even leaving the page.
+The example below shows a social media "share button" that has two functions: It shows how many people have already activated the button ("shared"), and it allows users to press the button to activate the share function.
 
-If JavaScript is not working for some reasons, using a regular submit button will redirect to a page where the vote can be registered. The user can be redirected to the source page afterwards.
+The custom button relies on CSS to style a regular `<button>` element, so that the basic functionality remains intact when it is rendered without CSS. For example, most screen readers will announce the button and its contents.
+
+In addition, the `action` attribute of the `<form>` element references a server-side script that carries out the same functionality for cases when JavaScript is not supported.
 
 {::nomarkdown}
 <%= sample_start %>
@@ -117,16 +109,24 @@ document.getElementById('share-btn').addEventListener('click', function(event){
 <%= code_end %>
 {:/nomarkdown}
 
+{::nomarkdown}
+<%= notes_start %>
+{:/nomarkdown}
+
+**Note:** Taking these precautions may or may not be required by WCAG 2.0, depending on your assumptions of which features of these web technologies are sufficiently supported by web browsers and assistive technologies (accessibility supported). However, it is good practice to maximize flexibility and backward compatibility.
+
+{::nomarkdown}
+<%= notes_end %>
+{:/nomarkdown}
+
 ## A Star Rating
 {:.ex}
 
-A star rating usually consists of images of five stars that can be used to rate a particular item. The mouse user hovers over the stars and clicks the one. If the user clicks on the third star from the left, he rates the item 3 of 5 stars.
+A star rating usually consists of images of five stars that can be used to rate a particular item. The mouse user hovers over the stars and clicks one to select it. For example, if the user clicks on the third star from the left, the rating of the item is 3 of 5 stars.
 
-To make this as accessible as possible, a form is used but its fields are visually hidden. It contains 6 radio buttons, one for each star and another for 0 stars (which is checked by default).
+To make this as accessible as possible, a form is used but its fields are visually hidden. It contains 6 radio buttons, one for each star and another for 0 stars, which is checked by default. The labels for the radio buttons contain actual text (“1 Star”, “2 Stars”, …), and are also hidden visually. The form also contains a visually hidden submit button so that the form is not automatically submitted when keyboard users browse through the radio buttons.
 
-<abbr title="Scalable Vector Graphics">SVG</abbr> star graphics are in the labels of the radio buttons which actual text (“1 Star”, “2 Stars”, …) is also hidden from visual users. By using the `:focus` and `:hover` pseudo classes in CSS, the stars are colored regardless of the input method of the user. The `:checked` pseudo class and the general sibling selector `~` gray out inactive stars.
-
-The number of stars is saved to the server when the star image is clicked or the hidden button is clicked. This enables keyboard users to make a selection first before sending the form. (In this demo, the output element is updated instead of saving the value to the server.)
+The images of the stars are generated using <abbr title="Scalable Vector Graphics">SVG</abbr>. The coloring animation of these stars is initiated through the CSS `:focus` and `:hover` pseudo classes, so that they can be activated using a mouse, keyboard, and other input methods. The `:checked` pseudo class and the general sibling selector `~` are used to indicate the selected, active, and inactive stars.
 
 {::nomarkdown}
 <%= sample_start %>
