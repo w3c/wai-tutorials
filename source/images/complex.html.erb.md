@@ -28,10 +28,12 @@ In these situations a two-part text alternative is required. The first part is t
 
 In certain situations the composition of the image may also be needed as part of the long description, but only where it’s important that the user understand the image construction. This page shows several possible approaches that can be used to provide both short and long descriptions.
 
+Also it’s good practice to refer to more complex images from the accompanying text to describe the overall data, for example: „The following graph shows that visitors were lost in the first quarter, but the numbers recovered in the second quarter“.
+
 ## Image containing substantial information
 {:.ex}
 
-This bar chart of website visitor statistics has a short description of “Bar chart showing monthly and total visitors for the first quarter 2014 for sites 1 to 3”. It’s in the `alt` attribute and identifies the image. The long description details the information, including scales, values, relationships and trends that are represented visually. For example, since the declining values for site 1, consistent values for site 2, and increasing values for site 3 are highlighted through the bar chart, this information must also be included in the [long text description](examples/2014-first-qtr.html).
+This bar chart of website visitor statistics has a short description of “Bar chart showing monthly and total visitors for the first quarter 2014 for sites 1 to 3” provided through the alt attribute of the image. The long description provides detailed information, including scales, values, relationships and trends that are represented visually. For example, since the declining values for site 1, consistent values for site 2, and increasing values for site 3 are highlighted through the bar chart, this information must also be included in the [long text description](examples/2014-first-qtr.html).
 
 {::nomarkdown}
 <%= sample_start %>
@@ -63,7 +65,7 @@ Here the `longdesc` attribute contains the URI of a page containing the long des
 <%= code_end %>
 {:/nomarkdown}
 
-If the long description is published on the same page as the image, the `longdesc` value can simply contain a fragment identifier (“hash link”) to the long description.
+If the long description is published within an HTML element on the same page as the image, the `longdesc` value can simply contain a fragment identifier (“hash link”) to the element containing the long description. This fragment identifier consists of an `#` and the value of the `id` attribute of the longdescription element.
 
 {::nomarkdown}
 <%= code_start %>
@@ -163,7 +165,7 @@ The HTML5 `<figure>` element can be used to enclose both the image and its long 
 ~~~ html
 <figure role="group">
 	<img src="chart.png"
-		alt="Bar chart showing monthly and total visitors for the first quarter 2014 for sites 1 to 3, described in full below.">
+		alt="Bar chart showing monthly and total visitors for the first quarter 2014 for sites 1 to 3, described in detail below.">
 	<h2>Trends</h2>
 	<p>Site visitors for the first  ...</p>
 	<h2>Statistics</h2>

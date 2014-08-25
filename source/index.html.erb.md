@@ -19,7 +19,7 @@ support: <strong>Developed with support</strong> from the <a href="http://www.w3
 
 These tutorials show you how to develop web content that is accessible to people with disabilities and that provides a better user experience for everyone.
 
-They provide valuable resources for a variety of roles, including:
+They provide resources for a variety of roles, including:
 
 * **Web developers** will find guidance and boilerplate solutions for many common coding challenges.
 * **Web designers** will learn how to create web page components with built-in accessible and inclusive design practice.
@@ -29,7 +29,7 @@ They provide valuable resources for a variety of roles, including:
 
 <img src="http://www.w3.org/html/logo/badge/html5-badge-h-css3-graphics-multimedia-semantics.png" width="229" height="64" alt="HTML5 Powered with CSS3 / Styling, Graphics, 3D &amp; Effects, Multimedia, and Semantics" title="HTML5 Powered with CSS3 / Styling, Graphics, 3D &amp; Effects, Multimedia, and Semantics" style="float: right; margin-left: 1em;"> The tutorials cover various accessibility topics that are task-based rather than technology-based. For example, they show you how to provide accessible images and tables using a variety of web technologies, including HTML4, HTML5, CSS3, WAI-ARIA, MathML, and SVG. The concepts and techniques explained in the tutorials apply to other formats as well.
 
-Web authoring tools (Content Management Systems (CMS), <abbr title="What you see is what you get">WYSIWYG</abbr> editors, word processors, etc.) can help you create content that is accessible as shown in these tutorials.
+Web authoring tools (Content Management Systems (CMS), <abbr title="What you see is what you get">WYSIWYG</abbr> editors, word processors, etc.) can often help you create content that is accessible as shown in these tutorials.
 
 ## Tutorial Topics
 
@@ -41,7 +41,7 @@ Additional tutorials are planned and will be added here once they are completed 
 
 ## Additional Resources
 
-* **[How People with Disabilities Use the Web](http://www.w3.org/WAI/intro/people-use-web/Overview):** Introduces how people with disabilities, including people with age-related impairments, use the Web
+* **[How People with Disabilities Use the Web](http://www.w3.org/WAI/intro/people-use-web/Overview):** An introduction covering a variety of disabilities, including age-related impairments
 * **[Accessibility Principles](http://www.w3.org/WAI/intro/people-use-web/principles):** Introduces some of the web accessibility requirements for websites, web applications, browsers, and other tools
 * **[Web Content Accessibility Guidelines (WCAG) 2.0](http://www.w3.org/WAI/intro/wcag):** Introduces the international standard that defines requirements on how to make web content more accessible to people with disabilities
 * **[Authoring Tool Accessibility Guidelines (ATAG) 2.0](http://www.w3.org/WAI/intro/atag):** Introduces the international standard that defines requirements on how to make web authoring tools that support accessibility for people with disabilities

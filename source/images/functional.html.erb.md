@@ -63,7 +63,7 @@ The following image is the only content of a link that leads to the W3C homepage
 ## Logo image within link text
 {:.ex}
 
-In this example the W3C logo is used to supplement text within a link that leads to the W3C homepage. The image does not represent different functionality or convey other information than that already provided by in the link text, so a null (empty) value is applied, (`alt=""`), to avoid redundancy and repetition. In effect the image is a decorative adjunct to the link text:
+In this example the W3C logo is used to supplement text within a link that leads to the W3C homepage. The image does not represent different functionality or convey other information than that already provided by in the link text, so a null (empty) value is applied, (`alt=""`), to avoid redundancy and repetition. In effect the image is a decorative adjunct or visual cue to the link text:
 
 {::nomarkdown}
 <%= sample_start %>
@@ -122,7 +122,7 @@ In this example the image follows text within a link to inform users that the li
 <%= notes_start %>
 {:/nomarkdown}
 
-**Note:** This technique is often used with icons to indicate different file formats such as AVI, ODF, MP3, PDF, Word, and many more. In this case the text alternative should equally convey the format represented by each icon.
+**Note:** This technique is often used with icons to indicate different file formats such as AVI, ODF, MP3, PDF, Word, and many more. In this case the text alternative should equally convey the format represented by each icon, see [Informative Images](informative.html#images-conveying-file-format).
 
 {::nomarkdown}
 <%= notes_end %>

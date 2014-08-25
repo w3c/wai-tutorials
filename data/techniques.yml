@@ -4,12 +4,22 @@ techniques:
   - G18: Ensuring that a contrast ratio of at least 4.5:1 exists between text (and images of text) and background behind the text
   - G73: Providing a long description in another location with a link to it that is immediately adjacent to the non-text content
   - G74: "Providing a long description in text near the non-text content, with a reference to the location of the long description in the short description"
+  - G83: Providing text descriptions to identify required fields that were not completed
+  - G85: Providing a text description when user input falls outside the required format or values
   - G92: Providing long description for non-text content that serves the same purpose and presents the same information
   - G94: Providing short text alternative for non-text content that serves the same purpose and presents the same information as the non-text content
   - G95: Providing short text alternatives that provide a brief description of the non-text content
+  - G98: Providing the ability for the user to review and correct answers before submitting
   - G131: Providing descriptive labels
+  - G133: Providing a checkbox on the first page of a multipart form that allows users to ask for longer session time limit or no session time limit
+  - G155: Providing a checkbox in addition to a submit button
   - G162: Positioning labels to maximize predictability of relationships
+  - G164: Providing a stated time within which an online request (or transaction) may be amended or canceled by the user after making the request
+  - G167: Using an adjacent button to label the purpose of a field
+  - G168: Requesting confirmation to continue with selected action
   - G196: Using a text alternative on one item within a group of images that describes all items in the group
+  - G180: Providing the user with a means to set the time limit to 10 times the default time limit
+  - G198: Providing a way for the user to turn the time limit off
   - H2: Combining adjacent image and text links for the same resource
   - H24: Providing text alternatives for the area elements of image maps
   - H36: Using alt attributes on images used as submit buttons
@@ -24,6 +34,5 @@ techniques:
   - H71: Providing a description for groups of form controls using fieldset and legend elements
   - H73: Using the summary attribute of the table element
   - H93: Ensuring that id attributes are unique on a Web page
-
-
-
+  - SCR1: Allowing the user to extend the default time limit
+  - SCR16: Providing a script that warns the user a time limit is about to expire

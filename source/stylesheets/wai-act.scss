@@ -119,7 +119,12 @@ ul {
 	counter-reset: approaches;
 }
 
-h2.first, h3.first {
+.newex {
+	counter-reset: examples;
+}
+
+
+h2.first, h3.first, .newexap {
 	counter-reset: examples approaches;
 }
 
@@ -146,6 +151,7 @@ code {
 
 header[role=banner] {
 	@include container();
+	margin-bottom: 1em;
 	border-top: 5px solid #930;
 	div {
 		margin: 0 auto;
@@ -259,6 +265,7 @@ header[role=banner] {
 
 main {
 	display:block;
+	clear: both;
 	@include container();
 }
 
@@ -327,6 +334,7 @@ h4 {
 	margin-bottom: 1em;
 	line-height: 1;
 	padding: .25em 0 0;
+	float:none !important;
 	.subheading {
 		padding: .25em 0 0;
 		display:block;
@@ -534,7 +542,7 @@ a {
 		margin-top:0;
 	}
 	&.draft, &.editors-draft{
-		h1 {
+		.tutorial-heading h1 {
 			&:after {
 				display: inline-block;
 				@extend .font-primary;
@@ -547,7 +555,7 @@ a {
 		}
 	}
 	&.draft {
-		h1 {
+		.tutorial-heading h1 {
 			&:after {
 				content: "DRAFT";
 				background-color: #CFC;
@@ -555,7 +563,7 @@ a {
 		}
 	}
 	&.editors-draft {
-		h1 {
+		.tutorial-heading h1 {
 			&:after {
 				content: "ROUGH DRAFT";
 				background-color: #FCC;
@@ -604,6 +612,11 @@ a {
 		content: "";
 		display: inline-block;
 		margin-left: 0.5em;
+	}
+	.sample {
+		a[href^="http"]:after {
+			display:none;
+		}
 	}
 }
 
