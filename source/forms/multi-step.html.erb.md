@@ -17,10 +17,10 @@ wcag_techniques:
 
 Where possible, divide long forms into multiple smaller forms that constitute a series of logical steps or stages. This helps make long forms less daunting and easier to understand, in particular for people with less computer skills and people with different types of cognitive disabilities.
 
-@@@repeat [overall instructions](instructions.html#overview-instructions) on every page
-@@@Form pages should always be split up by the topic of the form fields on the page. For example, in an online shop, shipping and payment information is on separate pages.
-@@@It should be easy to skip (pages of) optional form fields. If a page is optional it makes sense to mention this information in the main heading of the page as well.
-@@@Don’t give users a time limit to fill out the form, if possible. If you do need a time limit, provide a checkbox that allows the user to extend the time limit (@@moved to "instructions" and "user interaction" sections)
+- @@@repeat [overall instructions](instructions.html#overview-instructions) on every page
+- @@@Form pages should always be split up by the topic of the form fields on the page. For example, in an online shop, shipping and payment information is on separate pages.
+- @@@It should be easy to skip (pages of) optional form fields. If a page is optional it makes sense to mention this information in the main heading of the page as well.
+- @@@Don’t give users a time limit to fill out the form, if possible. If you do need a time limit, provide a checkbox that allows the user to extend the time limit (@@moved to "instructions" and "user interaction" sections)
 
 ## Indicating progress (@@section needs editing)
 {:.newex}
