@@ -1,7 +1,7 @@
 ---
-title: Instructions
+title: Form Instructions
 status: editors-draft
-order: 3
+order: 4
 wcag_success_criteria:
   - 1.3.1
   - 2.4.6
@@ -16,13 +16,17 @@ wcag_techniques:
   - G18
 ---
 
-Sometimes it is necessary to add additional, auxiliary information to a form field to make it easier for users to enter the information correctly or in the correct format.
+Provide instructions to help users understand how to complete the form and individual form controls. This includes indicating any required and optional input, data formats, and other important aspects of the form.
 
-Screen reader in “Forms Mode” usually only read elements that are form elements (like `input`, `select`, and `textarea`) so the location of instructions is very important.
+- @@optional fields and skipping them (@@needs to be added throughout)
+- @@information about any time limits (@@needs to be added throughout)
 
-## Overview Instructions
+**Note:** Screen readers often switch to “Forms Mode” when they are processing content with a `form` element. In this mode they usually only read aloud form elements such as `input`, `select`, and `textarea`. It is critical to include form instructions in ways so that they will be read aloud.
 
-Instructions that are common to several fields should be positioned ahead of the form itself. Examples for such instructions are data format restrictions or how required fields are identified. They can also include help to find in-line format tips.
+## Overall instructions
+{:.newex}
+
+Where relevant, provide overall instructions that apply to the entire form before the `form` element (to ensure that it is read aloud by screen readers before they switch to “Forms Mode”). In the example below, form instructions indicate how required input is highlighted, the expected format for key data fields of the particular form, and how to get additional help for each input.
 
 {::nomarkdown}
 <%= sample_start %>
@@ -37,25 +41,15 @@ Instructions that are common to several fields should be positioned ahead of the
 <%= sample_end %>
 {:/nomarkdown}
 
-{::nomarkdown}
-<%= notes_start %>
-{:/nomarkdown}
+## In-line instructions
+{:.newex}
 
-**Note:** Apart from adding instructions to the form fields, [submission errors can be prevented](errors.html) by the browser programatically if the HTML5 form validation markup is used.
+In addition to the overall instructions, it is also important to provide relevant instructions within the labels of the form controls. For example, indicating required input and data formats is generally needed as part of the labels.
 
-{::nomarkdown}
-<%= notes_end %>
-{:/nomarkdown}
+### Providing instructions within labels
+{:.newex}
 
-
-## In-line Instructions
-
-Some in-line instructions, such as required field indicators, must be part of the label itself to be picked immediately by assistive technologies like screen readers.
-
-### Adding instructions in labels
-{:.ex}
-
-For simple use cases, adding the instruction into the label may be enough. This approach might not enable the most styling options but is very reliable across different assistive technologies.
+For simple use cases, providing instructions within the labels may be sufficient. While this approach tends to impact styling options, it is most reliable across different web browsers and assistive technologies.
 
 {::nomarkdown}
 <%= sample_start %>
@@ -81,10 +75,15 @@ For simple use cases, adding the instruction into the label may be enough. This 
 <%= code_end %>
 {:/nomarkdown}
 
-### Instructions following labels
-{:.ex}
+### Providing instructions outside labels
+{:.newex}
 
-Formatting tips might also be positioned after a field as long as the user gets to know where to find them before entering the form.
+Providing instructions outside labels allows more flexible positioning and design but generally has caveats. The two approaches outlined below can be combined to achieve most impact.
+
+#### Informing users
+{:.ap}
+
+Content outside form elements may be missed by screen readers that are in “Forms Mode”. In the example below, users are informed that extra help is available for each field in the overall instructions before they enter the actual form so that they don't miss it.
 
 {::nomarkdown}
 <%= sample_start %>
@@ -114,12 +113,20 @@ Formatting tips might also be positioned after a field as long as the user gets 
 <%= code_end %>
 {:/nomarkdown}
 
-### Using WAI-ARIA
-{:.ex}
+{::nomarkdown}
+<%= notes_start %>
+{:/nomarkdown}
 
-Another approach is to use WAI-ARIA attributes to provide additional information _specifically to assistive technologies_. This information is interpreted mostly by screen readers at the moment.
+**Note:** A caveat of this approach is that users receive the instructions after the form element. This is often non-ideal, especially when the form controls are larg or when they are displayed on mobile devices and using screen magnification. In such cases these instructions may not always be easy to find.
 
-`Aria-describedby` can be used to associate auxiliary text to a form field. If supported by assistive technology it is conveyed to the user either immediately when the form field is entered or on demand, usually after the content of the label element is provided.
+{::nomarkdown}
+<%= notes_end %>
+{:/nomarkdown}
+
+#### Using WAI-ARIA
+{:.ap}
+
+Another approach is to use the WAI-ARIA `aria-describedby` attribute to associate the instructions with form elements. Currently this approach may not be fully supported by all web browsers and assistive technologies.
 
 {::nomarkdown}
 <%= sample_start %>
@@ -163,12 +170,24 @@ Another approach is to use WAI-ARIA attributes to provide additional information
 <%= code_end %>
 {:/nomarkdown}
 
+{::nomarkdown}
+<%= notes_start %>
+{:/nomarkdown}
+
+**Note:** A caveat of this approach is that it is mostly interpreted by screen readers, so that non-screen reader users may not get the same benefit. Until such associations are more broadly interpreted it is often useful to position the instructions directly after the form controls.
+
+{::nomarkdown}
+<%= notes_end %>
+{:/nomarkdown}
+
 ### Placeholder text
-{:.ex}
+{:.newex}
 
-Placeholder text is a short hint of the kind of data to put into a field. It’s usually shown as low-contrast text inside empty form fields and disappears as soon as the user starts typing. **It’s not a replacement for a label**, especially they are not treated as labels by assistive technology. See [Form fields without (visible) labels](labels.html#hidden) for more information. Assistive technology may not support placeholder text yet.
+Placeholder text provides instructions or an example of the required data format inside form fields that have not yet been edited by the user. Placeholder text is usually displayed with lower color contrast than text provided by users, and it disappears from form fields when users start entering text.
 
-If the style of placeholder text is customized, it should have distinctively less contrast than regular text input so it is not mistaken as pre-populated while obeying the WCAG 2.0 contrast ratio rules.
+While placeholder text provides important guidance for many users, **placeholder text is not a replacement for labels**. Assistive technologies, such as screen readers, do not treat placeholder text as labels. Moreover, placeholder text is currently not broadly supported across assistive technologies.
+
+Refer to the techniques described in [Hidden labels](labels.html#hidden) in cases where you want to avoid redudancy of (visible) labels and placeholder text.
 
 {::nomarkdown}
 <%= sample_start %>
@@ -199,4 +218,14 @@ If the style of placeholder text is customized, it should have distinctively les
 
 {::nomarkdown}
 <%= code_end %>
+{:/nomarkdown}
+
+{::nomarkdown}
+<%= notes_start %>
+{:/nomarkdown}
+
+**Note:** To provide more clarity, ensure that the style of placeholder text is distinguishable from regular text. This is commonly done by reducing the color contrast of placeholder text. However, ensure that also placeholder text meets at least the [minimum color contrast requirement of WCAG 2.0](http://www.w3.org/WAI/WCAG20/quickref/#qr-visual-audio-contrast-contrast).
+
+{::nomarkdown}
+<%= notes_end %>
 {:/nomarkdown}
