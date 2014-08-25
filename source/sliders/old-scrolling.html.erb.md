@@ -1,7 +1,7 @@
 ---
-title: Scrolling
+title: O – Scrolling
 status: editors-draft
-order: 5
+order: 11
 ---
 
 - **What to do:** Provide pause and play controls for any carousel set to auto-scroll.

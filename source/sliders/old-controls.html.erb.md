@@ -1,7 +1,7 @@
 ---
-title: Controls
+title: O – Controls
 status: editors-draft
-order: 3
+order: 10
 ---
 
 - **What to do:** Ensure that all slide progression controls can be operated and understood by all users.

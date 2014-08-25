@@ -1,7 +1,7 @@
 ---
-title: Structure
+title: O – Structure
 status: editors-draft
-order: 2
+order: 12
 ---
 
 - **What to do:**provide structural markup to identify the carousel on the page and each individual slide;

@@ -1,7 +1,7 @@
 ---
-title: Actions
+title: O – Actions
 status: editors-draft
-order: 4
+order: 9
 ---
 
 - **What to do:** Ensure that the script moves actual focus as well as visual focus to the current slide and effectively hides slides that aren’t in view.

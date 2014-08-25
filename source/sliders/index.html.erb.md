@@ -1,5 +1,5 @@
 ---
-title: Slider/Carousel Concepts
+title: Slider & Carousel Concepts
 tutorial_title: Sliders & Carousels
 status: editors-draft
 order: 1
