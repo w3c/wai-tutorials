@@ -44,7 +44,7 @@ The most basic way to associate labels with form controls is to provide both the
 {:/nomarkdown}
 
 ~~~ html
-First name: <input type="text" name="firstname">
+<label>First name: <input type="text" name="firstname"></label>
 ~~~
 
 {::nomarkdown}
