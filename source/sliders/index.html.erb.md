@@ -1,15 +1,14 @@
 ---
 title: Slider & Carousel Concepts
 tutorial_title: Sliders & Carousels
+nav_title: Slider Concepts
 status: editors-draft
 order: 1
 topic_order: 4
 type: intro
 ---
 
-## Overview
-
-Carousels are like slideshows, in that they display only a portion of their content at any one time. They are typically content blocks containing images, text or both and can be static or rotating. In either case some content is hidden to be revealed by user action or the rotation script in time. The user has a choice whether or not to view the hidden content. To create or select an accessible carousel, consider the following aspects:
+Carousels display only a certain part of their content at a time. This content can be basically anything, from images to headings or complete teasers. If there are only headings in the carousel, it is often called slideshow, or, in short, slider. New content is revealed either by user interaction or after a certain amount of time.
 
 - **[Structure](structure.html):** The carousel as a whole as well as individual slides should have structural markup (code) that enables users to establish where they are;
 - **[Controls](controls.html):** User interaction to change the display must be possible by both keyboard and mouse, as well as being identifiable, both visually and to people who can’t see them;
