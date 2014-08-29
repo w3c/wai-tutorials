@@ -4,15 +4,9 @@ status: editors-draft
 order: 3
 wcag_success_criteria:
   - 1.3.1
-  - 2.2.1
   - 3.3.2
 wcag_techniques:
   - H71
-  - G133
-  - G180
-  - G198
-  - SCR1
-  - SCR16
 ---
 
 Group related form controls both visually and within the code. Use the `<fieldset>` and `<legend>` elements to associate related form controls.

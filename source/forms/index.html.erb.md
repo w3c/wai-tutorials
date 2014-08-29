@@ -16,7 +16,7 @@ Forms are usually the main interaction component in websites and web application
 
 - **[Labeling Controls](labels.html)** Use the `<label>` element, and, in rare cases, the `title` attribute, to indentify each form control.
 
-- **[Grouping Controls](structure.html)** Use the `<fieldset>` and `<legend>` elements to group and associate related form controls.
+- **[Grouping Controls](grouping.html)** Use the `<fieldset>` and `<legend>` elements to group and associate related form controls.
 
 - **[Form Instructions](instructions.html)** Provide instructions to help users understand how to complete the form and individual form controls.
 
