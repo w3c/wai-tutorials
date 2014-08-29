@@ -27,7 +27,7 @@ Labels need to describe the purpose of the form control. This section of the tut
 ## Associating labels implicitly
 {:.newex}
 
-The most basic way to associate labels with form controls is to provide both the label and the form control within the same `label` element:
+The most basic way to associate labels with form controls is to provide both the label and the form control within the same `<label>` element:
 
 {::nomarkdown}
 <%= sample_start %>
