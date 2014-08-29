@@ -526,7 +526,7 @@ Error messages should be concise yet descriptive and easy to understand to help 
 ### Notification of errors in the page title
 {:.ex}
 
-If the submission had errors that weren’t caught by [validating input](validating-input.html) before sending the form, the title of the page can be a good indicator for the user if there are errors. By prefixing the title with the error count, it is immediately clear for the user that there still is something to do. The user should also be notified in the title if the form was [successfully submitted](#success-messages).
+If the submission had errors that weren’t caught by [validating input](validation.html) before sending the form, the title of the page can be a good indicator for the user if there are errors. By prefixing the title with the error count, it is immediately clear for the user that there still is something to do. The user should also be notified in the title if the form was [successfully submitted](#success-messages).
 
 {::nomarkdown}
 <%= code_start %>
@@ -686,6 +686,6 @@ Instant and irreversible transactions, especially if carried out on a single pag
 ## Allow users to disable or extend time limits (@@section needs editing)
 {:.newex}
 
-If possible, forms should not be subject to a time limit to allow users to complete the form in their own pace. If a time limit needs to be in place (for example, for security reasons), the user should have the possibility to turn it off, adjust it, or extend it. This does not apply if the time limit is due to a live event (like an auction or a game) or if the time to complete the form is essential (for example, in a test).
+If possible, forms should not be subject to a time limit to allow users to complete the form in their own pace. If a time limit needs to be in place (for example, for security reasons), the user should have the possibility to turn it off, adjust it, or extend it. This does not apply if the time limit is due to a live event (like an auction or a game) or if the time to complete the form is essential for a valid submission.
 
 

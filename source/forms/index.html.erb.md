@@ -20,7 +20,7 @@ Forms are usually the main interaction component in websites and web application
 
 - **[Form Instructions](instructions.html)** Provide instructions to help users understand how to complete the form and individual form controls.
 
-- **[Validating Input](error-prevention.html)** Use built-in HTML5 features, and, where needed, custom scripts to validate user input and help users avoid mistakes.
+- **[Validating Input](validation.html)** Use built-in HTML5 features, and, where needed, custom scripts to validate user input and help users avoid mistakes.
 
 - **[User Interaction](error-messages.html)** Provide feedback to users to indicate errors, successes, and so that they can undo or confirm changes.
 
