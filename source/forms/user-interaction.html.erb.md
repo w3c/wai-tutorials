@@ -19,7 +19,7 @@ Notifications need to be perceivable to the user, both visually and programmatic
 ### Immediately inform user about the validation of the input
 {:.ex}
 
-A user can be informed immediately about the availability of a user name while entering a user name into the form field. The JavaScript checks if the user name is in a list of taken user names and updates the notification element with a text. This text is also read by screen readers by using the `aria-live` attribute which transforms the element to a “live region”. The `polite` value makes sure that the notification is put out as soon as the user stops typing.
+A user can be informed immediately about the availability of a user name while entering a user name into the form field. The JavaScript checks if the user name is in a list of taken user names and updates the notification element with a text. This text is also read by screen readers by using the `aria-live` attribute which transforms the element to a “live region”. The `polite` value makes sure that the notification is read out as soon as the user stops typing.
 
 {::nomarkdown}
 <%= sample_start %>
