@@ -51,7 +51,7 @@ Forms frequently include required controls that need to be clearly highlighted t
 <%= notes_start %>
 {:/nomarkdown}
 
-**Note:** The `aria-required` attribute informs assistive technologies about required controls so that they are appropriate announced to the users (as opposed to validate the input). Most current web browsers set its value to `true` when the HTML5 `required` attribute is present. In this example it is provided redundantly to support web browers that don't communicate the `required` attribute to assistive technologies.
+**Note:** The `aria-required` attribute informs assistive technologies about required controls so that they are appropriate announced to the users (as opposed to validate the input). Most current web browsers set its value to `true` when the HTML5 `required` attribute is present. In this example it is provided redundantly to support web browers that don’t communicate the `required` attribute to assistive technologies.
 
 {::nomarkdown}
 <%= notes_end %>
@@ -60,9 +60,9 @@ Forms frequently include required controls that need to be clearly highlighted t
 ## Validating common input
 {:.newex}
 
-HTML5 also provides input types for `email`, `url`, `number`, `range`, `date` and `time`. As for required controls, most common web browsers support these features and handle the input checking. In addition, they help user provide the input by providing controls such as date pickers and on-screen keyboards.
+HTML5 also provides input types for other data, like `email`, `url`, `number`, `range`, `date`, or `time`. Most common web browsers support these features and handle the input checking. In addition, they help user provide the input by providing controls such as date pickers and custom on-screen keyboards.
 
-The example below shows these HTML5 input types. They are displayed as simple `text` input fields in older web browsers that do not yet support HTML5.
+The example below shows these HTML5 input types. They are displayed as simple `text` input fields in older web browsers without HTML5 support.
 
 {::nomarkdown}
 <%= sample_start %>
