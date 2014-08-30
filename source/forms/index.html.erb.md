@@ -14,17 +14,19 @@ type: intro
 
 Forms are usually the main interaction component in websites and web applications. They’re used to send information to the server or for input and output in client-side JavaScript applications.
 
-- **[Labels](labels.html)** that are descriptive and properly associated to a form field help users to know which data to put into each form field.
+- **[Labeling Controls](labels.html)** Use the `<label>` element, and, in rare cases, the `title` attribute, to indentify each form control.
 
-- **[Instructions](instructions.html)** clarify what input is expected from the user and how to find out if a field is required or has to be entered in a specific format.
+- **[Grouping Controls](grouping.html)** Use the `<fieldset>` and `<legend>` elements to group and associate related form controls.
 
-- **[Table Structure](structure.html)** helps to make the form easier to understand by grouping fields that belong to each other and splitting long forms up into multiple pages.
+- **[Form Instructions](instructions.html)** Provide instructions to help users understand how to complete the form and individual form controls.
 
-- **[Forms in Disguise](in-disguise.html)** are forms that don’t look like “classic” forms at the first sight. Instead they can be fairly complex interaction components.
+- **[Validating Input](validation.html)** Use built-in HTML5 features, and, where needed, custom scripts to validate user input and help users avoid mistakes.
 
-- **[Error Prevention](error-prevention.html)** makes sure that the user did follow the instructions prior to submitting the form.
+- **[User Interaction](error-messages.html)** Provide feedback to users to indicate errors, successes, and so that they can undo or confirm changes.
 
-- **[Error Messages](error-prevention.html)** help users to correct errors after the form was sent.
+- **[Multi-Step Forms](multi-step.html)** Divide long forms into multiple smaller forms that constitute a series of logical steps or stages.
+
+- **[Custom Controls](in-disguise.html)** Use stylized form elements and other progressive enhancement techniques to provide custom controls.
 
 ## Why is this important?
 
