@@ -18,11 +18,21 @@ successcriteria:
       desc: "Images of text are only used for pure decoration or where a particular presentation of text is essential to the information being conveyed"
       level: AAA
       slug: visual-audio-contrast-text-images
+  - 2.1.1:
+      title: Keyboard
+      desc: 'All functionality of the content is operable through a keyboard interface without requiring specific timings for individual keystrokes, except where the underlying function requires input that depends on the path of the user’s movement and not just the endpoints.'
+      level: A
+      slug: keyboard-operation-keyboard-operable
   - 2.2.1:
       title: Timing Adjustable
       desc: 'For each time limit that is set by the content, at least one of the following is true:<ul><li>Turn off: The user is allowed to turn off the time limit before encountering it; or</li>Adjust: The user is allowed to adjust the time limit before encountering it over a wide range that is at least ten times the length of the default setting; or</li><li>Extend: The user is warned before time expires and given at least 20 seconds to extend the time limit with a simple action (for example, "press the space bar"), and the user is allowed to extend the time limit at least ten times; or</li><li>Real-time Exception: The time limit is a required part of a real-time event (for example, an auction), and no alternative to the time limit is possible; or</li><li>Essential Exception: The time limit is essential and extending it would invalidate the activity; or</li><li>20 Hour Exception: The time limit is longer than 20 hours. </li></ul>'
       level: A
       slug: time-limits-required-behaviors
+  - 2.2.2:
+      title: "Pause, Stop, Hide"
+      desc: 'For moving, blinking, scrolling, or auto-updating information, all of the following are true:<ul><li><p><strong>Moving, blinking, scrolling: </strong>For any moving, blinking or scrolling information that (1) starts automatically, (2) lasts more than five seconds, and (3) is presented in parallel with other content, there is a mechanism for the user to pause, stop, or hide it unless the movement, blinking, or scrolling is part of an activity where it is essential; and</p></li><li><p><strong>Auto-updating: </strong>For any auto-updating information that (1) starts automatically and (2) is presented in parallel with other content, there is a mechanism for the user to pause, stop, or hide it or to control the frequency of the update unless the auto-updating is part of an activity where it is essential.</p></li></ul>'
+      level: A
+      slug: time-limits-pause
   - 2.4.6:
       title: "Headings and Labels"
       desc: "Headings and labels describe topic or purpose."
