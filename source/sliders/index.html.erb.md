@@ -1,39 +1,33 @@
 ---
-title: Slider & Carousel Concepts
-tutorial_title: Sliders & Carousels
-nav_title: Slider Concepts
+title: Carousel Concepts
+tutorial_title: Carousels
 status: editors-draft
 order: 1
 topic_order: 4
 type: intro
+wcag_success_criteria:
+  - 1.3.1
+  - 2.1.1
+  - 2.2.2
+  - 4.1.2
 ---
 
-Carousels display only a certain part of their content at a time. This content can be basically anything, from images to headings or complete teasers. If there are only headings in the carousel, it is often called slideshow, or, in short, slider. New content is revealed either by user interaction or after a certain amount of time.
+Carousels display only a certain part of their content at a time. This content can be basically anything, from images to headings or complete teasers. Carousels that only contain images are often called „Slideshows“ or “Sliders”. As carousels are interactive elements on a page showing and hiding content from the user, a variety of considerations have to be included in development:
 
-- **[Structure](structure.html):** The carousel as a whole as well as individual slides should have structural markup (code) that enables users to establish where they are;
-- **[Controls](controls.html):** User interaction to change the display must be possible by both keyboard and mouse, as well as being identifiable, both visually and to people who can’t see them;
-- **[Action](actions.html):** When a control is activated the visually rendered effect should be replicated in actual content and functionality;
-- **[Scrolling](scrolling.html):** If the carousel automatically changes slides, a mechanism must be provided to pause or stop the movement.
+- **[Structure](structure.html):** The carousel as a whole and individual slides should have structural markup that enables users access the content of the slides easily.
+- **[Controls](controls.html):** The user needs to be in full control of the carousel, regardless of the input method (mouse, keyboard, touch etc.).
+- **[Actions](actions.html):** When a new slide is displayed, it should also be made visible to assistive technologies and announced properly.
+- (**Visuals:** The status of the carousel, like the current displayed slide, and the slide content must be identifiable, both visually and to people who can’t see them.)
 
-## Who benefits
+## Pausing slides
 
-Accessible carousels effectively draw attention to featured pages or products in a small space and at the same time ensure that:
+In contrast to other success criteria, providing a mechanism to pause automatic movement is required for the entire page on which the movement occurs. See [conformance requirement 5, Non-Interference)](http://www.w3.org/TR/WCAG20/#cc5).
 
-- **People using keyboard navigation or voice input software:** Can identify the current slide and navigate between slides;
-- **People using screen readers:** Will understand where they are and how to navigate between slides ;
-- **Users aren’t distracted by movement:**They will be able to pause the rotation while reading static content elsewhere on the page;
-- **People who can’t read quickly:** Can stop slide rotation giving them time to read and understand the content of each slide.
+## Why is this important?
 
-## Important
+Accessible carousels effectively draw attention to featured pages or products in a small space. They ensure that:
 
-Providing a mechanism to pause any automatic movement is a conformance requirement for the entire page on which the movement occurs. See [conformance requirement 5 (non interference)](http://www.w3.org/TR/2008/REC-WCAG20-20081211/#cc5).
-
-Relationship to WCAG 2.0:
-
-- [Info and Relationships, SC 1.3.1](http://www.w3.org/WAI/WCAG20/quickref/#qr-content-structure-separation-programmatic): Information, structure, and relationships conveyed through presentation can be programmatically determined or are available in text. (Level A);
-
-- [Keyboard, SC2.1.1](http://www.w3.org/WAI/WCAG20/quickref/#qr-keyboard-operation-keyboard-operable): All functionality of the content is operable through a keyboard interface without requiring specific timings for individual keystrokes … (Level A).
-
-- [Pause, Stop, Hide, SC 2.2.2](http://www.w3.org/WAI/WCAG20/quickref/#qr-time-limits-pause): … For any moving, blinking or scrolling information that (1) starts automatically, (2) lasts more than five seconds, and (3) is presented in parallel with other content, there is a mechanism for the user to pause, stop, or hide it … (Level A);
-
-- [name, Role, Value SC 4.1.2](http://www.w3.org/WAI/WCAG20/quickref/20120103/#ensure-compat-rsv):
+- **People using keyboard navigation or voice input software** can identify the current slide and navigate between slides.
+- **People using screen readers** will understand where they are and how to navigate between slides.
+- **Users aren’t distracted by movement** as they’ll be able to pause the rotation while reading static content elsewhere on the page.
+- **People who can’t read quickly** can stop slide rotation giving them time to read and understand the content of each slide.
