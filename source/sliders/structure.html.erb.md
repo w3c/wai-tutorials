@@ -1,5 +1,5 @@
 ---
-title: Structure
+title: Structure & Basic Styles
 status: editors-draft
 order: 2
 wcag_success_criteria:
@@ -44,11 +44,13 @@ Depending on the content of the individual slides, a there are some possibilitie
 {:/nomarkdown}
 
 ~~~html
-<ul class="carousel">
-    <li class="slide">…</li>
-    <li class="slide">…</li>
-    <li class="slide">…</li>
-</ul>
+<div class="carousel">
+    <ul>
+        <li class="slide">…</li>
+        <li class="slide">…</li>
+        <li class="slide">…</li>
+    </ul>
+</div>
 ~~~
 
 {::nomarkdown}
@@ -88,17 +90,19 @@ When using images in a slide show, each image needs to have an alternative text 
 
 ~~~html
 <h3>Photos of our trip to Paris:</h3>
-<ul class="carousel">
-    <li class="slide">
-        <img src="path/to/image.jpg" alt="Alternative text">
-    </li>
-    <li class="slide">
-        <img src="path/to/image.jpg" alt="Alternative text">
-    </li>
-    <li class="slide">
-        <img src="path/to/image.jpg" alt="Alternative text">
-    </li>
-</ul>
+<div class="carousel">
+  <ul>
+      <li class="slide">
+          <img src="path/to/image.jpg" alt="Alternative text">
+      </li>
+      <li class="slide">
+          <img src="path/to/image.jpg" alt="Alternative text">
+      </li>
+      <li class="slide">
+          <img src="path/to/image.jpg" alt="Alternative text">
+      </li>
+  </ul>
+</div>
 ~~~
 
 {::nomarkdown}
@@ -108,7 +112,7 @@ When using images in a slide show, each image needs to have an alternative text 
 ### Complex Content
 {:.ex}
 
-Complex content should use headings, so the content is easily findable. If used as teasers, links should be used in a descriptive manner.
+Complex content should use headings, so the content is easily findable. If used as teasers, links should be used in a descriptive manner. In the example below, background images are used, as the images are for illustration only and do only visually support the content of the slide. The content of the image itself is not relevant in this case.
 
 {::nomarkdown}
 <%= code_start %>
@@ -116,151 +120,202 @@ Complex content should use headings, so the content is easily findable. If used 
 
 ~~~html
 <h3>Featured Articles:</h3>
-<ul class="carousel">
-    <li class="slide">
-        <h4>Space Teddy production reaches all-time high</h4>
-        <p>
-            Teddies in Space Inc. has released outstanding numbers for the last solar year.
-            <a href="…">Complete Annual Report</a>
-        </p>
-    </li>
-    <li class="slide">
-        <h4>New Space Teddie Announced!</h4>
-        <p>
-            Space Teddy 6 wears an aluminum space suit with sapphire glass helmet.
-            <a href="…">Everything about the new model</a>
-        </p>
-    </li>
-    <li class="slide">
-        <h4>Adventures of the Space Teddy</h4>
-        <p>
-            Using modern HTML5 technologies, the latest installment of our game performs great on your computer, tablet, or mobile.
-            <a href="…">Play the Game here!</a>
-        </p>
-    </li>
-</ul>
-~~~
-
-{::nomarkdown}
-<%= code_end %>
-{:/nomarkdown}
-
----
-
-- **What to do:**provide structural markup to identify the carousel on the page and each individual slide;
-- **Why:** to enable screen reader users to understand the relationship between the carousel and other page content and distinguish between slides;
-- **How:** position a heading at the start of the carousel and if slides contain text, a lower level heading at the start of each slide: if there is little or no text, then use list markup to distinguish between slides;
-
-**Overall description of examples**{:.todo}
-
-## Head up the carousel
-
-The following heading might be used at the start of a carousel highlighting specific web pages:
-
-### Featured pages
-
-![Screenshot of carousel](../img/placeholder.gif) [screenshot of carousel needed here]
-
-The content that follows the carousel should then have a heading at the same level or higher:
-
-### Upcoming events (example)
-
-**(List of events)**{:.todo}
-
-### Code snippet
-
-Showing both the carousel heading and the one following the carousel:
-
-{::nomarkdown}
-<%= code_start %>
-{:/nomarkdown}
-
-~~~ html
-<h3>Featured pages</h3>
-<div id="carousel">
-	… carousel slides and controls …
+<div class="carousel">
+    <ul>
+        <li class="slide" style="background-image: url('teddy1.jpg');">
+            <h4>Space Teddy production reaches all-time high</h4>
+            <p>
+                Teddies in Space Inc. has released outstanding numbers for the last solar year.
+                <a href="…">Full Annual Report</a>
+            </p>
+        </li>
+        <li class="slide" style="background-image: url('teddy2.jpg');">
+            <h4>New Space Teddy Announced!</h4>
+            <p>
+                Space Teddy 6 wears an aluminum space suit. Sapphire glass eyes are first used universe-wide.
+                <a href="…">Everything about the new model</a>
+            </p>
+        </li>
+        <li class="slide" style="background-image: url('teddy3.jpg');">
+            <h4>Adventures of the Space Teddy</h4>
+            <p>
+                Using modern HTML5 technologies, the latest installment of our game performs great on your computer, tablet, or mobile.
+                <a href="…">Play the Game here!</a>
+            </p>
+        </li>
+    </ul>
 </div>
-<h3>Upcoming events</h3>
 ~~~
 
 {::nomarkdown}
 <%= code_end %>
 {:/nomarkdown}
 
-## Headings for slides
+## Basic Styling
 
-If slides contain enough text to require structure, each slide could begin with a heading at one level below the overall carousel heading:
+Basic styling makes sure that the slides are looking good on their own, even if the JavaScript fails to load. More CSS is used in the following parts of the tutorial while the example is getting enhanced into a fully-fledged carousel.
 
-{::nomarkdown}
-<%= sample_start %>
-{:/nomarkdown}
+### Accessibility Requirement: Contrast Ratio
 
-
-### Featured products
-
-#### Clematis
-
-Scented or unperfumed, evergreen or deciduous, we have clematis for all aspects in your garden (slide 1 content)
-
-#### Fruit bushes
-
-Year after year, these shrubs will fill your garden with succulent fruit, choose from apricot, blueberry and raspberry (slide 2 content).
-
-{::nomarkdown}
-<%= sample_end %>
-{:/nomarkdown}
-
-
-Slide structure using headings:
+By using semi-transparent backgrounds, the [contrast ratio](/background/contrast-ratio.html) between text and the background-image is sufficient for low vision users and in situation where the contrast of the screen itself is low, like in direct sunlight.
 
 {::nomarkdown}
 <%= code_start %>
 {:/nomarkdown}
 
-~~~ html
-<h3>Featured products</h3>
-	<h4>Slide 1 heading</h4>
-		<p>Slide 1 description</p>
-	<h4>Slide 2 heading</h4>
-		<p>Slide 2 description</p>
+~~~css
+.slide h4 {
+  background-color: rgba(255,255,255,.8);
+}
 ~~~
+
 {::nomarkdown}
 <%= code_end %>
 {:/nomarkdown}
 
-## List of slides
+{::nomarkdown}
+<%= notes_start %>
+{:/nomarkdown}
 
-If slides contain just images, or images plus just a word or two of text, they can be presented in a list:
+**Note:** To keep the demo simple, a fixed-width implementation of a carousel is implemented in this tutorial.
 
-### Featured products
+{::nomarkdown}
+<%= notes_end %>
+{:/nomarkdown}
 
 {::nomarkdown}
 <%= sample_start %>
 {:/nomarkdown}
 
-- ![](../img/placeholder.gif) Clematis
-- ![](../img/placeholder.gif) Fruit bushes
-- ![](../img/placeholder.gif) Vegetables
+<h3 role="presentational">Featured Articles:</h3>
+<div class="carousel">
+    <ul>
+        <li class="slide" style="background-image: url('../../img/ex-teddy1.jpg');">
+            <h4>Space Teddy production reaches all-time high</h4>
+            <p>
+                Teddies in Space Inc. has released outstanding numbers for the last solar year.
+                <a href="…">Full Annual Report</a>
+            </p>
+        </li>
+        <li class="slide" style="background-image: url('../../img/ex-teddy2.jpg');">
+            <h4>New Space Teddy Announced!</h4>
+            <p>
+                Space Teddy 6 wears an aluminum space suit. Sapphire glass eyes are first used universe-wide.
+                <a href="…">Everything about the new model</a>
+            </p>
+        </li>
+        <li class="slide" style="background-image: url('../../img/ex-teddy3.jpg');">
+            <h4>Adventures of the Space Teddy</h4>
+            <p>
+                Using modern HTML5 technologies, the latest installment of our game performs great on your computer, tablet, or mobile.
+                <a href="…">Play the Game here!</a>
+            </p>
+        </li>
+    </ul>
+</div>
+
+<style>
+  .carousel, .slide {
+    width: 640px;
+    padding:0;
+    margin: 0;
+    /* overflow: hidden; */
+  }
+  .carousel {
+    position: relative;
+  }
+  .carousel ul {
+    margin:0;
+    padding: 0;
+  }
+  .slide {
+    /*position: absolute;*/
+    height: 480px;
+    background-size: cover;
+    position: relative;
+    margin-bottom:1em;
+    border:1px solid #333;
+  }
+  .slide h4 {
+    display:inline-block;
+    float:righ;
+    font-size: 1.25em;
+    margin:0;
+    padding: .25em;
+    text-align: right;
+    background-color: rgba(255,255,255,.8);
+    float:right;
+    border-radius: 0 0 0 .5em;
+  }
+  .slide p {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin:0;
+    clear:both;
+    padding: 1em 5em 1em 3em;
+    background-color: rgba(255,255,255,.8);
+  }
+  .slide a {
+    display:block;
+    text-align: right;
+  }
+</style>
 
 {::nomarkdown}
 <%= sample_end %>
 {:/nomarkdown}
 
-### Code snippet
-
-Using a list where don’t contain much content:
-
 {::nomarkdown}
-<%= code_start %>
+<%= code_start('','CSS') %>
 {:/nomarkdown}
 
-~~~ html
-<h3>Featured products</h3>
-<ul>
-	<li><img src="slide1img.png" alt=""> Slide 1 name</li>
-	<li><img src="slide2img.png" alt=""> Slide 2 name</li>
-	<li><img src="slide3img.png" alt=""> Slide 3 name</li>
-</ul>
+~~~css
+  .carousel, .slide {
+    width: 640px;
+    padding:0;
+    margin: 0;
+  }
+  .carousel {
+    position: relative;
+  }
+  .carousel ul {
+    margin:0;
+    padding: 0;
+  }
+  .slide {
+    height: 480px;
+    background-size: cover;
+    position: relative;
+    margin-bottom:1em;
+    border:1px solid #333;
+  }
+  .slide h4 {
+    display:inline-block;
+    float:righ;
+    font-size: 1.25em;
+    margin:0;
+    padding: .25em;
+    text-align: right;
+    background-color: rgba(255,255,255,.8);
+    float:right;
+    border-radius: 0 0 0 .5em;
+  }
+  .slide p {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin:0;
+    clear:both;
+    padding: 1em 5em 1em 3em;
+    background-color: rgba(255,255,255,.8);
+  }
+  .slide a {
+    display:block;
+    text-align: right;
+  }
 ~~~
 
 {::nomarkdown}

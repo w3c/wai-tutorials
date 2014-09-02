@@ -1,8 +1,289 @@
 ---
-title: Controls
+title: Controls & Interaction
 status: editors-draft
 order: 3
+wcag_success_criteria:
+  - 1.3.1
+  - 2.1.1
+  - 2.4.7
+  - 4.1.2
 ---
+
+After the basic styling was applied to the content, the interaction comes in. In the first steps the slide show is prepared to hide all content but the first slide. Then “left” and “right” arrows are added to the carousel and enabled, so users can skip through the individual slides.
+
+## Add Styling When Javascript Is Enabled
+
+When JavaScript is enabled, the carousel wrapper is getting a fixed height. Individual slides are stacked on top of another, with the current slide on top of the others. Additionally, all slides but the current one are hidden by using `display: none` – a [hiding technique](/background/hiding.html) that hides the inactive slides visually as well as from assistive technologies.
+
+{::nomarkdown}
+<%= code_start('','CSS') %>
+{:/nomarkdown}
+
+~~~css
+.carousel.active {
+  height: 480px;
+  overflow:hidden;
+  border: 1px solid #333;
+  position:relative;
+}
+
+.active .slide {
+  border: none;
+  display: none;
+  position:absolute;
+  top:0;
+  left:0;
+}
+
+.slide.current {
+  display:block;
+  z-index: 500;
+}
+~~~
+
+{::nomarkdown}
+<%= code_end %>
+{:/nomarkdown}
+
+Additionally, we add a `active` class to the carousel wrapper and a `current` class to the first slide:
+
+{::nomarkdown}
+<%= code_start('','JavaScript') %>
+{:/nomarkdown}
+
+~~~js
+var carousel = document.getElementById('c1');
+carousel.querySelectorAll('.slide')[0].className = 'current slide';
+carousel.className = 'active carousel';
+~~~
+
+{::nomarkdown}
+<%= code_end %>
+{:/nomarkdown}
+
+The outcome looks like this:
+
+{::nomarkdown}
+<%= sample_start %>
+{:/nomarkdown}
+
+<h3 role="presentational">Featured Articles:</h3>
+<div id="c1" class="carousel">
+    <ul>
+        <li class="slide" style="background-image: url('../../img/ex-teddy1.jpg');">
+            <h4>Space Teddy production reaches all-time high</h4>
+            <p>
+                Teddies in Space Inc. has released outstanding numbers for the last solar year.
+                <a href="…">Full Annual Report</a>
+            </p>
+        </li>
+        <li class="slide" style="background-image: url('../../img/ex-teddy2.jpg');">
+            <h4>New Space Teddy Announced!</h4>
+            <p>
+                Space Teddy 6 wears an aluminum space suit. Sapphire glass eyes are first used universe-wide.
+                <a href="…">Everything about the new model</a>
+            </p>
+        </li>
+        <li class="slide" style="background-image: url('../../img/ex-teddy3.jpg');">
+            <h4>Adventures of the Space Teddy</h4>
+            <p>
+                Using modern HTML5 technologies, the latest installment of our game performs great on your computer, tablet, or mobile.
+                <a href="…">Play the Game here!</a>
+            </p>
+        </li>
+    </ul>
+</div>
+
+<style>
+  .carousel, .slide {
+    width: 640px;
+    padding:0;
+    margin: 0;
+    /* overflow: hidden; */
+  }
+  .carousel {
+    position: relative;
+  }
+  .carousel ul {
+    margin:0;
+    padding: 0;
+  }
+  .slide {
+    /*position: absolute;*/
+    height: 480px;
+    background-size: cover;
+    position: relative;
+    margin-bottom:1em;
+    border:1px solid #333;
+  }
+  .slide h4 {
+    display:inline-block;
+    float:righ;
+    font-size: 1.25em;
+    margin:0;
+    padding: .25em;
+    text-align: right;
+    background-color: rgba(255,255,255,.8);
+    float:right;
+    border-radius: 0 0 0 .5em;
+  }
+  .slide p {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin:0;
+    clear:both;
+    padding: 1em 5em 1em 3em;
+    background-color: rgba(255,255,255,.8);
+  }
+  .slide a {
+    display:block;
+    text-align: right;
+  }
+</style>
+
+<style>
+.carousel.active {
+  height: 480px;
+  overflow:hidden;
+  border: 1px solid #333;
+  position:relative;
+}
+
+.active .slide {
+  border: none;
+  display: none;
+  position:absolute;
+  top:0;
+  left:0;
+  z-index:200;
+}
+
+.slide.current {
+  display:block;
+  z-index: 500;
+}
+</style>
+
+<script>
+  var carousel = document.getElementById('c1');
+  carousel.querySelectorAll('.slide')[0].className = 'current slide';
+  carousel.className = 'active carousel';
+</script>
+
+{::nomarkdown}
+<%= sample_end %>
+{:/nomarkdown}
+
+## Previous and Next Buttons
+
+First, the previous and next buttons need to be added to the markup via JavaScript and styled accordingly:
+
+{::nomarkdown}
+<%= sample_start %>
+{:/nomarkdown}
+
+<h3 role="presentational">Featured Articles:</h3>
+<div id="c2" class="carousel">
+    <ul>
+        <li class="slide" style="background-image: url('../../img/ex-teddy1.jpg');">
+            <h4>Space Teddy production reaches all-time high</h4>
+            <p>
+                Teddies in Space Inc. has released outstanding numbers for the last solar year.
+                <a href="…">Full Annual Report</a>
+            </p>
+        </li>
+        <li class="slide" style="background-image: url('../../img/ex-teddy2.jpg');">
+            <h4>New Space Teddy Announced!</h4>
+            <p>
+                Space Teddy 6 wears an aluminum space suit. Sapphire glass eyes are first used universe-wide.
+                <a href="…">Everything about the new model</a>
+            </p>
+        </li>
+        <li class="slide" style="background-image: url('../../img/ex-teddy3.jpg');">
+            <h4>Adventures of the Space Teddy</h4>
+            <p>
+                Using modern HTML5 technologies, the latest installment of our game performs great on your computer, tablet, or mobile.
+                <a href="…">Play the Game here!</a>
+            </p>
+        </li>
+    </ul>
+</div>
+
+<script>
+  function setSlides(newi) {
+    slides[newi.next].className = 'next slide';
+    slides[newi.prev].className = 'prev slide';
+    slides[newi.current].className = 'current slide';
+    index = newi;
+  }
+
+  function nextSlide() {
+    var length = slides.length,
+    newnext = index.next + 1,
+    newprev = index.prev + 1,
+    newcurrent = index.current + 1;
+
+    var newi = {};
+
+    if(newnext === length) {
+      newnext = 0;
+    } else if(newprev === length) {
+      newprev = 0;
+    } else if(newcurrent === length) {
+      newcurrent = 0;
+    }
+
+    newi.current = newcurrent;
+    newi.next = newnext;
+    newi.prev = newprev;
+
+    setSlides(newi);
+
+  }
+
+  function prevSlide() {
+    var length = slides.length,
+    newnext = index.next - 1,
+    newprev = index.prev - 1,
+    newcurrent = index.current - 1;
+
+    var newi = {};
+
+    if(newnext < 0) {
+      newnext = length-1;
+    } else if(newprev < 0) {
+      newprev = length-1;
+    } else if(newcurrent < 0) {
+      newcurrent = length-1;
+    }
+
+    newi.current = newcurrent;
+    newi.next = newnext;
+    newi.prev = newprev;
+
+    setSlides(newi);
+
+  }
+
+  var carousel = document.getElementById('c2');
+  var slides = carousel.querySelectorAll('.slide');
+  var index = {};
+
+  carousel.className = 'active carousel';
+
+  index.current = 0;
+  index.next = 1;
+  index.prev = slides.length-1;
+  setSlides(index);
+</script>
+
+{::nomarkdown}
+<%= sample_end %>
+{:/nomarkdown}
+
+***
 
 - **What to do:** Ensure that all slide progression controls can be operated and understood by all users.
 - **Why:** Some Users may be unable to use a mouse, while others may be unable to see the visual clues to identify the relationship between the current slide and its position in a list of slide controls.
@@ -174,7 +455,3 @@ The carousel should not resume scrolling until and unless the user activates the
 {::nomarkdown}
 <%= notes_end %>
 {:/nomarkdown}
-
-## Related WCAG2.0 Techniques:
-
-- [xxx Technique name in full](#)
