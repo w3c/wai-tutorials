@@ -1,9 +1,12 @@
 ---
-title: Actions
+title: Actions?Accessibility Prerequisites
 status: editors-draft
-order: 3
+order: 4
 ---
 
+Before JavaScript and CSS can come in to style the [structured content](structure.html), the behavior and layout has to be specified first. This needs to happen from a visual and non-visual as well as from a mouse, keyboard, and touch perspective.
+
+----
 - **What to do:** Ensure that the script moves actual focus as well as visual focus to the current slide and effectively hides slides that aren’t in view.
 - **Why:** To remove unnecessary tab stops, making navigation for keyboard only users less arduous.
 - **How:** Use conditional rendering to display slides and provide a mechanism for positioning focus into the current slide.
