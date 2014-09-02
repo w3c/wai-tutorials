@@ -38,6 +38,11 @@ successcriteria:
       desc: "Headings and labels describe topic or purpose."
       level: AA
       slug: navigation-mechanisms-descriptive
+  - 2.4.7:
+      title: "Focus Visible"
+      desc: "Any keyboard operable user interface has a mode of operation where the keyboard focus indicator is visible."
+      level: AA
+      slug: navigation-mechanisms-focus-visible
   - 3.3.1:
       title: "Error Identifications"
       desc: "If an input error is automatically detected, the item that is in error is identified and the error is described to the user in text."
