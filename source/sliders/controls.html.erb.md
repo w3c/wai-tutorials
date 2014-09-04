@@ -13,7 +13,7 @@ After the basic styling was applied to the content, the interaction comes in. In
 
 ## Add Styling When Javascript Is Enabled
 
-When JavaScript is enabled, the carousel wrapper is getting a fixed height. Individual slides are stacked on top of another, with the current slide on top of the others. Additionally, all slides but the current one are hidden by using `display: none` – a [hiding technique](/background/hiding.html) that hides the inactive slides visually as well as from assistive technologies.
+When JavaScript is enabled, the carousel wrapper is getting a fixed height. Individual slides are stacked on top of another, with the current slide on top of the others. Additionally, all slides but the current one are hidden by using `display: none` – a [hiding technique](/fundamentals/hiding.html) that hides the inactive slides visually as well as from assistive technologies.
 
 {::nomarkdown}
 <%= code_start('','CSS') %>
@@ -178,7 +178,83 @@ The outcome looks like this:
 
 ## Previous and Next Buttons
 
-First, the previous and next buttons need to be added to the markup via JavaScript and styled accordingly:
+First, the previous and next buttons need to be added to the markup using JavaScript and styled according to their function. The HTML5 button element is used to make sure that the buttons are [keyboard accessible](/fundamentals/keyboard-access.html).
+
+{::nomarkdown}
+<%= code_start('', 'JavaScript') %>
+{:/nomarkdown}
+
+~~~js
+var ctrls = document.createElement('ul');
+
+ctrls.className = 'controls';
+ctrls.innerHTML = '<li>' +
+    '<button type="button" class="btn-prev">' +
+      '<img src="/img/chevron-left.png" alt="Previous Slide">' +
+    '</button>' +
+  '</li>' +
+  '<li>' +
+    '<button type="button" class="btn-next">' +
+      '<img src="/img/chevron-right.png" alt="Next Slide">' +
+    '</button>' +
+  '</li>';
+
+  ctrls.querySelector('.prev').addEventListener('click', function(){
+    prevSlide();
+  });
+
+  ctrls.querySelector('.next').addEventListener('click', function(){
+    nextSlide();
+  });
+
+carousel.appendChild(ctrls);
+~~~
+
+{::nomarkdown}
+<%= code_end %>
+{:/nomarkdown}
+
+The styling is very similar to the text of the slides. Contrast ratio requirements are valid here as well as on normal text. Both buttons get wider if they are hovered with the mouse or focused with the keyboard. This is also animated to keep the click target large for a longer time, which makes it easier for people with shaky hands to click them.
+
+{::nomarkdown}
+<%= code_start('', 'CSS') %>
+{:/nomarkdown}
+
+~~~js
+  .btn-prev,
+  .btn-next {
+    position:absolute;
+    z-index: 700;
+    top: 50%;
+    margin-top: -2.5em;
+    border:0;
+    background: rgba(255,255,255,.6);
+    line-height: 1;
+    padding:2em .5em;
+    transition: padding .4s ease-out;
+  }
+
+  .btn-next:hover, .btn-next:focus,
+  .btn-prev:hover, .btn-prev:focus {
+    padding-left: 2em;
+    padding-right:2em;
+  }
+
+  .btn-prev {
+    left:0;
+    border-radius: 0 .25em .25em 0;
+  }
+
+  .btn-next {
+    right:0;
+    border-radius: .25em 0 0 .25em;
+  }
+~~~
+{::nomarkdown}
+<%= code_end %>
+{:/nomarkdown}
+
+And this is how the outcome looks and works:
 
 {::nomarkdown}
 <%= sample_start %>
@@ -211,182 +287,238 @@ First, the previous and next buttons need to be added to the markup via JavaScri
     </ul>
 </div>
 
+<style>
+  .btn-prev,
+  .btn-next {
+    position:absolute;
+    z-index: 700;
+    top: 50%;
+    margin-top: -2.5em;
+    border:0;
+    background: rgba(255,255,255,.6);
+    line-height: 1;
+    padding:2em .5em;
+    transition: padding .4s ease-out;
+  }
+
+  .btn-next:hover,
+  .btn-next:focus,
+  .btn-prev:hover,
+  .btn-prev:focus {
+    padding-left: 2em;
+    padding-right:2em;
+  }
+
+  .btn-prev {
+    left:0;
+    border-radius: 0 .25em .25em 0;
+  }
+
+  .btn-next {
+    right:0;
+    border-radius: .25em 0 0 .25em;
+  }
+</style>
+
 <script>
-  function setSlides(newi) {
-    slides[newi.next].className = 'next slide';
-    slides[newi.prev].className = 'prev slide';
-    slides[newi.current].className = 'current slide';
-    index = newi;
+  function setSlides(new_current, setFocus = false) {
+
+    new_current = parseFloat(new_current);
+
+    var length = slides.length;
+    var new_next = new_current+1;
+    var new_prev = new_current-1;
+
+    if(new_next === length) {
+      new_next = 0;
+    } else if(new_prev < 0) {
+      new_prev = length-1;
+    }
+
+    for (var i = slides.length - 1; i >= 0; i--) {
+      slides[i].className = "slide";
+    };
+
+    slides[new_next].className = 'next slide';
+    slides[new_prev].className = 'prev slide';
+    slides[new_current].className = 'current slide';
+
+    if(with_slidenav) {
+      var buttons = carousel.querySelectorAll('.slidenav button');
+      for (var i = buttons.length - 1; i >= 0; i--) {
+        buttons[i].className = "";
+      };
+      buttons[new_current].className = "current";
+    }
+
+    if (setFocus) {
+      slides[new_current].setAttribute('tabindex', '-1');
+      slides[new_current].focus();
+    }
+
+    index = new_current;
   }
 
   function nextSlide() {
     var length = slides.length,
-    newnext = index.next + 1,
-    newprev = index.prev + 1,
-    newcurrent = index.current + 1;
+    new_current = index + 1;
 
-    var newi = {};
-
-    if(newnext === length) {
-      newnext = 0;
-    } else if(newprev === length) {
-      newprev = 0;
-    } else if(newcurrent === length) {
-      newcurrent = 0;
+    if(new_current === length) {
+      new_current = 0;
     }
 
-    newi.current = newcurrent;
-    newi.next = newnext;
-    newi.prev = newprev;
-
-    setSlides(newi);
+    setSlides(new_current);
 
   }
 
   function prevSlide() {
     var length = slides.length,
-    newnext = index.next - 1,
-    newprev = index.prev - 1,
-    newcurrent = index.current - 1;
+    new_current = index - 1;
 
-    var newi = {};
-
-    if(newnext < 0) {
-      newnext = length-1;
-    } else if(newprev < 0) {
-      newprev = length-1;
-    } else if(newcurrent < 0) {
-      newcurrent = length-1;
+    if(new_current < 0) {
+      new_current = length-1;
     }
 
-    newi.current = newcurrent;
-    newi.next = newnext;
-    newi.prev = newprev;
-
-    setSlides(newi);
+    setSlides(new_current);
 
   }
 
   var carousel = document.getElementById('c2');
   var slides = carousel.querySelectorAll('.slide');
-  var index = {};
+  var index;
+  var with_slidenav = false;
 
   carousel.className = 'active carousel';
 
-  index.current = 0;
-  index.next = 1;
-  index.prev = slides.length-1;
+  function forEachElement(elements, fn) {
+    for (var i = 0; i < elements.length; i++)
+      fn(elements[i], i);
+  }
+
+  var parseHTML = function(str) {
+    var el =
+    el.innerHTML = str;
+    return el;
+  };
+
+  var ctrls = document.createElement('ul');
+
+  ctrls.className = 'controls';
+  ctrls.innerHTML = '<li>' +
+      '<button type="button" class="btn-prev"><img src="/img/chevron-left.png" alt="Previous Slide"></button>' +
+    '</li>' +
+    '<li>' +
+      '<button type="button" class="btn-next"><img src="/img/chevron-right.png" alt="Next Slide"></button>' +
+    '</li>';
+
+    ctrls.querySelector('.btn-prev').addEventListener('click', function(){
+      prevSlide();
+    });
+
+    ctrls.querySelector('.btn-next').addEventListener('click', function(){
+      nextSlide();
+    });
+
+  carousel.appendChild(ctrls);
+
+  var slidenav = document.createElement('ul');
+
+  slidenav.className = 'slidenav';
+
+  forEachElement(slides, function(el, i){
+    var li = document.createElement('li');
+    var klass = (i===0) ? 'class="current" ' : '';
+    var kurrent = (i===0) ? ' <span class="visuallyhidden">(Current Slide)</span>' : '';
+
+    li.innerHTML = '<button '+ klass +'data-slide="' + i + '"><span class="visuallyhidden">News</span> ' + (i+1) + kurrent + '</button>';
+    slidenav.appendChild(li);
+  });
+
+  slidenav.addEventListener('click', function(event) {
+    if (event.target.localName == 'button') {
+      setSlides(event.target.getAttribute('data-slide'), true);
+    }
+  }, true);
+
+  carousel.className = 'active carousel with-slidenav';
+  carousel.appendChild(slidenav);
+  with_slidenav = true;
+
+  index = 0;
   setSlides(index);
 </script>
+
+<style>
+.carousel.with-slidenav {
+  padding-bottom: 4em;
+  background-color: #fff;
+}
+.carousel.with-slidenav .slide {
+  border-bottom: 1px solid #333;
+}
+
+.slidenav {
+  position: absolute;
+  bottom:1em;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+.slidenav li {
+  display:inline-block;
+  margin: 0 .5em;
+}
+
+.slidenav button {
+  border: 2px solid #036;
+  background-color: #036;
+  line-height: 1em;
+  height: 2em;
+  width:2em;
+  font-weight: bold;
+  color: #fff;
+}
+
+.slidenav button.current {
+  border-radius: .5em;
+  background-color: #fff;
+  color: #333;
+}
+
+.slidenav button:hover,
+.slidenav button:focus {
+  border: 2px dashed #fff;
+}
+
+.slidenav button.current:hover,
+.slidenav button.current:focus {
+  border: 2px dashed #036;
+}
+
+</style>
 
 {::nomarkdown}
 <%= sample_end %>
 {:/nomarkdown}
 
-***
+## List of Slides
 
-- **What to do:** Ensure that all slide progression controls can be operated and understood by all users.
-- **Why:** Some Users may be unable to use a mouse, while others may be unable to see the visual clues to identify the relationship between the current slide and its position in a list of slide controls.
-- **How:** Ensure that controls can be activated by both keyboard and mouse, be distinguished from one another and that the current slide and focus state of slides is identifiable both visually and by screen readers.
-- **Conformance:** Required to meet [SC 1.3.1 Info and Relationships](http://www.w3.org/WAI/WCAG20/quickref/20120103/#content-structure-separation-programmatic), [SC 2.1.1 Keyboard](http://www.w3.org/WAI/WCAG20/quickref/20120103/#ensure-compat-rsv), [SC 2.4.7 Focus Visible](http://www.w3.org/WAI/WCAG20/quickref/20120103/#ensure-compat-rsv) and [SC 4.1.2 Name, Role, Value](http://www.w3.org/WAI/WCAG20/quickref/20120103/#ensure-compat-rsv).
-
-Carousels may simply have “Previous” and “Next” buttons to enable users to progress through slides one at a time, a list of slide buttons so that the user can select which slide to view, or may have both types of control. For information on ensuring that they can be activated by both keyboard and mouse, see [pages on keyboard control](keyboard.html).
-
-## Buttons
-
-**This should probably be in the Forms Tutorial**{:.todo}
-
-All of the slide progression controls need to be buttons, not links, as they perform an action on the same page rather than open a different web page.
-
-If implementing a carousel from a script library that marks up the controls as links, you can use the WAI-ARI `role` attribute (`role="button"`), to make the links are recognized as buttons by assistive technologies.
-
-Using the `<button>` element:
-
-{::nomarkdown}
-<%= code_start %>
-{:/nomarkdown}
-
-~~~ html
-<button class="carousel" type="button">
-	Previous slide
-</button>
-~~~
-
-{::nomarkdown}
-<%= code_end %>
-{:/nomarkdown}
-
-Applying the WAI-ARIA button `role` attribute to a link:
-
-{::nomarkdown}
-<%= code_start %>
-{:/nomarkdown}
-
-~~~ html
-<ul>
-	<li>
-		<a href="#1" role="button">
-			<img src="1.jpg" alt="Feature 1">
-		</a>
-	</li>
-	<li>
-		<a href="#2" role="button">
-			<img src="2.jpg" alt="Feature 2">
-		</a>
-	</li>
-</ul>
-~~~
-
-{::nomarkdown}
-<%= code_end %>
-{:/nomarkdown}
-
-## Previous and Next buttons
-
-Images of left and right arrows are most commonly used to visually distinguish between “Previous” and “Next” buttons,these need appropriate `alt` attributes.
-
-#### Featured products
+Optionally, a list of slides can be used to provide the user a sense of how much information is in a slide and which the current slide is in the sequence of slides.
 
 {::nomarkdown}
 <%= sample_start %>
 {:/nomarkdown}
 
-[![Previous product](chevron-left.png)](#prev){:style="vertical-align:middle;"} Current product slide [![Next product](chevron-right.png)](#next){:style="vertical-align:middle;"}
+![Numbers in squares (described below)](ex-slider-controls.png)
 
 {::nomarkdown}
 <%= sample_end %>
 {:/nomarkdown}
 
-The `alt` text for these two images is “Previous product” and “Next product”. Although only “Previous” and “Next” are essential as `alt` attribute values, it is good practice to provide the extra context to help users understand that they are still within the products carousel.
+Visually, the above controls show three numbered square buttons. The current slide button (number 1) has rounded corners and is in the reverse color combination to the others, button 3 has a dashed border to show that it is the control currently in tab focus (or hovered by a mouse pointer). If number 3 was activated, slide 3 would be shown.
 
-{::nomarkdown}
-<%= code_start %>
-{:/nomarkdown}
-
-~~~ html
-<a href="#prev" role="button">
-	<img src="prev.png" width="60" height="80" alt="Previous product">
-</a>
-(Current product slide)
-<a href="#next" role="button">
-	<img src="next.png" width="60" height="80" alt="Next product">
-</a>
-~~~
-
-{::nomarkdown}
-<%= code_end %>
-{:/nomarkdown}
-
-Slide list buttons
-------------------
-
-When a list of slide specific buttons are provided, they convey a variety of information, such as identifying how many slides are available, distinguishing between inactive slides, the current slide and whether or not a slide button is in tab focus. All of this information needs to be conveyed both visually and in a way that screen readers can recognize.
-
-![Carousel controls, (described below)](slider-controls.png)
-
-Visually the above controls show four numbered buttons, The current slide button (number 2) is larger and in the reverse colour combination to the others, button 4 has an additional outline to show that it is the control currently in tab focus, (if activated it would display slide 4).
-
-To convey the same quality of information to users who can’t see the screen, the controls need to be marked up as a list, (screen readers can then inform users of the number of items in the list),and the current slide needs to be identified. Accurate labelling of the buttons will let the user know which control has focus.
+To convey the same quality of information to users who can’t see the screen, the controls need to be marked up as a list, so screen readers can then inform users of the number of items in the list. Also the current slide needs to be identified, for example by [visually hidden text](/fundamentals/hiding.html). Accurate labeling of the buttons will let the user know which slide is shown.
 
 The script should be capable of identifying the current slide and rendering its identification within the text or text alternative for the current button.
 
@@ -394,39 +526,425 @@ The script should be capable of identifying the current slide and rendering its 
 <%= notes_start %>
 {:/nomarkdown}
 
-**Note:** The buttons in the above image are numbered which is important for speech recognition software users. Unless each button has a visible label, these users cannot know what command to give their software to navigate to the desired slide.
+**Note:** Numbered buttons are important for speech recognition software users as they cannot know what command to give their software to navigate to the desired slide otherwise.
 
 {::nomarkdown}
 <%= notes_end %>
 {:/nomarkdown}
 
-Where the generated code creates text links that the script then renders as images:
+The list is created through JavaScript and then added to the DOM of the carousel:
 
 {::nomarkdown}
-<%= code_start %>
+<%= code_start('', 'JavaScript') %>
 {:/nomarkdown}
 
-~~~ html
-<ul>
-	<li>
-		<button class="carousel" type="button">Article 1</button>
-	</li>
-	<li>
-		<button class="carousel" type="button">Article 2 (current)</button>
-	</li>
-	<li>
-		<button class="carousel" type="button">Article 3</button>
-	</li>
-	<li>
-		<button class="carousel" type="button">Article 4</button>
-	</li>
-</ul>
+~~~ js
+var slidenav = document.createElement('ul');
 
+slidenav.className = 'slidenav';
+
+forEachElement(slides, function(el, i){
+  var li = document.createElement('li');
+  var klass = (i===0) ? 'class="current" ' : '';
+  var currentText = (i===0) ? ' <span class="visuallyhidden">(Current Slide)</span>' : '';
+
+  li.innerHTML = '<button ' + klass + 'data-slide="' + i + '"><span class="visuallyhidden">News</span> ' + (i+1) + currentText + '</button>';
+  slidenav.appendChild(li);
+});
+
+carousel.className = 'active carousel with-slidenav';
+carousel.appendChild(slidenav);
 ~~~
 
 {::nomarkdown}
 <%= code_end %>
 {:/nomarkdown}
+
+{::nomarkdown}
+<%= code_start('', 'DOM representation of the JavaScript above') %>
+{:/nomarkdown}
+
+~~~html
+<ul class="slidenav">
+  <li>
+    <button class="current" data-slide="0">
+      <span class="visuallyhidden">News</span> 1
+      <span class="visuallyhidden">(Current Slide)</span>
+    </button>
+  </li>
+  <li>
+    <button data-slide="1">
+      <span class="visuallyhidden">News</span> 2
+    </button>
+  </li>
+  <li>
+    <button data-slide="2">
+      <span class="visuallyhidden">News</span> 3
+    </button>
+  </li>
+</ul>
+~~~
+{::nomarkdown}
+<%= code_end %>
+{:/nomarkdown}
+
+As shown above, the styling of the list is very important for accessibility as well:
+
+{::nomarkdown}
+<%= code_start('', 'CSS') %>
+{:/nomarkdown}
+
+~~~css
+.slidenav {
+  position: absolute;
+  bottom: 1em;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+.slidenav li {
+  display:inline-block;
+  margin: 0 .5em;
+}
+
+.slidenav button {
+  border: 2px solid #036;
+  background-color: #036;
+  line-height: 1em;
+  height: 2em;
+  width: 2em;
+  font-weight: bold;
+  color: #fff;
+}
+
+.slidenav button.current {
+  border-radius: .5em;
+  background-color: #fff;
+  color: #333;
+}
+
+.slidenav button:hover,
+.slidenav button:focus {
+  border: 2px dashed #fff;
+}
+
+.slidenav button.current:hover,
+.slidenav button.current:focus {
+  border: 2px dashed #036;
+}
+~~~
+{::nomarkdown}
+<%= code_end %>
+{:/nomarkdown}
+
+When a user activates one of the buttons in the list, the slide should come up visually. Additionally, a focus should be set to the slide. This helps non-visual users as screen readers then read the slide immediately.
+
+To do that, it is required to set the `tabindex` attribute to `-1` as the slide `<li>` isn’t an element that can receive focus by default. The `data-slide` attribute is used to select the target slide.
+
+
+{::nomarkdown}
+<%= code_start('', 'JavaScript') %>
+{:/nomarkdown}
+
+~~~js
+function setSlides(new_current, setFocus = false) {
+
+  new_current = parseFloat(new_current);
+
+  var length = slides.length;
+  var new_next = new_current+1;
+  var new_prev = new_current-1;
+
+  if(new_next === length) {
+    new_next = 0;
+  } else if(new_prev < 0) {
+    new_prev = length-1;
+  }
+
+  for (var i = slides.length - 1; i >= 0; i--) {
+    slides[i].className = "slide";
+  };
+
+  slides[new_next].className = 'next slide';
+  slides[new_prev].className = 'prev slide';
+  slides[new_current].className = 'current slide';
+
+  if(with_slidenav) {
+    var buttons = carousel.querySelectorAll('.slidenav button');
+    for (var i = buttons.length - 1; i >= 0; i--) {
+      buttons[i].className = "";
+    };
+    buttons[new_current].className = "current";
+  }
+
+  if (setFocus) {
+    slides[new_current].setAttribute('tabindex', '-1');
+    slides[new_current].focus();
+  }
+
+  index = new_current;
+}
+
+slidenav.addEventListener('click', function(event) {
+  if (event.target.localName == 'button') {
+    setSlides(event.target.getAttribute('data-slide'), true);
+  }
+}, true);
+~~~
+{::nomarkdown}
+<%= code_end %>
+{:/nomarkdown}
+
+The final outcome then looks and works like this:
+
+{::nomarkdown}
+<%= sample_start %>
+{:/nomarkdown}
+
+<h3 role="presentational">Featured Articles:</h3>
+<div id="c3" class="carousel">
+    <ul>
+        <li class="slide" style="background-image: url('../../img/ex-teddy1.jpg');">
+            <h4>Space Teddy production reaches all-time high</h4>
+            <p>
+                Teddies in Space Inc. has released outstanding numbers for the last solar year.
+                <a href="…">Full Annual Report</a>
+            </p>
+        </li>
+        <li class="slide" style="background-image: url('../../img/ex-teddy2.jpg');">
+            <h4>New Space Teddy Announced!</h4>
+            <p>
+                Space Teddy 6 wears an aluminum space suit. Sapphire glass eyes are first used universe-wide.
+                <a href="…">Everything about the new model</a>
+            </p>
+        </li>
+        <li class="slide" style="background-image: url('../../img/ex-teddy3.jpg');">
+            <h4>Adventures of the Space Teddy</h4>
+            <p>
+                Using modern HTML5 technologies, the latest installment of our game performs great on your computer, tablet, or mobile.
+                <a href="…">Play the Game here!</a>
+            </p>
+        </li>
+    </ul>
+</div>
+
+<style>
+  .btn-prev,
+  .btn-next {
+    position:absolute;
+    z-index: 700;
+    top: 50%;
+    margin-top: -2.5em;
+    border:0;
+    background: rgba(255,255,255,.6);
+    line-height: 1;
+    padding:2em .5em;
+    transition: padding .4s ease-out;
+  }
+
+  .btn-next:hover,
+  .btn-next:focus,
+  .btn-prev:hover,
+  .btn-prev:focus {
+    padding-left: 2em;
+    padding-right:2em;
+  }
+
+  .btn-prev {
+    left:0;
+    border-radius: 0 .25em .25em 0;
+  }
+
+  .btn-next {
+    right:0;
+    border-radius: .25em 0 0 .25em;
+  }
+</style>
+
+<script>
+  function setSlides(new_current, setFocus = false) {
+
+    new_current = parseFloat(new_current);
+
+    var length = slides.length;
+    var new_next = new_current+1;
+    var new_prev = new_current-1;
+
+    if(new_next === length) {
+      new_next = 0;
+    } else if(new_prev < 0) {
+      new_prev = length-1;
+    }
+
+    for (var i = slides.length - 1; i >= 0; i--) {
+      slides[i].className = "slide";
+    };
+
+    slides[new_next].className = 'next slide';
+    slides[new_prev].className = 'prev slide';
+    slides[new_current].className = 'current slide';
+
+    if(with_slidenav) {
+      var buttons = carousel.querySelectorAll('.slidenav button');
+      for (var i = buttons.length - 1; i >= 0; i--) {
+        buttons[i].className = "";
+      };
+      buttons[new_current].className = "current";
+    }
+
+    if (setFocus) {
+      slides[new_current].setAttribute('tabindex', '-1');
+      slides[new_current].focus();
+    }
+
+    index = new_current;
+  }
+
+  function nextSlide() {
+    var length = slides.length,
+    new_current = index + 1;
+
+    if(new_current === length) {
+      new_current = 0;
+    }
+
+    setSlides(new_current);
+
+  }
+
+  function prevSlide() {
+    var length = slides.length,
+    new_current = index - 1;
+
+    if(new_current < 0) {
+      new_current = length-1;
+    }
+
+    setSlides(new_current);
+
+  }
+
+  var carousel = document.getElementById('c3');
+  var slides = carousel.querySelectorAll('.slide');
+  var index;
+  var with_slidenav = false;
+
+  carousel.className = 'active carousel';
+
+  function forEachElement(elements, fn) {
+    for (var i = 0; i < elements.length; i++)
+      fn(elements[i], i);
+  }
+
+  var parseHTML = function(str) {
+    var el =
+    el.innerHTML = str;
+    return el;
+  };
+
+  var ctrls = document.createElement('ul');
+
+  ctrls.className = 'controls';
+  ctrls.innerHTML = '<li>' +
+      '<button type="button" class="btn-prev"><img src="/img/chevron-left.png" alt="Previous Slide"></button>' +
+    '</li>' +
+    '<li>' +
+      '<button type="button" class="btn-next"><img src="/img/chevron-right.png" alt="Next Slide"></button>' +
+    '</li>';
+
+    ctrls.querySelector('.btn-prev').addEventListener('click', function(){
+      prevSlide();
+    });
+
+    ctrls.querySelector('.btn-next').addEventListener('click', function(){
+      nextSlide();
+    });
+
+  carousel.appendChild(ctrls);
+
+  var slidenav = document.createElement('ul');
+
+  slidenav.className = 'slidenav';
+
+  forEachElement(slides, function(el, i){
+    var li = document.createElement('li');
+    var klass = (i===0) ? 'class="current" ' : '';
+    var kurrent = (i===0) ? ' <span class="visuallyhidden">(Current Slide)</span>' : '';
+
+    li.innerHTML = '<button '+ klass +'data-slide="' + i + '"><span class="visuallyhidden">News</span> ' + (i+1) + kurrent + '</button>';
+    slidenav.appendChild(li);
+  });
+
+  slidenav.addEventListener('click', function(event) {
+    if (event.target.localName == 'button') {
+      setSlides(event.target.getAttribute('data-slide'), true);
+    }
+  }, true);
+
+  carousel.className = 'active carousel with-slidenav';
+  carousel.appendChild(slidenav);
+  with_slidenav = true;
+
+  index = 0;
+  setSlides(index);
+</script>
+
+<style>
+.carousel.with-slidenav {
+  padding-bottom: 4em;
+  background-color: #fff;
+}
+.carousel.with-slidenav .slide {
+  border-bottom: 1px solid #333;
+}
+
+.slidenav {
+  position: absolute;
+  bottom:1em;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+.slidenav li {
+  display:inline-block;
+  margin: 0 .5em;
+}
+
+.slidenav button {
+  border: 2px solid #036;
+  background-color: #036;
+  line-height: 1em;
+  height: 2em;
+  width:2em;
+  font-weight: bold;
+  color: #fff;
+}
+
+.slidenav button.current {
+  border-radius: .5em;
+  background-color: #fff;
+  color: #333;
+}
+
+.slidenav button:hover,
+.slidenav button:focus {
+  border: 2px dashed #fff;
+}
+
+.slidenav button.current:hover,
+.slidenav button.current:focus {
+  border: 2px dashed #036;
+}
+
+</style>
+
+{::nomarkdown}
+<%= sample_end %>
+{:/nomarkdown}
+
+***
 
 ## Animations
 
