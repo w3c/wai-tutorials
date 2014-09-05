@@ -343,14 +343,6 @@ And this is how the outcome looks and works:
     slides[new_prev].className = 'prev slide';
     slides[new_current].className = 'current slide';
 
-    if(with_slidenav) {
-      var buttons = carousel.querySelectorAll('.slidenav button');
-      for (var i = buttons.length - 1; i >= 0; i--) {
-        buttons[i].className = "";
-      };
-      buttons[new_current].className = "current";
-    }
-
     if (setFocus) {
       slides[new_current].setAttribute('tabindex', '-1');
       slides[new_current].focus();
@@ -386,7 +378,6 @@ And this is how the outcome looks and works:
   var carousel = document.getElementById('c2');
   var slides = carousel.querySelectorAll('.slide');
   var index;
-  var with_slidenav = false;
 
   carousel.className = 'active carousel';
 
@@ -420,29 +411,6 @@ And this is how the outcome looks and works:
     });
 
   carousel.appendChild(ctrls);
-
-  var slidenav = document.createElement('ul');
-
-  slidenav.className = 'slidenav';
-
-  forEachElement(slides, function(el, i){
-    var li = document.createElement('li');
-    var klass = (i===0) ? 'class="current" ' : '';
-    var kurrent = (i===0) ? ' <span class="visuallyhidden">(Current Slide)</span>' : '';
-
-    li.innerHTML = '<button '+ klass +'data-slide="' + i + '"><span class="visuallyhidden">News</span> ' + (i+1) + kurrent + '</button>';
-    slidenav.appendChild(li);
-  });
-
-  slidenav.addEventListener('click', function(event) {
-    if (event.target.localName == 'button') {
-      setSlides(event.target.getAttribute('data-slide'), true);
-    }
-  }, true);
-
-  carousel.className = 'active carousel with-slidenav';
-  carousel.appendChild(slidenav);
-  with_slidenav = true;
 
   index = 0;
   setSlides(index);
@@ -763,6 +731,76 @@ The final outcome then looks and works like this:
 </style>
 
 <script>
+var myCarousel = (function() {
+
+  var carousel, slides, index, slidenav, settings;
+
+  function forEachElement(elements, fn) {
+    for (var i = 0; i < elements.length; i++)
+      fn(elements[i], i);
+  }
+
+  var parseHTML = function(str) {
+    var el =
+    el.innerHTML = str;
+    return el;
+  };
+
+  function init(set) {
+    settings = set;
+    carousel = document.getElementById(settings.id);
+    slides = carousel.querySelectorAll('.slide');
+
+    carousel.className = 'active carousel';
+
+    var ctrls = document.createElement('ul');
+
+    ctrls.className = 'controls';
+    ctrls.innerHTML = '<li>' +
+        '<button type="button" class="btn-prev"><img src="/img/chevron-left.png" alt="Previous Slide"></button>' +
+      '</li>' +
+      '<li>' +
+        '<button type="button" class="btn-next"><img src="/img/chevron-right.png" alt="Next Slide"></button>' +
+      '</li>';
+
+    ctrls.querySelector('.btn-prev').addEventListener('click', function(){
+      prevSlide();
+    });
+
+    ctrls.querySelector('.btn-next').addEventListener('click', function(){
+      nextSlide();
+    });
+
+    carousel.appendChild(ctrls);
+
+    if (settings.slidenav) {
+      slidenav = document.createElement('ul');
+
+      slidenav.className = 'slidenav';
+
+      forEachElement(slides, function(el, i){
+        var li = document.createElement('li');
+        var klass = (i===0) ? 'class="current" ' : '';
+        var kurrent = (i===0) ? ' <span class="visuallyhidden">(Current Slide)</span>' : '';
+
+        li.innerHTML = '<button '+ klass +'data-slide="' + i + '"><span class="visuallyhidden">News</span> ' + (i+1) + kurrent + '</button>';
+        slidenav.appendChild(li);
+      });
+
+      slidenav.addEventListener('click', function(event) {
+        if (event.target.localName == 'button') {
+          setSlides(event.target.getAttribute('data-slide'), true);
+        }
+      }, true);
+
+      carousel.className = 'active carousel with-slidenav';
+      carousel.appendChild(slidenav);
+    }
+
+    index = 0;
+    setSlides(index);
+  }
+
   function setSlides(new_current, setFocus = false) {
 
     new_current = parseFloat(new_current);
@@ -785,7 +823,7 @@ The final outcome then looks and works like this:
     slides[new_prev].className = 'prev slide';
     slides[new_current].className = 'current slide';
 
-    if(with_slidenav) {
+    if(settings.slidenav) {
       var buttons = carousel.querySelectorAll('.slidenav button');
       for (var i = buttons.length - 1; i >= 0; i--) {
         buttons[i].className = "";
@@ -825,69 +863,20 @@ The final outcome then looks and works like this:
 
   }
 
-  var carousel = document.getElementById('c3');
-  var slides = carousel.querySelectorAll('.slide');
-  var index;
-  var with_slidenav = false;
-
-  carousel.className = 'active carousel';
-
-  function forEachElement(elements, fn) {
-    for (var i = 0; i < elements.length; i++)
-      fn(elements[i], i);
+  return {
+    init:init,
+    next:nextSlide,
+    prev:prevSlide,
+    goto:setSlides
   }
+});
 
-  var parseHTML = function(str) {
-    var el =
-    el.innerHTML = str;
-    return el;
-  };
+var c3 = new myCarousel;
+c3.init({
+  id: 'c3',
+  slidenav: true
+});
 
-  var ctrls = document.createElement('ul');
-
-  ctrls.className = 'controls';
-  ctrls.innerHTML = '<li>' +
-      '<button type="button" class="btn-prev"><img src="/img/chevron-left.png" alt="Previous Slide"></button>' +
-    '</li>' +
-    '<li>' +
-      '<button type="button" class="btn-next"><img src="/img/chevron-right.png" alt="Next Slide"></button>' +
-    '</li>';
-
-    ctrls.querySelector('.btn-prev').addEventListener('click', function(){
-      prevSlide();
-    });
-
-    ctrls.querySelector('.btn-next').addEventListener('click', function(){
-      nextSlide();
-    });
-
-  carousel.appendChild(ctrls);
-
-  var slidenav = document.createElement('ul');
-
-  slidenav.className = 'slidenav';
-
-  forEachElement(slides, function(el, i){
-    var li = document.createElement('li');
-    var klass = (i===0) ? 'class="current" ' : '';
-    var kurrent = (i===0) ? ' <span class="visuallyhidden">(Current Slide)</span>' : '';
-
-    li.innerHTML = '<button '+ klass +'data-slide="' + i + '"><span class="visuallyhidden">News</span> ' + (i+1) + kurrent + '</button>';
-    slidenav.appendChild(li);
-  });
-
-  slidenav.addEventListener('click', function(event) {
-    if (event.target.localName == 'button') {
-      setSlides(event.target.getAttribute('data-slide'), true);
-    }
-  }, true);
-
-  carousel.className = 'active carousel with-slidenav';
-  carousel.appendChild(slidenav);
-  with_slidenav = true;
-
-  index = 0;
-  setSlides(index);
 </script>
 
 <style>
@@ -942,34 +931,4 @@ The final outcome then looks and works like this:
 
 {::nomarkdown}
 <%= sample_end %>
-{:/nomarkdown}
-
-***
-
-## Animations
-
-
-- **What to do:** Provide pause and play controls for any carousel set to auto-scroll.
-- **Why:** The scroll speed may be too fast for some users to read its content, while the movement itself can distract other users, preventing them from reading static text on the same page.
-- **How:** Ensure that there is a pause function written into the script and that pause/play buttons are device independent.
-- **Conformance:** This is an overall conformance requirement as well as being required to meet [SC 2.2.2: Pause, Stop, Hide](http://www.w3.org/WAI/WCAG20/quickref/#qr-time-limits-pause)
-
-Whether or not user controls are available to change slide views, any carousel script that causes slides to scroll, rotate or to change automatically must contain a function that enables the user to stop the movement.
-
-This function could be called from a single “Play/Pause” button, where the script also switches between “play” and “pause” images (and their `alt` attributes), or two buttons, one to pause the movement , and the other to restart the scrolling.
-
-![Pause](../img/placeholder.gif) ![Play](../img/placeholder.gif)
-
-The “stop” function should also be called if the user activates any slide selection buttons, to give them time to read or understand the slide.
-
-The carousel should not resume scrolling until and unless the user activates the “play” button.
-
-{::nomarkdown}
-<%= notes_start %>
-{:/nomarkdown}
-
-**Note:** As discussed on the [controls](controls.html) page, all buttons in the carousel should be coded as buttons or have a WAI-ARIA `role` attribute of `button` to let users know that they are controls, not links.
-
-{::nomarkdown}
-<%= notes_end %>
 {:/nomarkdown}
