@@ -1,6 +1,5 @@
 ---
 title: Complete “Table with header cells in the top row only” Example
-status: draft
 source: ../simple.html#table-with-header-cells-in-the-top-row-and-first-column
 layout: fullcode
 ---

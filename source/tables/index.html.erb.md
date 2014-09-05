@@ -3,9 +3,8 @@ title: Tables Concepts
 order: 1
 topic_order: 2
 tutorial_title: Tables
-wcag_success_criteria: 
+wcag_success_criteria:
   - 1.3.1
-status: draft
 type: intro
 editors:
   - Eric Eggert: "http://w3.org/People/yatil/"

@@ -1,6 +1,5 @@
 ---
-title: An alt decision tree
-status: draft
+title: An alt Decision Tree
 order: 9
 type: tips
 editors:
@@ -15,7 +14,7 @@ support: <strong>Developed with support</strong> from the <a href="http://www.w3
 
 -   **Does the image contain text?**
     -   {:.yes} **Yes:**
-        -   **… and the text in the image is also present as *real* text nearby.** 
+        -   **… and the text in the image is also present as *real* text nearby.**
             _Use an empty `alt` attribute._
         -   **… and the text is only shown for visual effects.**
             _Use an empty `alt` attribute._
@@ -28,7 +27,7 @@ support: <strong>Developed with support</strong> from the <a href="http://www.w3
     -   {:.no} **No:**
         - Continue.
 -   **Does the image contribute meaning to the current page or context?**
-    -   {:.yes} **Yes:** 
+    -   {:.yes} **Yes:**
         -   **… and it’s a simple graphic or photograph.**
             _Use a brief description of the image in a way that conveys that meaning in the `alt` attribute. See [Informative Images](informative.html)._
         -   **… and it’s a graph or complex piece of information.**
@@ -38,9 +37,9 @@ support: <strong>Developed with support</strong> from the <a href="http://www.w3
     -   {:.no} **No:**
         -   Continue.
 -   **Is the image purely decorative or not intended for the user?**
-    -   {:.yes} **Yes:** 
+    -   {:.yes} **Yes:**
         - _Use an empty `alt` attribute. See [Decorative Images](decorative.html)._
-    -   {:.no} **No:** 
+    -   {:.no} **No:**
         - Continue.
 -   **Is the image’s use not listed above or it’s unclear what `alt` text to provide?**
     -   {:.yes} This decision tree **does not** cover all cases. For detailed information on the provision of text alternatives refer to the [Image Concepts Page](index.html).

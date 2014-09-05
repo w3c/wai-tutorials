@@ -1,6 +1,5 @@
 ---
 title: Complete Image Maps Example
-status: draft
 source: ../imagemap.html#an-organizational-chart-with-links-to-individual-pages
 layout: fullcode
 ---
