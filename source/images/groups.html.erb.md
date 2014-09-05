@@ -1,8 +1,7 @@
 ---
 title: Groups of Images
-status: draft
 technologies: WAI-ARIA, HTML5
-wcag_techniques: 
+wcag_techniques:
   - G196
   - H67
 order: 7

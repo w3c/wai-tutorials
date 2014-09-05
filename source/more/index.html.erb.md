@@ -1,28 +1,33 @@
 ---
 title: More on the way…
 tutorial_title: More on the way…
-status: draft
 order: 1
 topic_order: 99
 type: intro
 ---
 
-The W3C Education & Outreach Working Group (EOWG) is actively expanding and refining these tutorials. We welcome thoughts and suggestions, also on possible future topics. Send your feedback to the publicly-archived list: <wai-eo-editors@w3.org>.
+The W3C Education & Outreach Working Group (EOWG) is actively expanding and refining these tutorials. We welcome thoughts and suggestions, also on possible future topics. Send your feedback to the [publicly-archived mailing list wai-eo-editors@w3.org](mailto:wai-eo-editors@w3.org) or open an [issue in the public Github repository](https://github.com/w3c/wai-tutorials/issues).
 
-## Possible future topics & tutorials:
+## Upcoming Tutorials in Fall 2014
 
-- **Page Titles**
-- **Headings**
-- **Navigation patterns**
-- **Breadcrumbs**
-- **Dialogs, including modal dialogs**
-- **Notifications**
-- **Tab Panels**
-- **Accordion component**
+- Forms
+- Carousels and Sliders
+- Navigation and Menus
+- Fundamentals
+
+Those tutorials are [in development on Github](https://w3c.github.io/wai-tutorials/).
+
+## Possible Future Topics & Tutorials:
+
+- Accordion component
 - Date picker component
+- Dialogs, including modal dialogs
 - Document structure
+- Headings
+- Page Titles
 - Infographics
-- SVG
 - Icon fonts
-- Tree control
+- Notifications
+- SVG
+- Tab Panels
 - WAI-ARIA

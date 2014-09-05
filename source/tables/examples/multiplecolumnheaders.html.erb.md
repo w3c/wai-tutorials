@@ -1,6 +1,5 @@
 ---
 title: Complete “Table with multiple column headers in each column” Example
-status: draft
 source: ../multi-level.html#table-with-multiple-column-headers-in-each-column
 layout: fullcode
 ---

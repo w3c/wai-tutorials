@@ -1,9 +1,8 @@
 ---
 title: Basic Tables
 order: 2
-status: draft
 technologies: HTML5
-wcag_techniques: 
+wcag_techniques:
   - H51
   - H63
 editors:
@@ -27,7 +26,7 @@ The following table of concerts has the cells in the first row marked up as `<th
 <%= notes_start %>
 {:/nomarkdown}
 
-**Note:** Some screen readers will read “Date – Event – Venue” on the “Venue” cell  because the direction of the `<th>` elements is ambiguous. 
+**Note:** Some screen readers will read “Date – Event – Venue” on the “Venue” cell  because the direction of the `<th>` elements is ambiguous.
 
 {::nomarkdown}
 <%= notes_end %>

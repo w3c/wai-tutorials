@@ -1,9 +1,8 @@
 ---
 title: Multi-level Tables
 order: 5
-status: draft
 technologies: HTML5
-wcag_techniques: 
+wcag_techniques:
   - H43
 editors:
   - Eric Eggert: "http://w3.org/People/yatil/"

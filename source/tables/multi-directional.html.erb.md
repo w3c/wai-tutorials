@@ -1,9 +1,8 @@
 ---
 title: Multi-directional Tables
 order: 3
-status: draft
 technologies: HTML5
-wcag_techniques: 
+wcag_techniques:
   - H51
   - H63
 editors:
@@ -207,7 +206,7 @@ Building on the example above, adding a header row can help to make the table ev
 ## Table with header cells in the top row and first column
 {:.ex}
 
-The following table of opening times has header information in both the top row and the first column. All header cells are marked up as `<th>` cells with `scope` attributes added. 
+The following table of opening times has header information in both the top row and the first column. All header cells are marked up as `<th>` cells with `scope` attributes added.
 
 In the header row, the `col` value for `scope` associates each header cell with the data cells in the column. In the header column, the `row` value associates the individual headers with their rows.
 

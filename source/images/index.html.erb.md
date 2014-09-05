@@ -1,7 +1,6 @@
 ---
 title: Images Concepts
 tutorial_title: Images
-status: draft
 order: 1
 topic_order: 1
 wcag_success_criteria:
