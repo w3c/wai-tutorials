@@ -8,7 +8,7 @@ type: intro
 
 The W3C Education & Outreach Working Group (EOWG) is actively expanding and refining these tutorials. We welcome thoughts and suggestions, also on possible future topics. Send your feedback to the [publicly-archived mailing list wai-eo-editors@w3.org](mailto:wai-eo-editors@w3.org) or open an [issue in the public Github repository](https://github.com/w3c/wai-tutorials/issues).
 
-## Upcoming Tutorials in Fall 2014
+## Upcoming Tutorials
 
 - Forms
 - Carousels and Sliders
