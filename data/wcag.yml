@@ -38,6 +38,16 @@ successcriteria:
       desc: 'All functionality of the content is operable through a keyboard interface without requiring specific timings for individual keystrokes, except where the underlying function requires input that depends on the path of the user’s movement and not just the endpoints.'
       level: A
       slug: keyboard-operation-keyboard-operable
+  - 2.1.2:
+      title: No Keyboard Trap
+      desc: 'If keyboard focus can be moved to a component of the page using a keyboard interface, then focus can be moved away from that component using only a keyboard interface, and, if it requires more than unmodified arrow or tab keys or other standard exit methods, the user is advised of the method for moving focus away.'
+      level: A
+      slug: keyboard-operation-trapping
+  - 2.1.3:
+      title: Keyboard (No Exception)
+      desc: All functionality of the content is operable through a keyboard interface without requiring specific timings for individual keystrokes.
+      level: AAA
+      slug: keyboard-operation-all-funcs
   - 2.2.1:
       title: Timing Adjustable
       desc: 'For each time limit that is set by the content, at least one of the following is true:<ul><li>Turn off: The user is allowed to turn off the time limit before encountering it; or</li>Adjust: The user is allowed to adjust the time limit before encountering it over a wide range that is at least ten times the length of the default setting; or</li><li>Extend: The user is warned before time expires and given at least 20 seconds to extend the time limit with a simple action (for example, "press the space bar"), and the user is allowed to extend the time limit at least ten times; or</li><li>Real-time Exception: The time limit is a required part of a real-time event (for example, an auction), and no alternative to the time limit is possible; or</li><li>Essential Exception: The time limit is essential and extending it would invalidate the activity; or</li><li>20 Hour Exception: The time limit is longer than 20 hours. </li></ul>'
