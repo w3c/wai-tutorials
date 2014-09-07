@@ -16,12 +16,11 @@ Carousels display only a certain part of their content at a time. This content c
 
 - **[Structure](structure.html):** The carousel as a whole and individual slides should have structural markup that enables users access the content of the slides easily.
 - **[Controls](controls.html):** The user needs to be in full control of the carousel, regardless of the input method (mouse, keyboard, touch etc.).
-- **[Actions](actions.html):** When a new slide is displayed, it should also be made visible to assistive technologies and announced properly.
-- (**Visuals:** The status of the carousel, like the current displayed slide, and the slide content must be identifiable, both visually and to people who can’t see them.)
+- **[Animations](animations.html):** Sliders are usually animated. This creates accessibility barriers for many people.
 
 ## Pausing slides
 
-In contrast to other success criteria, providing a mechanism to pause automatic movement is required for the entire page on which the movement occurs. See [conformance requirement 5, Non-Interference)](http://www.w3.org/TR/WCAG20/#cc5).
+In contrast to other success criteria, providing a mechanism to pause automatic movement is required for the entire page on which the movement occurs. See [conformance requirement 5, Non-Interference](http://www.w3.org/TR/WCAG20/#cc5). See [Animations](animations.html) for an example on how to fulfill this criterion.
 
 ## Why is this important?
 
