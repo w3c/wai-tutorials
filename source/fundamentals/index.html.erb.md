@@ -1,5 +1,5 @@
 ---
-title: ◊ Fundamental Information
+title: ◊ Fundamental Concepts
 tutorial_title: Fundamentals
 status: editors-draft
 order: 1
