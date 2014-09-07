@@ -105,10 +105,10 @@ The previous and next slides are positioned left and right from the current slid
 <%= code_end %>
 {:/nomarkdown}
 
-If the next button or the automatic animation is invoked, the script changes the class attribute of the next slide to `current slide` and of the current slide to `prev slide in-transition` to keep it visible. The `in-transition` class is removed after the animation has ended.
+If the next button or the automatic animation is invoked, the script changes the class attribute of the next slide to `current slide` and of the current slide to `prev slide in-transition` to keep it visible. The `in-transition` class is removed after the animation has ended by using the `transitionend` event.
 
 {::nomarkdown}
-<%= code_start('', 'JavaScript') %>
+<%= code_start('', 'JavaScript: Setting slides') %>
 {:/nomarkdown}
 
 ~~~js
@@ -117,51 +117,74 @@ slides[new_next].className =
   'next slide' + ((transition == 'next') ? ' in-transition' : '');
 slides[new_prev].className =
   'prev slide' + ((transition == 'prev') ? ' in-transition' : '');
-
-setTimeout(function () {
-  removeClass(
-    carousel.querySelector('.slide.prev'), 'in-transition'
-  );
-  removeClass(
-    carousel.querySelector('.slide.next'), 'in-transition'
-  );
-}, 610);
 ~~~
 
 {::nomarkdown}
 <%= code_end %>
 {:/nomarkdown}
 
-The duration of the CSS3 sliding animation is 0.6s or 600ms, so the class `in-transition` is removed after 610ms to make sure that the animation was successful before the previous/next slide is hidden again.
 
-***
+{::nomarkdown}
+<%= code_start('', 'JavaScript: In initialization') %>
+{:/nomarkdown}
 
-- **What to do:** Provide pause and play controls for any carousel set to auto-scroll.
-- **Why:** The scroll speed may be too fast for some users to read its content, while the movement itself can distract other users, preventing them from reading static text on the same page.
-- **How:** Ensure that there is a pause function written into the script and that pause/play buttons are device independent.
+~~~js
+var slidewrapper = slides[0].parentNode;
 
-Whether or not user controls are available to change slide views, any carousel script that causes slides to scroll, rotate or to change automatically must contain a function that enables the user to stop the movement.
+slidewrapper.addEventListener('transitionend', function (event) {
+  var slide = event.target;
+  removeClass(slide, 'in-transition');
+  if (setFocus && hasClass(slide, 'current')) {
+    slide.setAttribute('tabindex', '-1');
+    slide.focus();
+    setFocus = false;
+  }
+});
+~~~
 
-This function could be called from a single “Play/Pause” button, where the script also switches between “play” and “pause” images (and their `alt` attributes), or two buttons, one to pause the movement , and the other to restart the scrolling.
+{::nomarkdown}
+<%= code_end %>
+{:/nomarkdown}
 
-![Pause](../img/placeholder.gif) ![Play](../img/placeholder.gif)
+The slide that is currently active is highlighted in the slide list and a play/pause button is added. Additionally, the animation should stop when an element inside the carousel receives focus or the mouse is hovering over the carousel and continue when the focus is lost or the mouse stops hovering.
 
-The “stop” function should also be called if the user activates any slide selection buttons, to give them time to read or understand the slide.
+{::nomarkdown}
+<%= code_start('', 'JavaScript: In initialization') %>
+{:/nomarkdown}
 
-The carousel should not resume scrolling until and unless the user activates the “play” button.
+~~~js
+carousel.addEventListener('mouseenter', suspendAnimation);
+carousel.addEventListener('mouseleave', startAnimation);
+
+carousel.addEventListener('focusin',
+  function(event) {
+    if (!hasClass(event.target, 'slide')) {
+      suspendAnimation();
+    }
+  }
+);
+carousel.addEventListener('focusout',
+  function(event) {
+    if (!hasClass(event.target, 'slide')) {
+      startAnimation();
+    }
+  }
+);
+~~~
+
+{::nomarkdown}
+<%= code_end %>
+{:/nomarkdown}
 
 {::nomarkdown}
 <%= notes_start %>
 {:/nomarkdown}
 
-**Note:** As discussed on the [controls](controls.html) page, all buttons in the carousel should be coded as buttons or have a WAI-ARIA `role` attribute of `button` to let users know that they are controls, not links.
+**Note:** The [`focusin`](http://www.w3.org/TR/DOM-Level-3-Events/#event-type-focusIn) and [`focusout`](http://www.w3.org/TR/DOM-Level-3-Events/#event-type-focusout) events are defined in the [W3C Document Object Model (DOM) Level 3 Events Specification](http://www.w3.org/TR/DOM-Level-3-Events/) (Working Draft) and implemented in many browsers. Firefox needs [a short polyfill](examples/focusinoutpolyfill.js) at the time of publication of this tutorial.
 
 {::nomarkdown}
 <%= notes_end %>
 {:/nomarkdown}
-
-
-***
 
 <style>
   .carousel, .slide {
@@ -313,9 +336,40 @@ The carousel should not resume scrolling until and unless the user activates the
 </style>
 
 <script>
+/* focusin/out event polyfill (firefox) */
+!function(){
+  var w = window,
+  d = w.document;
+
+  if( w.onfocusin === undefined ){
+    d.addEventListener('focus' ,addPolyfill ,true);
+    d.addEventListener('blur' ,addPolyfill ,true);
+    d.addEventListener('focusin' ,removePolyfill ,true);
+    d.addEventListener('focusout' ,removePolyfill ,true);
+  }
+  function addPolyfill(e){
+    var type = e.type === 'focus' ? 'focusin' : 'focusout';
+    var event = new CustomEvent(type, { bubbles:true, cancelable:false });
+    event.c1Generated = true;
+    e.target.dispatchEvent( event );
+  }
+  function removePolyfill(e){
+if(!e.c1Generated){ // focus after focusin, so chrome will the first time trigger tow times focusin
+  d.removeEventListener('focus' ,addPolyfill ,true);
+  d.removeEventListener('blur' ,addPolyfill ,true);
+  d.removeEventListener('focusin' ,removePolyfill ,true);
+  d.removeEventListener('focusout' ,removePolyfill ,true);
+}
+setTimeout(function(){
+  d.removeEventListener('focusin' ,removePolyfill ,true);
+  d.removeEventListener('focusout' ,removePolyfill ,true);
+});
+}
+}();
+
 var myCarousel = (function() {
 
-  var carousel, slides, index, slidenav, settings, timer;
+  var carousel, slides, index, slidenav, settings, timer, setFocus, animationSuspended;
 
   function forEachElement(elements, fn) {
     for (var i = 0; i < elements.length; i++)
@@ -327,6 +381,14 @@ var myCarousel = (function() {
       el.classList.remove(className);
     } else {
       el.className = el.className.replace(new RegExp('(^|\\b)' + className.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
+    }
+  }
+
+  function hasClass(el, className) {
+    if (el.classList) {
+      return el.classList.contains(className);
+    } else {
+      return new RegExp('(^| )' + className + '( |$)', 'gi').test(el.className);
     }
   }
 
@@ -347,13 +409,10 @@ var myCarousel = (function() {
         '<button type="button" class="btn-next"><img src="/img/chevron-right.png" alt="Next Slide"></button>' +
       '</li>';
 
-    ctrls.querySelector('.btn-prev').addEventListener('click', function(){
-      prevSlide();
-    });
-
-    ctrls.querySelector('.btn-next').addEventListener('click', function(){
-      nextSlide();
-    });
+    ctrls.querySelector('.btn-prev')
+      .addEventListener('click', prevSlide);
+    ctrls.querySelector('.btn-next')
+      .addEventListener('click', nextSlide);
 
     carousel.appendChild(ctrls);
 
@@ -389,12 +448,12 @@ var myCarousel = (function() {
         var button = event.target;
         if (button.localName == 'button') {
           if (button.getAttribute('data-slide')) {
-            stopAutomation();
+            stopAnimation();
             setSlides(button.getAttribute('data-slide'), true);
           } else if (button.getAttribute('data-stop')) {
-            stopAutomation();
+            stopAnimation();
           } else if (button.getAttribute('data-start')) {
-            startAutomation();
+            startAnimation();
           }
         }
       }, true);
@@ -403,18 +462,40 @@ var myCarousel = (function() {
       carousel.appendChild(slidenav);
     }
 
+      slides[0].parentNode.addEventListener('transitionend', function (event) {
+        var slide = event.target;
+        removeClass(slide, 'in-transition');
+        if (setFocus && hasClass(slide, 'current')) {
+          slide.setAttribute('tabindex', '-1');
+          slide.focus();
+          setFocus = false;
+        }
+      });
+
+      carousel.addEventListener('mouseenter', suspendAnimation);
+      carousel.addEventListener('mouseleave', startAnimation);
+
+      carousel.addEventListener('focusin', function(event) {
+        if (!hasClass(event.target, 'slide')) {
+          suspendAnimation();
+        }
+      });
+      carousel.addEventListener('focusout', function(event) {
+        if (!hasClass(event.target, 'slide')) {
+          startAnimation();
+        }
+      });
+
     index = 0;
     setSlides(index);
 
      if (settings.startAnimated) {
-      timer = setTimeout(function () {
-        nextSlide();
-      }, 5000);
+      timer = setTimeout(nextSlide, 5000);
     }
   }
 
-  function setSlides(new_current, setFocus, transition) {
-    setFocus = typeof setFocus !== 'undefined' ? setFocus : false;
+  function setSlides(new_current, setFocusHere, transition) {
+    setFocus = typeof setFocusHere !== 'undefined' ? setFocusHere : false;
     transition = typeof transition !== 'undefined' ? transition : 'none';
 
     new_current = parseFloat(new_current);
@@ -441,21 +522,14 @@ var myCarousel = (function() {
     if(settings.slidenav) {
       var buttons = carousel.querySelectorAll('.slidenav button[data-slide]');
       for (var j = buttons.length - 1; j >= 0; j--) {
-        buttons[j].className = "";
+        buttons[j].className = '';
+        buttons[j].innerHTML = '<span class="visuallyhidden">News</span> ' + (j+1);
       }
       buttons[new_current].className = "current";
+      buttons[new_current].innerHTML = '<span class="visuallyhidden">News</span> ' + (new_current+1) + ' <span class="visuallyhidden">(Current Slide)</span>';
     }
 
     index = new_current;
-
-    setTimeout(function () {
-      removeClass(carousel.querySelector('.slide.prev'), 'in-transition');
-      removeClass(carousel.querySelector('.slide.next'), 'in-transition');
-      if (setFocus) {
-        slides[new_current].setAttribute('tabindex', '-1');
-        slides[new_current].focus();
-      }
-    }, 610);
 
   }
 
@@ -471,9 +545,7 @@ var myCarousel = (function() {
     setSlides(new_current, false, 'prev');
 
     if (settings.animate) {
-      timer = setTimeout(function () {
-        nextSlide();
-      }, 5000);
+      timer = setTimeout(nextSlide, 5000);
     }
 
   }
@@ -490,24 +562,32 @@ var myCarousel = (function() {
 
   }
 
-  function stopAutomation() {
+  function stopAnimation() {
     clearTimeout(timer);
     settings.animate = false;
+    animationSuspended = false;
     _this = carousel.querySelector('[data-stop], [data-start]');
     _this.innerHTML = '<span class="visuallyhidden">Start Animation </span>▶';
     _this.removeAttribute('data-stop');
     _this.setAttribute('data-start', 'true');
   }
 
-  function startAutomation() {
+  function startAnimation() {
     settings.animate = true;
-    timer = setTimeout(function () {
-      nextSlide();
-    }, 5000);
+    animationSuspended = false;
+    timer = setTimeout(nextSlide, 5000);
     _this = carousel.querySelector('[data-stop], [data-start]');
     _this.innerHTML = '<span class="visuallyhidden">Stop Animation </span>￭';
     _this.setAttribute('data-stop', 'true');
     _this.removeAttribute('data-start');
+  }
+
+  function suspendAnimation() {
+    if(settings.animate) {
+      clearTimeout(timer);
+      settings.animate = false;
+      animationSuspended = true;
+    }
   }
 
   return {
@@ -515,8 +595,8 @@ var myCarousel = (function() {
     next:nextSlide,
     prev:prevSlide,
     goto:setSlides,
-    stop:stopAutomation,
-    start:startAutomation
+    stop:stopAnimation,
+    start:startAnimation
   };
 });
 
