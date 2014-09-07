@@ -1,7 +1,7 @@
 ---
 title: Hiding Content
 status: editors-draft
-order: 2
+order: 4
 type: tips
 wcag_techniques:
   - C7: Using CSS to hide a portion of the link text

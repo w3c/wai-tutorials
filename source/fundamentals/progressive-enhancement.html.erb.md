@@ -1,6 +1,6 @@
 ---
 title: ◊ Progressive Enhancement
 status: editors-draft
-order: 4
+order: 6
 type: tips
 ---

@@ -1,7 +1,7 @@
 ---
 title: Color
 status: editors-draft
-order: 5
+order: 2
 type: tips
 wcag_techniques:
   - G138
