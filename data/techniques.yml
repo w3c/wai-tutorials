@@ -1,4 +1,6 @@
 techniques:
+  - ARIA12: Using role=heading to identify headings
+  - C7: Using CSS to hide a portion of the link text
   - C22: Using CSS to control visual presentation of text
   - G17: Ensuring that a contrast ratio of at least 7:1 exists between text (and images of text) and background behind the text
   - G18: Ensuring that a contrast ratio of at least 4.5:1 exists between text (and images of text) and background behind the text
@@ -13,6 +15,8 @@ techniques:
   - G130: Providing descriptive headings
   - G131: Providing descriptive labels
   - G133: Providing a checkbox on the first page of a multipart form that allows users to ask for longer session time limit or no session time limit
+  - G138: Using semantic markup whenever color cues are used
+  - G141: Organizing a page using headings
   - G155: Providing a checkbox in addition to a submit button
   - G162: Positioning labels to maximize predictability of relationships
   - G164: Providing a stated time within which an online request (or transaction) may be amended or canceled by the user after making the request
@@ -20,6 +24,7 @@ techniques:
   - G168: Requesting confirmation to continue with selected action
   - G196: Using a text alternative on one item within a group of images that describes all items in the group
   - G180: Providing the user with a means to set the time limit to 10 times the default time limit
+  - G183: Using a contrast ratio of 3:1 with surrounding text and providing additional visual cues on focus for links or controls where color alone is used to identify them
   - G198: Providing a way for the user to turn the time limit off
   - H2: Combining adjacent image and text links for the same resource
   - H24: Providing text alternatives for the area elements of image maps
@@ -34,8 +39,11 @@ techniques:
   - H51: Using table markup to present tabular data
   - H63: Using the scope attribute to associate header cells and data cells in data tables
   - H67: Using null alt text and no title attribute on img elements for images that AT should ignore
+  - H69: Providing heading elements at the beginning of each section of content
   - H71: Providing a description for groups of form controls using fieldset and legend elements
   - H73: Using the summary attribute of the table element
+  - H80: Identifying the purpose of a link using link text combined with the preceding heading element
   - H93: Ensuring that id attributes are unique on a Web page
+  - PDF9: Providing headings by marking content with heading tags in PDF documents
   - SCR1: Allowing the user to extend the default time limit
   - SCR16: Providing a script that warns the user a time limit is about to expire
