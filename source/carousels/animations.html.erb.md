@@ -403,10 +403,10 @@ var myCarousel = (function() {
 
     ctrls.className = 'controls';
     ctrls.innerHTML = '<li>' +
-        '<button type="button" class="btn-prev"><img src="/img/chevron-left.png" alt="Previous Slide"></button>' +
+        '<button type="button" class="btn-prev"><img src="../../img/chevron-left.png" alt="Previous Slide"></button>' +
       '</li>' +
       '<li>' +
-        '<button type="button" class="btn-next"><img src="/img/chevron-right.png" alt="Next Slide"></button>' +
+        '<button type="button" class="btn-next"><img src="../../img/chevron-right.png" alt="Next Slide"></button>' +
       '</li>';
 
     ctrls.querySelector('.btn-prev')

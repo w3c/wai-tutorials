@@ -190,12 +190,12 @@ var ctrls = document.createElement('ul');
 ctrls.className = 'controls';
 ctrls.innerHTML = '<li>' +
     '<button type="button" class="btn-prev">' +
-      '<img src="/img/chevron-left.png" alt="Previous Slide">' +
+      '<img src="../../img/chevron-left.png" alt="Previous Slide">' +
     '</button>' +
   '</li>' +
   '<li>' +
     '<button type="button" class="btn-next">' +
-      '<img src="/img/chevron-right.png" alt="Next Slide">' +
+      '<img src="../../img/chevron-right.png" alt="Next Slide">' +
     '</button>' +
   '</li>';
 
