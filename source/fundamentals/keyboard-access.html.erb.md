@@ -6,6 +6,7 @@ type: tips
 wcag_success_criteria:
   - 2.1.1
   - 2.1.2
+  - 2.4.3
   - 2.4.7
 wcag_techniques:
   - G202
@@ -17,6 +18,7 @@ wcag_techniques:
   - SCR29
   - G21
   - FLASH17
+  - G59
 ---
 
 Keyboard access is the foundation of websites that are accessible to assistive technology. For example, screen reader users are only able to navigate the page using the keyboard. Other users use other devices that basically translate the user’s instructions into keyboard commands.

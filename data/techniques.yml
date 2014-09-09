@@ -6,6 +6,7 @@ techniques:
   - G17: Ensuring that a contrast ratio of at least 7:1 exists between text (and images of text) and background behind the text
   - G18: Ensuring that a contrast ratio of at least 4.5:1 exists between text (and images of text) and background behind the text
   - G21: Ensuring that users are not trapped in content
+  - G59: Placing the interactive elements in an order that follows sequences and relationships within the content
   - G73: Providing a long description in another location with a link to it that is immediately adjacent to the non-text content
   - G74: "Providing a long description in text near the non-text content, with a reference to the location of the long description in the short description"
   - G83: Providing text descriptions to identify required fields that were not completed

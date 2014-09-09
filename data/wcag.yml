@@ -63,6 +63,11 @@ successcriteria:
       desc: 'A mechanism is available to bypass blocks of content that are repeated on multiple Web pages.'
       level: A
       slug: navigation-mechanisms-skip
+  - 2.4.3:
+      title: "Focus Order"
+      desc: 'If a Web page can be navigated sequentially and the navigation sequences affect meaning or operation, focusable components receive focus in an order that preserves meaning and operability.'
+      level: A
+      slug: navigation-mechanisms-focus-order
   - 2.4.6:
       title: "Headings and Labels"
       desc: "Headings and labels describe topic or purpose."
