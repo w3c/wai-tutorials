@@ -16,7 +16,7 @@ There are four approaches on how to inform the user about the state of the form,
 
 1. … through the main [heading and page title](#heading-title).
 2. … through a [list of erroneous fields](#error-list).
-3. … trough [in-line messages](#inline) near the affected form fields.
+3. … through [in-line messages](#inline) near the affected form fields.
 4. … [instantly](#instant) while entering data into a field.
 
 ##  Notifications in the Main Heading and Page Title
