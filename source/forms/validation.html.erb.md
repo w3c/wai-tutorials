@@ -16,7 +16,7 @@ wcag_techniques:
 
 In addition to providing instructions, validate user input to help users avoid mistakes. HTML5 provides a range of built-in functionality to check common types of input, like email addresses and dates. In some cases, such as for custom controls, additional scripting may be necessary to validate user input.
 
-## Validating required input
+## Validating Required Input
 {:.newex}
 
 Forms frequently include required controls that need to be clearly highlighted through their labels. In addition, the `required` attribute can be added to the form element, to indicate this requirement programmatically. Most current web browsers support this attribute. They will communicate missing required input to the user, using the standard dialog mechanisms of the web browser. Ideally these dialogs respect the settings and preferences of the user, including any relevant settings made in the operating system, such as font-sizes and colors.
@@ -57,7 +57,7 @@ Forms frequently include required controls that need to be clearly highlighted t
 <%= notes_end %>
 {:/nomarkdown}
 
-## Validating common input
+## Validating Common Input
 {:.newex}
 
 HTML5 also provides input types for other data, like `email`, `url`, `number`, `range`, `date`, or `time`. Most common web browsers support these features and handle the input checking. In addition, they help user provide the input by providing controls such as date pickers and custom on-screen keyboards.
@@ -156,7 +156,7 @@ The example below shows these HTML5 input types. They are displayed as simple `t
 <%= notes_end %>
 {:/nomarkdown}
 
-## Validating custom input
+## Validating Custom Input
 {:.newex}
 
 The HTML5 `pattern` attribute allows the use of regular expressions to specify custom formats for the input. This is useful for specific types of data patterns such as telephone numbers, postal codes, and serial numbers.
@@ -196,8 +196,30 @@ In the example below, the `pattern` attribute of the `input` element specifies a
 <%= code_end %>
 {:/nomarkdown}
 
-## Note on input validation
+## A Note on Input Validation
 
 Where possible, validation should accommodate different input options to make forms easier to complete. For example, telephone numbers are often written with different separators and digit groupings, and your form will be easier to use if it can interpret multiple notations.
 
 Client-side validation has many benefits. In general responses are quicker when validation is carried out on the client-side and users do not need to leave the page. This can also reduce network and server load. However, not all web browsers may support HTML5 or any custom validation scripts, so that validation needs to be carried out server-side as well.
+
+## Other Methods to Validate a User’s Intent
+
+### Add undo mechanisms for _reversible_ changes
+
+If a change by the user can be easily reversed or canceled, it is useful to provide this functionality. Examples:
+
+* A Content Management System (CMS) has the ability to delete unwanted comments. Instead of deleting them right away, they get stored in a ”trash” folder and can be easily restored.
+
+* A web email application allows users to “undo” sending of an email for a few seconds. This is useful if the user forgot to attach a file or sent the email to the wrong recipient.
+
+* A shopping website lets users cancel purchases up to 24 hours after the order is submitted. The website explains their policy, and includes a summary of the policy on the purchase receipt emailed to the user. After 24 hours, the purchase will be shipped to the user and can no longer be canceled.
+
+### Add confirmation mechanisms for _irreversible_ changes
+
+If a form submission results in the deletion of data, the user should be required to confirm the decision either by using a checkbox or selecting “Yes” or “OK” in a confirmation dialog. Examples:
+
+* In a Content Management System (CMS) comments can be deleted (for good) from the trash folder. When the user clicks on the “Empty trash” icon, a confirmation dialog box asks “Are you sure to delete 42 comments?” The action is only carried out if the user choses the “OK” or “Yes” button.
+
+* A bank won’t be able to revert currency exchange transactions, as charges or changes in exchange rates would increase cost for their customers. After collecting the account data and the amount to exchange, and before the submit button, a checkbox with a label “I have checked that the amount I wish to transfer is correct.” is placed. The form can’t be submitted unless the checkbox is checked.
+
+* The checkout page on a shopping website includes a form that collects order, shipping and billing information. After submitting the form, the user is taken to another page where the information they have submitted is summarized for review. Below the summary, The user must activate a “complete order” button on the review page to complete the transaction.
