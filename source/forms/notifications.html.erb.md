@@ -14,12 +14,12 @@ Notifications provide feedback to users to indicate that the form sent with or w
 
 There are four approaches on how to inform the user about the state of the form, that can work together to provide users the best notifications according to their needs. Notifications can be provided …
 
-1. … through the main [heading and/or page title](#heading-title).
+1. … through the main [heading and page title](#heading-title).
 2. … through a [list of erroneous fields](#error-list).
 3. … trough [in-line messages](#inline) near the affected form fields.
 4. … [instantly](#instant) while entering data into a field.
 
-##  Notifications in the Main Heading and/or Page Title
+##  Notifications in the Main Heading and Page Title
 {:#heading-title}
 
 It is important that the user gets notified of errors or success as soon as possible after he sent the form. A common place to put this information is the main page [heading](/fundamentals/headings.html), usually a `<h1>`or `<h2>` element.

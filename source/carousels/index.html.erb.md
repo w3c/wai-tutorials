@@ -12,7 +12,7 @@ wcag_success_criteria:
   - 4.1.2
 ---
 
-Carousels display only a certain part of their content at a time. This content can be basically anything, from images to headings or complete teasers. Carousels that only contain images are often called „Slideshows“ or “Sliders”. As carousels are interactive elements on a page showing and hiding content from the user, a variety of considerations have to be included in development:
+Carousels display only a certain part of their content at a time. This content can be basically anything, from images to headings or complete teasers. Carousels that only contain images are often called “Slideshows” or “Sliders”. As carousels are interactive elements on a page showing and hiding content from the user, a variety of considerations have to be included in development:
 
 - **[Structure](structure.html):** The carousel as a whole and individual slides should have structural markup that enables users access the content of the slides easily.
 - **[Controls](controls.html):** The user needs to be in full control of the carousel, regardless of the input method (mouse, keyboard, touch etc.).
