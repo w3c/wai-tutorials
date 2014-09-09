@@ -14,19 +14,19 @@ type: intro
 
 Forms are usually the main interaction component in websites and web applications. They’re used to send information to the server or for input and output in client-side JavaScript applications.
 
-- **[Labeling Controls](labels.html)** Use the `<label>` element, and, in rare cases, the `title` attribute, to indentify each form control.
+- **[Labeling Controls](labels.html):** Use the `<label>` element, and, in rare cases, the `title` attribute, to indentify each form control.
 
-- **[Grouping Controls](grouping.html)** Use the `<fieldset>` and `<legend>` elements to group and associate related form controls.
+- **[Grouping Controls](grouping.html):** Use the `<fieldset>` and `<legend>` elements to group and associate related form controls.
 
-- **[Form Instructions](instructions.html)** Provide instructions to help users understand how to complete the form and individual form controls.
+- **[Form Instructions](instructions.html):** Provide instructions to help users understand how to complete the form and individual form controls.
 
-- **[Validating Input](validation.html)** Use built-in HTML5 features, and, where needed, custom scripts to validate user input and help users avoid mistakes.
+- **[Validating Input](validation.html):** Use built-in HTML5 features, and, where needed, custom scripts to validate user input and help users avoid mistakes.
 
-- **[User Interaction](error-messages.html)** Provide feedback to users to indicate errors, successes, and so that they can undo or confirm changes.
+- **[User Notifications](notifications.html):** Provide feedback to users to indicate errors, successes, and so that they can undo or confirm changes.
 
-- **[Multi-Step Forms](multi-step.html)** Divide long forms into multiple smaller forms that constitute a series of logical steps or stages.
+- **[Multi-Step Forms](multi-step.html):** Divide long forms into multiple smaller forms that constitute a series of logical steps or stages.
 
-- **[Custom Controls](in-disguise.html)** Use stylized form elements and other progressive enhancement techniques to provide custom controls.
+- **[Custom Controls](custom-controls.html):** Use stylized form elements and other progressive enhancement techniques to provide custom controls.
 
 ## Why is this important?
 
