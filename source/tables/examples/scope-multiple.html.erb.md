@@ -1,6 +1,5 @@
 ---
 title: Complete “Table with headers spanning multiple rows or columns” Example
-status: draft
 source: ../irregular.html#table-with-headers-spanning-multiple-rows-or-columns
 layout: fullcode
 ---

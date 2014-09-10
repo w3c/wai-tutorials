@@ -100,11 +100,17 @@ helpers do
     '</div></figure>'
   end
 
-  def sample_start(status = "")
+  def sample_start(status = "", title = "")
+    if title
+    '<figure class="sample '+ status +'">
+  <figcaption>Example: ' + title + '</figcaption>
+  <div class="box-content">'
+    else
     '
   <figure class="sample '+ status +'">
   <figcaption>Example</figcaption>
   <div class="box-content">'
+    end
   end
 
   def sample_end

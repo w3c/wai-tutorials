@@ -1,6 +1,5 @@
 ---
 title: Attributions
-status: draft
 layout: overview
 order: 1
 ---

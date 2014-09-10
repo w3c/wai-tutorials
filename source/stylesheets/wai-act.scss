@@ -141,12 +141,6 @@ h2 {
 	}
 }
 
-code {
-	font-size-adjust: 0.45;
-	font-size:1em;
-	line-height: 1;
-}
-
 // Header
 
 header[role=banner] {
@@ -635,6 +629,16 @@ a {
 	}
 }
 
+.not-w3c-notification {
+	display:block;
+	float:none !important;
+	background-color:#FCC;
+	padding: .65em .5em;
+	font-weight: bold;
+	a {
+		border-bottom:2px solid;
+	}
+}
 
 
 %noting {
@@ -1134,37 +1138,6 @@ select {
 }
 
 /* ====== HELPERS ======== EDIT ABOVE! ======== */
-
-/*
-* Hide only visually, but have it available for screenreaders: h5bp.com/v
-*/
-
-.visuallyhidden {
-	border: 0;
-	clip: rect(0 0 0 0);
-	height: 1px;
-	margin: -1px;
-	overflow: hidden;
-	padding: 0;
-	position: absolute;
-	width: 1px;
-}
-
-/*
-* Extends the .visuallyhidden class to allow the element to be focusable
-* when navigated to via the keyboard: h5bp.com/p
-*/
-
-.visuallyhidden.hasfocus,
-.visuallyhidden.focusable:active,
-.visuallyhidden.focusable:focus {
-	clip: auto;
-	height: auto;
-	margin: 0;
-	overflow: visible;
-	position: static;
-	width: auto;
-}
 
 // Grid System
 

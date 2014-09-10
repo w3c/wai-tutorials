@@ -1,7 +1,6 @@
 ---
 title: Irregular Tables
 order: 4
-status: draft
 technologies: HTML5
 wcag_techniques:
   - H63
@@ -29,9 +28,9 @@ If neither a column nor a row group is defined in the markup, the header cell is
 ## Table with two tier headers
 {:.ex}
 
-In the table below, there are two pairs of column headers. Each pair of column headers, “Produced” and “Sold” is associated with a first-level header that identifies the pair: “Mars” and “Venus”. These first-level headers are made to span two columns by using the `colspan` attribute with the value of `2`. 
+In the table below, there are two pairs of column headers. Each pair of column headers, “Produced” and “Sold” is associated with a first-level header that identifies the pair: “Mars” and “Venus”. These first-level headers are made to span two columns by using the `colspan` attribute with the value of `2`.
 
-To associate the first-level headers properly with the cells both columns, the column structure needs to be defined at the beginning of the table. A `<col>` element identifies each column, beginning on the left. If a header spans two or more columns, use a `<colgroup>` element instead of that number of `<col>` elements, and the number of columns spanned is noted in the `span` attribute. 
+To associate the first-level headers properly with the cells both columns, the column structure needs to be defined at the beginning of the table. A `<col>` element identifies each column, beginning on the left. If a header spans two or more columns, use a `<colgroup>` element instead of that number of `<col>` elements, and the number of columns spanned is noted in the `span` attribute.
 
 In addition, the value of the `scope` attribute in the first-level headers is set to `colgroup` so that it is associated with the entire group of columns. The second-level headers only apply to the corresponding column so the `scope` attribute is set to `col` as shown in previous examples.
 

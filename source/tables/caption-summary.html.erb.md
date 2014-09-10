@@ -1,9 +1,8 @@
 ---
 title: Caption & Summary
 order: 6
-status: draft
 technologies: HTML4, HTML5, WAI-ARIA
-wcag_techniques: 
+wcag_techniques:
   - H73
   - H39
 editors:
@@ -201,7 +200,7 @@ If implemented this way, the summary is available to visual users as well.
 ### Using `aria-describedby` to provide a table summary
 {:.ap}
 
-In this approach an element with an `id` attribute is associated as a summary by using the `aria-describedby` attribute of the table. Any element with a unique `id` attribute can be used as a summary for a table in this way. 
+In this approach an element with an `id` attribute is associated as a summary by using the `aria-describedby` attribute of the table. Any element with a unique `id` attribute can be used as a summary for a table in this way.
 
 The element containing the summary doesn’t need to be in front of the table in the document, but it helps users to discover the summary more easily if the summary is in close proximity of the table, especially if they are not using a screen reader.
 
@@ -277,7 +276,7 @@ The element containing the summary doesn’t need to be in front of the table in
 ### Using the `<figure>` element to mark up a table summary
 {:.ap}
 
-In this approach the table is wrapped in a `<figure>` element. The `<figcaption>` element contains the caption and summary text. 
+In this approach the table is wrapped in a `<figure>` element. The `<figcaption>` element contains the caption and summary text.
 
 Screen reader users navigating in “Tables Mode” are usually unable to identify a table by a caption applied like this. The caption part of the `<figcaption>` element can be explicitly associated to the table by using the `aria-labelledby` attribute and the summary part by using the `aria-describedby` attributes. Note that this could lead to the caption and summary being read out multiple times.
 
@@ -441,7 +440,7 @@ See WCAG 2.0 technique [H73: Using the summary attribute of the table element to
 {:/nomarkdown}
 
 ~~~ html
-<table 
+<table
   summary="Column one has the location and size of accommodation, other columns show the type and number of properties available.">
 ~~~
 

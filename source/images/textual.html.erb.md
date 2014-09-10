@@ -1,8 +1,7 @@
 ---
 title: Images of Text
-status: draft
 technologies: WAI-ARIA, HTML5, CSS Transforms, CSS Fonts, MathML
-wcag_techniques: 
+wcag_techniques:
   - C22
   - G94
 order: 5

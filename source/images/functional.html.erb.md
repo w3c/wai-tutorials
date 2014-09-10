@@ -1,8 +1,7 @@
 ---
 title: Functional Images
-status: draft
 technologies: HTML5
-wcag_techniques: 
+wcag_techniques:
   - H37
   - H36
 order: 4

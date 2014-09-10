@@ -1,6 +1,5 @@
 ---
 title: Long description
-status: draft
 source: ../complex.html#image-containing-substantial-information
 layout: fullcode
 ---

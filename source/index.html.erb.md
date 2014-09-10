@@ -1,7 +1,6 @@
 ---
 title: "Tutorials Overview"
 nav_title: "Tutorials: Overview"
-status: draft
 layout: overview
 order: 1
 editors:
@@ -14,7 +13,6 @@ contributors:
   - Bim Egan
   - the Education and Outreach Working Group (<a href="http://www.w3.org/WAI/EO/">EOWG</a>)
 support: <strong>Developed with support</strong> from the <a href="http://www.w3.org/WAI/ACT/">WAI-ACT</a> project, co-funded by the European Commission <abbr title="Information Society Technologies">IST</abbr> Programme.
-
 ---
 
 These tutorials show you how to develop web content that is accessible to people with disabilities and that provides a better user experience for everyone.
@@ -37,7 +35,7 @@ Web authoring tools (Content Management Systems (CMS), <abbr title="What you see
 
 -   **[Tables](tables/index.html):** Find out how you can add structural information to tables so that assistive technology can identify the relationship between table headers and data.
 
-Additional tutorials are planned and will be added here once they are completed and reviewed.
+[Additional tutorials](more/index.html) are planned and will be added here once they are completed and reviewed.
 
 ## Additional Resources
 
