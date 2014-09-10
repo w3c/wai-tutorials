@@ -37,7 +37,7 @@ The heading has to be in the correct heading structure of the document, for exam
 
 ## Carousel Skeleton
 
-Depending on the content of the individual slides, a there are some possibilities of how the basic skeleton may look like. For a simple list of images or teasers, a list (`<ul>`) may be perfectly sufficient, if complete articles are the content of the carousel, the use of `<article>` elements for every slide may be more appropriate.
+Depending on the content of the individual slides, a there are some possibilities of how the basic skeleton may look like. For a simple list of images or teasers, a list (`<ul>`) may be perfectly sufficient, if complete articles are the content of the carousel, the use of `<article>` elements for every slide might be more appropriate.
 
 {::nomarkdown}
 <%= code_start('', 'Simple content') %>
@@ -73,7 +73,7 @@ Depending on the content of the individual slides, a there are some possibilitie
 <%= code_end %>
 {:/nomarkdown}
 
-To allow semantic flexibility, CSS should use classes to make the carousel look good. Those classes should also be used in the JavaScript to provide the necessary interaction. Note that there are no elements in the code for buttons or pagination indicators, as they are only added with JavaScript when they are needed. This [Progressive Enhancement](/background/progressive-enhancement.html) principle makes sure that the content is always available even if the JavaScript fails to load.
+To allow semantic flexibility, CSS and JavaScript should be based on the class names of the elements of the various carousel parts. As they wouldn’t work without JavaScript anyway, no buttons to go to other slides are added in the markup. Instead they will be added by the JavaScript that drives them later in this tutorial. This [Progressive Enhancement](/background/progressive-enhancement.html) principle will make sure that the content is available even if the JavaScript fails to load and makes sure that there are no controls on the page which don’t work.
 
 ## Slide Construction
 
