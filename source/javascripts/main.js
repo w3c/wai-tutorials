@@ -155,13 +155,13 @@
   Array.prototype.forEach.call(elements, function(el, i){ // … .each(…)
     var cplel = plel.cloneNode(true);
     cplel.setAttribute('href', '#' + el.id);
-    //el.appendChild(spc.cloneNode(true));
+    el.appendChild(spc.cloneNode(true));
 
     el.insertAdjacentHTML('beforeend', cplel.outerHTML);
 
   });
 
-  if (window.location.hostname !== 'w3.org') {
+  if (window.location.hostname !== 'www.w3.org') {
     var notification = document.createElement('div');
     notification.className = 'not-w3c-notification';
     notification.innerHTML = 'This is an Editor’s draft, for <em>preview purposes only</em>. Please see, and link to, released tutorials at <a href="http://w3.org/WAI/tutorials">w3.org/WAI/tutorials/</a>.';

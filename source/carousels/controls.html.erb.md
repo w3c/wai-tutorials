@@ -9,23 +9,17 @@ wcag_success_criteria:
   - 4.1.2
 ---
 
-After the basic styling was applied to the content, the interaction comes in. In the first steps the slide show is prepared to hide all content but the first slide. Then “left” and “right” arrows are added to the carousel and enabled, so users can skip through the individual slides.
+To allow basic navigating through the slides, the slide show needs to be prepared to hide all content but the first slide from all users, including people using assistive technologies. Then “left” and “right” arrows are added to the carousel, that display the previous and next slide, respectively.
 
-## Add Styling When Javascript Is Enabled
+## Add Styling when JavaScript is Enabled
 
-When JavaScript is enabled, the carousel wrapper is getting a fixed height. Individual slides are stacked on top of another, with the current slide on top of the others. Additionally, all slides but the current one are hidden by using `display: none` – a [hiding technique](/fundamentals/hiding.html) that hides the inactive slides visually as well as from assistive technologies.
+If JavaScript is enabled a class (`.active`) is added that allows all slides to be stacked on top of another with the current slide top-most. Additionally, all slides but the current one are hidden by using `display: none` – a [hiding technique](/fundamentals/hiding.html) that hides visually and from assistive technologies.
 
 {::nomarkdown}
 <%= code_start('','CSS') %>
 {:/nomarkdown}
 
 ~~~css
-.carousel.active {
-  height: 480px;
-  overflow:hidden;
-  border: 1px solid #333;
-  position:relative;
-}
 
 .active .slide {
   border: none;
