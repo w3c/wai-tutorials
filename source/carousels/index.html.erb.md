@@ -12,7 +12,7 @@ wcag_success_criteria:
   - 4.1.2
 ---
 
-Carousels display only a certain part of their content at a time. This content can be basically anything, from images to headings or complete teasers. Carousels that only contain images are often called “Slideshows” or “Sliders”. As carousels are interactive elements on a page showing and hiding content from the user, a variety of considerations have to be included in development:
+Carousels are used to show content in relatively little space by displaying only a portion of the content at a time and rotating through all the whole content, usually in an automatically animated fashion. A wide range of content can be found in carousels: from simple images to complete teasers. Carousels are often called “slide shows” or “sliders”, the individual pieces of content “slides”. As carousels are interactive elements on a page showing and hiding content from the user in an animated way, a variety of considerations have to be included in development:
 
 - **[Structure](structure.html):** The carousel as a whole and individual slides should have structural markup that enables users access the content of the slides easily.
 - **[Controls](controls.html):** The user needs to be in full control of the carousel, regardless of the input method (mouse, keyboard, touch etc.).
@@ -20,7 +20,7 @@ Carousels display only a certain part of their content at a time. This content c
 
 ## Pausing slides
 
-In contrast to other success criteria, providing a mechanism to pause automatic movement is required for the entire page on which the movement occurs. See [conformance requirement 5, Non-Interference](http://www.w3.org/TR/WCAG20/#cc5). See [Animations](animations.html) for an example on how to fulfill this criterion.
+In contrast to other success criteria, providing a mechanism to pause automatic movement is required for the entire page on which the movement occurs. [Animations](animations.html) shows an example on how to fulfill this criterion. For further information, see  [WCAG conformance requirement 5, Non-Interference](http://www.w3.org/TR/WCAG20/#cc5).
 
 ## Why is this important?
 

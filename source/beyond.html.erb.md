@@ -1,6 +1,5 @@
 ---
 title: Beyond the Tutorial
-status: draft
 layout: overview
 order: 1
 ---
