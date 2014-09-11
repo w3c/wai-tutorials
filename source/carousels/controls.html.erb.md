@@ -152,7 +152,7 @@ The outcome looks like this:
 <%= sample_end %>
 {:/nomarkdown}
 
-## Adding Previous and Next Buttons
+## Add Previous and Next Buttons
 
 First, the previous and next buttons need to be added to the markup using JavaScript and styled according to their function. The HTML5 button element is used to make sure that the buttons are [keyboard accessible](/fundamentals/keyboard-access.html).
 
@@ -446,7 +446,7 @@ The result looks – and works – like this:
 <%= sample_end %>
 {:/nomarkdown}
 
-## Adding Slide Navigation Buttons
+## Add Slide Navigation Buttons
 
 Optionally, a list of all slides can be used to provide the user a sense of how much information is contained in the carousel and which of the slides is currently activated.
 
