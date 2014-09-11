@@ -41,6 +41,7 @@ $container_margin:  0.5%;         // auto|px|%    //
 
 html {
 	overflow-x:hidden;
+	hyphens: auto;
 }
 
 body {
@@ -63,6 +64,9 @@ body {
 
 body, h1, h2, h3, h4, h5, h6 {
   font-size-adjust: 0.5;
+}
+h1, h2, h3, h4, h5, h6, .navigation {
+	hyphens: none;
 }
 
 p {margin-bottom: 0;}
