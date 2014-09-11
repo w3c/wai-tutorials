@@ -6,11 +6,17 @@ wcag_success_criteria:
   - 2.2.2
 ---
 
-A sliding animation usually conveys that there is more content in the carousel than only the one piece of content that is shown when the page is opened.
+Often, a sliding animation conveys that there is more content in the carousel than displayed on the moment the page is accessed.
 
-Animations are challenging for accessibility as they affect people in different ways. A blind person for example may lose the focus if a slide disappears and people who aren’t able to read stationary text quickly might not be able to read the content of a slide. For others, moving content is a severe distraction, making it difficult for them to concentrate on other parts of the page.
+Animations are challenging for accessibility as they affect different people in different ways. A blind person for example may lose the keyboard position if a slide disappears and people who aren’t able to read stationary text quickly might not be able to read the content of a slide at all. For others, moving content is a severe distraction, making it difficult for them to concentrate on other parts of the page.
 
-To avoid problems with moving parts of the page, the user needs to have the ability to stop the animation. In the following example carousel, there is a pause button (next to the list of slides):
+## Animate Accessibly
+
+As most of the carousels use a sliding animation, it is required to have two slides visible at the same time, the slide that is the current slide and the slide that will become the current slide.
+
+## Add a Stop Button
+
+To avoid the problems outlined aboves, the user needs to have the ability to stop automatic animations. In the following example carousel, there is a pause button next to the list of slides that allows for that:
 
 {::nomarkdown}
 <%= sample_start %>
@@ -74,36 +80,7 @@ To avoid problems with moving parts of the page, the user needs to have the abil
 <%= sample_end %>
 {:/nomarkdown}
 
-But there is more to it: to animate the slide in the way above, some more CSS needs to be added. Instead of hiding the individual slides using `display: none`, `visibility: hidden` is used as this works the same way to hide the slides not only visually but from screen readers as well but also allows for CSS3 transitions. The current slide is positioned absolutely to the leftmost point of the container.
 
-The previous and next slides are positioned left and right from the current slide using the values of `-100%` and `100%` for the `left` property. A CSS3 transition of the `left` property is used to apply the slide animation.
-
-{::nomarkdown}
-<%= code_start('', 'CSS') %>
-{:/nomarkdown}
-
-~~~css
-.active .slide {
-  display: block !important;
-  visibility: hidden;
-  transition: left .6s ease-out 0s;
-  z-index: 1;
-}
-
-.active .slide.current { left:    0 ; }
-.active .slide.next    { left:  100%; }
-.active .slide.prev    { left: -100%; }
-
-.active .slide.current,
-.active .slide.next.in-transition,
-.active .slide.prev.in-transition {
-  visibility: visible;
-}
-~~~
-
-{::nomarkdown}
-<%= code_end %>
-{:/nomarkdown}
 
 If the next button or the automatic animation is invoked, the script changes the class attribute of the next slide to `current slide` and of the current slide to `prev slide in-transition` to keep it visible. The `in-transition` class is removed after the animation has ended by using the `transitionend` event.
 
@@ -145,6 +122,8 @@ slidewrapper.addEventListener('transitionend', function (event) {
 {::nomarkdown}
 <%= code_end %>
 {:/nomarkdown}
+
+## Stop Animation While Interacting with the Carousel
 
 The slide that is currently active is highlighted in the slide list and a play/pause button is added. Additionally, the animation should stop when an element inside the carousel receives focus or the mouse is hovering over the carousel and continue when the focus is lost or the mouse stops hovering.
 
