@@ -10,18 +10,19 @@ wcag_techniques:
   - G85
 ---
 
-Notifications provide feedback to users to indicate that the form sent with or without errors. Users might then be required to fill out parts of the form again. Error messages should be clear and easy to understand, and provide guidance to help users correct mistakes.
+Notifications provide feedback to users about their form entries. In-line notifications provide feedback at or near the controls, typically input fields, while status notifications are typically provided after forms are submitted.
 
-There are some approaches on how to inform the user about the state of the form, that can work together to provide users the best notifications according to their needs. Notifications can be provided through …
+Notifications need to be concise and clear. In particular error messages need to be easy to understand, and to provide simple indications of how to correct mistakes. Success messages are also important to confirm task completion.
 
-1. … the main [heading and page title](#heading-title).
-2. … a [list of erroneous fields](#error-list).
-3. … static and dynamic [in-line messages](#inline) near the affected form fields.
-
-##  Notifications in the Main Heading and Page Title
+## Status Notifications
 {:#heading-title}
 
-It is important that the user gets notified of errors or success as soon as possible after he sent the form. A common place to put this information is the main page [heading](/fundamentals/headings.html), usually a `<h1>`or `<h2>` element.
+When a form is submitted, it is important that the user is notified whether the submission was successful or if errors occurred. Several approaches can be used, and in many cases several can be combined.
+
+###  Using the Main Heading
+{:.ap}
+
+A common way to provide feedback is by using the main heading of a page, usually the most prominently displayed `<h1>`or `<h2>` element. This technique is particularly useful when forms are processed by the server, but can also be useful for client-side scripting.
 
 {::nomarkdown}
 <%= code_start('','Error') %>
@@ -43,9 +44,20 @@ It is important that the user gets notified of errors or success as soon as poss
 <%= code_end %>
 {:/nomarkdown}
 
-As shown above, the message doesn’t necessarily include the word “success” to be clear. The word “error” however is probably most easy to recognize for users.
+{::nomarkdown}
+<%= notes_start %>
+{:/nomarkdown}
 
-Screen Reader users need to navigate to the main heading first, which means there is no immediate notification for them. A way around this is to place the number of errors or the message of success in the HTML `<title>` element:
+**Note:** The main purpose of the main heading is still to identify the web page that the user is currently on. When the user is sent back to the same web page because of an error, then a simple indication using the word “error” and possibly the number of errors is sufficient.
+
+{::nomarkdown}
+<%= notes_end %>
+{:/nomarkdown}
+
+###  Using the Page Title
+{:.ap}
+
+In addition to using the main heading it is often useful to also use the `<title>` element to indicate successes and error. In particular screen reader users will get immediate feedback when the web page is loaded, especially when the main heading is placed deeper within the content; for example, after the navigation menus.
 
 {::nomarkdown}
 <%= code_start('','Error') %>
@@ -67,16 +79,79 @@ Screen Reader users need to navigate to the main heading first, which means ther
 <%= code_end %>
 {:/nomarkdown}
 
-## List of Erroneous Fields
-{:#error-list}
+###  Using Pop-Up Dialogs
+{:.ap}
 
-If errors occur, it is useful to provide a list of error messages on the top of the page, before the form. The list should have a distinctive heading, so they are easy to locate for visual and screen reader users, and provide in-page links to the form with the invalid input.
+When the web page is not reloaded or when its content does not change after submission, then using pop-up dialogs may be useful to notify users of the status. For example, "save" or "send" functions might not change the content of the web page, but user still need to be notified about the status. Sometimes simple cues, such as disabling the "save" button, might be sufficient. In other situations more prominent messaging may be necessary. This includes messages indicating that the system is busy "loading", "saving", or carrying out another function.
 
-To help users most efficiently, such notifications should …
+{::nomarkdown}
+<%= code_start('','Temporary Pop-Up') %>
+{:/nomarkdown}
+~~~html
+@@@ pop-up using CSS that disappears after a few seconds (eg. wikimedia)
+~~~
+{::nomarkdown}
+<%= code_end %>
+{:/nomarkdown}
 
-* … use the _same wording_ that is used on the label of the erroneous form field as this helps to identify the exact form element that contains the error.
-* … describe the _reason for the error message_, for example mention that the field was required or that the format was wrong.
-* … tell _how to fix_ the error and may use a more elaborate example, using the additional space.
+{::nomarkdown}
+<%= notes_start %>
+{:/nomarkdown}
+
+**Note:** @@@ comment about pros and cons of this approach
+
+{::nomarkdown}
+<%= notes_end %>
+{:/nomarkdown}
+
+{::nomarkdown}
+<%= code_start('','Permanent Pop-Up') %>
+{:/nomarkdown}
+~~~html
+@@@ pop-up box that the user needs to actively confirm
+~~~
+{::nomarkdown}
+<%= code_end %>
+{:/nomarkdown}
+
+{::nomarkdown}
+<%= notes_start %>
+{:/nomarkdown}
+
+**Note:** @@@ comment about pros and cons of this approach
+
+{::nomarkdown}
+<%= notes_end %>
+{:/nomarkdown}
+
+{::nomarkdown}
+<%= code_start('','Busy Indicator') %>
+{:/nomarkdown}
+~~~html
+@@@ spinner or other indicator for "loading", "busy", etc
+~~~
+{::nomarkdown}
+<%= code_end %>
+{:/nomarkdown}
+
+{::nomarkdown}
+<%= notes_start %>
+{:/nomarkdown}
+
+**Note:** @@@ considersations specific to this approach
+
+{::nomarkdown}
+<%= notes_end %>
+{:/nomarkdown}
+
+### Listing of Errors
+{:.ap}
+
+When errors occur, it is useful list them at the top of the page, before the form. The list should have a distinctive heading, so that it is easy to identify. Each error listed should:
+* Reference the label of the corresponding form control, to help the user recognize the control;
+* Provide a concise description of the error in a way that is easy to understand by everyone;
+* Provide an indication of how to correct mistakes, and remind users of any format requirements;
+* Include an in-page link to the corresponding form control to facilitate access for the users.
 
 {::nomarkdown}
 <%= sample_start %>
