@@ -1,6 +1,6 @@
 ---
 title: User Notifications
-status: editors-draft
+status: draft
 order: 6
 wcag_success_criteria:
   - 3.3.1

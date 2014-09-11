@@ -1,6 +1,6 @@
 ---
 title: Labeling Controls
-status: editors-draft
+status: draft
 order: 2
 contributors:
   - HTML5 Boilerplate

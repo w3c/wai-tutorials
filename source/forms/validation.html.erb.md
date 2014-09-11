@@ -1,6 +1,6 @@
 ---
 title: Validating Input
-status: editors-draft
+status: draft
 order: 5
 wcag_success_criteria:
   - 3.3.1
