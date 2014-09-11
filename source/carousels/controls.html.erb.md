@@ -21,33 +21,17 @@ If JavaScript is enabled a class (`.active`) is added that allows all slides to 
 
 ~~~css
 .active .slide {
-  border: none;
   display: none;
-  position:absolute;
-  top:0;
-  left:0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: none;
 }
 
 .slide.current {
-  display:block;
+  display: block;
   z-index: 500;
 }
-~~~
-
-{::nomarkdown}
-<%= code_end %>
-{:/nomarkdown}
-
-Additionally, we add a `active` class to the carousel wrapper and a `current` class to the first slide:
-
-{::nomarkdown}
-<%= code_start('','JavaScript') %>
-{:/nomarkdown}
-
-~~~js
-var carousel = document.getElementById('c1');
-carousel.querySelectorAll('.slide')[0].className = 'current slide';
-carousel.className = 'active carousel';
 ~~~
 
 {::nomarkdown}
@@ -92,7 +76,6 @@ The outcome looks like this:
     width: 640px;
     padding:0;
     margin: 0;
-    /* overflow: hidden; */
   }
   .carousel {
     position: relative;
@@ -139,7 +122,7 @@ The outcome looks like this:
 <style>
 .carousel.active {
   height: 480px;
-  overflow:hidden;
+  overflow: hidden;
   border: 1px solid #333;
   position:relative;
 }
@@ -169,7 +152,7 @@ The outcome looks like this:
 <%= sample_end %>
 {:/nomarkdown}
 
-## Previous and Next Buttons
+## Adding Previous and Next Buttons
 
 First, the previous and next buttons need to be added to the markup using JavaScript and styled according to their function. The HTML5 button element is used to make sure that the buttons are [keyboard accessible](/fundamentals/keyboard-access.html).
 
@@ -183,12 +166,12 @@ var ctrls = document.createElement('ul');
 ctrls.className = 'controls';
 ctrls.innerHTML = '<li>' +
     '<button type="button" class="btn-prev">' +
-      '<img src="../../img/chevron-left.png" alt="Previous Slide">' +
+      '<img src="img/chevron-left.png" alt="Previous Slide">' +
     '</button>' +
   '</li>' +
   '<li>' +
     '<button type="button" class="btn-next">' +
-      '<img src="../../img/chevron-right.png" alt="Next Slide">' +
+      '<img src="img/chevron-right.png" alt="Next Slide">' +
     '</button>' +
   '</li>';
 
@@ -207,7 +190,7 @@ carousel.appendChild(ctrls);
 <%= code_end %>
 {:/nomarkdown}
 
-The styling is very similar to the text of the slides. Contrast ratio requirements are valid here as well as on normal text. Both buttons get wider if they are hovered with the mouse or focused with the keyboard. This is also animated to keep the click target large for a longer time, which makes it easier for people with shaky hands to click them.
+Styling is added to make sure contrast ratio requirements are met as well by adding a semi-transparent white background. While it may be visually intriguing to use plain arrows, they are often hard to recognize, especially for people with disabilities. Both buttons get wider when hovered by the mouse pointer or focused using the keyboard. This is also animated to keep the click target larger for a longer time, which makes it easier for people with shaky hands.
 
 {::nomarkdown}
 <%= code_start('', 'CSS') %>
@@ -216,7 +199,7 @@ The styling is very similar to the text of the slides. Contrast ratio requiremen
 ~~~js
   .btn-prev,
   .btn-next {
-    position:absolute;
+    position: absolute;
     z-index: 700;
     top: 50%;
     margin-top: -2.5em;
@@ -230,7 +213,7 @@ The styling is very similar to the text of the slides. Contrast ratio requiremen
   .btn-next:hover, .btn-next:focus,
   .btn-prev:hover, .btn-prev:focus {
     padding-left: 2em;
-    padding-right:2em;
+    padding-right: 2em;
   }
 
   .btn-prev {
@@ -247,7 +230,7 @@ The styling is very similar to the text of the slides. Contrast ratio requiremen
 <%= code_end %>
 {:/nomarkdown}
 
-And this is how the outcome looks and works:
+The result looks – and works – like this:
 
 {::nomarkdown}
 <%= sample_start %>
@@ -463,9 +446,11 @@ And this is how the outcome looks and works:
 <%= sample_end %>
 {:/nomarkdown}
 
-## List of Slides
+## Adding Slide Navigation Buttons
 
-Optionally, a list of slides can be used to provide the user a sense of how much information is in a slide and which the current slide is in the sequence of slides.
+Optionally, a list of all slides can be used to provide the user a sense of how much information is contained in the carousel and which of the slides is currently activated.
+
+### Concepts
 
 {::nomarkdown}
 <%= sample_start %>
@@ -477,11 +462,9 @@ Optionally, a list of slides can be used to provide the user a sense of how much
 <%= sample_end %>
 {:/nomarkdown}
 
-Visually, the above controls show three numbered square buttons. The current slide button (number 1) has rounded corners and is in the reverse color combination to the others, button 3 has a dashed border to show that it is the control currently in tab focus (or hovered by a mouse pointer). If number 3 was activated, slide 3 would be shown.
+Visually, the above controls show three numbered square buttons. The current slide button (number 1) has rounded corners and is in the reverse color combination to the others, button 3 has a dashed border to show that it is the control currently in tab focus (or hovered by a mouse pointer). If button 3 was activated, slide 3 would be shown.
 
-To convey the same quality of information to users who can’t see the screen, the controls need to be marked up as a list, so screen readers can then inform users of the number of items in the list. Also the current slide needs to be identified, for example by [visually hidden text](/fundamentals/hiding.html). Accurate labeling of the buttons will let the user know which slide is shown.
-
-The script should be capable of identifying the current slide and rendering its identification within the text or text alternative for the current button.
+The same information needs to be conveyed to users who can’t see the screen: The controls need to be marked up as a list, so screen reader users know number of slides. Also the current slide needs to be identified, usually by [visually hidden text](/fundamentals/hiding.html).
 
 {::nomarkdown}
 <%= notes_start %>
@@ -493,36 +476,12 @@ The script should be capable of identifying the current slide and rendering its 
 <%= notes_end %>
 {:/nomarkdown}
 
-The list is created through JavaScript and then added to the DOM of the carousel:
+### Structure
+
+The list is created through JavaScript and then added to the Document Object Model (DOM) of the carousel, which results in the following structure:
 
 {::nomarkdown}
-<%= code_start('', 'JavaScript') %>
-{:/nomarkdown}
-
-~~~ js
-var slidenav = document.createElement('ul');
-
-slidenav.className = 'slidenav';
-
-forEachElement(slides, function(el, i){
-  var li = document.createElement('li');
-  var klass = (i===0) ? 'class="current" ' : '';
-  var currentText = (i===0) ? ' <span class="visuallyhidden">(Current Slide)</span>' : '';
-
-  li.innerHTML = '<button ' + klass + 'data-slide="' + i + '"><span class="visuallyhidden">News</span> ' + (i+1) + currentText + '</button>';
-  slidenav.appendChild(li);
-});
-
-carousel.className = 'active carousel with-slidenav';
-carousel.appendChild(slidenav);
-~~~
-
-{::nomarkdown}
-<%= code_end %>
-{:/nomarkdown}
-
-{::nomarkdown}
-<%= code_start('', 'DOM representation of the JavaScript above') %>
+<%= code_start %>
 {:/nomarkdown}
 
 ~~~html
@@ -549,26 +508,15 @@ carousel.appendChild(slidenav);
 <%= code_end %>
 {:/nomarkdown}
 
-As shown above, the styling of the list is very important for accessibility as well:
+### Styling
+
+As mentioned above, the styling of the buttons of the list is crucial for accessibility as well:
 
 {::nomarkdown}
 <%= code_start('', 'CSS') %>
 {:/nomarkdown}
 
 ~~~css
-.slidenav {
-  position: absolute;
-  bottom: 1em;
-  left: 0;
-  right: 0;
-  text-align: center;
-}
-
-.slidenav li {
-  display:inline-block;
-  margin: 0 .5em;
-}
-
 .slidenav button {
   border: 2px solid #036;
   background-color: #036;
@@ -599,47 +547,33 @@ As shown above, the styling of the list is very important for accessibility as w
 <%= code_end %>
 {:/nomarkdown}
 
-When a user activates one of the buttons in the list, the slide should come up visually. Additionally, a focus should be set to the slide. This helps non-visual users as screen readers then read the slide immediately.
+### Interaction
 
-To do that, it is required to set the `tabindex` attribute to `-1` as the slide `<li>` isn’t an element that can receive focus by default. The `data-slide` attribute is used to select the target slide.
+When a user activates one of the buttons in the list, the slide comes up visually. Additionally, the focus should be set to the then current slide as this brings up the slide to non-visual users immediately. To enable the slide to receive focus, its `tabindex` attribute needs to be set to `-1` as elements other than `<a>`, `<button>` and form element are not able to receive focus by default (see [Keyboard Access](/fundamentals/keyboard-access.html)).
 
+Also, the button of the new current slide needs to be highlighted as well.
 
 {::nomarkdown}
 <%= code_start('', 'JavaScript') %>
 {:/nomarkdown}
 
 ~~~js
-function setSlides(new_current, setFocus = false) {
+function setSlides(new_current, setFocus) {
+  setFocus = typeof setFocusHere !== 'undefined' ? setFocusHere : false;
 
   new_current = parseFloat(new_current);
 
   var length = slides.length;
-  var new_next = new_current+1;
-  var new_prev = new_current-1;
 
-  if(new_next === length) {
-    new_next = 0;
-  } else if(new_prev < 0) {
-    new_prev = length-1;
-  }
-
-  for (var i = slides.length - 1; i >= 0; i--) {
-    slides[i].className = "slide";
-  };
-
-  slides[new_next].className = 'next slide';
-  slides[new_prev].className = 'prev slide';
+  slide[index].className = 'slide';
   slides[new_current].className = 'current slide';
 
-  if(with_slidenav) {
-    var buttons = carousel.querySelectorAll('.slidenav button');
-    for (var i = buttons.length - 1; i >= 0; i--) {
-      buttons[i].className = "";
-    };
-    buttons[new_current].className = "current";
-  }
+  buttons[index].className = "";
+  buttons[new_current].className = "current";
 
   if (setFocus) {
+    // Only if the slide was directly
+    // picked from the list of slides
     slides[new_current].setAttribute('tabindex', '-1');
     slides[new_current].focus();
   }
