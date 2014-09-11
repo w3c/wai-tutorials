@@ -1,6 +1,6 @@
 ---
 title: Multi-Step Forms
-status: editors-draft
+status: draft
 order: 7
 wcag_success_criteria:
   - 1.3.1

@@ -1,6 +1,6 @@
 ---
 title: Form Instructions
-status: editors-draft
+status: draft
 order: 4
 wcag_success_criteria:
   - 1.3.1

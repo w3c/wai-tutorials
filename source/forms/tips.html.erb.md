@@ -1,6 +1,6 @@
 ---
 title: Tips and Tricks
-status: editors-draft
+status: draft
 order: 9
 type: tips
 ---

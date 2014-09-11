@@ -1,6 +1,10 @@
 ---
 title: User Notifications
+<<<<<<< HEAD
 status: editors-draft
+=======
+status: draft
+>>>>>>> origin/master
 order: 6
 wcag_success_criteria:
   - 3.3.1

@@ -20,7 +20,6 @@ If JavaScript is enabled a class (`.active`) is added that allows all slides to 
 {:/nomarkdown}
 
 ~~~css
-
 .active .slide {
   border: none;
   display: none;
