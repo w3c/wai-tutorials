@@ -6,11 +6,78 @@ wcag_success_criteria:
   - 2.2.2
 ---
 
-A sliding animation usually conveys that there is more content in the carousel than only the one piece of content that is shown when the page is opened.
+Often, a sliding animation conveys that there is more content in the carousel than displayed on the moment the page is accessed.
 
-Animations are challenging for accessibility as they affect people in different ways. A blind person for example may lose the focus if a slide disappears and people who aren’t able to read stationary text quickly might not be able to read the content of a slide. For others, moving content is a severe distraction, making it difficult for them to concentrate on other parts of the page.
+Animations are challenging for accessibility as they affect different people in different ways. A blind person for example may lose the keyboard position if a slide disappears and people who aren’t able to read stationary text quickly might not be able to read the content of a slide at all. For others, moving content is a severe distraction, making it difficult for them to concentrate on other parts of the page.
 
-To avoid problems with moving parts of the page, the user needs to have the ability to stop the animation. In the following example carousel, there is a pause button (next to the list of slides):
+## Add a Stop Button
+
+To avoid the problems outlined aboves, the user needs to have the ability to stop automatic animations. In the following example carousel, there is a pause button next to the list of slides that allows for that.
+
+{::nomarkdown}
+<%= code_start %>
+{:/nomarkdown}
+
+~~~html
+<button data-action="stop"><span class="visuallyhidden">Stop Animation </span>￭</button>
+~~~
+
+{::nomarkdown}
+<%= code_end %>
+{:/nomarkdown}
+
+When the button is clicked, the `data-action` value is changed to a `start` and the text inside the button changes to `<span class="visuallyhidden">Start Animation </span>▶`. If the button is clicked, the animation is stopped or started, depending on the value. It is important to not replace the whole button, as the focus would be lost and keyboard users would need to start from the top of the page.
+
+## Stop Animation While Interacting with the Carousel
+
+Many carousels use a sliding animation which requires to have two slides visible at the same time: the slide that is the current slide and the slide that will become the current slide. The current slide then disappears and is not reachable using the keyboard anymore.
+
+If content suddenly can’t be reachable using the keyboard, and the focus is inside this content, this may lead to users that lose their focus and need to start from the top of the page again, which is very inconvenient and a potential keyboard trap.
+
+To avoid such behavior and make it easier for users to use the mouse to interact with the carousel, the animation should stop when an element inside the carousel receives focus or the mouse is hovering over the carousel. The animation should continue when the focus moves on or the mouse stops hovering.
+
+{::nomarkdown}
+<%= code_start %>
+{:/nomarkdown}
+
+~~~js
+carousel.addEventListener('mouseenter', suspendAnimation);
+carousel.addEventListener('mouseleave', startAnimation);
+
+carousel.addEventListener('focusin',
+  function(event) {
+    if (!hasClass(event.target, 'slide')) {
+      suspendAnimation();
+    }
+  }
+);
+carousel.addEventListener('focusout',
+  function(event) {
+    if (!hasClass(event.target, 'slide')) {
+      startAnimation();
+    }
+  }
+);
+~~~
+
+{::nomarkdown}
+<%= code_end %>
+{:/nomarkdown}
+
+{::nomarkdown}
+<%= notes_start %>
+{:/nomarkdown}
+
+**Note:** The [`focusin`](http://www.w3.org/TR/DOM-Level-3-Events/#event-type-focusIn) and [`focusout`](http://www.w3.org/TR/DOM-Level-3-Events/#event-type-focusout) events are defined in the [W3C Document Object Model (DOM) Level 3 Events Specification](http://www.w3.org/TR/DOM-Level-3-Events/) (Working Draft) and implemented in many browsers. Firefox needs [a short polyfill](examples/focusinoutpolyfill.js) at the time of publication of this tutorial.
+
+{::nomarkdown}
+<%= notes_end %>
+{:/nomarkdown}
+
+As most of the carousels use a sliding animation, it is required to have two slides visible at the same time, the slide that is the current slide and the slide that will become the current slide.
+
+
+## End Result
 
 {::nomarkdown}
 <%= sample_start %>
@@ -74,54 +141,6 @@ To avoid problems with moving parts of the page, the user needs to have the abil
 <%= sample_end %>
 {:/nomarkdown}
 
-But there is more to it: to animate the slide in the way above, some more CSS needs to be added. Instead of hiding the individual slides using `display: none`, `visibility: hidden` is used as this works the same way to hide the slides not only visually but from screen readers as well but also allows for CSS3 transitions. The current slide is positioned absolutely to the leftmost point of the container.
-
-The previous and next slides are positioned left and right from the current slide using the values of `-100%` and `100%` for the `left` property. A CSS3 transition of the `left` property is used to apply the slide animation.
-
-{::nomarkdown}
-<%= code_start('', 'CSS') %>
-{:/nomarkdown}
-
-~~~css
-.active .slide {
-  display: block !important;
-  visibility: hidden;
-  transition: left .6s ease-out 0s;
-  z-index: 1;
-}
-
-.active .slide.current { left:    0 ; }
-.active .slide.next    { left:  100%; }
-.active .slide.prev    { left: -100%; }
-
-.active .slide.current,
-.active .slide.next.in-transition,
-.active .slide.prev.in-transition {
-  visibility: visible;
-}
-~~~
-
-{::nomarkdown}
-<%= code_end %>
-{:/nomarkdown}
-
-If the next button or the automatic animation is invoked, the script changes the class attribute of the next slide to `current slide` and of the current slide to `prev slide in-transition` to keep it visible. The `in-transition` class is removed after the animation has ended by using the `transitionend` event.
-
-{::nomarkdown}
-<%= code_start('', 'JavaScript: Setting slides') %>
-{:/nomarkdown}
-
-~~~js
-slides[new_current].className = 'current slide';
-slides[new_next].className =
-  'next slide' + ((transition == 'next') ? ' in-transition' : '');
-slides[new_prev].className =
-  'prev slide' + ((transition == 'prev') ? ' in-transition' : '');
-~~~
-
-{::nomarkdown}
-<%= code_end %>
-{:/nomarkdown}
 
 
 {::nomarkdown}
@@ -145,6 +164,8 @@ slidewrapper.addEventListener('transitionend', function (event) {
 {::nomarkdown}
 <%= code_end %>
 {:/nomarkdown}
+
+## Stop Animation While Interacting with the Carousel
 
 The slide that is currently active is highlighted in the slide list and a play/pause button is added. Additionally, the animation should stop when an element inside the carousel receives focus or the mouse is hovering over the carousel and continue when the focus is lost or the mouse stops hovering.
 
@@ -425,9 +446,9 @@ var myCarousel = (function() {
         var li = document.createElement('li');
 
         if (settings.startAnimated) {
-          li.innerHTML = '<button data-stop=true><span class="visuallyhidden">Stop Animation </span>￭</button>';
+          li.innerHTML = '<button data-action="stop"><span class="visuallyhidden">Stop Animation </span>￭</button>';
         } else {
-          li.innerHTML = '<button data-start=true><span class="visuallyhidden">Start Animation </span>▶</button>';
+          li.innerHTML = '<button data-action="start"><span class="visuallyhidden">Start Animation </span>▶</button>';
         }
 
         slidenav.appendChild(li);
@@ -450,9 +471,9 @@ var myCarousel = (function() {
           if (button.getAttribute('data-slide')) {
             stopAnimation();
             setSlides(button.getAttribute('data-slide'), true);
-          } else if (button.getAttribute('data-stop')) {
+          } else if (button.getAttribute('data-action') == "stop") {
             stopAnimation();
-          } else if (button.getAttribute('data-start')) {
+          } else if (button.getAttribute('data-action') == "start") {
             startAnimation();
           }
         }
@@ -473,7 +494,11 @@ var myCarousel = (function() {
       });
 
       carousel.addEventListener('mouseenter', suspendAnimation);
-      carousel.addEventListener('mouseleave', startAnimation);
+      carousel.addEventListener('mouseleave', function(event) {
+        if (animationSuspended) {
+          startAnimation();
+        }
+      });
 
       carousel.addEventListener('focusin', function(event) {
         if (!hasClass(event.target, 'slide')) {
@@ -481,7 +506,7 @@ var myCarousel = (function() {
         }
       });
       carousel.addEventListener('focusout', function(event) {
-        if (!hasClass(event.target, 'slide')) {
+        if (!hasClass(event.target, 'slide') && animationSuspended) {
           startAnimation();
         }
       });
@@ -566,20 +591,18 @@ var myCarousel = (function() {
     clearTimeout(timer);
     settings.animate = false;
     animationSuspended = false;
-    _this = carousel.querySelector('[data-stop], [data-start]');
+    _this = carousel.querySelector('[data-action]');
     _this.innerHTML = '<span class="visuallyhidden">Start Animation </span>▶';
-    _this.removeAttribute('data-stop');
-    _this.setAttribute('data-start', 'true');
+    _this.setAttribute('data-action', 'start');
   }
 
   function startAnimation() {
     settings.animate = true;
     animationSuspended = false;
     timer = setTimeout(nextSlide, 5000);
-    _this = carousel.querySelector('[data-stop], [data-start]');
+    _this = carousel.querySelector('[data-action]');
     _this.innerHTML = '<span class="visuallyhidden">Stop Animation </span>￭';
-    _this.setAttribute('data-stop', 'true');
-    _this.removeAttribute('data-start');
+    _this.setAttribute('data-action', 'stop');
   }
 
   function suspendAnimation() {
