@@ -12,15 +12,11 @@ wcag_techniques:
 
 Notifications provide feedback to users about their form entries. In-line notifications provide feedback at or near the controls, typically input fields, while status notifications are typically provided after forms are submitted.
 
-Notifications need to be concise and clear. In particular error messages need to be easy to understand, and to provide simple indications of how to correct mistakes. Success messages are also important to confirm task completion.
+Notifications need to be concise and clear. In particular error messages should be easy to understand, and to provide simple indications of how to correct mistakes. Success messages are also important to confirm task completion.
 
-## Status Notifications
-{:#heading-title}
+When a form is submitted, it is important that the user is notified whether the submission was successful or if errors occurred. Several approaches can be combined.
 
-When a form is submitted, it is important that the user is notified whether the submission was successful or if errors occurred. Several approaches can be used, and in many cases several can be combined.
-
-###  Using the Main Heading
-{:.ap}
+##  Using the Main Heading
 
 A common way to provide feedback is by using the main heading of a page, usually the most prominently displayed `<h1>`or `<h2>` element. This technique is particularly useful when forms are processed by the server, but can also be useful for client-side scripting.
 
@@ -54,8 +50,7 @@ A common way to provide feedback is by using the main heading of a page, usually
 <%= notes_end %>
 {:/nomarkdown}
 
-###  Using the Page Title
-{:.ap}
+##  Using the Page Title
 
 In addition to using the main heading it is often useful to also use the `<title>` element to indicate successes and error. In particular screen reader users will get immediate feedback when the web page is loaded, especially when the main heading is placed deeper within the content; for example, after the navigation menus.
 
@@ -79,73 +74,160 @@ In addition to using the main heading it is often useful to also use the `<title
 <%= code_end %>
 {:/nomarkdown}
 
-###  Using Pop-Up Dialogs
+##  Using Pop-Up Dialogs
+
+When the web page is not reloaded or when its content does not change after submission, then using pop-up dialogs may be useful to notify users of the status. For example, “save” or “send” functions might not change the content of the web page, but user still need to be notified about the status. Sometimes simple cues, such as disabling the “save” button, might be sufficient. In other situations more prominent messaging may be necessary. This includes messages indicating that the system is busy “loading”, “saving”, or carrying out another function.
+
+### Permanent Pop-Up
 {:.ap}
 
-When the web page is not reloaded or when its content does not change after submission, then using pop-up dialogs may be useful to notify users of the status. For example, "save" or "send" functions might not change the content of the web page, but user still need to be notified about the status. Sometimes simple cues, such as disabling the "save" button, might be sufficient. In other situations more prominent messaging may be necessary. This includes messages indicating that the system is busy "loading", "saving", or carrying out another function.
+A permanent pop-up makes sure that the user has seen the confirmation message, as it is impossible for the user to continue to use the web page without confirming the dialog. While this is very effective, it is also interrupting the user and can be quite annoying.
 
 {::nomarkdown}
-<%= code_start('','Temporary Pop-Up') %>
+<%= sample_start %>
+
+<button id="alertconfirm" type="button">Save</button>
+
+<script>
+  document.getElementById('alertconfirm').addEventListener('click', function(){ alert('Thanks for submitting the form!'); });
+</script>
+
+<%= sample_end %>
+{:/nomarkdown}
+
+{::nomarkdown}
+<%= code_start('','HTML') %>
 {:/nomarkdown}
 ~~~html
-@@@ pop-up using CSS that disappears after a few seconds (eg. wikimedia)
+<button type="button" id="alertconfirm">Save</button>
 ~~~
 {::nomarkdown}
 <%= code_end %>
 {:/nomarkdown}
 
 {::nomarkdown}
-<%= notes_start %>
+<%= code_start('','JavaScript') %>
 {:/nomarkdown}
-
-**Note:** @@@ comment about pros and cons of this approach
-
-{::nomarkdown}
-<%= notes_end %>
-{:/nomarkdown}
-
-{::nomarkdown}
-<%= code_start('','Permanent Pop-Up') %>
-{:/nomarkdown}
-~~~html
-@@@ pop-up box that the user needs to actively confirm
+~~~js
+document.getElementById('alertconfirm')
+  .addEventListener('click', function() {
+    alert('Thanks for submitting the form!');
+  });
 ~~~
 {::nomarkdown}
 <%= code_end %>
 {:/nomarkdown}
 
-{::nomarkdown}
-<%= notes_start %>
-{:/nomarkdown}
-
-**Note:** @@@ comment about pros and cons of this approach
-
-{::nomarkdown}
-<%= notes_end %>
-{:/nomarkdown}
-
-{::nomarkdown}
-<%= code_start('','Busy Indicator') %>
-{:/nomarkdown}
-~~~html
-@@@ spinner or other indicator for "loading", "busy", etc
-~~~
-{::nomarkdown}
-<%= code_end %>
-{:/nomarkdown}
-
-{::nomarkdown}
-<%= notes_start %>
-{:/nomarkdown}
-
-**Note:** @@@ considersations specific to this approach
-
-{::nomarkdown}
-<%= notes_end %>
-{:/nomarkdown}
-
-### Listing of Errors
+### Temporary Pop-Up
 {:.ap}
+
+A temporary pop-up displays a message for a short time before vanishing. It is a more subtle possibility to inform users and interrupt them only for a short moment. The advantages are that the user stays where he was and is not interrupted. On the downside, the user is not in control on how long the pop-up is displayed. Some users might miss some text for that reason, for others the message might displayed for a longer time, annoying them.
+
+{::nomarkdown}
+<%= sample_start %>
+
+<button id="temporarymessage" type="button">Save</button>
+
+<script>
+  document.getElementById('temporarymessage').addEventListener('click', function(){
+    var div = document.createElement('div');
+    div.setAttribute('id','popup');
+    div.setAttribute('aria-live','assertive');
+    div.innerHTML = 'Thanks for submitting the form!';
+
+    div.addEventListener('transitionend', function (){
+      this.parentNode.removeChild(this);
+      document.getElementById('temporarymessage').removeAttribute('disabled');
+    });
+
+    document.getElementsByTagName('body')[0].appendChild(div);
+    this.setAttribute('disabled', true);
+
+    setTimeout(function(){
+      document.getElementById('popup').style.opacity = 0;
+    }, 20);
+  });
+</script>
+
+<style>
+#popup {
+  position: fixed;
+  box-sizing: border-box;
+  background-clip: padding-box;
+  top:50%;
+  left:50%;
+  width: 12em;
+  height: 12em;
+  margin: -6em 0 0 -6em;
+  padding: 1em;
+  color: #fff;
+  text-align: center;
+  background-color: rgba(0,51,102,.85);
+  border: .5em solid rgba(0,51,102,.3);
+  border-radius: .5em;
+  transition: opacity 2.5s linear;
+}
+</style>
+<%= sample_end %>
+{:/nomarkdown}
+
+{::nomarkdown}
+<%= code_start('','HTML') %>
+{:/nomarkdown}
+~~~html
+<button type="button" id="temporarymessage">Save</button>
+~~~
+{::nomarkdown}
+<%= code_end %>
+{:/nomarkdown}
+
+{::nomarkdown}
+<%= code_start('','CSS') %>
+{:/nomarkdown}
+~~~css
+#popup {
+  …
+  transition: opacity 2.5s linear;
+}
+~~~
+{::nomarkdown}
+<%= code_end %>
+{:/nomarkdown}
+
+In the code below, the pop up is added to the page, including an `aria-live` attribute with the value `assertive`. This attribute makes sure that screen reader and other assistive technology users get the message. A CSS3 transition is used to fade out the dialog box, and as soon as the transition finishes, the element gets removed from the page.
+
+{::nomarkdown}
+<%= code_start('','JavaScript') %>
+{:/nomarkdown}
+~~~js
+document.getElementById('temporarymessage')
+  .addEventListener('click', function(){
+    var div = document.createElement('div');
+    div.setAttribute('id','popup');
+    div.setAttribute('aria-live','assertive');
+    div.innerHTML = 'Thanks for submitting the form!';
+
+    div.addEventListener('transitionend', function (){
+      this.parentNode.removeChild(this);
+      document.getElementById('temporarymessage')
+        .removeAttribute('disabled');
+    });
+
+    document.getElementsByTagName('body')[0].appendChild(div);
+    this.setAttribute('disabled', true);
+
+    setTimeout(function(){
+      document.getElementById('popup').style.opacity = 0;
+    }, 10);
+  });
+~~~
+{::nomarkdown}
+<%= code_end %>
+{:/nomarkdown}
+
+Similarly, a loading spinner or busy indicator can be shown while data is saved or loaded.
+
+## Using Lists of Errors
 
 When errors occur, it is useful list them at the top of the page, before the form. The list should have a distinctive heading, so that it is easy to identify. Each error listed should:
 * Reference the label of the corresponding form control, to help the user recognize the control;
