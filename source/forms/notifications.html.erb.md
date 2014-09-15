@@ -10,15 +10,17 @@ wcag_techniques:
   - G85
 ---
 
-Notifications provide feedback to users about their form entries. In-line notifications provide feedback at or near the controls, typically input fields, while status notifications are typically provided after forms are submitted.
+Provide feedback to users about their form entries. This includes in-line feedback at or near the form controls (typically input fields), and overall feedback that is typically provided after forms are submitted.
 
 Notifications need to be concise and clear. In particular error messages should be easy to understand, and to provide simple indications of how to correct mistakes. Success messages are also important to confirm task completion.
 
-When a form is submitted, it is important that the user is notified whether the submission was successful or if errors occurred. Several approaches can be combined.
+## Overall feedback
 
-##  Using the Main Heading
+When a form is submitted, it is important that the user is notified whether the submission was successful or if errors occurred. Several of the following techniques can be combined.
 
-A common way to provide feedback is by using the main heading of a page, usually the most prominently displayed `<h1>`or `<h2>` element. This technique is particularly useful when forms are processed by the server, but can also be useful for client-side scripting.
+###  Using the main heading
+
+A common way to provide feedback is by using the main heading of the web page, usually the most prominently displayed `<h1>` or `<h2>` element. This technique is particularly useful when forms are processed by the server, but can also be useful for client-side scripting.
 
 {::nomarkdown}
 <%= code_start('','Error') %>
@@ -50,9 +52,9 @@ A common way to provide feedback is by using the main heading of a page, usually
 <%= notes_end %>
 {:/nomarkdown}
 
-##  Using the Page Title
+###  Using the page title
 
-In addition to using the main heading it is often useful to also use the `<title>` element to indicate successes and error. In particular screen reader users will get immediate feedback when the web page is loaded, especially when the main heading is placed deeper within the content; for example, after the navigation menus.
+In addition to using the main heading it is often useful to also use the `<title>` element of the web page to indicate successes and error. In particular screen reader users will receive this feedback immediately when the web page is loaded, especially when the main heading is placed deeper within the content; for example, after the navigation menus.
 
 {::nomarkdown}
 <%= code_start('','Error') %>
@@ -74,14 +76,16 @@ In addition to using the main heading it is often useful to also use the `<title
 <%= code_end %>
 {:/nomarkdown}
 
-##  Using Pop-Up Dialogs
+###  Using pop-up dialogs
 
-When the web page is not reloaded or when its content does not change after submission, then using pop-up dialogs may be useful to notify users of the status. For example, “save” or “send” functions might not change the content of the web page, but user still need to be notified about the status. Sometimes simple cues, such as disabling the “save” button, might be sufficient. In other situations more prominent messaging may be necessary. This includes messages indicating that the system is busy “loading”, “saving”, or carrying out another function.
+When the web page is not reloaded or when the content does not change after submission, then using pop-up dialogs may be useful to notify users of the status. For example, “save” or “send” functions might not change the content of the web page, but user still needs to be notified about the status. Sometimes simple cues, such as disabling the “save” button, might be sufficient. In other situations more prominent messaging may be necessary. This includes messages indicating that the system is busy “loading”, “saving”, or carrying out another function.
 
-### Permanent Pop-Up
+#### Permanent pop-up
 {:.ap}
 
-A permanent pop-up makes sure that the user has seen the confirmation message, as it is impossible for the user to continue to use the web page without confirming the dialog. While this is very effective, it is also interrupting the user and can be quite annoying.
+A permenent pop-up requires the user to confirm the message in order to continue using the web page. This approach is useful because it cannot be missed, but it can also be quite obtrusive and disruptive to the task.
+
+The example below shows a pop-up that is displayed when the user activates the “save” button. A message is displayed in a dialog box, and the web page is disabled until the user selects “OK”.
 
 {::nomarkdown}
 <%= sample_start %>
@@ -118,10 +122,22 @@ document.getElementById('alertconfirm')
 <%= code_end %>
 {:/nomarkdown}
 
-### Temporary Pop-Up
+{::nomarkdown}
+<%= notes_start %>
+{:/nomarkdown}
+
+**Note:** In this example the `alert()` function which uses the standard dialogs of the web browser, including default settings for font-size, colors, and language. After confirming the message in the dialog window, most web browsers will resume the focus back on the “save” button. This functionality would need to be ensured for custom dialog windows.
+
+{::nomarkdown}
+<%= notes_end %>
+{:/nomarkdown}
+
+#### Temporary pop-up
 {:.ap}
 
-A temporary pop-up displays a message for a short time before vanishing. It is a more subtle possibility to inform users and interrupt them only for a short moment. The advantages are that the user stays where he was and is not interrupted. On the downside, the user is not in control on how long the pop-up is displayed. Some users might miss some text for that reason, for others the message might displayed for a longer time, annoying them.
+A temproary pop-up is displayed for a certain period of time before vanishing. This approach is less obtrusive but it can also be missed. In particular, users generally cannot control how long the message is displayed and may not have enough time to read it.
+
+The example below shows a pop-up that is displayed when the user activates the “save” button. A message is displayed prominently in the center of the screen, and does not block the user from continuing to use the content.
 
 {::nomarkdown}
 <%= sample_start %>
@@ -194,46 +210,25 @@ A temporary pop-up displays a message for a short time before vanishing. It is a
 <%= code_end %>
 {:/nomarkdown}
 
-In the code below, the pop up is added to the page, including an `aria-live` attribute with the value `assertive`. This attribute makes sure that screen reader and other assistive technology users get the message. A CSS3 transition is used to fade out the dialog box, and as soon as the transition finishes, the element gets removed from the page.
-
 {::nomarkdown}
-<%= code_start('','JavaScript') %>
-{:/nomarkdown}
-~~~js
-document.getElementById('temporarymessage')
-  .addEventListener('click', function(){
-    var div = document.createElement('div');
-    div.setAttribute('id','popup');
-    div.setAttribute('aria-live','assertive');
-    div.innerHTML = 'Thanks for submitting the form!';
-
-    div.addEventListener('transitionend', function (){
-      this.parentNode.removeChild(this);
-      document.getElementById('temporarymessage')
-        .removeAttribute('disabled');
-    });
-
-    document.getElementsByTagName('body')[0].appendChild(div);
-    this.setAttribute('disabled', true);
-
-    setTimeout(function(){
-      document.getElementById('popup').style.opacity = 0;
-    }, 10);
-  });
-~~~
-{::nomarkdown}
-<%= code_end %>
+<%= notes_start %>
 {:/nomarkdown}
 
-Similarly, a loading spinner or busy indicator can be shown while data is saved or loaded.
+**Note 1:** In the code for this pop-up, the displayed message is coded using a `<div>` element that has an `aria-live` attribute with the value `assertive`. The contents of this so called “live region” is conveyed to screen readers and other assistive technology. The value “assertive” emphasizes the importance of the message and causes screen readers to interrupt their current task to read aloud this message.
 
-## Using Lists of Errors
+**Note 2:** The elements used for the pop-up window are dynamically added to the web page when the button is activated, and later removed when the fading animation is completed. This is to reduce the amount of unneccessary elements on the web page, for example when the web page is displayed using custom styling.
+
+{::nomarkdown}
+<%= notes_end %>
+{:/nomarkdown}
+
+### Listing errors
 
 When errors occur, it is useful list them at the top of the page, before the form. The list should have a distinctive heading, so that it is easy to identify. Each error listed should:
-* Reference the label of the corresponding form control, to help the user recognize the control;
-* Provide a concise description of the error in a way that is easy to understand by everyone;
-* Provide an indication of how to correct mistakes, and remind users of any format requirements;
-* Include an in-page link to the corresponding form control to facilitate access for the users.
+- Reference the label of the corresponding form control, to help the user recognize the control;
+- Provide a concise description of the error in a way that is easy to understand by everyone;
+- Provide an indication of how to correct mistakes, and remind users of any format requirements;
+- Include an in-page link to the corresponding form control to facilitate access for the users.
 
 {::nomarkdown}
 <%= sample_start %>
@@ -279,21 +274,19 @@ When errors occur, it is useful list them at the top of the page, before the for
 <%= code_end %>
 {:/nomarkdown}
 
-## In-line Messages
+## In-line feedback
 {:#inline}
 
-In-line messages are basically special [instructions](instructions.html), so the same concepts apply. They should be clearly distinct from “regular” instructions, if used for successful or erroneous fields. For error messages that can be the word “Error:” in front of the regular label text.
+In addition to overall feedback, more specific feedback at or near the form controls can better help users to use your form. This includes feedback to indicate correctly entered input as well as errors in the input.
 
-The visual formatting of the field might change as well. An erroneous field could be styled with a wide red border, a verified field could be styled with a green border and a checkmark to show that it’s valid.
+Typically a combination of messages and visual cues are used to provide in-line feedback. For example, valid input is often indicated by a checkmark and green borders, while errors are often indicated by an exmark and red borders. In both cases brief message should be provided. Error messages should also provide guidance on how to correct mistakes. The concepts for such error messages are essentially the same as for providing [instructions](instructions.html).
 
-Such messages can be presented to the user in a static way after submitting the form, like in the first example below, or dynamically while filling out the form.
+### After submit
+{:.ap}
 
-Disrupting users with messages is appropriate if it is hard for them to determine if their input is correct or not, for example when entering a username. In those situations, the probability of submitting a form over and over again just to almost certainly receive error messages is frustrating for all users.
+The example below shows a form with two input fields. The first input field, “username”, is used to register a username. The second input field, “expiry date”, is used to provide a date for when the registration expires.
 
-Dynamic in-line messages are similar to the messages browsers will give to users if the standard HTML5 form elements are used to [validate user input](validation.html).
-
-### Static in-line message
-{:.ex}
+When the form is submitted, the entries are checked and feedback is provided to the user. Appropriate success and error messages are displayed for each input field to help the user complete the form.
 
 {::nomarkdown}
 <%= sample_start %>
@@ -411,97 +404,15 @@ document.getElementById('ex3').addEventListener('submit', function(event){
 <%= code_end %>
 {:/nomarkdown}
 
-### Dynamic in-line message as soon as the user leaves a form field
+### During typing
+{:.ap}
+
+Providing instant feedback during typing is interactive and can be very helpful. For example, checking the availability of a username in the previous example required the user to resubmit the form possibly multiple times. Providing feedback while users are typing allows them to experiment more easily until they find a suitable username. However, client-side scripting is required for such functionality, and not all situations may be suitable for such feedback.
+
+#### Binary messages
 {:.ex}
 
-For form input that can be validated on the client side, like format information, it makes sense to give the user feedback as soon as they leave the form field. The following form fields will be evaluated as soon as the focus leaves the field (“blur”), that is when the user tabs to the next field or clicks somewhere else on the page. In addition to the visual changes, an ARIA live region (`aria-live`) is added to the instruction to inform users of assistive technologies. The `aria-live` value is `assertive` to make sure that screen readers don’t read the label of the next form field instead.
-
-{::nomarkdown}
-<%= sample_start %>
-
-<style>
-  #ex4 div {margin-bottom:.75em;}
-</style>
-
-<form method="post" action="#" id="ex4">
-  <div>
-    <label for="username5"><strong></strong> Username:</label>
-    <input type="text" name="username" id="username5" value="spaceteddy13" aria-describedby="userDesc3">
-    <span id="userDesc3" aria-live="assertive"></span>
-  </div>
-  <div>
-    <label for="expire5"><strong></strong> Expiry date:</label>
-    <input type="text" name="expire" id="expire5" value="03.2015" aria-describedby="expDesc3">
-    <span id="expDesc3" aria-live="assertive"></span>
-  </div>
-  <div class="error">
-    <button type="submit">Submit</button>
-  </div>
-</form>
-
-<script>
-inputs = document.querySelectorAll('#ex4 input');
-for (var i = inputs.length - 1; i >= 0; i--) {
-  inputs[i].addEventListener('blur', function(event){
-    console.log('ohai' + this.id);
-    function setError(el, msg) {
-      el.parentNode.querySelector('strong').innerHTML = "Error:";
-      el.parentNode.className='error';
-      el.parentNode.querySelector('span').innerHTML = msg;
-    }
-    function setSuccess(el) {
-      el.parentNode.querySelector('strong').innerHTML = "OK:";
-      el.parentNode.className='success';
-      el.parentNode.querySelector('span').innerHTML = "&check;";
-    }
-    if (this.id == 'expire5') {
-      if (this.value.match(new RegExp('[0-9]{2}\/[0-9]{4}'))) {
-        console.log(this);
-        setSuccess(this);
-      } else {
-        setError(this, 'Use the format MM/YYYY.');
-      }
-    } else if (this.id == 'username5') {
-      if (taken_usernames.indexOf(this.value.trim())+1 == false) {
-        setSuccess(this);
-      } else {
-        setError(this, 'Username already taken.');
-      }
-    }
-    event.preventDefault();
-    return false;
-  });
-};
-
-</script>
-<%= sample_end%>
-{:/nomarkdown}
-
-{::nomarkdown}
-<%= code_start %>
-{:/nomarkdown}
-~~~html
-<div>
-  <label for="username"><strong></strong> Username:</label>
-  <input type="text" name="username" id="username" value="spaceteddy13" aria-describedby="userDesc3">
-  <span id="userDesc3" aria-live="assertive"></span>
-</div>
-<div>
-  <label for="expire"><strong></strong> Expiry date:</label>
-  <input type="text" name="expire" id="expire" value="03.2015" aria-describedby="expDesc3">
-  <span id="expDesc3" aria-live="assertive"></span>
-</div>
-~~~
-{::nomarkdown}
-<%= code_end %>
-{:/nomarkdown}
-
-### Dynamic in-line message while filling out the form
-{:.ex}
-
-#### Simple messages
-
-In this example, the notification is done visually as well the live region immediately while typing the text. The error or success message is read by screen readers as the `aria-live` attribute is used with the `polite` value. This makes sure that the notification is read out as soon as the user stops typing instead of every time the user types a character.
+In the following example, the availability of a username is checked instantly while the user is typing text in the input field. Corresponding success and error messages are displayed without the user needing to submit the form.
 
 {::nomarkdown}
 <%= sample_start %>
@@ -596,9 +507,20 @@ document.getElementById('username').addEventListener('keyup', function(){
 <%= code_end %>
 {:/nomarkdown}
 
-#### Complex messages
+{::nomarkdown}
+<%= notes_start %>
+{:/nomarkdown}
 
-Such immediate and dynamic feedback can also be helpful if more complex feedback is given back to the user. The following example tells users how good the password is by displaying a visual meter and the time needed to crack the password.
+**Note:** The displayed message in this example is coded using a `<span>` element that has an `aria-live` attribute with the value `polite`. The contents of this so called “live region” is conveyed to screen readers and other assistive technology. The value “polite” de-emphasizes the importance of the message and does not cause screen readers to interrupt their current tasks to read aloud this message. Thus the message is only read once when the user stops typing rather than on every keystroke that the user makes.
+
+{::nomarkdown}
+<%= notes_end %>
+{:/nomarkdown}
+
+#### Scaled feedback
+{:.ex}
+
+The example below illustrates the multitude of possible types of feedback in addition to success and error messages. In the example, the strength of the password is checked as it is typed by the user. The feedback indicates a scale of how strong the password is. The feedback is indicated using several cues, including color coding, a barometer, and label “Weak”, “Okay”, and “Strong”, as well as the time that would be needed to crack the password.
 
 {::nomarkdown}
 <%= sample_start %>
@@ -661,3 +583,90 @@ document.getElementById('ex2_password').addEventListener('keyup',
 {:/nomarkdown}
 
 [See commented example code in full.](examples/password.html)
+
+### On focus change
+{:.ap}
+
+In some cases it does not make sense to check input as it is being typed by the user, because it would display error messages most of the time. This is often the case when data needs to be entered in a particular format, such as a date.
+
+In the example below, the user is expected to provide an expiry date. The input is checked when the user leaves the form field. That is, when the focus is removed from the form field and the “blur” event is triggered for the element, for example when the tab key is used to move to the focus to the submit button.
+
+{::nomarkdown}
+<%= sample_start %>
+
+<style>
+  #ex4 div {margin-bottom:.75em;}
+</style>
+
+<form method="post" action="#" id="ex4">
+  <div>
+    <label for="expire5"><strong></strong> Expiry date:</label>
+    <input type="text" name="expire" id="expire5" value="03.2015" aria-describedby="expDesc3">
+    <span id="expDesc3" aria-live="assertive"></span>
+  </div>
+  <div class="error">
+    <button type="submit">Submit</button>
+  </div>
+</form>
+
+<script>
+inputs = document.querySelectorAll('#ex4 input');
+for (var i = inputs.length - 1; i >= 0; i--) {
+  inputs[i].addEventListener('blur', function(event){
+    console.log('ohai' + this.id);
+    function setError(el, msg) {
+      el.parentNode.querySelector('strong').innerHTML = "Error:";
+      el.parentNode.className='error';
+      el.parentNode.querySelector('span').innerHTML = msg;
+    }
+    function setSuccess(el) {
+      el.parentNode.querySelector('strong').innerHTML = "OK:";
+      el.parentNode.className='success';
+      el.parentNode.querySelector('span').innerHTML = "&check;";
+    }
+    if (this.id == 'expire5') {
+      if (this.value.match(new RegExp('[0-9]{2}\/[0-9]{4}'))) {
+        console.log(this);
+        setSuccess(this);
+      } else {
+        setError(this, 'Use the format MM/YYYY.');
+      }
+    } else if (this.id == 'username5') {
+      if (taken_usernames.indexOf(this.value.trim())+1 == false) {
+        setSuccess(this);
+      } else {
+        setError(this, 'Username already taken.');
+      }
+    }
+    event.preventDefault();
+    return false;
+  });
+};
+
+</script>
+<%= sample_end%>
+{:/nomarkdown}
+
+{::nomarkdown}
+<%= code_start %>
+{:/nomarkdown}
+~~~html
+<div>
+  <label for="expire"><strong></strong> Expiry date:</label>
+  <input type="text" name="expire" id="expire" value="03.2015" aria-describedby="expDesc3">
+  <span id="expDesc3" aria-live="assertive"></span>
+</div>
+~~~
+{::nomarkdown}
+<%= code_end %>
+{:/nomarkdown}
+
+{::nomarkdown}
+<%= notes_start %>
+{:/nomarkdown}
+
+**Note:** The displayed message in this example is coded using a `<span>` element that has an `aria-live` attribute with the value `assertive`. The contents of this so called “live region” is conveyed to screen readers and other assistive technology. The value “assertive” emphasizes the importance of the message and causes screen readers to interrupt their current tasks to read aloud this message. Thus the message is read aloud before the next element that received the focus is announced to the user.
+
+{::nomarkdown}
+<%= notes_end %>
+{:/nomarkdown}
