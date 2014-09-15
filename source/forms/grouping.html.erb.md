@@ -9,7 +9,7 @@ wcag_techniques:
   - H71
 ---
 
-Group related form controls both visually and within the code. Use the `<fieldset>` and `<legend>` elements to associate related form controls.
+Group related form controls, both visually and within the code. Use the `<fieldset>` and `<legend>` elements to associate related form controls.
 
 ## Associating related controls
 {:.newex}
