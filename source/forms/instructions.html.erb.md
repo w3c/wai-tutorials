@@ -18,12 +18,12 @@ wcag_techniques:
 
 Provide instructions to help users understand how to complete the form and individual form controls. This includes indicating any required and optional input, data formats, and other important aspects of the form.
 
-Screen readers often switch to “Forms Mode” when they are processing content within a `<form>` element. In this mode they usually only read aloud form elements such as `<input>`, `<select>`, `<textarea>`, `<legend>`, and `<label>`. It is critical to include form instructions in ways so that they will be read aloud.
+**Important:** Screen readers often switch to “Forms Mode” when they are processing content within a `<form>` element. In this mode they usually only read aloud form elements such as `<input>`, `<select>`, `<textarea>`, `<legend>`, and `<label>`. It is critical to include form instructions in ways so that they will be read aloud.
 
 ## Overall instructions
 {:.newex}
 
-Where relevant, provide overall instructions that apply to the entire form before the `<form>` element (to ensure that it is read aloud by screen readers before they switch to “Forms Mode”). The overall instructions should also tell the user if there are optional fields and how to skip them, if they make up a large portion of the form. Information about time limits that apply should also be mentioned, alongside with information on how to adjust, extend or turn off the limit.
+Where relevant, provide overall instructions that apply to the entire form. For example, indicate any required and optional input, allowable data formats, and timing limitations. Provide such instructions before the `<form>` element to ensure that it is read aloud by screen readers before they switch to “Forms Mode”.
 
 In the example below, form instructions indicate how required input is highlighted, the expected format for key data fields of the particular form, and how to get additional help for each input.
 
@@ -49,6 +49,8 @@ In addition to the overall instructions, it is also important to provide relevan
 {:.newex}
 
 For simple use cases, providing instructions within the labels may be sufficient. While this approach tends to impact styling options, it is most reliable across different web browsers and assistive technologies.
+
+In the example below, the required format for the “Expiry Date” is indicated by “MM/YYYY” within the same label:
 
 {::nomarkdown}
 <%= sample_start %>
@@ -77,12 +79,12 @@ For simple use cases, providing instructions within the labels may be sufficient
 ### Providing instructions outside labels
 {:.newex}
 
-Providing instructions outside labels allows more flexible positioning and design but generally has caveats. The two approaches outlined below can be combined to achieve most impact.
+Providing instructions outside labels allows more flexible positioning and design but sometimes it can be missed. The two approaches outlined below can be combined to achieve most impact.
 
 #### Informing users
 {:.ap}
 
-Content outside form elements may be missed by screen readers that are in “Forms Mode”. In the example below, users are informed that extra help is available for each field in the overall instructions before they enter the actual form so that they don't miss it.
+Content outside form elements may be missed by screen readers that are in “Forms Mode”. In the example below, users are informed that extra help is available for each field in the overall instructions before they enter the actual form, so that they don't miss it.
 
 {::nomarkdown}
 <%= sample_start %>
@@ -116,7 +118,7 @@ Content outside form elements may be missed by screen readers that are in “For
 <%= notes_start %>
 {:/nomarkdown}
 
-**Note:** A caveat of this approach is that users receive the instructions after the form element. This is often non-ideal, especially when the form controls are larg or when they are displayed on mobile devices and using screen magnification. In such cases these instructions may not always be easy to find.
+**Note:** A caveat of this approach is that users receive the instructions after the form element. This is often non-ideal, especially when the form controls are large, or when they are displayed on mobile devices and using screen magnification. In such cases these instructions may not always be easy to find.
 
 {::nomarkdown}
 <%= notes_end %>
