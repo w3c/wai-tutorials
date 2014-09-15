@@ -12,7 +12,11 @@ wcag_success_criteria:
 type: intro
 ---
 
-Forms are usually the main interaction component in websites and web applications. They’re used to send information to the server or for input and output in client-side JavaScript applications.
+Forms are used to provide functionality in websites and web applications. For example, forms a are used for login, commenting, purchasing, and other functionality.
+
+To make forms are accessible, ensure that all controls are appropriately labeled and grouped where relevant. Also provide clear and simple instructions, validate the input, and provide feedback to the users.
+
+This tutorial shows you how to create accessible forms, regardless whether they are processed by server-side or client-side scripts, or possibly both.
 
 - **[Labeling Controls](labels.html):** Use the `<label>` element, and, in rare cases, the `title` attribute, to indentify each form control.
 
@@ -20,9 +24,9 @@ Forms are usually the main interaction component in websites and web application
 
 - **[Form Instructions](instructions.html):** Provide instructions to help users understand how to complete the form and individual form controls.
 
-- **[Validating Input](validation.html):** Use built-in HTML5 features, and, where needed, custom scripts to validate user input and help users avoid mistakes.
+- **[Validating Input](validation.html):** Validate input provided by the user, and provide options to undo changes and confirm data entry.
 
-- **[User Notifications](notifications.html):** Provide feedback to users to indicate errors, successes, and so that they can undo or confirm changes.
+- **[User Notifications](notifications.html):** Notify users about successful task completion, any errors, and provide instructions to correct mistakes.
 
 - **[Multi-Step Forms](multi-step.html):** Divide long forms into multiple smaller forms that constitute a series of logical steps or stages.
 
@@ -32,8 +36,10 @@ Forms are usually the main interaction component in websites and web application
 
 Forms can be visually and cognitively complex and difficult to use. Accessible forms are easier to use for everyone, including people with disabilities.
 
-- **People using speech input assistive technology** can move the cursor into the fields they need to fill out using voice commands.
+- **People with cognitive disabilities** can better understand the form and how to completed due to the improved layout structure, instructions, and feedback.
 
-- **People with shaky hands** use the label as a larger clickable area for selecting small controls such as radio buttons and checkboxes.
+- **People using speech input** can use the labels via voice commands to activate controls and move the focus to the fields that they need to complete.
 
-- **People using screen readers** can identify the purpose of a form field if a label is properly assigned, including information on the format expected or if the field is required.
+- **People with limited dexterity** benefit from enlarged clickable areas that include the labels, particularly for smaller controls, such as radio buttons and checkboxes.
+
+- **People using screen readers** can identify form controls more easily because they are associated with labels, field sets, and other structural elements.
