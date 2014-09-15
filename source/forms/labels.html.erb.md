@@ -20,14 +20,14 @@ wcag_techniques:
   - G167
 ---
 
-Provide labels to identify all form controls including text fields, checkboxes, radio buttons, drop-down menus, and button elements. In most cases this is done by using the `<label>` element, and in rare cases the `title` attribute.
+Provide labels to identify all form controls, including text fields, checkboxes, radio buttons, drop-down menus, and button elements. In most cases this is done by using the `<label>` element, and in rare cases the `title` attribute.
 
-Labels need to describe the purpose of the form control. This section of the tutorial describes how to provide labels in ways so that they are properly associated with form controls. Later sections explain how to provide instructions, check user input, and provide feedback to help users complete your form.
+Labels need to describe the purpose of the form control. This section of the tutorial describes how to provide labels in ways so that they are properly associated with form controls. Later sections explain how to provide instructions, validate user input, and provide feedback to help users complete your form.
 
 ## Associating labels implicitly
 {:.newex}
 
-The most basic way to associate labels with form controls is to provide both the label and the form control within the same `<label>` element:
+The most basic way to associate labels with form controls is to provide both the label and the form control within the same `<label>` element. In the following example, the `<input>` element of type `text` allows users to provide their first name. This input field is embedded inside a `<label>` element with the text "First name:", to indicate the purpose of the input field to the user:
 
 {::nomarkdown}
 <%= sample_start %>
@@ -54,7 +54,7 @@ The most basic way to associate labels with form controls is to provide both the
 ## Associating labels explicitly
 {:.newex}
 
-You can also use the `for` attribute of the `<label>` element to associate labels with form controls. The value of the `for` attribute must exactly match the value of the `id` attribute for the referenced form element.
+Use the `for` attribute of the `<label>` element to explicitly associate labels with their form controls. The value of the `for` attribute must exactly match the value of the `id` attribute for the referenced form element.
 
 This approach is more robust because it explicitly associates the labels with the form elements within the code. It allows the labels and form controls to be displayed separately, for example on a mobile device when only one of them can be displayed at a time. It is also independent of the HTML code structure, which is particularly useful when the label text and form element are not included within the same parent element in the HTML code. For example, when the form is formatted to look like a table, as in the example below.
 
@@ -122,7 +122,7 @@ This approach is more robust because it explicitly associates the labels with th
 
 In left-to-right languages it is custom to visually position labels to the right of radio buttons and checkboxes, and to left or directly above other form fields. Maintaining this practice increases predictability and understandability of your form for all users.
 
-In general, placing labels above the form fields helps reduce horizontal scrolling for people using screen magnification and for mobile device users. However, the usefulness of this approach depends on other design aspects, such as the placement of other nearby form fields and content, and needs to be assessed individually.
+In general, placing labels above the form fields helps reduce horizontal scrolling for people using screen magnification and for mobile device users. However, the usefulness of this approach depends on other design aspects, such as the proximity of other nearby form fields and content, and needs to be assessed individually.
 
 ## Hiding labels
 {:.newex}
