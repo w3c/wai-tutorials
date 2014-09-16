@@ -225,6 +225,7 @@ The example below shows a pop-up that is displayed when the user activates the �
 ### Listing errors
 
 When errors occur, it is useful list them at the top of the page, before the form. The list should have a distinctive heading, so that it is easy to identify. Each error listed should:
+
 - Reference the label of the corresponding form control, to help the user recognize the control;
 - Provide a concise description of the error in a way that is easy to understand by everyone;
 - Provide an indication of how to correct mistakes, and remind users of any format requirements;
@@ -275,7 +276,7 @@ When errors occur, it is useful list them at the top of the page, before the for
 {:/nomarkdown}
 
 ## In-line feedback
-{:#inline}
+{:.newap#inline}
 
 In addition to overall feedback, more specific feedback at or near the form controls can better help users to use your form. This includes feedback to indicate correctly entered input as well as errors in the input.
 
@@ -410,7 +411,7 @@ document.getElementById('ex3').addEventListener('submit', function(event){
 Providing instant feedback during typing is interactive and can be very helpful. For example, checking the availability of a username in the previous example required the user to resubmit the form possibly multiple times. Providing feedback while users are typing allows them to experiment more easily until they find a suitable username. However, client-side scripting is required for such functionality, and not all situations may be suitable for such feedback.
 
 #### Binary messages
-{:.ex}
+{:.ex.inap}
 
 In the following example, the availability of a username is checked instantly while the user is typing text in the input field. Corresponding success and error messages are displayed without the user needing to submit the form.
 
@@ -518,7 +519,7 @@ document.getElementById('username').addEventListener('keyup', function(){
 {:/nomarkdown}
 
 #### Scaled feedback
-{:.ex}
+{:.ex.inap}
 
 The example below illustrates the multitude of possible types of feedback in addition to success and error messages. In the example, the strength of the password is checked as it is typed by the user. The feedback indicates a scale of how strong the password is. The feedback is indicated using several cues, including color coding, a barometer, and label “Weak”, “Okay”, and “Strong”, as well as the time that would be needed to crack the password.
 
