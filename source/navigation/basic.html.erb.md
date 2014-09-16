@@ -1,5 +1,5 @@
 ---
-title: Navigation Types
+title: Basic Navigation
 status: editors-draft
 order: 2
 wcag_success_criteria:
