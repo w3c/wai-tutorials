@@ -3,6 +3,7 @@ techniques:
   - C7: Using CSS to hide a portion of the link text
   - C22: Using CSS to control visual presentation of text
   - FLASH17: Providing keyboard access to a Flash object and avoiding a keyboard trap
+  - G14: Ensuring that information conveyed by color differences is also available in text
   - G17: Ensuring that a contrast ratio of at least 7:1 exists between text (and images of text) and background behind the text
   - G18: Ensuring that a contrast ratio of at least 4.5:1 exists between text (and images of text) and background behind the text
   - G21: Ensuring that users are not trapped in content
@@ -28,6 +29,7 @@ techniques:
   - G168: Requesting confirmation to continue with selected action
   - G196: Using a text alternative on one item within a group of images that describes all items in the group
   - G180: Providing the user with a means to set the time limit to 10 times the default time limit
+  - G182: Ensuring that additional visual cues are available when text color differences are used to convey information
   - G183: Using a contrast ratio of 3:1 with surrounding text and providing additional visual cues on focus for links or controls where color alone is used to identify them
   - G198: Providing a way for the user to turn the time limit off
   - G202: Ensuring keyboard control for all functionality
