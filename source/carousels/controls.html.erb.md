@@ -1,5 +1,5 @@
 ---
-title: Controls & Interaction
+title: Functionality
 status: editors-draft
 order: 3
 wcag_success_criteria:
@@ -9,11 +9,16 @@ wcag_success_criteria:
   - 4.1.2
 ---
 
-To allow basic navigating through the slides, the slide show needs to be prepared to hide all content but the first slide from all users, including people using assistive technologies. Then “left” and “right” arrows are added to the carousel, that display the previous and next slide, respectively.
+Provide functionality to display the carousel items one at a time, and to allow users to browse through them. This functionality is added using scripting, based on the class names of the elements involved.
 
-## Add Styling when JavaScript is Enabled
+## Displaying carousel items
 
-If JavaScript is enabled a class (`.active`) is added that allows all slides to be stacked on top of another with the current slide top-most. Additionally, all slides but the current one are hidden by using `display: none` – a [hiding technique](/fundamentals/hiding.html) that hides visually and from assistive technologies.
+Carousel items that are visually hidden should also be hidden from assistive technology, to avoid a mismatch between what is visually on the screen and what the user is interacting with. All carousel items that are not visually displayed are hidden by using the CSS `display: none` directive. Refer to [content hiding techniques](/fundamentals/hiding.html) for more background.
+
+### Scripted styling
+{:.ex}
+
+In the example below, JavaScript is used to add the class name `.active` to all carousel items. The styling for this class positions them all on top of each other and hides them. The class name `.current` is added to the one carousel item that is to be displayed, which ensure that it is on top of all other hidden carousel items.
 
 {::nomarkdown}
 <%= code_start('','CSS') %>
@@ -152,9 +157,15 @@ The outcome looks like this:
 <%= sample_end %>
 {:/nomarkdown}
 
-## Add Previous and Next Buttons
+## Toggling carousel items
 
-First, the previous and next buttons need to be added to the markup using JavaScript and styled according to their function. The HTML5 button element is used to make sure that the buttons are [keyboard accessible](/fundamentals/keyboard-access.html).
+Scripting is also used to add buttons that allow users to toggle back and forth between carousel items. While these buttons often have various styles visually, it is useful to code them using `<button>` elements. This gives them semantic meaning but also makes them more compatible with assistive technology and keyboard users. Refer to [keyboard accessibility](/fundamentals/keyboard-access.html) for more background.
+
+### Toggle Buttons
+
+In the example below, JavaScript is used to generate code for the buttons and insert them onto the carousel. These particular buttons are visually displayed as text that overlay the carousel items. The text reads "Previous Slide" and "Next Slide". Arrows alone were not used in this example, as arrows alone could be too sublte and missed by some users.
+
+A semi-transparent white background with black text were selected to ensure sufficient color contrast between the text and any background images in the carousel items. Also, the buttons increase in size when users hover over them with the mouse to provide more click area for people with reduced dexterity. They also increase in size when they are focused by keyboard to better highlight to keyboard users where the current focus is.
 
 {::nomarkdown}
 <%= code_start('', 'JavaScript') %>
@@ -189,8 +200,6 @@ carousel.appendChild(ctrls);
 {::nomarkdown}
 <%= code_end %>
 {:/nomarkdown}
-
-Styling is added to make sure contrast ratio requirements are met as well by adding a semi-transparent white background. While it may be visually intriguing to use plain arrows, they are often hard to recognize, especially for people with disabilities. Both buttons get wider when hovered by the mouse pointer or focused using the keyboard. This is also animated to keep the click target larger for a longer time, which makes it easier for people with shaky hands.
 
 {::nomarkdown}
 <%= code_start('', 'CSS') %>
@@ -230,7 +239,7 @@ Styling is added to make sure contrast ratio requirements are met as well by add
 <%= code_end %>
 {:/nomarkdown}
 
-The result looks – and works – like this:
+The outcome looks like this:
 
 {::nomarkdown}
 <%= sample_start %>
@@ -446,39 +455,14 @@ The result looks – and works – like this:
 <%= sample_end %>
 {:/nomarkdown}
 
-## Add Slide Navigation Buttons
+## Indicating carousel items
 
-Optionally, a list of all slides can be used to provide the user a sense of how much information is contained in the carousel and which of the slides is currently activated.
+Indicating the total number of carousel items and which one of them is currently being displayed helps users to orient themselves and find any information they need. Ideally this is done by a set of styled buttons that each represent a carousel item in the sequence. Providing these slide representations as buttons that can be activated allows users to browse more freely within the carousel items. Providing these buttons within a list, adds meaning and semantics to the content, such as the number and order of the carousel items.
 
-### Concepts
+### Carousel item indicator
+{:.ex}
 
-{::nomarkdown}
-<%= sample_start %>
-{:/nomarkdown}
-
-![Numbers in squares (described below)](ex-slider-controls.png)
-
-{::nomarkdown}
-<%= sample_end %>
-{:/nomarkdown}
-
-Visually, the above controls show three numbered square buttons. The current slide button (number 1) has rounded corners and is in the reverse color combination to the others, button 3 has a dashed border to show that it is the control currently in tab focus (or hovered by a mouse pointer). If button 3 was activated, slide 3 would be shown.
-
-The same information needs to be conveyed to users who can’t see the screen: The controls need to be marked up as a list, so screen reader users know number of slides. Also the current slide needs to be identified, usually by [visually hidden text](/fundamentals/hiding.html).
-
-{::nomarkdown}
-<%= notes_start %>
-{:/nomarkdown}
-
-**Note:** Numbered buttons are important for speech recognition software users as they cannot know what command to give their software to navigate to the desired slide otherwise.
-
-{::nomarkdown}
-<%= notes_end %>
-{:/nomarkdown}
-
-### Structure
-
-The list is created through JavaScript and then added to the Document Object Model (DOM) of the carousel, which results in the following structure:
+In the following example, a list with buttons is styled to look visually like a progress indicator. The buttons are numbered matching the corresponding carousel items. The button corresponding to the currently displayed carousel item is highlighted both visually and using [visually hidden text](/fundamentals/hiding.html). Also the button that currently has the keyboard or mouse focus is highlighted.
 
 {::nomarkdown}
 <%= code_start %>
@@ -507,10 +491,6 @@ The list is created through JavaScript and then added to the Document Object Mod
 {::nomarkdown}
 <%= code_end %>
 {:/nomarkdown}
-
-### Styling
-
-As mentioned above, the styling of the buttons of the list is crucial for accessibility as well:
 
 {::nomarkdown}
 <%= code_start('', 'CSS') %>
@@ -547,11 +527,24 @@ As mentioned above, the styling of the buttons of the list is crucial for access
 <%= code_end %>
 {:/nomarkdown}
 
-### Interaction
+{::nomarkdown}
+<%= sample_start %>
+{:/nomarkdown}
 
-When a user activates one of the buttons in the list, the slide comes up visually. Additionally, the focus should be set to the then current slide as this brings up the slide to non-visual users immediately. To enable the slide to receive focus, its `tabindex` attribute needs to be set to `-1` as elements other than `<a>`, `<button>` and form element are not able to receive focus by default (see [Keyboard Access](/fundamentals/keyboard-access.html)).
+@@@add working example of the above code (without slides - just the styled buttons)
 
-Also, the button of the new current slide needs to be highlighted as well.
+{::nomarkdown}
+<%= sample_end %>
+{:/nomarkdown}
+
+## Focusing carousel items
+
+When users select a carousel item through toggle buttons, buttons in a carousel item indicator, or other functionality, then the focus needs to be to the corresponding carousel item. However, often carousel items will be coded using elements that, by default, are not focusable, such as `<li>` or  `<article>` elements. Use the `tabindex` attribute with its value set to `-1`, to make such elements capable of receiving focus, then set the focus on them. Refer to [Keyboard accessibility](/fundamentals/keyboard-access.html) for more background.
+
+### Focus change
+{:.ex}
+
+The code snippet below shows the JavaScript code used in the demo for this tutorial. It illustrates how the `tabindex` attribute and the focus are set when a carousel item is selected, and how the carousel item indicator is updated accordingly.
 
 {::nomarkdown}
 <%= code_start('', 'JavaScript') %>
@@ -591,7 +584,9 @@ slidenav.addEventListener('click', function(event) {
 <%= code_end %>
 {:/nomarkdown}
 
-The final outcome then looks and works like this:
+## Putting it all together
+
+The sample below is a demo of the carousel that we've built by putting together the previous examples. It is a working example of a carousel where one carousel item at a time is displayed. It includes buttons for users to toggle back and forth between the carousel items, and a carousel item indicator that allows users to view which carousel item they are currently viewing and to jump to other carousel items. Animating this carousel will be explained in the next page.
 
 {::nomarkdown}
 <%= sample_start %>
