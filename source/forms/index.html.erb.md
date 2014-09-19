@@ -12,7 +12,7 @@ wcag_success_criteria:
 type: intro
 ---
 
-Forms are used to provide functionality in websites and web applications. For example, forms a are used for login, commenting, purchasing, and other functionality.
+Forms are used to provide functionality in websites and web applications. For example, forms are used for login, registering, commenting, purchasing, and other functionality.
 
 To make forms are accessible, ensure that all controls are appropriately labeled and grouped where relevant. Also provide clear and simple instructions, validate the input, and provide feedback to the users.
 
@@ -28,7 +28,7 @@ This tutorial shows you how to create accessible forms, regardless whether they 
 
 - **[User Notifications](notifications.html):** Notify users about successful task completion, any errors, and provide instructions to correct mistakes.
 
-- **[Multi-Step Forms](multi-step.html):** Divide long forms into multiple smaller forms that constitute a series of logical steps or stages.
+- **[Multi-Step Forms](multi-step.html):** Divide long forms into multiple smaller forms that constitute a series of logical steps or stages and inform users about their progress.
 
 - **[Custom Controls](custom-controls.html):** Use stylized form elements and other progressive enhancement techniques to provide custom controls.
 
