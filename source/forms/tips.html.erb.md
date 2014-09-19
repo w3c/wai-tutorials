@@ -5,9 +5,9 @@ order: 9
 type: tips
 ---
 
-* **Keep it simple:** Complex forms are more often abandoned by users than simple forms, regardless how accessible they are.
+* **Keep it simple:** Complex forms are more often abandoned by users than simple forms, regardless how accessible they are. Only ask users to enter that is requierd to complete the transation or process; if extraneous data is requested, users often abandon the form.
 
-* **Take data gracefully:** Try to interpret data as liberally as possible. Don’t throw error messages at users because they don’t obey the number of parentheses you expect.
+* **Take data gracefully:** Try to interpret data as liberally as possible. Don’t throw error messages at users because they don’t obey the number of parentheses you expect. For example accept spaces, dashes, etc in phone numbers - these can be reoved afterwards if required.
 
 * **Be careful with required formats:** Postal codes are not numbers in every country, so using and `input` of the type `number` could easily become a problem.
 
