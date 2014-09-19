@@ -1,5 +1,5 @@
 ---
-title: Structure & Basic Styles
+title: Basic Structure
 status: editors-draft
 order: 2
 wcag_success_criteria:
@@ -11,36 +11,21 @@ wcag_techniques:
   - H48
 ---
 
-As with every part of a website, a good markup structure is the base for a carousel to work in an accessible way. This helps the carousel to be easily discovered and also allows non-visual users to interpret the individual slides in a meaningful way.
+Provide structural markup for the carousel and its items, and later enhance these structures with styling and scripting. This ensures that the content of the carousel has meaning on its own, without styling and scripting, and can be rendered and used in more situations.
 
-## Carousel Heading
+**Note:** A carousel is typically a distinct part of a web page, so that a [heading](/background/headings.html) is typically needed to identify and label the carousel.
 
-As a carousel is a set of content pieces, that share some properties, it is useful to add a [heading](/background/headings.html) directly in front of the carousel, for example:
+## Carousel framework
 
-{::nomarkdown}
-<%= code_start %>
-{:/nomarkdown}
+A carousel is a collection of items that are displayed one at a time. Provide a corresponding structure in the code to represent this collection of items.
 
-~~~html
-<h3>Featured articles</h3>
+### List of items
+{:.ap}
 
-<h3>Editor’s picks</h3>
-
-<h3>Price Winners</h3>
-~~~
+In many situations, the carousel items are fairly brief so that a simple a list (`<ul>`) with individual list items (`<li>`) is sufficient to represent the carousel. This approach is robust and is compatible with HTML4 and HTML5. The example below shows the use of a list to represent a carousel.
 
 {::nomarkdown}
-<%= code_end %>
-{:/nomarkdown}
-
-The heading has to be in the correct heading structure of the document, for example the heading of the next section of the document should be the same as the one before the carousel.
-
-## Carousel Skeleton
-
-Depending on the content of the individual slides, a there are some possibilities of how the basic skeleton may look like. For a simple list of images or teasers, a list (`<ul>`) may be perfectly sufficient, if complete articles are the content of the carousel, the use of `<article>` elements for every slide might be more appropriate.
-
-{::nomarkdown}
-<%= code_start('', 'Simple content') %>
+<%= code_start('', 'Using list elements') %>
 {:/nomarkdown}
 
 ~~~html
@@ -57,15 +42,29 @@ Depending on the content of the individual slides, a there are some possibilitie
 <%= code_end %>
 {:/nomarkdown}
 
+### Set of articles
+{:.ap}
+
+HTML5 provides the `<article>` element, which is useful for carousels with items that have a lot of content. Make sure to provide headings for each article for older web browsers that do not know the `<article>` element. The example below shows the use of the HTML5 `<article>` element to represent a carousel.
+
 {::nomarkdown}
-<%= code_start('', 'Complete articles') %>
+<%= code_start('', 'Using article elements') %>
 {:/nomarkdown}
 
 ~~~html
 <div class="carousel">
-    <article class="slide">…</article>
-    <article class="slide">…</article>
-    <article class="slide">…</article>
+    <article class="slide">
+      <h4>…</h4>
+      …
+    </article>
+    <article class="slide">
+      <h4>…</h4>
+      …
+    </article>
+    <article class="slide">
+      <h4>…</h4>
+      …
+    </article>
 </div>
 ~~~
 
@@ -73,16 +72,14 @@ Depending on the content of the individual slides, a there are some possibilitie
 <%= code_end %>
 {:/nomarkdown}
 
-To allow semantic flexibility, CSS and JavaScript should be based on the class names of the elements of the various carousel parts. As they wouldn’t work without JavaScript anyway, no buttons to go to other slides are added in the markup. Instead they will be added by the JavaScript that drives them later in this tutorial. This [Progressive Enhancement](/background/progressive-enhancement.html) principle will make sure that the content is available even if the JavaScript fails to load and makes sure that there are no controls on the page which don’t work.
+## Item structure
 
-## Slide Construction
+Also provide proper structure for content within the individual carousel items. This makes them independent pieces of content that can be rendered and used in different ways. Refer to prior tutorials on [headings](/fundamentals/heading.html) and [images tutorial](/images/index.html) for more background on how to provide these types of content, also in a carousel item.
 
-As described above, the content of slides varies depending on the use of the carousel and can, for example, include text (headings, lists, links, …), images and video. If [headings](/fundamentals/heading.html) are used, they should be one level below the slider heading.
-
-### Image Content
+### Brief Content
 {:.ex}
 
-When using images in a slide show, each image should have an alternative text that describes it, as shown in the [images tutorial](/images/index.html).
+In the following example, the carousel items only consist of an image each, so that a simple list was used to represent the carousel. The carousel itself is identified using a heading, and the text alternatives are considered for the images of the carousel items. The code provides structure and meaning, even without any styling and scripting added.
 
 {::nomarkdown}
 <%= code_start %>
@@ -112,7 +109,7 @@ When using images in a slide show, each image should have an alternative text th
 ### Complex Content
 {:.ex}
 
-Complex content should use headings, so the content is easily findable. If used as teasers, links should be descriptive. In the example below, background images are used, as the images are for illustration only and do only visually support the content of the slide. The content of the image itself is not relevant in this case. This more complex example is the base of this tutorial:
+This example also uses a list, even though the carousel items consist of more substantial content than in the previous example. This approach was selected to ensure more compatibility with web browesers that do not yet support the HTML5 `<article>` element. The individual list items include a heading, text, and links each, which is valide use of HTML.
 
 {::nomarkdown}
 <%= code_start %>
@@ -151,33 +148,18 @@ Complex content should use headings, so the content is easily findable. If used 
 <%= code_end %>
 {:/nomarkdown}
 
-## Basic Styling
+## Carousel styling
 
-This styling makes sure that slides look good on their own, for example if JavaScript fails to load. Additional CSS is used in the other parts of the tutorial while the example is enhanced to a fully-fledged carousel.
+At this stage the carousel does not have any functionality. This is added later, based on the class names of the elements, using scripting, if it is enabled. If scripting is not enabled then the functionality would not work anyway.
 
-### Contrast Ratio
+This does not prevent you from providing the basic styling for the carousel so that it looks appropriate even when scripting is not enabled. In many cases carousels are styled with background images and overlayed text, so that [color contrast](/fundamentals/contrast-ratio.html) considerations are relevant.
 
-By using semi-transparent backgrounds, the [contrast ratio](/fundamentals/contrast-ratio.html) between text and the background-image is sufficient for low vision users and in situation where the contrast of the screen itself is low, like in direct sunlight.
+### Styled carousel
+{:.ex}
 
-{::nomarkdown}
-<%= code_start %>
-{:/nomarkdown}
+The example below shows how the carousel structure from the previous example is styled. It uses semi-transparent backgrounds behind the overlayed text, to ensure sufficient color contrast to the background image.
 
-~~~css
-.slide h4 {
-  background-color: rgba(255,255,255,.8);
-}
-~~~
-
-{::nomarkdown}
-<%= code_end %>
-{:/nomarkdown}
-
-{::nomarkdown}
-<%= notes_start %>
-{:/nomarkdown}
-
-**Note:** To keep the demo simple, a fixed-width implementation of a carousel is implemented in this tutorial.
+**Note:** The carousel demo in this tutorial has a fixed-width implementation to keep the tutorial simple.
 
 {::nomarkdown}
 <%= notes_end %>
