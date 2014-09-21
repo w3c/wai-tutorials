@@ -15,7 +15,7 @@ Provide structural markup for the carousel and its items, and later enhance thes
 
 **Note:** A carousel is typically a distinct part of a web page, so that a [heading](/background/headings.html) is typically needed to identify and label the carousel.
 
-## Carousel framework
+## Carousel Framework
 
 A carousel is a collection of items that are displayed one at a time. Provide a corresponding structure in the code to represent this collection of items.
 
@@ -25,7 +25,7 @@ A carousel is a collection of items that are displayed one at a time. Provide a 
 In many situations, the carousel items are fairly brief so that a simple a list (`<ul>`) with individual list items (`<li>`) is sufficient to represent the carousel. This approach is robust and is compatible with HTML4 and HTML5. The example below shows the use of a list to represent a carousel.
 
 {::nomarkdown}
-<%= code_start('', 'Using list elements') %>
+<%= code_start %>
 {:/nomarkdown}
 
 ~~~html
@@ -48,7 +48,7 @@ In many situations, the carousel items are fairly brief so that a simple a list 
 HTML5 provides the `<article>` element, which is useful for carousels with items that have a lot of content. Make sure to provide headings for each article for older web browsers that do not know the `<article>` element. The example below shows the use of the HTML5 `<article>` element to represent a carousel.
 
 {::nomarkdown}
-<%= code_start('', 'Using article elements') %>
+<%= code_start %>
 {:/nomarkdown}
 
 ~~~html
@@ -72,11 +72,11 @@ HTML5 provides the `<article>` element, which is useful for carousels with items
 <%= code_end %>
 {:/nomarkdown}
 
-## Item structure
+## Item Structure
 
 Also provide proper structure for content within the individual carousel items. This makes them independent pieces of content that can be rendered and used in different ways. Refer to prior tutorials on [headings](/fundamentals/heading.html) and [images tutorial](/images/index.html) for more background on how to provide these types of content, also in a carousel item.
 
-### Brief Content
+### Brief content
 {:.ex}
 
 In the following example, the carousel items only consist of an image each, so that a simple list was used to represent the carousel. The carousel itself is identified using a heading, and the text alternatives are considered for the images of the carousel items. The code provides structure and meaning, even without any styling and scripting added.
@@ -106,7 +106,7 @@ In the following example, the carousel items only consist of an image each, so t
 <%= code_end %>
 {:/nomarkdown}
 
-### Complex Content
+### Complex content
 {:.ex}
 
 This example also uses a list, even though the carousel items consist of more substantial content than in the previous example. This approach was selected to ensure more compatibility with web browesers that do not yet support the HTML5 `<article>` element. The individual list items include a heading, text, and links each, which is valide use of HTML.
@@ -148,7 +148,8 @@ This example also uses a list, even though the carousel items consist of more su
 <%= code_end %>
 {:/nomarkdown}
 
-## Carousel styling
+## Carousel Styling
+{:.newex}
 
 At this stage the carousel does not have any functionality. This is added later, based on the class names of the elements, using scripting, if it is enabled. If scripting is not enabled then the functionality would not work anyway.
 
