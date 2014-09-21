@@ -1,6 +1,6 @@
 ---
 title: Navigation Concepts
-tutorial_title: Navigation
+tutorial_title: Navigation Menus
 status: editors-draft
 order: 1
 topic_order: 6
@@ -17,7 +17,9 @@ A good navigation on a website is not only the programmer’s task. It begins wi
 This tutorial shows you how to use markup, styling and interaction to website navigation. It includes the following pages:
 
 * **[Navigation Types](types.html):** An introduction into the basic HTML structure for horizontal, vertical, and breadcrumb navigations.
+
 * **[Skip Links and In-page Navigation](in-page.html):** Use (hidden) links to jump to different parts of a web page when using the keyboard.
+
 * **[Dropdowns](dropdowns.html):** Implement a dropdown menu in an accessible way.
 
 ## Why is this important?
