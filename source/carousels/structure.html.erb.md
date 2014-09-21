@@ -159,6 +159,10 @@ This does not prevent you from providing the basic styling for the carousel so t
 
 The example below shows how the carousel structure from the previous example is styled. It uses semi-transparent backgrounds behind the overlayed text, to ensure sufficient color contrast to the background image.
 
+{::nomarkdown}
+<%= notes_start %>
+{:/nomarkdown}
+
 **Note:** The carousel demo in this tutorial has a fixed-width implementation to keep the tutorial simple.
 
 {::nomarkdown}
