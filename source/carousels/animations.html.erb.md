@@ -6,13 +6,11 @@ wcag_success_criteria:
   - 2.2.2
 ---
 
-Often, a sliding animation conveys that there is more content in the carousel than displayed on the moment the page is accessed.
+Provide users with control over any animations in your carousel. Carousels typically periodically rotate the displayed items. Providing different ways for users to stop this animation is essential for people who might find the permanent changes distracting, and for people who need more time to read carousel items.
 
-Animations are challenging for accessibility as they affect different people in different ways. A blind person for example may lose the keyboard position if a slide disappears and people who aren’t able to read stationary text quickly might not be able to read the content of a slide at all. For others, moving content is a severe distraction, making it difficult for them to concentrate on other parts of the page.
+## Stop Button
 
-## Add a Stop Button
-
-To avoid the problems outlined aboves, the user needs to have the ability to stop automatic animations. In the following example carousel, there is a pause button next to the list of slides that allows for that.
+One common approach to control carousel animations is to provide a button to allow users to stop and resume the animations. In the example below, such a button is added to the [carousel items indicator bar](/carousels/controls.html#indicating-carousel-items). The button label and its function alternate, depending on whether the animation is currently on or off:
 
 {::nomarkdown}
 <%= code_start %>
@@ -26,15 +24,31 @@ To avoid the problems outlined aboves, the user needs to have the ability to sto
 <%= code_end %>
 {:/nomarkdown}
 
-When the button is clicked, the `data-action` value is changed to a `start` and the text inside the button changes to `<span class="visuallyhidden">Start Animation </span>▶`. If the button is clicked, the animation is stopped or started, depending on the value. It is important to not replace the whole button, as the focus would be lost and keyboard users would need to start from the top of the page.
+{::nomarkdown}
+<%= code_start %>
+{:/nomarkdown}
 
-## Stop Animation While Interacting with the Carousel
+~~~html
+<button data-action="start"><span class="visuallyhidden">Start Animation </span>▶</button>
+~~~
 
-Many carousels use a sliding animation which requires to have two slides visible at the same time: the slide that is the current slide and the slide that will become the current slide. The current slide then disappears and is not reachable using the keyboard anymore.
+{::nomarkdown}
+<%= code_end %>
+{:/nomarkdown}
 
-If content suddenly can’t be reachable using the keyboard, and the focus is inside this content, this may lead to users that lose their focus and need to start from the top of the page again, which is very inconvenient and a potential keyboard trap.
+{::nomarkdown}
+<%= notes_start %>
+{:/nomarkdown}
 
-To avoid such behavior and make it easier for users to use the mouse to interact with the carousel, the animation should stop when an element inside the carousel receives focus or the mouse is hovering over the carousel. The animation should continue when the focus moves on or the mouse stops hovering.
+**Note:** The script only replaces the value of the button rather than to replace the button entirely. If the button is removed, then the focus be lost for keyboard users.
+
+{::nomarkdown}
+<%= notes_end %>
+{:/nomarkdown}
+
+## Pause when focused
+
+Another useful approach is to pause the carousel animation when the carousel receives focus by keyboard or is hovered over by mouse. Pausing the animation ensures that keyboard users do not lose focus when the carousel item is changed. It is also useful for people who need more time to read the content and to maneuver the mouse to a link or control inside the carousel item.
 
 {::nomarkdown}
 <%= code_start %>
@@ -74,10 +88,9 @@ carousel.addEventListener('focusout',
 <%= notes_end %>
 {:/nomarkdown}
 
-As most of the carousels use a sliding animation, it is required to have two slides visible at the same time, the slide that is the current slide and the slide that will become the current slide.
+## Finalized carousel
 
-
-## End Result
+The sample below is a demo of the final carousel that is built by putting together all examples of this tutorial:
 
 {::nomarkdown}
 <%= sample_start %>
@@ -163,48 +176,6 @@ slidewrapper.addEventListener('transitionend', function (event) {
 
 {::nomarkdown}
 <%= code_end %>
-{:/nomarkdown}
-
-## Stop Animation While Interacting with the Carousel
-
-The slide that is currently active is highlighted in the slide list and a play/pause button is added. Additionally, the animation should stop when an element inside the carousel receives focus or the mouse is hovering over the carousel and continue when the focus is lost or the mouse stops hovering.
-
-{::nomarkdown}
-<%= code_start('', 'JavaScript: In initialization') %>
-{:/nomarkdown}
-
-~~~js
-carousel.addEventListener('mouseenter', suspendAnimation);
-carousel.addEventListener('mouseleave', startAnimation);
-
-carousel.addEventListener('focusin',
-  function(event) {
-    if (!hasClass(event.target, 'slide')) {
-      suspendAnimation();
-    }
-  }
-);
-carousel.addEventListener('focusout',
-  function(event) {
-    if (!hasClass(event.target, 'slide')) {
-      startAnimation();
-    }
-  }
-);
-~~~
-
-{::nomarkdown}
-<%= code_end %>
-{:/nomarkdown}
-
-{::nomarkdown}
-<%= notes_start %>
-{:/nomarkdown}
-
-**Note:** The [`focusin`](http://www.w3.org/TR/DOM-Level-3-Events/#event-type-focusIn) and [`focusout`](http://www.w3.org/TR/DOM-Level-3-Events/#event-type-focusout) events are defined in the [W3C Document Object Model (DOM) Level 3 Events Specification](http://www.w3.org/TR/DOM-Level-3-Events/) (Working Draft) and implemented in many browsers. Firefox needs [a short polyfill](examples/focusinoutpolyfill.js) at the time of publication of this tutorial.
-
-{::nomarkdown}
-<%= notes_end %>
 {:/nomarkdown}
 
 <style>
