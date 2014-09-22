@@ -12,21 +12,15 @@ wcag_success_criteria:
   - 4.1.2
 ---
 
-Carousels are used to show content in relatively little space by displaying only a portion of the content at a time and rotating through all the whole content, usually in an automatically animated fashion. A wide range of content can be found in carousels: from simple images to complete teasers. Carousels are often called “slide shows” or “sliders”, the individual pieces of content “slides”. As carousels are interactive elements on a page showing and hiding content from the user in an animated way, a variety of considerations have to be included in development:
-
-- **[Structure](structure.html):** The carousel as a whole and individual slides should have structural markup that enables users access the content of the slides easily.
-- **[Controls](controls.html):** The user needs to be in full control of the carousel, regardless of the input method (mouse, keyboard, touch etc.).
-- **[Animations](animations.html):** Sliders are usually animated. This creates accessibility barriers for many people.
-
-## Pausing slides
-
-In contrast to other success criteria, providing a mechanism to pause automatic movement is required for the entire page on which the movement occurs. [Animations](animations.html) shows an example on how to fulfill this criterion. For further information, see  [WCAG conformance requirement 5, Non-Interference](http://www.w3.org/TR/WCAG20/#cc5).
+Carousels, commonly also referred to as “slide shows” or “sliders”, display a series of content items one at a time; for example, a series of news headlines. Carousels are usually animated, so that the displayed item is periodically rotated. This tutorial highlights the particular accessibility considerations for such carousels:
+- **[Basic Structure](structure.html):** Provide structural markup for the carousel and its items, and later enhance these structures with styling and scripting.
+- **[Functionality](controls.html):** Provide functionality to display the carousel items one at a time, and to allow users to browse through them.
+- **[Animations](animations.html):** Provide users with control over any animations in your carousel.
 
 ## Why is this important?
 
-Accessible carousels effectively draw attention to featured pages or products in a small space. They ensure that:
-
-- **People using keyboard navigation or voice input software** can identify the current slide and navigate between slides.
-- **People using screen readers** will understand where they are and how to navigate between slides.
-- **Users aren’t distracted by movement** as they’ll be able to pause the rotation while reading static content elsewhere on the page.
-- **People who can’t read quickly** can stop slide rotation giving them time to read and understand the content of each slide.
+Carousels are frequently used, in particular on home pages, to draw the readers' attention to featured articles and products of the website. Given their prominence, inaccessible carousels can be a major obstacle for many website visitors. On the other hand, accessibile carousels provide more effective access for many users including:
+- **People using keyboard navigation and voice input software** can navigate between carousel items.
+- **People using screen readers** will understand where they are and how to navigate between carousel items.
+- **People who are distracted by movement** are able to pause the animations while reading the web page.
+- **People who need more time to read** have sufficient time to read and understand each carousel item.
