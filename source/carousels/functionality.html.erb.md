@@ -9,16 +9,16 @@ wcag_success_criteria:
   - 4.1.2
 ---
 
-Provide functionality to display the carousel items one at a time, and to allow users to browse through them. This functionality is added using scripting, based on the class names of the elements involved.
+Provide functionality to display the carousel items one at a time, and to allow users to browse through them. This functionality is added using scripting, based structure of the elements involved.
 
 ## Displaying carousel items
 
-Carousel items that are visually hidden should also be hidden from assistive technology, to avoid a mismatch between what is visually on the screen and what the user is interacting with. All carousel items that are not visually displayed are hidden by using the CSS `display: none` directive. Refer to [content hiding techniques](/fundamentals/hiding.html) for more background.
+Carousel items that are visually hidden should also be hidden from assistive technology, to avoid a mismatch between what is visually on the screen and what the user is interacting with. All carousel items that are not displayed visually are hidden by using the CSS `display: none` declaration. Refer to [content hiding techniques](/fundamentals/hiding.html) for more background.
 
 ### Scripted styling
 {:.ex}
 
-In the example below, JavaScript is used to add the class name `.active` to all carousel items. The styling for this class positions them all on top of each other and hides them. The class name `.current` is added to the one carousel item that is to be displayed, which ensure that it is on top of all other hidden carousel items.
+In the example below, JavaScript is used to add the class name `.active` to the carousel container. The styling for this class positions all carousel items all on top of each other and hides them. The class name `.current` is added to the one carousel item that is to be displayed, which ensure that it is on top of all other hidden carousel items.
 
 {::nomarkdown}
 <%= code_start('','CSS') %>
@@ -157,15 +157,15 @@ The outcome looks like this:
 <%= sample_end %>
 {:/nomarkdown}
 
-## Toggling carousel items
+## Switching carousel items
 
-Scripting is also used to add buttons that allow users to toggle back and forth between carousel items. While these buttons often have various styles visually, it is useful to code them using `<button>` elements. This gives them semantic meaning but also makes them more compatible with assistive technology and keyboard users. Refer to [keyboard accessibility](/fundamentals/keyboard-access.html) for more background.
+Scripting is further used to add buttons that allow users to switch back and forth between carousel items. While these buttons often have various styles visually, it is useful to code them using `<button>` elements. This gives them semantic meaning and also makes them more compatible with assistive technology and keyboard use. Refer to [keyboard accessibility](/fundamentals/keyboard-access.html) for more background.
 
 ### Toggle Buttons
 
-In the example below, JavaScript is used to generate code for the buttons and insert them onto the carousel. These particular buttons are visually displayed as text that overlay the carousel items. The text reads "Previous Slide" and "Next Slide". Arrows alone were not used in this example, as arrows alone could be too sublte and missed by some users.
+In the example below, JavaScript is used to generate code for the buttons and insert them onto the carousel. These particular buttons are visually displayed as arrows that overlay the carousel items. The images use the alternative text that reads "Previous Slide" and "Next Slide".
 
-A semi-transparent white background with black text were selected to ensure sufficient color contrast between the text and any background images in the carousel items. Also, the buttons increase in size when users hover over them with the mouse to provide more click area for people with reduced dexterity. They also increase in size when they are focused by keyboard to better highlight to keyboard users where the current focus is.
+A semi-transparent white background with black arrows was selected to ensure sufficient color contrast between the text and any background images in the carousel items. This is especially important for possibly noisy background images. Also, the buttons increase in size when users hover over them with the mouse to provide more click area for people with reduced dexterity. They also increase in size when they are focused by keyboard to better highlight to keyboard users where the current focus is.
 
 {::nomarkdown}
 <%= code_start('', 'JavaScript') %>
@@ -463,7 +463,9 @@ Indicating the total number of carousel items and which one of them is currently
 ### Carousel item indicator
 {:.ex}
 
-In the following example, a list with buttons is styled to look visually like a progress indicator. The buttons are numbered matching the corresponding carousel items. The button corresponding to the currently displayed carousel item is highlighted both visually and using [visually hidden text](/fundamentals/hiding.html). Also the button that currently has the keyboard or mouse focus is highlighted.
+In the following example, a list with buttons is added using JavaScrip and then styled to look visually like a progress indicator. The buttons are numbered matching the corresponding carousel items. The button corresponding to the currently displayed carousel item is highlighted both visually and using [visually hidden text](/fundamentals/hiding.html). Also the button that currently has the keyboard or mouse focus is highlighted.
+
+
 
 {::nomarkdown}
 <%= code_start %>
@@ -530,18 +532,41 @@ In the following example, a list with buttons is styled to look visually like a 
 
 {::nomarkdown}
 <%= sample_start %>
-{:/nomarkdown}
 
-@@@add working example of the above code (without slides - just the styled buttons)
+<ul class="slidenav as-sample">
+  <li>
+    <button class="current" data-slide="0" type="button">
+      <span class="visuallyhidden">News</span> 1
+      <span class="visuallyhidden">(Current Slide)</span>
+    </button>
+  </li>
+  <li>
+    <button data-slide="1" type="button">
+      <span class="visuallyhidden">News</span> 2
+    </button>
+  </li>
+  <li>
+    <button data-slide="2" type="button">
+      <span class="visuallyhidden">News</span> 3
+    </button>
+  </li>
+</ul>
 
-{::nomarkdown}
+<style>
+  .slidenav.as-sample {
+    position:static;
+  }
+</style>
+
 <%= sample_end %>
 {:/nomarkdown}
 
 ## Focusing carousel items
 {:.newex}
 
-When users select a carousel item through toggle buttons, buttons in a carousel item indicator, or other functionality, then the focus needs to be to the corresponding carousel item. However, often carousel items will be coded using elements that, by default, are not focusable, such as `<li>` or  `<article>` elements. Use the `tabindex` attribute with its value set to `-1`, to make such elements capable of receiving focus, then set the focus on them. Refer to [Keyboard accessibility](/fundamentals/keyboard-access.html) for more background.
+When users select a carousel item through the buttons in a carousel item indicator then the focus needs to be to the corresponding carousel item. The focus should _not_ be set to the carousel item if the toggle buttons are used, as the user may want to skip over several carousel items quickly and would use the position otherwise.
+
+Carousel items will often be coded using elements that, by default, are not focusable, such as `<li>` or  `<article>` elements. Use the `tabindex` attribute with its value set to `-1`, to make such elements capable of receiving focus using JavaScript, then set the focus on them. Refer to [Keyboard accessibility](/fundamentals/keyboard-access.html) for more background.
 
 ### Focus change
 {:.ex}
@@ -589,7 +614,7 @@ slidenav.addEventListener('click', function(event) {
 ## Putting it all together
 {:.newex}
 
-The sample below is a demo of the carousel that we've built by putting together the previous examples. It is a working example of a carousel where one carousel item at a time is displayed. It includes buttons for users to toggle back and forth between the carousel items, and a carousel item indicator that allows users to view which carousel item they are currently viewing and to jump to other carousel items. Animating this carousel will be explained in the next page.
+The sample below is a demo of the carousel that we've built by putting together the previous examples. It is a working example of a carousel where one carousel item at a time is displayed. It includes buttons for users to toggle back and forth between the carousel items, and a carousel item indicator that allows users to view which carousel item they are currently viewing and to jump to other carousel items. Animating this carousel will be explained on the next page.
 
 {::nomarkdown}
 <%= sample_start %>
@@ -682,10 +707,10 @@ var myCarousel = (function() {
 
     ctrls.className = 'controls';
     ctrls.innerHTML = '<li>' +
-        '<button type="button" class="btn-prev"><img src="/img/chevron-left.png" alt="Previous Slide"></button>' +
+        '<button type="button" class="btn-prev"><%= image_tag 'chevron-left.png', :alt => "Previous Slide" %></button>' +
       '</li>' +
       '<li>' +
-        '<button type="button" class="btn-next"><img src="/img/chevron-right.png" alt="Next Slide"></button>' +
+        '<button type="button" class="btn-next"><%= image_tag 'chevron-right.png', :alt => "Next Slide" %>' +
       '</li>';
 
     ctrls.querySelector('.btn-prev').addEventListener('click', function(){

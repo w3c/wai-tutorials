@@ -13,7 +13,7 @@ wcag_techniques:
 
 Provide structural markup for the carousel and its items, and later enhance these structures with styling and scripting. This ensures that the content of the carousel has meaning on its own, without styling and scripting, and can be rendered and used in more situations.
 
-**Note:** A carousel is typically a distinct part of a web page, so that a [heading](/background/headings.html) is typically needed to identify and label the carousel.
+**Note:** A carousel is typically a distinct part of a web page, so that a heading (`<h1>` to `<h6>`) is typically needed to identify and label the carousel.
 
 ## Carousel framework
 
@@ -22,7 +22,7 @@ A carousel is a collection of items that are displayed one at a time. Provide a 
 ### List of items
 {:.ap}
 
-In many situations, the carousel items are fairly brief so that a simple a list (`<ul>`) with individual list items (`<li>`) is sufficient to represent the carousel. This approach is robust and is compatible with HTML4 and HTML5. The example below shows the use of a list to represent a carousel.
+In many situations, the carousel items are fairly brief so that a simple a list (`<ul>`) with individual list items (`<li>`) is sufficient to represent the carousel. See the example below for a demo of this robust approach:
 
 {::nomarkdown}
 <%= code_start %>
@@ -45,7 +45,7 @@ In many situations, the carousel items are fairly brief so that a simple a list 
 ### Set of articles
 {:.ap}
 
-HTML5 provides the `<article>` element, which is useful for carousels with items that have a lot of content. Make sure to provide headings for each article for older web browsers that do not know the `<article>` element. The example below shows the use of the HTML5 `<article>` element to represent a carousel.
+If carousel items are have a lot of complex content, other elements can be used for the carousel framework. For example, HTML5 provides the `<article>` element, which is useful for carousels with items that are independent pieces of content. Make sure to provide headings for each article. The example below shows the use of `<article>` elements to represent a carousel.
 
 {::nomarkdown}
 <%= code_start %>
@@ -74,7 +74,7 @@ HTML5 provides the `<article>` element, which is useful for carousels with items
 
 ## Item structure
 
-Also provide proper structure for content within the individual carousel items. This makes them independent pieces of content that can be rendered and used in different ways. Refer to prior tutorials on [headings](/fundamentals/heading.html) and [images tutorial](/images/index.html) for more background on how to provide these types of content, also in a carousel item.
+Also provide proper structure for content within individual carousel items. This makes them independent pieces of content that can be rendered and used in different ways. Refer to the tutorials on [headings](/fundamentals/heading.html) and [images](/images/index.html) for more background on how to provide these types of content.
 
 ### Brief content
 {:.ex}
@@ -109,7 +109,7 @@ In the following example, the carousel items only consist of an image each, so t
 ### Complex content
 {:.ex}
 
-This example also uses a list, even though the carousel items consist of more substantial content than in the previous example. This approach was selected to ensure more compatibility with web browesers that do not yet support the HTML5 `<article>` element. The individual list items include a heading, text, and links each, which is valide use of HTML.
+This example also uses a list, even though the carousel items consist of more substantial content than in the previous example. This approach was selected as the individual carousel items are not independent pieces of content and thus not suitable for the  `<article>` element. The individual list items include a heading, text, and links each.
 
 {::nomarkdown}
 <%= code_start %>
@@ -151,14 +151,14 @@ This example also uses a list, even though the carousel items consist of more su
 ## Carousel styling
 {:.newex}
 
-At this stage the carousel does not have any functionality. This is added later, based on the class names of the elements, using scripting, if it is enabled. If scripting is not enabled then the functionality would not work anyway.
+At this stage the carousel does not have any functionality. This is added later using scripting, based on the class names of the elements. If scripting is not enabled for various reasons, including bad network connection or user choice, the functionality would not work anyway.
 
-This does not prevent you from providing the basic styling for the carousel so that it looks appropriate even when scripting is not enabled. In many cases carousels are styled with background images and overlayed text, so that [color contrast](/fundamentals/contrast-ratio.html) considerations are relevant.
+This does not prevent you from providing the basic styling for the carousel so that it looks appropriate even when scripting is not enabled. In many cases carousels are styled with background images and overlaid text, so that [color contrast ratio](/fundamentals/color.html) considerations are relevant.
 
 ### Styled carousel
 {:.ex}
 
-The example below shows how the carousel structure from the previous example is styled. It uses semi-transparent backgrounds behind the overlayed text, to ensure sufficient color contrast to the background image.
+The example below shows how the carousel structure from the previous example is styled. It uses semi-transparent backgrounds behind the overlaid text, to ensure sufficient color contrast to the background image.
 
 {::nomarkdown}
 <%= notes_start %>

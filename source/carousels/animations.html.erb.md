@@ -40,7 +40,7 @@ One common approach to control carousel animations is to provide a button to all
 <%= notes_start %>
 {:/nomarkdown}
 
-**Note:** The script only replaces the value of the button rather than to replace the button entirely. If the button is removed, then the focus be lost for keyboard users.
+**Note:** The script only replaces the value of the button rather than to replace the button entirely. If the button is removed, then the focus would be lost for keyboard users.
 
 {::nomarkdown}
 <%= notes_end %>
@@ -395,10 +395,10 @@ var myCarousel = (function() {
 
     ctrls.className = 'controls';
     ctrls.innerHTML = '<li>' +
-        '<button type="button" class="btn-prev"><img src="../../img/chevron-left.png" alt="Previous Slide"></button>' +
+        '<button type="button" class="btn-prev"><%= image_tag 'chevron-left.png', :alt => "Previous Slide" %></button>' +
       '</li>' +
       '<li>' +
-        '<button type="button" class="btn-next"><img src="../../img/chevron-right.png" alt="Next Slide"></button>' +
+        '<button type="button" class="btn-next"><%= image_tag 'chevron-right.png', :alt => "Next Slide" %>' +
       '</li>';
 
     ctrls.querySelector('.btn-prev')
