@@ -15,7 +15,7 @@ Provide structural markup for the carousel and its items, and later enhance thes
 
 **Note:** A carousel is typically a distinct part of a web page, so that a [heading](/background/headings.html) is typically needed to identify and label the carousel.
 
-## Carousel Framework
+## Carousel framework
 
 A carousel is a collection of items that are displayed one at a time. Provide a corresponding structure in the code to represent this collection of items.
 
@@ -72,7 +72,7 @@ HTML5 provides the `<article>` element, which is useful for carousels with items
 <%= code_end %>
 {:/nomarkdown}
 
-## Item Structure
+## Item structure
 
 Also provide proper structure for content within the individual carousel items. This makes them independent pieces of content that can be rendered and used in different ways. Refer to prior tutorials on [headings](/fundamentals/heading.html) and [images tutorial](/images/index.html) for more background on how to provide these types of content, also in a carousel item.
 
@@ -148,7 +148,7 @@ This example also uses a list, even though the carousel items consist of more su
 <%= code_end %>
 {:/nomarkdown}
 
-## Carousel Styling
+## Carousel styling
 {:.newex}
 
 At this stage the carousel does not have any functionality. This is added later, based on the class names of the elements, using scripting, if it is enabled. If scripting is not enabled then the functionality would not work anyway.

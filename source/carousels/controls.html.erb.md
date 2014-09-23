@@ -456,6 +456,7 @@ The outcome looks like this:
 {:/nomarkdown}
 
 ## Indicating carousel items
+{:.newex}
 
 Indicating the total number of carousel items and which one of them is currently being displayed helps users to orient themselves and find any information they need. Ideally this is done by a set of styled buttons that each represent a carousel item in the sequence. Providing these slide representations as buttons that can be activated allows users to browse more freely within the carousel items. Providing these buttons within a list, adds meaning and semantics to the content, such as the number and order of the carousel items.
 
@@ -538,6 +539,7 @@ In the following example, a list with buttons is styled to look visually like a 
 {:/nomarkdown}
 
 ## Focusing carousel items
+{:.newex}
 
 When users select a carousel item through toggle buttons, buttons in a carousel item indicator, or other functionality, then the focus needs to be to the corresponding carousel item. However, often carousel items will be coded using elements that, by default, are not focusable, such as `<li>` or  `<article>` elements. Use the `tabindex` attribute with its value set to `-1`, to make such elements capable of receiving focus, then set the focus on them. Refer to [Keyboard accessibility](/fundamentals/keyboard-access.html) for more background.
 
@@ -585,6 +587,7 @@ slidenav.addEventListener('click', function(event) {
 {:/nomarkdown}
 
 ## Putting it all together
+{:.newex}
 
 The sample below is a demo of the carousel that we've built by putting together the previous examples. It is a working example of a carousel where one carousel item at a time is displayed. It includes buttons for users to toggle back and forth between the carousel items, and a carousel item indicator that allows users to view which carousel item they are currently viewing and to jump to other carousel items. Animating this carousel will be explained in the next page.
 
