@@ -7,7 +7,7 @@ wcag_techniques:
 order: 3
 editors:
   - Eric Eggert: "http://w3.org/People/yatil/"
-  - Shadi Abou-Zhara: "http://w3.org/People/shadi/"
+  - Shadi Abou-Zahra: "http://w3.org/People/shadi/"
 contributors:
   - Anna Bell Leiserson
   - the Education and Outreach Working Group (<a href="http://www.w3.org/WAI/EO/">EOWG</a>)

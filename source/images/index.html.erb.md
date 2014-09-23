@@ -10,7 +10,7 @@ wcag_success_criteria:
 type: intro
 editors:
   - Eric Eggert: "http://w3.org/People/yatil/"
-  - Shadi Abou-Zhara: "http://w3.org/People/shadi/"
+  - Shadi Abou-Zahra: "http://w3.org/People/shadi/"
 contributors:
   - Shawn Lawton Henry: "http://www.w3.org/People/Shawn/"
   - Howard Kramer

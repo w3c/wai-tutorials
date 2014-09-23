@@ -7,7 +7,7 @@ wcag_techniques:
 order: 2
 editors:
   - Eric Eggert: "http://w3.org/People/yatil/"
-  - Shadi Abou-Zhara: "http://w3.org/People/shadi/"
+  - Shadi Abou-Zahra: "http://w3.org/People/shadi/"
 contributors:
   - Anna Bell Leiserson
   - Liam McGee
