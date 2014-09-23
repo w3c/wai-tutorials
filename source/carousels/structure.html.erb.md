@@ -1,5 +1,5 @@
 ---
-title: Basic Structure
+title: Structure
 status: editors-draft
 order: 2
 wcag_success_criteria:

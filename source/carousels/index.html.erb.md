@@ -14,7 +14,7 @@ wcag_success_criteria:
 
 Carousels, commonly also referred to as “slide shows” or “sliders”, display a series of content items one at a time; for example, a series of news headlines. Carousels are usually animated, so that the displayed item is periodically rotated. This tutorial highlights the particular accessibility considerations for such carousels:
 
-- **[Basic Structure](structure.html):** Provide structural markup for the carousel and its items, and later enhance these structures with styling and scripting.
+- **[Structure](structure.html):** Provide structural markup for the carousel and its items, and later enhance these structures with styling and scripting.
 
 - **[Functionality](controls.html):** Provide functionality to display the carousel items one at a time, and to allow users to browse through them.
 
