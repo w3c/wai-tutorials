@@ -10,7 +10,7 @@ As interactive components, fly-out menus need to be developed with accessibility
 
 Usually the first-level menu items are links to individual pages whether they have a sub menu or not. The sub menu should then be duplicated as a secondary navigation on the linked web page to make sure that those pages are quickly reachable from there. Sub menus are individual lists (`<ul>` or `<ol>`), nested in the parent’s list item (`<li>`).
 
-In the following example, the SpaceBears menu item has a sub menu:
+Items containing a sub menu should be marked in a way that is obvious. In the following example, the SpaceBears menu item has a sub menu:
 
 {::nomarkdown}
 <%= sample_start('show-overflow') %>
@@ -19,7 +19,7 @@ In the following example, the SpaceBears menu item has a sub menu:
     <ul>
         <li><a href="#flyoutnav">Home</a></li>
         <li><a href="#flyoutnav">Shop</a></li>
-        <li>
+        <li class="has-submenu">
             <a href="#flyoutnav">SpaceBears</a>
             <ul>
                 <li><a href="#flyoutnav">SpaceBear 6</a></li>
@@ -66,10 +66,11 @@ In the following example, the SpaceBears menu item has a sub menu:
       color: #fff;
       text-decoration: none;
   }
-  #flyoutnav a:hover {
+  #flyoutnav a:hover,
+  #flyoutnav a:focus {
       background-color: #fff;
       color: #036;
-      border: 1px solid #036;
+      border-color: #036;
       text-decoration: underline;
   }
   #flyoutnav .current {
@@ -95,6 +96,16 @@ In the following example, the SpaceBears menu item has a sub menu:
 
   #flyoutnav > ul > li > ul a{
     border-bottom-width: 1px;
+  }
+
+  .has-submenu > a:after {
+    margin-left: 5px;
+    line-height: 14px;
+    content: url(/img/ex-dropdown-inactive.png);
+  }
+  .has-submenu:hover > a:hover:after,
+  .has-submenu > a:focus:after {
+    content: url(/img/ex-dropdown-active.png);
   }
 </style>
 
@@ -150,29 +161,7 @@ nav > ul li:hover ul {
 
 By using JavaScript, it is possible to react to keyboard usage and abrupt mouse movements. To tackle the usage of a mouse, pretty simple JavaScript is used. When the mouse leaves the menu a timer is started which closes the menu after one second. If the mouse re-enters the sub menu again, the timer is canceled.
 
-{::nomarkdown}
-<%= code_start('','JavaScript') %>
-{:/nomarkdown}
-
-~~~ js
-Array.prototype.forEach.call(menuItems, function(el, i){
-  el.addEventListener("mouseover", function(event){
-    this.className = "has-submenu open";
-    clearTimeout(timer);
-  });
-  el.addEventListener("mouseout", function(event){
-    timer = setTimeout(function(event){
-      document.querySelector(".has-submenu.open").className = "has-submenu";
-    }, 1000);
-  });
-});
-~~~
-
-{::nomarkdown}
-<%= code_end %>
-{:/nomarkdown}
-
-To improve Keyboard support,
+## Improve mouse use
 
 {::nomarkdown}
 <%= sample_start('show-overflow') %>
@@ -222,13 +211,14 @@ To improve Keyboard support,
   #flyoutnavmousefixed .current {
       display: block;
       padding: .25em;
-      border-bottom: .25em solid #E8E8E8;
+      border-color: #E8E8E8;
   }
   #flyoutnavmousefixed a {
       color: #fff;
       text-decoration: none;
   }
-  #flyoutnavmousefixed a:hover {
+  #flyoutnavmousefixed a:hover,
+    #flyoutnavmousefixed a:focus {
       background-color: #fff;
       color: #036;
       border: 1px solid #036;
@@ -279,6 +269,36 @@ Array.prototype.forEach.call(menuItems1, function(el, i){
 
 <%= sample_end %>
 {:/nomarkdown}
+
+{::nomarkdown}
+<%= code_start('','JavaScript') %>
+{:/nomarkdown}
+
+~~~ js
+Array.prototype.forEach.call(menuItems, function(el, i){
+  el.addEventListener("mouseover", function(event){
+    this.className = "has-submenu open";
+    clearTimeout(timer);
+  });
+  el.addEventListener("mouseout", function(event){
+    timer = setTimeout(function(event){
+      document.querySelector(".has-submenu.open").className = "has-submenu";
+    }, 1000);
+  });
+});
+~~~
+
+{::nomarkdown}
+<%= code_end %>
+{:/nomarkdown}
+
+## Improve keyboard use
+
+To improve Keyboard support, the decision has to be made if the top-level menu item should serve as a toggle or be a link itself. It is not advised to just open the sub menu as soon as the focus enters the parent menu item as that would mean a keyboard user needs to step through all the sub menu linkts to get to the next top-level item.
+
+If the top-level menu item itself is used as a toggle, the user should be informed that there is a menu
+
+
 
 
 
