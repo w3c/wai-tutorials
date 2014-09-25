@@ -6,12 +6,12 @@ wcag_success_criteria:
 wcag_techniques:
 ---
 
-Where possible, use stylized form elements to provide custom controls. For example, a social media "share button" and "star rating" widget can be built using standard form controls. Using such progressive enhancement techniques helps keep such widgets usable when they are rendered differently, such as by certain assistive technologies.
+Where possible, use stylized form elements to provide custom controls. For example, a social media "share button" and "star rating" widget can be built using standard form controls. Using such progressive enhancement techniques helps keep these widgets usable when they are rendered differently, including by some assistive technologies.
 
 ## A Share Button
 {:.ex}
 
-The example below shows a social media "share button" that has two functions: It shows how many people have already activated the button ("shared"), and it allows users to press the button to activate the share function.
+The example below shows a social media "share button" that has two functions: it shows how many people have already activated the button ("shared"), and it allows users to press the button to activate the share function.
 
 The custom button relies on CSS to style a regular `<button>` element, so that the basic functionality remains intact when it is rendered without CSS. For example, most screen readers will announce the button and its contents.
 
@@ -124,7 +124,7 @@ document.getElementById('share-btn').addEventListener('click', function(event){
 
 A star rating usually consists of images of five stars that can be used to rate a particular item. The mouse user hovers over the stars and clicks one to select it. For example, if the user clicks on the third star from the left, the rating of the item is 3 of 5 stars.
 
-To make this as accessible as possible, a form is used but its fields are visually hidden. It contains 6 radio buttons, one for each star and another for 0 stars, which is checked by default. The labels for the radio buttons contain actual text (“1 Star”, “2 Stars”, …), and are also hidden visually. The form also contains a visually hidden submit button so that the form is not automatically submitted when keyboard users browse through the radio buttons.
+To make this as accessible as possible, a form is used with its fields visually hidden. It contains 6 radio buttons, one for each star and another for 0 stars, which is checked by default. The labels for the radio buttons contain actual text (“1 Star”, “2 Stars”, …), and are also hidden visually. The form also contains a visually hidden submit button so that the form is not automatically submitted when keyboard users browse through the radio buttons.
 
 The images of the stars are generated using <abbr title="Scalable Vector Graphics">SVG</abbr>. The coloring animation of these stars is initiated through the CSS `:focus` and `:hover` pseudo classes, so that they can be activated using a mouse, keyboard, and other input methods. The `:checked` pseudo class and the general sibling selector `~` are used to indicate the selected, active, and inactive stars.
 
