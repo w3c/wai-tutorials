@@ -43,7 +43,7 @@ In the example below, form instructions indicate how required input is highlight
 ## In-line instructions
 {:.newex}
 
-In addition to the overall instructions, it is also important to provide relevant instructions within the labels of the form controls. For example, indicating required input and data formats is generally needed as part of the labels.
+In addition to the overall instructions, it is also important to provide relevant instructions within the labels of the form controls. For example, it's generally best to indicate required input and data formats in the text of the labels.
 
 ### Providing instructions within labels
 {:.newex}
@@ -79,7 +79,7 @@ In the example below, the required format for the “Expiry Date” is indicated
 ### Providing instructions outside labels
 {:.newex}
 
-Providing instructions outside labels allows more flexible positioning and design but sometimes it can be missed. The two approaches outlined below can be combined to achieve most impact.
+Providing instructions outside labels allows more flexible positioning and design but sometimes it can be missed. The two approaches outlined below can be combined to achieve the most impact.
 
 #### Informing users
 {:.ap}
@@ -118,7 +118,7 @@ Content outside form elements may be missed by screen readers that are in “For
 <%= notes_start %>
 {:/nomarkdown}
 
-**Note:** A caveat of this approach is that users receive the instructions after the form element. This is often non-ideal, especially when the form controls are large, or when they are displayed on mobile devices and using screen magnification. In such cases these instructions may not always be easy to find.
+**Note:** A caveat of this approach is that users receive the instructions after the form element. This is usually  not ideal, especially when the form controls are large, or when they are displayed on mobile devices and using screen magnification. In such cases these instructions may not be easy to find.
 
 {::nomarkdown}
 <%= notes_end %>
@@ -225,7 +225,7 @@ Refer to the techniques described in [Hidden labels](labels.html#hidden) in case
 <%= notes_start %>
 {:/nomarkdown}
 
-**Note:** To provide more clarity, ensure that the style of placeholder text is distinguishable from regular text. This is commonly done by reducing the color contrast of placeholder text. However, ensure that also placeholder text meets at least the [minimum color contrast requirement of WCAG 2.0](http://www.w3.org/WAI/WCAG20/quickref/#qr-visual-audio-contrast-contrast).
+**Note:** To provide more clarity, ensure that the style of placeholder text is distinguishable from regular text. This is commonly done by reducing the color contrast of placeholder text. However, if you do reduce the contrast, ensure that the placeholder text also meets the [minimum color contrast requirement of WCAG 2.0](http://www.w3.org/WAI/WCAG20/quickref/#qr-visual-audio-contrast-contrast).
 
 {::nomarkdown}
 <%= notes_end %>
