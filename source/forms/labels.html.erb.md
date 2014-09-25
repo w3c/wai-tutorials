@@ -18,6 +18,7 @@ wcag_techniques:
   - G17
   - G18
   - G167
+  - H65
 ---
 
 Provide labels to identify all form controls, including text fields, checkboxes, radio buttons, drop-down menus, and button elements. In most cases this is done by using the `<label>` element, and in rare cases the `title` attribute.
