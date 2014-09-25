@@ -15,17 +15,17 @@ wcag_techniques:
   - SCR16
 ---
 
-Where possible, divide long forms into multiple smaller forms that constitute a series of logical steps or stages. This helps make long forms less daunting and easier to understand, in particular for people with less computer skills and people with different types of cognitive disabilities. The following basic principles should apply for multi-step forms:
+Where possible, divide long forms into multiple smaller forms that constitute a series of logical steps or stages. This helps make long forms less daunting and easier to understand, particularly for people who are less experienced using computers or who have various cognitive disabilities. The following basic principles should apply for multi-step forms:
 
 - Repeat [overall instructions](instructions.html#overall-instructions) on every page.
 - Split the form up according to the topic of the form fields on a page. For example, in an online shop, shipping and payment information are on separate pages.
 - Make is easy to skip (pages of) optional form fields. If a page is optional it makes sense to mention this information in the main heading of the page as well.
-- Don’t give users a time limit to fill out the form, if possible. If you do need a time limit, provide a checkbox that allows the user to adjust or extend the time limit.
+- If possible, don’t give users a time limit to fill out the form. If you do need a time limit, provide a checkbox that allows the user to adjust or extend the time limit.
 
 ## Indicating progress
 {:.newex}
 
-If possible, the first form page should explain how many pages will follow, and on each page the user should be informed about the progress he is making.
+If possible, the first form page should explain how many pages will follow, and on each page users should be informed about the progress they are making.
 
 ### Using the page title
 {:.ap}
@@ -80,7 +80,7 @@ Using the main heading to inform users is a good way to provide the same informa
 ### Using the HTML5 progress element
 {:.ap}
 
-HTML5 provides a `progress` element that be used to inform users about the progress. This can be particularly useful in situations where the number of steps depends on the user input, such as in a survey where steps are skipped depending on how questions were answered.
+HTML5 provides a `progress` element that can be used to inform users about the progress. This can be particularly useful in situations where the number of steps depends on user input, such as in a survey where steps are skipped depending on how questions were answered.
 
 {::nomarkdown}
 <%= sample_start %>
@@ -118,7 +118,7 @@ Survey <progress max="7" value="7">(Finished)</progress>
 ### Using step-by-step indicator
 {:.ap}
 
-If a form has a known number of steps to be completed, a step-by-step indicator can help users to orient themselves. In the example below, we use an (ordered) list with a list item for every step. Visually hidden text is used to indicate the current and completed steps. If possible, provide a link to steps already completed, so the user can review them. Data that was already entered in the current step should be saved in this case.
+If a form has a known number of steps to be completed, a step-by-step indicator can help users orient themselves. In the example below, we use an (ordered) list with a list item for every step. Visually hidden text is used to indicate the current and completed steps. If possible, provide a link to steps already completed, so the user can review them. Data that was already entered in the current step should be saved in this case.
 
 {::nomarkdown}
 <%= sample_start %>
