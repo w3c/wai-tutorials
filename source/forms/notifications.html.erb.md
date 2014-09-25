@@ -280,7 +280,7 @@ When errors occur, it is useful list them at the top of the page, before the for
 
 In addition to overall feedback, more specific feedback at or near the form controls can better help users to use your form. This includes feedback to indicate correctly entered input as well as errors in the input.
 
-Typically a combination of messages and visual cues are used to provide in-line feedback. For example, valid input is often indicated by a checkmark and green borders, while errors are often indicated by an exmark and red borders. In both cases brief message should be provided. Error messages should also provide guidance on how to correct mistakes. The concepts for such error messages are essentially the same as for providing [instructions](instructions.html).
+Typically a combination of messages and visual cues are used to provide in-line feedback. For example, valid input is often indicated by a checkmark and green borders, while errors are often indicated by an X mark and red borders. In both cases brief message should be provided. Error messages should also provide guidance on how to correct mistakes. The concepts for such error messages are essentially the same as for providing [instructions](instructions.html).
 
 ### After submit
 {:.ap}
