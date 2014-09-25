@@ -12,11 +12,7 @@ wcag_success_criteria:
 type: intro
 ---
 
-Forms are used to provide functionality in websites and web applications. For example, forms are used for login, registering, commenting, purchasing, and other functionality.
-
-To make forms accessible, ensure that all controls are appropriately labeled and grouped where relevant. Also provide clear and simple instructions, validate the input, and provide feedback to the users.
-
-This tutorial shows you how to create accessible forms, regardless whether they are processed by server-side or client-side scripts, or possibly both.
+Forms are used to provide functionality in websites and web applications. For example, forms are used for login, registering, commenting, purchasing, and other functionality. This tutorial shows you how to create accessible forms, regardless whether they are processed by server-side or client-side scripts, or possibly both.
 
 - **[Labeling Controls](labels.html):** Use the `<label>` element, and, in rare cases, the `title` attribute, to indentify each form control.
 
