@@ -149,7 +149,8 @@
 
   var plel = document.createElement('a');
   addclass(plel, 'permalink');
-  plel.innerHTML = 'Permalink';
+  plel.innerHTML = '¶';
+  plel.setAttribute('title', "Permalink");
 
   var elements = document.querySelectorAll('.content h2[id], h2.ap, h3.ap, h3.ex'); // $('.content h2[id], .ap')
   Array.prototype.forEach.call(elements, function(el, i){ // … .each(…)
