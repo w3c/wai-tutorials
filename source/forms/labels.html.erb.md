@@ -21,7 +21,7 @@ wcag_techniques:
   - H65
 ---
 
-Provide labels to identify all form controls, including text fields, checkboxes, radio buttons, drop-down menus, and button elements. In most cases this is done by using the `<label>` element, and in rare cases the `title` attribute.
+Provide labels to identify all form controls, including text fields, checkboxes, radio buttons, drop-down menus, and button elements. In most cases this is done by using the `<label>` element, and in some cases the `title` attribute.
 
 Labels need to describe the purpose of the form control. This section of the tutorial describes how to provide labels in ways so that they are properly associated with form controls. Later sections explain how to provide instructions, validate user input, and provide feedback to help users complete your form.
 
