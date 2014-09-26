@@ -58,6 +58,12 @@ If a navigation has just a few items that fit into one row on a screen, a horizo
       color: #fff;
       text-decoration: none;
   }
+  #samplenav a:hover,
+  #samplenav a:focus {
+    color: #036;
+    background-color: #fff;
+    text-decoration: underline;
+  }
 </style>
 
 <%= sample_end %>
@@ -102,10 +108,20 @@ If there are many items in the navigation menu, a vertical navigation can be use
       border-bottom: 1px solid;
       text-decoration: none;
   }
+  #verticalnav a:hover,
+  #verticalnav a:focus {
+    color: #036;
+    background-color: #fff;
+    text-decoration: underline;
+  }
 </style>
 
 <%= sample_end %>
 {:/nomarkdown}
+
+## Indicating hover and focus
+
+When the user focuses a menu item or hovers over one using the mouse pointer, the individual menu item should change so users know where the focus is or if they are hovering the right menu item. In the examples in this tutorial, the menu item is inverted and the words are underlined.
 
 ## Indicating the Current Page
 
@@ -157,6 +173,12 @@ In the following example, the active menu item is not only marked using differen
       background-color: #bbb;
       color: #000;
       border-color: #444;
+  }
+  #currentnav a:hover,
+  #currentnav a:focus {
+    color: #036;
+    background-color: #fff;
+    text-decoration: underline;
   }
 </style>
 
