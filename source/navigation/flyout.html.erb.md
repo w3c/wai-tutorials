@@ -8,9 +8,9 @@ If the user should be able to access pages deeper in the web site’s structure,
 
 As interactive components, fly-out menus need to be developed with accessibility in mind to make sure that they are operable using the keyboard as well. Additionally, users of screen reader and other assistive technology are only able to use the menu efficiently if links not displayed are not reachable by the keyboard. For people with shaky hands it is also important that the menu doesn’t snap back immediately when the mouse leaves the clickable area.
 
-Usually the first-level menu items are links to individual pages whether they have a sub menu or not. The sub menu should then be duplicated as a secondary navigation on the linked web page to make sure that those pages are quickly reachable from there. Sub menus are individual lists (`<ul>` or `<ol>`), nested in the parent’s list item (`<li>`).
+Usually the first-level menu items are links to individual pages whether they have a submenu or not. The submenu should then be duplicated as a secondary navigation on the linked web page to make sure that those pages are quickly reachable from there. Submenus are individual lists (`<ul>` or `<ol>`), nested in the parent’s list item (`<li>`).
 
-Items containing a sub menu should be marked in a way that is obvious. In the following example, the SpaceBears menu item has a sub menu:
+Items containing a submenu should be marked in a way that is obvious. In the following example, the SpaceBears menu item has a submenu:
 
 {::nomarkdown}
 <%= sample_start('show-overflow') %>
@@ -138,7 +138,7 @@ Items containing a sub menu should be marked in a way that is obvious. In the fo
 <%= code_end %>
 {:/nomarkdown}
 
-For mouse users, hiding the sub menu until the mouse hovers over the first-level menu item is quite easy, but has the disadvantage that the menu immediately closes once the mouse leaves the list item (and the containing sub-menu).
+For mouse users, hiding the submenu until the mouse hovers over the first-level menu item is quite easy, but has the disadvantage that the menu immediately closes once the mouse leaves the list item (and the containing submenu).
 
 {::nomarkdown}
 <%= code_start('','CSS') %>
@@ -159,9 +159,9 @@ nav > ul li:hover ul {
 
 ## Enhancing the menu using JavaScript
 
-By using JavaScript, it is possible to react to keyboard usage and abrupt mouse movements. To tackle the usage of a mouse, pretty simple JavaScript is used. When the mouse leaves the menu a timer is started which closes the menu after one second. If the mouse re-enters the sub menu again, the timer is canceled.
+By using JavaScript, it is possible to react to keyboard usage and abrupt mouse movements. To tackle the usage of a mouse, pretty simple JavaScript is used. When the mouse leaves the menu a timer is started which closes the menu after one second. If the mouse re-enters the submenu again, the timer is canceled.
 
-## Improve mouse use
+### Improve mouse support
 
 {::nomarkdown}
 <%= sample_start('show-overflow') %>
@@ -292,13 +292,183 @@ Array.prototype.forEach.call(menuItems, function(el, i){
 <%= code_end %>
 {:/nomarkdown}
 
-## Improve keyboard use
+### Improve keyboard support
 
-To improve Keyboard support, the decision has to be made if the top-level menu item should serve as a toggle or be a link itself. It is not advised to just open the sub menu as soon as the focus enters the parent menu item as that would mean a keyboard user needs to step through all the sub menu linkts to get to the next top-level item.
+To improve Keyboard support, the decision has to be made if the top-level menu item should serve as a toggle or be a link itself. Don’t just open the submenu as soon as the focus enters the parent menu item, as that would mean a keyboard user needs to step through all the submenu links to get to the next top-level item.
 
-If the top-level menu item itself is used as a toggle, the user should be informed that there is a menu
+#### Toggle submenu using the top-level menu item
 
+The activation of the top-level menu item changes won’t link to the page in its `href` attribute but instead show the sub menu.
 
+{::nomarkdown}
+<%= sample_start('show-overflow') %>
+
+<nav role="navigation" aria-label="Main Navigation" aria-presentation="true" id="flyoutnavkbfixed">
+    <ul>
+        <li><a href="#flyoutnavkbfixed">Home</a></li>
+        <li><a href="#flyoutnavkbfixed">Shop</a></li>
+        <li class="has-submenu">
+            <a href="#flyoutnavkbfixed">SpaceBears</a>
+            <ul>
+                <li><a href="#flyoutnavkbfixed">SpaceBear 6</a></li>
+                <li><a href="#flyoutnavkbfixed">SpaceBear 6 Plus</a></li>
+            </ul>
+        </li>
+        <li><a href="#flyoutnavkbfixed">MarsCars</a></li>
+        <li><a href="#flyoutnavkbfixed">Contact</a></li>
+    </ul>
+</nav>
+
+<style>
+.show-overflow {
+    overflow: visible !important;
+}
+
+.show-overflow .box-content {
+    overflow: visible !important;
+}
+  #flyoutnavkbfixed {
+      display:table;
+      width:100%;
+  }
+  #flyoutnavkbfixed > ul {
+      margin: 0;
+      padding: 0;
+      display: table-row;
+      background-color: #036;
+      color: #fff;
+  }
+  #flyoutnavkbfixed > ul > li {
+      display:table-cell;
+      width: 20%;
+      text-align: center;
+      position:relative;
+  }
+  #flyoutnavkbfixed a,
+  #flyoutnavkbfixed .current {
+      display: block;
+      padding: .25em;
+      border-color: #E8E8E8;
+  }
+  #flyoutnavkbfixed a {
+      color: #fff;
+      text-decoration: none;
+  }
+  #flyoutnavkbfixed a:hover,
+    #flyoutnavkbfixed a:focus {
+      background-color: #fff;
+      color: #036;
+      border: 1px solid #036;
+      text-decoration: underline;
+  }
+  #flyoutnavkbfixed .current {
+      background-color: #bbb;
+      color: #000;
+      border-color: #444;
+  }
+
+  #flyoutnavkbfixed > ul > li > ul {
+    display: none;
+    position:absolute;
+    left:0;
+    right:0;
+    top:100%;
+    padding:0;
+    margin:0;
+    background-color: #036;
+  }
+
+#flyoutnavkbfixed > ul > li.open > ul {
+    display:block;
+  }
+
+  #flyoutnavkbfixed > ul > li > ul a{
+    border-bottom-width: 1px;
+  }
+</style>
+
+<script>
+/* focusin/out event polyfill (firefox) */
+!function(){
+  var w = window,
+  d = w.document;
+
+  if( w.onfocusin === undefined ){
+    d.addEventListener('focus' ,addPolyfill ,true);
+    d.addEventListener('blur' ,addPolyfill ,true);
+    d.addEventListener('focusin' ,removePolyfill ,true);
+    d.addEventListener('focusout' ,removePolyfill ,true);
+  }
+  function addPolyfill(e){
+    var type = e.type === 'focus' ? 'focusin' : 'focusout';
+    var event = new CustomEvent(type, { bubbles:true, cancelable:false });
+    event.c1Generated = true;
+    e.target.dispatchEvent( event );
+  }
+  function removePolyfill(e){
+if(!e.c1Generated){ // focus after focusin, so chrome will the first time trigger tow times focusin
+  d.removeEventListener('focus' ,addPolyfill ,true);
+  d.removeEventListener('blur' ,addPolyfill ,true);
+  d.removeEventListener('focusin' ,removePolyfill ,true);
+  d.removeEventListener('focusout' ,removePolyfill ,true);
+}
+setTimeout(function(){
+  d.removeEventListener('focusin' ,removePolyfill ,true);
+  d.removeEventListener('focusout' ,removePolyfill ,true);
+});
+}
+}();
+
+function hasClass(el, className) {
+  if (el.classList) {
+    return el.classList.contains(className);
+  } else {
+    return new RegExp('(^| )' + className + '( |$)', 'gi').test(el.className);
+  }
+}
+
+var menuItems1 = document.querySelectorAll('#flyoutnavkbfixed li.has-submenu');
+var timer1, timer2;
+
+Array.prototype.forEach.call(menuItems1, function(el, i){
+    el.addEventListener("mouseover", function(event){
+        this.className = "has-submenu open";
+        clearTimeout(timer1);
+    });
+    el.addEventListener("mouseout", function(event){
+        timer1 = setTimeout(function(event){
+            document.querySelector("#flyoutnavkbfixed .has-submenu.open").className = "has-submenu";
+        }, 1000);
+    });
+    el.querySelector('a').addEventListener("keydown",  function(event){
+        if (event.keyCode == 13) {
+          this.parentNode.className = "has-submenu open";
+          event.preventDefault();
+        }
+    });
+    var links = el.querySelectorAll('a');
+    Array.prototype.forEach.call(links, function(el, i){
+      el.addEventListener("focus", function() {
+        if (timer2) {
+          clearTimeout(timer2);
+          timer2 = null;
+        }
+      });
+      el.addEventListener("blur", function(event) {
+        timer2 = setTimeout(function () {
+          document.querySelector("#flyoutnavkbfixed .has-submenu.open").className = "has-submenu";
+        }, 1);
+      });
+    });
+});
+</script>
+
+<%= sample_end %>
+{:/nomarkdown}
+
+#### Toggle with a special “show submenu” button
+
+### Improve screen reader support
 
 
 
