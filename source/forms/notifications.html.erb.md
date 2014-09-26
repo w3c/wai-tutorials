@@ -78,7 +78,7 @@ In addition to using the main heading it is often useful to also use the `<title
 
 ###  Using pop-up dialogs
 
-When the web page is not reloaded or when the content does not change after submission, then using pop-up dialogs may be useful to notify users of the status. For example, “save” or “send” functions might not change the content of the web page, but the user still needs to be notified about the status. Sometimes simple cues, such as disabling the “save” button, might be sufficient. In other situations more prominent messaging may be necessary. This includes messages indicating that the system is busy “loading”, “saving”, or carrying out another function.
+When the web page is not reloaded or when the content does not change after submission, then using pop-up dialogs may be useful to notify users of the status. For example, “save” or “send” functions might not change the content of the web page, but the user still needs to be notified about the status. Sometimes simple clues, such as disabling the “save” button, might be sufficient. In other situations more prominent messaging may be necessary. This includes messages indicating that the system is busy “loading”, “saving”, or carrying out another function.
 
 #### Permanent pop-up
 {:.ap}
