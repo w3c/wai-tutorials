@@ -12,7 +12,7 @@ wcag_techniques:
 
 Provide feedback to users about their form entries. This includes in-line feedback at or near the form controls (typically input fields), and overall feedback that is typically provided after forms are submitted.
 
-Notifications need to be concise and clear. In particular error messages should be easy to understand, and to provide simple indications of how to correct mistakes. Success messages are also important to confirm task completion.
+Notifications need to be concise and clear. In particular, error messages should be easy to understand and should provide simple indications of how to correct mistakes. Success messages are also important to confirm task completion.
 
 ## Overall feedback
 
@@ -54,7 +54,7 @@ A common way to provide feedback is by using the main heading of the web page, u
 
 ###  Using the page title
 
-In addition to using the main heading it is often useful to also use the `<title>` element of the web page to indicate successes and error. In particular screen reader users will receive this feedback immediately when the web page is loaded, especially when the main heading is placed deeper within the content; for example, after the navigation menus.
+In addition to using the main heading it is often useful to also use the `<title>` element of the web page to indicate successes and errors. In particular screen reader users will receive this feedback immediately when the web page is loaded, especially when the main heading is placed deeper within the content -- for example, after the navigation menus.
 
 {::nomarkdown}
 <%= code_start('','Error') %>
@@ -78,7 +78,7 @@ In addition to using the main heading it is often useful to also use the `<title
 
 ###  Using pop-up dialogs
 
-When the web page is not reloaded or when the content does not change after submission, then using pop-up dialogs may be useful to notify users of the status. For example, “save” or “send” functions might not change the content of the web page, but user still needs to be notified about the status. Sometimes simple cues, such as disabling the “save” button, might be sufficient. In other situations more prominent messaging may be necessary. This includes messages indicating that the system is busy “loading”, “saving”, or carrying out another function.
+When the web page is not reloaded or when the content does not change after submission, then using pop-up dialogs may be useful to notify users of the status. For example, “save” or “send” functions might not change the content of the web page, but the user still needs to be notified about the status. Sometimes simple cues, such as disabling the “save” button, might be sufficient. In other situations more prominent messaging may be necessary. This includes messages indicating that the system is busy “loading”, “saving”, or carrying out another function.
 
 #### Permanent pop-up
 {:.ap}
@@ -408,7 +408,7 @@ document.getElementById('ex3').addEventListener('submit', function(event){
 ### During typing
 {:.ap}
 
-Providing instant feedback during typing is interactive and can be very helpful. For example, checking the availability of a username in the previous example required the user to resubmit the form possibly multiple times. Providing feedback while users are typing allows them to experiment more easily until they find a suitable username. However, client-side scripting is required for such functionality, and not all situations may be suitable for such feedback.
+Providing instant feedback during typing is interactive and can be very helpful. For example, checking the availability of a username in the previous example required the user to resubmit the form -- possibly multiple times. Providing feedback while users are typing allows them to experiment more easily until they find a suitable username. However, client-side scripting is required for such functionality, and not all situations may be suitable for such feedback.
 
 #### Binary messages
 {:.ex.inap}
