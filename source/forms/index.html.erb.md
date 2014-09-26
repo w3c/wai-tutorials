@@ -32,10 +32,10 @@ Forms are used to provide functionality in websites and web applications. For ex
 
 Forms can be visually and cognitively complex and difficult to use. Accessible forms are easier to use for everyone, including people with disabilities.
 
-- **People with cognitive disabilities** can better understand the form and how to completed due to the improved layout structure, instructions, and feedback.
+- **People with cognitive disabilities** can better understand the form and how to complete it, as making forms accessible improves the layout structure, instructions, and feedback.
 
 - **People using speech input** can use the labels via voice commands to activate controls and move the focus to the fields that they need to complete.
 
-- **People with limited dexterity** benefit from enlarged clickable areas that include the labels, particularly for smaller controls, such as radio buttons and checkboxes.
+- **People with limited dexterity** benefit from enlarged clickable areas that include the labels, especially for smaller controls, such as radio buttons and checkboxes.
 
 - **People using screen readers** can identify form controls more easily because they are associated with labels, field sets, and other structural elements.
