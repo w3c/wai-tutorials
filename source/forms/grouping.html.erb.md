@@ -67,4 +67,4 @@ The `<fieldset>` element provides a container for related form elements, and the
 
 * Make the legend as short as possible for situations in which it is read together with the label each time.
 * Make the individual labels sufficiently self-explanatory for situations in which legends are not read aloud.
-* Hide the legend visually and provide a real heading with the same text (in some cases the same text may be read aloud twice in a row).
+* Hide the legend visually and provide a real heading with the same text. (In some cases the same text may be read aloud twice in a row.)
