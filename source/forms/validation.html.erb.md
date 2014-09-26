@@ -62,9 +62,9 @@ In the example below, the `required` attribute is added to the input field. If y
 ## Validating common input
 {:.newex}
 
-HTML5 also provides input types for other data, like `email`, `url`, `number`, `range`, `date`, or `time`. Most common web browsers support these features and handle input validation. In addition, they help users to provide the input by providing specific controls, such as date pickers and custom on-screen keyboards. They are displayed as simple `text` input fields in older web browsers that do not support these HTML5 features.
+HTML5 also provides input types for other data, including `email`, `url`, `number`, `range`, `date`, or `time`. Most common web browsers support these features and handle input validation. In addition, HTML5 validation helps users inputting data by providing specific controls, such as date pickers and custom on-screen keyboards. HTML5 input types are displayed as simple `text` input fields in older web browsers that do not support these HTML5 features.
 
-The example below shows these HTML5 input types in action. Depending on your web browser, the “Range” input field will be displayed as a slider control to help users provide input more easily. Similarly the “Number” input field may be displayed with buttons to increase or decrease the number incrementally. Input errors, such as a wrong email address, will be indicated using the web browser dialogs as in the previous example.
+The example below shows these HTML5 input types in action. Depending on your web browser, the “Range” input field will be displayed as a slider control to help users provide input more easily. Similarly the “Number” input field may be displayed with buttons to increase or decrease the number incrementally. Input errors, such as an incorrect email address, will be indicated using the web browser dialogs as in the previous example.
 
 {::nomarkdown}
 <%= sample_start %>
@@ -202,21 +202,21 @@ In the example below, the `pattern` attribute of the `input` element specifies a
 
 Where possible, validation should accommodate different input options to make forms easier to complete. For example, telephone numbers are often written with different separators and digit groupings, and your form will be easier to use if it can interpret multiple notations.
 
-Client-side validation has many benefits. In general responses are quicker when validation is carried out on the client-side and users do not need to leave the page. This can also reduce network and server load. However, not all web browsers may support HTML5 or any custom validation scripts, so that validation needs to be carried out server-side as well.
+Client-side validation has many benefits. In general, responses are quicker when validation is carried out on the client-side and users do not need to leave the page. This can also reduce network and server load. However, not all web browsers may support HTML5 or any custom validation scripts, so that validation needs to be carried out server-side as well.
 
 ## Validation by the user
 
-Where possible, users should have the possibility to check their own input and correct it if necessary. This is particularly important for actions that are permanent or otherwise critical, but also when data cannot be automatically checked. For example, providing users with the option to check the postal address that they provided can be useful before the purchasing transaction is completed.
+Where possible, users should be able to check their own input and correct it if necessary. This is particularly important for actions that are permanent or otherwise critical, but also when data cannot be automatically checked. For example, providing users with the option to check the postal address that they provided can be useful before the purchasing transaction is completed.
 
 ### Provide undo functionality
 
 Where possible, provide undo mechanisms for reversible actions. Examples include:
 
-* A Content Management System (CMS) has the ability to delete unwanted comments. Instead of deleting them right away, they get stored in a ”trash” folder so that they can be restored.
+* A Content Management System (CMS) has the ability to delete unwanted comments. Instead of deleting them right away, they get stored in a “trash” folder so that they can be restored.
 
-* A webmail application allows users to “undo” sending of an email for a few seconds. This is useful if the user forgot to attach a file or sent the email to the wrong recipient.
+* A webmail application allows users to “undo” sending an email for a few seconds. This is useful if the user forgot to attach a file or sent the email to the wrong recipient.
 
-* A shopping website lets users cancel purchases up to 24 hours after the order is submitted. The website explains their policy, and includes a summary of the policy on the purchase receipt emailed to the user. After 24 hours, the purchase will be shipped to the user and can no longer be canceled.
+* A shopping website lets users cancel purchases up to 24 hours after the order is submitted. The website explains the policy, and includes a summary of the policy on the purchase receipt emailed to the user. After 24 hours, the purchase will be shipped to the user and can no longer be canceled.
 
 ### Require user confirmation
 
