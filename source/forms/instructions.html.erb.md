@@ -31,7 +31,7 @@ In the example below, form instructions indicate how required input is highlight
 <%= sample_start %>
 {:/nomarkdown}
 
-- All fields marked (required) must be completed.
+- All fields marked “required” must be completed.
 - Dates should all be typed in the format dd/mm/yyyy, (as in 21/07/2013).
 - Passwords must contain at least 8 letters and/or numbers.
 - Extra help can be found immediately after each field.
