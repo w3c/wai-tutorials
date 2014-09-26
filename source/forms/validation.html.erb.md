@@ -53,7 +53,7 @@ In the example below, the `required` attribute is added to the input field. If y
 <%= notes_start %>
 {:/nomarkdown}
 
-**Note:** The `aria-required` attribute informs assistive technologies about required controls so that they are appropriate announced to the users (as opposed to validate the input). Most current web browsers automatically set its value to `true` when the HTML5 `required` attribute is present. In this example it is provided redundantly to support web browers that don’t communicate the `required` attribute. However, this attribute, when supported, is only communicated to assistive technologies.
+**Note:** The `aria-required` attribute informs assistive technologies about required controls so that they are appropriately announced to the users (as opposed to validating the input). Most current web browsers automatically set its value to `true` when the HTML5 `required` attribute is present. In this example it is provided redundantly to support web browers that don’t communicate the `required` attribute. However, this attribute, when supported, is only communicated to assistive technologies.
 
 {::nomarkdown}
 <%= notes_end %>
