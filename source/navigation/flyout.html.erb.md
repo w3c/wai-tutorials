@@ -101,11 +101,11 @@ Items containing a submenu should be marked in a way that is obvious. In the fol
   .has-submenu > a:after {
     margin-left: 5px;
     line-height: 14px;
-    content: url(/img/ex-dropdown-inactive.png);
+    content: url(../../img/ex-dropdown-inactive.png);
   }
   .has-submenu:hover > a:hover:after,
   .has-submenu > a:focus:after {
-    content: url(/img/ex-dropdown-active.png);
+    content: url(../../img/ex-dropdown-active.png);
   }
 </style>
 
@@ -624,6 +624,7 @@ Array.prototype.forEach.call(menuItems1, function(el, i){
     });
     var preventClick = false;
     el.querySelector('a').addEventListener("keydown",  function(event){
+      console.log(event.keyCode);
         if (event.keyCode == 13) {
           if (this.parentNode.className == "has-submenu") {
             this.parentNode.className = "has-submenu open";
