@@ -622,9 +622,8 @@ Array.prototype.forEach.call(menuItems1, function(el, i){
             document.querySelector("#flyoutaria .has-submenu.open").className = "has-submenu";
         }, 1000);
     });
-    el.querySelector('a').addEventListener("keyup",  function(event){
-      console.log(event.keyCode);
-        if (event.keyCode == 13) {
+    el.querySelector('a').addEventListener("click",  function(event){
+        //if (event.keyCode == 13) {
           if (this.parentNode.className == "has-submenu") {
             this.parentNode.className = "has-submenu open";
             this.setAttribute('aria-expanded', "true");
@@ -634,7 +633,7 @@ Array.prototype.forEach.call(menuItems1, function(el, i){
           }
           event.preventDefault();
           return false;
-        }
+        //}
     });
     var links = el.querySelectorAll('a');
     Array.prototype.forEach.call(links, function(el, i){
