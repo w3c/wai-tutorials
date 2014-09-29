@@ -622,7 +622,6 @@ Array.prototype.forEach.call(menuItems1, function(el, i){
             document.querySelector("#flyoutaria .has-submenu.open").className = "has-submenu";
         }, 1000);
     });
-    var preventClick = false;
     el.querySelector('a').addEventListener("keyup",  function(event){
       console.log(event.keyCode);
         if (event.keyCode == 13) {
@@ -634,12 +633,7 @@ Array.prototype.forEach.call(menuItems1, function(el, i){
             this.setAttribute('aria-expanded', "false");
           }
           event.preventDefault();
-          preventClick = true;
-        }
-    });
-    el.querySelector('a').addEventListener("click",  function(event){
-        if (preventClick) {
-          event.preventDefault();
+          return false;
         }
     });
     var links = el.querySelectorAll('a');
