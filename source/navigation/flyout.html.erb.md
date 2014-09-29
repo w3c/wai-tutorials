@@ -298,7 +298,7 @@ To improve Keyboard support, the decision has to be made if the top-level menu i
 
 #### Toggle submenu using the top-level menu item
 
-The activation of the top-level menu item changes won’t link to the page in its `href` attribute but instead show the sub menu.
+The activation of the top-level menu item changes won’t link to the page in its `href` attribute but instead show the sub menu. A script detects if the link is activated by using the <kbd>return ↵</kbd> key, shows the submenu items and stops the browser from following the link to the page. If the focus leaves the submenu (for example by using the tab key on the last submenu item), the submenu needs to close.
 
 {::nomarkdown}
 <%= sample_start('show-overflow') %>
@@ -442,7 +442,11 @@ Array.prototype.forEach.call(menuItems1, function(el, i){
     });
     el.querySelector('a').addEventListener("keydown",  function(event){
         if (event.keyCode == 13) {
-          this.parentNode.className = "has-submenu open";
+          if (this.parentNode.className == "has-submenu") {
+            this.parentNode.className = "has-submenu open";
+          } else {
+            this.parentNode.className = "has-submenu";
+          }
           event.preventDefault();
         }
     });
@@ -456,8 +460,11 @@ Array.prototype.forEach.call(menuItems1, function(el, i){
       });
       el.addEventListener("blur", function(event) {
         timer2 = setTimeout(function () {
-          document.querySelector("#flyoutnavkbfixed .has-submenu.open").className = "has-submenu";
-        }, 1);
+          var opennav = document.querySelector("#flyoutnavkbfixed .has-submenu.open")
+          if (opennav) {
+            opennav.className = "has-submenu";
+          }
+        }, 10);
       });
     });
 });
@@ -468,8 +475,190 @@ Array.prototype.forEach.call(menuItems1, function(el, i){
 
 #### Toggle with a special “show submenu” button
 
-### Improve screen reader support
+### Improve screen reader support using WAI-ARIA
 
+Currently, screen reader users are unable to tell if an item has a submenu or not and if it is opened. WAI-ARIA helps to convey this information by adding the following two attributes to the menu’s HTML:
+
+* **`aria-haspopup="true"`** is used so screen readers are able to announce that the link has a submenu.
+* **`aria-expanded`** is initially set to `false` but changed to `true` when the submenu opens which forces screen readers to announce that this menu item is now expanded.
+
+{::nomarkdown}
+<%= sample_start('show-overflow') %>
+
+<nav role="navigation" aria-label="Main Navigation" aria-presentation="true" id="flyoutaria">
+    <ul>
+        <li><a href="#flyoutaria">Home</a></li>
+        <li><a href="#flyoutaria">Shop</a></li>
+        <li class="has-submenu">
+            <a href="#" aria-haspopup="true" aria-expanded="false">SpaceBears</a>
+            <ul>
+                <li><a href="#flyoutaria">SpaceBear 6</a></li>
+                <li><a href="#flyoutaria">SpaceBear 6 Plus</a></li>
+            </ul>
+        </li>
+        <li><a href="#flyoutaria">MarsCars</a></li>
+        <li><a href="#flyoutaria">Contact</a></li>
+    </ul>
+</nav>
+
+<style>
+.show-overflow {
+    overflow: visible !important;
+}
+
+.show-overflow .box-content {
+    overflow: visible !important;
+}
+  #flyoutaria {
+      display:table;
+      width:100%;
+  }
+  #flyoutaria > ul {
+      margin: 0;
+      padding: 0;
+      display: table-row;
+      background-color: #036;
+      color: #fff;
+  }
+  #flyoutaria > ul > li {
+      display:table-cell;
+      width: 20%;
+      text-align: center;
+      position:relative;
+  }
+  #flyoutaria a,
+  #flyoutaria .current {
+      display: block;
+      padding: .25em;
+      border-color: #E8E8E8;
+  }
+  #flyoutaria a {
+      color: #fff;
+      text-decoration: none;
+  }
+  #flyoutaria a:hover,
+    #flyoutaria a:focus {
+      background-color: #fff;
+      color: #036;
+      border: 1px solid #036;
+      text-decoration: underline;
+  }
+  #flyoutaria .current {
+      background-color: #bbb;
+      color: #000;
+      border-color: #444;
+  }
+
+  #flyoutaria > ul > li > ul {
+    display: none;
+    position:absolute;
+    left:0;
+    right:0;
+    top:100%;
+    padding:0;
+    margin:0;
+    background-color: #036;
+  }
+
+#flyoutaria > ul > li.open > ul {
+    display:block;
+  }
+
+  #flyoutaria > ul > li > ul a{
+    border-bottom-width: 1px;
+  }
+</style>
+
+<script>
+/* focusin/out event polyfill (firefox) */
+!function(){
+  var w = window,
+  d = w.document;
+
+  if( w.onfocusin === undefined ){
+    d.addEventListener('focus' ,addPolyfill ,true);
+    d.addEventListener('blur' ,addPolyfill ,true);
+    d.addEventListener('focusin' ,removePolyfill ,true);
+    d.addEventListener('focusout' ,removePolyfill ,true);
+  }
+  function addPolyfill(e){
+    var type = e.type === 'focus' ? 'focusin' : 'focusout';
+    var event = new CustomEvent(type, { bubbles:true, cancelable:false });
+    event.c1Generated = true;
+    e.target.dispatchEvent( event );
+  }
+  function removePolyfill(e){
+if(!e.c1Generated){ // focus after focusin, so chrome will the first time trigger tow times focusin
+  d.removeEventListener('focus' ,addPolyfill ,true);
+  d.removeEventListener('blur' ,addPolyfill ,true);
+  d.removeEventListener('focusin' ,removePolyfill ,true);
+  d.removeEventListener('focusout' ,removePolyfill ,true);
+}
+setTimeout(function(){
+  d.removeEventListener('focusin' ,removePolyfill ,true);
+  d.removeEventListener('focusout' ,removePolyfill ,true);
+});
+}
+}();
+
+function hasClass(el, className) {
+  if (el.classList) {
+    return el.classList.contains(className);
+  } else {
+    return new RegExp('(^| )' + className + '( |$)', 'gi').test(el.className);
+  }
+}
+
+var menuItems1 = document.querySelectorAll('#flyoutaria li.has-submenu');
+var timer1, timer2;
+
+Array.prototype.forEach.call(menuItems1, function(el, i){
+    el.addEventListener("mouseover", function(event){
+        this.className = "has-submenu open";
+        clearTimeout(timer1);
+    });
+    el.addEventListener("mouseout", function(event){
+        timer1 = setTimeout(function(event){
+            document.querySelector("#flyoutaria .has-submenu.open").className = "has-submenu";
+        }, 1000);
+    });
+    el.querySelector('a').addEventListener("keydown",  function(event){
+        if (event.keyCode == 13) {
+          if (this.parentNode.className == "has-submenu") {
+            this.parentNode.className = "has-submenu open";
+            this.setAttribute('aria-expanded', "true");
+          } else {
+            this.parentNode.className = "has-submenu";
+            this.setAttribute('aria-expanded', "false");
+          }
+          this.focus();
+          event.preventDefault();
+          event.stopPropagation();
+        }
+    });
+    var links = el.querySelectorAll('a');
+    Array.prototype.forEach.call(links, function(el, i){
+      el.addEventListener("focus", function() {
+        if (timer2) {
+          clearTimeout(timer2);
+          timer2 = null;
+        }
+      });
+      el.addEventListener("blur", function(event) {
+        timer2 = setTimeout(function () {
+          var opennav = document.querySelector("#flyoutaria .has-submenu.open")
+          if (opennav) {
+            opennav.className = "has-submenu";
+            document.querySelector("#flyoutaria .has-submenu.open [aria-expanded]").setAttribute('aria-expanded', "false");
+          }
+        }, 10);
+      });
+    });
+});
+</script>
+
+<%= sample_end %>
+{:/nomarkdown}
 
 
 * Basic Concepts
