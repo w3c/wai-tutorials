@@ -622,6 +622,7 @@ Array.prototype.forEach.call(menuItems1, function(el, i){
             document.querySelector("#flyoutaria .has-submenu.open").className = "has-submenu";
         }, 1000);
     });
+    var preventClick = false;
     el.querySelector('a').addEventListener("keydown",  function(event){
         if (event.keyCode == 13) {
           if (this.parentNode.className == "has-submenu") {
@@ -631,9 +632,13 @@ Array.prototype.forEach.call(menuItems1, function(el, i){
             this.parentNode.className = "has-submenu";
             this.setAttribute('aria-expanded', "false");
           }
-          this.focus();
           event.preventDefault();
-          event.stopPropagation();
+          preventClick = true;
+        }
+    });
+    el.querySelector('a').addEventListener("click",  function(event){
+        if (preventClick) {
+          event.preventDefault();
         }
     });
     var links = el.querySelectorAll('a');
@@ -649,7 +654,7 @@ Array.prototype.forEach.call(menuItems1, function(el, i){
           var opennav = document.querySelector("#flyoutaria .has-submenu.open")
           if (opennav) {
             opennav.className = "has-submenu";
-            document.querySelector("#flyoutaria .has-submenu.open [aria-expanded]").setAttribute('aria-expanded', "false");
+            document.querySelector("#flyoutaria .has-submenu.open > [aria-expanded]").setAttribute('aria-expanded', "false");
           }
         }, 10);
       });
