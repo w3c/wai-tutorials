@@ -623,17 +623,15 @@ Array.prototype.forEach.call(menuItems1, function(el, i){
         }, 1000);
     });
     el.querySelector('a').addEventListener("click",  function(event){
-        //if (event.keyCode == 13) {
-          if (this.parentNode.className == "has-submenu") {
-            this.parentNode.className = "has-submenu open";
-            this.setAttribute('aria-expanded', "true");
-          } else {
-            this.parentNode.className = "has-submenu";
-            this.setAttribute('aria-expanded', "false");
-          }
-          event.preventDefault();
-          return false;
-        //}
+      if (this.parentNode.className == "has-submenu") {
+        this.parentNode.className = "has-submenu open";
+        this.setAttribute('aria-expanded', "true");
+      } else {
+        this.parentNode.className = "has-submenu";
+        this.setAttribute('aria-expanded', "false");
+      }
+      event.preventDefault();
+      return false;
     });
     var links = el.querySelectorAll('a');
     Array.prototype.forEach.call(links, function(el, i){
