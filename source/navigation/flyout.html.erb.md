@@ -623,7 +623,7 @@ Array.prototype.forEach.call(menuItems1, function(el, i){
         }, 1000);
     });
     var preventClick = false;
-    el.querySelector('a').addEventListener("keydown",  function(event){
+    el.querySelector('a').addEventListener("keyup",  function(event){
       console.log(event.keyCode);
         if (event.keyCode == 13) {
           if (this.parentNode.className == "has-submenu") {
@@ -655,7 +655,7 @@ Array.prototype.forEach.call(menuItems1, function(el, i){
           var opennav = document.querySelector("#flyoutaria .has-submenu.open")
           if (opennav) {
             opennav.className = "has-submenu";
-            document.querySelector("#flyoutaria .has-submenu.open > [aria-expanded]").setAttribute('aria-expanded', "false");
+            document.querySelector("#flyoutaria .has-submenu.open [aria-expanded]").setAttribute('aria-expanded', "false");
           }
         }, 10);
       });
