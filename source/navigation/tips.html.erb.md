@@ -1,8 +1,8 @@
 ---
-title: ◊ Tips & Tricks
+title: Tips & Tricks
 status: editors-draft
 order: 6
 type: tips
 ---
 
-* External links in main navigation
+* **Avoid external links** in main navigation as the change of context might be sudden for many people. If you really have to link to a web page outside the site, use an icon or text to warn the user. If an icon is used, it should have an appropriate alternative text.
