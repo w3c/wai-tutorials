@@ -4,22 +4,25 @@ nav_title: Structure
 status: editors-draft
 order: 2
 wcag_success_criteria:
-  - 1.4.1
 wcag_techniques:
-  - G14
-  - G182
-  - G183
-  - ARIA5
   - ARIA6
 ---
 
-Designing a good navigation is not a technical challenge but a content strategy one. Organizing the content of a website is fairly trivial on small websites, but grows into a huge task once the website grows larger. A simple and flat navigation structure makes it easy for the user to find information.
+Designing a good navigation is not a technical challenge but a content strategy one. Organizing the content of a website is fairly trivial on small websites, but grows into a huge task once the website grows larger. Simple navigations are usually easier to understand and navigate for all users.
 
-Navigation laid out horizontally should only contain a few items, so they can be easily processed. Horizontal navigation can also be hard to read if there is little space, for example if the user is on a mobile phone or uses text enlargement.
+## Basic markup
 
-## Basic Markup
+By using an `<nav>` element, non-visual users can access the navigation directly using the screen reader as it carries an explicit WAI-ARIA landmark role of `navigation`. If multiple `<nav>` elements (or `role="navigation"`) attributes can and should be used.
 
-To make people using assistive technology aware of the navigation, an landmark role of `navigation` should be used. Landmark roles provide much needed orientation on a page. The HTML5 `<nav>` element provides a simple way of denoting a navigation section on the page. As the accessibility of the `<nav>` element is not as widely spread as the landmark notation, both can be used to provide maximal coverage for marking up navigations.
+{::nomarkdown}
+<%= notes_start %>
+{:/nomarkdown}
+
+**Note:** To ensure compatibility with slightly older browsers, the navigation role is added to the `<nav>` element in the code.
+
+{::nomarkdown}
+<%= notes_end %>
+{:/nomarkdown}
 
 {::nomarkdown}
 <%= code_start('','HTML') %>
@@ -34,14 +37,14 @@ To make people using assistive technology aware of the navigation, an landmark r
 <%= code_end %>
 {:/nomarkdown}
 
-## Labeling Navigations
+## Labeling navigations
 
-If there are multiple navigational menus on a page, multiple `<nav>` elements or `role="navigation"` attributes can and should be used. To make it easier for users of assistive technologies, those menus should be labeled. This helps users to distinguish between them.
-
-Using a heading makes the navigation available for users that don’t use landmarks but headings to navigate the page, and is announced once the user enters the navigation. Using `aria-label` is very convenient to those who do, as the name can be announced before navigating to the landmark as well as when the user enters the navigation menu.
+To make it easier for users of assistive technologies, menus should be labeled to help users distinguish between them. This is especially important if there are multiple navigational menus on a page.
 
 ### Using a (hidden) heading
 {:.ap}
+
+If a user is not using the screen reader options to navigate landmarks, headers are often used instead to discover sections of a website.
 
 {::nomarkdown}
 <%= code_start('','HTML') %>
@@ -61,7 +64,7 @@ Using a heading makes the navigation available for users that don’t use landma
 ### Using `aria-label`
 {:.ap}
 
-The `aria-label` attribute works only in browsers and assistive technology that support ARIA in the first place.
+The `aria-label` provides its content to users that use landmarks to navigate the page but leaves the headings to the content of the page. The label of the navigation is announced when entering the navigation as well as when navigating to the navigation menu, which is especially important if there are multiple menus on the page.
 
 {::nomarkdown}
 <%= code_start('','HTML') %>
@@ -76,10 +79,39 @@ The `aria-label` attribute works only in browsers and assistive technology that 
 <%= code_end %>
 {:/nomarkdown}
 
+### Using a heading and `aria-labelledby`
+{:.ap}
+
+To cover both use cases (navigating by headers and navigating by landmarks), the `aria-labelledby` attribute can be used to reference the heading inside the menu.
+
+{::nomarkdown}
+<%= code_start('','HTML') %>
+{:/nomarkdown}
+
+~~~ html
+<nav role="navigation" aria-labelledby="mainmenulabel">
+  <h2 id="mainmenulabel">Main Menu</h2>
+</nav>
+~~~
+
+{::nomarkdown}
+<%= code_end %>
+{:/nomarkdown}
+
+{::nomarkdown}
+<%= notes_start %>
+{:/nomarkdown}
+
+**Note:** Some browsers and assistive technologies might announce the name of the menu two times, when it is entered using the keyboard.
+
+{::nomarkdown}
+<%= notes_end %>
+{:/nomarkdown}
+
 ## List of Links
 {:.newap}
 
-If a navigation consists of more than a few links, the links should be wrapped in a list element. This helps people using assistive technologies as those are able announce how long the list of links is.
+If a navigation consists of more than a few links, the links should be wrapped in a list element. This helps people using assistive technologies as those tools are able announce how long the list of links is.
 
 ### Unordered list
 {:.ap}
