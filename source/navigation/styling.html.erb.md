@@ -7,19 +7,18 @@ wcag_success_criteria:
   - 1.4.1
 wcag_techniques:
   - G14
+  - G128
   - G182
   - G183
-  - ARIA5
-  - ARIA6
 ---
 
 There are no definitive rules on how a navigation should look like, but a few design patterns have emerged on how and where main navigations appear on the page and how they are styled.
 
-While in-text links usually need an underline so that people with low vision or color blindness can distinguish them from the surrounding text, this is not needed for links in navigations _if the navigation menu can be clearly identified_. If icons or images are used in links, an alternative text should be provided according to the [Images Tutorial](/images/functional.html).
+While in-text links usually need an underline so that people with low vision or color blindness can distinguish them from the surrounding text, this is not needed for links in navigations _if the navigation menu can be clearly identified_. If icons or images are used in links, an appropriate alternative text should be provided. See [Images Tutorial](/images/functional.html) for further advice.
 
-## Horizontal Menu
+## Horizontal menu
 
-If a navigation has just a few items that fit into one row on a screen, a horizontal menu bar may be used to display the links, see the example below. Such menu bars are usually positioned on the top of the page. While usually a compact way to display a navigation, horizontal space can be limited if users use small-screen devices or increase the font size.
+If a navigation has so few items that they can fit in one row on the screen, a horizontal menu bar may be used to display the links. Such menu bars are usually positioned on the top of the page. While this is a compact way to display a navigation, horizontal space can be limited if users use small-screen devices or increase the font size.
 
 {::nomarkdown}
 <%= sample_start %>
@@ -123,9 +122,9 @@ If there are many items in the navigation menu, a vertical navigation can be use
 
 When the user focuses a menu item or hovers over one using the mouse pointer, the individual menu item should change so users know where the focus is or if they are hovering the right menu item. In the examples in this tutorial, the menu item is inverted and the words are underlined.
 
-## Indicating the Current Page
+## Indicating the current page
 
-The current page should be marked to give users a sense of where they are in the site’s structure. This needs to be done in a way that does not rely on [color](/fundamentals/color.html) alone. For example in these tutorials an inverted box is used as well as a small arrow to show the entry of the current page. In most cases, the current page item should not be linked to the current page.
+The current page should be marked to give users a sense of where they are in the site’s structure. This needs to be done in a way that does not rely on color alone. For example in these tutorials an inverted box is used as well as a small arrow to show the entry of the current page. In most cases, the current page item should not be linked to the current page.
 
 In the following example, the active menu item is not only marked using different colors but also by adding a bottom border.
 
