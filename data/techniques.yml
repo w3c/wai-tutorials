@@ -1,6 +1,7 @@
 techniques:
   - ARIA5: Using WAI-ARIA state and property attributes to expose the state of a user interface component
   - ARIA6: Using aria-label to provide labels for objects
+  - ARIA11: Using ARIA landmarks to identify regions of a page
   - ARIA12: Using role=heading to identify headings
   - C7: Using CSS to hide a portion of the link text
   - C22: Using CSS to control visual presentation of text

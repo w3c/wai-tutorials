@@ -6,14 +6,26 @@ order: 1
 topic_order: 6
 type: intro
 wcag_success_criteria:
+  - 1.4.1
   - 2.4.3
   - 2.4.5
+  - 2.4.8
 wcag_techniques:
   - H4
   - SCR26
+  - G65
+  - G161
+  - G63
+  - G127
+  - ARIA6
+  - ARIA11
+  - G14
+  - G128
+  - G182
+  - G183
 ---
 
-Navigation Menus are used to browse around websites. Usually they consist of a list, or nested lists, of links. As they are so vital to access content on websites, they need to be operable with pointing devices (like a mouse) and keyboards.
+Navigation menus are used to browse around websites. Usually they consist of a list, or nested lists, of links. As they are so vital to access content on websites, they need to be operable with pointing devices (like a mouse) and keyboards.
 
 A good navigation is not only the task of programmers and authors. The overall content organization of the website should lead to a coherent and comprehensible page structure. A navigation that represents such a page structure will help all users to navigate the website. Designers should ensure that contrast ratios are sufficient for all users and fonts are big enough.
 
