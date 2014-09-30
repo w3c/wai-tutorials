@@ -1,5 +1,5 @@
 ---
-title: Navigation Menu Structure
+title: Menu Structure
 nav_title: Structure
 status: editors-draft
 order: 2
@@ -9,21 +9,25 @@ wcag_techniques:
   - ARIA11
 ---
 
-Designing a good navigation is not a technical challenge but a content strategy one. Organizing the content of a website is fairly trivial on small websites, but grows into a huge task once the website grows larger. Simple navigations are usually easier to understand and navigate for all users.
+The markup of menus is important to convey the structure of the menu to assistive technologies. Most of the time a menu is a list of links, regardless of the visual appearance on the screen.
 
-## Basic markup
+## Identifying the menu
 
-By using an `<nav>` element, non-visual users can access the navigation directly using the screen reader as it carries an explicit WAI-ARIA landmark role of `navigation`. If multiple `<nav>` elements (or `role="navigation"`) attributes can and should be used.
-
-{::nomarkdown}
-<%= notes_start %>
-{:/nomarkdown}
-
-**Note:** To ensure compatibility with slightly older browsers, the navigation role is added to the `<nav>` element in the code.
+Users of assistive technology should be able to access the menu directly. To enable this functionality, a WAI-ARIA landmark role of `navigation` needs to be added to the element wrapping the navigation links.
 
 {::nomarkdown}
-<%= notes_end %>
+<%= code_start('','HTML') %>
 {:/nomarkdown}
+
+~~~ html
+<div role="navigation"></div>
+~~~
+
+{::nomarkdown}
+<%= code_end %>
+{:/nomarkdown}
+
+If HTML5 is used, the `<nav>` element is supposed to apply the landmark role implicitly. As some browser still don’t do this, and to improve the experience if an older browser is used, the navigation role is added as well.
 
 {::nomarkdown}
 <%= code_start('','HTML') %>
@@ -38,14 +42,24 @@ By using an `<nav>` element, non-visual users can access the navigation directly
 <%= code_end %>
 {:/nomarkdown}
 
+{::nomarkdown}
+<%= notes_start %>
+{:/nomarkdown}
+
+**Note:** Role and other ARIA attributes won’t validate in HTML4. If valid HTML4 needs to be provided, the ARIA attributes can be added to the HTML dynamically using JavaScript. If that is also no possibility, [provide a heading](#using-a-hidden-heading) to enable users to find the menu easily.
+
+{::nomarkdown}
+<%= notes_end %>
+{:/nomarkdown}
+
 ## Labeling navigations
 
-To make it easier for users of assistive technologies, menus should be labeled to help users distinguish between them. This is especially important if there are multiple navigational menus on a page.
+To make it easier for users of assistive technologies, menus should be labeled to help users find them and distinguish between them, if there are multiple navigational menus on a page. Users find menus by browsing the web page, but they could also use features of assistive technology to navigate directly to `navigation` landmarks or headings.
 
 ### Using a (hidden) heading
 {:.ap}
 
-If a user is not using the screen reader options to navigate landmarks, headers are often used instead to discover sections of a website.
+Users that use headings to find their way around pages can discover the menu easily if a heading is provided.
 
 {::nomarkdown}
 <%= code_start('','HTML') %>
@@ -65,7 +79,7 @@ If a user is not using the screen reader options to navigate landmarks, headers 
 ### Using `aria-label`
 {:.ap}
 
-The `aria-label` provides its content to users that use landmarks to navigate the page but leaves the headings to the content of the page. The label of the navigation is announced when entering the navigation as well as when navigating to the navigation menu, which is especially important if there are multiple menus on the page.
+The `aria-label` provides information to users that use landmarks to navigate the page. This approach makes it possible to use headings only in the main content of the page. The label of the menu is announced when entering the menu as well as when navigating to it. This is especially important if there are multiple menus on the page.
 
 {::nomarkdown}
 <%= code_start('','HTML') %>
@@ -103,7 +117,7 @@ To cover both use cases (navigating by headers and navigating by landmarks), the
 <%= notes_start %>
 {:/nomarkdown}
 
-**Note:** Some browsers and assistive technologies might announce the name of the menu two times, when it is entered using the keyboard.
+**Note:** Some browsers and assistive technologies might announce the name of the menu two times, when the user enters the menu.
 
 {::nomarkdown}
 <%= notes_end %>
@@ -112,12 +126,12 @@ To cover both use cases (navigating by headers and navigating by landmarks), the
 ## List of Links
 {:.newap}
 
-If a navigation consists of more than a few links, the links should be wrapped in a list element. This helps people using assistive technologies as those tools are able announce how long the list of links is.
+If a navigation consists of more than a few links, the links should be wrapped in a list element. This helps assistive technologies to announce how many items are in the menu.
 
 ### Unordered list
 {:.ap}
 
-For websites where it doesn’t matter in which order users read through individual pages, an unordered list should be used. In the following example, the user is not required to read the home page before advancing to the shop or get information about the products.
+For websites where the order in which the user reads the pages doesn’t matter, an unordered list (`<ul>`) should be used. In the following example, the user is not required to read the home page before advancing to the shop or get information about the products.
 
 {::nomarkdown}
 <%= code_start('','HTML') %>
@@ -144,7 +158,7 @@ For websites where it doesn’t matter in which order users read through individ
 ### Ordered list
 {:.ap}
 
-In some less widely spread instances, it is needed to read pages in a certain order, for instance, if the navigation denotes chapters in prose or steps to take while building something. In the following example, following the order is important to properly build the space ship.
+In some instances, pages need to be read in a certain order. Menus that provides access to chapters in prose or steps to take while building something are examples for this kind of menus. In the example below, following the order is important to properly build the space ship.
 
 {::nomarkdown}
 <%= code_start('','HTML') %>
