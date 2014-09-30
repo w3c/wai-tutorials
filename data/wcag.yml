@@ -68,6 +68,11 @@ successcriteria:
       desc: 'If a Web page can be navigated sequentially and the navigation sequences affect meaning or operation, focusable components receive focus in an order that preserves meaning and operability.'
       level: A
       slug: navigation-mechanisms-focus-order
+  - 2.4.5:
+      title: "Multiple Ways"
+      desc: "2.4.5 More than one way is available to locate a Web page within a set of Web pages except where the Web Page is the result of, or a step in, a process."
+      level: AA
+      slug: navigation-mechanisms-mult-loc
   - 2.4.6:
       title: "Headings and Labels"
       desc: "Headings and labels describe topic or purpose."
@@ -78,6 +83,11 @@ successcriteria:
       desc: "Any keyboard operable user interface has a mode of operation where the keyboard focus indicator is visible."
       level: AA
       slug: navigation-mechanisms-focus-visible
+  - 2.4.8:
+      title: "Location"
+      desc: "Information about the user's location within a set of Web pages is available."
+      level: AAA
+      slug: navigation-mechanisms-location
   - 2.4.10:
       title: "Section Headings"
       desc: 'Section headings are used to organize the content.'
