@@ -4,6 +4,7 @@ status: editors-draft
 order: 4
 wcag_techniques:
   - SCR26
+  - H4
 ---
 
 If the user should be able to access pages deep in the website’s structure, fly-out menus are frequently used to archive the desired effect. Such fly-out menus are often called dropdown menus.

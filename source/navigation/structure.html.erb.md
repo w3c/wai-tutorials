@@ -6,6 +6,7 @@ order: 2
 wcag_success_criteria:
 wcag_techniques:
   - ARIA6
+  - ARIA11
 ---
 
 Designing a good navigation is not a technical challenge but a content strategy one. Organizing the content of a website is fairly trivial on small websites, but grows into a huge task once the website grows larger. Simple navigations are usually easier to understand and navigate for all users.
