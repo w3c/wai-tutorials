@@ -474,7 +474,31 @@ Array.prototype.forEach.call(menuItems1, function(el, i){
 <%= sample_end %>
 {:/nomarkdown}
 
-#### Toggle with a special “show submenu” button
+The following code iterates through all menu items and adds click event to the first (top-level) link in each menu item. The click event fires regardless of input method as soon as the link gets activated. If the submenu is closed when the link is activated, the script opens the submenu, and vice versa.
+
+{::nomarkdown}
+<%= code_start('', 'JavaScript') %>
+{:/nomarkdown}
+
+~~~js
+Array.prototype.forEach.call(menuItems, function(el, i){
+  el.querySelector('a').addEventListener("click",  function(event){
+    if (this.parentNode.className == "has-submenu") {
+      this.parentNode.className = "has-submenu open";
+    } else {
+      this.parentNode.className = "has-submenu";
+    }
+    event.preventDefault();
+    return false;
+  });
+});
+~~~
+
+{::nomarkdown}
+<%= code_end %>
+{:/nomarkdown}
+
+#### Toggle submenu using a special “show submenu” button
 
 If the top-level menu item should stay a link to a page, adding a separate button that toggles the submenu is the most reliable way to address the issue.
 
@@ -701,6 +725,36 @@ Array.prototype.forEach.call(menuItems1, function(el, i){
 <%= sample_end %>
 {:/nomarkdown}
 
+In the following code, a button is attached to every menu item link with a submenu. The click event listener is applied to this button and toggles the menu. The invisible button text is changed from show to hide submenu according to the state of the submenu.
+
+{::nomarkdown}
+<%= code_start('','JavaScript') %>
+{:/nomarkdown}
+
+~~~js
+Array.prototype.forEach.call(menuItems, function(el, i){
+  var btn = '<button><span><span class="visuallyhidden">show submenu</span></span></button>';
+  var topLevelLink = el.querySelector('a');
+  topLevelLink.innerHTML = topLevelLink.innerHTML + ' ' + btn;
+
+  el.querySelector('a button').addEventListener("click",  function(event){
+    if (this.parentNode.parentNode.className == "has-submenu") {
+      this.parentNode.parentNode.className = "has-submenu open";
+      this.querySelector('.visuallyhidden').innerText = 'hide submenu';
+    } else {
+      this.parentNode.parentNode.className = "has-submenu";
+      this.querySelector('.visuallyhidden').innerText = 'show submenu';
+    }
+    event.preventDefault();
+  });
+});
+~~~
+
+{::nomarkdown}
+<%= code_end %>
+{:/nomarkdown}
+
+
 ## Improve screen reader support using WAI-ARIA
 
 Currently, screen reader users are unable to tell if an item has a submenu or not and if it is opened. WAI-ARIA helps to convey this information by adding the following two attributes to the menu’s HTML:
@@ -882,3 +936,13 @@ Array.prototype.forEach.call(menuItems1, function(el, i){
 
 <%= sample_end %>
 {:/nomarkdown}
+
+## Web application menus
+
+There are some WAI-ARIA roles that are helping assistive technology to interpret menus like the ones found in desktop software. When using the following ARIA attributes, the keyboard interaction should be similar to desktop software as well: the tab key is used to iterate through the top-level items only, the up and down arrows are used to navigate the sub menus. The following roles are used in the example:
+
+* **`aria-menubar`:** Represents a usually horizontal menu bar.
+* **`aria-menu`:** Represents a set of links or commands in a menu bar, it is used for the fly-out menus.
+* **`aria-menuitem`:** Represents an individual menu item.
+
+(((Working example will be provided.)))
