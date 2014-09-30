@@ -66,5 +66,5 @@ The `<fieldset>` element provides a container for related form elements, and the
 **Note:** Depending on the configuration, some screen readers read out the legend either _with every form element_, _once_, or _not at all_. To accommodate this consider the following:
 
 * Make the legend as short as possible for situations in which it is read together with the label each time.
-* Make the individual labels sufficiently self-explanatory for situations in which legends are not read aloud.
+* Make the individual labels sufficiently self-explanatory for situations in which legends are not read aloud, without repeating the legend in every label.
 * Hide the legend visually and provide a heading (`<h1>`–`<h6>`) with the same text. (In some cases the same text may be read aloud twice in a row.)
