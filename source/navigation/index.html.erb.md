@@ -29,7 +29,7 @@ Menus are used to browse around websites. As they are vital to access content on
 
 * **[Structure](structure.html):** Mark up menus using (nested) lists to enable easy access to all pages of the website.
 
-* **[Styling](styling.html):** Use different types of menus in different situations, indicate the current page.
+* **[Styling](styling.html):** Lay out different types of menus, depending on the situation, using commonly recognized design patterns and indicate the current page’s menu item.
 
 * **[Fly-out Menus](flyout.html):** Use fly-out menus to give users quick access to pages in lower hierarchies. They are also for application menus.
 
