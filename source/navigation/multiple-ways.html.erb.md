@@ -50,7 +50,7 @@ A breadcrumb navigation is usually positioned near the top of the page. As a nav
 
 ## Sitemap
 
-A sitemap is a list of all pages of a website. It provides a good way to get a feeling for the structure of the website and can help users to understand what the site contains and how content is organized. It also is an alternative to complex navigation bars.
+A sitemap is a list of all pages of a website. It provides a good way to get a feeling for the structure of the website and can help users to understand what the site contains and how content is organized. It also is an alternative to complex menu bars.
 
 Simple sitemaps just show an outline view, while more complex sitemaps might also show complex relationship data as well. If the site map is large, it can make sense to show some levels of the hierarchy only when demanded from the user. A sitemap needs to stay updated when a page is added or deleted, should link to all sections of the site, and present the organization of the web site. See the [W3C <abbr title="Web Accessibility Initiative">WAI</abbr> sitemap](http://www.w3.org/WAI/sitemap.html) for an example.
 
