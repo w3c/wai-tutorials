@@ -1,5 +1,5 @@
 ---
-title: Navigation Menu Styling
+title: Menu Styling
 nav_title: Styling
 status: editors-draft
 order: 3
@@ -12,13 +12,63 @@ wcag_techniques:
   - G183
 ---
 
-There are no definitive rules on how a navigation should look like, but a few design patterns have emerged on how and where main navigations appear on the page and how they are styled.
+There are no definitive rules on how a menu should look like, but a few design patterns have emerged on how and where menus appear on the page, especially for main menus.
 
-While in-text links usually need an underline so that people with low vision or color blindness can distinguish them from the surrounding text, this is not needed for links in navigations _if the navigation menu can be clearly identified_. If icons or images are used in links, an appropriate alternative text should be provided. See [Images Tutorial](/images/functional.html) for further advice.
+While in-text links usually need an underline to help people with low vision or color blindness distinguish them from the surrounding text, this is not needed for links in menus if the menu can be clearly identified as such. If icons or images are used in links, an appropriate alternative text should be provided. See [Images Tutorial](/images/functional.html) for more advice.
+
+## Vertical Menu
+
+A vertical menu provides space for a lot of links as all items can be easily reached by scrolling the page. Vertical menus are often in small columns on the side of the page which may lead to longer words overlapping the menu bar or get cut off, which is a potential accessibility barrier. This often happens when the user increases the font size, or when the website is translated into other languages.
+
+{::nomarkdown}
+<%= sample_start %>
+
+<nav role="navigation" aria-label="Main Navigation" aria-presentation="true" id="verticalnav">
+    <ul>
+        <li><a href="#samplenav">Home</a></li>
+        <li><a href="#samplenav">Shop</a></li>
+        <li><a href="#samplenav">SpaceBears</a></li>
+        <li><a href="#samplenav">MarsCars</a></li>
+        <li><a href="#samplenav">Contact</a></li>
+    </ul>
+</nav>
+
+<style>
+  #verticalnav {
+      display:table;
+  }
+  #verticalnav ul {
+      margin: 0;
+      padding: 0;
+      background-color: #036;
+      color: #fff;
+  }
+  #verticalnav li {
+      display:table-row;
+      width: 20%;
+      text-align: left;
+  }
+  #verticalnav a {
+      display: block;
+      padding: .25em .5em;
+      color: #fff;
+      border-bottom: 1px solid;
+      text-decoration: none;
+  }
+  #verticalnav a:hover,
+  #verticalnav a:focus {
+    color: #036;
+    background-color: #fff;
+    text-decoration: underline;
+  }
+</style>
+
+<%= sample_end %>
+{:/nomarkdown}
 
 ## Horizontal menu
 
-If a navigation has so few items that they can fit in one row on the screen, a horizontal menu bar may be used to display the links. Such menu bars are usually positioned on the top of the page. While this is a compact way to display a navigation, horizontal space can be limited if users use small-screen devices or increase the font size.
+If a menu has so few items that they can fit in one line on the screen, a horizontal menu bar may be used to display the links. Such menu bars are usually positioned near the top of the page. While this is a compact way to display a menu, horizontal space can be limited if users use small-screen devices or increase the font size. In such cases media queries can help to transform a horizontal into a vertical menu.
 
 {::nomarkdown}
 <%= sample_start %>
@@ -68,59 +118,9 @@ If a navigation has so few items that they can fit in one row on the screen, a h
 <%= sample_end %>
 {:/nomarkdown}
 
-## Vertical Menu
-
-If there are many items in the navigation menu, a vertical navigation can be used, as all items can be easily reached by scrolling the page. If vertical menus are used, the designer should be aware that people might increase the font size and that individual menu items might be wider than originally intended in the design.
-
-{::nomarkdown}
-<%= sample_start %>
-
-<nav role="navigation" aria-label="Main Navigation" aria-presentation="true" id="verticalnav">
-    <ul>
-        <li><a href="#samplenav">Home</a></li>
-        <li><a href="#samplenav">Shop</a></li>
-        <li><a href="#samplenav">SpaceBears</a></li>
-        <li><a href="#samplenav">MarsCars</a></li>
-        <li><a href="#samplenav">Contact</a></li>
-    </ul>
-</nav>
-
-<style>
-  #verticalnav {
-      display:table;
-  }
-  #verticalnav ul {
-      margin: 0;
-      padding: 0;
-      background-color: #036;
-      color: #fff;
-  }
-  #verticalnav li {
-      display:table-row;
-      width: 20%;
-      text-align: left;
-  }
-  #verticalnav a {
-      display: block;
-      padding: .25em .5em;
-      color: #fff;
-      border-bottom: 1px solid;
-      text-decoration: none;
-  }
-  #verticalnav a:hover,
-  #verticalnav a:focus {
-    color: #036;
-    background-color: #fff;
-    text-decoration: underline;
-  }
-</style>
-
-<%= sample_end %>
-{:/nomarkdown}
-
 ## Indicating hover and focus
 
-When the user focuses a menu item or hovers over one using the mouse pointer, the individual menu item should change so users know where the focus is or if they are hovering the right menu item. In the examples in this tutorial, the menu item is inverted and the words are underlined.
+When the user focuses a menu item or hovers over one using the mouse pointer, the individual menu item should change so users know where the focus is or which menu item is hovered. In the examples in this tutorial, the menu item is inverted and the words are underlined.
 
 ## Indicating the current page
 
