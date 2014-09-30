@@ -57,3 +57,7 @@ Simple sitemaps just show an outline view, while more complex sitemaps might als
 ## Search
 
 A search option helps users to find content by entering certain keywords, which is often more efficient than going through the complete navigation and search for pages whose page title vaguely relates to the topic the user has in mind. A search functionality that spell-checks the entered terms and allows synonyms further increases its accessibility.
+
+## Multiple ways to activate functions in applications
+
+In addition to a menubar, similar functions can often be found in other sections of the application as well. For example functions can be activated by clicking icons, using the mouse context menu, or activating a keyboard shortcut.
