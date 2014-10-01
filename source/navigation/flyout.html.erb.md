@@ -939,7 +939,9 @@ Array.prototype.forEach.call(menuItems1, function(el, i){
 
 ## Web application menus
 
-There are some WAI-ARIA roles that are helping assistive technology to interpret menus like the ones found in desktop software. When using the following ARIA attributes, the keyboard interaction should be similar to desktop software as well: the tab key is used to iterate through the top-level items only, the up and down arrows are used to navigate the sub menus. The following roles are used in the example:
+There are some WAI-ARIA roles that are helping assistive technology to interpret menus like the ones found in desktop software. When using the menu WAI-ARIA attributes, the keyboard interaction should be similar to desktop software as well: the tab key is used to iterate through the top-level items only, the up and down arrows are used to navigate the sub menus. This keyboard behavior doesn’t come with the WAI-ARIA attributes, but needs to be added using scripting.
+
+In addition to the `aria-expanded` and `aria-haspopup` attributes, the following roles are used in the example:
 
 * **`aria-menubar`:** Represents a usually horizontal menu bar.
 * **`aria-menu`:** Represents a set of links or commands in a menu bar, it is used for the fly-out menus.
@@ -949,42 +951,44 @@ There are some WAI-ARIA roles that are helping assistive technology to interpret
 {::nomarkdown}
 <%= sample_start('show-overflow2') %>
 
-<ul role="menubar" aria-label="functions" id="appmenu">
-    <li role="menuitem">
-      File
-      <ul role="menu">
-            <li role="menuitem">New</li>
-            <li role="menuitem">Open</li>
-            <li role="menuitem">Print</li>
-        </ul>
-    </li>
-    <li role="menuitem">
-      Edit
-      <ul role="menu">
-            <li role="menuitem">Undo</li>
-            <li role="menuitem">Redo</li>
-            <li role="menuitem">Cut</li>
-            <li role="menuitem">Copy</li>
-            <li role="menuitem">Paste</li>
-        </ul>
-    </li>
-    <li role="menuitem">
-        Format
+<div role="menubar">
+  <ul role="menu" aria-label="functions" id="appmenu">
+      <li role="menuitem" aria-haspopup="true">
+        File
         <ul role="menu">
-            <li role="menuitem">Font</li>
-            <li role="menuitem">Text</li>
+              <li role="menuitem">New</li>
+              <li role="menuitem">Open</li>
+              <li role="menuitem">Print</li>
+          </ul>
+      </li>
+      <li role="menuitem" aria-haspopup="true">
+        Edit
+        <ul role="menu">
+              <li role="menuitem">Undo</li>
+              <li role="menuitem">Redo</li>
+              <li role="menuitem">Cut</li>
+              <li role="menuitem">Copy</li>
+              <li role="menuitem">Paste</li>
+          </ul>
+      </li>
+      <li role="menuitem" aria-haspopup="true">
+          Format
+          <ul role="menu">
+              <li role="menuitem">Font</li>
+              <li role="menuitem">Text</li>
+          </ul>
+      </li>
+      <li role="menuitem" aria-haspopup="true">
+        View
+        <ul role="menu">
+          <li role="menuitem">100%</li>
+          <li role="menuitem">Zoom In</li>
+          <li role="menuitem">Zoom Out</li>
         </ul>
-    </li>
-    <li role="menuitem">
-      View
-      <ul role="menu">
-        <li role="menuitem">100%</li>
-        <li role="menuitem">Zoom In</li>
-        <li role="menuitem">Zoom Out</li>
-      </ul>
-    </li>
-    <li role="menuitem">Help</li>
-</ul>
+      </li>
+      <li role="menuitem">Help</li>
+  </ul>
+</div>
 
 <style>
 .show-overflow2 {
@@ -1055,7 +1059,6 @@ There are some WAI-ARIA roles that are helping assistive technology to interpret
 <script>
 var appsMenuItems = document.querySelectorAll('#appmenu > li');
 var subMenuItems = document.querySelectorAll('#appmenu > li li');
-var AppTimer1, AppTimer2;
 var keys = {
   tab:    9,
   enter:  13,
@@ -1072,7 +1075,7 @@ var gotoIndex = function(idx) {
   if (idx == appsMenuItems.length) {
     idx = 0;
   } else if (idx < 0) {
-    idx = appsMenuItems.length;
+    idx = appsMenuItems.length - 1;
   }
   appsMenuItems[idx].focus();
   currentIndex = idx;
@@ -1083,9 +1086,8 @@ var gotoSubIndex = function (menu, idx) {
   if (idx == items.length) {
     idx = 0;
   } else if (idx < 0) {
-    idx = items.length;
+    idx = items.length - 1;
   }
-  console.log(items[idx].innerHTML);
   items[idx].focus();
   subIndex = idx;
 }
@@ -1115,7 +1117,6 @@ Array.prototype.forEach.call(appsMenuItems, function(el, i){
       return false;
     });
     el.addEventListener("keydown", function(event) {
-      console.log(event);
       switch (event.keyCode) {
         case keys.right:
           gotoIndex(currentIndex + 1);
@@ -1136,6 +1137,12 @@ Array.prototype.forEach.call(appsMenuItems, function(el, i){
           subindex = 0;
           gotoSubIndex(this.querySelector('ul'), 0);
           break;
+        case keys.up:
+          this.click();
+          var submenu = this.querySelector('ul');
+          subindex = submenu.querySelectorAll('li').length - 1;
+          gotoSubIndex(submenu, subindex);
+          break;
         case keys.esc:
           document.querySelector('a[href="#related"]').focus();
       }
@@ -1154,6 +1161,12 @@ Array.prototype.forEach.call(subMenuItems, function(el, i){
             gotoIndex(currentIndex + 1);
           }
           break;
+        case keys.right:
+          gotoIndex(currentIndex + 1);
+          break;
+        case keys.left:
+          gotoIndex(currentIndex - 1);
+          break;
         case keys.esc:
           gotoIndex(currentIndex);
           break;
@@ -1163,7 +1176,17 @@ Array.prototype.forEach.call(subMenuItems, function(el, i){
         case keys.up:
           gotoSubIndex(this.parentNode, subIndex - 1);
           break;
+        case keys.enter:
+        case keys.space:
+          alert(this.innerText);
+          break;
       }
+      event.preventDefault();
+      event.stopPropagation();
+      return false;
+    });
+  el.addEventListener("click", function(event) {
+      alert(this.innerHTML);
       event.preventDefault();
       event.stopPropagation();
       return false;
@@ -1173,3 +1196,314 @@ Array.prototype.forEach.call(subMenuItems, function(el, i){
 
 <%= sample_end %>
 {:/nomarkdown}
+
+The markup has no links, it is a bare nested list with some WAI-ARIA roles. As we will add keyboard and mouse interaction on our own, this is enough.
+
+{::nomarkdown}
+<%= code_start %>
+{:/nomarkdown}
+
+~~~html
+<div role="menubar">
+  <ul role="menu" aria-label="functions" id="appmenu">
+    <li role="menuitem" aria-haspopup="true">
+      File
+      <ul role="menu">
+        <li role="menuitem">New</li>
+        <li role="menuitem">Open</li>
+        <li role="menuitem">Print</li>
+      </ul>
+    </li>
+    …
+  </ul>
+</div>
+~~~
+
+{::nomarkdown}
+<%= code_end %>
+{:/nomarkdown}
+
+First, we collect all top-level menu items in a variable (`appsMenuItems`) as well as all submenu items (`subMenuItems`). An object is defined with the key codes of the keys that need to be handled. This makes the code much more readable. Two variables keep track of the focus in top-level items (`currentIndex`) and in submenus (`subIndex`).
+
+{::nomarkdown}
+<%= code_start %>
+{:/nomarkdown}
+
+~~~js
+var appsMenuItems = document.querySelectorAll('#appmenu > li');
+var subMenuItems = document.querySelectorAll('#appmenu > li li');
+var keys = {
+  tab:     9,
+  enter:  13,
+  esc:    27,
+  space:  32,
+  left:   37,
+  up:     38,
+  right:  39,
+  down:   40
+};
+var currentIndex, subIndex;
+~~~
+
+{::nomarkdown}
+<%= code_end %>
+{:/nomarkdown}
+
+To make the menu work for keyboard users, a `tabindex` attribute with the value `-1` is added to the menu items. This enables scripts to set the focus on the element. The first menu item (“File” in this example) is assigned a `tabindex` value of `0` which adds it to the tab order and lets the user access the menu. The `currentIndex` variable is initialized as soon as this first item gets focus.
+
+{::nomarkdown}
+<%= code_start %>
+{:/nomarkdown}
+
+~~~js
+Array.prototype.forEach.call(appsMenuItems, function(el, i){
+    if (0 == i) {
+      el.setAttribute('tabindex', '0');
+      el.addEventListener("focus", function() {
+        currentIndex = 0;
+      });
+    } else {
+      el.setAttribute('tabindex', '-1');
+    }
+});
+
+Array.prototype.forEach.call(subMenuItems, function(el, i){
+  el.setAttribute('tabindex', '-1');
+});
+~~~
+
+{::nomarkdown}
+<%= code_end %>
+{:/nomarkdown}
+
+All top-level menu items close open submenus when they receive focus and reset the `subIndex` variable. When individual items are clicked, the visibility of the submenu is toggled by changing the `aria-expanded` value. If a key is pressed, the appropriate action is carried out.
+
+<table>
+  <caption>Key mapping for top-level menu items</caption>
+  <thead>
+    <tr>
+      <th scope="col">Key</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row"><kbd>tab ⇥</kbd></th>
+      <td rowspan="2">Select the next top-level menu item</td>
+    </tr>
+    <tr>
+      <th scope="row"><kbd>right &rarr;</kbd></th>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <th scope="row"><kbd>shift ⇧</kbd> + <kbd>tab ⇥</kbd></th>
+      <td rowspan="2">Select the previous top-level menu item</td>
+    </tr>
+    <tr>
+      <th scope="row"><kbd>left &larr;</kbd></th>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <th scope="row"><kbd>return/enter &crarr;</kbd></th>
+      <td rowspan="3">Open the submenu, select first submenu item.</td>
+    </tr>
+    <tr>
+      <th scope="row"><kbd>space</kbd></th>
+    </tr>
+    <tr>
+      <th scope="row"><kbd>down &darr;</kbd></th>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <th scope="row"><kbd>up &uarr;</kbd></th>
+      <td>Open the submenu, select last submenu item.</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <th scope="row"><kbd>esc</kbd></th>
+      <td>Leave the menu</td>
+    </tr>
+  </tbody>
+</table>
+
+{::nomarkdown}
+<%= code_start %>
+{:/nomarkdown}
+
+~~~js
+Array.prototype.forEach.call(appsMenuItems, function(el, i){
+  /* code above */
+
+  el.addEventListener("focus", function() {
+    subIndex = 0;
+    Array.prototype.forEach.call(appsMenuItems, function(el, i){
+      el.setAttribute('aria-expanded', "false");
+    });
+  });
+
+  el.addEventListener("click",  function(event){
+    if (this.getAttribute('aria-expanded') == 'false'
+        || this.getAttribute('aria-expanded') ==  null) {
+      this.setAttribute('aria-expanded', "true");
+    } else {
+      this.setAttribute('aria-expanded', "false");
+    }
+    event.preventDefault();
+    return false;
+  });
+
+  el.addEventListener("keydown", function(event) {
+    switch (event.keyCode) {
+      case keys.right:
+        gotoIndex(currentIndex + 1);
+        break;
+      case keys.left:
+        gotoIndex(currentIndex - 1);
+        break;
+      case keys.tab:
+        if (event.shiftKey) {
+          gotoIndex(currentIndex - 1);
+        } else {
+          gotoIndex(currentIndex + 1);
+        }
+        break;
+      case keys.enter:
+      case keys.space:
+      case keys.down:
+        this.click();
+        subindex = 0;
+        gotoSubIndex(this.querySelector('ul'), 0);
+        break;
+      case keys.up:
+        this.click();
+        var submenu = this.querySelector('ul');
+        subindex = submenu.querySelectorAll('li').length - 1;
+        gotoSubIndex(submenu, subindex);
+        break;
+      case keys.esc:
+        document.querySelector('a[href="#related"]').focus();
+    }
+    event.preventDefault();
+  });
+});
+~~~
+
+{::nomarkdown}
+<%= code_end %>
+{:/nomarkdown}
+
+Submenu items do behave differently when interacting with them on the keyboard, see the following table for details:
+
+<table>
+  <caption>Key mapping for submenu items</caption>
+  <thead>
+    <tr>
+      <th scope="col">Key</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row"><kbd>tab ⇥</kbd></th>
+      <td rowspan="2">Close the submenu, select the next top-level menu item</td>
+    </tr>
+    <tr>
+      <th scope="row"><kbd>right &rarr;</kbd></th>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <th scope="row"><kbd>shift ⇧</kbd> + <kbd>tab ⇥</kbd></th>
+      <td rowspan="2">Close the submenu, select the previous top-level menu item</td>
+    </tr>
+    <tr>
+      <th scope="row"><kbd>left &larr;</kbd></th>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <th scope="row"><kbd>return/enter &crarr;</kbd></th>
+      <td rowspan="2">Carry out function of this item. (In this example: bring up a dialog box with the text of the chosen menu item.)</td>
+    </tr>
+    <tr>
+      <th scope="row"><kbd>space</kbd></th>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <th scope="row"><kbd>down &darr;</kbd></th>
+      <td>Select next submenu item</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <th scope="row"><kbd>up &uarr;</kbd></th>
+      <td>Select previous submenu item</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <th scope="row"><kbd>esc</kbd></th>
+      <td>Close the submenu, select the current top-level menu item</td>
+    </tr>
+  </tbody>
+</table>
+
+{::nomarkdown}
+<%= code_start %>
+{:/nomarkdown}
+
+~~~js
+Array.prototype.forEach.call(subMenuItems, function(el, i){
+  el.setAttribute('tabindex', '-1');
+  el.addEventListener("keydown", function(event) {
+      switch (event.keyCode) {
+        case keys.tab:
+          if (event.shiftKey) {
+            gotoIndex(currentIndex - 1);
+          } else {
+            gotoIndex(currentIndex + 1);
+          }
+          break;
+        case keys.right:
+          gotoIndex(currentIndex + 1);
+          break;
+        case keys.left:
+          gotoIndex(currentIndex - 1);
+          break;
+        case keys.esc:
+          gotoIndex(currentIndex);
+          break;
+        case keys.down:
+          gotoSubIndex(this.parentNode, subIndex + 1);
+          break;
+        case keys.up:
+          gotoSubIndex(this.parentNode, subIndex - 1);
+          break;
+        case keys.space:
+        case keys.enter:
+          alert(this.innerText);
+          break;
+      }
+      event.preventDefault();
+      event.stopPropagation();
+      return false;
+    });
+  el.addEventListener("click", function(event) {
+      alert(this.innerHTML);
+      event.preventDefault();
+      event.stopPropagation();
+      return false;
+    });
+});
+~~~
+
+{::nomarkdown}
+<%= code_end %>
+{:/nomarkdown}
+
+[See the complete example code.](/navigation/examples/appmenu.html)
