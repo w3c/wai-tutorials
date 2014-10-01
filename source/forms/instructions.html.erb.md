@@ -184,7 +184,7 @@ Another approach is to use the WAI-ARIA `aria-describedby` attribute to associat
 ### Placeholder text
 {:.newex}
 
-Placeholder text provides instructions or an example of the required data format inside form fields that have not yet been edited by the user. Placeholder text is usually displayed with lower color contrast than text provided by users, and it disappears from form fields when users start entering text.
+Placeholder text provides instructions or an example of the required data format inside form fields that have not yet been edited by the user. Placeholder text is usually displayed with lower color contrast than text provided by users, and it disappears from form fields when users start entering text which can make it more difficult for users to check their responses prior to submitting the form.
 
 While placeholder text provides important guidance for many users, **placeholder text is not a replacement for labels**. Assistive technologies, such as screen readers, do not treat placeholder text as labels. Moreover, placeholder text is currently not broadly supported across assistive technologies.
 
