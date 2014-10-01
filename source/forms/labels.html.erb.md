@@ -133,7 +133,7 @@ A label for a form control helps everyone better understand its purpose. In some
 ### Single form control
 {:.ex}
 
-In the example below, the search field is positioned directly beside the search button. The purpose of the form field is evident from the context in most situations. A label is provided to identify the form element within the code, but is visually hidden to avoid redundancy for those who don't need it.
+In the example below, the search field is positioned directly beside the search button. The purpose of the form field is evident from the context in most situations.
 
 {::nomarkdown}
 <%= sample_start %>
@@ -149,6 +149,11 @@ In the example below, the search field is positioned directly beside the search 
 <%= sample_end %>
 {:/nomarkdown}
 
+#### Hiding the label element
+{:.ap}
+
+A `<label>` element is provided to identify the form element within the code, but is visually hidden to avoid redundancy for those who don't need it.
+
 {::nomarkdown}
 <%= code_start %>
 {:/nomarkdown}
@@ -163,10 +168,31 @@ In the example below, the search field is positioned directly beside the search 
 <%= code_end %>
 {:/nomarkdown}
 
+#### Using aria-label
+{:.ap}
+
+`aria-label` provides the label to assistive technology.
+
+{::nomarkdown}
+<%= code_start %>
+{:/nomarkdown}
+
+~~~ html
+<input type="text" name="search" id="search" aria-label="Search">
+<button type="submit">Search</button>
+~~~
+
+{::nomarkdown}
+<%= code_end %>
+{:/nomarkdown}
+
 ### Set of form controls
 {:.ex}
 
 In the following example, the user is asked to provide date of birth. There are three form controls, one of which is a pull-down menu with the text “January” visible. The other two form controls are text fields placed just before and after the pull-down menu. They have different sizes that match the 2-digit day of the month and 4-digit year. The controls also use placeholder text to further indicate the purpose of these two fields. A single visible label "Date of birth" is sufficient to explain this related set of form controls in most situations.
+
+#### Hiding the label element
+{:.ap}
 
 To make the code more robust and address other situations, such as displaying the form controls individually on a mobile device, hidden labels have been provided for each form element. They are now identified as “Day”, “Month”, and “Year” within the code.
 
@@ -232,6 +258,33 @@ To make the code more robust and address other situations, such as displaying th
 
 {::nomarkdown}
 <%= notes_end %>
+{:/nomarkdown}
+
+#### Using aria-label
+{:.ap}
+
+By using `aria-label`, the code can be simplified with the same outcome as above all users. It is however less flexible if the labels need to be shown or hidden depending on the screen size, for example.
+
+{::nomarkdown}
+<%= code_start %>
+{:/nomarkdown}
+
+~~~ html
+<label for="day">Date of birth: </label>
+
+<input type="text" id="day" maxlength="2" placeholder="01" aria-label="Day">
+
+<select name="month" id="month" aria-label="Month">
+  <option value="01">January</option>
+  <option value="02">Febuary</option>
+  […]
+</select>
+
+<input type="text" id="year" maxlength="4" placeholder="1970"  aria-label="Year">
+~~~
+
+{::nomarkdown}
+<%= code_end %>
 {:/nomarkdown}
 
 ### Note on hiding elements
