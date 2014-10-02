@@ -6,7 +6,7 @@ wcag_success_criteria:
 wcag_techniques:
 ---
 
-Where possible, use stylized form elements to provide custom controls. For example, a social media "share button" and "star rating" widget can be built using standard form controls. Using such progressive enhancement techniques helps keep these widgets usable when they are rendered differently, including by some assistive technologies.
+When thinking about individual controls, the implementation can often be simplified by using already existing elements. Try to reuse HTML elements that do a subset of the functionality that the final control is intended to cover, and build from there. The following two examples show how to approach building controls this way.
 
 ## A Share Button
 {:.ex}
