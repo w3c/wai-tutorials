@@ -339,7 +339,6 @@ document.getElementById('ex3').addEventListener('submit', function(event){
   }
   var exp = document.getElementById('expire4');
   if (exp.value.match(new RegExp('[0-9]{2}\/[0-9]{4}'))) {
-    console.log(exp);
     setSuccess(exp);
   } else {
     setError(exp, 'Use the format MM/YYYY.');
@@ -614,7 +613,6 @@ In the example below, the user is expected to provide an expiry date. The input 
 inputs = document.querySelectorAll('#ex4 input');
 for (var i = inputs.length - 1; i >= 0; i--) {
   inputs[i].addEventListener('blur', function(event){
-    console.log('ohai' + this.id);
     function setError(el, msg) {
       el.parentNode.querySelector('strong').innerHTML = "Error:";
       el.parentNode.className='error';
@@ -627,7 +625,6 @@ for (var i = inputs.length - 1; i >= 0; i--) {
     }
     if (this.id == 'expire5') {
       if (this.value.match(new RegExp('[0-9]{2}\/[0-9]{4}'))) {
-        console.log(this);
         setSuccess(this);
       } else {
         setError(this, 'Use the format MM/YYYY.');
