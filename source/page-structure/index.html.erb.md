@@ -27,4 +27,5 @@ The content of the page is the reason why people are visiting websites in the fi
 * **People using screen readers** can skip to the content directly and navigate to sections that are important to them. Content is read out in the way it is intended.
 * **People using distraction-free reading plugins** will receive better results if the main content is easily to determine.
 * **People using certain browser plugins** can use landmark roles to jump to specific sections on a page.
+* **Keyboard users** can save the time and trouble to navigate through a number of links using the tab key.
 * **Search engines** can use the data to make better predictions on the real content of a web page.
