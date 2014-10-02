@@ -1,12 +1,15 @@
 ---
-title: ◊ In-page Orientation
+title: ◊ In-page Navigation
 status: editors-draft
-order: 4
-type: tips
+order: 6
 ---
 
+* Anker
 * Landmarks
 * Sections
 * Skip links
 * Webkit JavaScript Polyfill
 * :target
+* Search Highlight <mark>
+* Details/Summary
+* TOC

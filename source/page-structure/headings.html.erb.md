@@ -2,7 +2,6 @@
 title: Headings
 status: editors-draft
 order: 3
-type: tips
 wcag_success_criteria:
   - 1.3.1
   - 2.4.1
