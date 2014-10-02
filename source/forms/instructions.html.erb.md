@@ -18,14 +18,14 @@ wcag_techniques:
 
 Provide instructions to help users understand how to complete the form and individual form controls. This includes indicating any required and optional input, data formats, and other important aspects of the form.
 
-**Important:** Screen readers often switch to “Forms Mode” when they are processing content within a `<form>` element. In this mode they usually only read aloud form elements such as `<input>`, `<select>`, `<textarea>`, `<legend>`, and `<label>`. It is critical to include form instructions in ways so that they will be read aloud.
+**Important:** Screen readers often switch to “Forms Mode” when they are processing content within a `<form>` element. In this mode they usually only read aloud form elements such as `<input>`, `<select>`, `<textarea>`, `<legend>`, and `<label>`. It is critical to include form instructions in ways that they will be read aloud.
 
 ## Overall instructions
 {:.newex}
 
 Where relevant, provide overall instructions that apply to the entire form. For example, indicate any required and optional input, allowable data formats, and timing limitations. Provide such instructions before the `<form>` element to ensure that it is read aloud by screen readers before they switch to “Forms Mode”.
 
-In the example below, form instructions indicate how required input is highlighted, the expected format for key data fields of the particular form, and how to get additional help for each input.
+In the example below, form instructions indicate how required fields are marked, the expected format for key data fields, and where to find additional help for each input.
 
 {::nomarkdown}
 <%= sample_start %>
@@ -43,12 +43,12 @@ In the example below, form instructions indicate how required input is highlight
 ## In-line instructions
 {:.newex}
 
-In addition to the overall instructions, it is also important to provide relevant instructions within the labels of the form controls. For example, it's generally best to indicate required input and data formats in the text of the labels.
+In addition to the overall instructions, it is also important to provide relevant instructions within the labels of the form controls. For example, indicate required input fields and data formats in the text of the labels.
 
 ### Providing instructions within labels
 {:.newex}
 
-For simple use cases, providing instructions within the labels may be sufficient. While this approach tends to impact styling options, it is most reliable across different web browsers and assistive technologies.
+For simple use cases, providing instructions within labels may be sufficient. This is most reliable approach across different web browsers and assistive technologies, although may require some additional thought to support styling needs.
 
 In the example below, the required format for the “Expiry Date” is indicated by “MM/YYYY” within the same label:
 
@@ -79,7 +79,7 @@ In the example below, the required format for the “Expiry Date” is indicated
 ### Providing instructions outside labels
 {:.newex}
 
-Providing instructions outside labels allows more flexible positioning and design but sometimes it can be missed. The two approaches outlined below can be combined to achieve the most impact.
+Providing instructions outside labels allows more flexible positioning and design but sometimes it can be missed. The two approaches outlined below can be combined to reduce this risk.
 
 #### Informing users
 {:.ap}
@@ -118,7 +118,7 @@ Content outside form elements may be missed by screen readers that are in “For
 <%= notes_start %>
 {:/nomarkdown}
 
-**Note:** A caveat of this approach is that users receive the instructions after the form element. This is usually  not ideal, especially when the form controls are large, or when they are displayed on mobile devices and using screen magnification. In such cases these instructions may not be easy to find.
+**Note:** A caveat of this approach is that users receive the instructions after the form element. This is usually not ideal, especially when the form controls are large, when they are displayed on mobile devices, or when using screen magnification. In such cases these instructions may not be easy to find.
 
 {::nomarkdown}
 <%= notes_end %>
@@ -127,7 +127,7 @@ Content outside form elements may be missed by screen readers that are in “For
 #### Using WAI-ARIA
 {:.ap}
 
-Another approach is to use the WAI-ARIA `aria-describedby` attribute to associate the instructions with form elements. Currently this approach may not be fully supported by all web browsers and assistive technologies.
+Another approach is to use the WAI-ARIA `aria-describedby` attribute to associate the instructions with form elements. At the time of writing, this approach may not be fully supported by all web browsers and assistive technologies.
 
 {::nomarkdown}
 <%= sample_start %>
@@ -175,7 +175,7 @@ Another approach is to use the WAI-ARIA `aria-describedby` attribute to associat
 <%= notes_start %>
 {:/nomarkdown}
 
-**Note:** A caveat of this approach is that it is mostly interpreted by screen readers, so that non-screen reader users may not get the same benefit. Until such associations are more broadly interpreted it is often useful to position the instructions directly after the form controls.
+**Note:** A caveat of this approach is that it is mostly interpreted by screen readers, so that non-screen reader users may not gain the same benefit. Until such associations are more broadly interpreted it is often useful to position the instructions directly after the form controls.
 
 {::nomarkdown}
 <%= notes_end %>
@@ -184,11 +184,11 @@ Another approach is to use the WAI-ARIA `aria-describedby` attribute to associat
 ### Placeholder text
 {:.newex}
 
-Placeholder text provides instructions or an example of the required data format inside form fields that have not yet been edited by the user. Placeholder text is usually displayed with lower color contrast than text provided by users, and it disappears from form fields when users start entering text which can make it more difficult for users to check their responses prior to submitting the form.
+Placeholder text provides instructions or an example of the required data format inside form fields that have not yet been edited by the user. Placeholder text is usually displayed with lower color contrast than text provided by users, and it disappears from form fields when users start entering text. If the placeholder text contains instructional information or examples, having it disappear can make it more difficult for users to check their responses prior to submitting the form.
 
-While placeholder text provides important guidance for many users, **placeholder text is not a replacement for labels**. Assistive technologies, such as screen readers, do not treat placeholder text as labels. Moreover, placeholder text is currently not broadly supported across assistive technologies.
+While placeholder text provides important guidance for many users, **placeholder text is not a replacement for labels**. Assistive technologies, such as screen readers, do not treat placeholder text as labels. Moreover, at the time of writing, placeholder text is not broadly supported across assistive technologies.
 
-Refer to the techniques described in [Hidden labels](labels.html#hidden) in cases where you want to avoid redudancy of (visible) labels and placeholder text.
+Refer to the techniques described in [Hidden labels](labels.html#hidden) in cases where you want to avoid redundancy of (visible) labels and placeholder text.
 
 {::nomarkdown}
 <%= sample_start %>
@@ -225,7 +225,7 @@ Refer to the techniques described in [Hidden labels](labels.html#hidden) in case
 <%= notes_start %>
 {:/nomarkdown}
 
-**Note:** To provide more clarity, ensure that the style of placeholder text is distinguishable from regular text. This is commonly done by reducing the color contrast of placeholder text. However, if you do reduce the contrast, ensure that the placeholder text also meets the [minimum color contrast requirement of WCAG 2.0](http://www.w3.org/WAI/WCAG20/quickref/#qr-visual-audio-contrast-contrast).
+**Note:** To provide more clarity, ensure that the style of placeholder text is distinguishable from regular text. This is commonly done by reducing the color contrast of placeholder text. However, if you do reduce the contrast, ensure that the placeholder text also meets the [minimum color contrast requirement of WCAG 2.0](/WAI/WCAG20/quickref/#qr-visual-audio-contrast-contrast).
 
 {::nomarkdown}
 <%= notes_end %>
