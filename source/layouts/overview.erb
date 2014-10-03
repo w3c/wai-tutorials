@@ -1,6 +1,6 @@
 <%= partial "layouts/header" %>
-<div class="content <%= current_page.data.status %>">
-
+<main role="main" class="content <%= current_page.data.status %>">
+  <article role="article">
   <header class="tutorial-heading">
     <div class="breadcrumb">
       <p>
@@ -30,7 +30,8 @@
 
     <%= partial "layouts/contribute" %>
   </div>
-</div>
+  </article>
+</main>
 <div class="navigation" aria-label="Navigation" id="nav">
   <%= partial 'layouts/topic_navigation' %>
 </div>
