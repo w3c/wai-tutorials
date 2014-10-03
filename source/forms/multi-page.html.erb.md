@@ -1,5 +1,5 @@
 ---
-title: Multi-Step Forms
+title: Multi-Page Forms
 status: draft
 order: 7
 wcag_success_criteria:
@@ -19,8 +19,8 @@ Where possible, divide long forms into multiple smaller forms that constitute a 
 
 - Repeat [overall instructions](instructions.html#overall-instructions) on every page.
 - Split the form up according to the topic of the form fields on a page. For example, in an online shop, shipping and payment information are on separate pages.
-- Make is easy to skip (pages of) optional form fields. If a page is optional it makes sense to mention this information in the main heading of the page as well.
-- If possible, don’t give users a time limit to fill out the form. If you do need a time limit, provide a checkbox that allows the user to adjust or extend the time limit.
+- Make is easy to skip optional stages. If a page is optional it makes sense to mention this information in the main heading of the page as well.
+- If possible, don’t set a time limit to fill out the form. If a time limit is required, provide a feature that allows the user to adjust or extend the time limit.
 
 ## Indicating progress
 {:.newex}
@@ -35,7 +35,7 @@ The `<title>` element is the first item read by many people, such as screen read
 {::nomarkdown}
 <%= sample_start %>
 
-Step 2/4: Shipping Address – Complete Purchase – Galactic Teddy Bears Shop
+Step 2 of 4: Shipping Address – Complete Purchase – Galactic Teddy Bears Shop
 
 <%= sample_end %>
 {:/nomarkdown}
@@ -45,7 +45,7 @@ Step 2/4: Shipping Address – Complete Purchase – Galactic Teddy Bears Shop
 {:/nomarkdown}
 
 ~~~ html
-<title>Step 2/4: Shipping Address – Complete Purchase – Galactic Teddy Bears Shop</title>
+<title>Step 2 of 4: Shipping Address – Complete Purchase – Galactic Teddy Bears Shop</title>
 ~~~
 
 {::nomarkdown}
@@ -55,12 +55,12 @@ Step 2/4: Shipping Address – Complete Purchase – Galactic Teddy Bears Shop
 ### Using the main heading
 {:.ap}
 
-Using the main heading to inform users is a good way to provide the same information for people scanning the page visually, as the main heading usually is very prominent in the document.
+Using the main heading to inform users is a good way to provide the same information for people scanning the page visually, as the main heading usually is prominent in the document.
 
 {::nomarkdown}
 <%= sample_start %>
 
-<h1 role="presentation">Shipping Address (Step 2/4)</h1>
+<h1 role="presentation">Shipping Address (Step 2 of 4)</h1>
 
 <%= sample_end %>
 {:/nomarkdown}
@@ -70,7 +70,7 @@ Using the main heading to inform users is a good way to provide the same informa
 {:/nomarkdown}
 
 ~~~ html
-<h1>Shipping Address (Step 2/4)</h1>
+<h1>Shipping Address (Step 2 of 4)</h1>
 ~~~
 
 {::nomarkdown}
@@ -85,11 +85,11 @@ HTML5 provides a `progress` element that can be used to inform users about the p
 {::nomarkdown}
 <%= sample_start %>
 
-Survey <progress max="7" value="1">(Step 2 of approx. 7)</progress><br>
+Survey <progress max="7" value="1">(Step 2 of circa 7)</progress><br>
 
-Survey <progress max="7" value="3">(Step 3 of approx. 7)</progress><br>
+Survey <progress max="7" value="3">(Step 3 of circa 7)</progress><br>
 
-Survey <progress max="7" value="6">(Step 6 of approx. 7)</progress><br>
+Survey <progress max="7" value="6">(Step 6 of circa 7)</progress><br>
 
 Survey <progress max="7" value="7">(Finished)</progress>
 
@@ -102,11 +102,11 @@ Survey <progress max="7" value="7">(Finished)</progress>
 
 ~~~ html
 
-Survey <progress max="7" value="1">(Step 2 of approx. 7)</progress><br>
+Survey <progress max="7" value="1">(Step 2 of circa 7)</progress><br>
 
-Survey <progress max="7" value="3">(Step 3 of approx. 7)</progress><br>
+Survey <progress max="7" value="3">(Step 3 of circa 7)</progress><br>
 
-Survey <progress max="7" value="6">(Step 6 of approx. 7)</progress><br>
+Survey <progress max="7" value="6">(Step 6 of circa 7)</progress><br>
 
 Survey <progress max="7" value="7">(Finished)</progress>
 ~~~
@@ -118,7 +118,7 @@ Survey <progress max="7" value="7">(Finished)</progress>
 ### Using step-by-step indicator
 {:.ap}
 
-If a form has a known number of steps to be completed, a step-by-step indicator can help users orient themselves. In the example below, we use an (ordered) list with a list item for every step. Visually hidden text is used to indicate the current and completed steps. If possible, provide a link to steps already completed, so the user can review them. Data that was already entered in the current step should be saved in this case.
+If a form has a known number of steps to be completed, a step-by-step indicator can help users orient themselves. In the example below, we use an ordered list with a list item for every step. Visually hidden text is used to indicate the current and completed steps. If possible, provide a link to steps already completed, so the user can review them. In this case, any data already entered in the current step should be saved.
 
 {::nomarkdown}
 <%= sample_start %>
