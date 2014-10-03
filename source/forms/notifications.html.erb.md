@@ -10,9 +10,9 @@ wcag_techniques:
   - G85
 ---
 
-Provide feedback to users about their form entries. This includes in-line feedback at or near the form controls (typically input fields), and overall feedback that is typically provided after forms are submitted.
+Provide feedback to users on the results of their form submission, whether successful or not. This includes in-line feedback at or near the form controls, and overall feedback that is typically provided after form submission.
 
-Notifications need to be concise and clear. In particular, error messages should be easy to understand and should provide simple indications of how to correct mistakes. Success messages are also important to confirm task completion.
+Notifications need to be concise and clear. In particular, error messages should be easy to understand and should provide simple instructions on how they can be resolved. Success messages are also important to confirm task completion.
 
 ## Overall feedback
 
@@ -46,7 +46,7 @@ A common way to provide feedback is by using the main heading of the web page, u
 <%= notes_start %>
 {:/nomarkdown}
 
-**Note:** The main purpose of the main heading is still to identify the web page that the user is currently on. When the user is sent back to the same web page because of an error, then a simple indication using the word “error” and possibly the number of errors is sufficient.
+**Note:** The main purpose of the main heading is still to identify the web page that the user is currently on. When the user is sent back to the same web page because of an error, then a simple indication using the word “error” and possibly the number of errors is helpful.
 
 {::nomarkdown}
 <%= notes_end %>
@@ -54,7 +54,7 @@ A common way to provide feedback is by using the main heading of the web page, u
 
 ###  Using the page title
 
-In addition to using the main heading it is often useful to also use the `<title>` element of the web page to indicate successes and errors. In particular screen reader users will receive this feedback immediately when the web page is loaded, especially when the main heading is placed deeper within the content -- for example, after the navigation menus.
+It is often useful to also use the `<title>` element of the web page to indicate successes and errors. In particular screen reader users will receive this feedback immediately when the web page is loaded. This can be helpful when the main heading is located deeper within the content, for example, after the navigation menus.
 
 {::nomarkdown}
 <%= code_start('','Error') %>
@@ -78,12 +78,12 @@ In addition to using the main heading it is often useful to also use the `<title
 
 ###  Using pop-up dialogs
 
-When the web page is not reloaded or when the content does not change after submission, then using pop-up dialogs may be useful to notify users of the status. For example, “save” or “send” functions might not change the content of the web page, but the user still needs to be notified about the status. Sometimes simple clues, such as disabling the “save” button, might be sufficient. In other situations more prominent messaging may be necessary. This includes messages indicating that the system is busy “loading”, “saving”, or carrying out another function.
+When the web page is not reloaded or when the content does not change after submission, using pop-up dialogs may be useful to notify users of the effect of their action. For example, “save” or “send” functions might not change the content of the web page, but the user still needs to be notified about the status. Sometimes simple clues, such as disabling the “save” button, might be sufficient. In other situations more prominent messaging may be necessary. For example, messages indicating that the system is busy “loading”, “saving”, or carrying out another function.
 
-#### Permanent pop-up
+#### Modal pop-up
 {:.ap}
 
-A permenent pop-up requires the user to confirm the message in order to continue using the web page. This approach is useful because it cannot be missed, but it can also be quite obtrusive and disruptive to the task.
+A modal pop-up requires the user to confirm the message in order to continue using the web page. This approach is useful because it cannot be missed, but it can also be quite obtrusive and disruptive to the task.
 
 The example below shows a pop-up that is displayed when the user activates the “save” button. A message is displayed in a dialog box, and the web page is disabled until the user selects “OK”.
 
@@ -126,7 +126,7 @@ document.getElementById('alertconfirm')
 <%= notes_start %>
 {:/nomarkdown}
 
-**Note:** In this example the `alert()` function which uses the standard dialogs of the web browser, including default settings for font-size, colors, and language. After confirming the message in the dialog window, most web browsers will resume the focus back on the “save” button. This functionality would need to be ensured for custom dialog windows.
+**Note:** In this example the `alert()` function uses the standard web browser dialogs, including default settings for font-size, colors, and language. After confirming the message in the dialog window, most web browsers will resume the focus back on the “save” button. This functionality would need to be matched for custom dialog windows.
 
 {::nomarkdown}
 <%= notes_end %>
@@ -135,7 +135,7 @@ document.getElementById('alertconfirm')
 #### Temporary pop-up
 {:.ap}
 
-A temproary pop-up is displayed for a certain period of time before vanishing. This approach is less obtrusive but it can also be missed. In particular, users generally cannot control how long the message is displayed and may not have enough time to read it.
+A temporary pop-up is displayed for a certain period of time before vanishing. This approach is less obtrusive but it can also be missed. In particular, users generally cannot control how long the message is displayed and may not have enough time to read it.
 
 The example below shows a pop-up that is displayed when the user activates the “save” button. A message is displayed prominently in the center of the screen, and does not block the user from continuing to use the content.
 
@@ -216,7 +216,7 @@ The example below shows a pop-up that is displayed when the user activates the �
 
 **Note 1:** In the code for this pop-up, the displayed message is coded using a `<div>` element that has an `aria-live` attribute with the value `assertive`. The contents of this so called “live region” is conveyed to screen readers and other assistive technology. The value “assertive” emphasizes the importance of the message and causes screen readers to interrupt their current task to read aloud this message.
 
-**Note 2:** The elements used for the pop-up window are dynamically added to the web page when the button is activated, and later removed when the fading animation is completed. This is to reduce the amount of unneccessary elements on the web page, for example when the web page is displayed using custom styling.
+**Note 2:** The elements used for the pop-up window are dynamically added to the web page when the button is activated, and later removed when the fading animation is completed. This is to reduce the amount of unnecessary elements on the web page, for example when the web page is displayed using custom styling.
 
 {::nomarkdown}
 <%= notes_end %>
@@ -224,17 +224,17 @@ The example below shows a pop-up that is displayed when the user activates the �
 
 ### Listing errors
 
-When errors occur, it is useful list them at the top of the page, before the form. The list should have a distinctive heading, so that it is easy to identify. Each error listed should:
+When errors occur, it is helpful to list them at the top of the page, before the form. The list should have a distinctive heading, so that it is easy to identify. Each error listed should:
 
 - Reference the label of the corresponding form control, to help the user recognize the control;
 - Provide a concise description of the error in a way that is easy to understand by everyone;
 - Provide an indication of how to correct mistakes, and remind users of any format requirements;
-- Include an in-page link to the corresponding form control to facilitate access for the users.
+- Include an in-page link to the corresponding form control to make access easier for the users.
 
 {::nomarkdown}
 <%= sample_start %>
 
-<h4 role="presentation">2 Errors in this form</h4>
+<h4 role="presentation">There are 2 errors in this form</h4>
 <ul>
   <li>
     <a href="#firstname">
@@ -256,7 +256,7 @@ When errors occur, it is useful list them at the top of the page, before the for
 {:/nomarkdown}
 
 ~~~ html
-<h4>2 Errors in this form</h4>
+<h4>There are 2 errors in this form</h4>
 <ul>
   <li>
     <a href="#firstname">
@@ -280,7 +280,7 @@ When errors occur, it is useful list them at the top of the page, before the for
 
 In addition to overall feedback, more specific feedback at or near the form controls can better help users to use your form. This includes feedback to indicate correctly entered input as well as errors in the input.
 
-Typically a combination of messages and visual cues are used to provide in-line feedback. For example, valid input is often indicated by a checkmark and green borders, while errors are often indicated by an X mark and red borders. In both cases brief message should be provided. Error messages should also provide guidance on how to correct mistakes. The concepts for such error messages are essentially the same as for providing [instructions](instructions.html).
+Typically a combination of messages and visual cues are used to provide in-line feedback. For example, valid input can be indicated by a checkmark and green border, while errors can be indicated by an X mark and red border. Error messages should also provide guidance on how to correct mistakes. The concepts for such error messages are essentially the same as for providing [instructions](instructions.html).
 
 ### After submit
 {:.ap}
@@ -407,7 +407,7 @@ document.getElementById('ex3').addEventListener('submit', function(event){
 ### During typing
 {:.ap}
 
-Providing instant feedback during typing is interactive and can be very helpful. For example, checking the availability of a username in the previous example required the user to resubmit the form -- possibly multiple times. Providing feedback while users are typing allows them to experiment more easily until they find a suitable username. However, client-side scripting is required for such functionality, and not all situations may be suitable for such feedback.
+Instant feedback during typing can be extremely helpful. For example, checking the availability of a username in the previous example required the user to resubmit the form -- possibly multiple times. Providing feedback while users are typing allows them to experiment more easily until they find a suitable username. However, client-side scripting is required for such functionality, and not all situations may be suitable for such feedback.
 
 #### Binary messages
 {:.ex.inap}
@@ -520,7 +520,7 @@ document.getElementById('username').addEventListener('keyup', function(){
 #### Scaled feedback
 {:.ex.inap}
 
-The example below illustrates the multitude of possible types of feedback in addition to success and error messages. In the example, the strength of the password is checked as it is typed by the user. The feedback indicates a scale of how strong the password is. The feedback is indicated using several cues, including color coding, a barometer, and label “Weak”, “Okay”, and “Strong”, as well as the time that would be needed to crack the password.
+The example below illustrates a range of possible types of feedback in addition to success and error messages. In the example, the strength of the password is checked as it is typed by the user. The feedback indicates a scale of how strong the password is. The feedback is indicated using several cues, including color coding, a barometer, and label “Weak”, “Okay”, and “Strong”, as well as the time that would be needed to crack the password.
 
 {::nomarkdown}
 <%= sample_start %>
@@ -589,7 +589,7 @@ document.getElementById('ex2_password').addEventListener('keyup',
 
 In some cases it does not make sense to check input as it is being typed by the user, because it would display error messages most of the time. This is often the case when data needs to be entered in a particular format, such as a date.
 
-In the example below, the user is expected to provide an expiry date. The input is checked when the user leaves the form field. That is, when the focus is removed from the form field and the “blur” event is triggered for the element, for example when the tab key is used to move to the focus to the submit button.
+In the example below, the user is expected to provide an expiry date. The input is checked when the user leaves the form field. That is, when the focus is removed from the form field and the “blur” event is triggered for the element, for example, when the tab key is used to move to the focus to the submit button.
 
 {::nomarkdown}
 <%= sample_start %>
