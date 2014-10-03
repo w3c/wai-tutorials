@@ -1,85 +1,87 @@
 <%= partial "layouts/header" %>
-<div class="content <%= current_page.data.status %>">
-  <header class="tutorial-heading">
-    <nav class="breadcrumb" aria-label="Breadcrumbs">
-      <p>
-        <span class="home"><%= nav_link('Tutorials home', '/index.html', :relative => true) %></span> <span class="icon icon-chevron-right"></span>
-        <span class="other">
-        <% if current_page.parent and ("/" + current_page.parent.path != '/index.html') %>
-          <%= nav_link(current_page.parent.data.tutorial_title, '/' + current_page.parent.path) %> <span class="icon icon-chevron-right"></span>
-        <% end %>
-        <% if current_page.parent and ("/" + current_page.parent.path == '/index.html') %>
-          <%= nav_link(current_page.data.tutorial_title, '/' + current_page.path) %> <span class="icon icon-chevron-right"></span>
-        <% end %>
-          <%= nav_link(current_page.data.title, '/' + current_page.path, :relative => true) %>
-        </span>
-      </p>
-    </nav>
-    <h1>
-      <%= current_page.data.title %>
-    </h1>
-  </header>
+<main role="main" class="content <%= current_page.data.status %>">
+  <article role="article">
+    <header class="tutorial-heading">
+      <nav class="breadcrumb" aria-label="Breadcrumbs" role="navigation">
+        <p>
+          <span class="home"><%= nav_link('Tutorials home', '/index.html', :relative => true) %></span> <span class="icon icon-chevron-right"></span>
+          <span class="other">
+            <% if current_page.parent and ("/" + current_page.parent.path != '/index.html') %>
+              <%= nav_link(current_page.parent.data.tutorial_title, '/' + current_page.parent.path) %> <span class="icon icon-chevron-right"></span>
+            <% end %>
+            <% if current_page.parent and ("/" + current_page.parent.path == '/index.html') %>
+              <%= nav_link(current_page.data.tutorial_title, '/' + current_page.path) %> <span class="icon icon-chevron-right"></span>
+            <% end %>
+            <%= nav_link(current_page.data.title, '/' + current_page.path, :relative => true) %>
+          </span>
+        </p>
+      </nav>
+      <h1>
+        <%= current_page.data.title %>
+      </h1>
+    </header>
 
-  <% if current_page.data.status=="draft" %>
-  <div class="status">
-    <p><strong>Status:</strong> This is an in-progress, unapproved draft.</p>
-  </div>
-  <% end %>
-  <% if current_page.data.status=="editors-draft" %>
-  <div class="status">
-    <p><strong>Status:</strong> This is not ready for detailed review. It is an in-progress, unapproved editor’s draft.</p>
-  </div>
-  <% end %>
-
-
-  <div class="inner">
-
-  <% if false # current_page.data.technologies %>
-    <div class="technologies">
-      <p><strong>Used Technologies:</strong>
-        <% current_page.data.technologies.sort_by! { |x| x.map { |key, value| key} }.each do |x| %>
-          <% x.map{ |key, value| '<span class="tech">'+key+'</span>' }.each do |y| %>
-            <%= y %>
-          <% end%>
-        <% end %>
-      </p>
-    </div>
-  <% end %>
-
-  <% if current_page.data.type == 'intro'  # current_page.data.technologies %>
-  <% technologies = Array.new
-    current_page.children.each do |x|
-      if x.data.technologies
-        x.data.technologies.split(',').each do |y|
-          technologies << y.strip
-        end
-      end
-    end
-    if technologies.length > 0  %>
-    <aside class="technologies">
-      <strong>Technologies covered in this Tutorial:</strong>
-      <div>
-        <% technologies.sort.uniq.each do |z| %>
-          <span class="tech"><%= z %></span>
-        <% end %>
+    <% if current_page.data.status=="draft" %>
+      <div class="status">
+        <p><strong>Status:</strong> This is an in-progress, unapproved draft.</p>
       </div>
-    </aside>
     <% end %>
-  <% end %>
+    <% if current_page.data.status=="editors-draft" %>
+      <div class="status">
+        <p><strong>Status:</strong> This is not ready for detailed review. It is an in-progress, unapproved editor’s draft.</p>
+      </div>
+    <% end %>
 
 
-    <%= yield %>
+    <div class="inner">
+
+      <% if false # current_page.data.technologies %>
+        <div class="technologies">
+          <p><strong>Used Technologies:</strong>
+            <% current_page.data.technologies.sort_by! { |x| x.map { |key, value| key} }.each do |x| %>
+            <% x.map{ |key, value| '<span class="tech">'+key+'</span>' }.each do |y| %>
+            <%= y %>
+            <% end%>
+            <% end %>
+          </p>
+        </div>
+      <% end %>
+
+      <% if current_page.data.type == 'intro'  # current_page.data.technologies %>
+        <% technologies = Array.new
+          current_page.children.each do |x|
+            if x.data.technologies
+              x.data.technologies.split(',').each do |y|
+                technologies << y.strip
+              end
+            end
+          end
+          if technologies.length > 0  %>
+            <aside class="technologies">
+              <strong>Technologies covered in this Tutorial:</strong>
+              <div>
+                <% technologies.sort.uniq.each do |z| %>
+                <span class="tech"><%= z %></span>
+                <% end %>
+              </div>
+            </aside>
+        <% end %>
+      <% end %>
 
 
-<%= partial "layouts/resources" %>
+      <%= yield %>
 
-<%= partial "layouts/prevnext" %>
 
-<%= partial "layouts/contribute" %>
+      <%= partial "layouts/resources" %>
 
-                  </div>
-                </div>
-                <div class="navigation">
+      <%= partial "layouts/prevnext" %>
+
+      <%= partial "layouts/contribute" %>
+
+    </div>
+  </article>
+</main>
+<div class="navigation">
   <nav role="navigation" aria-label="Navigation" id="nav">
     <h2 class="list-heading" id="list-heading-tutorials">
       <% if current_page.data.order == 1 %>
@@ -90,34 +92,34 @@
     </h2>
     <ul aria-labelledby="list-heading-tutorials">
       <% if current_page.data.type == 'intro' %>
-      <% if current_page.data.nav_title %>
+        <% if current_page.data.nav_title %>
           <li<%= ' class="' + current_page.data.type + '"' if current_page.data.type %>><%= nav_link(current_page.data.nav_title, '/' + current_page.path, :relative => true) %></li>
         <% else %>
           <li<%= ' class="' + current_page.data.type + '"' if current_page.data.type %>><%= nav_link(current_page.data.title, '/' + current_page.path, :relative => true) %></li>
         <% end %>
-      <% current_page.children.sort_by { |resource| resource.data.order }.each do |item| %>
-      <% if item.data.nav_title %>
-      <li<%= ' class="' + item.data.type + '"' if item.data.type %>><%= nav_link(item.data.nav_title, '/' + item.path, :relative => true) %></li>
-      <% else %>
-      <li<%= ' class="' + item.data.type + '"' if item.data.type %>><%= nav_link(item.data.title, '/' + item.path, :relative => true) %></li>
-      <% end %>
-      <% end %>
+        <% current_page.children.sort_by { |resource| resource.data.order }.each do |item| %>
+          <% if item.data.nav_title %>
+            <li<%= ' class="' + item.data.type + '"' if item.data.type %>><%= nav_link(item.data.nav_title, '/' + item.path, :relative => true) %></li>
+          <% else %>
+            <li<%= ' class="' + item.data.type + '"' if item.data.type %>><%= nav_link(item.data.title, '/' + item.path, :relative => true) %></li>
+          <% end %>
+        <% end %>
       <% else %>
         <% if current_page.parent.data.nav_title %>
           <li<%= ' class="' + current_page.parent.data.type + '"' if current_page.parent.data.type %>><%= nav_link(current_page.parent.data.nav_title, '/' + current_page.parent.path, :relative => true) %></li>
         <% else %>
           <li<%= ' class="' + current_page.parent.data.type + '"' if current_page.parent.data.type %>><%= nav_link(current_page.parent.data.title, '/' + current_page.parent.path, :relative => true) %></li>
         <% end %>
-      <% current_page.parent.children.sort_by { |resource| resource.data.order }.each do |item| %>
-      <% if item.data.nav_title %>
-      <li<%= ' class="' + item.data.type + '"' if item.data.type %>><%= nav_link(item.data.nav_title, '/' + item.path, :relative => true) %></li>
-      <% else %>
-      <li<%= ' class="' + item.data.type + '"' if item.data.type %>><%= nav_link(item.data.title, '/' + item.path, :relative => true) %></li>
-      <% end %>
-      <% end %>
+        <% current_page.parent.children.sort_by { |resource| resource.data.order }.each do |item| %>
+          <% if item.data.nav_title %>
+            <li<%= ' class="' + item.data.type + '"' if item.data.type %>><%= nav_link(item.data.nav_title, '/' + item.path, :relative => true) %></li>
+          <% else %>
+            <li<%= ' class="' + item.data.type + '"' if item.data.type %>><%= nav_link(item.data.title, '/' + item.path, :relative => true) %></li>
+          <% end %>
+        <% end %>
       <% end %>
     </ul>
     <%= partial 'layouts/topic_navigation' %>
   </nav>
 </div>
-              <%= partial "layouts/footer" %>
+<%= partial "layouts/footer" %>
