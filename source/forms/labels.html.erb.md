@@ -186,10 +186,36 @@ A `<label>` element is provided to identify the form element within the code, bu
 <%= code_end %>
 {:/nomarkdown}
 
+### Note on hiding elements
+
+Screen readers and other assistive technology, as with web browsers, hide elements from their users when they are styled using `display: none;` and `visibility: hidden;`. Use CSS that will display the elements yet make them virtually invisible to hide them visually but keep them active for screen readers and other assistive technology. The CSS code used in the previous examples is provided below:
+
+{::nomarkdown}
+<%= code_start %>
+{:/nomarkdown}
+
+~~~ css
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+~~~
+
+{::nomarkdown}
+<%= code_end %>
+{:/nomarkdown}
+
+
 ### Set of form controls
 {:.ex}
 
-In the following example, the user is asked to provide date of birth. There are three form controls, one of which is a pull-down menu with the text “January” visible. The other two form controls are text fields placed just before and after the pull-down menu. They have different sizes that match the 2-digit day of the month and 4-digit year. The controls also use placeholder text to further indicate the purpose of these two fields. A single visible label "Date of birth" is sufficient to explain this related set of form controls in most situations.
+In the following example, the user is asked to provide date of birth. There are three form controls; a small text field for day of month, a pull-down menu for month, and a slightly larger text field for year. The text controls also use placeholder text to further indicate the purpose of these two fields. A single visible label "Date of birth" is sufficient to explain this related set of form controls in most situations.
 
 #### Hiding the label element
 {:.ap}
@@ -263,7 +289,7 @@ To make the code more robust and address other situations, such as displaying th
 #### Using aria-label
 {:.ap}
 
-By using `aria-label`, the code can be simplified with the same outcome as above all users. It is however less flexible if the labels need to be shown or hidden depending on the screen size, for example.
+The code can be simplified by using `aria-label`, with the same outcome as above. It is however less flexible, for example, if the labels need to be shown or hidden depending on the screen size.
 
 {::nomarkdown}
 <%= code_start %>
@@ -287,35 +313,11 @@ By using `aria-label`, the code can be simplified with the same outcome as above
 <%= code_end %>
 {:/nomarkdown}
 
-### Note on hiding elements
-
-Just like web browsers, screen readers and other assistive technology hide elements from their users when they are styled using `display: none;` and `visibility: hidden;`. Use CSS that will display the elements yet make them virtually invisible to hide them visually but keep them active for screen readers and other assistive technology. The CSS code used in the previous examples is provided below:
-
-{::nomarkdown}
-<%= code_start %>
-{:/nomarkdown}
-
-~~~ css
-.visuallyhidden {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
-}
-~~~
-
-{::nomarkdown}
-<%= code_end %>
-{:/nomarkdown}
 
 ## Using the title attribute
 {:.newex}
 
-The example below uses the `title` attribute of the form element to identify it. This approach is generally less reliable because some screen readers and assistive technology do not interpret the `title` attribute as a replacement for the label element, possibly because the `title` attribute is often used to provide non-essential information.
+The `title` attribute can be used to identify form elements. This approach is generally less reliable and not recommended because some screen readers and assistive technology do not interpret the `title` attribute as a replacement for the label element, possibly because the `title` attribute is often used to provide non-essential information.
 
 {::nomarkdown}
 <%= sample_start %>
