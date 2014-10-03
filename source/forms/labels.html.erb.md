@@ -57,9 +57,9 @@ The most basic way to associate labels with form controls is to provide both the
 ## Associating labels explicitly
 {:.newex}
 
-Use the `for` attribute of the `<label>` element to explicitly associate labels with their form controls. The value of the `for` attribute must match the value of the `id` attribute for the associated form element.
+Use the `for` attribute of the `<label>` element to explicitly associate labels with their form controls. The value of the `for` attribute must exactly match the value of the `id` attribute for the referenced form element.
 
-This approach is more robust. It allows the labels and form controls to be displayed separately, for example on a mobile device when only one of the controls can be displayed at a time. It is also independent of the HTML code structure, which is particularly useful when the label text and form element are not included within the same parent element in the HTML code -- for example, when the form is formatted to look like a table, as in the example below.
+This approach is more robust because it explicitly associates the labels with the form elements within the code. It allows the labels and form controls to be displayed separately, for example on a mobile device when only one of the controls can be displayed at a time. It is also independent of the HTML code structure, which is particularly useful when the label text and form element are not included within the same parent element in the HTML code -- for example, when the form is formatted to look like a table, as in the example below.
 
 {::nomarkdown}
 <%= sample_start %>
@@ -123,14 +123,14 @@ This approach is more robust. It allows the labels and form controls to be displ
 ## Positioning labels
 {:.newex}
 
-In left-to-right languages it is common to visually position labels to the right of radio buttons and checkboxes, and to the left or directly above other form fields. Following this practice increases the predictability and understandability of your form for all users.
+In left-to-right languages it is customary to visually position labels to the right of radio buttons and checkboxes, and to the left or directly above other form fields. Maintaining this practice increases predictability and understandability of your form for all users.
 
 In general, placing labels above the form fields helps reduce horizontal scrolling for people using screen magnification and for mobile device users. However, the usefulness of this approach depends on other design aspects, such as the proximity of other nearby form fields and content, and needs to be assessed individually. The aim should be to maintain a close visual relationship between the label and the form control.
 
 ## Hiding labels
 {:.newex}
 
-A label for a form control helps everyone better understand its purpose. In some cases the purpose may be clear enough from the context when the content is rendered visually. In such cases a label can be hidden visually. It still needs to be provided within the code to support other forms of presentation and interaction, such as for screen reader and speech input users.
+A label for a form control helps everyone better understand its purpose. In some cases the purpose may be clear enough from the context when the content is rendered visually. In such cases a label can be hidden visually though it still needs to be provided within the code to support other forms of presentation and interaction, such as for screen reader and speech input users.
 
 ### Single form control
 {:.ex}
