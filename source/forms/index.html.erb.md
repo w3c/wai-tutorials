@@ -12,7 +12,7 @@ wcag_success_criteria:
 type: intro
 ---
 
-Forms are used to provide functionality in websites and web applications. For example, forms are used for login, registering, commenting, purchasing, and other functionality. This tutorial shows how to create accessible forms, regardless whether they are processed by server-side or client-side scripts, or possibly both.
+Forms are used to provide functionality in websites and web applications. For example, login, registering, commenting, and purchasing. This tutorial shows you how to create accessible forms. The same concepts apply to all forms, whether they are processed client or server-side.
 
 - **[Labeling Controls](labels.html):** Use the `<label>` element, and, in rare cases, the `title` attribute, to indentify each form control.
 
@@ -22,9 +22,9 @@ Forms are used to provide functionality in websites and web applications. For ex
 
 - **[Validating Input](validation.html):** Validate input provided by the user, and provide options to undo changes and confirm data entry.
 
-- **[User Notifications](notifications.html):** Notify users about successful task completion, any errors, and provide instructions to correct mistakes.
+- **[User Notifications](notifications.html):** Notify users about successful task completion, any errors, and provide instructions to help correct mistakes.
 
-- **[Multi-Step Forms](multi-step.html):** Divide long forms into multiple smaller forms that constitute a series of logical steps or stages and inform users about their progress.
+- **[Multi-Page Forms](multi-page.html):** Divide long forms into multiple smaller forms that constitute a series of logical steps or stages and inform users about their progress.
 
 - **[Custom Controls](custom-controls.html):** Use stylized form elements and other progressive enhancement techniques to provide custom controls.
 
@@ -36,6 +36,6 @@ Forms can be visually and cognitively complex and difficult to use. Accessible f
 
 - **People using speech input** can use the labels via voice commands to activate controls and move the focus to the fields that they need to complete.
 
-- **People with limited dexterity** benefit from enlarged clickable areas that include the labels, especially for smaller controls, such as radio buttons and checkboxes.
+- **People with limited dexterity** benefit from large clickable areas that include the labels, especially for smaller controls, such as radio buttons and checkboxes.
 
-- **People using screen readers** can identify form controls more easily because they are associated with labels, field sets, and other structural elements.
+- **People using screen readers** can identify and understand form controls more easily because they are associated with labels, field sets, and other structural elements.
