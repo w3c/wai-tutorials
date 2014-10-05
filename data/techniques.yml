@@ -4,8 +4,14 @@ techniques:
   - ARIA11: Using ARIA landmarks to identify regions of a page
   - ARIA12: Using role=heading to identify headings
   - C7: Using CSS to hide a portion of the link text
+  - C12: Using percent for font sizes
+  - C13: Using named font sizes
+  - C14: Using em units for font sizes
+  - C20: Using relative measurements to set column widths so that lines can average 80 characters or less when the browser is resized
   - C22: Using CSS to control visual presentation of text
+  - C28: Specifying the size of text containers using em units
   - FLASH17: Providing keyboard access to a Flash object and avoiding a keyboard trap
+  - G1: Adding a link at the top of each page that goes directly to the main content area
   - G14: Ensuring that information conveyed by color differences is also available in text
   - G17: Ensuring that a contrast ratio of at least 7:1 exists between text (and images of text) and background behind the text
   - G18: Ensuring that a contrast ratio of at least 4.5:1 exists between text (and images of text) and background behind the text
@@ -13,6 +19,7 @@ techniques:
   - G59: Placing the interactive elements in an order that follows sequences and relationships within the content
   - G62: Providing a glossary
   - G63: Providing a site map
+  - G64: Providing a Table of Contents
   - G65: Providing a breadcrumb trail
   - G73: Providing a long description in another location with a link to it that is immediately adjacent to the non-text content
   - G74: "Providing a long description in text near the non-text content, with a reference to the location of the long description in the short description"
@@ -23,6 +30,7 @@ techniques:
   - G94: Providing short text alternative for non-text content that serves the same purpose and presents the same information as the non-text content
   - G95: Providing short text alternatives that provide a brief description of the non-text content
   - G98: Providing the ability for the user to review and correct answers before submitting
+  - G124: Adding links at the top of the page to each area of the content
   - G127: "Identifying a Web page’s relationship to a larger collection of Web pages"
   - G128: Indicating current location within navigation bars
   - G130: Providing descriptive headings
@@ -36,10 +44,11 @@ techniques:
   - G164: Providing a stated time within which an online request (or transaction) may be amended or canceled by the user after making the request
   - G167: Using an adjacent button to label the purpose of a field
   - G168: Requesting confirmation to continue with selected action
-  - G196: Using a text alternative on one item within a group of images that describes all items in the group
+  - G179: Ensuring that there is no loss of content or functionality when the text resizes and text containers do not change their width
   - G180: Providing the user with a means to set the time limit to 10 times the default time limit
   - G182: Ensuring that additional visual cues are available when text color differences are used to convey information
   - G183: Using a contrast ratio of 3:1 with surrounding text and providing additional visual cues on focus for links or controls where color alone is used to identify them
+  - G196: Using a text alternative on one item within a group of images that describes all items in the group
   - G198: Providing a way for the user to turn the time limit off
   - G202: Ensuring keyboard control for all functionality
   - H2: Combining adjacent image and text links for the same resource

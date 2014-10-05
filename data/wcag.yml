@@ -18,6 +18,11 @@ successcriteria:
       desc: 'The visual presentation of text and images of text has a contrast ratio of at least 4.5:1, except for the following:<ul><li><strong>Large Text: </strong> Large-scale text and images of large-scale text have a contrast ratio of at least 3:1;</li><li><strong>Incidental: </strong> Text or images of text that are part of an inactive user interface component, that are pure decoration, that are not visible to anyone, or that are part of a picture that contains significant other visual content, have no contrast requirement.</li><li><strong>Logotypes: </strong> Text that is part of a logo or brand name has no minimum contrast requirement.</li></ul>'
       level: AA
       slug: visual-audio-contrast-contrast
+  - 1.4.4:
+      title: Resize text
+      desc: 'Except for captions and images of text, text can be resized without assistive technology up to 200 percent without loss of content or functionality.'
+      level: AA
+      slug: visual-audio-contrast-scale
   - 1.4.5:
       title: Images of Text
       desc: "If the technologies being used can achieve the visual presentation, text is used to convey information rather than images of text except [for customizable and essential images]"
