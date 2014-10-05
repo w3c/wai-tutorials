@@ -14,9 +14,9 @@ To help users orient themselves on web pages, the content and different areas ne
 
 * **[Headings](headings.html):** Convey the page’s structure by adding headings of different levels.
 
-* **[Content Structure](content-structure.html):** Mark up content so assistive technology can present information in a way the user needs it.
+* **[Text Structure](text-structure.html):** Mark up content so assistive technology can present information in a way the user needs it.
 
-* **[Styling](styling.html):** Apply a distinct hierarchy to the visual page’s design, so visual users can easily determine what every section of the page does.
+* **[Styling](styling.html):** Apply a distinct hierarchy to the visual page’s design, so visual users can easily determine what each section of the page does.
 
 * **[In-page Navigation](in-page-navigation.html):** Provide navigation aids to help users to get around the page and discover the various sections of the page. Consider adding a “table of content” for longer pieces of content.
 
