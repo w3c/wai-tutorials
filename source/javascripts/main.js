@@ -140,6 +140,11 @@
       }
     });
 
+    if (nesting===true) {
+      last_elem.appendChild(sub_wrap);
+      nesting = false;
+    }
+
     toc_outer.querySelectorAll('.figcontent')[0].innerHTML = toc_wrap.outerHTML;
 
     var inner = document.querySelectorAll('.inner > :first-child')[0];
