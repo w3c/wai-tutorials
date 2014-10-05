@@ -11,6 +11,7 @@ techniques:
   - G18: Ensuring that a contrast ratio of at least 4.5:1 exists between text (and images of text) and background behind the text
   - G21: Ensuring that users are not trapped in content
   - G59: Placing the interactive elements in an order that follows sequences and relationships within the content
+  - G62: Providing a glossary
   - G63: Providing a site map
   - G65: Providing a breadcrumb trail
   - G73: Providing a long description in another location with a link to it that is immediately adjacent to the non-text content
@@ -47,11 +48,13 @@ techniques:
   - H36: Using alt attributes on images used as submit buttons
   - H37: Using alt attributes on img elements
   - H39: Using caption elements to associate data table captions with data tables
+  - H40: Using definition lists
   - H42: Using h1-h6 to identify headings
   - H43: Using id and headers attributes to associate data cells with header cells in data tables
   - H44: Using label elements to associate text labels with form controls
   - H45: Using longdesc
   - H48: 'Using ol, ul and dl for lists or groups of links'
+  - H49: Using semantic markup to mark emphasized or special text
   - H51: Using table markup to present tabular data
   - H59: Using the link element and navigation tools
   - H63: Using the scope attribute to associate header cells and data cells in data tables
