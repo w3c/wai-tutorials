@@ -1095,27 +1095,12 @@ select {
 	}
 }
 
-/*
-.decision-tree {
-	&, ul {
-		padding: 0;
-	}
-	li {
-		list-style:none;
-	}
-	> li {
-		border-left: 1em solid #777;
-		padding: .5em 0 0 .5em;
-		font-weight: bold;
-		background-color: #777;
-		color: #fff;
-		li {
-			font-weight: normal;
-			background-color: #F5F5F5;
-			color: #777;
-			border-bottom: 1px solid #777;
-			padding: .5em 0 .5em .5em;
-		}
+.resources {
+	margin-top: 2em;
+	outline: .5em solid #fff;
+	background-color: #FFF;
+	> h2 {
+		padding-top:0 !important;
 	}
 }
 
