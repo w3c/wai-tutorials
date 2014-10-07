@@ -20,7 +20,7 @@ Some HTML elements are supposed to also carry implicit landmark roles, but this 
 Most websites have a logo and some other information about the page at the top of the page. Sometimes a search or navigation can be included. This main page header should be identified by an HTML5 `<header>` element and an explicit `banner` role. The banner role is not implicit for `<header>` elements as there could be several such elements but usually there will only be one `banner` role.
 
 {::nomarkdown}
-<%= code_start('','HTML5') %>
+<%= code_start %>
 {:/nomarkdown}
 
 ~~~html
@@ -33,68 +33,12 @@ Most websites have a logo and some other information about the page at the top o
 <%= code_end %>
 {:/nomarkdown}
 
-### Complementary
-
-Any section of the document that supports the main content, yet is separate and meaningful on its own, should be marked up as `complementary`. This could be sidebars or links to related content.
-
-In these tutorials, the call for participation on the bottom of the page is such a piece of content. <a href="javascript:toogleHighlight('[role=complementary]');">Click here to visually highlight this area.</a> (Scroll to the bottom.)
-
-{::nomarkdown}
-<%= code_start('','HTML4') %>
-{:/nomarkdown}
-
-~~~html
-<div role="complementary">
-  <h3>Related Articles</h3>
-  …
-</div>
-~~~
-
-{::nomarkdown}
-<%= code_end %>
-{:/nomarkdown}
-
-In HTML5, the `complementary` role is often applied to `<aside>` elements.
-
-{::nomarkdown}
-<%= code_start('','HTML5') %>
-{:/nomarkdown}
-
-~~~html
-<aside role="complementary">
-  <h3>Related Articles</h3>
-  …
-</aside>
-~~~
-
-{::nomarkdown}
-<%= code_end %>
-{:/nomarkdown}
-
 ### Navigation
 
-Navigation menu items should be marked up using the HTML5 `<nav>` element which carries an implicit `role` of `navigation`. It can contain the main navigation menu or other collections of links whose purpose is to navigate inside the page or the website as a whole. See the [Navigation Menu tutorial](/navigation/index.html) for more information on menus. It can appear several times.
-
-In these tutorials, there are several possibilities to navigate. The main menu, which is either on the bottom or the top of the page (depending on the viewport), the breadcrumb path (top), the “On this page” in-page navigation, and the previous and next links on the bottom of the article. <a href="javascript:toogleHighlight('[role=navigation]');">Click here to visually highlight those areas.</a>
+Sections of the page that provide navigation should be marked up using the HTML5 `<nav>` element which is supposed to carry an implicit `role` of `navigation`. It can contain the main navigation menu or other collections of links whose purpose is to navigate inside the page or the website as a whole. See the [Navigation Menu tutorial](/navigation/index.html) for more information on menus. It can be used multiple times on a page.
 
 {::nomarkdown}
-<%= code_start('','HTML4') %>
-{:/nomarkdown}
-
-~~~html
-<div role="navigation">
-  …
-</div>
-~~~
-
-{::nomarkdown}
-<%= code_end %>
-{:/nomarkdown}
-
-In HTML5, the `<nav>` element carries the same semantics.
-
-{::nomarkdown}
-<%= code_start('','HTML5') %>
+<%= code_start %>
 {:/nomarkdown}
 
 ~~~html
@@ -107,67 +51,12 @@ In HTML5, the `<nav>` element carries the same semantics.
 <%= code_end %>
 {:/nomarkdown}
 
-### Contentinfo
+### Main content
 
-A region that contains information about the document such as copyrights and links to privacy statement should be marked up as `contentinfo`. This information can often be found in the footer section on the end of a page.
-
-In these tutorials, the footer on the bottom of the page is such a piece of content. <a href="javascript:toogleHighlight('[role=contentinfo]');">Click here to visually highlight this area.</a> (Scroll to the bottom.)
+Main content of a document should be wrapped in a `<main>` element that implicitly carries a `main` role. In almost all cases a page will have only one instance of this section.
 
 {::nomarkdown}
-<%= code_start('','HTML4') %>
-{:/nomarkdown}
-
-~~~html
-<div role="contentinfo">
-  <p>&copy; 2014 SpaceBears Inc.</p>
-</div>
-~~~
-
-{::nomarkdown}
-<%= code_end %>
-{:/nomarkdown}
-
-In HTML5, the `contentinfo` role is often applied one `<footer>` element near the end of the page.
-
-{::nomarkdown}
-<%= code_start('','HTML5') %>
-{:/nomarkdown}
-
-~~~html
-<footer role="contentinfo">
-  <p>&copy; 2014 SpaceBears Inc.</p>
-</footer>
-~~~
-
-{::nomarkdown}
-<%= code_end %>
-{:/nomarkdown}
-
-### Main
-
-The `main` role marks the main content in a document. In almost all cases a page will have only one instance of this role.
-
-In these tutorials, the content text is in the main content. <a href="javascript:toogleHighlight('[role=main]');">Click here to visually highlight this area.</a> (Scroll to the bottom.)
-
-{::nomarkdown}
-<%= code_start('','HTML4') %>
-{:/nomarkdown}
-
-~~~html
-<div role="main">
-  <h1>Stellar launch weekend for the SpaceBear 7!</h1>
-  …
-</div>
-~~~
-
-{::nomarkdown}
-<%= code_end %>
-{:/nomarkdown}
-
-In HTML5, the `<main>` element carries the same semantics.
-
-{::nomarkdown}
-<%= code_start('','HTML5') %>
+<%= code_start %>
 {:/nomarkdown}
 
 ~~~html
@@ -181,9 +70,46 @@ In HTML5, the `<main>` element carries the same semantics.
 <%= code_end %>
 {:/nomarkdown}
 
-### Search
+### Page footer
 
-The `search` role marks the “search tool” of the website, this means not only the actual input field, but also the search button and options, can be included in this region. The form below contains a `<div>` element with a `search` role.
+The term page footer refers to a section on the page that contains auxiliary information like (links to) copyright or privacy statements. In HTML5 it is usually marked up as a `<footer>` element. It does not carry an implicit role but it makes sense to add `contentinfo` to distinguish the page `<footer>` element from other uses of `<footer>` in the page, for example as the footer of an article.
+
+{::nomarkdown}
+<%= code_start %>
+{:/nomarkdown}
+
+~~~html
+<footer role="contentinfo">
+  <p>&copy; 2014 SpaceBears Inc.</p>
+</footer>
+~~~
+
+{::nomarkdown}
+<%= code_end %>
+{:/nomarkdown}
+
+### Content complementary to the main content
+
+Any section of the document that supports the main content, yet is separate and meaningful on its own, should be marked up using an `<aside>` element, which does not carry an implicit role as it can be used in other circumstances as well. A role of `complementary` can be added to sidebars or links to related content to make the purpose of the section more explicit.
+
+{::nomarkdown}
+<%= code_start %>
+{:/nomarkdown}
+
+~~~html
+<aside role="complementary">
+  <h3>Related Articles</h3>
+  …
+</aside>
+~~~
+
+{::nomarkdown}
+<%= code_end %>
+{:/nomarkdown}
+
+### Search section
+
+The `search` role marks the “search tool” of the website, this means not only the actual input field, but also the search button and options, can be included in this section. The form below contains a `<div>` element with a `search` role. There is no HTML5 equivalent for this role.
 
 {::nomarkdown}
 <%= sample_start %>
@@ -198,7 +124,7 @@ The `search` role marks the “search tool” of the website, this means not onl
 {:/nomarkdown}
 
 {::nomarkdown}
-<%= code_start('','HTML4') %>
+<%= code_start %>
 {:/nomarkdown}
 
 ~~~html
@@ -213,20 +139,24 @@ The `search` role marks the “search tool” of the website, this means not onl
 <%= code_end %>
 {:/nomarkdown}
 
+### Generic sections
+
+Other sections of the page can be marked up as `<section>` elements which carry an implicit role of `region` which basically is a generic landmark. Be careful not to overuse it, as it adds a lot of additional “noise” when encountered using a screen reader. Use it to group items together. It should also always be labeled.
+
 ### A note on the application role
 
-The role `application` declares a region as a web application, as opposed to a web document. The role of application should only be **used with caution**, as it gives a signal to screen reading software to turn off normal web navigation controls. Simple widgets should generally not be given the application role, nor should an entire web page be given the application role, unless it is not to be used at all like a web page, and not without much user testing with assistive technology.
+The role `application` declares a section as a web application, as opposed to a web document. The role of application should only be **used with caution**, as it gives a signal to screen reading software to turn off normal web navigation controls. Simple widgets should generally not be given the application role, nor should an entire web page be given the application role, unless it is not to be used at all like a web page, and not without much user testing with assistive technology.
 
-## Labeling landmarks
+## Labeling sections
 
-Especially if there are multiple landmarks of the same type, like multiple navigation landmarks or sidebars, it is important to label landmark sections by using one of the techniques shown below. Which one should be used depends on the presence of a (visible) heading.
+Especially if there are multiple sections with the same role, like multiple navigation sections or sidebars, it is important to label them by using one of the techniques shown below.
 
 ### Using `aria-labelledby`
 
-If a heading or some other text is present that can describe the content of the landmark section, it can be referenced by adding an `id` attribute to the heading and using that `id` value as a value of the `aria-labelledby` of the landmark section.
+If a heading or some other text is present that can properly describe the content of a section, it can be referenced by adding an `id` attribute to the heading and using that `id` value as a value of the `aria-labelledby` of the landmark section.
 
 {::nomarkdown}
-<%= code_start('','HTML4') %>
+<%= code_start %>
 {:/nomarkdown}
 
 ~~~html
@@ -242,7 +172,7 @@ If a heading or some other text is present that can describe the content of the 
 
 ### Using `aria-label`
 
-If no other text is present, the `aria-label` attribute should be used to label the individual landmarks.
+If no describing text is present, the `aria-label` attribute should be used to label the individual landmarks.
 
 {::nomarkdown}
 <%= code_start('','HTML4') %>
@@ -257,45 +187,3 @@ If no other text is present, the `aria-label` attribute should be used to label 
 {::nomarkdown}
 <%= code_end %>
 {:/nomarkdown}
-
-<style>
-    .role-highlight, .role-highlight * {
-        background: rgba(237, 236, 63, .5);;
-    }
-    .role-highlight {
-        outline: 4px solid #edec3f;
-    }
-</style>
-
-<script>
-function toogleHighlight(selector) {
-
-    function hasClass(el, className) {
-        if (el.classList)
-          return el.classList.contains(className);
-        else
-          return new RegExp('(^| )' + className + '( |$)', 'gi').test(el.className);
-    }
-    function addClass(el, className) {
-        if (el.classList)
-          el.classList.add(className);
-        else
-          el.className += ' ' + className;
-    }
-    function removeClass(el, className) {
-        if (el.classList)
-          el.classList.remove(className);
-        else
-          el.className = el.className.replace(new RegExp('(^|\\b)' + className.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
-    }
-
-    var elements = document.querySelectorAll(selector);
-    Array.prototype.forEach.call(elements, function(el, i) {
-        if (hasClass(el, 'role-highlight')) {
-            removeClass(el, 'role-highlight')
-        } else {
-            addClass(el, 'role-highlight');
-        }
-    });
-}
-</script>
