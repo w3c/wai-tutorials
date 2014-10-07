@@ -17,7 +17,7 @@ Landmarks are inserted into the document by adding a `role` attribute to the ele
 
 Usually the section of the page with the logo, a tag line, and the main page title is marked up as a `banner` region. It can contain search and navigation sections.
 
-In these tutorialss, the heading with the title “Web Accessibility Tutorials” and the W3C & <abbr title="Web Accessibility Initiative">WAI</abbr> logos on the top of the page. <a href="javascript:toogleHighlight('[role=banner]');">Click here to visually highlight this area.</a> (Scroll to the top.)
+In these tutorials, the heading with the title “Web Accessibility Tutorials” and the W3C & <abbr title="Web Accessibility Initiative">WAI</abbr> logos on the top of the page. <a href="javascript:toogleHighlight('[role=banner]');">Click here to visually highlight this area.</a> (Scroll to the top.)
 
 {::nomarkdown}
 <%= code_start('','HTML4') %>
@@ -127,7 +127,7 @@ In HTML5, the `contentinfo` role is often applied one `<footer>` element near th
 
 The `main` role marks the main content in a document. In almost all cases a page will have only one instance of this role.
 
-In these tutorials, the footer on the bottom of the page is such a piece of content. <a href="javascript:toogleHighlight('[role=main]');">Click here to visually highlight this area.</a> (Scroll to the bottom.)
+In these tutorials, the content text is in the main content. <a href="javascript:toogleHighlight('[role=main]');">Click here to visually highlight this area.</a> (Scroll to the bottom.)
 
 {::nomarkdown}
 <%= code_start('','HTML4') %>
