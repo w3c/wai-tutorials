@@ -1,5 +1,5 @@
 ---
-title: Text Structure
+title: Content Structure
 status: editors-draft
 order: 4
 wcag_techniques:

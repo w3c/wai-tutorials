@@ -1,5 +1,5 @@
 ---
-title: ◊ Page Structure Concepts
+title: Page Structure Concepts
 tutorial_title: Page Structure
 nav_title: Concepts
 status: editors-draft
@@ -14,7 +14,7 @@ To help users orient themselves on web pages, the content and different areas ne
 
 * **[Headings](headings.html):** Convey the page’s structure by adding headings of different levels.
 
-* **[Text Structure](text-structure.html):** Mark up content so assistive technology can present information in a way the user needs it.
+* **[Content Structure](content.html):** Mark up content so assistive technology can present information in a way the user needs it.
 
 * **[Styling](styling.html):** Apply a distinct hierarchy to the visual page’s design, so visual users can easily determine what each section of the page does.
 
