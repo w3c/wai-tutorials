@@ -1,5 +1,5 @@
 ---
-title: Landmarks
+title: Page Sections
 status: editors-draft
 order: 2
 wcag_success_criteria:
@@ -7,33 +7,17 @@ wcag_techniques:
   - ARIA11
 ---
 
-Landmark roles (“landmark”) identify sections of a page in a programmatical way which helps assistive technology users orient themselves to various sections of the page. They also provide an easy way to skip sections of the page that are not relevant to the user right now. For example, if there is a navigation section on every page, users can skip it and jump directly to the content of the page. This can save a lot of time navigating around the page, searching for the correct section of the page.
+To help people navigate around the page, they need to be able to identify distinctive sections on the page. There are some more important parts of a page that should be marked up on every website, for example navigations. Both, HTML5 and WAI-ARIA, provide mechanisms to mark up such sections in a meaningful way. On this page, common sections on websites are identified and marked up using those mechanisms.
 
-Landmarks are inserted into the document by adding a `role` attribute to the element that marks the section. Some HTML5 elements should implicitly carry some landmark roles, but as this is not widely supported, it is recommended to additionally provide the `role` attribute.
+HTML5 provides distinctive elements for certain types of page sections while WAI-ARIA utilizes the `role` attribute to add such metadata, which is mainly aimed at assistive technologies. Sometimes the so called WAI-ARIA landmark roles map directly to HTML5 elements, but this is not always the case.
 
-## Commonly used landmarks
+Some HTML elements are supposed to also carry implicit landmark roles, but this is not broadly supported at the time of writing, so the role should be stated explicitly. If HTML4 is used, `<div>` elements and/or headings are commonly used to identify page sections.
 
-### Banner
+## Common page sections
 
-Usually the section of the page with the logo, a tag line, and the main page title is marked up as a `banner` region. It can contain search and navigation sections.
+### Main page header
 
-In these tutorials, the heading with the title “Web Accessibility Tutorials” and the W3C & <abbr title="Web Accessibility Initiative">WAI</abbr> logos on the top of the page. <a href="javascript:toogleHighlight('[role=banner]');">Click here to visually highlight this area.</a> (Scroll to the top.)
-
-{::nomarkdown}
-<%= code_start('','HTML4') %>
-{:/nomarkdown}
-
-~~~html
-<div role="banner">
-  <img src="/images/logo.png" alt="SpaceBear Inc.">
-</div>
-~~~
-
-{::nomarkdown}
-<%= code_end %>
-{:/nomarkdown}
-
-In HTML5, the `banner` role is usually applied to one `<header>` element:
+Most websites have a logo and some other information about the page at the top of the page. Sometimes a search or navigation can be included. This main page header should be identified by an HTML5 `<header>` element and an explicit `banner` role. The banner role is not implicit for `<header>` elements as there could be several such elements but usually there will only be one `banner` role.
 
 {::nomarkdown}
 <%= code_start('','HTML5') %>
@@ -81,6 +65,42 @@ In HTML5, the `complementary` role is often applied to `<aside>` elements.
   <h3>Related Articles</h3>
   …
 </aside>
+~~~
+
+{::nomarkdown}
+<%= code_end %>
+{:/nomarkdown}
+
+### Navigation
+
+Navigation menu items should be marked up using the HTML5 `<nav>` element which carries an implicit `role` of `navigation`. It can contain the main navigation menu or other collections of links whose purpose is to navigate inside the page or the website as a whole. See the [Navigation Menu tutorial](/navigation/index.html) for more information on menus. It can appear several times.
+
+In these tutorials, there are several possibilities to navigate. The main menu, which is either on the bottom or the top of the page (depending on the viewport), the breadcrumb path (top), the “On this page” in-page navigation, and the previous and next links on the bottom of the article. <a href="javascript:toogleHighlight('[role=navigation]');">Click here to visually highlight those areas.</a>
+
+{::nomarkdown}
+<%= code_start('','HTML4') %>
+{:/nomarkdown}
+
+~~~html
+<div role="navigation">
+  …
+</div>
+~~~
+
+{::nomarkdown}
+<%= code_end %>
+{:/nomarkdown}
+
+In HTML5, the `<nav>` element carries the same semantics.
+
+{::nomarkdown}
+<%= code_start('','HTML5') %>
+{:/nomarkdown}
+
+~~~html
+<nav role="navigation">
+  …
+</nav>
 ~~~
 
 {::nomarkdown}
@@ -155,42 +175,6 @@ In HTML5, the `<main>` element carries the same semantics.
   <h1>Stellar launch weekend for the SpaceBear 7!</h1>
   …
 </main>
-~~~
-
-{::nomarkdown}
-<%= code_end %>
-{:/nomarkdown}
-
-### Navigation
-
-The `navigation` role marks navigation menus or other collections of links whose purpose is to navigate inside the page or the website as a whole. See the [Navigation Menu tutorial](/navigation/index.html) for more information on menus.
-
-In these tutorials, there are several possibilities to navigate. The main menu, which is either on the bottom or the top of the page (depending on the viewport), the breadcrumb path (top), the “On this page” in-page navigation, and the previous and next links on the bottom of the article. <a href="javascript:toogleHighlight('[role=navigation]');">Click here to visually highlight those areas.</a>
-
-{::nomarkdown}
-<%= code_start('','HTML4') %>
-{:/nomarkdown}
-
-~~~html
-<div role="navigation">
-  …
-</div>
-~~~
-
-{::nomarkdown}
-<%= code_end %>
-{:/nomarkdown}
-
-In HTML5, the `<nav>` element carries the same semantics.
-
-{::nomarkdown}
-<%= code_start('','HTML5') %>
-{:/nomarkdown}
-
-~~~html
-<nav role="navigation">
-  …
-</nav>
 ~~~
 
 {::nomarkdown}
