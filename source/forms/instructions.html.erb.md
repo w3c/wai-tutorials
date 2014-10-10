@@ -175,7 +175,7 @@ Another approach is to use the WAI-ARIA `aria-describedby` attribute to associat
 <%= notes_start %>
 {:/nomarkdown}
 
-**Note:** A caveat of this approach is that it is mostly interpreted by screen readers, so that non-screen reader users may not gain the same benefit. Until such associations are more broadly interpreted it is often useful to position the instructions directly after the form controls.
+**Note:** This technique is mostly interpreted by screen readers, so that non-screen reader users may not gain the information as easily. Until such associations are more broadly used by other assistive technology as well, it is often useful inform the user that instructions directly follow form controls.
 
 {::nomarkdown}
 <%= notes_end %>
