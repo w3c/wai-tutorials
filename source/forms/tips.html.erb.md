@@ -12,3 +12,6 @@ type: tips
 * **Be careful with required formats:** Postal codes are not numbers in every country, so using and `input` of the type `number` could easily become a problem.
 
 * **Allow users to disable or extend time limits:** If possible, forms should not be subject to a time limit.  This allows users to complete the form at their own pace. If a time limit needs to be in place, for example, for security reasons, the user should have the option to turn it off or extend it. This does not apply if the time limit is due to a live event, such as an auction or a game, or if the time to complete the form is essential for a valid submission.
+
+* **Group related options in select boxes:** When select boxes have a lot of entries or different kinds of information, options should be
+grouped using the `<optgroup>` element. Such groups should be labeled by using the `label` attribute.
