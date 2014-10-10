@@ -161,7 +161,7 @@ The example below shows these HTML5 input types in action. Depending on your web
 ## Validating patterned input
 {:.newex}
 
-The HTML5 `pattern` attribute allows the use of regular expressions to specify custom formats for the input. This is useful for specific types of data patterns such as telephone numbers, postal codes, and serial numbers.
+The HTML5 `pattern` attribute allows the use of [regular expressions](http://www.w3.org/TR/html/forms.html#the-pattern-attribute) to specify custom formats for the input. This is useful for specific types of data patterns such as telephone numbers, postal codes, and serial numbers.
 
 ### Car license plate numbers
 {:.ex}
