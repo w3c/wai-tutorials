@@ -21,7 +21,7 @@ wcag_techniques:
   - H65
 ---
 
-Provide labels to identify all form controls, including text fields, checkboxes, radio buttons, and drop-down menus. In most cases this is done by using the `<label>` element and in some cases the `title` attribute.
+Provide labels to identify all form controls, including text fields, checkboxes, radio buttons, drop-down menus, and button elements. In most cases this is done by using the `<label>` element, and in some cases the `title` attribute.
 
 Labels need to describe the purpose of the form control. This section of the tutorial describes how to provide labels so that they are properly associated with form controls. Later sections explain how to provide instructions, validate user input, and provide feedback to help users complete your form.
 
@@ -111,58 +111,9 @@ This approach is more robust because it explicitly associates the labels with th
 {:/nomarkdown}
 
 ~~~ css
-#expl_label_form {display:table;}
-#expl_label_form>div {display:table-row;}
+#expl_label_form {display:table}
+#expl_label_form>div {display:table-row}
 #expl_label_form>div>div {display:table-cell;}
-~~~
-
-{::nomarkdown}
-<%= code_end %>
-{:/nomarkdown}
-
-## Associating labels to buttons
-
-### … using the `<input>` element
-{:.ap}
-
-When using the `<input>` element to create buttons, the label is set in the `value` attribute of the element.
-
-{::nomarkdown}
-<%= code_start('', 'HTML') %>
-{:/nomarkdown}
-
-~~~ html
-<input type="button" value="Cancel">
-<input type="submit" value="Submit">
-~~~
-
-{::nomarkdown}
-<%= code_end %>
-{:/nomarkdown}
-
-{::nomarkdown}
-<%= notes_start %>
-{:/nomarkdown}
-
-**Note:** If the image button (`<input type="image">`) is used, the label is set in the `alt` attribute, for example:
-`<input type="image" src="searchbutton.png" alt="Search">`.
-
-{::nomarkdown}
-<%= notes_end %>
-{:/nomarkdown}
-
-### … using the `<button>` element
-{:.ap}
-
-Using the `<button>` element gives more flexibility as the label is set inside the element which can include markup to be more specific.
-
-{::nomarkdown}
-<%= code_start('', 'HTML') %>
-{:/nomarkdown}
-
-~~~ html
-<button type="button">Cancel</button>
-<button type="submit">Submit</button>
 ~~~
 
 {::nomarkdown}
