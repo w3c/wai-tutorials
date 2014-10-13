@@ -13,8 +13,6 @@ wcag_techniques:
 
 Provide structural markup for the carousel and its items, and later enhance these structures with styling and scripting. This ensures that the content of the carousel has meaning on its own, without styling and scripting, and can be rendered and used in more situations.
 
-**Note:** A carousel is typically a distinct part of a web page, so that a heading (`<h1>` to `<h6>`) is typically needed to identify and label the carousel.
-
 ## Carousel framework
 
 A carousel is a collection of items that are displayed one at a time. Provide a corresponding structure in the code to represent this collection of items.
@@ -65,6 +63,70 @@ If carousel items are have a lot of complex content, other elements can be used 
       <h4>…</h4>
       …
     </article>
+</div>
+~~~
+
+{::nomarkdown}
+<%= code_end %>
+{:/nomarkdown}
+
+### Label carousels
+
+For assistive technology users, it is important to add information to the carousel container that informs the user where the carousel starts and ends, as a carousel is typically a distinct part of a web page. A heading (`<h1>` to `<h6>`) or WAI-ARIA attributes can be used to label them.
+
+#### Using headings
+{:.ex}
+
+In the example below, a heading shows the start of the carousel, the end of the carousel would be marked by the next heading of the same level.
+
+{::nomarkdown}
+<%= code_start %>
+{:/nomarkdown}
+
+~~~html
+<div class="carousel">
+  <h3>Recent news</h3>
+    <article class="slide">
+      <h4>…</h4>
+      …
+    </article>
+    …
+</div>
+~~~
+
+{::nomarkdown}
+<%= code_end %>
+{:/nomarkdown}
+
+#### Using WAI-ARIA roles and labels
+{:.ex}
+
+To group the carousel in a way that is perceivable for assistive technologies, the `role` attribute with a value of `region` can be used. To identify the region, the `aria-label` attribute can be used, as show in the example below:
+
+{::nomarkdown}
+<%= code_start %>
+{:/nomarkdown}
+
+~~~html
+<div class="carousel" role="region" aria-label="Recent news">
+    …
+</div>
+~~~
+
+{::nomarkdown}
+<%= code_end %>
+{:/nomarkdown}
+
+If there is already some text identifying the carousel in HTML, it is usually more appropriate to use the `aria-labelledby` attribute to assign that text to the carousel.
+
+{::nomarkdown}
+<%= code_start %>
+{:/nomarkdown}
+
+~~~html
+<div class="carousel" role="region" aria-labelledby="carouselheading">
+  <h3 id="carouselheading">Recent news</h3>
+    …
 </div>
 ~~~
 
