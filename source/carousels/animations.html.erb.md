@@ -88,6 +88,32 @@ carousel.addEventListener('focusout',
 <%= notes_end %>
 {:/nomarkdown}
 
+## Hiding in-transition elements from assistive technologies
+
+While the slides that leave the viewport are visible during transition, they should not be available to assistive technologies as this can lead to confusion. To ensure that the slides are ignored by assistive technologies, the `aria-hidden` attribute should be set. The following example shows that after determining what the new order of slides is, either the next or the previous slide gets an in-transition class, which makes the item visible. It also is set to `aria-hidden`. The `aria-hidden` attribute is then removed from the new current menu item.
+
+{::nomarkdown}
+<%= code_start('', 'JavaScript: In initialization') %>
+{:/nomarkdown}
+
+~~~js
+slides[new_next].className = 'next slide'
+  + ((transition == 'next') ? ' in-transition' : '');
+slides[new_next].setAttribute('aria-hidden', 'true');
+
+slides[new_prev].className = 'prev slide'
+  + ((transition == 'prev') ? ' in-transition' : '');
+slides[new_prev].setAttribute('aria-hidden', 'true');
+
+slides[new_current].className = 'current slide';
+slides[new_current].removeAttribute('aria-hidden');
+~~~
+
+{::nomarkdown}
+<%= code_end %>
+{:/nomarkdown}
+
+
 ## Finalized carousel
 
 The sample below is a demo of the final carousel that is built by putting together all examples of this tutorial:
@@ -152,30 +178,6 @@ The sample below is a demo of the final carousel that is built by putting togeth
 
 {::nomarkdown}
 <%= sample_end %>
-{:/nomarkdown}
-
-
-
-{::nomarkdown}
-<%= code_start('', 'JavaScript: In initialization') %>
-{:/nomarkdown}
-
-~~~js
-var slidewrapper = slides[0].parentNode;
-
-slidewrapper.addEventListener('transitionend', function (event) {
-  var slide = event.target;
-  removeClass(slide, 'in-transition');
-  if (setFocus && hasClass(slide, 'current')) {
-    slide.setAttribute('tabindex', '-1');
-    slide.focus();
-    setFocus = false;
-  }
-});
-~~~
-
-{::nomarkdown}
-<%= code_end %>
 {:/nomarkdown}
 
 <style>
@@ -511,9 +513,12 @@ var myCarousel = (function() {
     }
 
     slides[new_next].className = 'next slide' + ((transition == 'next') ? ' in-transition' : '');
+    slides[new_next].setAttribute('aria-hidden', 'true');
     slides[new_prev].className = 'prev slide' + ((transition == 'prev') ? ' in-transition' : '');
+    slides[new_prev].setAttribute('aria-hidden', 'true');
 
     slides[new_current].className = 'current slide';
+    slides[new_current].removeAttribute('aria-hidden');
 
     if(settings.slidenav) {
       var buttons = carousel.querySelectorAll('.slidenav button[data-slide]');

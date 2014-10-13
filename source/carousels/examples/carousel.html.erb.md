@@ -255,10 +255,20 @@ var myCarousel = (function() {
     }
 
     // Add classes to the previous, next and current slide
-    slides[new_next].className = 'next slide' + ((transition == 'next') ? ' in-transition' : '');
-    slides[new_prev].className = 'prev slide' + ((transition == 'prev') ? ' in-transition' : '');
+    slides[new_next].className = 'next slide';
+    if (transition == 'next') {
+      slides[new_next].className = 'next slide in-transition';
+      slides[new_next].setAttribute('aria-hidden', 'true');
+    }
+
+    slides[new_prev].className = 'prev slide';
+    if (transition == 'prev') {
+      slides[new_prev].className = 'prev slide in-transition';
+      slides[new_next].setAttribute('aria-hidden', 'true');
+    }
 
     slides[new_current].className = 'current slide';
+    slides[new_current].removeAttribute('aria-hidden');
 
     // Update the slidenav buttons
     if(settings.slidenav) {
