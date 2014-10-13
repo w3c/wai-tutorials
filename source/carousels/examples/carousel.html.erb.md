@@ -55,7 +55,8 @@ var myCarousel = (function() {
   settings,
   timer,
   setFocus,
-  animationSuspended;
+  animationSuspended,
+  announceSlide = 'false';
 
   // Helper function for iterating through elements
   function forEachElement(elements, fn) {
@@ -181,14 +182,20 @@ var myCarousel = (function() {
     slides[0].parentNode.addEventListener('transitionend', function (event) {
       var slide = event.target;
       removeClass(slide, 'in-transition');
-      if (setFocus && hasClass(slide, 'current')) {
+      if (hasClass(slide, 'current')) {
         // Also, if the global setFocus variable is set
         // and the transition ended on the current slide,
         // set the focus on this slide.
-        // This is done if the user clicks a slidenav button.
-        slide.setAttribute('tabindex', '-1');
-        slide.focus();
-        setFocus = false;
+        if (setFocus) {
+          // This is done if the user clicks a slidenav button.
+          slide.setAttribute('tabindex', '-1');
+          slide.focus();
+          setFocus = false;
+        }
+        if (announceSlide) {
+          slide.removeAttribute('aria-live');
+          announceSlide = false;
+        }
       }
     });
 
@@ -270,6 +277,10 @@ var myCarousel = (function() {
     slides[new_current].className = 'current slide';
     slides[new_current].removeAttribute('aria-hidden');
 
+    if (announceSlide) {
+      slides[new_current].setAttribute('aria-live', 'polite');
+    }
+
     // Update the slidenav buttons
     if(settings.slidenav) {
       var buttons = carousel.querySelectorAll('.slidenav button[data-slide]');
@@ -296,6 +307,8 @@ var myCarousel = (function() {
       new_current = 0;
     }
 
+    announceSlide = true;
+
     // If we advance to the next slide, the previous needs to be
     // visible to the user, so the third parameter is 'prev', not
     // next.
@@ -317,6 +330,8 @@ var myCarousel = (function() {
     if(new_current < 0) {
       new_current = length-1;
     }
+
+    announceSlide = true;
 
     // If we advance to the previous slide, the next needs to be
     // visible to the user, so the third parameter is 'next', not

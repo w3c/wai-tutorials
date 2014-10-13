@@ -363,7 +363,7 @@ setTimeout(function(){
 
 var myCarousel = (function() {
 
-  var carousel, slides, index, slidenav, settings, timer, setFocus, animationSuspended;
+  var carousel, slides, index, slidenav, settings, timer, setFocus, animationSuspended, announceSlide = false;
 
   function forEachElement(elements, fn) {
     for (var i = 0; i < elements.length; i++)
@@ -404,9 +404,15 @@ var myCarousel = (function() {
       '</li>';
 
     ctrls.querySelector('.btn-prev')
-      .addEventListener('click', prevSlide);
+      .addEventListener('click', function () {
+        announceSlide = true;
+        prevSlide();
+      });
     ctrls.querySelector('.btn-next')
-      .addEventListener('click', nextSlide);
+      .addEventListener('click', function () {
+        announceSlide = true;
+        nextSlide();
+      });
 
     carousel.appendChild(ctrls);
 
@@ -459,10 +465,14 @@ var myCarousel = (function() {
       slides[0].parentNode.addEventListener('transitionend', function (event) {
         var slide = event.target;
         removeClass(slide, 'in-transition');
-        if (setFocus && hasClass(slide, 'current')) {
-          slide.setAttribute('tabindex', '-1');
-          slide.focus();
-          setFocus = false;
+        if (hasClass(slide, 'current'))  {
+          slide.removeAttribute('aria-live');
+          announceSlide = false;
+          if(setFocus) {
+            slide.setAttribute('tabindex', '-1');
+            slide.focus();
+            setFocus = false;
+          }
         }
       });
 
@@ -519,6 +529,9 @@ var myCarousel = (function() {
 
     slides[new_current].className = 'current slide';
     slides[new_current].removeAttribute('aria-hidden');
+    if (announceSlide) {
+      slides[new_current].setAttribute('aria-live', 'polite');
+    }
 
     if(settings.slidenav) {
       var buttons = carousel.querySelectorAll('.slidenav button[data-slide]');

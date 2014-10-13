@@ -161,7 +161,7 @@ The outcome looks like this:
 
 Scripting is further used to add buttons that allow users to switch back and forth between carousel items. While these buttons often have various styles visually, it is useful to code them using `<button>` elements. This gives them semantic meaning and also makes them more compatible with assistive technology and keyboard use. Refer to [keyboard accessibility](/fundamentals/keyboard-access.html) for more background.
 
-### Toggle Buttons
+### Previous and next buttons
 
 In the example below, JavaScript is used to generate code for the buttons and insert them onto the carousel. These particular buttons are visually displayed as arrows that overlay the carousel items. The images use the alternative text that reads "Previous Slide" and "Next Slide".
 
@@ -186,13 +186,13 @@ ctrls.innerHTML = '<li>' +
     '</button>' +
   '</li>';
 
-  ctrls.querySelector('.prev').addEventListener('click', function(){
-    prevSlide();
-  });
+ctrls.querySelector('.prev').addEventListener('click', function(){
+  prevSlide();
+});
 
-  ctrls.querySelector('.next').addEventListener('click', function(){
-    nextSlide();
-  });
+ctrls.querySelector('.next').addEventListener('click', function(){
+  nextSlide();
+});
 
 carousel.appendChild(ctrls);
 ~~~
@@ -205,36 +205,74 @@ carousel.appendChild(ctrls);
 <%= code_start('', 'CSS') %>
 {:/nomarkdown}
 
-~~~js
-  .btn-prev,
-  .btn-next {
-    position: absolute;
-    z-index: 700;
-    top: 50%;
-    margin-top: -2.5em;
-    border:0;
-    background: rgba(255,255,255,.6);
-    line-height: 1;
-    padding:2em .5em;
-    transition: padding .4s ease-out;
-  }
+~~~css
+.btn-prev,
+.btn-next {
+  position: absolute;
+  z-index: 700;
+  top: 50%;
+  margin-top: -2.5em;
+  border:0;
+  background: rgba(255,255,255,.6);
+  line-height: 1;
+  padding:2em .5em;
+  transition: padding .4s ease-out;
+}
 
-  .btn-next:hover, .btn-next:focus,
-  .btn-prev:hover, .btn-prev:focus {
-    padding-left: 2em;
-    padding-right: 2em;
-  }
+.btn-next:hover, .btn-next:focus,
+.btn-prev:hover, .btn-prev:focus {
+  padding-left: 2em;
+  padding-right: 2em;
+}
 
-  .btn-prev {
-    left:0;
-    border-radius: 0 .25em .25em 0;
-  }
+.btn-prev {
+  left:0;
+  border-radius: 0 .25em .25em 0;
+}
 
-  .btn-next {
-    right:0;
-    border-radius: .25em 0 0 .25em;
-  }
+.btn-next {
+  right:0;
+  border-radius: .25em 0 0 .25em;
+}
 ~~~
+{::nomarkdown}
+<%= code_end %>
+{:/nomarkdown}
+
+Additionally, an WAI-ARIA live region should be used to inform screen reader users which slide is now visible. Note that the slide does not receive focus as a user might want to skip several slides without navigating to the controls after every slide change.
+
+{::nomarkdown}
+<%= code_start('', 'Extend event listeners') %>
+{:/nomarkdown}
+
+~~~js
+ctrls.querySelector('.prev').addEventListener('click', function(){
+  announceSlide = true;
+  prevSlide();
+});
+
+ctrls.querySelector('.next').addEventListener('click', function(){
+  announceSlide = true;
+  nextSlide();
+});
+
+…
+
+function setSlides(new_current, focus, transition) {
+  …
+
+  slides[index].removeAttribute('aria-live');
+
+  if (announceSlide) {
+    slides[new_current].setAttribute('aria-live', 'polite');
+    announceSlide = false;
+  }
+  …
+}
+
+
+~~~
+
 {::nomarkdown}
 <%= code_end %>
 {:/nomarkdown}
@@ -306,7 +344,9 @@ The outcome looks like this:
 </style>
 
 <script>
-  function setSlides(new_current, setFocus = false) {
+  function setSlides(new_current, setFocus) {
+    setFocus = typeof setFocusHere !== 'undefined' ? setFocusHere : false;
+    slides[index].removeAttribute('aria-live');
 
     new_current = parseFloat(new_current);
 
@@ -327,6 +367,11 @@ The outcome looks like this:
     slides[new_next].className = 'next slide';
     slides[new_prev].className = 'prev slide';
     slides[new_current].className = 'current slide';
+
+    if (announceSlide) {
+      slides[new_current].setAttribute('aria-live', 'polite');
+      announceSlide = false;
+    }
 
     if (setFocus) {
       slides[new_current].setAttribute('tabindex', '-1');
@@ -388,10 +433,12 @@ The outcome looks like this:
     '</li>';
 
     ctrls.querySelector('.btn-prev').addEventListener('click', function(){
+      announceSlide = true;
       prevSlide();
     });
 
     ctrls.querySelector('.btn-next').addEventListener('click', function(){
+      announceSlide = true;
       nextSlide();
     });
 
@@ -463,9 +510,7 @@ Indicating the total number of carousel items and which one of them is currently
 ### Carousel item indicator
 {:.ex}
 
-In the following example, a list with buttons is added using JavaScrip and then styled to look visually like a progress indicator. The buttons are numbered matching the corresponding carousel items. The button corresponding to the currently displayed carousel item is highlighted both visually and using [visually hidden text](/fundamentals/hiding.html). Also the button that currently has the keyboard or mouse focus is highlighted.
-
-
+In the following example, a list with buttons is added using JavaScrip and then styled to look visually like a progress indicator. The buttons are numbered matching the corresponding carousel items. The button corresponding to the currently displayed carousel item is highlighted both visually and using visually hidden text. Also the button that currently has the keyboard or mouse focus is highlighted.
 
 {::nomarkdown}
 <%= code_start %>
@@ -564,7 +609,7 @@ In the following example, a list with buttons is added using JavaScrip and then 
 ## Focusing carousel items
 {:.newex}
 
-When users select a carousel item through the buttons in a carousel item indicator then the focus needs to be to the corresponding carousel item. The focus should _not_ be set to the carousel item if the toggle buttons are used, as the user may want to skip over several carousel items quickly and would use the position otherwise.
+When users select a carousel item through the buttons in a carousel item indicator then the focus needs to be to the corresponding carousel item. The focus should _not_ be set to the carousel item if the previous or next buttons are used, as the user may want to skip over several carousel items quickly and would use the position otherwise.
 
 Carousel items will often be coded using elements that, by default, are not focusable, such as `<li>` or  `<article>` elements. Use the `tabindex` attribute with its value set to `-1`, to make such elements capable of receiving focus using JavaScript, then set the focus on them. Refer to [Keyboard accessibility](/fundamentals/keyboard-access.html) for more background.
 
@@ -614,7 +659,7 @@ slidenav.addEventListener('click', function(event) {
 ## Putting it all together
 {:.newex}
 
-The sample below is a demo of the carousel that we've built by putting together the previous examples. It is a working example of a carousel where one carousel item at a time is displayed. It includes buttons for users to toggle back and forth between the carousel items, and a carousel item indicator that allows users to view which carousel item they are currently viewing and to jump to other carousel items. Animating this carousel will be explained on the next page.
+The sample below is a demo of the carousel that we've built by putting together the previous examples. It is a working example of a carousel where one carousel item at a time is displayed. It includes buttons for users to advance back and forth between the carousel items, and a carousel item indicator that allows users to view which carousel item they are currently viewing and to jump to other carousel items. Animating this carousel will be explained on the next page.
 
 {::nomarkdown}
 <%= sample_start %>
@@ -751,7 +796,8 @@ var myCarousel = (function() {
     setSlides(index);
   }
 
-  function setSlides(new_current, setFocus = false) {
+  function setSlides(new_current, setFocus) {
+    setFocus = typeof setFocusHere !== 'undefined' ? setFocusHere : false;
 
     new_current = parseFloat(new_current);
 
