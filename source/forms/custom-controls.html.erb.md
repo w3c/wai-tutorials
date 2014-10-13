@@ -126,6 +126,12 @@ The images of the stars are generated using <abbr title="Scalable Vector Graphic
   type="radio" name="rating" class="visuallyhidden">
   <label for="star0">
     <span class="visuallyhidden">0 Stars</span>
+    <svg viewBox="0 0 512 512">
+      <g stroke-width="70" stroke-linecap="square">
+            <path d="M91.5,442.5 L409.366489,124.633512"></path>
+            <path d="M90.9861965,124.986197 L409.184248,443.184248"></path>
+        </g>
+    </svg>
   </label>
 
   <input value="1" id="star1"
@@ -171,6 +177,7 @@ The images of the stars are generated using <abbr title="Scalable Vector Graphic
     width: 1em;
     height: 1em;
     fill: currentColor;
+    stroke: currentColor;
   }
   #star_rating label, #star_rating output {
     display:block;
@@ -185,6 +192,7 @@ The images of the stars are generated using <abbr title="Scalable Vector Graphic
     font-size: 1.5em;
     padding: 0 1em;
   }
+
   #star_rating input:checked ~ label {
     color: #999;
   }
@@ -199,12 +207,16 @@ The images of the stars are generated using <abbr title="Scalable Vector Graphic
     color: #036;
   }
   #star_rating input:hover ~ label,
-  #star_rating input:focus ~ label {
+  #star_rating input:focus ~ label,
+  #star_rating input[id="star0"] + label {
     color: #999;
   }
   #star_rating input:hover + label,
   #star_rating input:focus + label {
     color: #036;
+  }
+  #star_rating input[id="star0"]:checked + label {
+    color: #ff2d21;
   }
   #star_rating [type="submit"] {
     float:none;
@@ -247,6 +259,12 @@ document.querySelector('#star_rating').addEventListener('submit', function(event
   type="radio" name="rating" class="visuallyhidden">
   <label for="star0">
     <span class="visuallyhidden">0 Stars</span>
+    <svg viewBox="0 0 512 512">
+      <g stroke-width="70" stroke-linecap="square">
+        <path d="M91.5,442.5 L409.366489,124.633512"></path>
+        <path d="M90.9861965,124.986197 L409.184248,443.184248"></path>
+      </g>
+    </svg>
   </label>
 
   <input value="1" id="star1"
@@ -303,6 +321,7 @@ document.querySelector('#star_rating').addEventListener('submit', function(event
   width: 1em;
   height: 1em;
   fill: currentColor;
+  stroke: currentColor;
 }
 #star_rating label, #star_rating output {
   display:block;
@@ -331,12 +350,19 @@ document.querySelector('#star_rating').addEventListener('submit', function(event
   color: #036;
 }
 #star_rating input:hover ~ label,
-#star_rating input:focus ~ label {
+#star_rating input:focus ~ label,
+#star_rating input[id="star0"] + label {
   color: #999;
 }
 #star_rating input:hover + label,
 #star_rating input:focus + label {
   color: #036;
+}
+#star_rating input[id="star0"]:checked + label {
+  color: #ff2d21;
+}
+#star_rating [type="submit"] {
+  float:none;
 }
 ~~~
 
