@@ -26,7 +26,7 @@ In the example below, the `required` attribute is added to the input field. If y
 {::nomarkdown}
 <%= sample_start %>
 
-<form method="post" action="#">
+<form method="post" action="../../beyond/">
   <div>
     <label for="name">Name (required): </label> <input type="text" name="name" id="name" required aria-required="true">
 		<input type="submit" value="Submit">
@@ -69,7 +69,7 @@ The example below shows these HTML5 input types in action. Depending on your web
 {::nomarkdown}
 <%= sample_start %>
 
-<form method="post" action="#" id="valform">
+<form method="post" action="../../beyond/" id="valform">
   <div>
     <div><label for="email">Email: </label></div>
     <div><input type="email" name="email" id="email"></div>
@@ -171,7 +171,7 @@ In the example below, the `pattern` attribute of the `input` element specifies a
 {::nomarkdown}
 <%= sample_start %>
 
-<form method="post" action="#">
+<form method="post" action="../../beyond/">
   <div>
     <label for="license">German License Plate (CCC XXXX 9999):</label> <input type="text" id="license" pattern="[A-ZÖÄÜ]{1,3}( )[A-Z]{2,4}( )[0-9]{1,4}" />
   </div>
