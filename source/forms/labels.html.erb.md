@@ -59,7 +59,7 @@ The most basic way to associate labels with form controls is to provide both the
 
 Use the `for` attribute of the `<label>` element to explicitly associate labels with their form controls. The value of the `for` attribute must exactly match the value of the `id` attribute for the referenced form element.
 
-This approach is more robust because it explicitly associates the labels with the form elements within the code. It allows the labels and form controls to be displayed separately, for example on a mobile device when only one of the controls can be displayed at a time. It is also independent of the HTML code structure, which is particularly useful when the label text and form element are not included within the same parent element in the HTML code -- for example, when the form is formatted to look like a table, as in the example below.
+This approach is more robust because it explicitly associates the labels with the form elements within the code. It allows the labels and form controls to be displayed separately, for example on a mobile device when only one of the controls can be displayed at a time. It is also independent of the HTML code structure, which is particularly useful when the label text and form element are not included within the same parent element in the HTML code -- for example, when the form is designed to look like a table.
 
 {::nomarkdown}
 <%= sample_start %>
