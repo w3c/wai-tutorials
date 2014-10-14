@@ -127,7 +127,7 @@ Content outside form elements may be missed by screen readers that are in “For
 #### Using WAI-ARIA
 {:.ap}
 
-Another approach is to use the WAI-ARIA `aria-describedby` attribute to associate the instructions with form elements. At the time of writing, this approach may not be fully supported by all web browsers and assistive technologies.
+Another approach is to use the WAI-ARIA `aria-labelledby` attribute to associate the instructions with form elements. At the time of writing, this approach may not be fully supported by all web browsers and assistive technologies.
 
 {::nomarkdown}
 <%= sample_start %>
@@ -146,7 +146,7 @@ Another approach is to use the WAI-ARIA `aria-describedby` attribute to associat
   <div>
     <label for="expire4">Expiry date:</label>
     <span>
-      <input type="text" name="expire" id="expire4" aria-describedby="expDesc2">
+      <input type="text" name="expire" id="expire4" aria-labelledby="expDesc2">
       <span id="expDesc2">MM/YYYY</span>
     </span>
   </div>
@@ -162,7 +162,7 @@ Another approach is to use the WAI-ARIA `aria-describedby` attribute to associat
 ~~~ html
 <label for="expire">Expiry date:</label>
 <span>
-  <input type="text" name="expire" id="expire" aria-describedby="expDesc">
+  <input type="text" name="expire" id="expire" aria-labelledby="expDesc">
   <span id="expDesc">MM/YYYY</span>
 </span>
 ~~~
@@ -175,7 +175,7 @@ Another approach is to use the WAI-ARIA `aria-describedby` attribute to associat
 <%= notes_start %>
 {:/nomarkdown}
 
-**Note:** This technique is mostly interpreted by screen readers, so that non-screen reader users may not gain the information as easily. Until such associations are more broadly used by other assistive technology as well, it is often useful inform the user that instructions directly follow form controls.
+**Note:** This technique is mostly interpreted by screen readers, so that non-screen reader users may not gain the information as easily. Until such associations are more broadly used by other assistive technology as well, it is often useful to additionally inform the user that instructions directly follow form controls.
 
 {::nomarkdown}
 <%= notes_end %>
