@@ -303,7 +303,7 @@ To make the code more robust and address other situations, such as displaying th
 <%= notes_start %>
 {:/nomarkdown}
 
-**Note 1:** The label “Date of birth” is associated with the first form field "Day", so that the focus is set on this first form field when the label is clicked. HTML allows form fields to be associated with more than one label.
+**Note 1:** The label “Date of birth” is associated with the first form field “Day”, so that the focus is set on this first form field when the label is clicked. HTML allows form fields to be associated with more than one label.
 
 **Note 2:** While the example above works, it is preferable to avoid such compounded groups of form fields where possible. In most situations forms are clearer and easier to understand when form controls are designed to be presented individually and with visible labels for each.
 
