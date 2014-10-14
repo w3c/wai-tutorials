@@ -237,32 +237,6 @@ A `<label>` element is provided to identify the form element within the code, bu
 <%= code_end %>
 {:/nomarkdown}
 
-### Note on hiding elements
-
-Screen readers and other assistive technology, as with web browsers, hide elements from their users when they are styled using `display: none;` and `visibility: hidden;`. Use CSS that will display the elements yet make them virtually invisible to hide them visually but keep them active for screen readers and other assistive technology. The CSS code used in the previous examples is provided below:
-
-{::nomarkdown}
-<%= code_start %>
-{:/nomarkdown}
-
-~~~ css
-.visuallyhidden {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
-}
-~~~
-
-{::nomarkdown}
-<%= code_end %>
-{:/nomarkdown}
-
-
 ### Set of form controls
 {:.ex}
 
@@ -364,6 +338,30 @@ The code can be simplified by using `aria-label`, with the same outcome as above
 <%= code_end %>
 {:/nomarkdown}
 
+### Note on hiding elements
+
+Screen readers and other assistive technology, as with web browsers, hide elements from their users when they are styled using `display: none;` and `visibility: hidden;`. Use CSS that will display the elements yet make them virtually invisible to hide them visually but keep them active for screen readers and other assistive technology. The CSS code used in the previous examples is provided below:
+
+{::nomarkdown}
+<%= code_start %>
+{:/nomarkdown}
+
+~~~ css
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+~~~
+
+{::nomarkdown}
+<%= code_end %>
+{:/nomarkdown}
 
 ## Using the title attribute
 {:.newex}
