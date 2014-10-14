@@ -611,7 +611,7 @@ In the following example, a list with buttons is added using JavaScript and then
 
 When users select a carousel item directly through the buttons then the focus needs to be set to the corresponding carousel item. The focus should _not_ be set to the carousel item if the previous or next buttons are used, as the user may want to skip over several carousel items quickly and would use the position otherwise.
 
-Carousel items will often be coded using elements that, by default, are not focusable, such as `<li>` or  `<article>` elements. Use the `tabindex` attribute with its value set to `-1`, to make such elements capable of receiving focus using JavaScript, then set the focus on them. Refer to [Keyboard accessibility](/fundamentals/keyboard-access.html) for more background.
+Carousel items will often be coded using elements that, by default, are not focusable, such as `<li>` or  `<article>` elements. Use the `tabindex` attribute with its value set to `-1`, to make such elements capable of receiving focus using JavaScript, then set the focus on them.
 
 ### Focus change
 {:.ex}
