@@ -510,7 +510,7 @@ Indicating the total number of carousel items and which one of them is currently
 ### Carousel item indicator
 {:.ex}
 
-In the following example, a list with buttons is added using JavaScrip and then styled to look visually like a progress indicator. The buttons are numbered matching the corresponding carousel items. The button corresponding to the currently displayed carousel item is highlighted both visually and using visually hidden text. Also the button that currently has the keyboard or mouse focus is highlighted.
+In the following example, a list with buttons is added using JavaScript and then styled to look visually like a progress indicator. The buttons are numbered matching the corresponding carousel items. The button corresponding to the currently displayed carousel item is highlighted both visually and using visually hidden text. Also the button that currently has the keyboard or mouse focus is highlighted.
 
 {::nomarkdown}
 <%= code_start %>
@@ -609,7 +609,7 @@ In the following example, a list with buttons is added using JavaScrip and then 
 ## Focusing carousel items
 {:.newex}
 
-When users select a carousel item through the buttons in a carousel item indicator then the focus needs to be to the corresponding carousel item. The focus should _not_ be set to the carousel item if the previous or next buttons are used, as the user may want to skip over several carousel items quickly and would use the position otherwise.
+When users select a carousel item directly through the buttons then the focus needs to be set to the corresponding carousel item. The focus should _not_ be set to the carousel item if the previous or next buttons are used, as the user may want to skip over several carousel items quickly and would use the position otherwise.
 
 Carousel items will often be coded using elements that, by default, are not focusable, such as `<li>` or  `<article>` elements. Use the `tabindex` attribute with its value set to `-1`, to make such elements capable of receiving focus using JavaScript, then set the focus on them. Refer to [Keyboard accessibility](/fundamentals/keyboard-access.html) for more background.
 
