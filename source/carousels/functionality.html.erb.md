@@ -13,7 +13,7 @@ Provide functionality to display the carousel items one at a time, and to allow 
 
 ## Displaying carousel items
 
-Carousel items that are visually hidden should also be hidden from assistive technology, to avoid a mismatch between what is visually on the screen and what the user is interacting with. All carousel items that are not displayed visually are hidden by using the CSS `display: none` declaration. Refer to [content hiding techniques](/fundamentals/hiding.html) for more background.
+Carousel items that are visually hidden should also be hidden from assistive technology, to avoid a mismatch between what is visually on the screen and what the user is interacting with. All carousel items that are not displayed visually are hidden by using the CSS `display: none` declaration.
 
 ### Scripted styling
 {:.ex}

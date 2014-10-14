@@ -136,7 +136,7 @@ If there is already some text identifying the carousel in HTML, it is usually mo
 
 ## Item structure
 
-Also provide proper structure for content within individual carousel items. This makes them independent pieces of content that can be rendered and used in different ways. Refer to the tutorials on [headings](/fundamentals/heading.html) and [images](/images/index.html) for more background on how to provide these types of content.
+Also provide proper structure for content within individual carousel items. This makes them independent pieces of content that can be rendered and used in different ways. Refer to the [images tutorial](/images/index.html) for more information.
 
 ### Brief content
 {:.ex}
