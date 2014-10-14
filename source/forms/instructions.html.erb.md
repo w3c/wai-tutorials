@@ -127,7 +127,7 @@ Content outside form elements may be missed by screen readers that are in “For
 #### Using WAI-ARIA
 {:.ap}
 
-Another approach is to use the WAI-ARIA `aria-labelledby` attribute to associate the instructions with form elements. At the time of writing, this approach may not be fully supported by all web browsers and assistive technologies.
+Another approach is to use the WAI-ARIA `aria-labelledby` attribute to associate the instructions with form elements. At the time of writing, this approach may not be fully supported by all web browsers and assistive technologies, especially by non-screen readers.
 
 {::nomarkdown}
 <%= sample_start %>
@@ -169,16 +169,6 @@ Another approach is to use the WAI-ARIA `aria-labelledby` attribute to associate
 
 {::nomarkdown}
 <%= code_end %>
-{:/nomarkdown}
-
-{::nomarkdown}
-<%= notes_start %>
-{:/nomarkdown}
-
-**Note:** This technique is mostly interpreted by screen readers, so that non-screen reader users may not gain the information as easily. Until such associations are more broadly used by other assistive technology as well, it is often useful to additionally inform the user that instructions directly follow form controls.
-
-{::nomarkdown}
-<%= notes_end %>
 {:/nomarkdown}
 
 ### Placeholder text
