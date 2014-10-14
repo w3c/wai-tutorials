@@ -47,6 +47,8 @@ setTimeout(function(){
 
 var myCarousel = (function() {
 
+  "use strict";
+
   // Some variables for the instance of the carousel
   var carousel,
   slides,
@@ -57,12 +59,6 @@ var myCarousel = (function() {
   setFocus,
   animationSuspended,
   announceSlide = 'false';
-
-  // Helper function for iterating through elements
-  function forEachElement(elements, fn) {
-    for (var i = 0; i < elements.length; i++)
-    fn(elements[i], i);
-  }
 
   // Helper function for removing classes
   function removeClass(el, className) {
@@ -127,10 +123,11 @@ var myCarousel = (function() {
 
       slidenav.className = 'slidenav';
 
+      var li = document.createElement('li');
+
       if (settings.animate) {
 
         // Add Play/Pause button if the slider is animated
-        var li = document.createElement('li');
 
         if (settings.startAnimated) {
           li.innerHTML = '<button data-stop=true><span class="visuallyhidden">Stop Animation </span>￭</button>';
@@ -144,14 +141,13 @@ var myCarousel = (function() {
       if (settings.slidenav) {
 
         // Add button for each slide if slidenav = true
-        forEachElement(slides, function(el, i){
-          var li = document.createElement('li');
+        for (var i = slides.length - 1; i >= 0; i--) {
           var klass = (i===0) ? 'class="current" ' : '';
           var kurrent = (i===0) ? ' <span class="visuallyhidden">(Current Slide)</span>' : '';
 
           li.innerHTML = '<button '+ klass +'data-slide="' + i + '"><span class="visuallyhidden">News</span> ' + (i+1) + kurrent + '</button>';
           slidenav.appendChild(li);
-        });
+        }
       }
 
       // Register click event on the slidenav
@@ -345,7 +341,7 @@ var myCarousel = (function() {
     clearTimeout(timer);
     settings.animate = false;
     animationSuspended = false;
-    _this = carousel.querySelector('[data-stop], [data-start]');
+    var _this = carousel.querySelector('[data-stop], [data-start]');
     _this.innerHTML = '<span class="visuallyhidden">Start Animation </span>▶';
     _this.removeAttribute('data-stop');
     _this.setAttribute('data-start', 'true');
@@ -358,7 +354,7 @@ var myCarousel = (function() {
     timer = setTimeout(function () {
       nextSlide();
     }, 5000);
-    _this = carousel.querySelector('[data-stop], [data-start]');
+    var _this = carousel.querySelector('[data-stop], [data-start]');
     _this.innerHTML = '<span class="visuallyhidden">Stop Animation </span>￭';
     _this.setAttribute('data-stop', 'true');
     _this.removeAttribute('data-start');
