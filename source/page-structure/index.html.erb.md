@@ -8,9 +8,7 @@ topic_order: 6
 type: intro
 ---
 
-To help users orient themselves on web pages, the content and different areas needs to be structured so that it is easy for assistive technology to identify regions and content bits. This tutorial shows how to use HTML elements and WAI-ARIA attributes to allow users to navigate through the page and consume the content efficiently.
-
-* **[Landmarks](landmarks.html):** By adding `roles` to HTML elements, the purpose of their content is conveyed to users.
+To help users orient themselves on web pages, the content and different areas need to be structured to help assistive technology identify them. This tutorial shows how to use HTML elements and WAI-ARIA attributes to allow users to navigate through the page and engage with the content efficiently.
 
 * **[Headings](headings.html):** Convey the page’s structure by adding headings of different levels.
 
@@ -20,9 +18,12 @@ To help users orient themselves on web pages, the content and different areas ne
 
 * **[In-page Navigation](in-page-navigation.html):** Provide navigation aids to help users to get around the page and discover the various sections of the page. Consider adding a “table of content” for longer pieces of content.
 
+* **[Landmarks](landmarks.html):** By adding `roles` to HTML elements, the purpose of their content is conveyed to users.
+
+
 ## Why is this important?
 
-The content of the page is the reason why people are visiting websites in the first place and not being able to find content or navigate inside individual pages can create major accessibility barriers. An accessible page structure benefits users in many situations such as:
+The content of the page is the reason people are visiting websites in the first place. Being unable to find content or navigate inside individual pages can create major accessibility barriers. An accessible page structure benefits users in many situations such as:
 
 * **People using screen readers** can skip to the content directly and navigate to sections that are important to them. Content is read out in the way it is intended.
 * **People using distraction-free reading plugins** will receive better results if the main content is easily to determine.
