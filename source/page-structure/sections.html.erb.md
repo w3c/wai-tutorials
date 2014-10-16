@@ -7,17 +7,17 @@ wcag_techniques:
   - ARIA11
 ---
 
-To help people navigate around the page, they need to be able to identify distinctive sections on the page. There are some more important parts of a page that should be marked up on every website, for example navigations. Both, HTML5 and WAI-ARIA, provide mechanisms to mark up such sections in a meaningful way. On this page, common sections on websites are identified and marked up using those mechanisms.
+To help people navigate around the page, they need to be able to identify distinctive sections on the page. There are some more important parts of a page that should be marked up on every website, for example navigation. Both, HTML5 and WAI-ARIA, provide mechanisms to mark up such sections in a meaningful way. This page uses these techniques, for example, the main content is marked up using `<main>` and also given the attribute `role="main"`.
 
-HTML5 provides distinctive elements for certain types of page sections while WAI-ARIA utilizes the `role` attribute to add such metadata, which is mainly aimed at assistive technologies. Sometimes the so called WAI-ARIA landmark roles map directly to HTML5 elements, but this is not always the case.
+HTML5 provides distinctive elements for certain types of page sections, for example, `<header>`, and `<nav>`. WAI-ARIA utilizes the `role` attribute to add such metadata, which is mainly aimed at assistive technologies. Sometimes the WAI-ARIA landmark roles map directly to HTML5 elements, but this is not always the case.
 
-Some HTML elements are supposed to also carry implicit landmark roles, but this is not broadly supported at the time of writing, so the role should be stated explicitly. If HTML4 is used, `<div>` elements and/or headings are commonly used to identify page sections.
+Some HTML elements are should also carry implicit landmark roles by default, but this is not broadly supported at the time of writing, so the role should be stated explicitly. If HTML4 is used, `<div>` elements and/or headings are commonly used to identify page sections.
 
 ## Common page sections
 
 ### Main page header
 
-Most websites have a logo and some other information about the page at the top of the page. Sometimes a search or navigation can be included. This main page header should be identified by an HTML5 `<header>` element and an explicit `banner` role. The banner role is not implicit for `<header>` elements as there could be several such elements but usually there will only be one `banner` role.
+Most websites have a logo and other information at the top of the page. Sometimes a search or navigation can be included. This main page header should be identified by an HTML5 `<header>` element and an explicit `banner` role. The banner role is not implicit for `<header>` elements as they can be used in other situations. Usually there will only be one `banner` role per page.
 
 {::nomarkdown}
 <%= code_start %>
@@ -72,7 +72,7 @@ Main content of a document should be wrapped in a `<main>` element that implicit
 
 ### Page footer
 
-The term page footer refers to a section on the page that contains auxiliary information like (links to) copyright or privacy statements. In HTML5 it is usually marked up as a `<footer>` element. It does not carry an implicit role but it makes sense to add `contentinfo` to distinguish the page `<footer>` element from other uses of `<footer>` in the page, for example as the footer of an article.
+The term “page footer” refers to a section on the page that contains auxiliary information such as links to copyright or privacy statements. In HTML5 it is usually marked up as a `<footer>` element. It does not carry an implicit role but it makes sense to add `contentinfo` to distinguish the page `<footer>` element from other uses of `<footer>` in the page, for example as the footer of an article.
 
 {::nomarkdown}
 <%= code_start %>
@@ -88,7 +88,7 @@ The term page footer refers to a section on the page that contains auxiliary inf
 <%= code_end %>
 {:/nomarkdown}
 
-### Content complementary to the main content
+### Complementary content
 
 Any section of the document that supports the main content, yet is separate and meaningful on its own, should be marked up using an `<aside>` element, which does not carry an implicit role as it can be used in other circumstances as well. A role of `complementary` can be added to sidebars or links to related content to make the purpose of the section more explicit.
 
@@ -109,7 +109,7 @@ Any section of the document that supports the main content, yet is separate and 
 
 ### Search section
 
-The `search` role marks the “search tool” of the website, this means not only the actual input field, but also the search button and options, can be included in this section. The form below contains a `<div>` element with a `search` role. There is no HTML5 equivalent for this role.
+The `search` role marks the “search tool” of the website. This should include not only the actual input field, but also the search button and options. The form below contains a `<div>` element with a `search` role. There is no HTML5 equivalent for this role.
 
 {::nomarkdown}
 <%= sample_start %>
@@ -130,7 +130,7 @@ The `search` role marks the “search tool” of the website, this means not onl
 ~~~html
 <form action="…">
   <div role="search">
-    <input type="search" aria-label="Search"> <button type="submit" style="float:none;">Search</button>
+    <input type="search" aria-label="Search"> <button type="submit">Search</button>
   </div>
 </form>
 ~~~
@@ -141,19 +141,19 @@ The `search` role marks the “search tool” of the website, this means not onl
 
 ### Generic sections
 
-Other sections of the page can be marked up as `<section>` elements which carry an implicit role of `region` which basically is a generic landmark. Be careful not to overuse it, as it adds a lot of additional “noise” when encountered using a screen reader. Use it to group items together. It should also always be labeled.
+Other sections of the page can be marked up as `<section>` elements which carry an implicit role of `region` which is a generic landmark. Be careful not to overuse it, as it adds a lot of additional “noise” when encountered using a screen reader. Use it to group items together. It should also always be labeled.
 
 ### A note on the application role
 
-The role `application` declares a section as a web application, as opposed to a web document. The role of application should only be **used with caution**, as it gives a signal to screen reading software to turn off normal web navigation controls. Simple widgets should generally not be given the application role, nor should an entire web page be given the application role, unless it is not to be used at all like a web page, and not without much user testing with assistive technology.
+The role `application` declares a section as a web application, as opposed to a web document. The role of application should be **used with caution**, as it gives a signal to screen reading software to turn off normal web navigation controls. Simple widgets should generally not be given the application role, nor should an entire web page be given the application role, unless it is not to be used at all like a web page, and not without much user testing with assistive technology.
 
 ## Labeling sections
 
-Especially if there are multiple sections with the same role, like multiple navigation sections or sidebars, it is important to label them by using one of the techniques shown below.
+Labeling sections provides additional information for assistive technology and helps clarify areas of the page. This is especially important if there are multiple sections with the same role.
 
 ### Using `aria-labelledby`
 
-If a heading or some other text is present that can properly describe the content of a section, it can be referenced by adding an `id` attribute to the heading and using that `id` value as a value of the `aria-labelledby` of the landmark section.
+If a heading or some other text is present that describes the content of a section then add an `id` attribute in the heading and use this as a value for the `aria-labelledby` in the landmark section.
 
 {::nomarkdown}
 <%= code_start %>
@@ -172,7 +172,7 @@ If a heading or some other text is present that can properly describe the conten
 
 ### Using `aria-label`
 
-If no describing text is present, the `aria-label` attribute should be used to label the individual landmarks.
+If there is no descriptive text then the `aria-label` attribute should be used to label the individual landmarks.
 
 {::nomarkdown}
 <%= code_start('','HTML4') %>
