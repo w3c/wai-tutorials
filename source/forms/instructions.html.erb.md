@@ -182,6 +182,7 @@ Refer to the techniques described in [Hidden labels](labels.html#hidden) in case
 
 {::nomarkdown}
 <%= sample_start %>
+
 <form method="post" action="#">
   <div>
     <label for="search">Search:</label> <input type="text" name="search" id="search" placeholder="e.g. Apple Pie">
@@ -190,6 +191,28 @@ Refer to the techniques described in [Hidden labels](labels.html#hidden) in case
     <label for="email">Email: </label> <input type="text" name="email" id="email" placeholder="joe@example.com">
   </div>
 </form>
+
+<style>
+::-webkit-input-placeholder {
+   color: #777;
+   opacity: 1;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: #777;
+   opacity: 1;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #777;
+   opacity: 1;
+}
+
+:-ms-input-placeholder {
+   color: #777;
+   opacity: 1;
+}
+</style>
 
 <%= sample_end %>
 {:/nomarkdown}
@@ -211,12 +234,36 @@ Refer to the techniques described in [Hidden labels](labels.html#hidden) in case
 <%= code_end %>
 {:/nomarkdown}
 
+#### Styling
+
+At the time of writing, browsers usually display the placeholder text in too light colors. The [minimum color contrast requirement of WCAG 2.0](/WAI/WCAG20/quickref/#qr-visual-audio-contrast-contrast) is not met by those placeholders which means they are really hard to see. Browsers use a combination of color and opacity to achieve the desired look. In most browsers the color of the placeholder can be styled using proprietary CSS selectors. The following code snippet sets the color to a light gray, which has just enough contrast to meet the contrast requirement, assuming the background of the element is white.
+
 {::nomarkdown}
-<%= notes_start %>
+<%= code_start %>
 {:/nomarkdown}
 
-**Note:** To provide more clarity, ensure that the style of placeholder text is distinguishable from regular text. This is commonly done by reducing the contrast ratio of placeholder text. Usually browsers take care of this. If custom styling of the placeholder text is needed, consider to meet the [minimum color contrast requirement of WCAG 2.0](/WAI/WCAG20/quickref/#qr-visual-audio-contrast-contrast).
+~~~ css
+::-webkit-input-placeholder {
+   color: #777;
+   opacity: 1;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: #777;
+   opacity: 1;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #777;
+   opacity: 1;
+}
+
+:-ms-input-placeholder {
+   color: #777;
+   opacity: 1;
+}
+~~~
 
 {::nomarkdown}
-<%= notes_end %>
+<%= code_end %>
 {:/nomarkdown}
