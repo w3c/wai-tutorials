@@ -17,13 +17,13 @@ wcag_techniques:
   - H42
 ---
 
-Headings are used to add structure to content. They should describe the following part of the content that is provided. On the web, they can fulfill two different roles: Structuring the text in the main content section and labeling the various components of the page.
+Headings add structure and meaning to pages by labeling each content part and indicating the relative importance of those parts.
 
-Screen readers provide mechanisms to present a list of headings to the user that allows jumping to those individual headings. Headings also provide visual clues that help to skim the page or find a specific section, especially when the user was distracted.
+Assistive technologies provide mechanisms to present a list of headings to the user that allows users to jump to individual headings. Headings also provide visual clues that help to skim the page or find a specific section, especially when the user was distracted.
 
 ## Heading levels
 
-It is good practice to nest headings properly. Jumping headings should be avoided. hat means that an `<h1>` is followed by an `<h1>` (rarely) or `<h2>`, an `<h2>` is followed by a `<h2>` or `<h3>` etc.
+It is good practice to nest headings properly. When stepping down through headings, skipping levels should be avoided. That means that an `<h1>` is followed by an `<h1>` or `<h2>`, an `<h2>` is followed by a `<h2>` or `<h3>` etc. When stepping up through headings it is perfectly legitimate to skip any number of levels.
 
 {::nomarkdown}
 <%=notes_start%>
@@ -37,7 +37,7 @@ It is good practice to nest headings properly. Jumping headings should be avoide
 
 ## Organize main page content
 
-When looking at the content, the highest available heading level should be used to mark up the heading of the main content, as this makes it easy to discover. Ideally a `<h1>` or `<h2>` element is used.
+When looking at the content, the highest available heading level should be used to mark up the heading of the main content, as this makes it easy to discover. Ideally use an `<h1>` or `<h2>`.
 
 {::nomarkdown}
 <%=code_start('','Showing only headings')%>
@@ -46,8 +46,8 @@ When looking at the content, the highest available heading level should be used 
 ~~~html
 <h1>An inside look at the new SpaceBear 8™</h1>
   <h2>Cotton Fur</h2>
-  <h2>Saphire Eyes</h2>
-  <h2>Syntetic Felt Paws</h2>
+  <h2>Sapphire Eyes</h2>
+  <h2>Synthetic Felt Paws</h2>
 ~~~
 
 {::nomarkdown}
@@ -82,4 +82,4 @@ Similar to landmarks, headings can be used to give users a way of navigating thr
 <%=code_end%>
 {:/nomarkdown}
 
-The first heading in such cases is usually the page name, the heading of the actual content is hard to find between headings that describe the page structure. If possible, [labeled landmarks](landmarks.html) are much more convenient to mark up the structure of the page.
+The first heading in such cases is usually the page name. In this case, the heading of the actual content is hard to find between headings that describe the page structure. If possible use [labeled landmarks](landmarks.html) to mark up the page structure as the provide more meaning to assistive technologies.
