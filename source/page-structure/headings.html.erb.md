@@ -19,7 +19,7 @@ wcag_techniques:
 
 Headings add structure and meaning to pages by labeling each content part and indicating the relative importance of those parts.
 
-Assistive technologies provide mechanisms to present a list of headings to the user that allows users to jump to individual headings. Headings also provide visual clues that help to skim the page or find a specific section, especially when the user was distracted.
+Assistive technologies provide mechanisms to present a list of headings to the user that allows users to jump to individual headings. Headings also provide visual clues that help to skim the page or find a specific section, this is especially useful for people that are easily distracted.
 
 ## Heading levels
 
