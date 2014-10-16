@@ -8,15 +8,15 @@ wcag_techniques:
   - H48
   - H49
 ---
-Beside [headings](headings.html), there are a lot of possibilities to structure texts so they can be consumed more easily.
+Beside [headings](headings.html), there are a lot of ways to structure content using semantic HTML elements. This helps to keep the website extensible, the content reusable and also conveys more meaning to assistive technologies.
 
 ## Paragraphs
 
-The most simple form of text structuring is to write texts in paragraphs, adding rhythm and lightness to the page. The paragraph element (`<p>`) should be used, as it can be styled in a consistent way and also can be used to change the display by assistive technologies.
+The most simple form of text structuring is to write texts in paragraphs, adding rhythm and lightness to the page. The paragraph element (`<p>`) should be used, as its consistent styling improves readability of the text. The styling of paragraphs is often altered by user stylesheets to adapt for the user’s needs.
 
 ## Lists
 
-There are ordered and unordered lists in HTML. Use ordered lists if the list needs to be read and done in order, for example how to prepare a meal. They are enumerated automatically by the browser. In an unordered list the order does not matter, for example on an ingredients list, the order buying the ingredients is not relevant. Every list item in unordered lists is marked with a bullet. Both types of lists provide orientation for the user.
+HTML provides elements to mark up ordered and unordered lists. Use ordered lists if the content has instructions or information that is performed or used in sequence, for example how to prepare a meal. They are enumerated automatically by the browser. In an unordered list the order does not matter, for example on an ingredients list, the purchase order of ingredients is not relevant. Every list item in unordered lists is marked with a bullet. Both types of lists provide orientation for the user.
 
 List items can contain all kinds of different HTML elements, including paragraphs, headings, and form elements.
 
@@ -97,7 +97,7 @@ The unordered list consists of one `<ol>` element and multiple list item (`<li>`
 ### Nested lists
 {:.ex}
 
-Every list can be nested into another list. In this example, the order of preparation is not important, but it should be done before using them. The information is still easy to digest, assistive technology can inform users about the number of steps easily.
+Every list can be nested into another list. In this example, the order of preparation is not important, but it should be done before using them. The information is still easy to digest, assistive technology can easily inform users about the number of steps.
 
 {::nomarkdown}
 <%=sample_start%>
@@ -206,7 +206,7 @@ Definition lists are typically used in a glossary and are easiest to use when th
 ## Quotes
 {:.newex}
 
-Marking up quotes in text is often important to interpret text correctly.
+Identifying a quotation as such helps clarify that the content is attributed to another author. Quotes can be marked up as inline or as blocks of text.
 
 ### Blockquote
 {:.ex}
@@ -289,7 +289,7 @@ q:after { content: ""; }
 
 ## Figures
 
-Figures are an addition to HTML5 that allows to add captions to lists, images, tables, and other content that is related to the main text but should be only referenced from there. For example an annual report could reference to table T3, which contains the sales volumes of a product. It allows users to dive deeper in the data or to skip it. The related content is wrapped in a `<figure>` element, a `<figcaption>` element is added that has the description of the content.
+Figures are an addition to HTML5 that allows captions to be associated with lists, images, tables, and other content. For example an annual report could reference to a table, which contains the sales volumes of a product. It allows users to dive deeper in the data or to skip it. The related content is wrapped in a `<figure>` element, a `<figcaption>` element is added that has the description of the content.
 
 At the time of writing, WAI-ARIA attributes `role="group"` and `aria-labelledby` are used to provide the information to assistive technologies in a consistent way.
 
