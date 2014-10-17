@@ -159,7 +159,7 @@ The outcome looks like this:
 
 ## Switching carousel items
 
-Scripting is further used to add buttons that allow users to switch back and forth between carousel items. While these buttons often have various styles visually, it is useful to code them using `<button>` elements. This gives them semantic meaning and also makes them more compatible with assistive technology and keyboard use. Refer to [keyboard accessibility](/fundamentals/keyboard-access.html) for more background.
+Scripting is further used to add buttons that allow users to switch back and forth between carousel items. While these buttons often have various styles visually, it is useful to code them using `<button>` elements. This gives them semantic meaning and also makes them more compatible with assistive technology and keyboard use. If the carousel uses `<a>` elements instead, a `href` attribute needs to be present to enable keyboard access. Additionally `role="button"` should be applied to the link so assistive technology users know that they expect an interaction on the page rather than a link to another page.
 
 ### Previous and next buttons
 

@@ -215,7 +215,7 @@ This example also uses a list, even though the carousel items consist of more su
 
 At this stage the carousel does not have any functionality. This is added later using scripting, based on the class names of the elements. If scripting is not enabled for various reasons, including bad network connection or user choice, the functionality would not work anyway.
 
-This does not prevent you from providing the basic styling for the carousel so that it looks appropriate even when scripting is not enabled. In many cases carousels are styled with background images and overlaid text, so that [color contrast ratio](/fundamentals/color.html) considerations are relevant.
+This does not prevent you from providing the basic styling for the carousel so that it looks appropriate even when scripting is not enabled. In many cases carousels are styled with background images and overlaid text, so contrast ratio requirements need to be met.
 
 ### Styled carousel
 {:.ex}
