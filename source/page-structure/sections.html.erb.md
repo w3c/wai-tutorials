@@ -5,13 +5,14 @@ order: 2
 wcag_success_criteria:
 wcag_techniques:
   - ARIA11
+technologies: HTML5, WAI-ARIA
 ---
 
-To help people navigate around the page, they need to be able to identify distinctive sections on the page. There are some more important parts of a page that should be marked up on every website, for example navigation. Both, HTML5 and WAI-ARIA, provide mechanisms to mark up such sections in a meaningful way. This page uses these techniques, for example, the main content is marked up using `<main>` and also given the attribute `role="main"`.
+To help people navigate around the page, they need to be able to identify distinctive page sections such as navigation, main content, headers, and footers. More important parts of a page should be marked up on every website, for example navigation.
 
-HTML5 provides distinctive elements for certain types of page sections, for example, `<header>`, and `<nav>`. WAI-ARIA utilizes the `role` attribute to add such metadata, which is mainly aimed at assistive technologies. Sometimes the WAI-ARIA landmark roles map directly to HTML5 elements, but this is not always the case.
+Both, HTML5 and WAI-ARIA, provide mechanisms to mark up such sections in a meaningful way: HTML5 defines distinctive elements for certain types of page sections, for example, `<header>` and `<nav>`. WAI-ARIA utilizes the `role` attribute to add such information. It is mainly used by assistive technologies. Sometimes the WAI-ARIA landmark roles map directly to HTML5 elements, but this is not always the case.
 
-Some HTML elements are should also carry implicit landmark roles by default, but this is not broadly supported at the time of writing, so the role should be stated explicitly. If HTML4 is used, `<div>` elements and/or headings are commonly used to identify page sections.
+Some HTML elements are should also carry implicit landmark roles by default, but this is not broadly supported at the time of writing, so the role should be stated explicitly. If HTML4 is used, `<div>` elements with ARIA landmark roles and/or headings are commonly used to identify page sections.
 
 ## Common page sections
 
