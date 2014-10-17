@@ -220,7 +220,7 @@ This does not prevent you from providing the basic styling for the carousel so t
 ### Styled carousel
 {:.ex}
 
-The example below shows how the carousel structure from the previous example is styled. It uses semi-transparent backgrounds behind the overlaid text, to ensure sufficient color contrast to the background image.
+The example below shows how the carousel structure from the previous example is styled. As the background images can be distracting, using a background color for the overlaying text is a good way to ensure a good ratio even if images change. In this example, a semi-transparent background is used behind the overlaid text. Note that the opacity is high (80%) to make sure that the contrast ratio is met. Testing for contrast ratio conformance needs to be done using the resulting, visible color on the element, not the semi-transparent base color.
 
 {::nomarkdown}
 <%= notes_start %>
