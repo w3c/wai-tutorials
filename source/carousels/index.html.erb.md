@@ -22,7 +22,9 @@ Carousels, commonly also referred to as “slide shows” or “sliders”, disp
 
 ## Why is this important?
 
-Carousels are frequently used, in particular on home pages, to draw the readers' attention to featured articles and products of the website. Given their prominence, inaccessible carousels can be a major obstacle for many website visitors. On the other hand, accessible carousels provide more effective access for many users including:
+Carousels are frequently used, in particular on home pages, to draw the readers' attention to featured articles and products of the website. Carousels often use animations to move from slide to slide which can be distracting or they move so fast that carousel content is hard or impossible to grasp. Also, carousels often pose traps to keyboard users, not allowing them to use the carousel or even get stuck inside, without a chance to leave the carousel and read the rest of the page.
+
+Given their prominence, inaccessible carousels can be a major obstacle for many website visitors. On the other hand, accessible carousels provide more effective access for many users including:
 
 - **People using keyboard navigation and voice input software** can navigate between carousel items.
 - **People using screen readers** will understand where they are and how to navigate between carousel items.
