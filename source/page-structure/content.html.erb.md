@@ -8,7 +8,7 @@ wcag_techniques:
   - H48
   - H49
 ---
-Beside [headings](headings.html), there are a lot of ways to structure content using semantic HTML elements. This helps to keep the website extensible, the content reusable and also conveys more meaning to assistive technologies.
+Besides [headings](headings.html), there are a lot of ways to structure content using semantic HTML elements. This helps to keep the website extensible, the content reusable and also conveys more meaning to assistive technologies.
 
 ## Paragraphs
 
