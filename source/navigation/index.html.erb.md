@@ -25,7 +25,7 @@ wcag_techniques:
   - G183
 ---
 
-Menus are used to browse around websites. As they are vital to accessing content on websites, they need to be operable with pointing devices (like a mouse) and keyboards. This tutorial includes the following pages:
+Menus are used to browse around websites (“navigation menus”) or initiate actions inside a web page. As they are vital to operate websites and web applications, they need to be usable regardless of the user’s input method. This tutorial includes the following pages:
 
 * **[Structure](structure.html):** Mark up menus using lists to enable easy access to all pages of the website.
 
