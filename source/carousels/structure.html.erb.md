@@ -43,7 +43,7 @@ In many situations, the carousel items are fairly brief so that a simple a list 
 ### Set of articles
 {:.ap}
 
-If carousel items are have a lot of complex content, other elements can be used for the carousel framework. For example, HTML5 provides the `<article>` element, which is useful for carousels with items that are independent pieces of content. Make sure to provide headings for each article. The example below shows the use of `<article>` elements to represent a carousel.
+If carousel items have a lot of complex content, other elements can be used for the carousel framework. For example, HTML5 provides the `<article>` element, which is useful for carousels with items that are independent pieces of content. Make sure to provide headings for each article. The example below shows the use of `<article>` elements to represent a carousel.
 
 {::nomarkdown}
 <%= code_start %>
@@ -136,12 +136,12 @@ If there is already some text identifying the carousel in HTML, it is usually mo
 
 ## Item structure
 
-Also provide proper structure for content within individual carousel items. This makes them independent pieces of content that can be rendered and used in different ways. Refer to the [images tutorial](/images/index.html) for more information.
+Provide proper structure for content within individual carousel items. This makes them independent pieces of content that can be rendered and used in different ways.
 
 ### Brief content
 {:.ex}
 
-In the following example, the carousel items only consist of an image each, so that a simple list was used to represent the carousel. The carousel itself is identified using a heading, and the text alternatives are considered for the images of the carousel items. The code provides structure and meaning, even without any styling and scripting added.
+In the following example, each carousel item only consists of an image, so that a simple list is used to represent the carousel. The carousel itself is identified using a heading, and the text alternatives are provided for the images within the carousel items. The code provides structure and meaning, even without any styling and scripting added.
 
 {::nomarkdown}
 <%= code_start %>
@@ -152,13 +152,13 @@ In the following example, the carousel items only consist of an image each, so t
 <div class="carousel">
   <ul>
       <li class="slide">
-          <img src="path/to/image.jpg" alt="Alternative text">
+          <img src="path/to/image1.jpg" alt="Alternative text 1">
       </li>
       <li class="slide">
-          <img src="path/to/image.jpg" alt="Alternative text">
+          <img src="path/to/image2.jpg" alt="Alternative text 2">
       </li>
       <li class="slide">
-          <img src="path/to/image.jpg" alt="Alternative text">
+          <img src="path/to/image3.jpg" alt="Alternative text 3">
       </li>
   </ul>
 </div>
@@ -171,7 +171,7 @@ In the following example, the carousel items only consist of an image each, so t
 ### Complex content
 {:.ex}
 
-This example also uses a list, even though the carousel items consist of more substantial content than in the previous example. This approach was selected as the individual carousel items are not independent pieces of content and thus not suitable for the  `<article>` element. The individual list items include a heading, text, and links each.
+This example also uses a list, even though the carousel items consist of more substantial content than in the previous example. This approach was selected as the individual carousel items are not independent pieces of content and thus not suitable for the  `<article>` element. Each individual list item includes a heading, text, and links.
 
 {::nomarkdown}
 <%= code_start %>
@@ -213,7 +213,7 @@ This example also uses a list, even though the carousel items consist of more su
 ## Carousel styling
 {:.newex}
 
-At this stage the carousel does not have any functionality. This is added later using scripting, based on the class names of the elements. If scripting is not enabled for various reasons, including bad network connection or user choice, the functionality would not work anyway.
+At this stage the carousel does not have any functionality. This is added later using scripting, based on the class names of the elements. This ensures that if scripting is not enabled for various reasons, including bad network connection or user choice, the content will still be meaningful.
 
 This does not prevent you from providing the basic styling for the carousel so that it looks appropriate even when scripting is not enabled. In many cases carousels are styled with background images and overlaid text, so contrast ratio (“color contrast”) requirements need to be met.
 
