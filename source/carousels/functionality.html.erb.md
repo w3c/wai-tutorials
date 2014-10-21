@@ -78,7 +78,7 @@ The outcome looks like this:
 
 <style>
   .carousel, .slide {
-    width: 640px;
+    width: 480px;
     padding:0;
     margin: 0;
   }
@@ -91,7 +91,7 @@ The outcome looks like this:
   }
   .slide {
     /*position: absolute;*/
-    height: 480px;
+    height: 360px;
     background-size: cover;
     position: relative;
     margin-bottom:1em;
@@ -126,7 +126,7 @@ The outcome looks like this:
 
 <style>
 .carousel.active {
-  height: 480px;
+  height: 360px;
   overflow: hidden;
   border: 1px solid #333;
   position:relative;

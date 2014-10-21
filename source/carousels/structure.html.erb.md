@@ -265,7 +265,7 @@ The example below shows how the carousel structure from the previous example is 
 
 <style>
   .carousel, .slide {
-    width: 640px;
+    width: 480px;
     padding:0;
     margin: 0;
     /* overflow: hidden; */
@@ -279,7 +279,7 @@ The example below shows how the carousel structure from the previous example is 
   }
   .slide {
     /*position: absolute;*/
-    height: 480px;
+    height: 360px;
     background-size: cover;
     position: relative;
     margin-bottom:1em;
