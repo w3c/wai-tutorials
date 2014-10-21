@@ -9,7 +9,7 @@ wcag_success_criteria:
   - 4.1.2
 ---
 
-Provide functionality to display the carousel items one at a time, and to allow users to browse through them. This functionality is added using scripting, based structure of the elements involved.
+Provide functionality using scripting to display the carousel items one at a time, and to allow users to browse through them.
 
 ## Displaying carousel items
 
@@ -18,7 +18,7 @@ Carousel items that are visually hidden should also be hidden from assistive tec
 ### Scripted styling
 {:.ex}
 
-In the example below, JavaScript is used to add the class name `.active` to the carousel container. The styling for this class positions all carousel items all on top of each other and hides them. The class name `.current` is added to the one carousel item that is to be displayed, which ensure that it is on top of all other hidden carousel items.
+In the example below, JavaScript is used to add the class name `.active` to the carousel container. The styling hides all the slides in a stack with only the slide with the class name `.current` being visible on top.
 
 {::nomarkdown}
 <%= code_start('','CSS') %>
@@ -159,13 +159,13 @@ The outcome looks like this:
 
 ## Switching carousel items
 
-Scripting is further used to add buttons that allow users to switch back and forth between carousel items. While these buttons often have various styles visually, it is useful to code them using `<button>` elements. This gives them semantic meaning and also makes them more compatible with assistive technology and keyboard use. If the carousel uses `<a>` elements instead, a `href` attribute needs to be present to enable keyboard access. Additionally `role="button"` should be applied to the link so assistive technology users know that they expect an interaction on the page rather than a link to another page.
+Scripting is further used to add buttons that allow users to switch back and forth between carousel items. While these buttons have various visual styles, it is useful to code them using `<button>` elements. This gives them semantic meaning and also makes them more compatible with assistive technology and keyboard use. If the carousel uses `<a>` elements instead, a `href` attribute needs to be present to enable keyboard access. Additionally `role="button"` should be applied to the link so assistive technology users know that they expect an interaction on the page rather than a link to another page.
 
 ### Previous and next buttons
 
 In the example below, JavaScript is used to generate code for the buttons and insert them onto the carousel. These particular buttons are visually displayed as arrows that overlay the carousel items. The images use the alternative text that reads "Previous Slide" and "Next Slide".
 
-A semi-transparent white background with black arrows was selected to ensure sufficient color contrast between the text and any background images in the carousel items. This is especially important for possibly noisy background images. Also, the buttons increase in size when users hover over them with the mouse to provide more click area for people with reduced dexterity. They also increase in size when they are focused by keyboard to better highlight to keyboard users where the current focus is.
+A semi-transparent white background with black arrows was selected to ensure sufficient color contrast between the text and any background images in the carousel items. This is especially important for noisy background images. Also, the buttons increase in size when users hover over them with the mouse to provide more click area for people with reduced dexterity. They also increase in size when they are focused by keyboard to better highlight where the current focus is.
 
 {::nomarkdown}
 <%= code_start('', 'JavaScript') %>
@@ -239,7 +239,7 @@ carousel.appendChild(ctrls);
 <%= code_end %>
 {:/nomarkdown}
 
-Additionally, an WAI-ARIA live region should be used to inform screen reader users which slide is now visible. Note that the slide does not receive focus as a user might want to skip several slides without navigating to the controls after every slide change.
+Additionally, a WAI-ARIA live region should be used to inform screen reader users which slide is now visible. Note that the slide does not receive focus as a user might want to skip several slides without navigating to the controls after every slide change.
 
 {::nomarkdown}
 <%= code_start('', 'Extend event listeners') %>
@@ -505,7 +505,7 @@ The outcome looks like this:
 ## Indicating carousel items
 {:.newex}
 
-Indicating the total number of carousel items and which one of them is currently being displayed helps users to orient themselves and find any information they need. Ideally this is done by a set of styled buttons that each represent a carousel item in the sequence. Providing these slide representations as buttons that can be activated allows users to browse more freely within the carousel items. Providing these buttons within a list, adds meaning and semantics to the content, such as the number and order of the carousel items.
+Indicating the total number of carousel items and which one of them is currently being displayed helps users to orient themselves. Ideally this is done by a set of styled buttons that each represent a carousel item in the sequence. Providing these buttons within a list, adds meaning and semantics to the content, such as the number and order of the carousel items.
 
 ### Carousel item indicator
 {:.ex}
