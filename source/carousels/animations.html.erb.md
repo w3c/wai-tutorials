@@ -6,11 +6,11 @@ wcag_success_criteria:
   - 2.2.2
 ---
 
-Provide users with control over any animations in your carousel. Carousels typically periodically rotate the displayed items. Providing different ways for users to stop this animation is essential for people who might find the permanent changes distracting, and for people who need more time to read carousel items.
+Carousels typically periodically rotate the displayed items. Provide users with control over any animations in your carousel. Providing different ways for users to stop this animation is essential for people who might find the changes distracting, and for people who need more time to read carousel items.
 
 ## Stop button
 
-One common approach to control carousel animations is to provide a button to allow users to stop and resume the animations. In the example below, such a button is added to the [carousel items indicator bar](/carousels/controls.html#indicating-carousel-items). The button label and its function alternate, depending on whether the animation is currently on or off:
+One common approach to control carousel animations is to provide a button to allow users to stop and resume the animations. The example below, illustrates how such a button might be marked-up. The button label and its function alternate, depending on whether the animation is currently on or off:
 
 {::nomarkdown}
 <%= code_start %>
