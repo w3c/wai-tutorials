@@ -120,7 +120,7 @@ If a menu has so few items that they can fit in one line on the screen, a horizo
 
 ## Indicating hover and focus
 
-When the user focuses a menu item or hovers over one using the mouse pointer, the individual menu item should change so users know where the focus is or which menu item is hovered. In the examples in this tutorial, the menu item is inverted and the words are underlined.
+When the user focuses a menu item or hovers over one using the mouse pointer, the individual menu item should change so users know where the focus is or which menu item is hovered. In the examples in this tutorial, the menu item is inverted and the words are underlined. Another possibility is to change the shape of the menu item, for example by introducing a bullet or an arrow while the menu item is hovered.
 
 ## Indicating the current page
 

@@ -4,6 +4,7 @@ nav_title: Structure
 status: editors-draft
 order: 2
 wcag_success_criteria:
+  - 4.1.2
 wcag_techniques:
   - ARIA6
   - ARIA11
@@ -112,7 +113,7 @@ To make it easier to find menus, they should be labeled according to their indiv
 ### Using a (hidden) heading
 {:.ap}
 
-Users that use headings to find relevant section on web pages can discover the menu easily if a heading is provided.
+Users that use headings to find relevant sections on web pages, for example screen reader users, can discover the menu easily if a heading is provided.
 
 {::nomarkdown}
 <%= code_start('','HTML') %>
@@ -128,11 +129,34 @@ Users that use headings to find relevant section on web pages can discover the m
 <%= code_end %>
 {:/nomarkdown}
 
+Note that the heading **can not** be hidden using `display: none;` or `visually: hidden;` as both also hide content from screen readers. Use absolute positioning and a negative margin to hide the text from screen or use this code snippet which does the same:
+
+{::nomarkdown}
+<%= code_start('','CSS') %>
+{:/nomarkdown}
+
+~~~ css
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+~~~
+
+{::nomarkdown}
+<%= code_end %>
+{:/nomarkdown}
+
 
 ### Using `aria-label`
 {:.ap}
 
-The `aria-label` provides information to users that use landmarks to navigate the page. This approach makes it possible to use headings only in the main content of the page. The label of the menu is announced when entering the menu as well as when navigating to it.
+The `aria-label` provides a description of the section to users that use landmarks to navigate the page. This approach makes it possible to use headings only in the main content of the page. The label of the menu is announced when entering the menu as well as when navigating to it.
 
 {::nomarkdown}
 <%= code_start('','HTML') %>
