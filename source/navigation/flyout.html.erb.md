@@ -297,7 +297,7 @@ Array.prototype.forEach.call(menuItems, function(el, i){
 
 ### Improve keyboard support
 
-To improve Keyboard support, the decision has to be made if the top-level menu item should serve as a toggle for the menu for all users or be a link itself. Don’t just open the submenu as soon as the focus enters the parent menu item, as that would mean a keyboard user tediously needs to step through all the submenu links to get to the next top-level item.
+To improve Keyboard support, the decision has to be made if the top-level menu item should serve as a toggle for the menu for all users or be a link itself. Don’t open the submenu as soon as the focus enters the top-level menu item, as that would mean a keyboard user needs to step through all the submenu links to get to the next top-level item.
 
 #### Toggle submenu using the top-level menu item
 

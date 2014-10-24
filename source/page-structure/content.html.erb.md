@@ -316,3 +316,7 @@ At the time of writing, WAI-ARIA attributes `role="group"` and `aria-labelledby`
 ## Images and illustrations
 
 Using images and illustrations in the text can help guiding users, especially in long texts. They can also help to clarify the text for people with reading disabilities. If images or illustrations are used, proper alternative texts need to be added. See the [Images Tutorial](/images/index.html) for more information on images.
+
+## Tables
+
+For structured data, data tables provide a useful way to display the data in a way that can be accessed by everyone, including people with disabilities. To apply meaning to the data contained in the table, they need to be marked up properly. See the [Tables Tutorial](/tables/index.html) for more information on tables.
