@@ -1,7 +1,7 @@
 ---
 title: Multiple Ways
 status: editors-draft
-order: 5
+order: 6
 wcag_success_criteria:
   - 2.4.8
 wcag_techniques:
