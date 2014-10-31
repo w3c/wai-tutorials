@@ -1,6 +1,6 @@
 ---
 title: In-page Navigation
-status: editors-draft
+status: draft
 order: 6
 wcag_success_criteria:
   - 2.4.1

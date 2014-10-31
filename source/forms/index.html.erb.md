@@ -1,7 +1,6 @@
 ---
 title: Forms Concepts
 tutorial_title: Forms
-status: draft
 order: 1
 topic_order: 3
 wcag_success_criteria:

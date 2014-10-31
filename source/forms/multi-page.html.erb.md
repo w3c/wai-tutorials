@@ -1,6 +1,5 @@
 ---
 title: Multi-Page Forms
-status: draft
 order: 7
 wcag_success_criteria:
   - 1.3.1
@@ -123,112 +122,112 @@ If a form has a known number of steps to be completed, a step-by-step indicator 
 {::nomarkdown}
 <%= sample_start %>
 <div class="tlwrapper">
-  <ol class="timeline">
-    <li class="timeline-past">
-        <span class="visuallyhidden">Completed: </span>
-        <a href="billing.html">Billing Address</a>
-    </li>
-    <li class="timeline-current">
-      <span class="visuallyhidden">Current: </span>
-      <span>Shipping Address</span>
-    </li>
-    <li><span>Review Order</span></li>
-    <li><span>Payment</span></li>
-    <li><span>Finish Purchase</span></li>
-  </ol>
+	<ol class="timeline">
+		<li class="timeline-past">
+				<span class="visuallyhidden">Completed: </span>
+				<a href="billing.html">Billing Address</a>
+		</li>
+		<li class="timeline-current">
+			<span class="visuallyhidden">Current: </span>
+			<span>Shipping Address</span>
+		</li>
+		<li><span>Review Order</span></li>
+		<li><span>Payment</span></li>
+		<li><span>Finish Purchase</span></li>
+	</ol>
 </div>
 <style>
 .tlwrapper {
-  display:table;
-  width: 100%;
+	display:table;
+	width: 100%;
 }
 
 .timeline {
-  display: table-row;
-  counter-reset: timeline;
+	display: table-row;
+	counter-reset: timeline;
 }
 
 .timeline li {
-  display: table-cell;
-  width: 20%;
-  counter-increment: timeline;
-  list-style: none;
-  text-align: center;
-  padding: .25em .5em;
-  overflow:hidden;
-  position: relative;
-  background-color: #fff;
-  padding-left: 25px;
-  white-space: nowrap;
+	display: table-cell;
+	width: 20%;
+	counter-increment: timeline;
+	list-style: none;
+	text-align: center;
+	padding: .25em .5em;
+	overflow:hidden;
+	position: relative;
+	background-color: #fff;
+	padding-left: 25px;
+	white-space: nowrap;
 }
 
 .timeline li:first-child {
-  padding-left: 0;
+	padding-left: 0;
 }
 
 .timeline li:after {
-  left: 0;
-  top: 50%;
-  border: solid transparent;
-  content: " ";
-  height: 0;
-  width: 0;
-  position: absolute;
-  pointer-events: none;
-  border-color: rgba(151, 204, 237, 0);
-  border-left-color: #ccc;
-  border-width: 20px;
-  margin-top: -20px;
+	left: 0;
+	top: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+	border-color: rgba(151, 204, 237, 0);
+	border-left-color: #ccc;
+	border-width: 20px;
+	margin-top: -20px;
 }
 
 .timeline li:first-child:after {
-  display: none;
+	display: none;
 }
 
 .timeline li a, .timeline li > span {
-  z-index: 100;
-  position: relative;
-  display: block;
-  color: #555;
+	z-index: 100;
+	position: relative;
+	display: block;
+	color: #555;
 }
 
 .timeline li a:before, .timeline li > span:before {
-  display: inline-block;
-  color: #555;
-  content: counter(timeline);
-  background-color: none;
-  border: 3px solid #555;
-  margin-right:.25em;
-  border-radius: 5px;
-  padding: 0 .25em;
+	display: inline-block;
+	color: #555;
+	content: counter(timeline);
+	background-color: none;
+	border: 3px solid #555;
+	margin-right:.25em;
+	border-radius: 5px;
+	padding: 0 .25em;
 }
 
 .timeline li.timeline-current > span, .timeline li.timeline-current a {
-  color: #036;
-  font-weight: bold;
+	color: #036;
+	font-weight: bold;
 }
 
 .timeline li.timeline-current > span:before {
-  color: #fff;
-  background-color: #036;
-  border-color: #036;
+	color: #fff;
+	background-color: #036;
+	border-color: #036;
 }
 
 .timeline li.timeline-past {
-  background-color: #ccc;
+	background-color: #ccc;
 }
 
 .timeline li.timeline-past a:before {
-  color: green;
-  content: "\2713";
-  background-color: #fff;
-  border-color: green;
+	color: green;
+	content: "\2713";
+	background-color: #fff;
+	border-color: green;
 }
 
 .timeline li.timeline-past a:hover:before,
 .timeline li.timeline-past a:focus:before {
-  background-color: green;
-  color: #fff;
+	background-color: green;
+	color: #fff;
 }
 </style>
 <%= sample_end %>
@@ -240,19 +239,19 @@ If a form has a known number of steps to be completed, a step-by-step indicator 
 
 ~~~html
 <div class="tlwrapper">
-  <ol class="timeline">
-    <li class="timeline-past">
-        <span class="visuallyhidden">Completed: </span>
-        <a href="billing.html">Billing Address</a>
-    </li>
-    <li class="timeline-current">
-      <span class="visuallyhidden">Current: </span>
-      <span>Shipping Address</span>
-    </li>
-    <li><span>Review Order</span></li>
-    <li><span>Payment</span></li>
-    <li><span>Finish Purchase</span></li>
-  </ol>
+	<ol class="timeline">
+		<li class="timeline-past">
+				<span class="visuallyhidden">Completed: </span>
+				<a href="billing.html">Billing Address</a>
+		</li>
+		<li class="timeline-current">
+			<span class="visuallyhidden">Current: </span>
+			<span>Shipping Address</span>
+		</li>
+		<li><span>Review Order</span></li>
+		<li><span>Payment</span></li>
+		<li><span>Finish Purchase</span></li>
+	</ol>
 </div>
 ~~~
 

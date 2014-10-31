@@ -1,6 +1,6 @@
 ---
 title: Page Sections
-status: editors-draft
+status: draft
 order: 2
 wcag_success_criteria:
 wcag_techniques:

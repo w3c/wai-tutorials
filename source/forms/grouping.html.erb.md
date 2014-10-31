@@ -1,6 +1,5 @@
 ---
 title: Grouping Controls
-status: draft
 order: 3
 wcag_success_criteria:
   - 1.3.1
@@ -24,15 +23,15 @@ The legend for a group of controls can also highlight common attributes of all c
 <form method="post" action="#">
 <fieldset>
 <legend>I want to receive</legend>
-  <div>
-    <input type="checkbox" name="newsletter" id="check_1"> <label for="check_1">The weekly newsletter</label>
-  </div>
-  <div>
-    <input type="checkbox" name="company_offers" id="check_2"> <label for="check_2">Offers from the company</label>
-  </div>
-  <div>
-    <input type="checkbox" name="assoc_offers" id="check_3"> <label for="check_3">Offers from associated companies</label>
-  </div>
+	<div>
+		<input type="checkbox" name="newsletter" id="check_1"> <label for="check_1">The weekly newsletter</label>
+	</div>
+	<div>
+		<input type="checkbox" name="company_offers" id="check_2"> <label for="check_2">Offers from the company</label>
+	</div>
+	<div>
+		<input type="checkbox" name="assoc_offers" id="check_3"> <label for="check_3">Offers from associated companies</label>
+	</div>
 </fieldset>
 </form>
 
@@ -46,18 +45,18 @@ The legend for a group of controls can also highlight common attributes of all c
 ~~~ html
 <fieldset>
 <legend>I want to receive</legend>
-  <div>
-    <input type="checkbox" name="newsletter" id="check_1">
-    <label for="check_1">The weekly newsletter</label>
-  </div>
-  <div>
-    <input type="checkbox" name="company_offers" id="check_2">
-    <label for="check_2">Offers from the company</label>
-  </div>
-  <div>
-    <input type="checkbox" name="assoc_offers" id="check_3">
-    <label for="check_3">Offers from associated companies</label>
-  </div>
+	<div>
+		<input type="checkbox" name="newsletter" id="check_1">
+		<label for="check_1">The weekly newsletter</label>
+	</div>
+	<div>
+		<input type="checkbox" name="company_offers" id="check_2">
+		<label for="check_2">Offers from the company</label>
+	</div>
+	<div>
+		<input type="checkbox" name="assoc_offers" id="check_3">
+		<label for="check_3">Offers from associated companies</label>
+	</div>
 </fieldset>
 ~~~
 

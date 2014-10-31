@@ -1,6 +1,5 @@
 ---
 title: User Notifications
-status: draft
 order: 6
 wcag_success_criteria:
   - 3.3.1
@@ -93,7 +92,7 @@ The example below shows a pop-up that is displayed when the user activates the â
 <button id="alertconfirm" type="button">Save</button>
 
 <script>
-  document.getElementById('alertconfirm').addEventListener('click', function(){ alert('Thanks for submitting the form!'); });
+	document.getElementById('alertconfirm').addEventListener('click', function(){ alert('Thanks for submitting the form!'); });
 </script>
 
 <%= sample_end %>
@@ -114,9 +113,9 @@ The example below shows a pop-up that is displayed when the user activates the â
 {:/nomarkdown}
 ~~~js
 document.getElementById('alertconfirm')
-  .addEventListener('click', function() {
-    alert('Thanks for submitting the form!');
-  });
+	.addEventListener('click', function() {
+		alert('Thanks for submitting the form!');
+	});
 ~~~
 {::nomarkdown}
 <%= code_end %>
@@ -145,43 +144,43 @@ The example below shows a pop-up that is displayed when the user activates the â
 <button id="temporarymessage" type="button">Save</button>
 
 <script>
-  document.getElementById('temporarymessage').addEventListener('click', function(){
-    var div = document.createElement('div');
-    div.setAttribute('id','popup');
-    div.setAttribute('aria-live','assertive');
-    div.innerHTML = 'Thanks for submitting the form!';
+	document.getElementById('temporarymessage').addEventListener('click', function(){
+		var div = document.createElement('div');
+		div.setAttribute('id','popup');
+		div.setAttribute('aria-live','assertive');
+		div.innerHTML = 'Thanks for submitting the form!';
 
-    div.addEventListener('transitionend', function (){
-      this.parentNode.removeChild(this);
-      document.getElementById('temporarymessage').removeAttribute('disabled');
-    });
+		div.addEventListener('transitionend', function (){
+			this.parentNode.removeChild(this);
+			document.getElementById('temporarymessage').removeAttribute('disabled');
+		});
 
-    document.getElementsByTagName('body')[0].appendChild(div);
-    this.setAttribute('disabled', true);
+		document.getElementsByTagName('body')[0].appendChild(div);
+		this.setAttribute('disabled', true);
 
-    setTimeout(function(){
-      document.getElementById('popup').style.opacity = 0;
-    }, 20);
-  });
+		setTimeout(function(){
+			document.getElementById('popup').style.opacity = 0;
+		}, 20);
+	});
 </script>
 
 <style>
 #popup {
-  position: fixed;
-  box-sizing: border-box;
-  background-clip: padding-box;
-  top:50%;
-  left:50%;
-  width: 12em;
-  height: 12em;
-  margin: -6em 0 0 -6em;
-  padding: 1em;
-  color: #fff;
-  text-align: center;
-  background-color: rgba(0,51,102,.85);
-  border: .5em solid rgba(0,51,102,.3);
-  border-radius: .5em;
-  transition: opacity 2.5s linear;
+	position: fixed;
+	box-sizing: border-box;
+	background-clip: padding-box;
+	top:50%;
+	left:50%;
+	width: 12em;
+	height: 12em;
+	margin: -6em 0 0 -6em;
+	padding: 1em;
+	color: #fff;
+	text-align: center;
+	background-color: rgba(0,51,102,.85);
+	border: .5em solid rgba(0,51,102,.3);
+	border-radius: .5em;
+	transition: opacity 2.5s linear;
 }
 </style>
 <%= sample_end %>
@@ -202,8 +201,8 @@ The example below shows a pop-up that is displayed when the user activates the â
 {:/nomarkdown}
 ~~~css
 #popup {
-  â€¦
-  transition: opacity 2.5s linear;
+	â€¦
+	transition: opacity 2.5s linear;
 }
 ~~~
 {::nomarkdown}
@@ -236,16 +235,16 @@ When errors occur, it is helpful to list them at the top of the page, before the
 
 <h4 role="presentation">There are 2 errors in this form</h4>
 <ul>
-  <li>
-    <a href="#firstname">
-      The First name field is empty, it is a required field and must be filled in.
-    </a>
-  </li>
-  <li>
-    <a href="#birthdate">
-      The Date field is in the wrong format, it should be similar to 17/09/2013 (use a / to separate day, month, and year).
-    </a>
-  </li>
+	<li>
+		<a href="#firstname">
+			The First name field is empty, it is a required field and must be filled in.
+		</a>
+	</li>
+	<li>
+		<a href="#birthdate">
+			The Date field is in the wrong format, it should be similar to 17/09/2013 (use a / to separate day, month, and year).
+		</a>
+	</li>
 </ul>
 
 <%= sample_end%>
@@ -258,16 +257,16 @@ When errors occur, it is helpful to list them at the top of the page, before the
 ~~~ html
 <h4>There are 2 errors in this form</h4>
 <ul>
-  <li>
-    <a href="#firstname">
-      The First name field is empty, it is a required field and must be filled in.
-    </a>
-  </li>
-  <li>
-    <a href="#birthdate">
-      The Date field is in the wrong format, it should be similar to 17/09/2013 (use a / to separate day, month, and year).
-    </a>
-  </li>
+	<li>
+		<a href="#firstname">
+			The First name field is empty, it is a required field and must be filled in.
+		</a>
+	</li>
+	<li>
+		<a href="#birthdate">
+			The Date field is in the wrong format, it should be similar to 17/09/2013 (use a / to separate day, month, and year).
+		</a>
+	</li>
 </ul>
 ~~~
 
@@ -293,64 +292,64 @@ When the form is submitted, the entries are checked and feedback is provided to 
 <%= sample_start %>
 
 <style>
-  #ex3 div {margin-bottom:.75em;}
-  .error {
-    color: #900;
-  }
-  .error input {
-    border: 3px solid #900;
-  }
-  .success {
-    color: #090;
-  }
-  .success input {
-    border: 3px solid #090;
-  }
+	#ex3 div {margin-bottom:.75em;}
+	.error {
+		color: #900;
+	}
+	.error input {
+		border: 3px solid #900;
+	}
+	.success {
+		color: #090;
+	}
+	.success input {
+		border: 3px solid #090;
+	}
 </style>
 
 <form method="post" action="#ex3" id="ex3">
-  <div class="success">
-    <label for="username4"><strong>OK:</strong> Username:</label>
-      <input type="text" name="username" id="username4" value="spaceteddy13" aria-describedby="userDesc2">
-      <span id="userDesc2">âœ“</span>
-  </div>
-  <div class="error">
-    <label for="expire4"><strong>Error:</strong> Expiry date:</label>
-      <input type="text" name="expire" id="expire4" value="03.2015" aria-describedby="expDesc2">
-      <span id="expDesc2">Use the format MM/YYYY.</span>
-  </div>
-  <div class="error">
-    <button type="submit">Submit</button>
-  </div>
+	<div class="success">
+		<label for="username4"><strong>OK:</strong> Username:</label>
+			<input type="text" name="username" id="username4" value="spaceteddy13" aria-describedby="userDesc2">
+			<span id="userDesc2">âœ“</span>
+	</div>
+	<div class="error">
+		<label for="expire4"><strong>Error:</strong> Expiry date:</label>
+			<input type="text" name="expire" id="expire4" value="03.2015" aria-describedby="expDesc2">
+			<span id="expDesc2">Use the format MM/YYYY.</span>
+	</div>
+	<div class="error">
+		<button type="submit">Submit</button>
+	</div>
 </form>
 
 <script>
 var taken_usernames = ['timbl', 'shadi', 'yatil', 'bim', 'shawn', 'slh', 'spacebear13', 'Obelisks', 'Phoenix', 'Imari', 'Henry', 'Zeki', 'Rome', 'Min', ' Kelly', 'Brynn'];
 document.getElementById('ex3').addEventListener('submit', function(event){
-  function setError(el, msg) {
-    el.parentNode.querySelector('strong').innerHTML = "Error:";
-    el.parentNode.className='error';
-    el.parentNode.querySelector('span').innerHTML = msg;
-  }
-  function setSuccess(el) {
-    el.parentNode.querySelector('strong').innerHTML = "OK:";
-    el.parentNode.className='success';
-    el.parentNode.querySelector('span').innerHTML = "&check;";
-  }
-  var exp = document.getElementById('expire4');
-  if (exp.value.match(new RegExp('[0-9]{2}\/[0-9]{4}'))) {
-    setSuccess(exp);
-  } else {
-    setError(exp, 'Use the format MM/YYYY.');
-  }
-  var usr = document.getElementById('username4');
-  if (taken_usernames.indexOf(usr.value.trim())+1 == false) {
-    setSuccess(usr);
-  } else {
-    setError(usr, 'Username already taken');
-  }
-  event.preventDefault();
-  return false;
+	function setError(el, msg) {
+		el.parentNode.querySelector('strong').innerHTML = "Error:";
+		el.parentNode.className='error';
+		el.parentNode.querySelector('span').innerHTML = msg;
+	}
+	function setSuccess(el) {
+		el.parentNode.querySelector('strong').innerHTML = "OK:";
+		el.parentNode.className='success';
+		el.parentNode.querySelector('span').innerHTML = "&check;";
+	}
+	var exp = document.getElementById('expire4');
+	if (exp.value.match(new RegExp('[0-9]{2}\/[0-9]{4}'))) {
+		setSuccess(exp);
+	} else {
+		setError(exp, 'Use the format MM/YYYY.');
+	}
+	var usr = document.getElementById('username4');
+	if (taken_usernames.indexOf(usr.value.trim())+1 == false) {
+		setSuccess(usr);
+	} else {
+		setError(usr, 'Username already taken');
+	}
+	event.preventDefault();
+	return false;
 });
 </script>
 <%= sample_end%>
@@ -362,26 +361,26 @@ document.getElementById('ex3').addEventListener('submit', function(event){
 
 ~~~ html
 <div class="success">
-  <label for="username">
-    <strong>OK:</strong> Username:
-  </label>
-  <input type="text" name="username"
-    id="username" value="spaceteddy13"
-    aria-describedby="userDesc">
-  <span id="userDesc">âœ“</span>
+	<label for="username">
+		<strong>OK:</strong> Username:
+	</label>
+	<input type="text" name="username"
+		id="username" value="spaceteddy13"
+		aria-describedby="userDesc">
+	<span id="userDesc">âœ“</span>
 </div>
 <div class="error">
-  <label for="expire">
-    <strong>Error:</strong>
-    Expiry date:
-  </label>
-  <input type="text" name="expire"
-    id="expire" value="03.2015"
-    aria-describedby="expDesc">
-    <span id="expDesc">Use the format MM/YYYY.</span>
+	<label for="expire">
+		<strong>Error:</strong>
+		Expiry date:
+	</label>
+	<input type="text" name="expire"
+		id="expire" value="03.2015"
+		aria-describedby="expDesc">
+		<span id="expDesc">Use the format MM/YYYY.</span>
 </div>
 <div>
-  <button type="submit">Submit</button>
+	<button type="submit">Submit</button>
 </div>
 ~~~
 
@@ -418,38 +417,38 @@ In the following example, the availability of a username is checked instantly wh
 <%= sample_start %>
 
 <form method="post" action="#">
-  <div>
-    <label for="ex1_username"><strong></strong> Username:</label>
-    <input type="text" name="username" id="ex1_username">
-    <span id="username_feedback" aria-live="polite"></span>
-  </div>
+	<div>
+		<label for="ex1_username"><strong></strong> Username:</label>
+		<input type="text" name="username" id="ex1_username">
+		<span id="username_feedback" aria-live="polite"></span>
+	</div>
 </form>
 
 <script>
-  document.getElementById('ex1_username').addEventListener('keyup', function(){
-    function setError(el, msg) {
-      el.parentNode.querySelector('strong').innerHTML = "Error:";
-      el.parentNode.className='error';
-      el.parentNode.querySelector('span').innerHTML = msg;
-    }
-    function setSuccess(el) {
-      el.parentNode.querySelector('strong').innerHTML = "OK:";
-      el.parentNode.className='success';
-      el.parentNode.querySelector('span').innerHTML = "&check;";
-    }
-    var val = this.value;
-    if (val !== "") {
-      if (taken_usernames.indexOf(val.trim())+1) {
-        setError(this, '&cross; Sorry, this username is taken.');
-      } else {
-        setSuccess(this, '&check; You can use this username.');
-      }
-    } else {
-      document.getElementById('username_feedback').innerHTML = '';
-      document.getElementById('username_feedback').parentNode.className = '';
-      document.querySelector('[for="ex1_username"] strong').innerHTML = '';
-    }
-  });
+	document.getElementById('ex1_username').addEventListener('keyup', function(){
+		function setError(el, msg) {
+			el.parentNode.querySelector('strong').innerHTML = "Error:";
+			el.parentNode.className='error';
+			el.parentNode.querySelector('span').innerHTML = msg;
+		}
+		function setSuccess(el) {
+			el.parentNode.querySelector('strong').innerHTML = "OK:";
+			el.parentNode.className='success';
+			el.parentNode.querySelector('span').innerHTML = "&check;";
+		}
+		var val = this.value;
+		if (val !== "") {
+			if (taken_usernames.indexOf(val.trim())+1) {
+				setError(this, '&cross; Sorry, this username is taken.');
+			} else {
+				setSuccess(this, '&check; You can use this username.');
+			}
+		} else {
+			document.getElementById('username_feedback').innerHTML = '';
+			document.getElementById('username_feedback').parentNode.className = '';
+			document.querySelector('[for="ex1_username"] strong').innerHTML = '';
+		}
+	});
 </script>
 
 <%= sample_end %>
@@ -461,9 +460,9 @@ In the following example, the availability of a username is checked instantly wh
 
 ~~~ html
 <div>
-  <label for="username">Username:</label>
-  <input type="text" name="username" id="username">
-  <span id="username_feedback" aria-live="polite"></span>
+	<label for="username">Username:</label>
+	<input type="text" name="username" id="username">
+	<span id="username_feedback" aria-live="polite"></span>
 </div>
 ~~~
 
@@ -477,29 +476,29 @@ In the following example, the availability of a username is checked instantly wh
 
 ~~~ js
 document.getElementById('username').addEventListener('keyup', function(){
-  function setError(el, msg) {
-    el.parentNode.querySelector('strong').innerHTML = "Error:";
-    el.parentNode.className='error';
-    el.parentNode.querySelector('span').innerHTML = msg;
-  }
-  function setSuccess(el) {
-    el.parentNode.querySelector('strong').innerHTML = "OK:";
-    el.parentNode.className='success';
-    el.parentNode.querySelector('span').innerHTML = "&check;";
-  }
-  var val = this.value;
-  if (val !== "") {
-    if (taken_usernames.indexOf(val.trim())+1) {
-      setError(this, '&cross; Sorry, this username is taken.');
-    } else {
-      setSuccess(this, '&check; You can use this username.');
-    }
-  } else {
-    document.getElementById('username_feedback').innerHTML = '';
-    document.getElementById('username_feedback')
-      .parentNode.className = '';
-    document.querySelector('[for="username"] strong').innerHTML = '';
-  }
+	function setError(el, msg) {
+		el.parentNode.querySelector('strong').innerHTML = "Error:";
+		el.parentNode.className='error';
+		el.parentNode.querySelector('span').innerHTML = msg;
+	}
+	function setSuccess(el) {
+		el.parentNode.querySelector('strong').innerHTML = "OK:";
+		el.parentNode.className='success';
+		el.parentNode.querySelector('span').innerHTML = "&check;";
+	}
+	var val = this.value;
+	if (val !== "") {
+		if (taken_usernames.indexOf(val.trim())+1) {
+			setError(this, '&cross; Sorry, this username is taken.');
+		} else {
+			setSuccess(this, '&check; You can use this username.');
+		}
+	} else {
+		document.getElementById('username_feedback').innerHTML = '';
+		document.getElementById('username_feedback')
+			.parentNode.className = '';
+		document.querySelector('[for="username"] strong').innerHTML = '';
+	}
 });
 ~~~
 
@@ -526,56 +525,56 @@ The example below illustrates a range of possible types of feedback in addition 
 <%= sample_start %>
 
 <form method="post" action="#">
-  <label for="ex2_password">Password:</label>
-  <input type="text" name="password" id="ex2_password">
-  <span id="passwordmeter"><span></span></span>
-  <span id="passwordmessage" aria-live="polite"></span>
+	<label for="ex2_password">Password:</label>
+	<input type="text" name="password" id="ex2_password">
+	<span id="passwordmeter"><span></span></span>
+	<span id="passwordmessage" aria-live="polite"></span>
 </form>
 
 <style>
-  #passwordmeter {
-    display:inline-block;
-    width:125px;
-    height: 20px;
-    border: 1px solid #666;
-    vertical-align:middle;
-  }
-  #passwordmeter span {
-    display:inline-block;
-    height:1em;
-    background-color: gray;
-    width:25px;
-    height: 20px;
-  }
+	#passwordmeter {
+		display:inline-block;
+		width:125px;
+		height: 20px;
+		border: 1px solid #666;
+		vertical-align:middle;
+	}
+	#passwordmeter span {
+		display:inline-block;
+		height:1em;
+		background-color: gray;
+		width:25px;
+		height: 20px;
+	}
 </style>
 
 <script>
 (function(){var a;a=function(){var a,b;b=document.createElement("script");b.src="../../javascripts/zxcvbn.js";b.type="text/javascript";b.async=!0;a=document.getElementsByTagName("script")[0];return a.parentNode.insertBefore(b,a)};null!=window.attachEvent?window.attachEvent("onload",a):window.addEventListener("load",a,!1)}).call(this);
 
 document.getElementById('ex2_password').addEventListener('keyup',
-    function(){
-      var meter = document.querySelector('#passwordmeter span');
-      var msg = document.getElementById('passwordmessage');
-      var pw = zxcvbn(this.value);
-      meter.style.width = (pw.score+1) * 25 + 'px';
-      if (pw.score == 0) {
-        meter.style.backgroundColor = 'red';
-        msg.innerHTML = '<strong>Weak:</strong> Cracked instantly';
-      } else if (pw.score < 3) {
-        meter.style.backgroundColor = 'red';
-        msg.innerHTML = '<strong>Weak:</strong> Cracked in ' + pw.crack_time_display;
-      } else if (pw.score == 3) {
-        meter.style.backgroundColor = 'yellow';
-        msg.innerHTML = '<strong>Okay:</strong> Cracked in ' + pw.crack_time_display;
-      } else {
-        meter.style.backgroundColor = 'green';
-        msg.innerHTML = '<strong>Strong:</strong> Cracked in ' + pw.crack_time_display;
-      }
-      if (this.value == "") {
-        meter.style.backgroundColor = 'gray';
-        msg.innerHTML = ' ';
-      }
-  });
+		function(){
+			var meter = document.querySelector('#passwordmeter span');
+			var msg = document.getElementById('passwordmessage');
+			var pw = zxcvbn(this.value);
+			meter.style.width = (pw.score+1) * 25 + 'px';
+			if (pw.score == 0) {
+				meter.style.backgroundColor = 'red';
+				msg.innerHTML = '<strong>Weak:</strong> Cracked instantly';
+			} else if (pw.score < 3) {
+				meter.style.backgroundColor = 'red';
+				msg.innerHTML = '<strong>Weak:</strong> Cracked in ' + pw.crack_time_display;
+			} else if (pw.score == 3) {
+				meter.style.backgroundColor = 'yellow';
+				msg.innerHTML = '<strong>Okay:</strong> Cracked in ' + pw.crack_time_display;
+			} else {
+				meter.style.backgroundColor = 'green';
+				msg.innerHTML = '<strong>Strong:</strong> Cracked in ' + pw.crack_time_display;
+			}
+			if (this.value == "") {
+				meter.style.backgroundColor = 'gray';
+				msg.innerHTML = ' ';
+			}
+	});
 
 </script>
 
@@ -595,50 +594,50 @@ In the example below, the user is expected to provide an expiry date. The input 
 <%= sample_start %>
 
 <style>
-  #ex4 div {margin-bottom:.75em;}
+	#ex4 div {margin-bottom:.75em;}
 </style>
 
 <form method="post" action="#" id="ex4">
-  <div>
-    <label for="expire5"><strong></strong> Expiry date:</label>
-    <input type="text" name="expire" id="expire5" value="03.2015" aria-describedby="expDesc3">
-    <span id="expDesc3" aria-live="assertive"></span>
-  </div>
-  <div class="error">
-    <button type="submit">Submit</button>
-  </div>
+	<div>
+		<label for="expire5"><strong></strong> Expiry date:</label>
+		<input type="text" name="expire" id="expire5" value="03.2015" aria-describedby="expDesc3">
+		<span id="expDesc3" aria-live="assertive"></span>
+	</div>
+	<div class="error">
+		<button type="submit">Submit</button>
+	</div>
 </form>
 
 <script>
 inputs = document.querySelectorAll('#ex4 input');
 for (var i = inputs.length - 1; i >= 0; i--) {
-  inputs[i].addEventListener('blur', function(event){
-    function setError(el, msg) {
-      el.parentNode.querySelector('strong').innerHTML = "Error:";
-      el.parentNode.className='error';
-      el.parentNode.querySelector('span').innerHTML = msg;
-    }
-    function setSuccess(el) {
-      el.parentNode.querySelector('strong').innerHTML = "OK:";
-      el.parentNode.className='success';
-      el.parentNode.querySelector('span').innerHTML = "&check;";
-    }
-    if (this.id == 'expire5') {
-      if (this.value.match(new RegExp('[0-9]{2}\/[0-9]{4}'))) {
-        setSuccess(this);
-      } else {
-        setError(this, 'Use the format MM/YYYY.');
-      }
-    } else if (this.id == 'username5') {
-      if (taken_usernames.indexOf(this.value.trim())+1 == false) {
-        setSuccess(this);
-      } else {
-        setError(this, 'Username already taken.');
-      }
-    }
-    event.preventDefault();
-    return false;
-  });
+	inputs[i].addEventListener('blur', function(event){
+		function setError(el, msg) {
+			el.parentNode.querySelector('strong').innerHTML = "Error:";
+			el.parentNode.className='error';
+			el.parentNode.querySelector('span').innerHTML = msg;
+		}
+		function setSuccess(el) {
+			el.parentNode.querySelector('strong').innerHTML = "OK:";
+			el.parentNode.className='success';
+			el.parentNode.querySelector('span').innerHTML = "&check;";
+		}
+		if (this.id == 'expire5') {
+			if (this.value.match(new RegExp('[0-9]{2}\/[0-9]{4}'))) {
+				setSuccess(this);
+			} else {
+				setError(this, 'Use the format MM/YYYY.');
+			}
+		} else if (this.id == 'username5') {
+			if (taken_usernames.indexOf(this.value.trim())+1 == false) {
+				setSuccess(this);
+			} else {
+				setError(this, 'Username already taken.');
+			}
+		}
+		event.preventDefault();
+		return false;
+	});
 };
 
 </script>
@@ -650,9 +649,9 @@ for (var i = inputs.length - 1; i >= 0; i--) {
 {:/nomarkdown}
 ~~~html
 <div>
-  <label for="expire"><strong></strong> Expiry date:</label>
-  <input type="text" name="expire" id="expire" value="03.2015" aria-describedby="expDesc3">
-  <span id="expDesc3" aria-live="assertive"></span>
+	<label for="expire"><strong></strong> Expiry date:</label>
+	<input type="text" name="expire" id="expire" value="03.2015" aria-describedby="expDesc3">
+	<span id="expDesc3" aria-live="assertive"></span>
 </div>
 ~~~
 {::nomarkdown}

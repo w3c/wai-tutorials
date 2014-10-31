@@ -1,6 +1,6 @@
 ---
 title: Functionality
-status: editors-draft
+status: approved-draft
 order: 3
 wcag_success_criteria:
   - 1.3.1

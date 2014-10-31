@@ -1,7 +1,7 @@
 ---
 title: Menu Styling
 nav_title: Styling
-status: editors-draft
+status: approved-draft
 order: 3
 wcag_success_criteria:
   - 1.4.1
@@ -24,43 +24,43 @@ A vertical menu provides space for a lot of links as all items can be easily rea
 <%= sample_start %>
 
 <nav role="navigation" aria-label="Main Navigation" aria-presentation="true" id="verticalnav">
-    <ul>
-        <li><a href="#samplenav">Home</a></li>
-        <li><a href="#samplenav">Shop</a></li>
-        <li><a href="#samplenav">SpaceBears</a></li>
-        <li><a href="#samplenav">MarsCars</a></li>
-        <li><a href="#samplenav">Contact</a></li>
-    </ul>
+		<ul>
+				<li><a href="#samplenav">Home</a></li>
+				<li><a href="#samplenav">Shop</a></li>
+				<li><a href="#samplenav">SpaceBears</a></li>
+				<li><a href="#samplenav">MarsCars</a></li>
+				<li><a href="#samplenav">Contact</a></li>
+		</ul>
 </nav>
 
 <style>
-  #verticalnav {
-      display:table;
-  }
-  #verticalnav ul {
-      margin: 0;
-      padding: 0;
-      background-color: #036;
-      color: #fff;
-  }
-  #verticalnav li {
-      display:table-row;
-      width: 20%;
-      text-align: left;
-  }
-  #verticalnav a {
-      display: block;
-      padding: .25em .5em;
-      color: #fff;
-      border-bottom: 1px solid;
-      text-decoration: none;
-  }
-  #verticalnav a:hover,
-  #verticalnav a:focus {
-    color: #036;
-    background-color: #fff;
-    text-decoration: underline;
-  }
+	#verticalnav {
+			display:table;
+	}
+	#verticalnav ul {
+			margin: 0;
+			padding: 0;
+			background-color: #036;
+			color: #fff;
+	}
+	#verticalnav li {
+			display:table-row;
+			width: 20%;
+			text-align: left;
+	}
+	#verticalnav a {
+			display: block;
+			padding: .25em .5em;
+			color: #fff;
+			border-bottom: 1px solid;
+			text-decoration: none;
+	}
+	#verticalnav a:hover,
+	#verticalnav a:focus {
+		color: #036;
+		background-color: #fff;
+		text-decoration: underline;
+	}
 </style>
 
 <%= sample_end %>
@@ -74,45 +74,45 @@ If a menu has so few items that they can fit in one line on the screen, a horizo
 <%= sample_start %>
 
 <nav role="navigation" aria-label="Main Navigation" aria-presentation="true" id="samplenav">
-    <ul>
-        <li><a href="#samplenav">Home</a></li>
-        <li><a href="#samplenav">Shop</a></li>
-        <li><a href="#samplenav">SpaceBears</a></li>
-        <li><a href="#samplenav">MarsCars</a></li>
-        <li><a href="#samplenav">Contact</a></li>
-    </ul>
+		<ul>
+				<li><a href="#samplenav">Home</a></li>
+				<li><a href="#samplenav">Shop</a></li>
+				<li><a href="#samplenav">SpaceBears</a></li>
+				<li><a href="#samplenav">MarsCars</a></li>
+				<li><a href="#samplenav">Contact</a></li>
+		</ul>
 </nav>
 
 <style>
-  #samplenav {
-      display:table;
-      width:100%;
-  }
-  #samplenav ul {
-      margin: 0;
-      padding: 0;
-      display: table-row;
-      background-color: #036;
-      color: #fff;
-  }
-  #samplenav li {
-      display:table-cell;
-      width: 20%;
-      text-align: center;
-  }
-  #samplenav a {
-      display: block;
-      padding: .25em;
-      border-bottom: .25em solid #E8E8E8;
-      color: #fff;
-      text-decoration: none;
-  }
-  #samplenav a:hover,
-  #samplenav a:focus {
-    color: #036;
-    background-color: #fff;
-    text-decoration: underline;
-  }
+	#samplenav {
+			display:table;
+			width:100%;
+	}
+	#samplenav ul {
+			margin: 0;
+			padding: 0;
+			display: table-row;
+			background-color: #036;
+			color: #fff;
+	}
+	#samplenav li {
+			display:table-cell;
+			width: 20%;
+			text-align: center;
+	}
+	#samplenav a {
+			display: block;
+			padding: .25em;
+			border-bottom: .25em solid #E8E8E8;
+			color: #fff;
+			text-decoration: none;
+	}
+	#samplenav a:hover,
+	#samplenav a:focus {
+		color: #036;
+		background-color: #fff;
+		text-decoration: underline;
+	}
 </style>
 
 <%= sample_end %>
@@ -132,53 +132,53 @@ In the following example, the active menu item is not only marked using differen
 <%= sample_start %>
 
 <nav role="navigation" aria-label="Main Navigation" aria-presentation="true" id="currentnav">
-    <ul>
-        <li><a href="#currentnav">Home</a></li>
-        <li><a href="#currentnav">Shop</a></li>
-        <li><span class="current"><span class="visuallyhidden">Current Page: </span>SpaceBears</span></li>
-        <li><a href="#currentnav">MarsCars</a></li>
-        <li><a href="#currentnav">Contact</a></li>
-    </ul>
+		<ul>
+				<li><a href="#currentnav">Home</a></li>
+				<li><a href="#currentnav">Shop</a></li>
+				<li><span class="current"><span class="visuallyhidden">Current Page: </span>SpaceBears</span></li>
+				<li><a href="#currentnav">MarsCars</a></li>
+				<li><a href="#currentnav">Contact</a></li>
+		</ul>
 </nav>
 
 <style>
-  #currentnav {
-      display:table;
-      width:100%;
-  }
-  #currentnav ul {
-      margin: 0;
-      padding: 0;
-      display: table-row;
-      background-color: #036;
-      color: #fff;
-  }
-  #currentnav li {
-      display:table-cell;
-      width: 20%;
-      text-align: center;
-  }
-  #currentnav a,
-  #currentnav .current {
-      display: block;
-      padding: .25em;
-      border-bottom: .25em solid #E8E8E8;
-  }
-  #currentnav a {
-      color: #fff;
-      text-decoration: none;
-  }
-  #currentnav .current {
-      background-color: #bbb;
-      color: #000;
-      border-color: #444;
-  }
-  #currentnav a:hover,
-  #currentnav a:focus {
-    color: #036;
-    background-color: #fff;
-    text-decoration: underline;
-  }
+	#currentnav {
+			display:table;
+			width:100%;
+	}
+	#currentnav ul {
+			margin: 0;
+			padding: 0;
+			display: table-row;
+			background-color: #036;
+			color: #fff;
+	}
+	#currentnav li {
+			display:table-cell;
+			width: 20%;
+			text-align: center;
+	}
+	#currentnav a,
+	#currentnav .current {
+			display: block;
+			padding: .25em;
+			border-bottom: .25em solid #E8E8E8;
+	}
+	#currentnav a {
+			color: #fff;
+			text-decoration: none;
+	}
+	#currentnav .current {
+			background-color: #bbb;
+			color: #000;
+			border-color: #444;
+	}
+	#currentnav a:hover,
+	#currentnav a:focus {
+		color: #036;
+		background-color: #fff;
+		text-decoration: underline;
+	}
 </style>
 
 <%= sample_end %>
@@ -190,10 +190,10 @@ In the following example, the active menu item is not only marked using differen
 
 ~~~ html
 <li>
-  <span class="current">
-    <span class="visuallyhidden">Current Page: </span>
-    SpaceBears
-  </span>
+	<span class="current">
+		<span class="visuallyhidden">Current Page: </span>
+		SpaceBears
+	</span>
 </li>
 ~~~
 
@@ -207,11 +207,11 @@ In the following example, the active menu item is not only marked using differen
 
 ~~~ css
 nav .current {
-  display: block;
-  padding: .25em;
-  background-color: #bbb;
-  color: #000;
-  border-bottom: .25em solid #444;
+	display: block;
+	padding: .25em;
+	background-color: #bbb;
+	color: #000;
+	border-bottom: .25em solid #444;
 }
 ~~~
 

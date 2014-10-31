@@ -1,6 +1,6 @@
 ---
 title: Content Structure
-status: editors-draft
+status: draft
 order: 4
 wcag_techniques:
   - H40

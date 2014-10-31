@@ -542,7 +542,7 @@ a {
 	h2 {
 		margin-top:0;
 	}
-	&.draft, &.editors-draft{
+	&.draft, &.editors-draft, &.approved-draft{
 		.tutorial-heading h1 {
 			&:after {
 				display: inline-block;
@@ -552,6 +552,14 @@ a {
 				vertical-align: middle;
 				font-size: .5em;
 				margin-right: .25em;
+			}
+		}
+	}
+	&.approved-draft {
+		.tutorial-heading h1 {
+			&:after {
+				content: "APPROVED DRAFT";
+				background-color: #CFC;
 			}
 		}
 	}
@@ -577,7 +585,7 @@ a {
 		}
 		padding:0 !important;
 	}
-	.annotation {
+	%annotation {
 		@include mq($medium) {
 			width: percentage(1/2) - 8%;
 			margin-left: 3%;
@@ -591,13 +599,13 @@ a {
 		border-left: 2px solid #930;
 		margin-top: 1em;
 		clear: both;
-		.annotation-header {
+		%annotation-header {
 			margin-top:0;
 			margin-bottom: 0;
 			// font-weight: bold;
 			color: #930;
 		}
-		.annotation-content {
+		%annotation-content {
 			font-size: percentage(16/18);
 			:first-child {
 				margin-top: 0;
@@ -736,7 +744,7 @@ figure {
 		&:before, &:after {display:none;}
 	}
 	&.toc {
-		@extend .annotation;
+		@extend %annotation;
 		border:none !important;
 		font-size: 0.9em;
 		ul {
@@ -1220,7 +1228,7 @@ select {
 }
 
 .technologies {
-	@extend .annotation;
+	@extend %annotation;
 	font-size: 0.9em;
 	border:none !important;
 	margin-bottom: 2em;

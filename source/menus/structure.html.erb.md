@@ -1,7 +1,7 @@
 ---
 title: Menu Structure
 nav_title: Structure
-status: editors-draft
+status: approved-draft
 order: 2
 wcag_success_criteria:
   - 4.1.2
@@ -28,12 +28,12 @@ For websites where the order in which the user reads the pages doesn’t matter,
 
 ~~~ html
 <ul>
-  <li><a href="…">Home</a></li>
-  <li><a href="…">Shop</a></li>
-  <li><a href="…">SpaceBears</a></li>
-  <li><a href="…">MarsCars</a></li>
-  <li><a href="…">Contact</a></li>
-  …
+	<li><a href="…">Home</a></li>
+	<li><a href="…">Shop</a></li>
+	<li><a href="…">SpaceBears</a></li>
+	<li><a href="…">MarsCars</a></li>
+	<li><a href="…">Contact</a></li>
+	…
 </ul>
 ~~~
 
@@ -53,12 +53,12 @@ In some instances, pages need to be read in a certain order, for example if the 
 
 ~~~ html
 <ol>
-  <li><a href="…">Unpacking the Space Craft</a></li>
-  <li><a href="…">Check Contents of Package</a></li>
-  <li><a href="…">Build Chassis</a></li>
-  <li><a href="…">Build Engine</a></li>
-  <li><a href="…">Mount Engine to Chassis</a></li>
-  …
+	<li><a href="…">Unpacking the Space Craft</a></li>
+	<li><a href="…">Check Contents of Package</a></li>
+	<li><a href="…">Build Chassis</a></li>
+	<li><a href="…">Build Engine</a></li>
+	<li><a href="…">Mount Engine to Chassis</a></li>
+	…
 </ol>
 ~~~
 
@@ -121,7 +121,7 @@ Users that use headings to find relevant sections on web pages, for example scre
 
 ~~~ html
 <nav role="navigation">
-  <h2 class="visuallyhidden">Main Menu</h2>
+	<h2 class="visuallyhidden">Main Menu</h2>
 </nav>
 ~~~
 
@@ -137,14 +137,14 @@ Note that the heading **can not** be hidden using `display: none;` or `visually:
 
 ~~~ css
 .visuallyhidden {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
 }
 ~~~
 
@@ -182,7 +182,7 @@ To cover both use cases (navigating by headers and navigating by landmarks), the
 
 ~~~ html
 <nav role="navigation" aria-labelledby="mainmenulabel">
-  <h2 id="mainmenulabel">Main Menu</h2>
+	<h2 id="mainmenulabel">Main Menu</h2>
 </nav>
 ~~~
 

@@ -1,6 +1,5 @@
 ---
 title: Form Instructions
-status: draft
 order: 4
 wcag_success_criteria:
   - 1.3.1
@@ -56,9 +55,9 @@ In the example below, the required format for the “Expiry Date” is indicated
 <%= sample_start %>
 
 <form method="post" action="#">
-  <div>
-    <label for="expire">Expiry date (MM/YYYY): </label> <input type="text" name="expire" id="expire">
-  </div>
+	<div>
+		<label for="expire">Expiry date (MM/YYYY): </label> <input type="text" name="expire" id="expire">
+	</div>
 </form>
 
 <%= sample_end%>
@@ -90,13 +89,13 @@ Content outside form elements may be missed by screen readers that are in “For
 <%= sample_start %>
 
 <ul>
-  <li>Extra help can be found immediately after each field.</li>
+	<li>Extra help can be found immediately after each field.</li>
 </ul>
 
 <form method="post" action="#">
-  <div>
-    <label for="expire2">Expiry date:</label> <input type="text" name="expire" id="expire2"> <span>(MM/YYYY)</span>
-  </div>
+	<div>
+		<label for="expire2">Expiry date:</label> <input type="text" name="expire" id="expire2"> <span>(MM/YYYY)</span>
+	</div>
 </form>
 
 <%= sample_end%>
@@ -133,23 +132,23 @@ Another approach is to use the WAI-ARIA `aria-labelledby` attribute to associate
 <%= sample_start %>
 
 <style>
-  #ex3 span {
-    display: inline-block;
-    vertical-align: top;
-  }
-  #ex3 span span {
-    display: block;
-    font-size: 0.8em;
-  }
+	#ex3 span {
+		display: inline-block;
+		vertical-align: top;
+	}
+	#ex3 span span {
+		display: block;
+		font-size: 0.8em;
+	}
 </style>
 <form method="post" action="#" id="ex3">
-  <div>
-    <label for="expire4">Expiry date:</label>
-    <span>
-      <input type="text" name="expire" id="expire4" aria-labelledby="expDesc2">
-      <span id="expDesc2">MM/YYYY</span>
-    </span>
-  </div>
+	<div>
+		<label for="expire4">Expiry date:</label>
+		<span>
+			<input type="text" name="expire" id="expire4" aria-labelledby="expDesc2">
+			<span id="expDesc2">MM/YYYY</span>
+		</span>
+	</div>
 </form>
 
 <%= sample_end%>
@@ -162,8 +161,8 @@ Another approach is to use the WAI-ARIA `aria-labelledby` attribute to associate
 ~~~ html
 <label for="expire">Expiry date:</label>
 <span>
-  <input type="text" name="expire" id="expire" aria-labelledby="expDesc">
-  <span id="expDesc">MM/YYYY</span>
+	<input type="text" name="expire" id="expire" aria-labelledby="expDesc">
+	<span id="expDesc">MM/YYYY</span>
 </span>
 ~~~
 
@@ -184,33 +183,33 @@ Refer to the techniques described in [Hidden labels](labels.html#hidden) in case
 <%= sample_start %>
 
 <form method="post" action="#">
-  <div>
-    <label for="search">Search:</label> <input type="text" name="search" id="search" placeholder="e.g. Apple Pie">
-  </div>
-  <div>
-    <label for="email">Email: </label> <input type="text" name="email" id="email" placeholder="joe@example.com">
-  </div>
+	<div>
+		<label for="search">Search:</label> <input type="text" name="search" id="search" placeholder="e.g. Apple Pie">
+	</div>
+	<div>
+		<label for="email">Email: </label> <input type="text" name="email" id="email" placeholder="joe@example.com">
+	</div>
 </form>
 
 <style>
 ::-webkit-input-placeholder {
-   color: #777;
-   opacity: 1;
+	 color: #777;
+	 opacity: 1;
 }
 
 :-moz-placeholder { /* Firefox 18- */
-   color: #777;
-   opacity: 1;
+	 color: #777;
+	 opacity: 1;
 }
 
 ::-moz-placeholder {  /* Firefox 19+ */
-   color: #777;
-   opacity: 1;
+	 color: #777;
+	 opacity: 1;
 }
 
 :-ms-input-placeholder {
-   color: #777;
-   opacity: 1;
+	 color: #777;
+	 opacity: 1;
 }
 </style>
 
@@ -223,10 +222,10 @@ Refer to the techniques described in [Hidden labels](labels.html#hidden) in case
 
 ~~~ html
 <div>
-  <label for="search">Search:</label> <input type="text" name="search" id="search" placeholder="e.g. Apple Pie">
+	<label for="search">Search:</label> <input type="text" name="search" id="search" placeholder="e.g. Apple Pie">
 </div>
 <div>
-  <label for="email">Email: </label> <input type="text" name="email" id="email" placeholder="joe@example.com">
+	<label for="email">Email: </label> <input type="text" name="email" id="email" placeholder="joe@example.com">
 </div>
 ~~~
 
@@ -244,23 +243,23 @@ At the time of writing, browsers usually display the placeholder text in too lig
 
 ~~~ css
 ::-webkit-input-placeholder {
-   color: #777;
-   opacity: 1;
+	 color: #777;
+	 opacity: 1;
 }
 
 :-moz-placeholder { /* Firefox 18- */
-   color: #777;
-   opacity: 1;
+	 color: #777;
+	 opacity: 1;
 }
 
 ::-moz-placeholder {  /* Firefox 19+ */
-   color: #777;
-   opacity: 1;
+	 color: #777;
+	 opacity: 1;
 }
 
 :-ms-input-placeholder {
-   color: #777;
-   opacity: 1;
+	 color: #777;
+	 opacity: 1;
 }
 ~~~
 

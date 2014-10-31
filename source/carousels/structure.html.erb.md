@@ -1,6 +1,6 @@
 ---
 title: Structure
-status: editors-draft
+status: approved-draft
 order: 2
 wcag_success_criteria:
   - 1.3.1

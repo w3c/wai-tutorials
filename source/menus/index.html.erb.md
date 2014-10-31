@@ -1,7 +1,7 @@
 ---
 title: Menu Concepts
 tutorial_title: Menus
-status: editors-draft
+status: draft
 order: 1
 topic_order: 6
 type: intro

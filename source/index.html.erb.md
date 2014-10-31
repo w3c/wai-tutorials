@@ -31,11 +31,19 @@ Web authoring tools (Content Management Systems (CMS), <abbr title="What you see
 
 ## Tutorial Topics
 
+-   **[Page Structure](page-structure/index.html):** Discover possibilities to mark up websites to make them more accessible.
+
+-   **[Menus](menus/index.html):** Get guidance on the development of menus on websites and in web applications.
+
 -   **[Images](images/index.html):** Learn how to use images in an accessible way, including decorative, linked, and grouped images.
 
 -   **[Tables](tables/index.html):** Find out how you can add structural information to tables so that assistive technology can identify the relationship between table headers and data.
 
-[Additional tutorials](more/index.html) are planned and will be added here once they are completed and reviewed.
+-   **[Forms](forms/index.html):** Learn how labels and instructions inform users about the purpose of a form field and how it should be completed and how form validation can prevent users from submitting wrong data.
+
+-   **[Carousels](carousels/index.html):** Study how an accessible, animated carousel is built.
+
+Additional tutorials are planned and will be added here once they are completed and reviewed.
 
 ## Additional Resources
 

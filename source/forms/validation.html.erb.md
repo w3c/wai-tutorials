@@ -1,6 +1,5 @@
 ---
 title: Validating Input
-status: draft
 order: 5
 wcag_success_criteria:
   - 3.3.1
@@ -27,8 +26,8 @@ In the example below, the `required` attribute is added to the input field. If y
 <%= sample_start %>
 
 <form method="post" action="../../beyond/">
-  <div>
-    <label for="name">Name (required): </label> <input type="text" name="name" id="name" required aria-required="true">
+	<div>
+		<label for="name">Name (required): </label> <input type="text" name="name" id="name" required aria-required="true">
 		<input type="submit" value="Submit">
 	</div>
 </form>
@@ -70,40 +69,40 @@ The example below shows these HTML5 input types in action. Depending on your web
 <%= sample_start %>
 
 <form method="post" action="../../beyond/" id="valform">
-  <div>
-    <div><label for="email">Email: </label></div>
-    <div><input type="email" name="email" id="email"></div>
-  </div>
-  <div>
-    <div><label for="url">Website: </label></div>
-    <div><input type="url" name="url" id="url"></div>
-  </div>
-  <div>
-    <div><label for="number">Number: </label></div>
-    <div><input type="number" name="number" id="number" min="0" max="100" step="10" value="0"></div>
-  </div>
-  <div>
-    <div><label for="range">Range: </label></div>
-    <div><input type="range" name="range" id="range" min="0" max="100" step="10" value="0"></div>
-  </div>
-  <div>
-    <div><label for="date">Date: </label></div>
-    <div><input type="date" name="date" id="date"></div>
-  </div>
-  <div>
-    <div><label for="time">Time: </label></div>
-    <div><input type="time" name="time" id="time"></div>
-  </div>
-  <div>
-    <div></div>
-    <div><input type="submit" value="Submit"></div>
-  </div>
+	<div>
+		<div><label for="email">Email: </label></div>
+		<div><input type="email" name="email" id="email"></div>
+	</div>
+	<div>
+		<div><label for="url">Website: </label></div>
+		<div><input type="url" name="url" id="url"></div>
+	</div>
+	<div>
+		<div><label for="number">Number: </label></div>
+		<div><input type="number" name="number" id="number" min="0" max="100" step="10" value="0"></div>
+	</div>
+	<div>
+		<div><label for="range">Range: </label></div>
+		<div><input type="range" name="range" id="range" min="0" max="100" step="10" value="0"></div>
+	</div>
+	<div>
+		<div><label for="date">Date: </label></div>
+		<div><input type="date" name="date" id="date"></div>
+	</div>
+	<div>
+		<div><label for="time">Time: </label></div>
+		<div><input type="time" name="time" id="time"></div>
+	</div>
+	<div>
+		<div></div>
+		<div><input type="submit" value="Submit"></div>
+	</div>
 </form>
 
 <style>
-  #valform {display:table}
-  #valform>div {display:table-row}
-  #valform>div>div {display:table-cell; padding: .1em;}
+	#valform {display:table}
+	#valform>div {display:table-row}
+	#valform>div>div {display:table-cell; padding: .1em;}
 </style>
 
 <%= sample_end%>
@@ -115,28 +114,28 @@ The example below shows these HTML5 input types in action. Depending on your web
 
 ~~~ html
 <div>
-  <label for="email">Email: </label>
-  <input type="email" name="email" id="email">
+	<label for="email">Email: </label>
+	<input type="email" name="email" id="email">
 </div>
 <div>
-  <label for="url">Website: </label>
-  <input type="url" name="url" id="url">
+	<label for="url">Website: </label>
+	<input type="url" name="url" id="url">
 </div>
 <div>
-  <label for="number">Number: </label>
-  <input type="number" name="number" id="number" min="0" max="100" step="10" value="0">
+	<label for="number">Number: </label>
+	<input type="number" name="number" id="number" min="0" max="100" step="10" value="0">
 </div>
 <div>
-  <label for="range">Range: </label>
-  <input type="range" name="range" id="range" min="0" max="100" step="10" value="0">
+	<label for="range">Range: </label>
+	<input type="range" name="range" id="range" min="0" max="100" step="10" value="0">
 </div>
 <div>
-  <label for="date">Date: </label>
-  <input type="date" name="date" id="date">
+	<label for="date">Date: </label>
+	<input type="date" name="date" id="date">
 </div>
 <div>
-  <label for="time">Time: </label>
-  <input type="time" name="time" id="time">
+	<label for="time">Time: </label>
+	<input type="time" name="time" id="time">
 </div>
 ~~~
 
@@ -172,11 +171,11 @@ In the example below, the `pattern` attribute of the `input` element specifies a
 <%= sample_start %>
 
 <form method="post" action="../../beyond/">
-  <div>
-    <label for="license">German License Plate (CCC XXXX 9999):</label> <input type="text" id="license" pattern="[A-ZÖÄÜ]{1,3}( )[A-Z]{2,4}( )[0-9]{1,4}" />
-  </div>
-  <div>
-  </div>
+	<div>
+		<label for="license">German License Plate (CCC XXXX 9999):</label> <input type="text" id="license" pattern="[A-ZÖÄÜ]{1,3}( )[A-Z]{2,4}( )[0-9]{1,4}" />
+	</div>
+	<div>
+	</div>
 </form>
 
 <%= sample_end%>
@@ -188,9 +187,9 @@ In the example below, the `pattern` attribute of the `input` element specifies a
 
 ~~~ html
 <div>
-  <input type="text" id="license"
-    pattern="[A-ZÖÄÜ]{1,3}( )[A-Z]{2,4}( )[0-9]{1,4}"
-  >
+	<input type="text" id="license"
+		pattern="[A-ZÖÄÜ]{1,3}( )[A-Z]{2,4}( )[0-9]{1,4}"
+	>
 </div>
 ~~~
 

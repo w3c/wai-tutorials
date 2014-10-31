@@ -1,7 +1,7 @@
 ---
 title: Carousel Concepts
 tutorial_title: Carousels
-status: editors-draft
+status: approved-draft
 order: 1
 topic_order: 4
 type: intro
@@ -21,6 +21,8 @@ Also, carousels often pose traps to keyboard users, not allowing them to use the
 - **[Functionality](controls.html):** Provide functionality to display the carousel items one at a time, and to allow users to browse through them.
 
 - **[Animations](animations.html):** Provide users with control over any animations in your carousel.
+
+- **[Full Content](examples/carousel.html):** The complete example source code.
 
 ## Why is this important?
 

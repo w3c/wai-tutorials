@@ -1,7 +1,7 @@
 ---
 title: "Web Application Menus"
 nav_title: "Applications Menus"
-status: editors-draft
+status: approved-draft
 order: 5
 wcag_techniques:
 ---

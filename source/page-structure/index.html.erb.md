@@ -2,7 +2,7 @@
 title: Page Structure Concepts
 tutorial_title: Page Structure
 nav_title: Concepts
-status: editors-draft
+status: draft
 order: 1
 topic_order: 6
 type: intro

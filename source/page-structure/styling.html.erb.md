@@ -1,6 +1,6 @@
 ---
 title: Styling
-status: editors-draft
+status: draft
 order: 5
 wcag_success_criteria:
   - 1.4.4

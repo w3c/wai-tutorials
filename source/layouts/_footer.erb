@@ -3,14 +3,17 @@
     <div>
 		<h2>Document info</h2>
 		<ul>
-			<li><strong>Last Modification:</strong>
+			<li><strong>Status &amp; Last Modification:</strong>
+			<% if current_page.data.status=="approved-draft" %>
+        Draft, approved by <a href="">EOWG</a>. —
+      <% end %>
       <% if current_page.data.status=="draft" %>
-        [DRAFT]
+        [DRAFT] —
       <% end %>
       <% if current_page.data.status=="editors-draft" %>
-        [EDITOR’S DRAFT]
+        [EDITOR’S DRAFT] —
       <% end %>
-      <%= File.mtime(Dir.glob('source/' + current_page.path + '.erb.md')[0]).strftime("%d %B %Y") %>
+      <%= File.mtime(Dir.glob('source/' + current_page.path + '.erb.md')[0]).strftime("%B %Y") %>
 			</li>
       <%= partial "layouts/contributors" %>
       <li>[<%= nav_link('Attributions', '/attributions.html', :relative => true) %>]  [<%= nav_link('Changelog', '/changelog.html', :relative => true) %>]</li>

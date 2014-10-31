@@ -1,6 +1,6 @@
 ---
 title: Multiple Ways
-status: editors-draft
+status: approved-draft
 order: 6
 wcag_success_criteria:
   - 2.4.8
@@ -28,18 +28,18 @@ A breadcrumb navigation is usually positioned near the top of the page. As a nav
 ~~~ html
 <nav class="breadcrumb" role="navigation" aria-label="You are here:">
 
-    <a href="…">Home</a>
+		<a href="…">Home</a>
 
-    &gt;
+		&gt;
 
-    <a href="…">SpaceBears</a>
+		<a href="…">SpaceBears</a>
 
-    &gt;
+		&gt;
 
-    <span class="current">
-        <span class="visuallyhidden">Current: </span>
-        Cpt. Space 6 Plus
-    </span>
+		<span class="current">
+				<span class="visuallyhidden">Current: </span>
+				Cpt. Space 6 Plus
+		</span>
 
 </nav>
 ~~~

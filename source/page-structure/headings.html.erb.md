@@ -1,6 +1,6 @@
 ---
 title: Headings
-status: editors-draft
+status: draft
 order: 3
 wcag_success_criteria:
   - 1.3.1

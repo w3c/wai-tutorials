@@ -1,6 +1,5 @@
 ---
 title: Labeling Controls
-status: draft
 order: 2
 contributors:
   - HTML5 Boilerplate
@@ -36,7 +35,7 @@ The most basic way to associate labels with form controls is to provide both the
 <%= sample_start %>
 
 <form method="post" action="#">
-  <label>First name: <input type="text" name="firstname"></label>
+	<label>First name: <input type="text" name="firstname"></label>
 </form>
 
 <%= sample_end %>
@@ -66,20 +65,20 @@ This approach is more robust because it explicitly associates the labels with th
 
 <div>All fields marked (required) must be completed.</div>
 <form method="post" action="#" id="expl_label_form">
-  <div>
-    <div>
-      <label for="firstname">First name: </label>
-    </div>
-    <div>
-      <input type="text" name="firstname" id="firstname">
-    </div>
-  </div>
+	<div>
+		<div>
+			<label for="firstname">First name: </label>
+		</div>
+		<div>
+			<input type="text" name="firstname" id="firstname">
+		</div>
+	</div>
 </form>
 
 <style>
-  #expl_label_form {display:table}
-  #expl_label_form>div {display:table-row}
-  #expl_label_form>div>div {display:table-cell;}
+	#expl_label_form {display:table}
+	#expl_label_form>div {display:table-row}
+	#expl_label_form>div>div {display:table-cell;}
 </style>
 
 <%= sample_end %>
@@ -91,14 +90,14 @@ This approach is more robust because it explicitly associates the labels with th
 
 ~~~ html
 <form method="post" action="#" id="expl_label_form">
-  <div>
-    <div>
-      <label for="firstname">First name: </label>
-    </div>
-    <div>
-      <input type="text" name="firstname" id="firstname">
-    </div>
-  </div>
+	<div>
+		<div>
+			<label for="firstname">First name: </label>
+		</div>
+		<div>
+			<input type="text" name="firstname" id="firstname">
+		</div>
+	</div>
 </form>
 ~~~
 
@@ -190,11 +189,11 @@ In the example below, the search field is positioned directly beside the search 
 <%= sample_start %>
 
 <form method="post" action="#">
-  <div>
-    <label for="search" class="visuallyhidden">Search: </label>
-    <input type="text" name="search" id="search">
-    <button type="button">Search</button>
-  </div>
+	<div>
+		<label for="search" class="visuallyhidden">Search: </label>
+		<input type="text" name="search" id="search">
+		<button type="button">Search</button>
+	</div>
 </form>
 
 <%= sample_end %>
@@ -251,24 +250,24 @@ To make the code more robust and address other situations, such as displaying th
 <%= sample_start %>
 
 <form method="post" action="#">
-  <div>
-    <label for="day">Date of birth: </label> <label class="visuallyhidden" for="day">Day: </label> <input type="text" id="day" maxlength="2" style="width:1.5em;text-align:right;" placeholder="01">
-    <label class="visuallyhidden" for="month">Month: </label> <select name="month" id="month">
-      <option value="01">January</option>
-      <option value="02">Febuary</option>
-      <option value="03">March</option>
-      <option value="04">April</option>
-      <option value="05">May</option>
-      <option value="06">June</option>
-      <option value="07">July</option>
-      <option value="08">August</option>
-      <option value="09">September</option>
-      <option value="10">October</option>
-      <option value="11">November</option>
-      <option value="12">December</option>
-    </select>
-    <label class="visuallyhidden" for="year">Year: </label> <input type="text" id="year" maxlength="4" style="width:2.5em;text-align:right;" placeholder="1970">
-  </div>
+	<div>
+		<label for="day">Date of birth: </label> <label class="visuallyhidden" for="day">Day: </label> <input type="text" id="day" maxlength="2" style="width:1.5em;text-align:right;" placeholder="01">
+		<label class="visuallyhidden" for="month">Month: </label> <select name="month" id="month">
+			<option value="01">January</option>
+			<option value="02">Febuary</option>
+			<option value="03">March</option>
+			<option value="04">April</option>
+			<option value="05">May</option>
+			<option value="06">June</option>
+			<option value="07">July</option>
+			<option value="08">August</option>
+			<option value="09">September</option>
+			<option value="10">October</option>
+			<option value="11">November</option>
+			<option value="12">December</option>
+		</select>
+		<label class="visuallyhidden" for="year">Year: </label> <input type="text" id="year" maxlength="4" style="width:2.5em;text-align:right;" placeholder="1970">
+	</div>
 </form>
 
 <%= sample_end %>
@@ -286,9 +285,9 @@ To make the code more robust and address other situations, such as displaying th
 
 <label for="month" class="visuallyhidden">Month: </label>
 <select name="month" id="month">
-  <option value="01">January</option>
-  <option value="02">Febuary</option>
-  […]
+	<option value="01">January</option>
+	<option value="02">Febuary</option>
+	[…]
 </select>
 
 <label for="year" class="visuallyhidden">Year: </label>
@@ -326,9 +325,9 @@ The code can be simplified by using `aria-label`, with the same outcome as above
 <input type="text" id="day" maxlength="2" placeholder="01" aria-label="Day">
 
 <select name="month" id="month" aria-label="Month">
-  <option value="01">January</option>
-  <option value="02">Febuary</option>
-  […]
+	<option value="01">January</option>
+	<option value="02">Febuary</option>
+	[…]
 </select>
 
 <input type="text" id="year" maxlength="4" placeholder="1970"  aria-label="Year">
@@ -348,14 +347,14 @@ Screen readers and other assistive technology, as with web browsers, hide elemen
 
 ~~~ css
 .visuallyhidden {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
 }
 ~~~
 
@@ -372,10 +371,10 @@ The `title` attribute can be used to identify form elements. This approach is ge
 <%= sample_start %>
 
 <form method="post" action="#">
-  <div>
-    <input title="Search" type="text" name="search" id="search2">
-    <button type="button">Search</button>
-  </div>
+	<div>
+		<input title="Search" type="text" name="search" id="search2">
+		<button type="button">Search</button>
+	</div>
 </form>
 
 <%= sample_end %>
@@ -403,10 +402,10 @@ The `aria-label` attribute can also be used to identify form elements. This appr
 <%= sample_start %>
 
 <form method="post" action="#">
-  <div>
-    <input aria-label="Search" type="text" name="search" id="search2">
-    <button type="button">Search</button>
-  </div>
+	<div>
+		<input aria-label="Search" type="text" name="search" id="search2">
+		<button type="button">Search</button>
+	</div>
 </form>
 
 <%= sample_end %>

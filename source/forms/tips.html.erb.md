@@ -1,6 +1,5 @@
 ---
 title: Tips and Tricks
-status: draft
 order: 9
 type: tips
 ---
