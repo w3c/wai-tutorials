@@ -5,13 +5,13 @@
 		<ul>
 			<li><strong>Status &amp; Last Modification:</strong>
 			<% if current_page.data.status=="approved-draft" %>
-        Draft, approved by <a href="">EOWG</a>. —
+        Draft, approved by <a href="">EOWG</a>, updated
       <% end %>
       <% if current_page.data.status=="draft" %>
-        [DRAFT] —
+        [DRAFT] updated
       <% end %>
       <% if current_page.data.status=="editors-draft" %>
-        [EDITOR’S DRAFT] —
+        [EDITOR’S DRAFT] updated
       <% end %>
       <%= File.mtime(Dir.glob('source/' + current_page.path + '.erb.md')[0]).strftime("%B %Y") %>
 			</li>
@@ -34,7 +34,8 @@
 					<a href="http://www.keio.ac.jp/">Keio</a>,
          	<a href="http://ev.buaa.edu.cn/">Beihang</a>), All Rights Reserved. W3C <a href="http://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>,
          <a href="http://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a>,               <a rel="Copyright" href="http://www.w3.org/Consortium/Legal/copyright-documents">document use</a>               and <a rel="Copyright" href="http://www.w3.org/Consortium/Legal/copyright-software">software licensing</a> rules apply. Your interactions with this site are in accordance with our <a href="http://www.w3.org/Consortium/Legal/privacy-statement#Public">public</a>
-               and <a href="http://www.w3.org/Consortium/Legal/privacy-statement#Members">Member</a>privacy statements.</p>                   </div><!-- ends copyright -->
+               and <a href="http://www.w3.org/Consortium/Legal/privacy-statement#Members">Member</a>privacy statements.</p>
+               </div><!-- ends copyright -->
     </div>
 	</footer>
 	<%= javascript_include_tag  "main" %>

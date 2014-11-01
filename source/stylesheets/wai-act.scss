@@ -544,38 +544,37 @@ a {
 	}
 	&.draft, &.editors-draft, &.approved-draft{
 		.tutorial-heading h1 {
-			&:after {
-				display: inline-block;
+			line-height: 1;
+			&:before {
+				display: block;
 				@extend .font-primary;
 				font-weight: bold;
 				padding: 0 .2em;
-				vertical-align: middle;
+				//vertical-align: middle;
 				font-size: .5em;
-				margin-right: .25em;
+				margin-top: .5em;
+				//margin-right: .25em;
 			}
 		}
 	}
 	&.approved-draft {
 		.tutorial-heading h1 {
-			&:after {
-				content: "APPROVED DRAFT";
-				background-color: #CFC;
+			&:before {
+				content: "[APPROVED DRAFT]";
 			}
 		}
 	}
 	&.draft {
 		.tutorial-heading h1 {
-			&:after {
-				content: "DRAFT";
-				background-color: #CFC;
+			&:before {
+				content: "[DRAFT]";
 			}
 		}
 	}
 	&.editors-draft {
 		.tutorial-heading h1 {
-			&:after {
-				content: "ROUGH DRAFT";
-				background-color: #FCC;
+			&:before {
+				content: "[ROUGH DRAFT]";
 			}
 		}
 	}
