@@ -18,7 +18,7 @@ Also, carousels often pose traps to keyboard users, not allowing them to use the
 
 - **[Structure](structure.html):** Provide structural markup for the carousel and its items, and later enhance these structures with styling and scripting.
 
-- **[Functionality](controls.html):** Provide functionality to display the carousel items one at a time, and to allow users to browse through them.
+- **[Functionality](functionality.html):** Provide functionality to display the carousel items one at a time, and to allow users to browse through them.
 
 - **[Animations](animations.html):** Provide users with control over any animations in your carousel.
 
