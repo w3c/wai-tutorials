@@ -17,7 +17,7 @@ contributors:
 support: <strong>Developed with support</strong> from the <a href="http://www.w3.org/WAI/ACT/">WAI-ACT</a> project, co-funded by the European Commission <abbr title="Information Society Technologies">IST</abbr> Programme.
 ---
 
-Data tables are used to organize data in grids. Accessible tables need HTML markup that indicates the difference between header cells and data cells, and indicate the relationship between them.
+Data tables are used to organize data in grids. Accessible tables need HTML markup that indicates header cells and data cells, and defines their relationship. Assistive technologies use this information to provide context to users.
 
 To make tables accessible, header cells must be marked up with `<th>`, and data cells with `<td>`. For more complex tables, explicit associations may be needed using `scope`, `id`, and `headers` attributes.
 
