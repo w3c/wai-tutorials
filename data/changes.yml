@@ -1,4 +1,34 @@
 changes:
+  - 2014-10-23:
+      - desc: "Navigation menu changes"
+        page: menus/index.html
+        by:
+          - WCAG WG
+        commit: 4ac340fa32c1f6f4e94f0e9999d9b4c192f51c24
+  - 2014-10-17:
+      - desc: "Describe carousel design challenges in greater detail"
+        page: carousels/index.html
+        by:
+          - WCAG WG
+        commit: 4ac340fa32c1f6f4e94f0e9999d9b4c192f51c24
+  - 2014-10-16:
+      - desc: "Change contrast for placeholders"
+        page: tables/irregular.html
+        by:
+          - WCAG WG
+        issue: 124
+  - 2014-07-25:
+      - desc: "Explained row groups and column groups in more detail"
+        page: tables/irregular.html
+        by:
+          - WCAG WG
+        commit: cba4a7baf199a4e169d642c0f0c9ae2daafb505f
+  - 2014-07-22:
+      - desc: "Change decision tree style"
+        page: images/decision-tree.html
+        by:
+          - EO WG
+        commit: ad0b663076e93d5b2938f8bb190207afa31e1f7a
   - 2014-07-21:
       - desc: "Polish texts and finish them up"
         page: all
