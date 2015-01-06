@@ -25,8 +25,8 @@ In this example the first and last names and cities can’t be distinguished fro
 {::nomarkdown}
 <%= sample_start %>
 
-<caption>Teddy bear collectors:</strong></p>
 <table>
+	<caption>Teddy bear collectors:</caption>
   <tr>
     <th scope="col">Last Name</th>
     <th scope="col">First Name</th>
@@ -213,9 +213,8 @@ In the header row, the `col` value for `scope` associates each header cell with 
 {::nomarkdown}
 <%= sample_start %>
 
-<p><strong>Delivery slots:</strong></p>
-
 <table>
+	<caption>Delivery slots:</caption>
   <tr>
     <td></td>
     <th scope="col">Monday</th>
