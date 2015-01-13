@@ -416,13 +416,9 @@ The `aria-label` attribute can also be used to identify form elements. This appr
 {:/nomarkdown}
 
 ~~~ html
-<input title="Search" type="text" name="search" id="search">
+<input  aria-label="Search" type="text" name="search" id="search">
 <button type="submit">Search</button>
 ~~~
-
-{::nomarkdown}
-<%= code_end %>
-{:/nomarkdown}
 
 {::nomarkdown}
 <%= code_end %>
