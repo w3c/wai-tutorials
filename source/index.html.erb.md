@@ -29,6 +29,8 @@ They provide resources for a variety of roles, including:
 
 Web authoring tools (Content Management Systems (CMS), <abbr title="What you see is what you get">WYSIWYG</abbr> editors, word processors, etc.) can often help you create content that is accessible as shown in these tutorials.
 
+For *normative* information, see the [WCAG2.0 specification](http://www.w3.org/TR/WCAG20/). Additional guidance can also be found in the (non-normative) techniques, see the [How to Meet WCAG 2.0 document](http://www.w3.org/WAI/WCAG20/quickref/).
+
 ## Tutorial Topics
 
 -   **[Page Structure](page-structure/index.html):** Discover possibilities to mark up websites to make them more accessible.
