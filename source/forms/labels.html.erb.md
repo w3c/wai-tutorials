@@ -13,7 +13,8 @@ wcag_techniques:
   - G131
   - H44
   - H93
-  - G162
+  - ARIA14
+  - ARIA16
   - G17
   - G18
   - G167
@@ -372,7 +373,7 @@ The `title` attribute can be used to identify form elements. This approach is ge
 
 <form method="post" action="#">
 	<div>
-		<input title="Search" type="text" name="search" id="search2">
+		<input title="Search" type="text" name="search">
 		<button type="button">Search</button>
 	</div>
 </form>
@@ -385,7 +386,7 @@ The `title` attribute can be used to identify form elements. This approach is ge
 {:/nomarkdown}
 
 ~~~ html
-<input title="Search" type="text" name="search" id="search">
+<input title="Search" type="text" name="search">
 <button type="submit">Search</button>
 ~~~
 
@@ -403,7 +404,7 @@ The `aria-label` attribute can also be used to identify form elements. This appr
 
 <form method="post" action="#">
 	<div>
-		<input aria-label="Search" type="text" name="search" id="search2">
+		<input aria-label="Search" type="text" name="search">
 		<button type="button">Search</button>
 	</div>
 </form>
@@ -416,10 +417,12 @@ The `aria-label` attribute can also be used to identify form elements. This appr
 {:/nomarkdown}
 
 ~~~ html
-<input  aria-label="Search" type="text" name="search" id="search">
+<input  aria-label="Search" type="text" name="search">
 <button type="submit">Search</button>
 ~~~
 
 {::nomarkdown}
 <%= code_end %>
 {:/nomarkdown}
+
+ARIA provides a way to explicitly associate text on a web page with a form control, using the aria-labelledby attribute to reference the id of an element. This can contain text that serves as a label for the control. Like other uses of ARIA, support for the use of the aria-labelledby attribute is still developing.
