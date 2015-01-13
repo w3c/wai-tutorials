@@ -18,6 +18,8 @@ wcag_techniques:
   - G18
   - G167
   - H65
+  - ARIA14
+  - ARIA16
 ---
 
 Provide labels to identify all form controls, including text fields, checkboxes, radio buttons, and drop-down menus. In most cases this is done by using the `<label>` element and in some cases the `title` attribute.
@@ -25,6 +27,39 @@ Provide labels to identify all form controls, including text fields, checkboxes,
 Labels need to describe the purpose of the form control. This section of the tutorial describes how to provide labels so that they are properly associated with form controls. Later sections explain how to provide instructions, validate user input, and provide feedback to help users complete your form.
 
 Labels and their related form control must be associated with each other either implicitly or explicitly. This allows the browser to do things like use the label as a larger clickable area to access or activate the control, and ensures assistive technology can refer to the correct label when presenting a form control.
+
+## Associating labels explicitly
+{:.newex}
+
+Use the `for` attribute of the `<label>` element to explicitly associate labels with their form controls. The value of the `for` attribute must exactly match the value of the `id` attribute for the referenced form element.
+
+This approach is more robust because it explicitly associates the labels with the form elements within the code. It allows the labels and form controls to be displayed separately, for example on a mobile device when only one of the controls can be displayed at a time. It is also independent of the HTML code structure, which is particularly useful when the label text and form element are not included within the same parent element in the HTML code -- for example, when the form is designed to look like a table.
+
+WAI-ARIA provides a way to explicitly associate text on a web page with a form control, using the `aria-labelledby` attribute. This attribute references the `id` of an element containing text that can serve as a label for the control. Like other uses of ARIA, support for the use of the `aria-labelledby` attribute is still developing in user agents.
+
+{::nomarkdown}
+<%= sample_start %>
+
+<form method="post" action="#">
+	<label for="firstname">First name: </label>
+	<input type="text" name="firstname" id="firstname">
+</form>
+
+<%= sample_end %>
+{:/nomarkdown}
+
+{::nomarkdown}
+<%= code_start('', 'HTML') %>
+{:/nomarkdown}
+
+~~~ html
+<label for="firstname">First name: </label>
+<input type="text" name="firstname" id="firstname">
+~~~
+
+{::nomarkdown}
+<%= code_end %>
+{:/nomarkdown}
 
 ## Associating labels implicitly
 {:.newex}
@@ -47,72 +82,6 @@ The most basic way to associate labels with form controls is to provide both the
 
 ~~~ html
 <label>First name: <input type="text" name="firstname"></label>
-~~~
-
-{::nomarkdown}
-<%= code_end %>
-{:/nomarkdown}
-
-## Associating labels explicitly
-{:.newex}
-
-Use the `for` attribute of the `<label>` element to explicitly associate labels with their form controls. The value of the `for` attribute must exactly match the value of the `id` attribute for the referenced form element.
-
-This approach is more robust because it explicitly associates the labels with the form elements within the code. It allows the labels and form controls to be displayed separately, for example on a mobile device when only one of the controls can be displayed at a time. It is also independent of the HTML code structure, which is particularly useful when the label text and form element are not included within the same parent element in the HTML code -- for example, when the form is designed to look like a table.
-
-{::nomarkdown}
-<%= sample_start %>
-
-<div>All fields marked (required) must be completed.</div>
-<form method="post" action="#" id="expl_label_form">
-	<div>
-		<div>
-			<label for="firstname">First name: </label>
-		</div>
-		<div>
-			<input type="text" name="firstname" id="firstname">
-		</div>
-	</div>
-</form>
-
-<style>
-	#expl_label_form {display:table}
-	#expl_label_form>div {display:table-row}
-	#expl_label_form>div>div {display:table-cell;}
-</style>
-
-<%= sample_end %>
-{:/nomarkdown}
-
-{::nomarkdown}
-<%= code_start('', 'HTML') %>
-{:/nomarkdown}
-
-~~~ html
-<form method="post" action="#" id="expl_label_form">
-	<div>
-		<div>
-			<label for="firstname">First name: </label>
-		</div>
-		<div>
-			<input type="text" name="firstname" id="firstname">
-		</div>
-	</div>
-</form>
-~~~
-
-{::nomarkdown}
-<%= code_end %>
-{:/nomarkdown}
-
-{::nomarkdown}
-<%= code_start('', 'CSS') %>
-{:/nomarkdown}
-
-~~~ css
-#expl_label_form {display:table;}
-#expl_label_form>div {display:table-row;}
-#expl_label_form>div>div {display:table-cell;}
 ~~~
 
 {::nomarkdown}
