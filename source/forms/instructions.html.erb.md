@@ -13,6 +13,7 @@ wcag_techniques:
   - G162
   - G17
   - G18
+  - ARIA9
 ---
 
 Provide instructions to help users understand how to complete the form and individual form controls. This includes indicating any required and optional input, data formats, and other important aspects of the form.
@@ -126,7 +127,7 @@ Content outside form elements may be missed by screen readers that are in “For
 #### Using WAI-ARIA
 {:.ap}
 
-Another approach is to use the WAI-ARIA `aria-labelledby` attribute to associate the instructions with form elements. At the time of writing, this approach may not be fully supported by all web browsers and assistive technologies, especially by non-screen readers.
+Another approach is to use the WAI-ARIA `aria-labelledby` attribute to associate the instructions with form elements. At the time of writing, this approach may not be fully supported by all web browsers and assistive technologies, especially by non-screen readers. In this example the `for` and `id` attributes are used for backward compatibility.
 
 {::nomarkdown}
 <%= sample_start %>
@@ -143,9 +144,9 @@ Another approach is to use the WAI-ARIA `aria-labelledby` attribute to associate
 </style>
 <form method="post" action="#" id="ex3">
 	<div>
-		<label for="expire4">Expiry date:</label>
+		<label id="expLabel" for="expire4">Expiry date:</label>
 		<span>
-			<input type="text" name="expire" id="expire4" aria-labelledby="expDesc2">
+			<input type="text" name="expire" id="expire4" aria-labelledby="expLabel expDesc2">
 			<span id="expDesc2">MM/YYYY</span>
 		</span>
 	</div>
@@ -159,9 +160,9 @@ Another approach is to use the WAI-ARIA `aria-labelledby` attribute to associate
 {:/nomarkdown}
 
 ~~~ html
-<label for="expire">Expiry date:</label>
+<label id="expLabel" for="expire">Expiry date:</label>
 <span>
-	<input type="text" name="expire" id="expire" aria-labelledby="expDesc">
+	<input type="text" name="expire" id="expire" aria-labelledby="expLabel expDesc">
 	<span id="expDesc">MM/YYYY</span>
 </span>
 ~~~
