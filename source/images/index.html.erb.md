@@ -26,7 +26,7 @@ Images must have text alternatives that describe the information or function rep
 
 -   **[Decorative images](decorative.html)**: If the only purpose of an image is to add visual interest to the page, rather than to convey information that is important to understanding the page, the text alternative should be null (`alt=""`).
 
--   **[Functional images](functional.html)**: The text alternative of an image used as a link or as a button should describe the functionality of the link or button rather than the visual image. Examples for such images are a printer icon to represent the print function or a button to submit of a form.
+-   **[Functional images](functional.html)**: The text alternative of an image used as a link or as a button should describe the functionality of the link or button rather than the visual image. Examples for such images are a printer icon to represent the print function or a button to submit a form.
 
 -   **[Images of text](textual.html)**: Readable text is sometimes presented within an image. If the image is not a logo, text in images should be avoided. However, if images of text are used, the text alternative should contain the same words as in the image.
 
