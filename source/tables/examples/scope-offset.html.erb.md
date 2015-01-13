@@ -14,12 +14,12 @@ layout: fullcode
     <tr>
       <th scope="col"><abbr title="Identification Number">ID</abbr></th>
       <th scope="col">Name</th>
-      <th scope="col">Jul</th>
-      <th scope="col">Aug</th>
-      <th scope="col">Sept</th>
-      <th scope="col">Oct</th>
-      <th scope="col">Nov</th>
-      <th scope="col">Dec</th>
+      <th scope="col">July</th>
+      <th scope="col">August</th>
+      <th scope="col">September</th>
+      <th scope="col">October</th>
+      <th scope="col">November</th>
+      <th scope="col">December</th>
     </tr>
   </thead>
 
