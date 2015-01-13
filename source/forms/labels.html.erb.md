@@ -331,7 +331,7 @@ Screen readers and other assistive technology, as with web browsers, hide elemen
 <%= code_end %>
 {:/nomarkdown}
 
-## Using the `title` attribute
+#### Using the `title` attribute
 {:.newex}
 
 The `title` attribute can be used to identify form elements. This approach is generally less reliable and not recommended because some screen readers and assistive technology do not interpret the `title` attribute as a replacement for the label element, possibly because the `title` attribute is often used to provide non-essential information. The information of the `title` attribute is shown to visual users as a tool tip when hovering over the form field with the mouse.
@@ -362,37 +362,3 @@ The `title` attribute can be used to identify form elements. This approach is ge
 <%= code_end %>
 {:/nomarkdown}
 
-## Using the `aria-label` attribute
-{:.newex}
-
-The `aria-label` attribute can also be used to identify form elements. This approach is generally well understood by screen readers and other assistive technology, but, unlike the `title` attribute, does not convey the information to visual users.
-
-{::nomarkdown}
-<%= sample_start %>
-
-<form method="post" action="#">
-	<div>
-		<input aria-label="Search" type="text" name="search" id="search2">
-		<button type="button">Search</button>
-	</div>
-</form>
-
-<%= sample_end %>
-{:/nomarkdown}
-
-{::nomarkdown}
-<%= code_start %>
-{:/nomarkdown}
-
-~~~ html
-<input title="Search" type="text" name="search" id="search">
-<button type="submit">Search</button>
-~~~
-
-{::nomarkdown}
-<%= code_end %>
-{:/nomarkdown}
-
-{::nomarkdown}
-<%= code_end %>
-{:/nomarkdown}
