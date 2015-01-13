@@ -22,7 +22,7 @@ In some situations a detailed literal description may be needed, but only when t
 ## Images used to label other information
 {:.ex}
 
-This example shows two image icons – one of a telephone, one of a fax machine. Each image is followed by a phone number. Consistent with the visual presentation the text alternatives “Telephone:” and “Fax:” are used to identify which number is which.
+This example shows two image icons – one of a telephone, one of a fax machine. Each image is followed by a phone number. Consistent with the visual presentation the text alternatives “Telephone:” and “Fax:” are used to identify what device each number relates to.
 
 {::nomarkdown}
 <%= sample_start %>
