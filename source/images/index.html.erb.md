@@ -30,7 +30,7 @@ Images must have text alternatives that describe the information or function rep
 
 -   **[Images of text](textual.html)**: Readable text is sometimes presented within an image. If the image is not a logo, text in images should be avoided. However, if images of text are used, the text alternative should contain the same words as in the image.
 
--   **[Complex images](complex.html) such as graphs and diagrams**: To convey data or detailed information, the text alternative should be a full text equivalent of the data or information provided in the image.
+-   **[Complex images](complex.html)** such as graphs and diagrams: To convey data or detailed information, the text alternative should be a full text equivalent of the data or information provided in the image.
 
 -   **[Groups of images](groups.html)**: If multiple images convey a single piece of information, the text alternative for one image should convey the information conveyed by the entire group.
 
