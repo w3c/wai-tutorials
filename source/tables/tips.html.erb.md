@@ -17,11 +17,11 @@ support: <strong>Developed with support</strong> from the <a href="http://www.w3
 
 -   **Data separation:**
 
-    1.  Make sure that each separate piece of data has its own cell. Don’t use headers in one column and all data in a second column, as this will make it almost impossible for screen readers to work out the relationships between data across columns.
+    - Make sure that each separate piece of data has its own cell. Don’t use headers in one column and all data in a second column, as this will make it almost impossible for screen readers to work out the relationships between data across columns.
 
         ![On the left, a table with two columns is shown. The header for the first column reads “Shirt” and the header for the second column reads “Sizes and amount in stock”. The second row reads “Blue” in the first column and “S: 6; M: 13, XL: 10”. In the second row, Sizes for a “Red” shirt are “M: 2; L: 9; XL: 10; XXL: 1”. On the right the table is split up in “Shirt”, “Size” and “Stock” columns.](headers-in-one-column-all-data-in-second.png)
 
-    2. Don‘t use line breaks (`<br>` elements) to create table rows as the data in the pseudo-rows may no longer align correctly when text is resized.
+    - Don't use line breaks (`<br>` elements) to create table rows as the data in the pseudo-rows may no longer align correctly when text is resized.
 
          ![On the top there is a table where the content and header cells are not marked up correctly. Line breaks are usedto make items look like they align correctly. When resizing the text (bottom) the items don’t line up anymore](table-text-resize.png)
 
