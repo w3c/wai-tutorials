@@ -17,7 +17,7 @@ support: <strong>Developed with support</strong> from the <a href="http://www.w3
 
 These tutorials show you how to develop web content that is accessible to people with disabilities and that provides a better user experience for everyone.
 
-They provide resources for a variety of roles, including:
+The tutorials provide resources for a variety of roles, including:
 
 * **Web developers** will find guidance and boilerplate solutions for many common coding challenges.
 * **Web designers** will learn how to create web page components with built-in accessible and inclusive design practice.
