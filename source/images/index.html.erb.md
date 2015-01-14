@@ -3,6 +3,7 @@ title: Images Concepts
 tutorial_title: Images
 order: 1
 topic_order: 1
+first_published: "September 2013"
 wcag_success_criteria:
   - 1.1.1
   - 1.4.5

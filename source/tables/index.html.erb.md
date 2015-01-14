@@ -3,6 +3,7 @@ title: Tables Concepts
 order: 1
 topic_order: 2
 tutorial_title: Tables
+first_published: "September 2013"
 wcag_success_criteria:
   - 1.3.1
 type: intro

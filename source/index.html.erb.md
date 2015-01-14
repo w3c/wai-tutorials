@@ -3,6 +3,7 @@ title: "Tutorials Overview"
 nav_title: "Tutorials: Overview"
 layout: overview
 order: 1
+first_published: "September 2013"
 editors:
   - Eric Eggert: "http://w3.org/People/yatil/"
   - Shadi Abou-Zahra: "http://w3.org/People/shadi/"
