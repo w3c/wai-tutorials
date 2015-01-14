@@ -25,7 +25,7 @@ Complex images contain substantial information – more than can be conveyed in 
 
 In these situations a two-part text alternative is required. The first part is the short description to identify the image and, where appropriate, indicate the location of the long description.  The second part is the long description – a textual representation of the essential information conveyed by the image.
 
-In certain situations the composition of the image may also be needed as part of the long description, but only where it’s important that the user understand the image construction. This page shows several possible approaches that can be used to provide both short and long descriptions.
+In certain situations a description of the composition of the image may also be needed as part of the long description, but only where it’s important that the user understand the image construction. This page shows several possible approaches that can be used to provide both short and long descriptions.
 
 Also it’s good practice to refer to more complex images from the accompanying text to describe the overall data, for example: “The following graph shows that visitors were lost in the first quarter, but the numbers recovered in the second quarter”.
 
