@@ -21,20 +21,18 @@ wcag_techniques:
   - ARIA16
 ---
 
-Provide labels to identify all form controls, including text fields, checkboxes, radio buttons, and drop-down menus. In most cases this is done by using the `<label>` element and in some cases the `title` attribute.
+Provide labels to identify all form controls, including text fields, checkboxes, radio buttons, and drop-down menus. In most cases this is done by using the `<label>` element.
 
-Labels need to describe the purpose of the form control. This section of the tutorial describes how to provide labels so that they are properly associated with form controls. Later sections explain how to provide instructions, validate user input, and provide feedback to help users complete your form.
+Labels need to describe the purpose of the form control. This section of the tutorial describes how to provide labels that are properly associated with form controls. Later sections explain how to provide [instructions](instructions.html), [validate user input](validation.html), and [provide feedback](notifications.html) to help users complete your form.
 
-Labels and their related form control must be associated with each other either implicitly or explicitly. This allows the browser to do things like use the label as a larger clickable area to access or activate the control, and ensures assistive technology can refer to the correct label when presenting a form control.
+A label and a form control need to be associated with each other either implicitly or explicitly. This allows browsers to use the label as a larger clickable area to access or activate the control, for example. It also ensures that assistive technology is able to refer to the correct label when presenting a form control.
 
 ## Associating labels explicitly
 {:.newex}
 
-Use the `for` attribute of the `<label>` element to explicitly associate labels with their form controls. The value of the `for` attribute must exactly match the value of the `id` attribute for the referenced form element.
+Use the `for` attribute of the `<label>` element to explicitly associate labels with their form controls. The value of the `for` attribute must exactly match the value of the `id` attribute of the referenced form element.
 
-This approach is more robust because it explicitly associates the labels with the form elements within the code. It allows the labels and form controls to be displayed separately, for example on a mobile device when only one of the controls can be displayed at a time. It is also independent of the HTML code structure, which is particularly useful when the label text and form element are not included within the same parent element in the HTML code -- for example, when the form is designed to look like a table.
-
-WAI-ARIA provides a way to explicitly associate text on a web page with a form control, using the `aria-labelledby` attribute. This attribute references the `id` of an element containing text that can serve as a label for the control. Like other uses of ARIA, support for the use of the `aria-labelledby` attribute is still developing in user agents.
+This approach is robust because as it explicitly associates the labels with the form elements within the code. It allows the labels and form controls to be displayed separately, for example on a mobile device when only one of the controls can be displayed at a time. It is also independent of the HTML code structure, which is particularly useful when the label text and form element are not included within the same parent element in the HTML code -- for example, when the form is designed to look like a table.
 
 {::nomarkdown}
 <%= sample_start %>
@@ -60,10 +58,12 @@ WAI-ARIA provides a way to explicitly associate text on a web page with a form c
 <%= code_end %>
 {:/nomarkdown}
 
+WAI-ARIA provides an additional way to explicitly associate text on a web page with a form control, using the `aria-labelledby` attribute. This attribute references the `id` of an element containing text that can serve as a label for the control. Like other uses of ARIA, support for the use of the `aria-labelledby` attribute is still developing in user agents.
+
 ## Associating labels implicitly
 {:.newex}
 
-The most basic way to associate labels with form controls is to provide both the label and the form control within the same `<label>` element. In the following example, the `<input>` element of type `text` allows users to provide their first name. This input field is embedded inside a `<label>` element with the text "First name:", to indicate the purpose of the input field to the user:
+Another way to associate labels with form controls is to provide both the label text and the form control within the same `<label>` element. In the following example, the `<input>` element of type `text` allows users to provide their first name. This input field is embedded inside a `<label>` element with the text "First name:", to indicate the purpose of the input field to the user:
 
 {::nomarkdown}
 <%= sample_start %>
@@ -121,7 +121,7 @@ When using the `<input>` element to create buttons, the label is set in the `val
 ### … using the `<button>` element
 {:.ap}
 
-Using the `<button>` element gives more flexibility as the label is set inside the element which can include markup to be more specific.
+Using the `<button>` element gives more flexibility as the label is set inside the element which can include markup, providing the possibility for more advanced accessibility hints.
 
 {::nomarkdown}
 <%= code_start('', 'HTML') %>
@@ -141,12 +141,12 @@ Using the `<button>` element gives more flexibility as the label is set inside t
 
 In left-to-right languages it is customary to visually position labels to the right of radio buttons and checkboxes, and to the left or directly above other form fields. Maintaining this practice increases predictability and understandability of your form for all users.
 
-In general, placing labels above the form fields helps reduce horizontal scrolling for people using screen magnification and for mobile device users. However, the usefulness of this approach depends on other design aspects, such as the proximity of other nearby form fields and content, and needs to be assessed individually. The aim should be to maintain a close visual relationship between the label and the form control.
+In general, placing labels above the form fields helps reduce horizontal scrolling for people using screen magnification and for mobile device users. However, the usefulness of this approach depends on other design aspects, such as the proximity of other nearby form fields and content, and needs to be assessed individually. The aim should be to maintain a close and distinct visual relationship between the label and the form control.
 
 ## Hiding labels
 {:.newex}
 
-A label for a form control helps everyone better understand its purpose. In some cases the purpose may be clear enough from the context when the content is rendered visually. In such cases a label can be hidden visually though it still needs to be provided within the code to support other forms of presentation and interaction, such as for screen reader and speech input users.
+A label for a form control helps everyone better understand its purpose. In some cases the purpose may be clear enough from the context when the content is rendered visually. In such cases a label can be hidden visually though it still needs to be provided within the code to support other forms of presentation and interaction, such as for screen reader and speech input users. The method that hides an element from sight but keeps it accessible for assistive technologies, that is used in this tutorial (using the `visuallyhidden` class) can be found [below](#note-on-hiding-elements).
 
 ### Single form control
 {:.ex}
@@ -189,7 +189,7 @@ A `<label>` element is provided to identify the form element within the code, bu
 #### Using aria-label
 {:.ap}
 
-`aria-label` provides the label to assistive technology.
+In this example, the `aria-label` attribute provides the label to assistive technology.
 
 {::nomarkdown}
 <%= code_start %>
@@ -207,12 +207,7 @@ A `<label>` element is provided to identify the form element within the code, bu
 ### Set of form controls
 {:.ex}
 
-In the following example, the user is asked to provide date of birth. There are three form controls; a small text field for day of month, a pull-down menu for month, and a slightly larger text field for year. The text controls also use placeholder text to further indicate the purpose of these two fields. A single visible label "Date of birth" is sufficient to explain this related set of form controls in most situations.
-
-#### Hiding the label element
-{:.ap}
-
-To make the code more robust and address other situations, such as displaying the form controls individually on a mobile device, hidden labels have been provided for each form element. They are now identified as “Day”, “Month”, and “Year” within the code.
+In the following example, the user is asked to provide date of birth. There are three form controls: a small text field for day of month, a pull-down menu for month, and a slightly larger text field for year. The text controls also use placeholder text (see [instructions](instructions.html#placeholder-text)) to further indicate the purpose of these two fields. A single visible label "Date of birth" is sufficient to explain this related set of form controls in most situations.
 
 {::nomarkdown}
 <%= sample_start %>
@@ -240,6 +235,11 @@ To make the code more robust and address other situations, such as displaying th
 
 <%= sample_end %>
 {:/nomarkdown}
+
+#### Hiding the label element
+{:.ap}
+
+To make the code more robust and address other situations, such as displaying the form controls individually on a mobile device, hidden labels have been provided for each form element. They are now identified as “Day”, “Month”, and “Year” within the code.
 
 {::nomarkdown}
 <%= code_start %>
