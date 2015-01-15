@@ -95,7 +95,8 @@
 
 	 var spc = document.createTextNode(' ');
 
-	 var firstheading = document.querySelectorAll('.content h2[id], .ap')[0];
+	 var headings = document.querySelectorAll('.content h2[id], .content h3[id], .content h4[id]');
+	 var firstheading = headings[0];
 
 	 if (firstheading) {
 		if (firstheading.classList)
@@ -104,7 +105,8 @@
 		 firstheading.className += ' ' + ('first');
 
 
-		var toc_elements = document.querySelectorAll('.content h2[id], .content h3[id]'); // $('.content h2[id], .ap')
+		var toc_elements = headings; // $('.content h2[id], .ap')
+
 		var toc_outer = document.createElement('figure');
 		toc_outer.setAttribute('role', 'navigation');
 		toc_outer.setAttribute('aria-describedby', 'toc_desc');
@@ -116,12 +118,20 @@
 		var toc_wrap = document.createElement('ul');
 		var toc_elem = document.createElement('li');
 		var nesting = false;
-		var sub_wrap, last_elem;
+		var subnesting = false;
+		var sub_wrap, sub_sub_wrap, last_elem, last_sub_elem;
 		Array.prototype.forEach.call(toc_elements, function(el, i){ // … .each(…)
 			// console.log(el.localName + ': ' + el.textContent + ' // ' + nesting);
 			var cur_elem = toc_elem.cloneNode(true);
+			if ((el.localName==="h4") && (subnesting===false)) {
+				sub_sub_wrap = toc_wrap.cloneNode(false);
+			}
 			if ((el.localName==="h3") && (nesting===false)) {
 				sub_wrap = toc_wrap.cloneNode(false);
+			}
+			if ((el.localName==="h3") && (subnesting===true)) {
+				last_sub_elem.appendChild(sub_sub_wrap);
+				subnesting = false;
 			}
 			if ((el.localName==="h2") && (nesting===true)) {
 				last_elem.appendChild(sub_wrap);
@@ -130,10 +140,13 @@
 			cur_elem.innerHTML = '<a class="' + el.getAttribute('class') + '" href="#' + el.getAttribute('id') + '">' + el.innerHTML + '</a>';
 
 			// console.log(cur_elem);
-
-			if (el.localName==="h3") {
+			if (el.localName==="h4") {
+				sub_sub_wrap.appendChild(cur_elem);
+				subnesting = true;
+			} else if (el.localName==="h3") {
 				sub_wrap.appendChild(cur_elem);
 				nesting = true;
+				last_sub_elem = cur_elem;
 			} else {
 				toc_wrap.appendChild(cur_elem);
 				last_elem = cur_elem;
@@ -157,7 +170,7 @@
 	plel.innerHTML = '¶';
 	plel.setAttribute('title', "Permalink");
 
-	var elements = document.querySelectorAll('.content h2[id], .content h3[id]');
+	var elements = headings;
 	Array.prototype.forEach.call(elements, function(el, i){ // … .each(…)
 		var cplel = plel.cloneNode(true);
 		cplel.setAttribute('href', '#' + el.id);
