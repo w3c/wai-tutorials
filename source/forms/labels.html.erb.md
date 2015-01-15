@@ -28,11 +28,12 @@ Labels need to describe the purpose of the form control. This section of the tut
 A label and a form control need to be associated with each other either implicitly or explicitly. This allows browsers to use the label as a larger clickable area to access or activate the control, for example. It also ensures that assistive technology is able to refer to the correct label when presenting a form control.
 
 ## Associating labels explicitly
-{:.newex}
+{:.newap}
+
+A robust approach to label form fields is to explicitly associate the label text with the form elements in the code. It allows the labels and form controls to be displayed separately, which allows greater styling flexibility. It is also independent of the HTML code structure, which is particularly useful when the label text and form element are not included within the same parent element in the HTML code, for example, when the form is designed to look like a table.
 
 Use the `for` attribute of the `<label>` element to explicitly associate labels with their form controls. The value of the `for` attribute must exactly match the value of the `id` attribute of the referenced form element.
 
-This approach is robust because as it explicitly associates the labels with the form elements within the code. It allows the labels and form controls to be displayed separately, for example on a mobile device when only one of the controls can be displayed at a time. It is also independent of the HTML code structure, which is particularly useful when the label text and form element are not included within the same parent element in the HTML code -- for example, when the form is designed to look like a table.
 
 {::nomarkdown}
 <%= sample_start %>
@@ -58,7 +59,7 @@ This approach is robust because as it explicitly associates the labels with the 
 <%= code_end %>
 {:/nomarkdown}
 
-WAI-ARIA provides an additional way to explicitly associate text on a web page with a form control, using the `aria-labelledby` attribute. This attribute references the `id` of an element containing text that can serve as a label for the control. Like other uses of ARIA, support for the use of the `aria-labelledby` attribute is still developing in user agents.
+WAI-ARIA provides an additional way to explicitly associate text on a web page with a form control, using the `aria-labelledby` attribute. This attribute references the `id` of an element containing text that can serve as a label for the control. Like other uses of ARIA, support for the use of the `aria-labelledby` attribute is still developing in user agents. An example for how to use this attribute can be found in the [instructions](instructions.html#using-wai-aria) tutorial.
 
 ## Associating labels implicitly
 {:.newex}
