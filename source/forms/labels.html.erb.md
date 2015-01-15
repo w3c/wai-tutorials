@@ -144,7 +144,7 @@ In left-to-right languages it is customary to visually position labels to the ri
 
 In general, placing labels above the form fields helps reduce horizontal scrolling for people using screen magnification and for mobile device users. However, the usefulness of this approach depends on other design aspects, such as the proximity of other nearby form fields and content, and needs to be assessed individually. The aim should be to maintain a close and distinct visual relationship between the label and the form control.
 
-## Hiding labels
+## Hiding label text
 {:.newex}
 
 A label for a form control helps everyone better understand its purpose. In some cases the purpose may be clear enough from the context when the content is rendered visually. In such cases a label can be hidden visually though it still needs to be provided within the code to support other forms of presentation and interaction, such as for screen reader and speech input users. The method that hides an element from sight but keeps it accessible for assistive technologies, that is used in this tutorial (using the `visuallyhidden` class) can be found [below](#note-on-hiding-elements).
@@ -306,33 +306,8 @@ The code can be simplified by using `aria-label`, with the same outcome as above
 <%= code_end %>
 {:/nomarkdown}
 
-### Note on hiding elements
-
-Screen readers and other assistive technology, as with web browsers, hide elements from their users when they are styled using `display: none;` and `visibility: hidden;`. Use CSS that will display the elements yet make them virtually invisible to hide them visually but keep them active for screen readers and other assistive technology. The CSS code used in the previous examples is provided below:
-
-{::nomarkdown}
-<%= code_start %>
-{:/nomarkdown}
-
-~~~ css
-.visuallyhidden {
-	border: 0;
-	clip: rect(0 0 0 0);
-	height: 1px;
-	margin: -1px;
-	overflow: hidden;
-	padding: 0;
-	position: absolute;
-	width: 1px;
-}
-~~~
-
-{::nomarkdown}
-<%= code_end %>
-{:/nomarkdown}
-
-#### Using the `title` attribute
-{:.newex}
+### Using the `title` attribute
+{:.ex}
 
 The `title` attribute can be used to identify form elements. This approach is generally less reliable and not recommended because some screen readers and assistive technology do not interpret the `title` attribute as a replacement for the label element, possibly because the `title` attribute is often used to provide non-essential information. The information of the `title` attribute is shown to visual users as a tool tip when hovering over the form field with the mouse.
 
@@ -356,6 +331,31 @@ The `title` attribute can be used to identify form elements. This approach is ge
 ~~~ html
 <input title="Search" type="text" name="search">
 <button type="submit">Search</button>
+~~~
+
+{::nomarkdown}
+<%= code_end %>
+{:/nomarkdown}
+
+### Note on hiding elements
+
+Screen readers and other assistive technology, as with web browsers, hide elements from their users when they are styled using `display: none;` and `visibility: hidden;`. Use CSS that will display the elements yet make them virtually invisible to hide them visually but keep them active for screen readers and other assistive technology. The CSS code used in the previous examples is provided below:
+
+{::nomarkdown}
+<%= code_start %>
+{:/nomarkdown}
+
+~~~ css
+.visuallyhidden {
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+}
 ~~~
 
 {::nomarkdown}
