@@ -13,6 +13,7 @@ wcag_techniques:
   - G162
   - G17
   - G18
+  - ARIA1
   - ARIA9
 ---
 
@@ -124,7 +125,7 @@ Content outside form elements may be missed by screen readers that are in “For
 <%= notes_end %>
 {:/nomarkdown}
 
-#### Using WAI-ARIA
+#### Using `aria-labelledby`
 {:.ap}
 
 Another approach is to use the WAI-ARIA `aria-labelledby` attribute to associate the instructions with form elements. At the time of writing, this approach may not be fully supported by all web browsers and assistive technologies, especially by non-screen readers. In this example the `for` and `id` attributes are used for backward compatibility.
@@ -163,6 +164,27 @@ Another approach is to use the WAI-ARIA `aria-labelledby` attribute to associate
 <label id="expLabel" for="expire">Expiry date:</label>
 <span>
 	<input type="text" name="expire" id="expire" aria-labelledby="expLabel expDesc">
+	<span id="expDesc">MM/YYYY</span>
+</span>
+~~~
+
+{::nomarkdown}
+<%= code_end %>
+{:/nomarkdown}
+
+#### Using `aria-describedby`
+{:.ap}
+
+By using `aria-describedby` to reference the format of the field, this information is available on request for users. This makes sense if the user has been informed of the format before or when there are a lot of fields with the same format.
+
+{::nomarkdown}
+<%= code_start %>
+{:/nomarkdown}
+
+~~~ html
+<label id="expLabel" for="expire">Expiry date:</label>
+<span>
+	<input type="text" name="expire" id="expire" aria-labelledby="expLabel" aria-describedby="expDesc">
 	<span id="expDesc">MM/YYYY</span>
 </span>
 ~~~
