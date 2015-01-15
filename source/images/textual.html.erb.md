@@ -191,7 +191,7 @@ The following image is the logo for the Web Accessibility Initiative. It’s not
 ## Image of a mathematical expression
 {:.ex}
 
-This math expression shows how to signify that a number is recurring. The `alt` text is “0.3333 recurring. (The recurrence is indicated by a line over the ‘3’ in the fourth decimal place)”. In this particular example the way that the recurrence is shown is important, so it is equally described in the text alternative. As with all images, the author is in the best position to determine what information is intended to be conveyed by the image and construct the text alternative accordingly.
+Math expressions are often displayed as images because of the difficulty of presenting equations and special math symbols with html. The image below displays a recurring decimal number (decimal numbers that never end). The `alt` text for this recurring number is “0.3333 recurring. (In the image, the recurrence is indicated by a line over the ‘3’ in the fourth decimal place)”. In this particular example the way that the recurrence is shown is important, so it is equally described in the text alternative. As with all images, the author is in the best position to determine what information is intended to be conveyed by the image and construct the text alternative accordingly.
 
 {::nomarkdown}
 <%= sample_start %>
@@ -219,10 +219,10 @@ This math expression shows how to signify that a number is recurring. The `alt` 
 
 ### MathML
 
-Images of math expressions should only be used in *exceptional circumstances* – for example, when the expression is an exception to the normal content for the page or website.
+Images of math expressions should only be used in *exceptional circumstances* – for example, when the expression is an exception to the normal content for the page or website. The preferred method for displaying math expressions is MathML, which can present math semantically.
 
 <aside class="annotation">
-	<h4 class="annotation-header">Compatibility</h4>
+	<h4 class="annotation-header">Browser Limitations and MathML</h4>
 	<div class="annotation-content">
 		<p>Most browsers need plugins to render MathML correctly – especially for the new MathML 3.0 features used in this example. To see the MathML example below, <a href="https://addons.mozilla.org/en-US/firefox/addon/mathml-mml3ff/">this Firefox plugin</a> may be needed.</p>
 		<p>Find more information about the state of MathML <a href="https://trac.webkit.org/wiki/MathML">in Webkit-based</a> and <a href="https://developer.mozilla.org/en-US/docs/Mozilla/MathML_Project/Status">in Mozilla-based browsers</a>.</p>
