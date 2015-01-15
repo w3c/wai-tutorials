@@ -12,11 +12,16 @@ wcag_techniques:
 Grouping related form controls makes forms more understandable for all users. Group them both visually and within the code. Use the `<fieldset>` and `<legend>` elements to associate related form controls.
 
 ## Associating related controls with `fieldset`
-{:.newex}
+{:.ap}
 
-The `<fieldset>` element provides a container for related form elements, and the `<legend>` element acts like a heading to identify the group. In the example below there are three checkboxes that are all part of an opt-in function for receiving different types of information.
+The `<fieldset>` element provides a container for related form elements, and the `<legend>` element acts like a heading to identify the group.
 
 The legend for a group of controls can also highlight common attributes of all controls, for example state the fact that all fields in the group are required.
+
+### … to group checkboxes
+{:.ex}
+
+In the example below there are three checkboxes that are all part of an opt-in function for receiving different types of information.
 
 {::nomarkdown}
 <%= sample_start %>
@@ -35,7 +40,6 @@ The legend for a group of controls can also highlight common attributes of all c
 	</div>
 </fieldset>
 </form>
-
 <%= sample_end %>
 {:/nomarkdown}
 
@@ -47,17 +51,96 @@ The legend for a group of controls can also highlight common attributes of all c
 <fieldset>
 <legend>I want to receive</legend>
 	<div>
-		<input type="checkbox" name="newsletter" id="check_1">
-		<label for="check_1">The weekly newsletter</label>
+		<input type="checkbox" name="newsletter" id="check_1"> <label for="check_1">The weekly newsletter</label>
 	</div>
+	[…]
+</fieldset>
+~~~
+
+{::nomarkdown}
+<%= code_end %>
+{:/nomarkdown}
+
+### … to group related fields
+{:.ex}
+
+This example shows form fields to enter shipping and invoice addresses. As the labels in both groups have the same text, a `fieldset` is added to indicate which fields belong together.
+
+{::nomarkdown}
+<%= sample_start %>
+
+<form method="post" action="#">
+	<fieldset style="float:left;">
+		<legend>Shipping Address:</legend>
+		<div>
+			<label for="shipping_name">Name:</label><br>
+			<input type="text" name="shipping_name" id="shipping_name">
+		</div>
+		<div>
+			<label for="shipping_street">Street:</label><br>
+			<input type="text" name="shipping_street" id="shipping_street">
+		</div>
+		<div>
+			<label for="shipping_number">Number:</label><br>
+			<input type="text" name="shipping_number" id="shipping_number">
+		</div>
+		<div>
+			<label for="shipping_city">City:</label><br>
+			<input type="text" name="shipping_city" id="shipping_city">
+		</div>
+		<div>
+			<label for="shipping_zip">ZIP code:</label><br>
+			<input type="text" name="shipping_zip" id="shipping_zip">
+			</div>
+	</fieldset>
+	<fieldset style="float:left;">
+		<legend>Invoice Address:</legend>
+		<div>
+			<label for="invoice_name">Name:</label><br>
+			<input type="text" name="invoice_name" id="invoice_name">
+		</div>
+		<div>
+			<label for="invoice_street">Street:</label><br>
+			<input type="text" name="invoice_street" id="invoice_street">
+		</div>
+		<div>
+			<label for="invoice_number">Number:</label><br>
+			<input type="text" name="invoice_number" id="invoice_number">
+		</div>
+		<div>
+			<label for="invoice_city">City:</label><br>
+			<input type="text" name="invoice_city" id="invoice_city">
+		</div>
+		<div>
+			<label for="invoice_zip">ZIP code:</label><br>
+			<input type="text" name="invoice_zip" id="invoice_zip">
+		</div>
+	</fieldset>
+</form>
+
+<%= sample_end %>
+{:/nomarkdown}
+
+{::nomarkdown}
+<%= code_start %>
+{:/nomarkdown}
+
+~~~ html
+<fieldset>
+	<legend>Shipping Address:</legend>
 	<div>
-		<input type="checkbox" name="company_offers" id="check_2">
-		<label for="check_2">Offers from the company</label>
+		<label for="shipping_name">Name:</label><br>
+		<input type="text" name="shipping_name" id="shipping_name">
 	</div>
+	[…]
+</fieldset>
+<fieldset>
+	<legend>Invoice Address:</legend>
 	<div>
-		<input type="checkbox" name="assoc_offers" id="check_3">
-		<label for="check_3">Offers from associated companies</label>
+		<label for="invoice_name">Name:</label><br>
+		<input type="text" name="invoice_name" id="invoice_name">
 	</div>
+	[…]
 </fieldset>
 ~~~
 
@@ -71,20 +154,62 @@ The legend for a group of controls can also highlight common attributes of all c
 * Make the individual labels sufficiently self-explanatory for situations in which legends are not read aloud, without repeating the legend in every label.
 
 ## Associating related controls with WAI-ARIA
+{:.ap}
 
 WAI-ARIA provides a grouping role that functions similarly to `fieldset` and `legend`.  In this example the `div` element has `role=group` to indicate that the contained elements are members of a group and the `aria-labelledby` attribute references the `id` for text that will serve as the label for the group.
+
+This technique provides additional styling possibilities.
 
 {::nomarkdown}
 <%= sample_start %>
 
 <form method="post" action="#">
-<div role="group" aria-labelledby="ssn1">
-   <span id="ssn1">Social Security#</span> 
-   <span style="color: #D90D0D;"> * </span>
-   <input size="3" type="text" aria-required="true" title="First 3 digits" />-
-   <input size="2" type="text" aria-required="true" title="Next 2 digits" />-
-   <input size="4" type="text" aria-required="true" title="Last 4 digits" />
-</div>
+	<div role="group" aria-labelledby="shipping_head" style="float:left; border: 1px solid #333; padding: 0 .5em .5em; margin-right: 1em;">
+		<div id="shipping_head" style="font-weight: bold; padding: .25em 0;">Shipping Address:</div>
+		<div>
+			<label for="aria_shipping_name">Name:</label><br>
+			<input type="text" name="aria_shipping_name" id="aria_shipping_name">
+		</div>
+		<div>
+			<label for="aria_shipping_street">Street:</label><br>
+			<input type="text" name="aria_shipping_street" id="aria_shipping_street">
+		</div>
+		<div>
+			<label for="aria_shipping_number">Number:</label><br>
+			<input type="text" name="aria_shipping_number" id="aria_shipping_number">
+		</div>
+		<div>
+			<label for="aria_shipping_city">City:</label><br>
+			<input type="text" name="aria_shipping_city" id="aria_shipping_city">
+		</div>
+		<div>
+			<label for="aria_shipping_zip">ZIP code:</label><br>
+			<input type="text" name="aria_shipping_zip" id="aria_shipping_zip">
+			</div>
+	</div>
+	<div role="group" aria-labelledby="invoice_head" style="float:left; border: 1px solid #333; padding:0 .5em .5em;">
+		<div id="invoice_head" style="font-weight: bold; padding: .25em 0;">Invoice Address:</div>
+		<div>
+			<label for="aria_invoice_name">Name:</label><br>
+			<input type="text" name="aria_invoice_name" id="aria_invoice_name">
+		</div>
+		<div>
+			<label for="aria_invoice_street">Street:</label><br>
+			<input type="text" name="aria_invoice_street" id="aria_invoice_street">
+		</div>
+		<div>
+			<label for="aria_invoice_number">Number:</label><br>
+			<input type="text" name="aria_invoice_number" id="aria_invoice_number">
+		</div>
+		<div>
+			<label for="aria_invoice_city">City:</label><br>
+			<input type="text" name="aria_invoice_city" id="aria_invoice_city">
+		</div>
+		<div>
+			<label for="aria_invoice_zip">ZIP code:</label><br>
+			<input type="text" name="aria_invoice_zip" id="aria_invoice_zip">
+		</div>
+	</div>
 </form>
 
 <%= sample_end %>
@@ -95,12 +220,21 @@ WAI-ARIA provides a grouping role that functions similarly to `fieldset` and `le
 {:/nomarkdown}
 
 ~~~html
-<div role="group" aria-labelledby="ssn1">
-   <span id="ssn1">Social Security#</span> 
-   <span style="color: #D90D0D;"> * </span>
-   <input size="3" type="text" aria-required="true" title="First 3 digits" />-
-   <input size="2" type="text" aria-required="true" title="Next 2 digits" />-
-   <input size="4" type="text" aria-required="true" title="Last 4 digits" />
+<div role="group" aria-labelledby="shipping_head">
+	<div id="shipping_head">Shipping Address:</div>
+	<div>
+		<label for="shipping_name">Name:</label><br>
+		<input type="text" name="shipping_name" id="shipping_name">
+	</div>
+	[…]
+</div>
+<div role="group" aria-labelledby="invoice_head">
+	<div id="invoice_head">Invoice Address:</div>
+	<div>
+		<label for="invoice_name">Name:</label><br>
+		<input type="text" name="invoice_name" id="invoice_name">
+	</div>
+	[…]
 </div>
 ~~~
 
