@@ -190,7 +190,8 @@ A `<label>` element is provided to identify the form element within the code, bu
 #### Using aria-label
 {:.ap}
 
-In this example, the `aria-label` attribute provides the label to assistive technology.
+The `aria-label` attribute can also be used to identify form elements. This approach is generally well understood by screen readers and other assistive technology, but, unlike the [`title` attribute](#using-the-title-attribute), does not convey the information to visual users.
+Example:
 
 {::nomarkdown}
 <%= code_start %>
