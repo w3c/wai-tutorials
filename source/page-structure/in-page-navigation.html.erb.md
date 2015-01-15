@@ -40,4 +40,4 @@ If the viewport is so small that only one column fits on the screen (for example
 
 ## Table of contents
 
-A table of contents can be a useful way to skim the page by providing an outline for the user. Usually it should be contained in a [navigation landmark](landmarks.html#navigation), so it can be easily discovered. The “on this page” box on every tutorial page is an example for such a table of contents. The anchors on every heading are used to allow users to skip to those headings in the text.
+A table of contents can be a useful way to skim the page by providing an outline for the user. Usually it should be contained in a [navigation landmark](sections.html#navigation), so it can be easily discovered. The “on this page” box on every tutorial page is an example for such a table of contents. The anchors on every heading are used to allow users to skip to those headings in the text.
