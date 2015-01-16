@@ -14,10 +14,10 @@
 	      	Updated
 	      <% end %>
 	      <%= File.mtime(Dir.glob('source/' + current_page.path + '.erb.md')[0]).strftime("%d %B %Y") %>
-	      <% if !current_page.data.status %>
+	      <% if (!current_page.data.status and current_page.data.layout!="fullcode") %>
 		      <% if current_page.data.first_published %>
 		      (first published <%= current_page.data.first_published %>)
-		      <% elsif current_page.data.order!=1 and current_page.parent.data.first_published %>
+		      <% elsif (current_page.data.order!=1 and current_page.parent.data.first_published) %>
 		      (first published <%= current_page.parent.data.first_published %>)
 		      <% end %>
 		    <% end %>
