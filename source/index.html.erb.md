@@ -30,7 +30,11 @@ The tutorials provide resources for a variety of roles, including:
 
 Web authoring tools (Content Management Systems (CMS), <abbr title="What you see is what you get">WYSIWYG</abbr> editors, word processors, etc.) can often help you create content that is accessible as shown in these tutorials.
 
-For *normative* information, see the [WCAG2.0 specification](http://www.w3.org/TR/WCAG20/). Additional guidance can also be found in the (non-normative) techniques, see the [How to Meet WCAG 2.0 document](http://www.w3.org/WAI/WCAG20/quickref/).
+## Relationship to WCAG 2.0
+
+These tutorials provide guidance on best practices that meet WCAG 2.0 in certain situations. They do not cover all situations, technologies, success criteria, and conformance requirements. See the normative [WCAG 2.0 standard](http://www.w3.org/TR/WCAG20/) and additional guidance, like techniques, in the [How to Meet WCAG 2.0 document](http://www.w3.org/WAI/WCAG20/quickref/).
+
+{::comment}
 
 ## Tutorial Topics
 
@@ -47,6 +51,8 @@ For *normative* information, see the [WCAG2.0 specification](http://www.w3.org/T
 -   **[Carousels](carousels/index.html):** Study how an accessible, animated carousel is built.
 
 Additional tutorials are planned and will be added here once they are completed and reviewed.
+
+{:/comment}
 
 ## Additional Resources
 
