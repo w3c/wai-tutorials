@@ -69,7 +69,9 @@ h1, h2, h3, h4, h5, h6, .navigation, pre {
 	// hyphens: none;
 }
 
-p {margin-bottom: 0;}
+p {
+	margin-bottom: 0;
+}
 p+ul {
 	margin-top: .5em;
 	li:first-child p:first-child {
@@ -326,9 +328,6 @@ h1, h2, h3 {
 		@extend .font-primary;
 		font-size: 0.55em;
 		margin: 0.25em;
-	}
-	* > &:first-child {
-		margin-top:0;
 	}
 }
 
@@ -752,6 +751,9 @@ figure {
 		&:before, &:after {display:none;}
 	}
 	&.toc {
+		+ * {
+			margin-top: 0;
+		}
 		@extend %annotation;
 		border:none !important;
 		font-size: 0.9em;
@@ -1008,15 +1010,72 @@ select {
 	}
 }
 
+.sectionheader {
+	position: relative;
+	display:flex;
+	justify-content: space-between;
+	align-items: center;
+	h2, h3, h4 {
+		display: inline-block;
+	}
+	+ * {
+		margin-top: 0;
+	}
+}
+
 .permalink {
-	@extend .font-primary;
-	@extend .btn-small;
-	color: #666;
-	float:right;
-	display: inline-block;
-	font-size: 14px;
-	line-height: 1;
-	vertical-align: middle;
+	display:inline;
+	position: relative;
+	font-size: .8em;
+	> a {
+		color: #666 !important;
+		display: inline-block;
+		vertical-align: middle;
+		margin-left: .5em;
+		font-weight: bold;
+		svg {
+			vertical-align: middle;
+			display: inline-block;
+		}
+	}
+	.sharebox {
+		display:none;
+		&.open {
+			display:block;
+		}
+		position: absolute;
+		z-index: 999;
+		top:120%;
+		right: 0;
+		background: #ddd;
+		border: 1px solid #777;
+		padding: .5em;
+		min-width: 20em;
+		max-width: 100%;
+		box-shadow: 0 0 10px #222;
+		input {
+			display: block;
+			width: 100%;
+			box-sizing: border-box;
+		}
+		label span {
+			display: block;
+			text-align: right;
+		}
+		button {
+			@extend .btn-small;
+			position:absolute;
+			bottom:0;
+			right:0;
+		}
+		p:first-child {
+			margin-top: 0;
+		}
+	}
+}
+
+#icon-share {
+	fill: currentColor;
 }
 
 .decision-tree {
@@ -1128,12 +1187,16 @@ select {
 			margin-top: 0;
 		}
 	}
-	> h2 {
-		font-size: 1em;
-		padding: .25em;
+	.sectionheader {
 		padding-top:0 !important;
-		margin-bottom: 0;
+		margin-bottom: 1em;
+		padding: .25em .5em;
 		background-color: #F0F0F0;
+		h2 {
+			font-size: 1em;
+			padding: .25em 0;
+			margin: 0;
+		}
 	}
 }
 
