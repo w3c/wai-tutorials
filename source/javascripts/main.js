@@ -2,11 +2,25 @@
 	'use strict';
 
 	var addclass = function(el, className) {
-	 if (el.classList)
-		 el.classList.add(className);
-	 else
-		 el.className += ' ' + className;
- };
+		if (el.classList)
+			el.classList.add(className);
+		else
+			el.className += ' ' + className;
+	};
+
+	var remclass = function(el, className) {
+		if (el.classList)
+			el.classList.remove(className);
+		else
+			el.className = el.className.replace(new RegExp('(^|\\b)' + className.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
+	}
+
+	var hasclass = function(el, className) {
+		if (el.classList)
+			return el.classList.contains(className);
+		else
+			return new RegExp('(^| )' + className + '( |$)', 'gi').test(el.className);
+	}
 
 	// Fragmention script: https://github.com/chapmanu/fragmentions
 
@@ -93,102 +107,163 @@
 
 	document.addEventListener('DOMContentLoaded', function(){
 
-	 var spc = document.createTextNode(' ');
+		var spc = document.createTextNode(' ');
 
-	 var headings = document.querySelectorAll('.content h2[id], .content h3[id], .content h4[id]');
-	 var firstheading = headings[0];
+		var headings = document.querySelectorAll('.content h2[id], .content h3[id], .content h4[id]');
+		var firstheading = headings[0];
 
-	 if (firstheading) {
-		if (firstheading.classList)
-		 firstheading.classList.add('first');
-	 else
-		 firstheading.className += ' ' + ('first');
+		if (firstheading) {
+			addclass(firstheading, 'first');
 
+			var toc_elements = headings; // $('.content h2[id], .ap')
 
-		var toc_elements = headings; // $('.content h2[id], .ap')
+			var toc_outer = document.createElement('figure');
+			toc_outer.setAttribute('role', 'navigation');
+			toc_outer.setAttribute('aria-describedby', 'toc_desc');
+			toc_outer.innerHTML = '<figcaption id="toc_desc">On this page</figcaption><div class="figcontent"></div>';
+			if (toc_outer.classList)
+				toc_outer.classList.add('toc');
+			else
+				toc_outer.className += ' ' + ('toc');
+			var toc_wrap = document.createElement('ul');
+			var toc_elem = document.createElement('li');
+			var nesting = false;
+			var subnesting = false;
+			var sub_wrap, sub_sub_wrap, last_elem, last_sub_elem;
+			Array.prototype.forEach.call(toc_elements, function(el, i){ // … .each(…)
+				// console.log(el.localName + ': ' + el.textContent + ' // ' + nesting);
+				var cur_elem = toc_elem.cloneNode(true);
+				if ((el.localName==="h4") && (subnesting===false)) {
+					sub_sub_wrap = toc_wrap.cloneNode(false);
+				}
+				if ((el.localName==="h3") && (nesting===false)) {
+					sub_wrap = toc_wrap.cloneNode(false);
+				}
+				if ((el.localName==="h3") && (subnesting===true)) {
+					last_sub_elem.appendChild(sub_sub_wrap);
+					subnesting = false;
+				}
+				if ((el.localName==="h2") && (nesting===true)) {
+					last_elem.appendChild(sub_wrap);
+					nesting = false;
+				}
+				cur_elem.innerHTML = '<a class="' + el.getAttribute('class') + '" href="#' + el.getAttribute('id') + '">' + el.innerHTML + '</a>';
 
-		var toc_outer = document.createElement('figure');
-		toc_outer.setAttribute('role', 'navigation');
-		toc_outer.setAttribute('aria-describedby', 'toc_desc');
-		toc_outer.innerHTML = '<figcaption id="toc_desc">On this page</figcaption><div class="figcontent"></div>';
-		if (toc_outer.classList)
-			toc_outer.classList.add('toc');
-		else
-			toc_outer.className += ' ' + ('toc');
-		var toc_wrap = document.createElement('ul');
-		var toc_elem = document.createElement('li');
-		var nesting = false;
-		var subnesting = false;
-		var sub_wrap, sub_sub_wrap, last_elem, last_sub_elem;
-		Array.prototype.forEach.call(toc_elements, function(el, i){ // … .each(…)
-			// console.log(el.localName + ': ' + el.textContent + ' // ' + nesting);
-			var cur_elem = toc_elem.cloneNode(true);
-			if ((el.localName==="h4") && (subnesting===false)) {
-				sub_sub_wrap = toc_wrap.cloneNode(false);
-			}
-			if ((el.localName==="h3") && (nesting===false)) {
-				sub_wrap = toc_wrap.cloneNode(false);
-			}
-			if ((el.localName==="h3") && (subnesting===true)) {
-				last_sub_elem.appendChild(sub_sub_wrap);
-				subnesting = false;
-			}
-			if ((el.localName==="h2") && (nesting===true)) {
+				// console.log(cur_elem);
+				if (el.localName==="h4") {
+					sub_sub_wrap.appendChild(cur_elem);
+					subnesting = true;
+				} else if (el.localName==="h3") {
+					sub_wrap.appendChild(cur_elem);
+					nesting = true;
+					last_sub_elem = cur_elem;
+				} else {
+					toc_wrap.appendChild(cur_elem);
+					last_elem = cur_elem;
+				}
+			});
+
+			if (nesting===true) {
 				last_elem.appendChild(sub_wrap);
 				nesting = false;
 			}
-			cur_elem.innerHTML = '<a class="' + el.getAttribute('class') + '" href="#' + el.getAttribute('id') + '">' + el.innerHTML + '</a>';
 
-			// console.log(cur_elem);
-			if (el.localName==="h4") {
-				sub_sub_wrap.appendChild(cur_elem);
-				subnesting = true;
-			} else if (el.localName==="h3") {
-				sub_wrap.appendChild(cur_elem);
-				nesting = true;
-				last_sub_elem = cur_elem;
-			} else {
-				toc_wrap.appendChild(cur_elem);
-				last_elem = cur_elem;
-			}
-		});
+			toc_outer.querySelectorAll('.figcontent')[0].innerHTML = toc_wrap.outerHTML;
 
-		if (nesting===true) {
-			last_elem.appendChild(sub_wrap);
-			nesting = false;
+			var inner = document.querySelectorAll('.inner > :first-child')[0];
+			inner.insertAdjacentHTML('beforebegin', toc_outer.outerHTML);
+
 		}
 
-		toc_outer.querySelectorAll('.figcontent')[0].innerHTML = toc_wrap.outerHTML;
+		var plel = document.createElement('a');
+		//addclass(plel, 'permalink');
+		plel.innerHTML = '<svg class="icon"><use xlink:href="#icon-share"></use></svg> SHARE';
+		plel.setAttribute('title', "Permalink");
 
-		var inner = document.querySelectorAll('.inner > :first-child')[0];
-		inner.insertAdjacentHTML('beforebegin', toc_outer.outerHTML);
+		var pldiv = document.createElement('div');
+		addclass(pldiv, 'sectionheader');
 
-	}
+		var plwrapdiv = document.createElement('div')
+		addclass(plwrapdiv, 'permalink');
 
-	var plel = document.createElement('a');
-	addclass(plel, 'permalink');
-	plel.innerHTML = '¶';
-	plel.setAttribute('title', "Permalink");
+		var sharebox = document.createElement('div');
+		addclass(sharebox, 'sharebox');
+		var shareboxtext = '<p><label>Copy the link to this section:<input type="text" value="%s" readonly> <span><kbd>ctrl</kbd> + <kbd>C</kbd>/<kbd>⌘</kbd><kbd>C</kbd></span></label></p><p><a href="mailto:?subject=Web%20Accessibility%20Tutorials&body=Hi!%0AThis%20section%20of%20W3C’s%20Web%20Accessibility%20Tutorials%20could%20be%20of%20interest%20for%20you:%0A%0A%s">Email a link to this section</a><button>Close</button></p>';
 
-	var elements = headings;
-	Array.prototype.forEach.call(elements, function(el, i){ // … .each(…)
-		var cplel = plel.cloneNode(true);
-		cplel.setAttribute('href', '#' + el.id);
-		el.appendChild(spc.cloneNode(true));
+		var url = window.location.origin + window.location.pathname;
 
-		el.insertAdjacentHTML('beforeend', cplel.outerHTML);
+		var elements = headings;
+		Array.prototype.forEach.call(elements, function(el, i){ // … .each(…)
+
+			var newwrap = pldiv.cloneNode(true);
+
+			var cplel = plel.cloneNode(true);
+			cplel.setAttribute('href', '#' + el.id);
+
+			var csbtext = shareboxtext.replace("%s", url + '#' + el.id).replace("%s", url + '#' + el.id);
+			var csb = sharebox.cloneNode(true);
+			csb.innerHTML = csbtext;
+
+			var cplwrapdiv = plwrapdiv.cloneNode(true);
+			cplwrapdiv.appendChild(cplel);
+			cplwrapdiv.appendChild(csb);
+
+			cplel.addEventListener('click', function(e){
+				var sbox = this.nextSibling;
+				if (hasclass(sbox, 'open')) {
+					remclass(this.nextSibling, 'open');
+				} else {
+					addclass(this.nextSibling, 'open');
+					this.nextSibling.querySelector('input').select();
+				}
+				e.preventDefault();
+
+			});
+
+			newwrap.appendChild(el.cloneNode(true));
+			newwrap.appendChild(cplwrapdiv);
+
+			//console.log(newwrap.outerHTML);
+
+			el.parentNode.replaceChild(newwrap, el);
+		});
+
+		var sbbuttons = document.querySelectorAll('.sharebox button');
+		Array.prototype.forEach.call(sbbuttons, function(el, i){ // … .each(…)
+			el.addEventListener('click', function(){
+				var openboxes = document.querySelectorAll('.sharebox.open');
+		  	for (var i = openboxes.length - 1; i >= 0; i--) {
+		  		remclass(openboxes[i], 'open');
+		  	};
+			});
+		});
+
+		document.addEventListener('click', function(event){
+		  var hasParent = false;
+		    for(var node = event.target; node != document.body; node = node.parentNode)
+		    {
+		      if(hasclass(node, 'permalink')) {
+		        hasParent = true;
+		        break;
+		      }
+		    }
+		  if(!hasParent) {
+		  	var openboxes = document.querySelectorAll('.sharebox.open');
+		  	for (var i = openboxes.length - 1; i >= 0; i--) {
+		  		remclass(openboxes[i], 'open');
+		  	};
+		  }
+		});
+
+		if ((window.location.hostname !== 'www.w3.org') || (window.location.hostname !== 'w3.org')) {
+			var notification = document.createElement('div');
+			notification.className = 'not-w3c-notification';
+			notification.innerHTML = 'This is an Editor’s draft, for <em>preview purposes only</em>. Please see, and link to, released tutorials at <a href="http://w3.org/WAI/tutorials">w3.org/WAI/tutorials/</a>.';
+			document.getElementsByClassName('w3c-wai-header')[0].insertAdjacentHTML('beforebegin', notification.outerHTML);
+
+			document.getElementsByTagName('title')[0].innerHTML = '[PREVIEW] ' + document.getElementsByTagName('title')[0].innerHTML;
+		}
+
 
 	});
-
-	if ((window.location.hostname !== 'www.w3.org') || (window.location.hostname !== 'w3.org')) {
-		var notification = document.createElement('div');
-		notification.className = 'not-w3c-notification';
-		notification.innerHTML = 'This is an Editor’s draft, for <em>preview purposes only</em>. Please see, and link to, released tutorials at <a href="http://w3.org/WAI/tutorials">w3.org/WAI/tutorials/</a>.';
-		document.getElementsByClassName('w3c-wai-header')[0].insertAdjacentHTML('beforebegin', notification.outerHTML);
-
-		document.getElementsByTagName('title')[0].innerHTML = '[PREVIEW] ' + document.getElementsByTagName('title')[0].innerHTML;
-	}
-
-
-});
 }());
