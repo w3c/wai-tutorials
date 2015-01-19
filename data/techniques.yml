@@ -3,6 +3,9 @@ techniques:
   - ARIA6: Using aria-label to provide labels for objects
   - ARIA11: Using ARIA landmarks to identify regions of a page
   - ARIA12: Using role=heading to identify headings
+  - ARIA18: Using aria-alertdialog to Identify Errors
+  - ARIA19: Using ARIA role=alert or Live Regions to Identify Errors
+  - ARIA21: Using Aria-Invalid to Indicate An Error Field
   - C7: Using CSS to hide a portion of the link text
   - C12: Using percent for font sizes
   - C13: Using named font sizes

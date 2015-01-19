@@ -7,6 +7,9 @@ wcag_success_criteria:
 wcag_techniques:
   - G83
   - G85
+  - ARIA18
+  - ARIA19
+  - ARIA21
 ---
 
 Provide feedback to users on the results of their form submission, whether successful or not. This includes in-line feedback at or near the form controls, and overall feedback that is typically provided after form submission.
