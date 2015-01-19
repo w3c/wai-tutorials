@@ -1118,15 +1118,22 @@ select {
 
 .resources {
 	margin-top: 2em;
-	//outline: .5em solid #fff;
-	//background-color: #FFF;
+	outline: .25em solid #fff;
+	background-color: #FFF;
+	border: 1px solid #ccc;
+	.resources-inner {
+		padding: 0 .625em;
+		font-size: 0.8em;
+		p:first-child {
+			margin-top: 0;
+		}
+	}
 	> h2 {
+		font-size: 1em;
+		padding: .25em;
 		padding-top:0 !important;
 		margin-bottom: 0;
-		+ p {
-			margin-top: 0;
-			font-size: 0.8em;
-		}
+		background-color: #F0F0F0;
 	}
 }
 
