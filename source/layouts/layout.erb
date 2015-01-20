@@ -4,13 +4,13 @@
     <header class="tutorial-heading">
       <nav class="breadcrumb" aria-label="Breadcrumbs" role="navigation">
         <p>
-          <span class="home"><%= nav_link('Tutorials home', '/index.html', :relative => true) %></span> <span class="icon icon-chevron-right"></span>
+          <span class="home"><%= nav_link('Tutorials home', '/index.html', :relative => true) %></span> <svg class="icon"><use xlink:href="#icon-chevron-right">»</use></svg>
           <span class="other">
             <% if current_page.parent and ("/" + current_page.parent.path != '/index.html') %>
-              <%= nav_link(current_page.parent.data.tutorial_title, '/' + current_page.parent.path) %> <span class="icon icon-chevron-right"></span>
+              <%= nav_link(current_page.parent.data.tutorial_title, '/' + current_page.parent.path) %> <svg class="icon"><use xlink:href="#icon-chevron-right">»</use></svg>
             <% end %>
             <% if current_page.parent and ("/" + current_page.parent.path == '/index.html') %>
-              <%= nav_link(current_page.data.tutorial_title, '/' + current_page.path) %> <span class="icon icon-chevron-right"></span>
+              <%= nav_link(current_page.data.tutorial_title, '/' + current_page.path) %> <svg class="icon"><use xlink:href="#icon-chevron-right">»</use></svg>
             <% end %>
             <%= nav_link(current_page.data.title, '/' + current_page.path, :relative => true) %>
           </span>
