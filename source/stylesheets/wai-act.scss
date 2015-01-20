@@ -528,6 +528,7 @@ a {
 		margin-top: 0;
 		margin-bottom: 10px;
 		color: #036;
+		line-height: 1;
 	}
 	p {
 		padding: 0;
@@ -614,36 +615,6 @@ a {
 		}
 		padding:0 !important;
 	}
-	%annotation {
-		@include mq($medium) {
-			width: percentage(1/2) - 8%;
-			margin-left: 3%;
-		}
-		@include mq($big) {
-			width: percentage(1/2) - 4%;
-			margin-right: -1 * percentage(1/2);
-		}
-		padding-left:1%;
-		float:right;
-		border-left: 2px solid #930;
-		margin-top: 1em;
-		clear: both;
-		%annotation-header {
-			margin-top:0;
-			margin-bottom: 0;
-			// font-weight: bold;
-			color: #930;
-		}
-		%annotation-content {
-			font-size: percentage(16/18);
-			:first-child {
-				margin-top: 0;
-			}
-			:last-child {
-				margin-bottom: 0;
-			}
-		}
-	}
 	a[href^="http"]:after {
 		@extend .icon;
 		@extend .icon-external-link;
@@ -654,6 +625,37 @@ a {
 	.sample {
 		a[href^="http"]:after {
 			display:none;
+		}
+	}
+}
+
+%annotation {
+	@include mq($medium) {
+		width: percentage(1/2) - 8%;
+		margin-left: 3%;
+	}
+	@include mq($big) {
+		width: percentage(1/2) - 4%;
+		margin-right: -1 * percentage(1/2);
+	}
+	padding-left:1%;
+	float:right;
+	border-left: 2px solid #930;
+	margin-top: 1em;
+	clear: both;
+	%annotation-header {
+		margin-top:0;
+		margin-bottom: 0;
+		// font-weight: bold;
+		color: #930;
+	}
+	%annotation-content {
+		font-size: percentage(16/18);
+		:first-child {
+			margin-top: 0;
+		}
+		:last-child {
+			margin-bottom: 0;
 		}
 	}
 }
@@ -777,39 +779,42 @@ figure {
 			margin-top: 0;
 		}
 		@extend %annotation;
-		border:none !important;
+		margin-top: 0;
+		border:none;
 		font-size: 0.9em;
 		padding-left: 0 !important;
-		background: linear-gradient(to bottom, #036, rgba(#036, 0));
+		// background: linear-gradient(to bottom, #036, rgba(#036, 0));
 		border-radius: .25em .25em 0 0;
 		ul {
 			margin: 0;
+			padding-left: 1.25em;
+			line-height: 1.5;
 		}
 		figcaption {
-			padding: .25em .5em;
-			font-weight: bold;
-			background-color: #036;
-			color: #fff;
-			border-radius: .25em .25em 0 0;
+			@extend .list-heading;
+			padding-left: .5em;
+			text-align: left;
+			&:after {
+				left: 3em;
+			}
 		}
 		> .figcontent {
-			margin: 0 1px;
 			padding:.3em;
+			// background-color: #DDD;
 			background: linear-gradient(to bottom, #ddd, #f5f5f5);
+			border-bottom: 1px solid #ddd;
 			a {
 				display:block;
 				padding: 0 0 .1em;
 				border-bottom: none;
+				color: #036;
 				&:hover, &:focus {
 					text-decoration: underline;
 				}
 			}
 			> ul {
-				padding-left: 1.5em;
 				list-style-type: disc;
-				ul {
-					padding-left: 1.5em;
-				}
+				color: #036;
 			}
 		}
 	}
