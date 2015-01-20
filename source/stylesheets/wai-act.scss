@@ -532,6 +532,7 @@ a {
 		margin-top: 0;
 		margin-bottom: 10px;
 		color: #036;
+		color: #930;
 		line-height: 1;
 	}
 	p {
@@ -796,10 +797,12 @@ figure {
 		}
 		figcaption {
 			@extend .list-heading;
+			background-color: #930;
 			padding-left: .5em;
 			text-align: left;
 			&:after {
 				left: 3em;
+				border-top-color: #930;
 			}
 		}
 		> .figcontent {
