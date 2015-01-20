@@ -61,17 +61,30 @@ helpers do
   end
 
   def topic_link(link_text, url, options = {})
+  	res = sitemap.find_resource_by_path(url)
+
+  	if (res.data.status)
+  		status = res.data.status
+  		if status == "draft" || status == "approved-draft"
+  			status = ' <span class="status">draft</span>'
+  		else
+  			status = ' <span class="status">' + status + '</span>'
+  		end
+  	else
+  		status = ""
+  	end
+
     if current_page.data.order == 1
-      if url == '/' + current_page.path
-        '<span class="current-a"><span class="count"></span><span class="txt"><span class="visuallyhidden">Current: </span>' + link_text + '</span></span>'
+      if url == current_page.path
+        '<span class="current-a"><span class="count"></span><span class="txt"><span class="visuallyhidden">Current: </span>' + link_text + status + '</span></span>'
       else
-        link_to('<span class="count"></span><span class="txt">' + link_text + '</span>', url, options)
+        link_to('<span class="count"></span><span class="txt">' + link_text + status + '</span>', '/' + url, options)
       end
     else
-      if url == '/' + current_page.parent.path
-        '<span class="current-a"><span class="count"></span><span class="txt"><span class="visuallyhidden">Current: </span>' + link_text + '</span></span>'
+      if url == current_page.parent.path
+        '<span class="current-a"><span class="count"></span><span class="txt"><span class="visuallyhidden">Current: </span>' + link_text + status + '</span></span>'
       else
-        link_to('<span class="count"></span><span class="txt">'+link_text+'</span>', url, options)
+        link_to('<span class="count"></span><span class="txt">'+ link_text + status + '</span>', '/' + url, options)
       end
     end
   end

@@ -439,6 +439,17 @@ a {
 }
 
 .navigation {
+	.status {
+		font-size: 0.65em;
+		display: inline-block;
+		background-color: #FFF;
+		line-height: 1;
+		vertical-align: middle;
+		border-radius: 1em;
+		padding: .1em .5em;
+		font-weight: bold;
+		text-transform: uppercase;
+	}
 	ul {
 		background-color: #ddd;
 		counter-reset: navli;
