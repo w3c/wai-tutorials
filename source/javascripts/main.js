@@ -177,7 +177,7 @@
 
 		var plel = document.createElement('a');
 		//addclass(plel, 'permalink');
-		plel.innerHTML = '<svg class="icon"><use xlink:href="#icon-share"></use></svg> SHARE';
+		plel.innerHTML = '<svg class="icon"><use xlink:href="#icon-share"></use></svg> SHARE';
 		plel.setAttribute('title', "Permalink");
 
 		var pldiv = document.createElement('div');
@@ -235,6 +235,7 @@
 		  	for (var i = openboxes.length - 1; i >= 0; i--) {
 		  		remclass(openboxes[i], 'open');
 		  	};
+		  	el.parentNode.parentNode.parentNode.querySelector('a').focus();
 			});
 		});
 

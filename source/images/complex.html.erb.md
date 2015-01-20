@@ -44,7 +44,7 @@ This bar chart of website visitor statistics has a short description of “Bar c
 <%= sample_end %>
 {:/nomarkdown}
 
-### Providing a link to the long description via *longdesc*
+### Providing a link to the long description via `longdesc`
 {:.ap}
 
 Here the `longdesc` attribute contains the URI of a page containing the long description.
