@@ -398,6 +398,17 @@ a {
 }
 
 .breadcrumb {
+	line-height: percentage(44/18);
+	color: #036;
+	a, svg {
+		color: currentColor;
+		fill: currentColor;
+	}
+	a {
+		&:hover, &:visited {
+			color: #930;
+		}
+	}
 	.icon {
 		font-size: percentage(13/18);
 	}
