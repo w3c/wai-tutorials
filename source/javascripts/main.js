@@ -180,9 +180,6 @@
 		plel.innerHTML = '<svg class="icon"><use xlink:href="#icon-share"></use></svg> SHARE';
 		plel.setAttribute('title', "Permalink");
 
-		var pldiv = document.createElement('div');
-		addclass(pldiv, 'sectionheader');
-
 		var plwrapdiv = document.createElement('div')
 		addclass(plwrapdiv, 'permalink');
 
@@ -195,8 +192,6 @@
 		var elements = headings;
 		Array.prototype.forEach.call(elements, function(el, i){ // … .each(…)
 
-			var newwrap = pldiv.cloneNode(true);
-
 			var cplel = plel.cloneNode(true);
 			cplel.setAttribute('href', '#' + el.id);
 
@@ -207,6 +202,7 @@
 			var cplwrapdiv = plwrapdiv.cloneNode(true);
 			cplwrapdiv.appendChild(cplel);
 			cplwrapdiv.appendChild(csb);
+			addclass(cplwrapdiv, el.localName);
 
 			cplel.addEventListener('click', function(e){
 				var sbox = this.nextSibling;
@@ -220,12 +216,14 @@
 
 			});
 
-			newwrap.appendChild(el.cloneNode(true));
-			newwrap.appendChild(cplwrapdiv);
+			//newwrap.appendChild(el.cloneNode(true));
+			//newwrap.appendChild(cplwrapdiv);
 
 			//console.log(newwrap.outerHTML);
 
-			el.parentNode.replaceChild(newwrap, el);
+			// el.parentNode.replaceChild(newwrap, el);
+			el.parentNode.insertBefore(cplwrapdiv, el.nextSibling);
+			//el.parentNode.removeChild(el);
 		});
 
 		var sbbuttons = document.querySelectorAll('.sharebox button');
