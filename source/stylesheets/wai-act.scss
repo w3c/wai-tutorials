@@ -532,7 +532,6 @@ a {
 		margin-top: 0;
 		margin-bottom: 10px;
 		color: #036;
-		color: #930;
 		line-height: 1;
 	}
 	p {
@@ -797,12 +796,10 @@ figure {
 		}
 		figcaption {
 			@extend .list-heading;
-			background-color: #930;
 			padding-left: .5em;
 			text-align: left;
 			&:after {
 				left: 3em;
-				border-top-color: #930;
 			}
 		}
 		> .figcontent {
@@ -1044,25 +1041,20 @@ select {
 	}
 }
 
-.sectionheader {
-	position: relative;
-	display:flex;
-	justify-content: space-between;
-	align-items: center;
-	h2, h3, h4 {
-		display: inline-block;
-	}
-	+ * {
-		margin-top: 0;
-	}
-}
-
 .permalink {
 	display:inline;
 	position: relative;
 	font-size: .8em;
+	float:right;
+	margin: 0 0 .5em .5em;
 	> a {
 		color: #666 !important;
+		border:1px solid;
+		padding: .5em;
+		&:hover {
+			border:1px solid;
+			text-decoration: underline;
+		}
 		display: inline-block;
 		vertical-align: middle;
 		margin-left: .5em;
