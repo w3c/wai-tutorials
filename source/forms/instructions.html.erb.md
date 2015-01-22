@@ -80,50 +80,7 @@ In the example below, the required format for the “Expiry Date” is indicated
 ### Providing instructions outside labels
 {:.newex}
 
-Providing instructions outside labels allows more flexible positioning and design but sometimes it can be missed. The two approaches outlined below can be combined to reduce this risk.
-
-#### Informing users
-{:.ap}
-
-Content outside form elements may be missed by screen readers that are in “Forms Mode”. In the example below, users are informed that extra help is available for each field in the overall instructions before they enter the actual form, so that they don't miss it.
-
-{::nomarkdown}
-<%= sample_start %>
-
-<ul>
-	<li>Extra help can be found immediately after each field.</li>
-</ul>
-
-<form method="post" action="#">
-	<div>
-		<label for="expire2">Expiry date:</label> <input type="text" name="expire" id="expire2"> <span>(MM/YYYY)</span>
-	</div>
-</form>
-
-<%= sample_end%>
-{:/nomarkdown}
-
-{::nomarkdown}
-<%= code_start %>
-{:/nomarkdown}
-
-~~~ html
-<label for="expire">Expiry date:</label> <input type="text" name="expire" id="expire"> <span>(MM/YYYY)</span>
-~~~
-
-{::nomarkdown}
-<%= code_end %>
-{:/nomarkdown}
-
-{::nomarkdown}
-<%= notes_start %>
-{:/nomarkdown}
-
-**Note:** A caveat of this approach is that users receive the instructions after the form element. This is usually not ideal, especially when the form controls are large, when they are displayed on mobile devices, or when using screen magnification. In such cases these instructions may not be easy to find.
-
-{::nomarkdown}
-<%= notes_end %>
-{:/nomarkdown}
+Providing instructions outside labels allows more flexible positioning and design but sometimes it can be missed in (older) browsers and assistive technologies that don’t leverage WAI-ARIA.
 
 #### Using `aria-labelledby`
 {:.ap}
