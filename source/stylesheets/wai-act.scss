@@ -69,9 +69,18 @@ h1, h2, h3, h4, h5, h6, .navigation, pre {
 	// hyphens: none;
 }
 
-p {
-	margin-bottom: 0;
+h2 {
+	font-size: 1.5em;
 }
+
+h3 {
+	font-size: 21/18 * 1em;
+}
+
+h4 {
+	font-size: 1em;
+}
+
 p+ul {
 	margin-top: .5em;
 	li:first-child p:first-child {
@@ -141,12 +150,6 @@ h2.first, h3.first, .newexap {
 	counter-increment: approaches;
 	&:before {
 		content: 'Approach ' counter(approaches) ': ';
-	}
-}
-
-h2 {
-	.content .inner & {
-		padding-top: 1em;
 	}
 }
 
@@ -524,6 +527,7 @@ a {
 }
 
 .tutorial-heading {
+	margin-bottom: 1em;
 	h1 {
 		margin-bottom: 0;
 		font-size: percentage(42/18);
@@ -1044,16 +1048,15 @@ select {
 .permalink {
 	display:inline;
 	position: relative;
-	font-size: .8em;
+	font-size: .7em;
 	float:right;
 	margin: 0 0 .5em .5em;
 	> a {
 		color: #666 !important;
-		border:1px solid;
+		border:1px solid #F5F5F5;
 		padding: .5em;
 		&:hover {
 			border:1px solid;
-			text-decoration: underline;
 		}
 		display: inline-block;
 		vertical-align: middle;
@@ -1215,16 +1218,16 @@ select {
 			margin-top: 0;
 		}
 	}
-	.sectionheader {
+	h2 {
 		padding-top:0 !important;
 		margin-bottom: 1em;
 		padding: .25em .5em;
 		background-color: #F0F0F0;
-		h2 {
 			font-size: 1em;
-			padding: .25em 0;
 			margin: 0;
-		}
+	}
+	.permalink.h2 {
+		margin-top: 0;
 	}
 }
 
