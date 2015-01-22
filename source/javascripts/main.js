@@ -222,7 +222,7 @@
 			//console.log(newwrap.outerHTML);
 
 			// el.parentNode.replaceChild(newwrap, el);
-			el.parentNode.insertBefore(cplwrapdiv, el.nextSibling);
+			el.parentNode.insertBefore(cplwrapdiv, el);
 			//el.parentNode.removeChild(el);
 		});
 
