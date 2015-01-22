@@ -216,14 +216,7 @@
 
 			});
 
-			//newwrap.appendChild(el.cloneNode(true));
-			//newwrap.appendChild(cplwrapdiv);
-
-			//console.log(newwrap.outerHTML);
-
-			// el.parentNode.replaceChild(newwrap, el);
 			el.parentNode.insertBefore(cplwrapdiv, el);
-			//el.parentNode.removeChild(el);
 		});
 
 		var sbbuttons = document.querySelectorAll('.sharebox button');
