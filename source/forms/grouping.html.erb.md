@@ -7,6 +7,7 @@ wcag_success_criteria:
 wcag_techniques:
   - H71
   - ARIA17
+  - H85
 ---
 
 Grouping related form controls makes forms more understandable for all users. Group them both visually and within the code. Use the `<fieldset>` and `<legend>` elements to associate related form controls.

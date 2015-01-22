@@ -3,6 +3,7 @@ techniques:
   - ARIA6: Using aria-label to provide labels for objects
   - ARIA11: Using ARIA landmarks to identify regions of a page
   - ARIA12: Using role=heading to identify headings
+  - ARIA17: Using grouping roles to identify related form controls
   - ARIA18: Using aria-alertdialog to Identify Errors
   - ARIA19: Using ARIA role=alert or Live Regions to Identify Errors
   - ARIA21: Using Aria-Invalid to Indicate An Error Field
@@ -76,6 +77,7 @@ techniques:
   - H71: Providing a description for groups of form controls using fieldset and legend elements
   - H73: Using the summary attribute of the table element
   - H80: Identifying the purpose of a link using link text combined with the preceding heading element
+  - H85: Using OPTGROUP to group OPTION elements inside a SELECT
   - H91: Using HTML form controls and links
   - H93: Ensuring that id attributes are unique on a Web page
   - PDF9: Providing headings by marking content with heading tags in PDF documents
