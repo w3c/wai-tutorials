@@ -241,3 +241,62 @@ This technique provides additional styling possibilities.
 {::nomarkdown}
 <%= code_end %>
 {:/nomarkdown}
+
+## Group items in `select` elements
+
+For `select` elements with groups of options, the `optgroup` element can be used to indicate such groups. `Optgroup`’s `label` attribute is used to label the group. This is especially useful for lists with many options. In the example below, the user can chose from a lectures in one of three courses.
+
+{::nomarkdown}
+<%= sample_start %>
+
+<form action="#" method="get">
+	<p>
+		Which course would you like to watch today?<br>
+		<label id="course">Course:</label>
+		<select name="course" id="course">
+			<option></option>
+			<optgroup label="8.01 Physics I: Classical Mechanics">
+				<option value="8.01.1">Lecture 01: Powers of Ten</option>
+				<option value="8.01.2">Lecture 02: 1D Kinematics</option>
+				<option value="8.01.3">Lecture 03: Vectors</option>
+			</optgroup>
+			<optgroup label="8.02 Physics II: Electricity and Magnestism">
+				<option value="8.02.1">Lecture 01: What holds our world together?</option>
+				<option value="8.02.2">Lecture 02: Electric Field</option>
+				<option value="8.02.3">Lecture 03: Electric Flux</option>
+			</optgroup>
+			<optgroup label="8.03 Physics III: Vibrations and Waves">
+				<option value="8.03.1">Lecture 01: Periodic Phenomenon</option>
+				<option value="8.03.2">Lecture 02: Beats</option>
+				<option value="8.03.3">Lecture 03: Forced Oscillations with Damping</option>
+			</optgroup>
+		</select>
+		<input type=submit value="▶ Play">
+	</p>
+</form>
+
+<%= sample_end %>
+{:/nomarkdown}
+
+{::nomarkdown}
+<%= code_start %>
+{:/nomarkdown}
+
+~~~html
+<select>
+	<optgroup label="8.01 Physics I: Classical Mechanics">
+		<option value="8.01.1">Lecture 01: Powers of Ten</option>
+		<option value="8.01.2">Lecture 02: 1D Kinematics</option>
+		<option value="8.01.3">Lecture 03: Vectors</option>
+	</optgroup>
+	<optgroup label="8.02 Physics II: Electricity and Magnestism">
+		<option value="8.02.1">Lecture 01: What holds our world together?</option>
+		[…]
+	</optgroup>
+	[…]
+</select>
+~~~
+
+{::nomarkdown}
+<%= code_end %>
+{:/nomarkdown}

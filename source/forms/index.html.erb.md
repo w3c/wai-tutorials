@@ -13,6 +13,8 @@ type: intro
 
 Forms are commonly used to provide user interaction in websites and web applications. For example, login, registering, commenting, and purchasing. This tutorial shows you how to create accessible forms. The same concepts apply to all forms, whether they are processed client or server-side.
 
+Aside from technical considerations users usually prefer simple and short forms. Only ask users to enter what is required to complete the transaction or process; if irrelevant or excessive data is requested, users often abandon the form.
+
 - **[Labeling Controls](labels.html):** Use the `<label>` element, and, in specific cases, other mechanisms (e.g. ARIA, `title` attribute etc.), to identify each form control.
 
 - **[Grouping Controls](grouping.html):** Use the `<fieldset>` and `<legend>` elements to group and associate related form controls.
@@ -26,6 +28,10 @@ Forms are commonly used to provide user interaction in websites and web applicat
 - **[Multi-Page Forms](multi-page.html):** Divide long forms into multiple smaller forms that constitute a series of logical steps or stages and inform users about their progress.
 
 - **[Custom Controls](custom-controls.html):** Use stylized form elements and other progressive enhancement techniques to provide custom controls.
+
+## A note on time limits
+
+* If possible, forms should not be subject to a time limit to allow users to complete the form at their own pace. If a time limit needs to be in place, for example, for security reasons, the user should have the option to turn it off or extend it. This does not apply if the time limit is due to a live event, such as an auction or a game, or if the time to complete the form is essential for a valid submission.
 
 ## Why is this important?
 
