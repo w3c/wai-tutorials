@@ -195,7 +195,7 @@ The images of the stars are generated using <abbr title="Scalable Vector Graphic
 	}
 
 	#star_rating input:checked ~ label {
-		color: #999;
+		color: #858585;
 	}
 	#star_rating input:checked + label {
 		color: #036;
