@@ -16,6 +16,7 @@ wcag_techniques:
   - G17
   - G18
   - G167
+  - G162
   - H65
   - ARIA14
   - ARIA16
