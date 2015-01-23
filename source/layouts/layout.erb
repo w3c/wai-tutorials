@@ -4,13 +4,13 @@
     <header class="tutorial-heading">
       <nav class="breadcrumb" aria-label="Breadcrumbs" role="navigation">
         <p>
-          <span class="home"><%= nav_link('Tutorials home', '/index.html', :relative => true) %></span> <svg viewBox="0 0 731 1024" class="icon"><title>»</title><path class="path1" d="M632.571 501.143l-424 424q-10.857 10.857-25.714 10.857t-25.714-10.857l-94.857-94.857q-10.857-10.857-10.857-25.714t10.857-25.714l303.429-303.429-303.429-303.429q-10.857-10.857-10.857-25.714t10.857-25.714l94.857-94.857q10.857-10.857 25.714-10.857t25.714 10.857l424 424q10.857 10.857 10.857 25.714t-10.857 25.714z"></path></svg>
+          <span class="home"><%= nav_link('Tutorials home', '/index.html', :relative => true) %></span> <span class="icon icon-chevron-right"></span><span class="visuallyhidden">»</span>
           <span class="other">
             <% if current_page.parent and ("/" + current_page.parent.path != '/index.html') %>
-              <%= nav_link(current_page.parent.data.tutorial_title, '/' + current_page.parent.path) %> <svg viewBox="0 0 731 1024" class="icon"><title>»</title><path class="path1" d="M632.571 501.143l-424 424q-10.857 10.857-25.714 10.857t-25.714-10.857l-94.857-94.857q-10.857-10.857-10.857-25.714t10.857-25.714l303.429-303.429-303.429-303.429q-10.857-10.857-10.857-25.714t10.857-25.714l94.857-94.857q10.857-10.857 25.714-10.857t25.714 10.857l424 424q10.857 10.857 10.857 25.714t-10.857 25.714z"></path></svg>
+              <%= nav_link(current_page.parent.data.tutorial_title, '/' + current_page.parent.path) %> <span class="icon icon-chevron-right"></span><span class="visuallyhidden">»</span>
             <% end %>
             <% if current_page.parent and ("/" + current_page.parent.path == '/index.html') %>
-              <%= nav_link(current_page.data.tutorial_title, '/' + current_page.path) %> <svg viewBox="0 0 731 1024" class="icon"><title>»</title><path class="path1" d="M632.571 501.143l-424 424q-10.857 10.857-25.714 10.857t-25.714-10.857l-94.857-94.857q-10.857-10.857-10.857-25.714t10.857-25.714l303.429-303.429-303.429-303.429q-10.857-10.857-10.857-25.714t10.857-25.714l94.857-94.857q10.857-10.857 25.714-10.857t25.714 10.857l424 424q10.857 10.857 10.857 25.714t-10.857 25.714z"></path></svg>
+              <%= nav_link(current_page.data.tutorial_title, '/' + current_page.path) %> <span class="icon icon-chevron-right"></span><span class="visuallyhidden">»</span>
             <% end %>
             <%= nav_link(current_page.data.title, '/' + current_page.path, :relative => true) %>
           </span>
