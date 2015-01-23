@@ -144,6 +144,10 @@
 					subnesting = false;
 				}
 				if ((el.localName==="h2") && (nesting===true)) {
+					if (subnesting===true) {
+						last_sub_elem.appendChild(sub_sub_wrap);
+						subnesting = false;
+					}
 					last_elem.appendChild(sub_wrap);
 					nesting = false;
 				}
