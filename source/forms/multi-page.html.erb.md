@@ -92,6 +92,29 @@ Survey <progress max="7" value="6">(Step 6 of circa 7)</progress><br>
 
 Survey <progress max="7" value="7">(Finished)</progress>
 
+<style>
+progress {
+  color: #036;
+  font-size: .6em;
+  line-height: 1.5em;
+  text-indent: .5em;
+  width: 15em;
+  height: 1em;
+  border: 1px solid #036;
+  border-radius: 1em;
+  background: #fff;
+  overflow:hidden;
+}
+
+progress::-webkit-progress-bar {
+	background-color:#036;
+}
+
+progress::-moz-progress-bar {
+	background-color:#036;
+}
+</style>
+
 <%= sample_end %>
 {:/nomarkdown}
 
@@ -100,7 +123,6 @@ Survey <progress max="7" value="7">(Finished)</progress>
 {:/nomarkdown}
 
 ~~~ html
-
 Survey <progress max="7" value="1">(Step 2 of circa 7)</progress><br>
 
 Survey <progress max="7" value="3">(Step 3 of circa 7)</progress><br>
@@ -108,6 +130,35 @@ Survey <progress max="7" value="3">(Step 3 of circa 7)</progress><br>
 Survey <progress max="7" value="6">(Step 6 of circa 7)</progress><br>
 
 Survey <progress max="7" value="7">(Finished)</progress>
+~~~
+
+{::nomarkdown}
+<%= code_end %>
+{:/nomarkdown}
+
+The progress element, like other form elements, is a component from the operating system rendered directly on the web site. Those components are animated in some operating systems which would violate WCAG 2.0’s [2.2.2 Pause, Stop, Hide](http://www.w3.org/TR/WCAG20/#time-limits-pause) success criterion that requires that users are able to disable an animation that starts automatically, lasts more than 5 seconds and is presented in parallel with other content.
+
+The animation can be stopped by using custom styling with browser-specific CSS as shown below.
+
+{::nomarkdown}
+<%= code_start %>
+{:/nomarkdown}
+
+~~~ css
+/* Microsoft IE */
+progress {
+  color: #036;
+}
+
+/* Apple Safari and Google Chrome */
+progress::-webkit-progress-bar {
+	background-color: #036;
+}
+
+/* Mozilla Firefox */
+progress::-moz-progress-bar {
+	background-color: #036;
+}
 ~~~
 
 {::nomarkdown}
