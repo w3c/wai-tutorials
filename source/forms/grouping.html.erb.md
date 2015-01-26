@@ -10,7 +10,7 @@ wcag_techniques:
   - H85
 ---
 
-Grouping related form controls makes forms more understandable for all users. Group them both visually and within the code. Use the `<fieldset>` and `<legend>` elements to associate related form controls.
+Grouping related form controls makes forms more understandable for all users as related fields are easier to identify. Such Groups can be processed individually instead of processing the complete form at once. The grouping needs to be carried out visually and in the code, for example by using the `<fieldset>` and `<legend>` elements to associate related form controls.
 
 ## Associating related controls with `fieldset`
 {:.ap}
