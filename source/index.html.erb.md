@@ -32,7 +32,7 @@ Web authoring tools (Content Management Systems (CMS), <abbr title="What you see
 
 ## Relationship to WCAG 2.0
 
-These tutorials provide best practices guidance on meeting WCAG 2.0 in different situations. They do not cover all situations, technologies, success criteria, and conformance requirements. See the normative [WCAG 2.0 standard](http://www.w3.org/TR/WCAG20/) and additional guidance, like techniques, in the [How to Meet WCAG 2.0 document](http://www.w3.org/WAI/WCAG20/quickref/).
+These tutorials provide guidance on how to implement best practice solutions that meet WCAG 2.0 in different situations. They do not cover all situations, technologies, success criteria, and conformance requirements. See the normative [WCAG 2.0 standard](http://www.w3.org/TR/WCAG20/) and additional guidance, like techniques, in the [How to Meet WCAG 2.0 document](http://www.w3.org/WAI/WCAG20/quickref/).
 
 {::comment}
 
