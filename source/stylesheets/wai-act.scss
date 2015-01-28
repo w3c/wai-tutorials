@@ -121,40 +121,42 @@ ul {
 }
 
 .ex, .ap {
-	position:relative;
-	&:before {
+	b, &:before {
 		color: #930;
+		font-weight: inherit;
 	}
 }
 
-.ex {
-	counter-increment: examples;
-	counter-reset: approaches;
-	&:before {
-		content: 'Example ' counter(examples) ': ';
+.no-js {
+	.ex {
+		counter-increment: examples;
+		counter-reset: approaches;
+		&:before {
+			content: 'Example ' counter(examples) ': ';
+		}
+		&.inap {
+			counter-reset: none;
+		}
 	}
-	&.inap {
-		counter-reset: none;
+
+	.newap {
+		counter-reset: approaches;
 	}
-}
 
-.newap {
-	counter-reset: approaches;
-}
-
-.newex {
-	counter-reset: examples;
-}
+	.newex {
+		counter-reset: examples;
+	}
 
 
-h2.first, h3.first, .newexap {
-	counter-reset: examples approaches;
-}
+	h2.first, h3.first, .newexap {
+		counter-reset: examples approaches;
+	}
 
-.ap {
-	counter-increment: approaches;
-	&:before {
-		content: 'Approach ' counter(approaches) ': ';
+	.ap {
+		counter-increment: approaches;
+		&:before {
+			content: 'Approach ' counter(approaches) ': ';
+		}
 	}
 }
 
@@ -671,6 +673,10 @@ a {
 			margin-bottom: 0;
 		}
 	}
+}
+
+.annotation {
+	@extend %annotation;
 }
 
 .status {

@@ -117,6 +117,9 @@
 
 			var toc_elements = headings; // $('.content h2[id], .ap')
 
+			var excount = 1,
+			    apcount = 1;
+
 			var toc_outer = document.createElement('figure');
 			toc_outer.setAttribute('role', 'navigation');
 			toc_outer.setAttribute('aria-describedby', 'toc_desc');
@@ -151,6 +154,25 @@
 					last_elem.appendChild(sub_wrap);
 					nesting = false;
 				}
+
+				if (hasclass(el,"ex")) {
+					el.insertAdjacentHTML('afterbegin', "<b>Example " + excount + ":</b> ");
+					excount++;
+					if (!hasclass(el, "inap")) {
+						apcount = 1;
+					}
+				}
+				if (hasclass(el,"ap")) {
+					el.insertAdjacentHTML('afterbegin', "<b>Approach " + apcount + ":</b> ");
+					apcount++;
+				}
+				if (hasclass(el,"newex")) {
+					excount = 1;
+				}
+				if (hasclass(el,"newap")) {
+					apcount = 1;
+				}
+
 				cur_elem.innerHTML = '<a class="' + el.getAttribute('class') + '" href="#' + el.getAttribute('id') + '">' + el.innerHTML + '</a>';
 
 				// console.log(cur_elem);
