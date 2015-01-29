@@ -41,9 +41,11 @@ For quick overview on deciding which category a specific image fits into, see th
 
 ## Why is this important?
 
-Images are used extensively on websites and can create major barriers
-when they are not accessible. Accessible images prove to be beneficial in
-many situations such as:
+Images and graphics make content more pleasant and easier to understand for everyone, and in particular for people with cognitive and learning disabilities. They serve as cues that visually impaired people, who are using screen magnification, often use to orient themselves in the content.
+
+Screen reader users can also benefit from these cues and structure that images sometimes add to the content. Make sure that images are properly described with appropriate text alternatives to provide easy access to your content to as many people as possible.
+
+Images are used extensively on websites and can create major barriers when they are not accessible. Accessible images prove to be beneficial in many situations such as:
 
 -   **People using screen readers:** The text alternative can be read aloud or rendered as Braille
 -   **People using speech input software:** Users can put the focus onto a button or linked image with a single voice command
@@ -56,7 +58,7 @@ many situations such as:
 <%= notes_start %>
 {:/nomarkdown}
 
-**Note:** Images are often important for communicating information and interacting with web pages. Illustrations make it much easier to understand information for certain types of learners. Some people who enlarge web pages use images as cues for orientation. Removing images from websites (so called “text-only versions”) makes websites less accessible for these users.
+**Note:** Removing images from websites (so called “text-only versions”) makes websites less accessible for these users.
 
 {::nomarkdown}
 <%= notes_end %>
