@@ -3,6 +3,7 @@ techniques:
   - ARIA6: Using aria-label to provide labels for objects
   - ARIA11: Using ARIA landmarks to identify regions of a page
   - ARIA12: Using role=heading to identify headings
+  - ARIA13: Using aria-labelledby to name regions and landmarks
   - ARIA17: Using grouping roles to identify related form controls
   - ARIA18: Using aria-alertdialog to Identify Errors
   - ARIA19: Using ARIA role=alert or Live Regions to Identify Errors

@@ -4,6 +4,7 @@ technologies: WAI-ARIA, HTML5
 wcag_techniques:
   - G196
   - H67
+  - ARIA13
 order: 7
 editors:
   - Eric Eggert: "http://w3.org/People/yatil/"
