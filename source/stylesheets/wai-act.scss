@@ -679,6 +679,14 @@ a {
 	@extend %annotation;
 }
 
+.annotation-header {
+	@extend %annotation-header;
+}
+
+.annotation-content {
+	@extend %annotation-content;
+}
+
 .status {
 	padding: .25em;
 	h3, p {
