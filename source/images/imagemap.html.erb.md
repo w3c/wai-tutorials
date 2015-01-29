@@ -19,7 +19,7 @@ A client-side image map is an image divided into selectable regions defined by `
 ## An organizational chart with links to individual pages
 {:.ex}
 
-The following organizational chart is used to provide links to each director's home page. The text alternative for the image is “Board of Directors and related staff:”. Each linked `<area>` has a text alternative to identify the individual -- for example, “Davy Jones: Chairman”.
+The following organizational chart is used to provide links to each director's home page. The text alternative for the image is “Board of Directors and related staff:”. Each linked `<area>` has a text alternative to identify the individual -- for example, “Davy Jones: Chairman”. The alternative text for individuals also state their relation in the graph.
 
 {::nomarkdown}
 <%= sample_start %>
@@ -30,9 +30,9 @@ The following organizational chart is used to provide links to each director's h
 <map name="Map" id="Map">
 	<area shape="rect" coords="176,14,323,58" href="../res/beyond" alt="Davy Jones: Chairman">
 	<area shape="rect" coords="81,75,226,114" href="../res/beyond" alt="Carole Brewster: Company Secretary">
-	<area shape="rect" coords="6,138,155,182" href="../res/beyond" alt="Harry H Brown: Marketing Director">
-	<area shape="rect" coords="175,138,323,182" href="../res/beyond" alt="Paula Holbein: Sales Director">
-	<area shape="rect" coords="345,136,496,186" href="../res/beyond" alt="Hugh Howard: Finance Director">
+	<area shape="rect" coords="6,138,155,182" href="../res/beyond" alt="Harry H Brown: Marketing Director (reports to chairman)">
+	<area shape="rect" coords="175,138,323,182" href="../res/beyond" alt="Paula Holbein: Sales Director (reports to chairman)">
+	<area shape="rect" coords="345,136,496,186" href="../res/beyond" alt="Hugh Howard: Finance Director (reports to chairman)">
 </map>
 
 {::nomarkdown}
@@ -50,8 +50,13 @@ The following organizational chart is used to provide links to each director's h
 <map id="Map" name="Map">
 	<area shape="rect"
 	      coords="176,14,323,58"
-	      href="…"
+	      href="[…]"
 	      alt="Davy Jones: Chairman">
+	[…]
+	<area shape="rect"
+	      coords="6,138,155,182"
+	      href="[…]"
+	      alt="Harry H Brown: Marketing Director (reports to chairman)">
 	[…]
 </map>
 ~~~
@@ -62,14 +67,16 @@ The following organizational chart is used to provide links to each director's h
 
 [Full code for Image map example](examples/imagemap.html)
 
+Browser implementation for image maps varies at the time of writing, see [this HTML bug](https://lists.w3.org/Archives/Public/public-html-bugzilla/2015Jan/0020.html). To accommodate for the different implementations, keep in mind to
+
+* use every image map only once. That means if multiple images with the same map are to be used, the map should be duplicated and have a different `id`s;
+* place the `<map>` element as a direct sibling to the image.
+
 {::nomarkdown}
 <%= notes_start %>
 {:/nomarkdown}
 
-**Note:** Image maps may not function correctly on some mobile devices
-if the coordinates for the areas are not scaled using the same proportions
-as the image. To compensate for this you could provide redundant text links on
-the same page.
+**Note:** Image maps may not function correctly on some mobile devices if the coordinates for the areas are not scaled using the same proportions as the image. To compensate for this you could provide redundant text links on the same page.
 
 {::nomarkdown}
 <%= notes_end %>
