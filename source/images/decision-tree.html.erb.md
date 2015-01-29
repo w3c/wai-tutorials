@@ -15,9 +15,9 @@ support: <strong>Developed with support</strong> from the <a href="http://www.w3
 -   **Does the image contain text?**
     -   {:.yes} **Yes:**
         -   **… and the text in the image is also present as *real* text nearby.**
-            _Use an empty `alt` attribute._
+            _Use an empty `alt` attribute. See [Decorative Images](decorative.html)._
         -   **… and the text is only shown for visual effects.**
-            _Use an empty `alt` attribute._
+            _Use an empty `alt` attribute. See [Decorative Images](decorative.html)._
         -   **… and the text in the image is not present otherwise.** _Use the `alt` attribute to include the text of the image. See [Images of Text](textual.html#image-of-styled-text-with-decorative-effect)._
     -   {:.no} **No:**
         - Continue.
