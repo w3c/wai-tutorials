@@ -53,29 +53,29 @@ Rating:
 ## A collection of images
 {:.ex}
 
-In the example below, the HTML5 `<figure>` and `<figcaption>` elements are used to provide a caption for each individual image in a collection. The `<figure>` element can be nested, which is used in the example to provide a caption for the entire collection of images. The WAI-ARIA attribute `role` with the value of `group` is used to indicate this grouping to assistive technologies.
+In the example below, the HTML5 `<figure>` and `<figcaption>` elements are used to provide a caption for each individual image in a collection. The `<figure>` element can be nested, which is used in the example to provide a caption for the entire collection of images. The WAI-ARIA attribute `role` with the value of `group` is used to indicate this grouping to assistive technologies, `aria-labelledby` makes sure that the `figcaption` elements are used as labels for the individual groups.
 
 Note: The web browser and assistive technology support varies for this particular WAI-ARIA attribute and value.
 
 {::nomarkdown}
 <%= sample_start %>
 
-<figure role="group">
-<figcaption>The castle through the ages: 1423, 1756, and 1936 respectively.</figcaption>
+<figure role="group" aria-labelledby="fig1">
+<figcaption id="fig1">The castle through the ages: 1423, 1756, and 1936 respectively.</figcaption>
 
 
-<figure role="group">
+<figure role="group" aria-labelledby="fig11">
 <img src="../../img/castle-etching.jpg" alt="The castle has one tower, and a tall wall around it.">
-<figcaption>Charcoal on  wood. Anonymous, circa 1423.</figcaption>
+<figcaption id="fig11">Charcoal on  wood. Anonymous, circa 1423.</figcaption>
 </figure>
-<figure role="group">
+<figure role="group" aria-labelledby="fig12">
 <img src="../../img/castle-painting.jpg" alt="The castle now has two towers and two walls.">
-<figcaption>Oil-based paint on canvas. Eloisa Faulkner, 1756.</figcaption>
+<figcaption id="fig12">Oil-based paint on canvas. Eloisa Faulkner, 1756.</figcaption>
 </figure>
-<figure role="group">
+<figure role="group" aria-labelledby="fig13">
 <img src="../../img/castle-fluro.jpg"
 alt="The castle lies in ruins, the original tower all that remains in one piece.">
-<figcaption>Film photograph. <span lang="fr">Séraphin Médéric Mieusement</span>, 1936.</figcaption>
+<figcaption id="fig13">Film photograph. <span lang="fr">Séraphin Médéric Mieusement</span>, 1936.</figcaption>
 </figure>
 
 </figure>
@@ -88,28 +88,28 @@ alt="The castle lies in ruins, the original tower all that remains in one piece.
 {:/nomarkdown}
 
 ~~~ html
-<figure role="group">
-	<figcaption>
+<figure role="group" aria-labelledby="fig1">
+	<figcaption id="fig1">
 		The castle through the ages: 1423, 1756, and 1966 respectively.
 	</figcaption>
 
 
-	<figure role="group">
+	<figure role="group" aria-labelledby="fig11">
 		<img src="castle-etching.jpg"
 			alt="The castle has one tower, and a tall wall around it.">
-		<figcaption>Charcoal on  wood. Anonymous, circa 1423.</figcaption>
+		<figcaption id="fig11">Charcoal on  wood. Anonymous, circa 1423.</figcaption>
 	</figure>
 
-	<figure role="group">
+	<figure role="group" aria-labelledby="fig12">
 		<img src="castle-painting.jpg"
 			alt="The castle now has two towers and two walls.">
-		<figcaption>Oil-based paint on canvas. Eloisa Faulkner, 1756.</figcaption>
+		<figcaption id="fig12">Oil-based paint on canvas. Eloisa Faulkner, 1756.</figcaption>
 	</figure>
 
-	<figure role="group">
+	<figure role="group" aria-labelledby="fig13">
 		<img src="castle-fluro.jpg"
 			alt="The castle lies in ruins, the original tower all that remains in one piece.">
-		<figcaption>Film photograph. <span lang="fr">Séraphin Médéric Mieusement</span>, 1936.</figcaption>
+		<figcaption id="fig13">Film photograph. <span lang="fr">Séraphin Médéric Mieusement</span>, 1936.</figcaption>
 	</figure>
 
 </figure>
