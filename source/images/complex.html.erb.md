@@ -23,11 +23,13 @@ Complex images contain substantial information – more than can be conveyed in 
 -   diagrams and illustrations where the page text relies on the user being able to understand the image;
 -   maps showing locations or other information such as weather systems.
 
-In these situations a two-part text alternative is required. The first part is the short description to identify the image and, where appropriate, indicate the location of the long description.  The second part is the long description – a textual representation of the essential information conveyed by the image.
+In these situations a two-part text alternative is required. The first part is the short description to identify the image and, where appropriate, indicate the location of the long description. The second part is the long description – a textual representation of the essential information conveyed by the image.
 
-In certain situations a description of the composition of the image may also be needed as part of the long description, but only where it’s important that the user understand the image construction. This page shows several possible approaches that can be used to provide both short and long descriptions.
+There are use cases where a description of the composition of the image may also be needed as part of the long description, for example if the composition is important to understand the image. This page shows several possible approaches that can be used to provide both short and long descriptions.
 
 Also it’s good practice to refer to more complex images from the accompanying text to describe the overall data, for example: “The following graph shows that visitors were lost in the first quarter, but the numbers recovered in the second quarter”.
+
+Complex images can be hard to understand for a variety of users, like people with learning disabilities or who use screen magnification. Long descriptions can benefit those users as well, so the description should be made available not only for screen reader users, if possible.
 
 ## Image containing substantial information
 {:.ex}
@@ -43,6 +45,8 @@ This bar chart of website visitor statistics has a short description of “Bar c
 {::nomarkdown}
 <%= sample_end %>
 {:/nomarkdown}
+
+From the approaches below, only approach one and two provide a mechanism for automatic discovery of the description. Those mechanisms can help to implement an image search, for example.
 
 ### Providing a link to the long description via `longdesc`
 {:.ap}
@@ -93,6 +97,34 @@ If the long description is published within an HTML element on the same page as 
 
 {::nomarkdown}
 <%= notes_end %>
+{:/nomarkdown}
+
+### Structurally associating image and long description with `aria-describedby`
+{:.ap}
+
+The WAI-ARIA `aria-describedby` attribute can be used to link the description to the image. The value of the attribute is the `id` of the element with the description.
+
+{::nomarkdown}
+<%= code_start %>
+{:/nomarkdown}
+
+~~~ html
+<img src="chart.png"
+	aria-describedby="image-description"
+	alt="Bar chart showing monthly and total visitors for the first quarter 2014 for sites 1 to 3.">
+
+<div id="image-description">
+	<p><strong>Trends:</strong> Site visitors for the first  ...</p>
+	<p><strong>Statistics:</strong>
+	<table>
+		<caption>Example.com Site visitors Jan to March 2014</caption>
+		<tr>…</tr>
+	</table>
+</div>
+~~~
+
+{::nomarkdown}
+<%= code_end %>
 {:/nomarkdown}
 
 ### A text link to the long description adjacent to the image
@@ -173,34 +205,6 @@ The HTML5 `<figure>` element can be used to enclose both the image and its long 
 		<tr>…</tr>
 	</table>
 </figure>
-~~~
-
-{::nomarkdown}
-<%= code_end %>
-{:/nomarkdown}
-
-### Structurally associating image and long description with `aria-described-by`
-{:.ap}
-
-The WAI-ARIA `aria-described-by` attribute can be used to link the description to the image. The value of the attribute is the `id` of the element with the description.
-
-{::nomarkdown}
-<%= code_start %>
-{:/nomarkdown}
-
-~~~ html
-<img src="chart.png"
-	aria-described-by="image-description"
-	alt="Bar chart showing monthly and total visitors for the first quarter 2014 for sites 1 to 3.">
-
-<div id="image-description">
-	<p><strong>Trends:</strong> Site visitors for the first  ...</p>
-	<p><strong>Statistics:</strong>
-	<table>
-		<caption>Example.com Site visitors Jan to March 2014</caption>
-		<tr>…</tr>
-	</table>
-</div>
 ~~~
 
 {::nomarkdown}
