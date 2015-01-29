@@ -68,7 +68,7 @@ Here the `longdesc` attribute contains the URI of a page containing the long des
 <%= code_end %>
 {:/nomarkdown}
 
-If the long description is published within an HTML element on the same page as the image, the `longdesc` value can simply contain a fragment identifier (“hash link”) to the element containing the long description. This fragment identifier consists of an `#` and the value of the `id` attribute of the longdescription element.
+If the long description is published within an HTML element on the same page as the image, the `longdesc` value can simply contain a fragment identifier (“hash link”) to the element containing the long description. This fragment identifier consists of an `#` and the value of the `id` attribute of the `longdesc` element.
 
 {::nomarkdown}
 <%= code_start %>
@@ -93,7 +93,7 @@ If the long description is published within an HTML element on the same page as 
 <%= notes_start %>
 {:/nomarkdown}
 
-**Note:** Both Firefox and Chrome browsers are working on implementations that will make the *longdesc linked* long description location reachable by all users. Currently, and in other browsers, it’s only available to screen reader users.
+**Note:** The *longdesc linked* long description location is reachable by all users in Firefox. There is an [official Chrome Extension](https://chrome.google.com/webstore/detail/long-descriptions-in-cont/ohbmencljkleiedahijfkagnmmhbilgp) provided that adds long description access. In other browsers, it’s only available to screen reader users. There is no support on mobile platforms.
 
 {::nomarkdown}
 <%= notes_end %>
