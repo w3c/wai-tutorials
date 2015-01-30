@@ -20,7 +20,7 @@ The `<fieldset>` element provides a container for related form elements, and the
 The legend for a group of controls can also highlight common attributes of all controls, for example state the fact that all fields in the group are required.
 
 ### … to group checkboxes
-{:.ex}
+{:.ex.inap}
 
 In the example below there are three checkboxes that are all part of an opt-in function for receiving different types of information.
 
@@ -63,7 +63,7 @@ In the example below there are three checkboxes that are all part of an opt-in f
 {:/nomarkdown}
 
 ### … to group related fields
-{:.ex}
+{:.ex.inap}
 
 This example shows form fields to enter shipping and invoice addresses. As the labels in both groups have the same text, a `fieldset` is added to indicate which fields belong together.
 
