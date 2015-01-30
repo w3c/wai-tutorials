@@ -58,7 +58,7 @@ Images are used extensively on websites and can create major barriers when they 
 <%= notes_start %>
 {:/nomarkdown}
 
-**Note:** Removing images from websites (so called “text-only versions”) makes websites less accessible for these users.
+**Note:** Removing images from websites (so called “text-only versions”) makes websites less accessible and functional for these users and these situations.
 
 {::nomarkdown}
 <%= notes_end %>
