@@ -13,9 +13,9 @@ type: intro
 
 Forms are commonly used to provide user interaction in websites and web applications. For example, login, registering, commenting, and purchasing. This tutorial shows you how to create accessible forms. The same concepts apply to all forms, whether they are processed client or server-side.
 
-Aside from technical considerations users usually prefer simple and short forms. Only ask users to enter what is required to complete the transaction or process; if irrelevant or excessive data is requested, users often abandon the form.
+Aside from technical considerations, users usually prefer simple and short forms. Only ask users to enter what is required to complete the transaction or process; if irrelevant or excessive data is requested, users often abandon the form.
 
-- **[Labeling Controls](labels.html):** Use the `<label>` element, and, in specific cases, other mechanisms (e.g. ARIA, `title` attribute etc.), to identify each form control.
+- **[Labeling Controls](labels.html):** Use the `<label>` element, and, in specific cases, other mechanisms (e.g. WAI-ARIA, `title` attribute etc.), to identify each form control.
 
 - **[Grouping Controls](grouping.html):** Use the `<fieldset>` and `<legend>` elements to group and associate related form controls.
 
@@ -23,9 +23,9 @@ Aside from technical considerations users usually prefer simple and short forms.
 
 - **[Validating Input](validation.html):** Validate input provided by the user, and provide options to undo changes and confirm data entry.
 
-- **[User Notifications](notifications.html):** Notify users about successful task completion, any errors, and provide instructions to help correct mistakes.
+- **[User Notifications](notifications.html):** Notify users about successful task completion, any errors, and provide instructions to help them correct mistakes.
 
-- **[Multi-Page Forms](multi-page.html):** Divide long forms into multiple smaller forms that constitute a series of logical steps or stages and inform users about their progress.
+- **[Multi-Page Forms](multi-page.html):** Divide long forms into multiple smaller forms that constitute a series of logical steps or stages, and inform users about their progress.
 
 - **[Custom Controls](custom-controls.html):** Use stylized form elements and other progressive enhancement techniques to provide custom controls.
 
