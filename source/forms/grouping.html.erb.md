@@ -10,19 +10,21 @@ wcag_techniques:
   - H85
 ---
 
-Grouping related form controls makes forms more understandable for all users as related fields are easier to identify. Such Groups can be processed individually instead of processing the complete form at once. The grouping needs to be carried out visually and in the code, for example by using the `<fieldset>` and `<legend>` elements to associate related form controls. Also, related data in a `<select>` element can be grouped using `<optgroup>`.
+Grouping related form controls makes forms more understandable for all users, as related controls are easier to identify. It also makes it easier for people to focus on smaller and more manageable groups rather than try to grasp the entire form at once.
+
+Grouping needs to be carried out visually and in the code, for example by using the `<fieldset>` and `<legend>` elements to associate related form controls. Also, related entries of a `<select>` element can be grouped using `<optgroup>`.
 
 ## Associating related controls with `fieldset`
 {:.ap}
 
-The `<fieldset>` element provides a container for related form elements, and the `<legend>` element acts like a heading to identify the group.
+The `<fieldset>` element provides a container for related form controls, and the `<legend>` element acts like a heading to identify the group.
 
 The legend for a group of controls can also highlight common attributes of all controls, for example state the fact that all fields in the group are required.
 
 ### … to group checkboxes
 {:.ex.inap}
 
-In the example below there are three checkboxes that are all part of an opt-in function for receiving different types of information.
+In the example below, there are three checkboxes that are all part of an opt-in function for receiving different types of information.
 
 {::nomarkdown}
 <%= sample_start %>
@@ -65,7 +67,7 @@ In the example below there are three checkboxes that are all part of an opt-in f
 ### … to group related fields
 {:.ex.inap}
 
-This example shows form fields to enter shipping and invoice addresses. As the labels in both groups have the same text, a `fieldset` is added to indicate which fields belong together.
+This example shows form fields to enter shipping and invoice addresses. As the labels in both groups have the same text, the `fieldset` element also helps to distinguish the form fields by their groups.
 
 {::nomarkdown}
 <%= sample_start %>
@@ -243,9 +245,9 @@ This technique provides additional styling possibilities.
 <%= code_end %>
 {:/nomarkdown}
 
-## Group items in `select` elements
+## Grouping items in `select` elements
 
-For `select` elements with groups of options, the `optgroup` element can be used to indicate such groups. `Optgroup`’s `label` attribute is used to label the group. This is especially useful for lists with many options. In the example below, the user can chose from a lectures in one of three courses.
+For `select` elements with groups of options, the `optgroup` element can be used to indicate such groups. The `label` attribute of the `optgroup` element is used to provide a label for the group. This is especially useful for lists with many related options. In the example below, users can chose from lectures in one of three courses.
 
 {::nomarkdown}
 <%= sample_start %>
