@@ -211,7 +211,7 @@
 
 		var sharebox = document.createElement('div');
 		addclass(sharebox, 'sharebox');
-		var shareboxtext = '<p><label>Copy the link to this section:<input type="url" value="%s" readonly> <span><kbd>ctrl</kbd> + <kbd>C</kbd>/<kbd>⌘</kbd><kbd>C</kbd></span></label></p><p><a href="mailto:?subject=Web%20Accessibility%20Tutorials&body=Hi!%0AThis%20section%20of%20W3C’s%20Web%20Accessibility%20Tutorials%20could%20be%20of%20interest%20for%20you:%0A%0A%s">Email a link to this section</a><button>Close</button></p>';
+		var shareboxtext = '<p><label>Link to this section:<input type="url" value="%s" readonly> <span>Shortcut to copy the link: <kbd>ctrl</kbd> + <kbd>C</kbd>/<kbd>⌘</kbd><kbd>C</kbd></span></label></p><p><a href="mailto:?subject=Web%20Accessibility%20Tutorials&body=Hi!%0AYou%20might%20be%20interested%20in%20this%20section%20of%20W3C%20WAI%E2%80%99s%20Web%20Accessibility%20Tutorials%3A%0A%0A%s">Email a link to this section</a><button>Close</button></p>';
 
 		var url = window.location.origin + window.location.pathname;
 
