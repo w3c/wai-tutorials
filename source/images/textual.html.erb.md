@@ -231,17 +231,17 @@ Math expressions are often displayed as images because of the difficulty of pres
 Images of math expressions should only be used in *exceptional circumstances* – for example, when the expression is an exception to the normal content for the page or website. The preferred method for displaying math expressions is MathML, which can present math semantically.
 
 <aside class="annotation">
-	<h4 class="annotation-header">Browser Limitations and MathML</h4>
+	<h4 class="annotation-header">Web Browsers and MathML</h4>
 	<div class="annotation-content">
-		<p>Most browsers need plugins to render MathML correctly – especially for the new MathML 3.0 features used in this example. To see the MathML example below, <a href="https://addons.mozilla.org/en-US/firefox/addon/mathml-mml3ff/">this Firefox plugin</a> may be needed.</p>
-		<p>Libraries that polyfill MathML for all browsers, like <a href="http://www.mathjax.org">MathJax</a>, provide support for some <a href="http://www.mathjax.org/resources/articles-and-presentations/accessible-pages-with-mathjax/">accessibility features</a>.</p>
+		<p>Most web browsers need plugins to render MathML correctly – especially for the new MathML 3.0 features used in this example. To see the MathML example below, <a href="https://addons.mozilla.org/en-US/firefox/addon/mathml-mml3ff/">this Firefox plugin</a> may be needed.</p>
+		<p>Libraries that polyfill MathML for web browsers, like <a href="http://www.mathjax.org">MathJax</a>, sometimes provide support for some <a href="http://www.mathjax.org/resources/articles-and-presentations/accessible-pages-with-mathjax/">accessibility features</a>.</p>
 		<p>Find more information about the state of MathML <a href="https://trac.webkit.org/wiki/MathML">in Webkit-based</a> and <a href="https://developer.mozilla.org/en-US/docs/Mozilla/MathML_Project/Status">in Mozilla-based browsers</a>.</p>
 	</div>
 </aside>
 
-If math forms are a substantial part of the page or website content (for example, online maths courses), [MathML](http://www.w3.org/Math/) should be used instead. MathML represents both presentation and content semantically, making it more accessible to a wider range of users. Many assistive technologies can interpret the code.
+If math forms are a substantial part of the content (for example, for online maths courses), [MathML](http://www.w3.org/Math/) should be used instead. MathML represents both presentation and content semantically, making it more accessible to a wider range of users. Many assistive technologies can interpret the code.
 
-The simple example above illustrates the difficulty of describing both the content and presentation (the position and location of the over-line representing recurrence) in mathematical expressions succinctly and clearly. For more complex expressions or equations, text alternatives for images are unlikely to provide sufficient detail succinctly. MathML helps provide such semantics within the code rather than as text.
+The simple example below illustrates the difficulty of describing both the content and presentation in mathematical expressions succinctly and clearly. Specifically, it is cumbersome to describe the position and location of the over-line representing recurrence, though it is important for some classroom settings. For more complex expressions or equations, text alternatives for images are unlikely to provide sufficient detail succinctly. MathML helps provide such semantics within the code rather than as text.
 
 {::nomarkdown}
 <%= sample_start %>
