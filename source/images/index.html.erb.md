@@ -23,7 +23,7 @@ support: <strong>Developed with support</strong> from the <a href="http://www.w3
 
 Images must have text alternatives that describe the information or function represented in the images. This ensures that images can be used by [people with various disabilities](#why-is-this-important). This tutorial demonstrates how to provide appropriate text alternatives based on the purpose of the image:
 
--   **[Informative images](informative.html)**: Images that graphically illustrate concepts and information, typically pictures and illustrations. The text alternative should be at least a short description conveying the essential information presented by the image.
+-   **[Informative images](informative.html)**: Images that graphically represent concepts and information, typically pictures, photos and illustrations. The text alternative should be at least a short description conveying the essential information presented by the image.
 
 -   **[Decorative images](decorative.html)**: If the only purpose of an image is to add visual interest to the page, rather than to convey information that is important to understanding the page, the text alternative should be null (`alt=""`).
 
