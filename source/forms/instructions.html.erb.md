@@ -44,7 +44,7 @@ In the example below, form instructions indicate how required fields are marked,
 ## In-line instructions
 {:.newex}
 
-In addition overall instructions, it is also important to provide relevant instructions within the labels of the form controls. For example, indicate required input fields and data formats in the text of the labels.
+In addition to overall instructions, it is also important to provide relevant instructions within the labels of the form controls. For example, indicate required input fields and data formats in the text of the labels.
 
 ### Providing instructions within labels
 {:.newex}
