@@ -93,7 +93,7 @@ If the long description is published within an HTML element on the same page as 
 <%= notes_start %>
 {:/nomarkdown}
 
-**Note:** The long description linked by 'longdesc' is reachable by all users in Firefox. There is an [official Chrome Extension](https://chrome.google.com/webstore/detail/long-descriptions-in-cont/ohbmencljkleiedahijfkagnmmhbilgp) that adds long description access. In other web browsers, 'longdesc' is only available to screen reader users at the moment. There is currently no support on mobile platforms.
+**Note:** The long description linked by `longdesc` is reachable by all users in Firefox. There is an [official Chrome Extension](https://chrome.google.com/webstore/detail/long-descriptions-in-cont/ohbmencljkleiedahijfkagnmmhbilgp) that adds long description access. In other web browsers, `longdesc` is only available to screen reader users at the moment. There is currently no support on mobile platforms.
 
 {::nomarkdown}
 <%= notes_end %>
