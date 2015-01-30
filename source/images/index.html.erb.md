@@ -43,7 +43,7 @@ For quick overview on deciding which category a specific image fits into, see th
 
 Images and graphics make content more pleasant and easier to understand for everyone, and in particular for people with cognitive and learning disabilities. They serve as cues that visually impaired people, who are using screen magnification, often use to orient themselves in the content.
 
-Screen reader users can also benefit from these cues and structure that images sometimes add to the content. Make sure that images are properly described with appropriate text alternatives to provide easy access to your content to as many people as possible.
+Screen reader users can also benefit from the cues and structure that images sometimes add to the content. Make sure that images are properly described with appropriate text alternatives to provide easy access to your content to as many people as possible.
 
 Images are used extensively on websites and can create major barriers when they are not accessible. Accessible images prove to be beneficial in many situations such as:
 
