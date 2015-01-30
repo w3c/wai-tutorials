@@ -41,7 +41,7 @@ For quick overview on deciding which category a specific image fits into, see th
 
 ## Why is this important?
 
-Images and graphics make content more pleasant and easier to understand for everyone, and in particular for people with cognitive and learning disabilities. They serve as cues that visually impaired people, who are using screen magnification, often use to orient themselves in the content.
+Images and graphics make content more pleasant and easier to understand for many people, and in particular for those with cognitive and learning disabilities. They serve as cues that visually impaired people, who are using screen magnification, often use to orient themselves in the content.
 
 Screen reader users can also benefit from the cues and structure that images sometimes add to the content. Make sure that images are properly described with appropriate text alternatives to provide easy access to your content to as many people as possible.
 
