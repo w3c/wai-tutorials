@@ -204,7 +204,7 @@ In the example below, the `pattern` attribute of the `input` element specifies a
 
 ## Be forgiving of different input formats
 
-Validation should aim to be as accommodating as possible of different forms of input for particular data types. For example, telephone numbers are written with different separators and digit groupings. Your form will be easier to use if it can interpret multiple notations. Also, it is helpful to be liberal with input. For example, postal codes don’t only consist of numbers depending on the country, so using and `input` of the type `number` can easily become a problem for many of your website users.
+Validation should aim to be as accommodating as possible of different forms of input for particular data types. For example, telephone numbers are written with different separators and digit groupings. Your form will be easier to use if it can interpret multiple notations. Also, it is helpful to be liberal with input. For example, postal codes aren't confined to just numbers in some countries, so using an `input` of the type `number` can easily become a problem for many of your website users.
 
 ## Client-side validation benefits
 
