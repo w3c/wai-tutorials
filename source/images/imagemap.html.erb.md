@@ -67,7 +67,7 @@ The following organizational chart is used to provide links to each director's h
 
 [Full code for Image map example](examples/imagemap.html)
 
-Browser implementation for image maps varies at the time of writing, see [this HTML bug](https://lists.w3.org/Archives/Public/public-html-bugzilla/2015Jan/0020.html). To accommodate for the different implementations, keep in mind to
+Browser implementation for image maps varies at the time of writing; see [this HTML bug](https://lists.w3.org/Archives/Public/public-html-bugzilla/2015Jan/0020.html). To accommodate for the different implementations, keep in mind to
 
 * use every image map only once. That means if multiple images with the same map are to be used, the map should be duplicated and have a different `id`s;
 * place the `<map>` element as a direct sibling to the image.
