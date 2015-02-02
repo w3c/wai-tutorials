@@ -31,7 +31,7 @@ Aside from technical considerations, users usually prefer simple and short forms
 
 ## A note on time limits
 
-If possible, forms should not be subject to a time limit to allow users to complete the form at their own pace. If a time limit needs to be in place, for example, for security reasons, the user should have the option to turn it off or extend it. This does not apply if the time limit is due to a live event, such as an auction or a game, or if the time to complete the form is essential for a valid submission.
+If possible, forms should not be subject to a time limit to allow users to complete the form at their own pace. If a time limit needs to be in place, for example for security reasons, the user should have the option to turn it off or extend it. This does not apply if the time limit is due to a live event, such as an auction or a game, or if the time to complete the form is essential for a valid submission.
 
 ## Why is this important?
 
