@@ -13,7 +13,7 @@ wcag_techniques:
   - G168
 ---
 
-In addition to providing instructions, validate user input to help users avoid mistakes. HTML5 defines a range of built-in functionality to validate common types of input, such as email addresses and dates. In some situations, like validating custom controls or to support legacy browsers, additional scripting may be necessary to validate user input.
+In addition to providing instructions, validate user input to help users avoid mistakes. HTML5 defines a range of built-in functionality to validate common types of input, such as email addresses and dates. In some situations, such as validating custom controls or supporting legacy browsers, additional scripting may be necessary to validate user input.
 
 Custom validation needs to notify users in an accessible way as described in the [User Notifications](notifications.html) part of this tutorial. Client-side validation is not a security feature, and data needs to be validated on the server-side as well.
 
