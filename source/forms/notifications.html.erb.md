@@ -83,11 +83,11 @@ It is often useful to also use the `<title>` element of the web page to indicate
 ### Using a dialog
 {:.ex}
 
-Dialogs are a pretty prominent way to inform users of changes that can be used if other means of informing the user prove to be easily missed. They are much more obtrusive and distracting which may be the desired effect.
+Dialogs are a prominent way to notify users if other means of notification prove to be easily missed. They are much more obtrusive and distracting which may be the desired effect.
 
-JavaScript provides a very basic alert dialog boxes that provide proper keyboard navigation and respect the user’s default settings, including font size, colors, and language. An custom dialog implementation would need to match that functionality.
+JavaScript provides a very basic alert dialog box that provides proper keyboard navigation and respects the user’s default settings, including font size, colors, and language. An custom dialog implementation would need to match that functionality.
 
-The (very basic) example below shows a pop-up that is displayed when the user activates the “save” button. A message is displayed in a dialog box, and the web page is disabled until the user selects “OK”.
+The basic example below shows a pop-up that is displayed when the user activates the “save” button. A message is displayed in the dialog box, and the web page is disabled until the user selects “OK”.
 
 {::nomarkdown}
 <%= sample_start %>
