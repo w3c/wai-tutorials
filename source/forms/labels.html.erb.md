@@ -26,7 +26,7 @@ Provide labels to identify all form controls, including text fields, checkboxes,
 
 Labels need to describe the purpose of the form control. This section of the tutorial describes how to provide labels that are properly associated with form controls. Later sections explain how to provide [instructions](instructions.html), [validate user input](validation.html), and [provide feedback](notifications.html) to help users complete your form.
 
-A label and a form control need to be associated with each other either implicitly or explicitly. This allows web browsers to use the label as a larger clickable area, for example to select or activate the control. It also ensures that assistive technology is able to refer to the correct label when presenting a form control.
+A label and a form control need to be associated with each other either implicitly or explicitly. Web browsers will provide the label as a larger clickable area, for example to select or activate the control. It also ensures that assistive technology is able to refer to the correct label when presenting a form control.
 
 ## Associating labels explicitly
 {:.newap}
