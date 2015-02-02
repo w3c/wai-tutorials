@@ -80,7 +80,7 @@ In the example below, the required format for the “Expiry Date” is indicated
 ### Providing instructions outside labels
 {:.newex}
 
-Providing instructions outside labels allows more flexible positioning and design but sometimes it can be missed. It is also not supported by (older) web browsers and assistive technologies that don’t implement WAI-ARIA.
+Providing instructions outside labels allows more flexible positioning and design but sometimes it can be missed. It is also not supported by some web browsers (typically older versions) and assistive technologies that don’t implement WAI-ARIA.
 
 #### Using `aria-labelledby`
 {:.ap}
