@@ -5,7 +5,7 @@ wcag_success_criteria:
 wcag_techniques:
 ---
 
-Sometimes form designs require something beyond what is achievable with a standard form control. In such cases it is possible to build added functionality or features on standard controls. Try to reuse HTML elements that do a subset of the functionality that the final control is intended to cover, and build from there. The following examples provide some general guidance on what to consider to ensure the additions are made accessible.
+Sometimes form designs require something beyond what is achievable with standard form controls. In such cases it is possible to build additional functionality and styling to standard controls. To ensure robustness, try to reuse HTML elements that do a subset of the functionality that the final control is intended to cover, and build from there. The following examples provide some general guidance on what to consider to ensure the additions are made accessible.
 
 For components where there is no adequate HTML element to built on, WAI-ARIA attributes can be useful to convey the functionality for people using assistive technologies.
 
