@@ -1,5 +1,5 @@
 ---
-title: Basic Tables
+title: Simple Tables
 order: 2
 technologies: HTML5
 wcag_techniques:
@@ -15,7 +15,7 @@ support: <strong>Developed with support</strong> from the <a href="http://www.w3
 
 When the content of a simple table is descriptive on its own, only a header row or column is needed to give the user an impression of the data in the table.
 
-If the table is larger or its content is more ambiguous, the `scope` attribute should be used to avoid confusion. See [Multi-directional Tables](multi-directional.html) for more guidance on such tables.
+If the table has both column and row headings, the `scope` attribute should be used to avoid confusion. See [Regular Tables](regular.html) for more guidance on such tables.
 
 ## Table with header cells in the top row only
 {:.ex}

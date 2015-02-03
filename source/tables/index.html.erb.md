@@ -23,9 +23,9 @@ To make tables accessible, header cells must be marked up with `<th>`, and data 
 
 This tutorial shows you how to apply appropriate structural markup to tables. It includes the following pages:
 
--   **[Basic Tables![](img-simple.png)](basic.html)**  typically have one header row and/or one header column: For simple tables with content that is easy to distinguish, mark up header cells with `<th>` and data cells with `<td>` elements.
+-   **[Simple Tables![](img-simple.png)](simple.html)**  have one header row or one header column: For simple tables with content that is easy to distinguish, mark up header cells with `<th>` and data cells with `<td>` elements.
 
--   **[Multi-directional Tables![](img-multidir.png)](multi-directional.html)** usually have headers for rows and columns: For tables with unclear header directions, define the direction of each header by setting the `scope` attribute to `col` or `row`.
+-   **[Regular Tables![](img-multidir.png)](regular.html)** have headers for rows and columns: For tables with unclear header directions, define the direction of each header by setting the `scope` attribute to `col` or `row`.
 
 -   **[Irregular Tables![](img-irreg.png)](irregular.html):** For tables where header cells span multiple rows or columns, define column and row groups and set the range of the header cells using the `colgroup` and `rowgroup` values of the `scope` attribute.
 
