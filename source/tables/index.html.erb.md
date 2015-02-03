@@ -11,7 +11,7 @@ editors:
   - Eric Eggert: "http://w3.org/People/yatil/"
   - Shadi Abou-Zahra: "http://w3.org/People/shadi/"
 contributors:
-  - Anna Bell Leiserson
+  - Anna Belle Leiserson
   - Shawn Lawton Henry: http://www.w3.org/People/Shawn/
   - Sharron Rush
   - the Education and Outreach Working Group (<a href="http://www.w3.org/WAI/EO/">EOWG</a>)

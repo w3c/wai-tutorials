@@ -2,15 +2,15 @@
 title: Functional Images
 technologies: HTML5
 wcag_techniques:
-  - H37
-  - H36
+	- H37
+	- H36
 order: 4
 editors:
-  - Eric Eggert: "http://w3.org/People/yatil/"
-  - Shadi Abou-Zahra: "http://w3.org/People/shadi/"
+	- Eric Eggert: "http://w3.org/People/yatil/"
+	- Shadi Abou-Zahra: "http://w3.org/People/shadi/"
 contributors:
-  - Anna Bell Leiserson
-  - the Education and Outreach Working Group (<a href="http://www.w3.org/WAI/EO/">EOWG</a>)
+	- Anna Belle Leiserson
+	- the Education and Outreach Working Group (<a href="http://www.w3.org/WAI/EO/">EOWG</a>)
 support: <strong>Developed with support</strong> from the <a href="http://www.w3.org/WAI/ACT/">WAI-ACT</a> project, co-funded by the European Commission <abbr title="Information Society Technologies">IST</abbr> Programme.
 ---
 
@@ -166,11 +166,11 @@ The following image is used to give the button a distinct style. In this case it
 {:/nomarkdown}
 
 <form action="#" method="post">
-  <p>
-    <label for="search" style="vertical-align: middle; display:inline-block;">Search:</label>
-    <input name="search" id="search" type="text" style="vertical-align: middle; display:inline-block;">
-    <input name="submit" src="../../img/searchbutton.png" alt="Search" type="image" style="vertical-align: middle; display:inline-block;">
-  </p>
+	<p>
+		<label for="search" style="vertical-align: middle; display:inline-block;">Search:</label>
+		<input name="search" id="search" type="text" style="vertical-align: middle; display:inline-block;">
+		<input name="submit" src="../../img/searchbutton.png" alt="Search" type="image" style="vertical-align: middle; display:inline-block;">
+	</p>
 </form>
 
 {::nomarkdown}
