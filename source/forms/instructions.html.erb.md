@@ -85,7 +85,7 @@ Providing instructions outside labels allows more flexible positioning and desig
 #### Using `aria-labelledby`
 {:.ap}
 
-One approach is to use the WAI-ARIA `aria-labelledby` attribute to associate instructions with form controls. At the time of writing this tutorial, this approach is not fully supported by all web browsers and assistive technologies, especially by non-screen readers. To ensure backward compatibility, the `for` and `id` attributes are used in this example.
+One approach is to use the WAI-ARIA `aria-labelledby` attribute to associate instructions with form controls. At the time of writing this tutorial, this approach is not fully supported by all web browsers and assistive technologies, for example Braille displays. To ensure backward compatibility, the `for` and `id` attributes are used in this example.
 
 {::nomarkdown}
 <%= sample_start %>
