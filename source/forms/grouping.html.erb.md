@@ -97,26 +97,26 @@ This example shows form fields to enter shipping and invoice addresses. As the l
 			</div>
 	</fieldset>
 	<fieldset style="float:left;">
-		<legend>Invoice Address:</legend>
+		<legend>Billing Address:</legend>
 		<div>
-			<label for="invoice_name">Name:</label><br>
-			<input type="text" name="invoice_name" id="invoice_name">
+			<label for="billing_name">Name:</label><br>
+			<input type="text" name="billing_name" id="billing_name">
 		</div>
 		<div>
-			<label for="invoice_street">Street:</label><br>
-			<input type="text" name="invoice_street" id="invoice_street">
+			<label for="billing_street">Street:</label><br>
+			<input type="text" name="billing_street" id="billing_street">
 		</div>
 		<div>
-			<label for="invoice_number">Number:</label><br>
-			<input type="text" name="invoice_number" id="invoice_number">
+			<label for="billing_number">Number:</label><br>
+			<input type="text" name="billing_number" id="billing_number">
 		</div>
 		<div>
-			<label for="invoice_city">City:</label><br>
-			<input type="text" name="invoice_city" id="invoice_city">
+			<label for="billing_city">City:</label><br>
+			<input type="text" name="billing_city" id="billing_city">
 		</div>
 		<div>
-			<label for="invoice_zip">ZIP code:</label><br>
-			<input type="text" name="invoice_zip" id="invoice_zip">
+			<label for="billing_zip">ZIP code:</label><br>
+			<input type="text" name="billing_zip" id="billing_zip">
 		</div>
 	</fieldset>
 </form>
@@ -138,10 +138,10 @@ This example shows form fields to enter shipping and invoice addresses. As the l
 	[…]
 </fieldset>
 <fieldset>
-	<legend>Invoice Address:</legend>
+	<legend>Billing Address:</legend>
 	<div>
-		<label for="invoice_name">Name:</label><br>
-		<input type="text" name="invoice_name" id="invoice_name">
+		<label for="billing_name">Name:</label><br>
+		<input type="text" name="billing_name" id="billing_name">
 	</div>
 	[…]
 </fieldset>
