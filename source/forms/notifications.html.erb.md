@@ -83,7 +83,7 @@ It is often useful to also use the `<title>` element of the web page to indicate
 ### Using a dialog
 {:.ex}
 
-A dialogs is a moderately prominent way to inform users of changes. It can be used if other means of informing the user prove to be easily missed. They are much more obtrusive and distracting which may be the desired effect.
+A dialog is a moderately prominent way to inform users of changes. It can be used if other means of informing the user prove to be easily missed. They are much more obtrusive and distracting which may be the desired effect.
 
 JavaScript provides a very basic alert dialog box that provides proper keyboard navigation and respects the user’s default settings, including font size, colors, and language. A custom dialog implementation would need to match that functionality.
 
