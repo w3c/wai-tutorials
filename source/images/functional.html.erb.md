@@ -1,16 +1,16 @@
 ---
 title: Functional Images
 technologies: HTML5
-wcag_techniques:
-	- H37
-	- H36
 order: 4
+wcag_techniques:
+  - H37
+  - H36
 editors:
-	- Eric Eggert: "http://w3.org/People/yatil/"
-	- Shadi Abou-Zahra: "http://w3.org/People/shadi/"
+  - Eric Eggert: "http://w3.org/People/yatil/"
+  - Shadi Abou-Zahra: "http://w3.org/People/shadi/"
 contributors:
-	- Anna Belle Leiserson
-	- the Education and Outreach Working Group (<a href="http://www.w3.org/WAI/EO/">EOWG</a>)
+  - Anna Belle Leiserson
+  - the Education and Outreach Working Group (<a href="http://www.w3.org/WAI/EO/">EOWG</a>)
 support: <strong>Developed with support</strong> from the <a href="http://www.w3.org/WAI/ACT/">WAI-ACT</a> project, co-funded by the European Commission <abbr title="Information Society Technologies">IST</abbr> Programme.
 ---
 
@@ -39,7 +39,7 @@ The following image is the only content of a link that leads to the W3C homepage
 
 ~~~ html
 <a href="http://www.w3.org/">
-	<img src="w3c.png" alt="W3C home">
+  <img src="w3c.png" alt="W3C home">
 </a>
 ~~~
 
@@ -80,7 +80,7 @@ In this example the W3C logo is used to supplement text within a link that leads
 
 ~~~ html
 <a href="http://www.w3.org/">
-	<img src="w3c.png" alt=""> W3C Home
+  <img src="w3c.png" alt=""> W3C Home
 </a>
 ~~~
 
@@ -109,7 +109,7 @@ In this example the image follows text within a link to inform users that the li
 
 ~~~ html
 <a href="http://www.w3.org/" target="_blank">
-	W3C Homepage <img src="new-window.png" alt="new window">
+  W3C Homepage <img src="new-window.png" alt="new window">
 </a>
 ~~~
 
@@ -148,7 +148,7 @@ The following image is an icon representing a printer to denote print functional
 
 ~~~ html
 <a href="javascript:print()">
-	<img src="print.png" alt="Print this page">
+  <img src="print.png" alt="Print this page">
 </a>
 ~~~
 
@@ -166,11 +166,11 @@ The following image is used to give the button a distinct style. In this case it
 {:/nomarkdown}
 
 <form action="#" method="post">
-	<p>
-		<label for="search" style="vertical-align: middle; display:inline-block;">Search:</label>
-		<input name="search" id="search" type="text" style="vertical-align: middle; display:inline-block;">
-		<input name="submit" src="../../img/searchbutton.png" alt="Search" type="image" style="vertical-align: middle; display:inline-block;">
-	</p>
+  <p>
+    <label for="search" style="vertical-align: middle; display:inline-block;">Search:</label>
+    <input name="search" id="search" type="text" style="vertical-align: middle; display:inline-block;">
+    <input name="submit" src="../../img/searchbutton.png" alt="Search" type="image" style="vertical-align: middle; display:inline-block;">
+  </p>
 </form>
 
 {::nomarkdown}
