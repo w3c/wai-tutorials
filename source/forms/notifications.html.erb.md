@@ -164,12 +164,12 @@ When errors occur, it is helpful to list them at the top of the page, before the
 <ul>
 	<li>
 		<a href="#firstname">
-			The First name field is empty, it is a required field and must be filled in.
+			The First name field is empty; it is a required field and must be filled in.
 		</a>
 	</li>
 	<li>
 		<a href="#birthdate">
-			The Date field is in the wrong format, it should be similar to 17/09/2013 (use a / to separate day, month, and year).
+			The Date field is in the wrong format; it should be similar to 17/09/2013 (use a / to separate day, month, and year).
 		</a>
 	</li>
 </ul>
