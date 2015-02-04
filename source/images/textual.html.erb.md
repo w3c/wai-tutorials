@@ -200,7 +200,7 @@ The following image is the logo for the Web Accessibility Initiative. It’s not
 ## Image of a mathematical expression
 {:.ex}
 
-Math expressions are often displayed as images because of the difficulty of presenting equations and special math symbols with HTML. The image below displays a recurring decimal number (decimal numbers that never end). The `alt` text for this recurring number is “0.3333 recurring”. (In the image, the recurrence is indicated by a line over the ‘3’ in the fourth decimal place)”. In this particular example the way that the recurrence is shown is important, so it is equally described in the text alternative. As with all images, the author is in the best position to determine what information is intended to be conveyed by the image and construct the text alternative accordingly.
+Math expressions are often displayed as images because of the difficulty of presenting equations and special math symbols with HTML. The image below displays a recurring decimal number (decimal numbers that never end). The `alt` text for this recurring number is “0.3333 recurring”. (In the image, the recurrence is indicated by a line over the ‘3’ in the fourth decimal place.) In this particular example the way that the recurrence is shown is important, so it is equally described in the text alternative. As with all images, the author is in the best position to determine what information is intended to be conveyed by the image and construct the text alternative accordingly.
 
 {::nomarkdown}
 <%= sample_start %>
