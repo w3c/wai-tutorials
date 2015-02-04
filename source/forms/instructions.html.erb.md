@@ -19,7 +19,7 @@ wcag_techniques:
 
 Provide instructions to help users understand how to complete the form and individual form controls. This includes indicating any required and optional input, data formats, and other important information.
 
-**Important:** Screen readers often switch to “Forms Mode” when they are processing content within a `<form>` element. In this mode they usually only read aloud form elements such as `<input>`, `<select>`, `<textarea>`, `<legend>`, and `<label>`. It is critical to include form instructions in ways so they can be read aloud.
+**Important:** Screen readers often switch to “Forms Mode” when they are processing content within a `<form>` element. In this mode they usually only read aloud form elements such as `<input>`, `<select>`, `<textarea>`, `<legend>`, and `<label>`. It is critical to include form instructions in ways that can be read aloud.
 
 ## Overall instructions
 {:.newex}
