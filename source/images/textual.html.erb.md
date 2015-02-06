@@ -89,10 +89,10 @@ The visual effects in the above image can be produced using CSS3 and an embedded
 		letter-spacing: -1px;
 	}
 	.tagline span {
-		display: inline-block;
-		-webkit-transform: rotate(-10deg);
-	-ms-transform: rotate(-10deg);
-	transform: rotate(-10deg);
+    display: inline-block;
+    -webkit-transform: rotate(-10deg);
+    -ms-transform: rotate(-10deg);
+    transform: rotate(-10deg);
 	}
 </style>
 
@@ -152,7 +152,7 @@ The visual effects in the above image can be produced using CSS3 and an embedded
 <%= notes_start %>
 {:/nomarkdown}
 
-**Note:** The code snippet doesn’t show any [vendor prefixes](http://www.w3.org/TR/css-2010/#experimental). These should be added to increase compatibility with older versions of browsers.
+**Note:** The code snippet doesn’t show any [vendor prefixes](http://www.w3.org/TR/css-2010/#experimental). These can be added to increase compatibility with older versions of web browsers using their experimental implementation of CSS3 features.
 
 {::nomarkdown}
 <%= notes_end %>
