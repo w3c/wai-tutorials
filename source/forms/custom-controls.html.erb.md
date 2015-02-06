@@ -37,6 +37,10 @@ In addition, the `action` attribute of the `<form>` element references a server-
 		background: #063;
 		border: 1px solid #063;
 	}
+	#share-btn[disabled]:hover,
+	#share-btn[disabled]:focus {
+		text-decoration: none;
+	}
 	#share-btn[disabled] .count {
 		color: #063;
 	}
@@ -220,7 +224,7 @@ The images of the stars are generated using <abbr title="Scalable Vector Graphic
 		color: #ff2d21;
 	}
 	#star_rating [type="submit"] {
-		float:none;
+		float: none;
 	}
 </style>
 
@@ -325,12 +329,15 @@ document.querySelector('#star_rating').addEventListener('submit', function(event
 	stroke: currentColor;
 }
 #star_rating label, #star_rating output {
-	display:block;
-	float:left;
+	display: block;
+	float: left;
 	font-size: 2em;
 	height: 1.2em;
 	color: #036;
 	cursor: pointer;
+	/* Transparent border-bottom avoids jumping
+	   when a colored border is applied
+		 on :hover/:focus */
 	border-bottom: 2px solid transparent;
 }
 #star_rating output {
@@ -363,7 +370,7 @@ document.querySelector('#star_rating').addEventListener('submit', function(event
 	color: #ff2d21;
 }
 #star_rating [type="submit"] {
-	float:none;
+	float: none;
 }
 ~~~
 
@@ -377,7 +384,6 @@ document.querySelector('#star_rating').addEventListener('submit', function(event
 
 ~~~ js
 var radios = document.querySelectorAll('#star_rating input[type=radio]');
-var btn = document.querySelector('#star_rating button');
 var output = document.querySelector('#star_rating output');
 
 var do_something = function(stars) {
