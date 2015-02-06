@@ -427,6 +427,16 @@ document.getElementById('username').addEventListener('keyup', function(){
 The example below illustrates a range of possible types of feedback in addition to success and error messages. In the example, the strength of the password is checked as it is typed by the user. The feedback indicates a scale of how strong the password is. The feedback is indicated using several cues, including color coding, a barometer, and label “Weak”, “Okay”, and “Strong”, as well as the time that would be needed to crack the password.
 
 {::nomarkdown}
+<%= notes_start %>
+{:/nomarkdown}
+
+The password is shown in plain text for demonstration purposes.
+
+{::nomarkdown}
+<%= notes_end %>
+{:/nomarkdown}
+
+{::nomarkdown}
 <%= sample_start %>
 
 <form method="post" action="#">
@@ -464,16 +474,16 @@ document.getElementById('ex2_password').addEventListener('keyup',
 			meter.style.width = (pw.score+1) * 25 + 'px';
 			if (pw.score == 0) {
 				meter.style.backgroundColor = 'red';
-				msg.innerHTML = '<strong>Weak:</strong> Cracked instantly';
+				msg.innerHTML = '<strong>Really Weak</strong> Password';
 			} else if (pw.score < 3) {
 				meter.style.backgroundColor = 'red';
-				msg.innerHTML = '<strong>Weak:</strong> Cracked in ' + pw.crack_time_display;
+				msg.innerHTML = '<strong>Weak</strong> Password (cracked in ' + pw.crack_time_display + ')';
 			} else if (pw.score == 3) {
 				meter.style.backgroundColor = 'yellow';
-				msg.innerHTML = '<strong>Okay:</strong> Cracked in ' + pw.crack_time_display;
+				msg.innerHTML = '<strong>Good</strong> Password (cracked in ' + pw.crack_time_display + ')';
 			} else {
 				meter.style.backgroundColor = 'green';
-				msg.innerHTML = '<strong>Strong:</strong> Cracked in ' + pw.crack_time_display;
+				msg.innerHTML = '<strong>Strong</strong> Password (cracked in ' + pw.crack_time_display + ')';
 			}
 			if (this.value == "") {
 				meter.style.backgroundColor = 'gray';
