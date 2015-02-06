@@ -86,7 +86,7 @@ In the example below, the search field is positioned directly beside the search 
 #### Hiding the label element
 {:.ap}
 
-In the example below, a `<label>` element is provided to identify a form control within the code, but it is visually hidden to avoid redundancy for people who don't need it.
+In the example below, a `<label>` element is provided to identify a form control within the code, but it is visually hidden to avoid redundancy for users who can derive the purpose from the other visual cues.
 
 {::nomarkdown}
 <%= code_start %>
