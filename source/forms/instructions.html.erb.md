@@ -155,7 +155,7 @@ By using `aria-describedby` to reference the format of the field, this informati
 
 Placeholder text provides instructions or an example of the required data format inside form fields that have not yet been edited by the user. Placeholder text is usually displayed with lower color contrast than text provided by users, and it disappears from form fields when users start entering text. If the placeholder text contains instructional information or examples, having it disappear can make it more difficult for users to check their responses prior to submitting the form.
 
-While placeholder text provides important guidance for many users, **placeholder text is not a replacement for labels**. Assistive technologies, such as screen readers, do not treat placeholder text as labels. Moreover, at the time of writing this tutorial, placeholder text is not broadly supported across assistive technologies.
+While placeholder text provides important guidance for many users, **placeholder text is not a replacement for labels**. Assistive technologies, such as screen readers, do not treat placeholder text as labels. Moreover, at the time of writing this tutorial, placeholder text is not broadly supported across assistive technologies and not displayed in older web browsers.
 
 Note: Section [Hidden labels](labels.html#hidden) of this tutorial describes how to hide information visually but keep it available to assistive technology. This same approach can be used to avoid redundancy of displaying both labels and placeholder text.
 
