@@ -34,7 +34,7 @@ Complex images can be hard to understand for a variety of users, such as people 
 ## Image containing substantial information
 {:.ex}
 
-This bar chart of website visitor statistics has a short description of “Bar chart showing monthly and total visitors for the first quarter 2014 for sites 1 to 3” provided through the alt attribute of the image. The long description provides detailed information, including scales, values, relationships and trends that are represented visually. For example, since the declining values for site 1, consistent values for site 2, and increasing values for site 3 are highlighted through the bar chart, this information must also be included in the [long text description](examples/2014-first-qtr.html).
+This bar chart of website visitor statistics has a short description of “Bar chart showing monthly and total visitors for the first quarter 2014 for sites 1 to 3” provided through the alt attribute of the image. The long description provides detailed information, including scales, values, relationships and trends that are represented visually. For example, since the declining values for site 1, consistent values for site 2, and increasing values for site 3 are highlighted through the bar chart, this information must also be included in the [long text description](examples/2014-first-qtr.html). This image is described using the [longdesc approach, described below](#image-containing-substantial-information).
 
 {::nomarkdown}
 <%= sample_start %>
