@@ -126,20 +126,20 @@ document.getElementById('password').addEventListener('keyup',
 						 b) yellow if the score = 3
 						 c) green if the score = 4
 
-				 (5) Change the text of the password message element accordingly. */
-			if (pw.score == 0) {
-				meter.style.backgroundColor = 'red';
-				msg.innerHTML = '<strong>Weak:</strong> Cracked instantly';
-			} else if (pw.score < 3) {
-				meter.style.backgroundColor = 'red';
-				msg.innerHTML = '<strong>Weak:</strong> Cracked in ' + pw.crack_time;
-			} else if (pw.score == 3) {
-				meter.style.backgroundColor = 'yellow';
-				msg.innerHTML = '<strong>Okay:</strong> Cracked in ' + pw.crack_time;
-			} else {
-				meter.style.backgroundColor = 'green';
-				msg.innerHTML = '<strong>Strong:</strong> Cracked in ' + pw.crack_time;
-			}
+				(5) Change the text of the password message element accordingly. */
+        if (pw.score == 0) {
+          meter.style.backgroundColor = 'red';
+          msg.innerHTML = '<strong>Really Weak</strong> Password';
+        } else if (pw.score < 3) {
+          meter.style.backgroundColor = 'red';
+          msg.innerHTML = '<strong>Weak</strong> Password (cracked in ' + pw.crack_time_display + ')';
+        } else if (pw.score == 3) {
+          meter.style.backgroundColor = 'yellow';
+          msg.innerHTML = '<strong>Good</strong> Password (cracked in ' + pw.crack_time_display + ')';
+        } else {
+          meter.style.backgroundColor = 'green';
+          msg.innerHTML = '<strong>Strong</strong> Password (cracked in ' + pw.crack_time_display + ')';
+        }
 
 			/* (6) If the input is empty, there is no text output
 						 and the color of the meter is set to gray. */
