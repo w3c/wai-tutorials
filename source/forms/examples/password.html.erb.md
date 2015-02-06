@@ -126,7 +126,7 @@ document.getElementById('password').addEventListener('keyup',
 						 b) yellow if the score = 3
 						 c) green if the score = 4
 
-				 (5) Change the text of the passwort message element accordingly. */
+				 (5) Change the text of the password message element accordingly. */
 			if (pw.score == 0) {
 				meter.style.backgroundColor = 'red';
 				msg.innerHTML = '<strong>Weak:</strong> Cracked instantly';
@@ -153,4 +153,3 @@ document.getElementById('password').addEventListener('keyup',
 {::nomarkdown}
 <%= code_end %>
 {:/nomarkdown}
-
