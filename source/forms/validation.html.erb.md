@@ -214,16 +214,6 @@ In general, validating input client-side results in a better user experience and
 
 Where possible, users should be able to check their own input and correct it if necessary. This is particularly important for actions that are permanent or otherwise critical, but also when data cannot be automatically checked. For example, providing users with the option to check the postal address that they provided can be useful before a purchase is completed.
 
-### Provide undo functionality
-
-Where possible, provide undo mechanisms for reversible actions. Examples include:
-
-* A Content Management System (CMS) has the ability to delete unwanted comments. Instead of deleting them right away, they are stored in a “trash” folder so that they can be restored.
-
-* A webmail application allows users to “undo” sending an email for a few seconds. This is useful if the user forgot to attach a file or sent the email to the wrong recipient.
-
-* A shopping website lets users cancel purchases up to 24 hours after the order is submitted. The website explains the policy, and includes a summary of the policy on the purchase receipt emailed to the user. After 24 hours, the purchase will be shipped to the user and can no longer be canceled.
-
 ### Require user confirmation
 
 Where possible, require user confirmation for irreversible actions, such as permanent deletion of data. Examples include:
@@ -233,3 +223,13 @@ Where possible, require user confirmation for irreversible actions, such as perm
 * A banking application requires users to confirm transfer transactions by selecting a checkbox labeled “I have checked that the amount I wish to transfer is correct”.
 
 * A shopping website displays a summary of the order, shipping address, and billing information that the user must confirm before the purchasing transaction is completed and the order is placed.
+
+### Provide undo functionality
+
+Where possible, provide undo mechanisms for reversible actions. Examples include:
+
+* A Content Management System (CMS) has the ability to delete unwanted comments. Instead of deleting them right away, they are stored in a “trash” folder so that they can be restored.
+
+* A webmail application allows users to “undo” sending an email for a few seconds. This is useful if the user forgot to attach a file or sent the email to the wrong recipient.
+
+* A shopping website lets users cancel purchases up to 24 hours after the order is submitted. The website explains the policy, and includes a summary of the policy on the purchase receipt emailed to the user. After 24 hours, the purchase will be shipped to the user and can no longer be canceled.
