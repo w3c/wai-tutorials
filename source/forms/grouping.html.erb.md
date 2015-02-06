@@ -67,16 +67,16 @@ In the example below, there are three checkboxes that are all part of an opt-in 
 ### … to group related fields
 {:.ex.inap}
 
-This example shows form fields to enter shipping and invoice addresses. As the labels in both groups have the same text, the `fieldset` element also helps to distinguish the form fields by their groups.
+This example shows form fields to enter shipping and invoice addresses. As the labels in both groups have the same text, the `fieldset` element also helps to distinguish the form fields by their groups. In case the `<legend>` is not read by screen readers (see note below), labels for the first form control in each group should include the group’s name. This name can be hidden visually.
 
 {::nomarkdown}
 <%= sample_start %>
 
 <form method="post" action="#">
-	<fieldset style="float:left;">
+	<fieldset style="float: left;">
 		<legend>Shipping Address:</legend>
 		<div>
-			<label for="shipping_name">Name:</label><br>
+			<label for="shipping_name"><span class="visuallyhidden">Shipping </span>Name:</label><br>
 			<input type="text" name="shipping_name" id="shipping_name">
 		</div>
 		<div>
@@ -96,10 +96,10 @@ This example shows form fields to enter shipping and invoice addresses. As the l
 			<input type="text" name="shipping_zip" id="shipping_zip">
 			</div>
 	</fieldset>
-	<fieldset style="float:left;">
+	<fieldset style="float: left;">
 		<legend>Billing Address:</legend>
 		<div>
-			<label for="billing_name">Name:</label><br>
+			<label for="billing_name"><span class="visuallyhidden">Billing </span>Name:</label><br>
 			<input type="text" name="billing_name" id="billing_name">
 		</div>
 		<div>
@@ -132,17 +132,29 @@ This example shows form fields to enter shipping and invoice addresses. As the l
 <fieldset>
 	<legend>Shipping Address:</legend>
 	<div>
-		<label for="shipping_name">Name:</label><br>
+		<label for="shipping_name">
+      <span class="visuallyhidden">Shipping </span>Name:
+    </label><br>
 		<input type="text" name="shipping_name" id="shipping_name">
 	</div>
+  <div>
+    <label for="shipping_street">Street:</label><br>
+    <input type="text" name="shipping_street" id="shipping_street">
+  </div>
 	[…]
 </fieldset>
 <fieldset>
 	<legend>Billing Address:</legend>
 	<div>
-		<label for="billing_name">Name:</label><br>
+		<label for="billing_name">
+      <span class="visuallyhidden">Billing </span>Name:
+    </label><br>
 		<input type="text" name="billing_name" id="billing_name">
 	</div>
+  <div>
+    <label for="billing_street">Street:</label><br>
+    <input type="text" name="billing_street" id="billing_street">
+  </div>
 	[…]
 </fieldset>
 ~~~
@@ -167,10 +179,10 @@ This technique provides additional styling possibilities.
 <%= sample_start %>
 
 <form method="post" action="#">
-	<div role="group" aria-labelledby="shipping_head" style="float:left; border: 1px solid #333; padding: 0 .5em .5em; margin-right: 1em;">
+	<div role="group" aria-labelledby="shipping_head" style="float: left; border: 1px solid #333; padding: 0 .5em .5em; margin-right: 1em;">
 		<div id="shipping_head" style="font-weight: bold; padding: .25em 0;">Shipping Address:</div>
 		<div>
-			<label for="aria_shipping_name">Name:</label><br>
+			<label for="aria_shipping_name"><span class="visuallyhidden">Shipping </span>Name:</label><br>
 			<input type="text" name="aria_shipping_name" id="aria_shipping_name">
 		</div>
 		<div>
@@ -190,33 +202,35 @@ This technique provides additional styling possibilities.
 			<input type="text" name="aria_shipping_zip" id="aria_shipping_zip">
 			</div>
 	</div>
-	<div role="group" aria-labelledby="invoice_head" style="float:left; border: 1px solid #333; padding:0 .5em .5em;">
-		<div id="invoice_head" style="font-weight: bold; padding: .25em 0;">Invoice Address:</div>
+	<div role="group" aria-labelledby="invoice_head" style="float: left; border: 1px solid #333; padding: 0 .5em .5em;">
+		<div id="invoice_head" style="font-weight: bold; padding: .25em 0;">Billing Address:</div>
 		<div>
-			<label for="aria_invoice_name">Name:</label><br>
-			<input type="text" name="aria_invoice_name" id="aria_invoice_name">
+			<label for="aria_billing_name"><span class="visuallyhidden">Billing </span>Name:</label><br>
+			<input type="text" name="aria_billing_name" id="aria_billing_name">
 		</div>
 		<div>
-			<label for="aria_invoice_street">Street:</label><br>
-			<input type="text" name="aria_invoice_street" id="aria_invoice_street">
+			<label for="aria_billing_street">Street:</label><br>
+			<input type="text" name="aria_billing_street" id="aria_billing_street">
 		</div>
 		<div>
-			<label for="aria_invoice_number">Number:</label><br>
-			<input type="text" name="aria_invoice_number" id="aria_invoice_number">
+			<label for="aria_billing_number">Number:</label><br>
+			<input type="text" name="aria_billing_number" id="aria_billing_number">
 		</div>
 		<div>
-			<label for="aria_invoice_city">City:</label><br>
-			<input type="text" name="aria_invoice_city" id="aria_invoice_city">
+			<label for="aria_billing_city">City:</label><br>
+			<input type="text" name="aria_billing_city" id="aria_billing_city">
 		</div>
 		<div>
-			<label for="aria_invoice_zip">ZIP code:</label><br>
-			<input type="text" name="aria_invoice_zip" id="aria_invoice_zip">
+			<label for="aria_billing_zip">ZIP code:</label><br>
+			<input type="text" name="aria_billing_zip" id="aria_billing_zip">
 		</div>
 	</div>
 </form>
 
 <%= sample_end %>
 {:/nomarkdown}
+
+Due to WAI-ARIA not available in some browsers and screen reader combinations, a group identifier should be added to the first form control in the group.
 
 {::nomarkdown}
 <%= code_start %>
@@ -226,16 +240,20 @@ This technique provides additional styling possibilities.
 <div role="group" aria-labelledby="shipping_head">
 	<div id="shipping_head">Shipping Address:</div>
 	<div>
-		<label for="shipping_name">Name:</label><br>
+		<label for="shipping_name">
+      <span class="visuallyhidden">Shipping </span>Name:
+    </label><br>
 		<input type="text" name="shipping_name" id="shipping_name">
 	</div>
 	[…]
 </div>
 <div role="group" aria-labelledby="invoice_head">
-	<div id="invoice_head">Invoice Address:</div>
+	<div id="invoice_head">Billing Address:</div>
 	<div>
-		<label for="invoice_name">Name:</label><br>
-		<input type="text" name="invoice_name" id="invoice_name">
+		<label for="billing_name">
+      <span class="visuallyhidden">Billing </span>Name:
+    </label><br>
+		<input type="text" name="billing_name" id="billing_name">
 	</div>
 	[…]
 </div>
