@@ -204,7 +204,6 @@
 		var plel = document.createElement('a');
 		//addclass(plel, 'permalink');
 		plel.innerHTML = '<svg class="icon" viewBox="0 0 1024 1024"><path d="M864 704c-45.16 0-85.92 18.738-115.012 48.83l-431.004-215.502c1.314-8.252 2.016-16.706 2.016-25.328s-0.702-17.076-2.016-25.326l431.004-215.502c29.092 30.090 69.852 48.828 115.012 48.828 88.366 0 160-71.634 160-160s-71.634-160-160-160-160 71.634-160 160c0 8.622 0.704 17.076 2.016 25.326l-431.004 215.504c-29.092-30.090-69.852-48.83-115.012-48.83-88.366 0-160 71.636-160 160 0 88.368 71.634 160 160 160 45.16 0 85.92-18.738 115.012-48.828l431.004 215.502c-1.312 8.25-2.016 16.704-2.016 25.326 0 88.368 71.634 160 160 160s160-71.632 160-160c0-88.364-71.634-160-160-160z"></path></svg> SHARE';
-		plel.setAttribute('title', "Permalink");
 
 		var plwrapdiv = document.createElement('div')
 		addclass(plwrapdiv, 'permalink');
@@ -220,6 +219,7 @@
 
 			var cplel = plel.cloneNode(true);
 			cplel.setAttribute('href', '#' + el.id);
+			cplel.setAttribute('aria-label', 'Share Link to the section “' + el.textContent + '”');
 
 			var csbtext = shareboxtext.replace("%s", url + '#' + el.id).replace("%s", url + '#' + el.id);
 			var csb = sharebox.cloneNode(true);
