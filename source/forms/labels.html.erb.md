@@ -51,7 +51,7 @@ Whenever possible, use the `label` element to explicitly associate text with for
 {:/nomarkdown}
 
 ~~~ html
-<label for="firstname">First name: </label>
+<label for="firstname">First name:</label>
 <input type="text" name="firstname" id="firstname"><br>
 
 <input type="checkbox" name="subscribe" id="subscribe">
@@ -204,18 +204,18 @@ In some situations, form controls cannot be labelled explicitly. For example, an
 
 ## Labelling buttons
 
-When using the `<input>` element to create buttons, the label is set in the `value` attribute of the element. A `<button>` element gives more flexibility as the label is set inside the element and can include markup, providing the possibility for more advanced accessibility hints.
+The label of a `<button>` element is set inside the element and can include markup. It allows to provide more advanced accessibility hints, like marking up language change. When using the `<input>` element to create buttons, the label is set in the `value` attribute of the element.
 
 {::nomarkdown}
 <%= code_start('', 'HTML') %>
 {:/nomarkdown}
 
 ~~~ html
-<input type="submit" value="Submit">
-<input type="button" value="Cancel">
-
 <button type="submit">Submit</button>
 <button type="button">Cancel</button>
+
+<input type="submit" value="Submit">
+<input type="button" value="Cancel">
 ~~~
 
 {::nomarkdown}
@@ -227,7 +227,7 @@ When using the `<input>` element to create buttons, the label is set in the `val
 {:/nomarkdown}
 
 **Note:** If the image button (`<input type="image">`) is used, the label is set in the `alt` attribute, for example:
-`<input type="image" src="searchbutton.png" alt="Search">`.
+`<input type="image" src="searchbutton.png" alt="Search">`, see [Informative Images](/images/functional.html#image-used-in-a-button).
 
 {::nomarkdown}
 <%= notes_end %>
