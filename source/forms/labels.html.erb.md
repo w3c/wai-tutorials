@@ -154,7 +154,9 @@ The `title` attribute can also be used to identify form control. This approach i
 
 #### Note on hiding elements
 
-Screen readers and other assistive technology, just as web browsers, hide elements from their users when they are styled using `display: none;` and `visibility: hidden;`. The common approach used to hide information visually but keep them available to screen reader and other assistive technology users, is by using CSS that will keep the information technically visible but practically hidden. For example, it is presented in a 1-by-1 pixel area with a 1-pixel margin. The CSS code used for the previous examples is provided below:
+Screen readers and other assistive technology, just as web browsers, hide elements from their users when they are styled using `display: none;` and `visibility: hidden;`.
+
+The common approach used to hide information visually but keep them available to screen reader and other assistive technology users, is by using CSS that will keep the information technically visible but practically hidden. For example, it is presented in a 1-by-1 pixel area with a 1-pixel margin. The CSS class `visuallyhidden` (**do not confuse** with CSS `visibility: hidden`) used for the previous examples is provided below:
 
 {::nomarkdown}
 <%= code_start %>
