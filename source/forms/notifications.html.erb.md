@@ -163,16 +163,31 @@ When errors occur, it is helpful to list them at the top of the page, before the
 <h4>There are 2 errors in this form</h4>
 <ul>
 	<li>
-		<a href="#firstname">
+		<a href="#firstname" id="firstname_error">
 			The First name field is empty; it is a required field and must be filled in.
 		</a>
 	</li>
 	<li>
-		<a href="#birthdate">
+		<a href="#birthdate" id="birthdate_error">
 			The Date field is in the wrong format; it should be similar to 17/09/2013 (use a / to separate day, month, and year).
 		</a>
 	</li>
 </ul>
+~~~
+
+{::nomarkdown}
+<%= code_end %>
+{:/nomarkdown}
+
+In addition, form fields can be associated with the corresponding error message using aria-describedby.
+
+{::nomarkdown}
+<%= code_start %>
+{:/nomarkdown}
+
+~~~ html
+<label for="firstname">First Name:</label>
+<input type="text" id="firstname" aria-describedby="firstname_error">
 ~~~
 
 {::nomarkdown}
