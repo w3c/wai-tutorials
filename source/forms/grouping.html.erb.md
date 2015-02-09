@@ -21,6 +21,54 @@ The `<fieldset>` element provides a container for related form controls, and the
 
 The legend for a group of controls can also highlight common attributes of all controls, for example state the fact that all fields in the group are required.
 
+### … to group radio buttons
+{:.ex.inap}
+
+In the example below, there are three radio buttons that allows the user to chose an output format. Radio button groups should always be grouped using `<fieldset>`.
+
+{::nomarkdown}
+<%= sample_start %>
+
+<form method="post" action="#">
+<fieldset>
+<legend>Output format</legend>
+  <div>
+    <input type="radio" name="format" id="txt" value="txt" checked> <label for="txt">Text file</label>
+  </div>
+  <div>
+    <input type="radio" name="format" id="csv" value="csv"> <label for="csv">CSV file</label>
+  </div>
+  <div>
+    <input type="radio" name="format" id="html" value="HTML"> <label for="html">HTML file</label>
+  </div>
+</fieldset>
+</form>
+<%= sample_end %>
+{:/nomarkdown}
+
+{::nomarkdown}
+<%= code_start %>
+{:/nomarkdown}
+
+~~~ html
+<fieldset>
+<legend>Output format</legend>
+  <div>
+    <input type="radio" name="format" id="txt" value="txt" checked>
+    <label for="txt">Text file</label>
+  </div>
+  <div>
+    <input type="radio" name="format" id="csv" value="csv">
+    <label for="csv">CSV file</label>
+  </div>
+  […]
+</fieldset>
+~~~
+
+{::nomarkdown}
+<%= code_end %>
+{:/nomarkdown}
+
 ### … to group checkboxes
 {:.ex.inap}
 
@@ -54,7 +102,8 @@ In the example below, there are three checkboxes that are all part of an opt-in 
 <fieldset>
 <legend>I want to receive</legend>
 	<div>
-		<input type="checkbox" name="newsletter" id="check_1"> <label for="check_1">The weekly newsletter</label>
+		<input type="checkbox" name="newsletter" id="check_1">
+    <label for="check_1">The weekly newsletter</label>
 	</div>
 	[…]
 </fieldset>
