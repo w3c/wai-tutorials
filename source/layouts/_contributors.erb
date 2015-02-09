@@ -12,7 +12,7 @@
 <% end %>
 
 <% if (current_page.data.contributors) %>
-  <strong>Contibutors:</strong>
+  <strong>Contributors:</strong>
   <ul class="inline">
     <% current_page.data.contributors.each do |f| %><li><% if f.is_a? String %><%=f%><% else %><% f.map do |key, value| %><a href="<%=value%>"><%=key%></a><% end %><% end %></li><% end %>
   </ul>
