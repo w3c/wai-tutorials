@@ -197,10 +197,15 @@ The following image is the logo for the Web Accessibility Initiative. It’s not
 <%= notes_end %>
 {:/nomarkdown}
 
-## Image of a mathematical expression
+## Mathematical expressions
 {:.ex}
 
-Math expressions are often displayed as images because of the difficulty of presenting equations and special math symbols with HTML. The image below displays a recurring decimal number (decimal numbers that never end). The `alt` text for this recurring number is “0.3333 recurring”. (In the image, the recurrence is indicated by a line over the ‘3’ in the fourth decimal place.) In this particular example the way that the recurrence is shown is important, so it is equally described in the text alternative. As with all images, the author is in the best position to determine what information is intended to be conveyed by the image and construct the text alternative accordingly.
+Historically, math expressions have often been presented as images because of the difficulty of presenting equations and special math symbols with HTML. However, MathML is emerging as the prefered presentation of accessible math on the web.
+
+### … using an image
+{:.ap}
+
+The image below displays a recurring decimal number (decimal numbers that never end). The `alt` text for this recurring number is “0.3333 recurring”. (In the image, the recurrence is indicated by a line over the ‘3’ in the fourth decimal place.) In this particular example the way that the recurrence is shown is important, so it is equally described in the text alternative. As with all images, the author is in the best position to determine what information is intended to be conveyed by the image and construct the text alternative accordingly.
 
 {::nomarkdown}
 <%= sample_start %>
@@ -226,7 +231,8 @@ Math expressions are often displayed as images because of the difficulty of pres
 <%= code_end %>
 {:/nomarkdown}
 
-### MathML
+### … using MathML
+{:.ap}
 
 Images of math expressions should only be used in *exceptional circumstances* – for example, when the expression is an exception to the normal content for the page or website. The preferred method for displaying math expressions is MathML, which can present math semantically.
 
