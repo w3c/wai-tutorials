@@ -40,7 +40,7 @@ This bar chart of website visitor statistics has a short description of “Bar c
 <%= sample_start %>
 {:/nomarkdown}
 
-<img src="../../img/chart.png" alt="Bar chart showing monthly and total visitors for the first quarter 2014 for sites 1 to 3" longdesc="../examples/2014-first-qtr/"> <a href="../examples/2014-first-qtr/">Image Description</a>
+<img src="../../img/chart.png" alt="Bar chart showing monthly and total visitors for the first quarter 2014 for sites 1 to 3" longdesc="../examples/2014-first-qtr/"><br><a href="../examples/2014-first-qtr/">Image Description</a>
 
 {::nomarkdown}
 <%= sample_end %>
@@ -51,7 +51,19 @@ From the approaches below, the first and second one make the information availab
 ### Providing a link to the long description via `longdesc`
 {:.ap}
 
-Here the `longdesc` attribute contains the URI of a page containing the long description.
+<aside class="annotation">
+  <h4 class="annotation-header"><span class="subhead">Accessibility Support:</span> <code>Longdesc</code>, Web Browsers, and Assistive Technologies</h4>
+  <div class="annotation-content">
+    <p>The long description linked by <code>longdesc</code> is reachable by all users in Firefox. There is an <a href="https://chrome.google.com/webstore/detail/long-descriptions-in-cont/ohbmencljkleiedahijfkagnmmhbilgp">official Chrome Extension</a> that adds long description access. In other web browsers, <code>longdesc</code> is only available to screen reader users at the moment. There is currently no support on mobile platforms.</p>
+    <p>No browser indicates the presence of the <code>longdesc</code> attribute visually.</p>
+  </div>
+</aside>
+
+The `longdesc` attribute can contain the URI of a page containing the long description, or an fragment identifier.
+
+`Longdesc` is used primarily if the content of the image needs to be described primarily to people that are unable to see the image. For example, an author might decide that it is necessary to go into greater details on the brush strokes or what meaning a certain color has, describing not only the content of the image but also details of the visual appearance. In the example above that would mean describing how the bar chart looks like.
+
+If the `longdesc` attributes refers to another page, it is recommended to also apply [Approach 3 (A text link to the long description adjacent to the image)](#a-text-link-to-the-long-description-adjacent-to-the-image) to make sure that the long description is visible to visual users and in browsers and assistive technologies that don’t fully support `longdesc`.
 
 {::nomarkdown}
 <%= code_start %>
@@ -62,13 +74,16 @@ Here the `longdesc` attribute contains the URI of a page containing the long des
 	src="chart.png"
 	alt="Bar chart showing monthly and total visitors for the first quarter 2014 for sites 1 to 3"
 	longdesc="2014-first-qtr.html">
+<a href="2014-first-qtr.html">Long Description</a>
 ~~~
 
 {::nomarkdown}
 <%= code_end %>
 {:/nomarkdown}
 
-If the long description is published within an HTML element on the same page as the image, the `longdesc` value can simply contain a fragment identifier (“hash link”) to the element containing the long description. This fragment identifier consists of an `#` and the value of the `id` attribute of the `longdesc` element.
+If the long description is published within an HTML element on the same page as the image, the `longdesc` value can simply contain a fragment identifier (“hash link”) to the element containing the long description. This fragment identifier consists of an `#` and the value of the `id` attribute of the long description element.
+
+Usually this approach doesn’t need an additional link, if the description is in close proximity to the image. If this isn’t the case a visible link helps users to find the long description.
 
 {::nomarkdown}
 <%= code_start %>
@@ -87,16 +102,6 @@ If the long description is published within an HTML element on the same page as 
 
 {::nomarkdown}
 <%= code_end %>
-{:/nomarkdown}
-
-{::nomarkdown}
-<%= notes_start %>
-{:/nomarkdown}
-
-**Note:** The long description linked by `longdesc` is reachable by all users in Firefox. There is an [official Chrome Extension](https://chrome.google.com/webstore/detail/long-descriptions-in-cont/ohbmencljkleiedahijfkagnmmhbilgp) that adds long description access. In other web browsers, `longdesc` is only available to screen reader users at the moment. There is currently no support on mobile platforms.
-
-{::nomarkdown}
-<%= notes_end %>
 {:/nomarkdown}
 
 ### Structurally associating image and long description with `aria-describedby`
