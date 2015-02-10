@@ -35,7 +35,7 @@ This tutorial shows you how to apply appropriate structural markup to tables. It
 -   **[Caption & Summary![](img-caption.png)](caption-summary.html):** A caption identifies the overall topic of a table and is useful in most situations. A summary provides orientation or navigation hints in complex tables.
 {:.withicons.nobullets}
 
-Some document formats other than HTML, such as PDF, may provide similar mechanisms to markup table structures. Word processing applications may also provide mechanisms to markup tables. Tables markup is often lost when converting from one format to another, though some programs may provide functionality to assist converting table markup.
+Some document formats other than HTML, such as PDF, provide similar mechanisms to markup table structures. Word processing applications may also provide mechanisms to markup tables. Tables markup is often lost when converting from one format to another, though some programs may provide functionality to assist converting table markup.
 
 Many web authoring tools and content management systems (CMS) provide functions to define header cells during table creation without having to manually edit the code.
 
