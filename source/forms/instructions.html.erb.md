@@ -157,7 +157,7 @@ Placeholder text provides instructions or an example of the required data format
 
 While placeholder text provides important guidance for many users, **placeholder text is not a replacement for labels**. Assistive technologies, such as screen readers, do not treat placeholder text as labels. Moreover, at the time of writing this tutorial, placeholder text is not broadly supported across assistive technologies and not displayed in older web browsers.
 
-Note: Section [Hidden labels](labels.html#hidden) of this tutorial describes how to hide information visually but keep it available to assistive technology. This same approach can be used to avoid redundancy of displaying both labels and placeholder text.
+Note: Section [Hidden labels](labels.html#hidden) of this tutorial describes how to hide information visually but keep it available to assistive technology. This same approach can be used to avoid visual redundancy of displaying both labels and placeholder text. Be aware that this makes it very hard for users to review the form. To avoid this problem JavaScript can be used to make a visual label appear visually (in the associated label element) above or beside the input that has focus.
 
 {::nomarkdown}
 <%= sample_start %>
