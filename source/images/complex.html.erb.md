@@ -29,7 +29,7 @@ There are use cases where a description of the composition of the image may also
 
 It is also good practice to refer to more complex images from the accompanying text to describe the overall data, for example: “The following graph shows that visitors were lost in the first quarter, but the numbers recovered in the second quarter”.
 
-Complex images can be hard to understand for a variety of users, such as people who have learning disabilities or who use screen magnification. Long descriptions benefit many people and it is good practice to make it available to everyone as part of the main content. Consider making the images less complex where possible.
+Complex images can be hard to understand for a variety of users, such as people who have learning disabilities or who use screen magnification. Long descriptions benefit many people and it is good practice to make it available to everyone as part of the main content. Consider making images less complex where possible to make them easier to understand for everyone.
 
 ## Image containing substantial information
 {:.ex}
