@@ -241,11 +241,11 @@ Images of math expressions should only be used in *exceptional circumstances* â€
 If math forms are a substantial part of the content (for example, for online maths courses), [MathML](http://www.w3.org/Math/) should be used instead. MathML represents both presentation and content semantically, making it potentially more accessible to a wider range of users.
 
 <aside class="annotation">
-	<h4 class="annotation-header">MathML, Web Browsers, and Assistive Technologies</h4>
+	<h4 class="annotation-header"><span class="subhead">Accessibility Support:</span> MathML, Web Browsers, and Assistive Technologies</h4>
 	<div class="annotation-content">
 		<p>Most web browsers need plugins to render MathML correctly â€“ especially for the new MathML 3.0 features used in this example. To see the MathML example below, <a href="https://addons.mozilla.org/en-US/firefox/addon/mathml-mml3ff/">this Firefox plugin</a> may be needed.</p>
-		<p>Libraries that polyfill MathML for web browsers, like <a href="http://www.mathjax.org">MathJax</a>, sometimes provide support for some <a href="http://www.mathjax.org/resources/articles-and-presentations/accessible-pages-with-mathjax/">accessibility features</a>.</p>
-    <p>Accessibility support for MathML varies, but continues to improve as web browsers and assistive technology evolve. It is important to evaluate MathML support before deciding what technique to use.</p>
+		<p>Some libraries that polyfill MathML for web browsers, like <a href="http://www.mathjax.org">MathJax</a>, provide support for <a href="http://www.mathjax.org/resources/articles-and-presentations/accessible-pages-with-mathjax/">accessibility features</a>.</p>
+    <p>Accessibility support for MathML varies, but continues to improve as web browsers and assistive technology evolve. It is important to evaluate MathML support before deciding which techniques to use.</p>
 		<p>Find more information about the state of MathML <a href="https://trac.webkit.org/wiki/MathML">in Webkit-based</a> and <a href="https://developer.mozilla.org/en-US/docs/Mozilla/MathML_Project/Status">in Mozilla-based browsers</a>.</p>
 	</div>
 </aside>

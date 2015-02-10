@@ -27,26 +27,26 @@ In these situations a two-part text alternative is required. The first part is t
 
 There are use cases where a description of the composition of the image may also be needed as part of the long description, for example if the composition is important to understand the image. This page shows several possible approaches that can be used to provide both short and long descriptions.
 
-Also it’s good practice to refer to more complex images from the accompanying text to describe the overall data, for example: “The following graph shows that visitors were lost in the first quarter, but the numbers recovered in the second quarter”.
+It is also good practice to refer to more complex images from the accompanying text to describe the overall data, for example: “The following graph shows that visitors were lost in the first quarter, but the numbers recovered in the second quarter”.
 
-Complex images can be hard to understand for a variety of users, such as people who have learning disabilities or who use screen magnification. Long descriptions can benefit those users as well, so the description should be made available not only for screen reader users, if possible.
+Complex images can be hard to understand for a variety of users, such as people who have learning disabilities or who use screen magnification. Long descriptions benefit many people and it is good practice to make it available to everyone as part of the main content. Consider making the images less complex where possible.
 
 ## Image containing substantial information
 {:.ex}
 
-This bar chart of website visitor statistics has a short description of “Bar chart showing monthly and total visitors for the first quarter 2014 for sites 1 to 3” provided through the alt attribute of the image. The long description provides detailed information, including scales, values, relationships and trends that are represented visually. For example, since the declining values for site 1, consistent values for site 2, and increasing values for site 3 are highlighted through the bar chart, this information must also be included in the [long text description](examples/2014-first-qtr.html). This image is described using the [longdesc approach, described below](#image-containing-substantial-information).
+This bar chart of website visitor statistics has a short description of “Bar chart showing monthly and total visitors for the first quarter 2014 for sites 1 to 3” provided through the `alt` attribute of the image. The long description provides detailed information, including scales, values, relationships and trends that are represented visually. For example, since the declining values for site 1, consistent values for site 2, and increasing values for site 3 are highlighted through the bar chart. The following example shows a complex image using the [longdesc approach, described below](#providing-a-link-to-the-long-description-via-longdesc).
 
 {::nomarkdown}
 <%= sample_start %>
 {:/nomarkdown}
 
-<img src="../../img/chart.png" alt="Bar chart showing monthly and total visitors for the first quarter 2014 for sites 1 to 3" longdesc="../examples/2014-first-qtr/">
+<img src="../../img/chart.png" alt="Bar chart showing monthly and total visitors for the first quarter 2014 for sites 1 to 3" longdesc="../examples/2014-first-qtr/"> <a href="../examples/2014-first-qtr/">Image Description</a>
 
 {::nomarkdown}
 <%= sample_end %>
 {:/nomarkdown}
 
-From the approaches below, only approach one and two provide a mechanism for automatic discovery of the description. Those mechanisms can help to implement an image search, for example.
+From the approaches below, the first and second one make the information available to other programs such as web browsers and search engines.
 
 ### Providing a link to the long description via `longdesc`
 {:.ap}
