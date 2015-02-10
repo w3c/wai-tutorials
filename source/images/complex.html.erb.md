@@ -54,7 +54,7 @@ From the approaches below, the first and second one make the information availab
 <aside class="annotation">
   <h4 class="annotation-header"><span class="subhead">Accessibility Support:</span> <code>Longdesc</code>, Web Browsers, and Assistive Technologies</h4>
   <div class="annotation-content">
-    <p>The long description linked by <code>longdesc</code> is reachable by all users in Firefox. There is an <a href="https://chrome.google.com/webstore/detail/long-descriptions-in-cont/ohbmencljkleiedahijfkagnmmhbilgp">official Chrome Extension</a> that adds long description access. In other web browsers, <code>longdesc</code> is only available to screen reader users at the moment. There is currently no support on mobile platforms.</p>
+    <p>The long description linked by <code>longdesc</code> is reachable by all users in Firefox. There is an <a href="https://chrome.google.com/webstore/detail/long-descriptions-in-cont/ohbmencljkleiedahijfkagnmmhbilgp">official Chrome Extension</a> that adds long description access. Safari has no support for <code>longdesc</code>. In other web browsers, <code>longdesc</code> is only available to screen reader users at the moment. There is currently no support on mobile platforms.</p>
     <p>No browser indicates the presence of the <code>longdesc</code> attribute visually.</p>
   </div>
 </aside>
