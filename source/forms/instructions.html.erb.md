@@ -85,7 +85,7 @@ Providing instructions outside labels allows more flexible positioning and desig
 #### Using `aria-labelledby`
 {:.ap}
 
-One approach is to use the WAI-ARIA `aria-labelledby` attribute to associate instructions with form controls. At the time of writing this tutorial, this approach is not fully supported by all web browsers and assistive technologies, for example Braille displays. To ensure backward compatibility, the `for` and `id` attributes are used in this example.
+One approach is to use the WAI-ARIA `aria-labelledby` attribute to associate instructions with form controls. At the time of writing this tutorial, this approach is not fully supported by all web browsers and assistive technologies, for example Braille displays. To ensure backward compatibility, the `for` and `id` attributes are also used in this example.
 
 {::nomarkdown}
 <%= sample_start %>
@@ -102,10 +102,10 @@ One approach is to use the WAI-ARIA `aria-labelledby` attribute to associate ins
 </style>
 <form method="post" action="#" id="ex3">
 	<div>
-		<label id="expLabel" for="expire4">Expiry date:</label>
+		<label id="expLabel" for="expire4" tabindex="-1">Expiry date:</label>
 		<span>
 			<input type="text" name="expire" id="expire4" aria-labelledby="expLabel expDesc2">
-			<span id="expDesc2">MM/YYYY</span>
+			<span id="expDesc2" tabindex="-1">MM/YYYY</span>
 		</span>
 	</div>
 </form>
@@ -118,15 +118,25 @@ One approach is to use the WAI-ARIA `aria-labelledby` attribute to associate ins
 {:/nomarkdown}
 
 ~~~ html
-<label id="expLabel" for="expire">Expiry date:</label>
+<label id="expLabel" for="expire" tabindex="-1">Expiry date:</label>
 <span>
 	<input type="text" name="expire" id="expire" aria-labelledby="expLabel expDesc">
-	<span id="expDesc">MM/YYYY</span>
+	<span id="expDesc" tabindex="-1">MM/YYYY</span>
 </span>
 ~~~
 
 {::nomarkdown}
 <%= code_end %>
+{:/nomarkdown}
+
+{::nomarkdown}
+<%= notes_start %>
+{:/nomarkdown}
+
+**Note:** At the time of writing those tutorials, it is necessary to add `tabindex="-1"` to elements that are referenced by `aria-labelledby` or `aria-describedby` if those attributes point to _two or more_ elements to make this technique work in Internet Explorer.
+
+{::nomarkdown}
+<%= notes_end %>
 {:/nomarkdown}
 
 #### Using `aria-describedby`
