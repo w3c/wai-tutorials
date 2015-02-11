@@ -14,16 +14,16 @@ contributors:
 support: <strong>Developed with support</strong> from the <a href="http://www.w3.org/WAI/ACT/">WAI-ACT</a> project, co-funded by the European Commission <abbr title="Information Society Technologies">IST</abbr> Programme.
 ---
 
-Decorative images don’t add information to the content of a page. For example, the information provided by the image might already be given using adjacent text or the image might be included for visual interest only.
+Decorative images don’t add information to the content of a page. For example, the information provided by the image might already be given using adjacent text or the image might be included for visual decoration only.
 
-In these cases, a null (empty) `alt` text should be provided (`alt=""`) so that they can be ignored by assistive technologies such as screen readers. Text values for these types of images would add audible clutter to screen reader output or could distract users if the topic is different from that in adjacent text. Leaving out the `alt` attribute is  also not an option because when it is not provided, some screen readers will announce the image’s file name instead.
+In these cases, a null (empty) `alt` text should be provided (`alt=""`) so that they can be ignored by assistive technologies, such as screen readers. Text values for these types of images would add audible clutter to screen reader output or could distract users if the topic is different from that in adjacent text. Leaving out the `alt` attribute is  also not an option because when it is not provided, some screen readers will announce the file name of the image instead.
 
 Whether to treat an image as decorative or [informative](informative.html) is a judgement that only the author can make, based on the reason for including the image on the page. Images may be decorative when they are:
 
--   Visual styling such as borders, spacers, and corners
--   Supplementary to link text to improve its appearance or increase the clickable area
--   Illustrative of adjacent text but not contributing information (“eye-candy”)
--   Identified and described by surrounding text
+-   Visual styling such as borders, spacers, and corners;
+-   Supplementary to link text to improve its appearance or increase the clickable area;
+-   Illustrative of adjacent text but not contributing information (“eye-candy”);
+-   Identified and described by surrounding text.
 
 {::nomarkdown}
 <%= notes_start %>
@@ -65,7 +65,7 @@ decorative purpose.
 <%= code_end %>
 {:/nomarkdown}
 
-Screen readers also allow the use of WAI-ARIA to hide elements by using `role="presentation"`. Note that this feature is not as widely supported as using a null `alt` attribute.
+Screen readers also allow the use of WAI-ARIA to hide elements by using `role="presentation"`. However, currently this feature is not as widely supported as using a null `alt` attribute.
 
 {::nomarkdown}
 <%= code_start %>
