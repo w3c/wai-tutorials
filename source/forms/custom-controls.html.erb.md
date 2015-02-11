@@ -391,6 +391,8 @@ var do_something = function(stars) {
 	output.textContent = stars;
 };
 
+// Iterate through all radio buttons and add a click
+// event listener to the labels
 Array.prototype.forEach.call(radios, function(el, i){
 	var label = el.nextSibling.nextSibling;
 	label.addEventListener("click", function(event){
@@ -398,6 +400,7 @@ Array.prototype.forEach.call(radios, function(el, i){
 	});
 });
 
+// If the form gets submitted, do_something
 document.querySelector('#star_rating').addEventListener('submit', function(event){
 	do_something(document.querySelector('#star_rating :checked ~ label span').textContent);
 	event.preventDefault();
