@@ -14,12 +14,12 @@ contributors:
 support: <strong>Developed with support</strong> from the <a href="http://www.w3.org/WAI/ACT/">WAI-ACT</a> project, co-funded by the European Commission <abbr title="Information Society Technologies">IST</abbr> Programme.
 ---
 
-Images of text display text that is intended to be read. With the current CSS capabilities in most web browsers, it is good design practice to use actual text that is styled with CSS rather than image-based text presentation. Actual text is much more flexible than images: It can be resized without losing clarity, and background and text colors can be modified to suit users’ reading preferences. Images are more likely to distort and pixelate when resized. In those uncommon situations where images of text must be used, the text alternative must contain the same text presented in the image.
+Images of text display text that is intended to be read. With the current CSS capabilities in most web browsers, it is good design practice to use actual text that is styled with CSS rather than image-based text presentation. Actual text is much more flexible than images: It can be resized without losing clarity, and background and text colors can be modified to suit the reading preferences of users. Images are more likely to distort and pixelate when resized. In those uncommon situations where images of text must be used, the text alternative must contain the same text presented in the image.
 
 ## Image of styled text with decorative effect
 {:.ex}
 
-This following image is used to convey a slogan text with decorative effects. Previously it was not possible to create such text using CSS styling, and that would be rendered consistently across browsers, which is why an image of text approach was selected. The text alternative is the same as that presented in the image: “Your access to the city”. The decorative effects (stylized text and shadow) are not be described because they are not relevant.
+This following image is used to convey a slogan text with decorative effects. Previously it was not possible to create such text using CSS styling that would be rendered consistently across browsers, which is why images of text were used. The text alternative for this image is the same as the slogan presented in the image: “Your access to the city”. The decorative effects (stylized text and shadow) are not be described because they are not relevant.
 
 {::nomarkdown}
 <%= sample_start %>
@@ -46,9 +46,9 @@ This following image is used to convey a slogan text with decorative effects. Pr
 ### Alternative approach
 
 <aside class="annotation">
-	<h4 class="annotation-header">Modern Browsers</h4>
+	<h4 class="annotation-header">Browser Support</h4>
 	<div class="annotation-content">
-		<p>To display the full effect the browser is required to support the following web technologies:</p>
+		<p>Displaying these effects requires browsers that support the following web technologies:</p>
 		<ul>
 			<li><a href="http://www.w3.org/TR/css3-transforms/">CSS Transforms</a></li>
 			<li><a href="http://www.w3.org/TR/css3-webfonts/">CSS Fonts</a></li>
@@ -161,7 +161,7 @@ The visual effects in the above image can be produced using CSS3 and an embedded
 ## Image of text used as an unlinked logo
 {:.ex}
 
-The following image is the logo for the Web Accessibility Initiative. It’s not part of a link, so the text alternative is “Web Accessibility Initiative”. There’s no need to mention that it is a logo.
+The following image is the logo for the Web Accessibility Initiative. It is not part of a link, so the text alternative is “Web Accessibility Initiative”. There’s no need to mention that it is a logo.
 
 {::nomarkdown}
 <%= sample_start %>
@@ -200,14 +200,14 @@ The following image is the logo for the Web Accessibility Initiative. It’s not
 ## Mathematical expressions
 {:.ex}
 
-Historically, math expressions have often been presented as images because of the difficulty of presenting equations and special math symbols with HTML. However, MathML is emerging as the preferred presentation of accessible math on the web.
+Historically, math expressions have often been presented as images because of the difficulty of presenting equations and special math symbols with HTML. However, MathML is emerging as the preferred presentation of accessible math on the Web.
 
-### … using an image
+### Using images
 {:.ap}
 
 The image below displays a recurring decimal number (decimal numbers that never end). The `alt` text for this recurring number is “0.3333 recurring. (In the image, the recurrence is indicated by a line over the ‘3’ in the fourth decimal place.)”
 
-In this particular example the way that the recurrence is shown is important, so it is also described in the text alternative. As with other images, the author is in the best position to determine what information is intended to be conveyed by the image and construct the text alternative accordingly.
+In this particular example, the way that the recurrence is shown is important, so it is also described in the text alternative. As with other images, the author is in the best position to determine what information is intended to be conveyed by the image and construct the text alternative accordingly.
 
 {::nomarkdown}
 <%= sample_start %>
@@ -233,7 +233,7 @@ In this particular example the way that the recurrence is shown is important, so
 <%= code_end %>
 {:/nomarkdown}
 
-### … using MathML
+### Using MathML
 {:.ap}
 
 Images of math expressions should only be used in *exceptional circumstances* – for example, when the expression is an exception to the normal content for the page or website. The preferred method for displaying math expressions is MathML, which can present math semantically.
@@ -250,7 +250,7 @@ If math forms are a substantial part of the content (for example, for online mat
 	</div>
 </aside>
 
-The simple example below illustrates the difficulty of describing both the content and presentation in mathematical expressions succinctly and clearly. Specifically, it is cumbersome to describe the position and location of the over-line representing recurrence, though it is important for some classroom settings. For more complex expressions or equations, text alternatives for images are unlikely to provide sufficient detail succinctly. MathML helps provide such semantics within the code rather than as text.
+The simple example of the recurring number illustrates the difficulty of describing both the content and presentation in mathematical expressions succinctly and clearly. Specifically, it is cumbersome to describe the position and location of the over-line representing recurrence, though it is important for some classroom settings. For more complex expressions or equations, text alternatives for images are unlikely to provide sufficient detail succinctly. MathML helps provide such semantics within the code rather than as text.
 
 {::nomarkdown}
 <%= sample_start %>
