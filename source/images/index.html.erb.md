@@ -25,7 +25,7 @@ Images must have text alternatives that describe the information or function rep
 
 -   **[Informative images](informative.html)**: Images that graphically represent concepts and information, typically pictures, photos and illustrations. The text alternative should be at least a short description conveying the essential information presented by the image.
 
--   **[Decorative images](decorative.html)**: If the only purpose of an image is to add visual interest to the page, rather than to convey information that is important to understanding the page, the text alternative should be null (`alt=""`).
+-   **[Decorative images](decorative.html)**: Provide a null text alternative (`alt=""`) when the only purpose of an image is to add visual decoration to the page, rather than to convey information that is important to understanding the page.
 
 -   **[Functional images](functional.html)**: The text alternative of an image used as a link or as a button should describe the functionality of the link or button rather than the visual image. Examples for such images are a printer icon to represent the print function or a button to submit a form.
 
@@ -37,15 +37,13 @@ Images must have text alternatives that describe the information or function rep
 
 -   **[Image maps](imagemap.html)**: The text alternative for an image that contains multiple clickable areas should provide an overall context for the set of links. In addition, each individual clickable area should have alternative text that describes the purpose or destination of the link.
 
-For quick overview on deciding which category a specific image fits into, see the [alt Decision Tree](decision-tree.html). The alternative text content needs to be determined by the author, depending on the image’s usage, context, and content. An image of a bird might be described very briefly on a web site that describes a park but in great detail on an ornithologist’s website. Similar if the page is describing the bird’s look in detail, there is little use to repeat that information in the image.
+For quick overview on deciding which category a specific image fits into, see the [alt Decision Tree](decision-tree.html). The text alternative needs to be determined by the author, depending on the usage, context, and content of an image. For example, the exact type and look of a bird in an image might be less relevant and described only briefly on a website about parks, but may be relevant on a website specifically about birds. Also, there is no need to repeat the information in the text alternative when the page containing the image already describes information provided by the image. For example, the text alternative can simply refer to the description of the type and look of a bird, if that information is already provided on the page.
 
 ## Why is this important?
 
-Images and graphics make content more pleasant and easier to understand for many people, and in particular for those with cognitive and learning disabilities. They serve as cues that visually impaired people, who are using screen magnification, often use to orient themselves in the content.
+Images and graphics make content more pleasant and easier to understand for many people, and in particular for those with cognitive and learning disabilities. They serve as cues that are used by people with visual impairments, including people using screen magnification, to orient themselves in the content.
 
-Screen reader users can also benefit from the cues and structure that images sometimes add to the content. Make sure that images are properly described with appropriate text alternatives to provide easy access to your content to as many people as possible.
-
-Images are used extensively on websites and can create major barriers when they are not accessible. Accessible images prove to be beneficial in many situations such as:
+However, images are used extensively on websites and can create major barriers when they are not accessible. Accessible images are beneficial in many situations, such as:
 
 -   **People using screen readers:** The text alternative can be read aloud or rendered as Braille
 -   **People using speech input software:** Users can put the focus onto a button or linked image with a single voice command
