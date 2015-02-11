@@ -136,7 +136,7 @@ Survey <progress max="7" value="7">(Finished)</progress>
 <%= code_end %>
 {:/nomarkdown}
 
-The progress element, like other form elements, is a component from the operating system rendered directly on the web site. Those components are animated in some operating systems which would violate WCAG 2.0’s [2.2.2 Pause, Stop, Hide](http://www.w3.org/TR/WCAG20/#time-limits-pause) success criterion that requires that users are able to disable an animation that starts automatically, lasts more than 5 seconds and is presented in parallel with other content.
+The progress element, like other form elements, is a component from the operating system rendered directly on the website. Those components are animated in some operating systems which would violate WCAG 2.0’s [2.2.2 Pause, Stop, Hide](http://www.w3.org/TR/WCAG20/#time-limits-pause) success criterion that requires that users are able to disable an animation that starts automatically, lasts more than 5 seconds and is presented in parallel with other content.
 
 The animation can be stopped by using custom styling with browser-specific CSS as shown below.
 
