@@ -29,12 +29,12 @@ There are use cases where a description of the composition of the image may also
 
 It is also good practice to refer to more complex images from the accompanying text to describe the overall data, for example: “The following graph shows that visitors were lost in the first quarter, but the numbers recovered in the second quarter”.
 
-Complex images can be hard to understand for a variety of users, such as people who have learning disabilities or who use screen magnification. Long descriptions benefit many people and it is good practice to make it available to everyone as part of the main content. Consider making images less complex where possible to make them easier to understand for everyone.
+Complex images can be hard to understand for a variety of users, such as people who have learning disabilities or who use screen magnification. Long descriptions benefit many people and it is good practice to make them available to everyone as part of the main content. Consider making images less complex where possible to make them easier to understand for everyone.
 
 ## Image containing substantial information
 {:.ex}
 
-This bar chart of website visitor statistics has a short description of “Bar chart showing monthly and total visitors for the first quarter 2014 for sites 1 to 3” provided through the `alt` attribute of the image. The long description provides detailed information, including scales, values, relationships and trends that are represented visually. For example, since the declining values for site 1, consistent values for site 2, and increasing values for site 3 are highlighted through the bar chart. The following example shows a complex image using the [longdesc approach, described below](#providing-a-link-to-the-long-description-via-longdesc).
+This bar chart of website visitor statistics has the short description “Bar chart showing monthly and total visitors for the first quarter 2014 for sites 1 to 3”, provided through the `alt` attribute of the image. The long description provides detailed information, including scales, values, relationships and trends that are represented visually. For example, to point out the declining values for site 1, consistent values for site 2, and increasing values for site 3 that are encoded in the bar chart. The [longdesc approach](#providing-a-link-to-the-long-description-via-longdesc) used in the following example is described later in thie secion.
 
 {::nomarkdown}
 <%= sample_start %>
@@ -46,7 +46,7 @@ This bar chart of website visitor statistics has a short description of “Bar c
 <%= sample_end %>
 {:/nomarkdown}
 
-From the approaches below, the first and second one make the information available to other programs such as web browsers and search engines.
+From the approaches below, the first and second one make the information available to other programs, such as web browsers and search engines.
 
 ### Providing a link to the long description via `longdesc`
 {:.ap}
@@ -59,11 +59,11 @@ From the approaches below, the first and second one make the information availab
   </div>
 </aside>
 
-The `longdesc` attribute can contain the URI of a page containing the long description, or an fragment identifier.
+The `longdesc` attribute can contain the URI of a page containing the long description, or a fragment identifier.
 
-`Longdesc` is used primarily if the content of the image needs to be described primarily to people that are unable to see the image. For example, an author might decide that it is necessary to go into greater details on the brush strokes or what meaning a certain color has, describing not only the content of the image but also details of the visual appearance. In the example above that would mean describing how the bar chart looks like.
+`Longdesc` is primarily used to describe the visual properties of an image. For example, visual aspects such as the colors used and relative hights of the columns in a bar chart, or the brush strokes in painting may be relevant, so that it may be necessary to describe them in greater detail. In the example above, this would mean describing how the bar chart looks like in addition to the information it represents.
 
-If the `longdesc` attributes refers to another page, it is recommended to also apply [Approach 3 (A text link to the long description adjacent to the image)](#a-text-link-to-the-long-description-adjacent-to-the-image) so that the long description is available to visual users, and in browsers and assistive technologies that don’t fully support `longdesc`.
+If the `longdesc` attributes contains a URI to refer to another page with the long description, it is recommended to also apply [Approach 3 (A text link to the long description adjacent to the image)](#a-text-link-to-the-long-description-adjacent-to-the-image) so that the long description is available to visual users, and in browsers and assistive technologies that don’t fully support `longdesc`.
 
 {::nomarkdown}
 <%= code_start %>
@@ -81,9 +81,7 @@ If the `longdesc` attributes refers to another page, it is recommended to also a
 <%= code_end %>
 {:/nomarkdown}
 
-If the long description is published within an HTML element on the same page as the image, the `longdesc` value can simply contain a fragment identifier (“hash link”) to the element containing the long description. This fragment identifier consists of an `#` and the value of the `id` attribute of the long description element.
-
-Usually this approach doesn’t need an additional link, if the description is in close proximity to the image. If the description isn't close, a visible link helps users find the long description.
+The `longdesc` attribute can also contain a fragment identifier (`#` followed by the `id` an the element on the same page - a “hash link”), to refer to an element containing the long description that is available on the same page as the image. This approach doesn’t need an additional link (by applying [Approach 3](#a-text-link-to-the-long-description-adjacent-to-the-image)) when the description is in close proximity to the image.
 
 {::nomarkdown}
 <%= code_start %>
@@ -107,7 +105,7 @@ Usually this approach doesn’t need an additional link, if the description is i
 ### Structurally associating image and long description with `aria-describedby`
 {:.ap}
 
-The WAI-ARIA `aria-describedby` attribute can be used to link the description to the image. The value of the attribute is the `id` of the element with the description.
+The WAI-ARIA `aria-describedby` attribute can be used to link to a description of the image that is provided on the same page. The value of the attribute is the `id` of the element with the description.
 
 {::nomarkdown}
 <%= code_start %>
@@ -168,7 +166,7 @@ This approach provides a text link next to the image. The link text makes both t
 ### Describing the location of the long description in the `alt` attribute
 {:.ap}
 
-If the long description is on the same page as the image and its location can be accurately pinpointed by being described, the `alt` attribute can include location information.
+If the long description is on the same page as the image, its location can be described using the `alt` attribute. The location information needs to be clear and accurate to help users locate the content.
 
 {::nomarkdown}
 <%= code_start %>
