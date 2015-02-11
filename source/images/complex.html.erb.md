@@ -63,7 +63,7 @@ The `longdesc` attribute can contain the URI of a page containing the long descr
 
 `Longdesc` is used primarily if the content of the image needs to be described primarily to people that are unable to see the image. For example, an author might decide that it is necessary to go into greater details on the brush strokes or what meaning a certain color has, describing not only the content of the image but also details of the visual appearance. In the example above that would mean describing how the bar chart looks like.
 
-If the `longdesc` attributes refers to another page, it is recommended to also apply [Approach 3 (A text link to the long description adjacent to the image)](#a-text-link-to-the-long-description-adjacent-to-the-image) to make sure that the long description is visible to visual users and in browsers and assistive technologies that don’t fully support `longdesc`.
+If the `longdesc` attributes refers to another page, it is recommended to also apply [Approach 3 (A text link to the long description adjacent to the image)](#a-text-link-to-the-long-description-adjacent-to-the-image) so that the long description is available to visual users, and in browsers and assistive technologies that don’t fully support `longdesc`.
 
 {::nomarkdown}
 <%= code_start %>
