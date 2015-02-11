@@ -83,7 +83,7 @@ If the `longdesc` attributes refers to another page, it is recommended to also a
 
 If the long description is published within an HTML element on the same page as the image, the `longdesc` value can simply contain a fragment identifier (“hash link”) to the element containing the long description. This fragment identifier consists of an `#` and the value of the `id` attribute of the long description element.
 
-Usually this approach doesn’t need an additional link, if the description is in close proximity to the image. If this isn’t the case a visible link helps users to find the long description.
+Usually this approach doesn’t need an additional link, if the description is in close proximity to the image. If the description isn't close, a visible link helps users find the long description.
 
 {::nomarkdown}
 <%= code_start %>
