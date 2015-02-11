@@ -15,9 +15,9 @@ contributors:
 support: <strong>Developed with support</strong> from the <a href="http://www.w3.org/WAI/ACT/">WAI-ACT</a> project, co-funded by the European Commission <abbr title="Information Society Technologies">IST</abbr> Programme.
 ---
 
-Sometimes groups of images are used together to represent one piece of information. For example, a collection of star icons that together represent a rating. In this case only one of the images needs a text alternative that describes the entire collection, and the other images have a null (empty) `alt` attribute so that they are ignored by assistive technology.
+Sometimes groups of images are used together to represent one piece of information. For example, a collection of star icons that together represent a rating. In this case, only one of the images needs a text alternative to describe the entire collection, while the other images have a null (empty) `alt` attribute so that they are ignored by assistive technology.
 
-In other cases a group of images may represent a collection of related images. For example, showing a collection of art impressions that are thematically related. In this case each image needs its own text alternative that describes it individually, as well as its relationship within the group.
+In other cases, a group of images may represent a collection of related images. For example, showing a collection of art impressions that are thematically related. In this case each image needs its own text alternative that describes it individually, as well as its relationship within the group.
 
 ## Multiple images conveying a single piece of information
 {:.ex}
