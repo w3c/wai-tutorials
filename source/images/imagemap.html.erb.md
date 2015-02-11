@@ -19,7 +19,7 @@ A client-side image map is an image divided into selectable regions defined by `
 ## An organizational chart with links to individual pages
 {:.ex}
 
-The following organizational chart is used to provide links to each director's home page. The text alternative for the image is “Board of Directors and related staff:”. Each linked `<area>` has a text alternative to identify the individual -- for example, “Davy Jones: Chairman”. The alternative text for individuals also state their relation in the graph.
+The following organizational chart is used to provide links to each director's home page. The text alternative for the image is “Board of Directors and related staff:”. Each linked `<area>` has a text alternative to identify the individual -- for example, “Davy Jones: Chairman”. The text alternative for individuals also state their relation in the graph.
 
 {::nomarkdown}
 <%= sample_start %>
