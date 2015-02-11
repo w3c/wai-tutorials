@@ -16,10 +16,10 @@ support: <strong>Developed with support</strong> from the <a href="http://www.w3
 
 Images of text display text that is intended to be read. With the current CSS capabilities in most web browsers, it is good design practice to use actual text that is styled with CSS rather than image-based text presentation. Actual text is much more flexible than images: It can be resized without losing clarity, and background and text colors can be modified to suit the reading preferences of users. Images are more likely to distort and pixelate when resized. In those uncommon situations where images of text must be used, the text alternative must contain the same text presented in the image.
 
-## Image of styled text with decorative effect
+## Styled text with decorative effect
 {:.ex}
 
-This following image is used to convey a slogan text with decorative effects. Previously it was not possible to create such text using CSS styling that would be rendered consistently across browsers, which is why images of text were used. The text alternative for this image is the same as the slogan presented in the image: “Your access to the city”. The decorative effects (stylized text and shadow) are not be described because they are not relevant.
+This following image is used to convey a slogan text with decorative effects.
 
 {::nomarkdown}
 <%= sample_start %>
@@ -30,6 +30,11 @@ This following image is used to convey a slogan text with decorative effects. Pr
 {::nomarkdown}
 <%= sample_end %>
 {:/nomarkdown}
+
+### Using an image
+{.ap}
+
+Previously it was not possible to create such text using CSS styling that would be rendered consistently across browsers, which is why images of text were used. The text alternative for this image is the same as the slogan presented in the image: “Your access to the city”. The decorative effects (stylized text and shadow) are not be described because they are not relevant.
 
 {::nomarkdown}
 <%= code_start %>
@@ -43,20 +48,22 @@ This following image is used to convey a slogan text with decorative effects. Pr
 <%= code_end %>
 {:/nomarkdown}
 
-### Alternative approach
+### Using CSS3
+{.ap}
 
-<aside class="annotation">
-	<h4 class="annotation-header">Browser Support</h4>
-	<div class="annotation-content">
-		<p>Displaying these effects requires browsers that support the following web technologies:</p>
-		<ul>
-			<li><a href="http://www.w3.org/TR/css3-transforms/">CSS Transforms</a></li>
-			<li><a href="http://www.w3.org/TR/css3-webfonts/">CSS Fonts</a></li>
-		</ul>
-	</div>
-</aside>
 
 The visual effects in the above image can be produced using CSS3 and an embedded font. Authors and developers that need to support older browsers may find the image example useful, if a less styled fallback text isn’t an option.
+
+<aside class="annotation">
+  <h4 class="annotation-header">Browser Support</h4>
+  <div class="annotation-content">
+    <p>Displaying these effects requires browsers that support the following web technologies:</p>
+    <ul>
+      <li><a href="http://www.w3.org/TR/css3-transforms/">CSS Transforms</a></li>
+      <li><a href="http://www.w3.org/TR/css3-webfonts/">CSS Fonts</a></li>
+    </ul>
+  </div>
+</aside>
 
 {::nomarkdown}
 <%= sample_start %>
