@@ -19,12 +19,12 @@ Grouping needs to be carried out visually and in the code, for example by using 
 
 The `<fieldset>` element provides a container for related form controls, and the `<legend>` element acts like a heading to identify the group.
 
-The legend for a group of controls can also highlight common attributes of all controls, for example state the fact that all fields in the group are required.
+The legend for a group of controls can also highlight common attributes of all controls, for example to advise that all fields in the group are required.
 
-### … to group radio buttons
+### Radio buttons
 {:.ex.inap}
 
-In the example below, there are three radio buttons that allows the user to chose an output format. Radio button groups should always be grouped using `<fieldset>`.
+In the example below, there are three radio buttons that allow the user to chose an output format. Radio button groups should always be grouped using `<fieldset>`.
 
 {::nomarkdown}
 <%= sample_start %>
@@ -69,7 +69,7 @@ In the example below, there are three radio buttons that allows the user to chos
 <%= code_end %>
 {:/nomarkdown}
 
-### … to group checkboxes
+### Checkboxes
 {:.ex.inap}
 
 In the example below, there are three checkboxes that are all part of an opt-in function for receiving different types of information.
@@ -113,7 +113,7 @@ In the example below, there are three checkboxes that are all part of an opt-in 
 <%= code_end %>
 {:/nomarkdown}
 
-### … to group related fields
+### Related fields
 {:.ex.inap}
 
 This example shows form fields to enter shipping and invoice addresses. As the labels in both groups have the same text, the `fieldset` element also helps to distinguish the form fields by their groups. In case the `<legend>` is not read by screen readers (see note below), labels for the first form control in each group should include the group’s name. This name can be hidden visually.
@@ -279,7 +279,7 @@ This technique provides additional styling possibilities.
 <%= sample_end %>
 {:/nomarkdown}
 
-Due to WAI-ARIA not available in some browsers and screen reader combinations, a group identifier should be added to the first form control in the group.
+Because WAI-ARIA not fully supported in all web browser and screen reader combinations, a group identifier should be added to the first form control in the group.
 
 {::nomarkdown}
 <%= code_start %>
