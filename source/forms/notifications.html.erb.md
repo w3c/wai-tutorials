@@ -135,23 +135,25 @@ When errors occur, it is helpful to list them at the top of the page, before the
 - Provide an indication of how to correct mistakes, and remind users of any format requirements;
 - Include an in-page link to the corresponding form control to make access easier for the users.
 
+If the user is not redirected to another page, the list of errors should be inserted into a container that has the `role` set to `alert`. This will inform the user immediately when the content of the container changes.
+
 {::nomarkdown}
 <%= sample_start %>
-
-<h4 role="presentation">There are 2 errors in this form</h4>
-<ul>
-	<li>
-		<a href="#firstname">
-			The First name field is empty, it is a required field and must be filled in.
-		</a>
-	</li>
-	<li>
-		<a href="#birthdate">
-			The Date field is in the wrong format, it should be similar to 17/09/2013 (use a / to separate day, month, and year).
-		</a>
-	</li>
-</ul>
-
+<div role="alert">
+  <h4 role="presentation">There are 2 errors in this form</h4>
+  <ul>
+  	<li>
+  		<a href="#firstname">
+  			The First name field is empty, it is a required field and must be filled in.
+  		</a>
+  	</li>
+  	<li>
+  		<a href="#birthdate">
+  			The Date field is in the wrong format, it should be similar to 17/09/2013 (use a / to separate day, month, and year).
+  		</a>
+  	</li>
+  </ul>
+</div>
 <%= sample_end%>
 {:/nomarkdown}
 
@@ -160,19 +162,21 @@ When errors occur, it is helpful to list them at the top of the page, before the
 {:/nomarkdown}
 
 ~~~ html
-<h4>There are 2 errors in this form</h4>
-<ul>
-	<li>
-		<a href="#firstname" id="firstname_error">
-			The First name field is empty; it is a required field and must be filled in.
-		</a>
-	</li>
-	<li>
-		<a href="#birthdate" id="birthdate_error">
-			The Date field is in the wrong format; it should be similar to 17/09/2013 (use a / to separate day, month, and year).
-		</a>
-	</li>
-</ul>
+<div role="alert">
+  <h4>There are 2 errors in this form</h4>
+  <ul>
+  	<li>
+  		<a href="#firstname" id="firstname_error">
+  			The First name field is empty; it is a required field and must be filled in.
+  		</a>
+  	</li>
+  	<li>
+  		<a href="#birthdate" id="birthdate_error">
+  			The Date field is in the wrong format; it should be similar to 17/09/2013 (use a / to separate day, month, and year).
+  		</a>
+  	</li>
+  </ul>
+</div>
 ~~~
 
 {::nomarkdown}
