@@ -17,14 +17,14 @@ wcag_techniques:
 Where possible, divide long forms into multiple smaller forms that constitute a series of logical steps or stages. This helps make long forms less daunting and easier to understand, particularly for people who are less experienced using computers or who have various cognitive disabilities. The following basic principles should apply for multi-step forms:
 
 - Repeat [overall instructions](instructions.html#overall-instructions) on every page.
-- Split the form up according to the topic of the form fields on a page. For example, in an online shop, shipping and payment information are on separate pages.
-- Make is easy to skip optional stages. If a page is optional it makes sense to mention this information in the main heading of the page as well.
+- Split the form up according to its logical groups of controls. For example, in an online shop, shipping and payment information are typically separated.
+- Make it easy to recognize and to skip optional stages. For example, highlight optional steps in the main heading of the web page and provide an option to skip.
 - If possible, don’t set a time limit to fill out the form. If a time limit is required, provide a feature that allows the user to adjust or extend the time limit.
 
 ## Indicating progress
 {:.newex}
 
-If possible, the first form page should explain how many pages will follow, and on each page users should be informed about the progress they are making.
+If possible, the first step of a form should explain how many steps will follow. Each step should inform the user about the progress they are making.
 
 ### Using the page title
 {:.ap}
