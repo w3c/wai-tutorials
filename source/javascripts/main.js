@@ -123,7 +123,7 @@
 			var toc_outer = document.createElement('figure');
 			toc_outer.setAttribute('role', 'navigation');
 			toc_outer.setAttribute('aria-describedby', 'toc_desc');
-			toc_outer.innerHTML = '<figcaption id="toc_desc">On this page</figcaption><div class="figcontent"></div>';
+			toc_outer.innerHTML = '<figcaption id="toc_desc">On this page <a href="#skipotp" class="visuallyhidden focusable">(skip)</a></figcaption><div class="figcontent"></div>';
 			if (toc_outer.classList)
 				toc_outer.classList.add('toc');
 			else
@@ -197,7 +197,7 @@
 			toc_outer.querySelectorAll('.figcontent')[0].innerHTML = toc_wrap.outerHTML;
 
 			var inner = document.querySelectorAll('.inner > :first-child')[0];
-			inner.insertAdjacentHTML('beforebegin', toc_outer.outerHTML);
+			inner.insertAdjacentHTML('beforebegin', toc_outer.outerHTML + '<span id="skipotp" class="visuallyhidden"></span>');
 
 		}
 
