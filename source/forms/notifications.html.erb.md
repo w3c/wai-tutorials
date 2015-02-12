@@ -135,7 +135,7 @@ When errors occur, it is helpful to list them at the top of the page, before the
 - Provide an indication of how to correct mistakes, and remind users of any format requirements;
 - Include an in-page link to the corresponding form control to make access easier for the users.
 
-If the user is not redirected to another page, the list of errors should be inserted into a container that has the `role` set to `alert`. This will inform the user immediately when the content of the container changes.
+If the user is not redirected to another page, the list of errors should be inserted into a prominent container to inform them. This container should have the role set to alert, to also inform assistive technology users about this change.
 
 {::nomarkdown}
 <%= sample_start %>
