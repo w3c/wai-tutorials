@@ -49,14 +49,10 @@ In this example, a bar chart of website visitor statistics has the short descrip
 {:/nomarkdown}
 
 {::nomarkdown}
-<%= code_end %>
-{:/nomarkdown}
-
-{::nomarkdown}
 <%= notes_start %>
 {:/nomarkdown}
 
-**Note:** See [example long description](#../examples/2014-first-qtr/) associated with this image.
+**Note:** See [example long description](examples/2014-first-qtr.html) associated with this image.
 
 {::nomarkdown}
 <%= notes_end %>
@@ -91,7 +87,11 @@ When the `longdesc` attributes contains a URI to refer to another web page with 
 <a href="2014-first-qtr.html">Long Description</a>
 ~~~
 
-When the `longdesc` attribute contains a fragment identifier (`#` followed by the `id` an the element on the same web page - a “hash link”), it refers to an element on the same web page that provides the long description. It addresses the same use case as for [Approach 2](#https://w3c.github.io/wai-tutorials/images/complex/#structurally-associating-image-and-long-description-with-aria-describedby), though the support by web browsers and assistive technologies may vary. An additional link (by applying [Approach 3](#a-text-link-to-the-long-description-adjacent-to-the-image)) is not needed when the long description is in close proximity to the image.
+{::nomarkdown}
+<%= code_end %>
+{:/nomarkdown}
+
+When the `longdesc` attribute contains a fragment identifier (`#` followed by the `id` an the element on the same web page - a “hash link”), it refers to an element on the same web page that provides the long description. It addresses the same use case as for [Approach 2](#structurally-associating-image-and-long-description-with-aria-describedby), though the support by web browsers and assistive technologies may vary. An additional link (by applying [Approach 3](#a-text-link-to-the-long-description-adjacent-to-the-image)) is not needed when the long description is in close proximity to the image.
 
 {::nomarkdown}
 <%= code_start %>
@@ -176,7 +176,7 @@ This approach provides a text link next to the image, that refers to a separate 
 ### Describing the location of the long description in the `alt` attribute
 {:.ap}
 
-When a long description is provided on the same web page as an images, its location can be described using the `alt` attribute of the image. The location information needs to be clear and accurate to help users locate the content.
+When a long description is provided on the same web page as an image, its location can be described using the `alt` attribute of the image. The location information needs to be clear and accurate to help users locate the content.
 
 {::nomarkdown}
 <%= code_start %>
