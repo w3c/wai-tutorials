@@ -25,11 +25,15 @@ The following image is the only content of a link that leads to the W3C home pag
 
 {::nomarkdown}
 <%= sample_start %>
+
+<a href="http://www.w3.org/" style="display:inline-block;">
 {:/nomarkdown}
 
-[![W3C home](w3c.png)](http://www.w3.org/)
+![W3C home](w3c.png)
 
 {::nomarkdown}
+</a>
+
 <%= sample_end %>
 {:/nomarkdown}
 
@@ -68,7 +72,7 @@ In this example the W3C logo is used to supplement text within a link that leads
 <%= sample_start %>
 {:/nomarkdown}
 
-[![](../img/w3c.png){:style="vertical-align: middle; margin-right: 1em;"}W3C Home](http://www.w3.org/)
+[![](../img/w3c.png){:style="vertical-align: middle; margin-right: 1em;"}W3C Home](http://www.w3.org/){:style="display:inline-block;"}
 
 {::nomarkdown}
 <%= sample_end %>
