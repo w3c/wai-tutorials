@@ -51,7 +51,7 @@ Many web authoring tools and content management systems (CMS) provide functions 
 
 ## Why is this important?
 
-Tables without structural markup to differentiate between header and data cells, and to define the relationship between them, create accessibility barriers. Relying on visual cues alone is not sufficient to create an accessible table. With structural markup, headers and data cells can be programmatically determined by software, which means that:
+Tables without structural markup to differentiate and properly link between header and data cells, create accessibility barriers. Relying on visual cues alone is not sufficient to create an accessible table. With structural markup, headers and data cells can be programmatically determined by software, which means that:
 
 -   **People using screen readers** can have the row and column headers read aloud as they navigate through the table. Screen readers speak one cell at a time and reference the associated header cells, so the reader doesn’t lose context.
 
