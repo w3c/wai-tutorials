@@ -320,8 +320,8 @@ For `select` elements with groups of options, the `optgroup` element can be used
 <%= sample_start %>
 
 <form action="#" method="get">
-	<p>
-		Which course would you like to watch today?<br>
+	<fieldset>
+		<legend>Which course would you like to watch today?</legend>
 		<label id="course">Course:</label>
 		<select name="course" id="course">
 			<option></option>
@@ -342,7 +342,7 @@ For `select` elements with groups of options, the `optgroup` element can be used
 			</optgroup>
 		</select>
 		<input type=submit value="▶ Play">
-	</p>
+	</fieldset>
 </form>
 
 <%= sample_end %>
