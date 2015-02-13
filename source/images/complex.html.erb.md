@@ -29,7 +29,7 @@ In these cases a two-part text alternative is required. The first part is the sh
 
 There are situations where the composition of an image is important and needs to be provided in the long description. For example, the sequence of colors used and the relative heights of the columns in a bar chart may be relevant information about the structure of the chart, in addition to the actual values and trends that it depicts.
 
-Remeber that complex images can be hard to understand by many people, in particular people with learning disabilities and who use screen magnification. Long descriptions benefit many people and it is good practice to make them available to everyone, for example as part of the main content. It may also be possible to reduce unecessary complexity in your images, and make them easier to understand for everyone.
+Remeber that complex images can be hard to understand by many people, in particular people with learning disabilities and people with low vision. Long descriptions benefit many people and it is good practice to make them available to everyone, for example as part of the main content. It may also be possible to reduce unecessary complexity in your images, and make them easier to understand for everyone.
 
 It is also good practice to refer to and summarize more complex images from the accompanying text. For example, a reference like “The following graph shows that visitors were lost in the first quarter, but the numbers recovered in the second quarter” helps to point out the relevant information that the image is intended to present.
 
