@@ -952,6 +952,12 @@ form {
 	}
 }
 
+input[type=submit], button {
+  &:focus {
+    box-shadow: 0 0 5px lighten(#036, 30%);
+  }
+}
+
 // Search input
 
 [role=search] {
