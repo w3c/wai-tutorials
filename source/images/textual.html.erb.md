@@ -32,7 +32,7 @@ This following image is used to convey a slogan text with decorative effects.
 {:/nomarkdown}
 
 ### Using an image
-{.ap}
+{:.ap}
 
 Previously it was not possible to create such text using CSS styling that would be rendered consistently across browsers, which is why images of text were used. The text alternative for this image is the same as the slogan presented in the image: “Your access to the city”. The decorative effects (stylized text and shadow) are not be described because they are not relevant.
 
@@ -49,7 +49,7 @@ Previously it was not possible to create such text using CSS styling that would 
 {:/nomarkdown}
 
 ### Using CSS3
-{.ap}
+{:.ap}
 
 
 The visual effects in the above image can be produced using CSS3 and an embedded font. Authors and developers that need to support older browsers may find the image example useful, if a less styled fallback text isn’t an option.
