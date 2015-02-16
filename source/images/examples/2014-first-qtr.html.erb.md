@@ -6,11 +6,13 @@ layout: fullcode
 
 ## Site visitors for example.com
 
-### Trends
+### Overview
 
-Page hits for the first quarter of 2014 show that Site 1 has more visitors than either of the other sites, but the hits are decreasing. Site 2 has a fairly constant number of visitors, while Site 3 page hits are increasing month on month.
+The chart shows the website hits for the first quarter of 2014. It shows that Site 1 has more visitors than either of the other sites, but the number of visitors is decreasing. Site 2 has a fairly constant number of visitors, while for Site 3 page hits are increasing month on month.
 
-### Statistics
+### Values
+
+Numerical values presented on the image:
 
 <table>
   <caption>
@@ -47,3 +49,7 @@ Page hits for the first quarter of 2014 show that Site 1 has more visitors than 
       <td>308</td>
     </tr>
 </table>
+
+### Presentation
+
+The bar chart represents both the number of visitors per month for each website, and the total number of visitors per website for the entire quarter. Website visitors for each month are represented using columns lined up horizontally, with heights indicating the number of visitors. A fourth column is provided for each website with the accumulated site visitors for the quarter.
