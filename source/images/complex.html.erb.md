@@ -201,7 +201,7 @@ The HTML5 `<figure>` element can be used to enclose both the image and its long 
 
 The WAI-ARIA `aria-describedby` attribute can be used to link to a description of the image that is provided on the same web page, in a similar way to the [longdesc approach](#providing-a-link-to-the-long-description-via-longdesc). The value of the attribute is the `id` of the element that provides the long description.
 
-When using `aria-describedby`, the content of the description is read out like one continuous paragraph. Every structural information is removed from the text. This means the user is not informed about the type of content in the description and has no way to navigate the headings or the table in the [example above](#description-containing-structured-information). As a result, this approach works best for text-only descriptions without structural informations.
+Important: The element referenced by `aria-describedby` is treated like one continuous paragraph of text. Screen readers and other assistive technology do not have access to structural information, such as any headings and tables. They will read out or provide the text of any contained elements without indicating their structural relationships, and without the corresponding navigation mechanisms. As a result, this approach only works for long descriptions that are text-only, without needing structural information as was needed in the previous example.
 
 In this example, the head of the peacock is described using a paragraph of text that is on the web page.
 
