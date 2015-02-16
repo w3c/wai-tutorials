@@ -116,7 +116,7 @@ In the example below, there are three checkboxes that are all part of an opt-in 
 ### Related fields
 {:.ex.inap}
 
-This example shows form fields to enter shipping and invoice addresses. As the labels in both groups have the same text, the `fieldset` element also helps to distinguish the form fields by their groups. In case the `<legend>` is not read by screen readers (see note below), labels for the first form control in each group should include the group’s name. This name can be hidden visually.
+This example shows form fields to enter shipping and billing addresses. As the labels in both groups have the same text, the `fieldset` element also helps to distinguish the form fields by their groups. In case the `<legend>` is not read by screen readers (see note below), labels for the first form control in each group should include the group’s name. This name can be hidden visually.
 
 {::nomarkdown}
 <%= sample_start %>
@@ -251,8 +251,8 @@ This technique provides additional styling possibilities.
 			<input type="text" name="aria_shipping_zip" id="aria_shipping_zip">
 			</div>
 	</div>
-	<div role="group" aria-labelledby="invoice_head" style="float: left; border: 1px solid #333; padding: 0 .5em .5em;">
-		<div id="invoice_head" style="font-weight: bold; padding: .25em 0;">Billing Address:</div>
+	<div role="group" aria-labelledby="billing_head" style="float: left; border: 1px solid #333; padding: 0 .5em .5em;">
+		<div id="billing_head" style="font-weight: bold; padding: .25em 0;">Billing Address:</div>
 		<div>
 			<label for="aria_billing_name"><span class="visuallyhidden">Billing </span>Name:</label><br>
 			<input type="text" name="aria_billing_name" id="aria_billing_name">
@@ -296,8 +296,8 @@ Because WAI-ARIA not fully supported in all web browser and screen reader combin
 	</div>
 	[…]
 </div>
-<div role="group" aria-labelledby="invoice_head">
-	<div id="invoice_head">Billing Address:</div>
+<div role="group" aria-labelledby="billing_head">
+	<div id="billing_head">Billing Address:</div>
 	<div>
 		<label for="billing_name">
       <span class="visuallyhidden">Billing </span>Name:
