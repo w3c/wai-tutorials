@@ -205,7 +205,7 @@ In some situations, form controls cannot be labelled explicitly. For example, a 
 
 ## Labelling buttons
 
-The label of a `<button>` element is set inside the element and can include markup. It allows to provide more advanced accessibility hints, like marking up language change. When using the `<input>` element to create buttons, the label is set in the `value` attribute of the element.
+The label of a `<button>` element is set inside the element and can include markup. This allows more advanced accessibility hints to be included, like marking up language change. When using the `<input>` element to create buttons, the label is set in the `value` attribute of the element.
 
 {::nomarkdown}
 <%= code_start('', 'HTML') %>
