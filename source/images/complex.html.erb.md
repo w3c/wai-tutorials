@@ -33,7 +33,7 @@ Remeber that complex images can be hard to understand by many people, in particu
 
 It is also good practice to refer to and summarize more complex images from the accompanying text. For example, a reference like “The following graph shows that visitors were lost in the first quarter, but the numbers recovered in the second quarter” helps to point out the relevant information that the image is intended to present.
 
-## Image containing substantial information
+## Description containing structured information
 {:.ex}
 
 In this example, a bar chart of website visitor statistics has the short description “Bar chart showing monthly and total visitors for the first quarter 2014 for sites 1 to 3”, provided through the `alt` attribute of the image. The long description provides detailed information, including scales, values, relationships and trends that are represented visually. For example, to point out the declining values for site 1, consistent values for site 2, and increasing values for site 3 that are encoded in the bar chart. The [longdesc approach](#providing-a-link-to-the-long-description-via-longdesc) used in the following example is described later in the section.
@@ -91,7 +91,7 @@ When the `longdesc` attributes contains a URI to refer to another web page with 
 <%= code_end %>
 {:/nomarkdown}
 
-When the `longdesc` attribute contains a fragment identifier (`#` followed by the `id` an the element on the same web page - a “hash link”), it refers to an element on the same web page that provides the long description. It addresses the same use case as for [Approach 2](#structurally-associating-image-and-long-description-with-aria-describedby), though the support by web browsers and assistive technologies may vary. An additional link (by applying [Approach 3](#a-text-link-to-the-long-description-adjacent-to-the-image)) is not needed when the long description is in close proximity to the image.
+When the `longdesc` attribute contains a fragment identifier (`#` followed by the `id` an the element on the same web page - a “hash link”), it refers to an element on the same web page that provides the long description. It addresses the a similar same use case as for [Example 2, Approach 1](#structurally-associating-image-and-long-description-with-aria-describedby), though the support by web browsers and assistive technologies may vary. An additional link (by applying [Approach 2](#a-text-link-to-the-long-description-adjacent-to-the-image)) is not needed when the long description is in close proximity to the image.
 
 {::nomarkdown}
 <%= code_start %>
@@ -105,34 +105,6 @@ When the `longdesc` attribute contains a fragment identifier (`#` followed by th
 […]
 <div id="chart-longdesc">
 	[…]
-</div>
-~~~
-
-{::nomarkdown}
-<%= code_end %>
-{:/nomarkdown}
-
-### Structurally associating image and long description with `aria-describedby`
-{:.ap}
-
-Similarly to the [longdesc approach](#providing-a-link-to-the-long-description-via-longdesc), the WAI-ARIA `aria-describedby` attribute can be used to link to a description of the image that is provided on the same web page. The value of the attribute is the `id` of the element that provides the long description.
-
-{::nomarkdown}
-<%= code_start %>
-{:/nomarkdown}
-
-~~~ html
-<img src="chart.png"
-	aria-describedby="image-description"
-	alt="Bar chart showing monthly and total visitors for the first quarter 2014 for sites 1 to 3.">
-
-<div id="image-description">
-	<p><strong>Trends:</strong> Site visitors for the first  ...</p>
-	<p><strong>Statistics:</strong>
-	<table>
-		<caption>Example.com Site visitors Jan to March 2014</caption>
-		<tr>…</tr>
-	</table>
 </div>
 ~~~
 
@@ -218,6 +190,43 @@ The HTML5 `<figure>` element can be used to enclose both the image and its long 
 		<tr>…</tr>
 	</table>
 </figure>
+~~~
+
+{::nomarkdown}
+<%= code_end %>
+{:/nomarkdown}
+
+## Description containing textual information
+{:.ex}
+
+The WAI-ARIA `aria-describedby` attribute can be used to link to a description of the image that is provided on the same web page, in a similar way to the [longdesc approach](#providing-a-link-to-the-long-description-via-longdesc). The value of the attribute is the `id` of the element that provides the long description.
+
+When using `aria-describedby`, the content of the description is read out like one continuous paragraph. Every structural information is removed from the text. This means the user is not informed about the type of content in the description and has no way to navigate the headings or the table in the [example above](#description-containing-structured-information). As a result, this approach works best for text-only descriptions without structural informations.
+
+In this example, the head of the peacock is described using a paragraph of text that is on the web page.
+
+{::nomarkdown}
+<%= sample_start %>
+
+<img src="../../img/peafowl.jpg" alt="Neck of a male peacock" aria-describedby="description">
+<p id="description">
+  The male is metallic blue on the crown, the feathers of the head being short and curled. The fan-shaped crest on the head is made of feathers with bare black shafts and tipped with blush-green webbing. A white stripe above the eye and a crescent shaped white patch below the eye are formed by bare white skin. The sides of the head have iridescent greenish blue feathers. The back has scaly bronze-green feathers with black and copper markings.
+</p>
+
+<%= sample_end %>
+{:/nomarkdown}
+
+{::nomarkdown}
+<%= code_start %>
+{:/nomarkdown}
+
+~~~ html
+<img src="peacock.jpg"
+     alt="Neck of a male peacock"
+     aria-describedby="description">
+<p id="description">
+  The male is metallic blue on the crown, the feathers of the head being short and curled. The fan-shaped crest on the head is made of feathers with bare black shafts and tipped with blush-green webbing. A white stripe above the eye and a crescent shaped white patch below the eye are formed by bare white skin. The sides of the head have iridescent greenish blue feathers. The back has scaly bronze-green feathers with black and copper markings.
+</p>
 ~~~
 
 {::nomarkdown}
