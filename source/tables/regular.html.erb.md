@@ -196,7 +196,7 @@ The following tables of countries and their capital cities has the first row of 
 ## Table with an offset column of header cells
 {:.ex}
 
-In this table, the row header cells are in the second rather than in the first column. The approach is very similar to the examples above: The scope of the header cells in the top row is set to `col`. By using the `row` value for `scope` assigns the header cells in the second column to data cells on the left and the right of the individual header cell.
+In this table, the row header cells are in the second rather than in the first column. The approach is similar to the examples above: The scope of the header cells in the top row is set to `col`. By using the `row` value for `scope` assigns the header cells in the second column to data cells on the left and the right of the individual header cell.
 
 {::nomarkdown}
 <%= sample_start %>
