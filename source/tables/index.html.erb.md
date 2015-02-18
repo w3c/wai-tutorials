@@ -55,4 +55,4 @@ Tables without structural markup to differentiate and properly link between head
 
 -   **People using screen readers** can have the row and column headers read aloud as they navigate through the table. Screen readers speak one cell at a time and reference the associated header cells, so the reader doesn’t lose context.
 
--    **Some people use alternative ways to render the data**, for example by using custom stylesheets to display header cells more prominently. Techniques like this enable them to change text size and colors, and display the information as lists rather than grids. In order to allow alternative renderings, table code needs to be properly structured.
+-    **Some people use alternative ways to render the data**, for example by using custom stylesheets to display header cells more prominently. Techniques like this enable them to change text size and colors, and display the information as lists rather than grids. In order to allow alternative renderings, table code needs to be properly <structured class=""></structured>

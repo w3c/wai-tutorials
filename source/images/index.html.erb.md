@@ -37,7 +37,7 @@ Images must have text alternatives that describe the information or function rep
 
 -   **[Image maps](imagemap.html)**: The text alternative for an image that contains multiple clickable areas should provide an overall context for the set of links. In addition, each individual clickable area should have alternative text that describes the purpose or destination of the link.
 
-For quick overview on deciding which category a specific image fits into, see the [alt Decision Tree](decision-tree.html). The text alternative needs to be determined by the author, depending on the usage, context, and content of an image. For example, the exact type and look of a bird in an image might be less relevant and described only briefly on a website about parks, but may be relevant on a website specifically about birds.
+For a quick overview on deciding which category a specific image fits into, see the [alt Decision Tree](decision-tree.html). The text alternative needs to be determined by the author, depending on the usage, context, and content of an image. For example, the exact type and look of a bird in an image might be less relevant and described only briefly on a website about parks, but may be relevant on a website specifically about birds.
 
 ## Why is this important?
 
