@@ -13,7 +13,7 @@ contributors:
 support: <strong>Developed with support</strong> from the <a href="http://www.w3.org/WAI/ACT/">WAI-ACT</a> project, co-funded by the European Commission <abbr title="Information Society Technologies">IST</abbr> Programme.
 ---
 
-It is necessary to indicate what table data cell is labelled by each table heading cell, when a table includes a more complex heading structure than [Simple Tables](simple.html). To accomplish this authors can mark up the table headers using the `<th>` element and use the `scope` attribute to declare the direction of each header. Use the values of `row` or `col` of the `scope` attribute to denote that a header applies to the entire row or column, respectively.
+It is necessary to indicate what table data cell is labelled by each table heading cell, when a table includes a more complex heading structure than [Simple Tables](simple.html). To accomplish this authors can mark up the table headers using the `<th>` element and use the `scope` attribute to declare the direction of each header. The `scope` attribute can be set to `row` or `col` to denote that a header applies to the entire row or column, respectively.
 
 Additionally, you can use the `<caption>` element to identify the table in a document. This is particularly useful for screen-reader users browsing the web page in “tables mode” where they can navigate from table to table. More background and guidance on the using `<caption>` element is provied on the [Caption & Summary page](caption-summary.html).
 
