@@ -31,7 +31,7 @@ There are situations where the composition of an image is important and needs to
 
 Remember that complex images can be difficult to understand by many people, in particular people with learning disabilities and people with low vision. Long descriptions benefit many people and it is good practice to make them available to everyone, for example, as part of the main content. It may also be possible to reduce unecessary complexity in your images, and make them easier to understand for everyone.
 
-It is also good practice to refer to and summarize more complex images from the accompanying text. For example, a reference like “The following graph shows that visitors were lost in the first quarter, but the numbers recovered in the second quarter” helps to point out the relevant information that the image is intended to present.
+It is also good practice to refer to and summarize more complex images from the accompanying text. For example, a reference such as “The following graph shows that visitors were lost in the first quarter, but the numbers recovered in the second quarter” helps to point out the relevant information that the image is intended to present.
 
 ## Description containing structured information
 {:.ex}
