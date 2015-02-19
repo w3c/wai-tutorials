@@ -31,12 +31,12 @@ There are situations where the composition of an image is important and needs to
 
 Remember that complex images can be difficult to understand by many people -- in particular people with learning disabilities and people with low vision. Long descriptions benefit many people and it is good practice to make them available to everyone, for example, as part of the main content. It may also be possible to reduce unnecessary complexity in your images, and make them easier to understand for everyone.
 
-It is also good practice to refer to and summarize more complex images from the accompanying text. For example, a reference like “The following graph shows that visitors were lost in the first quarter, but the numbers recovered in the second quarter” helps to point out the relevant information that the image is intended to present.
+It is also good practice to refer to and summarize more complex images from the accompanying text. For example, a reference such as “The following graph shows that visitors were lost in the first quarter, but the numbers recovered in the second quarter” helps to point out the relevant information that the image is intended to present.
 
 ## Description containing structured information
 {:.ex}
 
-In this example, a bar chart of website visitor statistics has the short description “Bar chart showing monthly and total visitors for the first quarter 2014 for sites 1 to 3”, provided through the `alt` attribute of the image. The long description provides detailed information, including scales, values, relationships and trends that are represented visually. For example, the long description should point out the declining values for site 1, consistent values for site 2, and increasing values for site 3 that are encoded in the bar chart. The [longdesc approach](#providing-a-link-to-the-long-description-via-longdesc) used in the following example is described later in the section.
+In this example, a bar chart of website visitor statistics has the short description “Bar chart showing monthly and total visitors for the first quarter 2014 for sites 1 to 3”, provided through the `alt` attribute of the image. The long description provides detailed information, including scales, values, relationships and trends that are represented visually. For example, the long description can point out the declining values for site 1, consistent values for site 2, and increasing values for site 3 that are encoded in the bar chart. The [longdesc approach](#providing-a-link-to-the-long-description-via-longdesc) used in the following example is described later in the section.
 
 {::nomarkdown}
 <%= sample_start %>
@@ -71,7 +71,7 @@ Among the approaches below, the first and second one make the information availa
   </div>
 </aside>
 
-The `longdesc` attribute can contain the URI of a separate web page that provides the long description for an image, or a fragment identifier that refers to an element on the same page that proives the long description.
+The `longdesc` attribute can contain the URI of a separate web page that provides the long description for an image or a fragment identifier that refers to an element on the same page that provides the long description.
 
 When the `longdesc` attributes contains a URI to refer to another web page with the long description, it is recommended to also apply [Approach 3 (a text link to the long description adjacent to the image)](#a-text-link-to-the-long-description-adjacent-to-the-image). This is a work-around for web browsers and assistive technologies that don’t fully support the `longdesc` attribute.
 
