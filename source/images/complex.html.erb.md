@@ -73,7 +73,7 @@ Among the approaches below, the first and second one make the information availa
 
 The `longdesc` attribute can contain the URI of a separate web page that provides the long description for an image, or a fragment identifier that refers to an element on the same page that proives the long description.
 
-When the `longdesc` attributes contains a URI to refer to another web page with the long description, it is recommended to also apply [Approach 3 (A text link to the long description adjacent to the image)](#a-text-link-to-the-long-description-adjacent-to-the-image). This is a work-around for web browsers and assistive technologies that don’t fully support the `longdesc` attribute.
+When the `longdesc` attributes contains a URI to refer to another web page with the long description, it is recommended to also apply [Approach 3 (a text link to the long description adjacent to the image)](#a-text-link-to-the-long-description-adjacent-to-the-image). This is a work-around for web browsers and assistive technologies that don’t fully support the `longdesc` attribute.
 
 {::nomarkdown}
 <%= code_start %>
