@@ -19,7 +19,7 @@ wcag_techniques:
 
 Provide instructions to help users understand how to complete the form and use individual form controls. This includes indicating any required and optional input, data formats, and other important information.
 
-**Important:** Screen readers often switch to “Forms Mode” when they are processing content within a `<form>` element. In this mode they usually only read aloud form elements such as `<input>`, `<select>`, `<textarea>`, `<legend>`, and `<label>`. It is critical to include form instructions in ways that can be read aloud.
+**Important:** Screen readers often switch to “Forms Mode” when they are processing content within a `<form>` element. In this mode they usually only read aloud form elements such as `<input>`, `<select>`, `<textarea>`, `<legend>`, and `<label>`. It is critical to include form instructions in ways that can be read aloud. This will be explained further below.
 
 ## Overall instructions
 {:.newex}
@@ -85,7 +85,7 @@ Providing instructions outside labels allows more flexible positioning and desig
 #### Using `aria-labelledby`
 {:.ap}
 
-One approach is to use the WAI-ARIA `aria-labelledby` attribute to associate instructions with form controls. At the time of writing this tutorial, this approach is not fully supported by all web browsers and assistive technologies, for example Braille displays. To ensure backward compatibility, the `for` and `id` attributes are also used in this example.
+One approach is to use the WAI-ARIA `aria-labelledby` attribute to associate instructions with form controls. At the time of writing this tutorial, this approach is not fully supported by all web browsers and assistive technologies, for example, Braille displays. To ensure backward compatibility, the `for` and `id` attributes are also used in this example.
 
 {::nomarkdown}
 <%= sample_start %>
