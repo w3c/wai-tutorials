@@ -80,10 +80,10 @@ It is often useful to also use the `<title>` element of the web page to indicate
 <%= code_end %>
 {:/nomarkdown}
 
-### Using a dialog
+### Using dialogs
 {:.ex}
 
-A dialog is a moderately prominent way to inform users of changes. It can be used if other means of informing the user prove to be easily missed. Dialogs are more obtrusive and distracting, which may be the desired effect.
+A dialog is a common way to inform users of changes. It can be used if other means of informing the user prove to be easily missed. Dialogs are more obtrusive and distracting, which may be the desired effect.
 
 JavaScript provides a very basic alert dialog box that provides proper keyboard navigation and respects the user’s default settings, including font size, colors, and language. A custom dialog implementation would need to match that functionality.
 
@@ -135,7 +135,7 @@ When errors occur, it is helpful to list them at the top of the page, before the
 - Provide an indication of how to correct mistakes, and remind users of any format requirements;
 - Include an in-page link to the corresponding form control to make access easier for the users.
 
-If the user is not redirected to another page, the list of errors should be inserted into a prominent container to inform them. This container should have the role set to alert, to also inform assistive technology users about this change.
+Unless the user is redirected to another page (not recommended), the list of errors should be inserted into a prominent container to inform them. This container should have the role set to alert, to also inform assistive technology users about this change.
 
 {::nomarkdown}
 <%= sample_start %>
