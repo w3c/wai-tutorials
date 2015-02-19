@@ -26,7 +26,7 @@ Provide labels to identify all form controls, including text fields, checkboxes,
 
 Labels need to describe the purpose of the form control. This section of the tutorial describes how to provide labels that are properly associated with form controls. Later sections explain how to provide [instructions](instructions.html), [validate user input](validation.html), and [provide feedback](notifications.html) to help users complete your form.
 
-A label and a form control need to be associated with each other either implicitly or explicitly. Web browsers provide the label as a larger clickable area, for example to select or activate the control. It also ensures that assistive technology is able to refer to the correct label when presenting a form control.
+A label and a form control need to be associated with each other either implicitly or explicitly. Web browsers provide the label as a larger clickable area, for example, to select or activate the control. It also ensures that assistive technology is able to refer to the correct label when presenting a form control.
 
 ## Associating labels explicitly
 {:.newap}
@@ -155,7 +155,7 @@ The `title` attribute can also be used to identify form controls. This approach 
 
 Screen readers and other assistive technology, just as web browsers, hide elements from their users when they are styled using `display: none;` and `visibility: hidden;`.
 
-The common approach used to hide information visually but keep them available to screen reader and other assistive technology users, is by using CSS that will keep the information technically visible but practically hidden. For example, it is presented in a 1-by-1 pixel area with a 1-pixel margin. The CSS class `visuallyhidden` (**do not confuse** with CSS `visibility: hidden`) used for the previous examples is provided below:
+The common approach used to hide information visually but keep them available to screen reader and other assistive technology users, is to use CSS that will keep the information technically visible but practically hidden. For example, presenting the label in a 1-by-1 pixel area with a 1-pixel margin, as demonstrated with the CSS class `visuallyhidden` (**do not confuse** with CSS `visibility: hidden`) below:
 
 {::nomarkdown}
 <%= code_start %>
