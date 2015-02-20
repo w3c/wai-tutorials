@@ -15,7 +15,7 @@ wcag_techniques:
 
 In addition to providing instructions, validate user input to help users avoid mistakes. HTML5 defines a range of built-in functionality to validate common types of input, such as email addresses and dates. In some situations, such as validating custom controls or supporting legacy browsers, additional scripting may be necessary to validate user input.
 
-Custom validation needs to notify users in an accessible way as described in the [User Notifications](notifications.html) part of this tutorial. Client-side validation is not a security feature, and data needs to be validated on the server-side as well.
+Custom validation needs to notify users in an accessible way as described in the [User Notifications](notifications.html) part of this tutorial. Client-side validation alone does not ensure security; therefore data needs to be validated on the server-side as well.
 
 ## Validating required input
 {:.newex}
@@ -208,7 +208,7 @@ Validation should aim to be as accommodating as possible of different forms of i
 
 ## Client-side validation benefits
 
-In general, validating input client-side results in a better user experience and makes resolving validation errors more understandable. It can also reduce network and server load. However, not all web browsers support HTML5, or they may not support your custom validation scripts. Client-side validation can also be easily bypassed, or the data is changed before reaching the server. This means that validation needs to be carried out server-side as well.
+In general, client-side validation results in a better user experience and makes resolving validation errors more understandable. It can also reduce network and server load. However, not all web browsers support HTML5, or they may not support your custom validation scripts. Client-side validation can also be easily bypassed, or the data is changed before reaching the server. This means that validation needs to be carried out server-side as well.
 
 ## Validation by the user
 
