@@ -12,7 +12,7 @@ wcag_techniques:
 
 Grouping related form controls makes forms more understandable for all users, as related controls are easier to identify. It also makes it easier for people to focus on smaller and more manageable groups rather than try to grasp the entire form at once.
 
-Grouping needs to be carried out visually and in the code, for example by using the `<fieldset>` and `<legend>` elements to associate related form controls. Also, related entries of a `<select>` element can be grouped using `<optgroup>`.
+Grouping needs to be carried out visually and in the code, for example, by using the `<fieldset>` and `<legend>` elements to associate related form controls. Also, related entries of a `<select>` element can be grouped using `<optgroup>`.
 
 ## Associating related controls with `fieldset`
 {:.ap}
@@ -24,7 +24,7 @@ The legend for a group of controls can also highlight common attributes of all c
 ### Radio buttons
 {:.ex.inap}
 
-In the example below, there are three radio buttons that allow the user to chose an output format. Radio button groups should always be grouped using `<fieldset>`.
+In the example below, there are three radio buttons that allow the user to choose an output format. Radio button groups should always be grouped using `<fieldset>`.
 
 {::nomarkdown}
 <%= sample_start %>
