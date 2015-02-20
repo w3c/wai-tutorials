@@ -51,14 +51,14 @@ In addition to overall instructions, it is also important to provide relevant in
 
 For simple use cases, providing instructions within labels may be sufficient. This approach is reliable across different web browsers and assistive technologies, although it may require some additional thought to support some styling needs.
 
-In the example below, the required format for the “Expiry Date” is indicated by “MM/YYYY” within the same label:
+In the example below, the required format for the “Expiration Date” is indicated by “MM/YYYY” within the same label:
 
 {::nomarkdown}
 <%= sample_start %>
 
 <form method="post" action="#">
 	<div>
-		<label for="expire">Expiry date (MM/YYYY): </label> <input type="text" name="expire" id="expire">
+		<label for="expire">Expiration date (MM/YYYY): </label> <input type="text" name="expire" id="expire">
 	</div>
 </form>
 
@@ -70,7 +70,7 @@ In the example below, the required format for the “Expiry Date” is indicated
 {:/nomarkdown}
 
 ~~~ html
-<label for="expire">Expiry date (MM/YYYY): </label> <input type="text" name="expire" id="expire">
+<label for="expire">Expiration date (MM/YYYY): </label> <input type="text" name="expire" id="expire">
 ~~~
 
 {::nomarkdown}
@@ -102,7 +102,7 @@ One approach is to use the WAI-ARIA `aria-labelledby` attribute to associate ins
 </style>
 <form method="post" action="#" id="ex3">
 	<div>
-		<label id="expLabel" for="expire4" tabindex="-1">Expiry date:</label>
+		<label id="expLabel" for="expire4" tabindex="-1">Expiration date:</label>
 		<span>
 			<input type="text" name="expire" id="expire4" aria-labelledby="expLabel expDesc2">
 			<span id="expDesc2" tabindex="-1">MM/YYYY</span>
@@ -118,7 +118,7 @@ One approach is to use the WAI-ARIA `aria-labelledby` attribute to associate ins
 {:/nomarkdown}
 
 ~~~ html
-<label id="expLabel" for="expire" tabindex="-1">Expiry date:</label>
+<label id="expLabel" for="expire" tabindex="-1">Expiration date:</label>
 <span>
 	<input type="text" name="expire" id="expire" aria-labelledby="expLabel expDesc">
 	<span id="expDesc" tabindex="-1">MM/YYYY</span>
@@ -149,7 +149,7 @@ By using `aria-describedby` to reference the format of the field, this informati
 {:/nomarkdown}
 
 ~~~ html
-<label id="expLabel" for="expire">Expiry date:</label>
+<label id="expLabel" for="expire">Expiration date:</label>
 <span>
 	<input type="text" name="expire" id="expire" aria-labelledby="expLabel" aria-describedby="expDesc">
 	<span id="expDesc">MM/YYYY</span>
