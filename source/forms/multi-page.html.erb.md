@@ -1,5 +1,5 @@
 ---
-title: Multi-Page Forms
+title: Multi-page Forms
 order: 7
 wcag_success_criteria:
   - 1.3.1
