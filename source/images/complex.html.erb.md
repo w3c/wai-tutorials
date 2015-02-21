@@ -172,7 +172,7 @@ When a long description is provided on the same web page as an image, its locati
 ### Structurally associating the image and its adjacent long description (HTML5)
 {:.ap}
 
-The HTML5 `<figure>` element can be used to enclose both the image and its long description. The long description (presented as headings, text, and a table) is explicitly associated to the image by using `role="group"` on the containing `<figure>` element.
+The HTML5 `<figure>` element can be used to enclose both the image and its long description. The long description (presented as headings, text, and a table) is wrapped in the `<figcaption>` element. It is explicitly associated to the image using `role="group"` on the containing `<figure>` element.
 
 {::nomarkdown}
 <%= code_start %>
@@ -182,13 +182,15 @@ The HTML5 `<figure>` element can be used to enclose both the image and its long 
 <figure role="group">
 	<img src="chart.png"
 		alt="Bar chart showing monthly and total visitors for the first quarter 2014 for sites 1 to 3, described in detail below.">
-	<h2>Overview</h2>
-	<p>The chart shows the website hits for the first quarter of 2014 …</p>
-	<h2>Values</h2>
-	<table>
-		<caption>Example.com Site visitors Jan to March 2014</caption>
-		<tr>…</tr>
-	</table>
+    <figcaption>
+    	<h2>Overview</h2>
+    	<p>The chart shows the website hits for the first quarter of 2014 …</p>
+    	<h2>Values</h2>
+    	<table>
+    		<caption>Example.com Site visitors Jan to March 2014</caption>
+    		<tr>…</tr>
+    	</table>
+    </figcaption>
 </figure>
 ~~~
 
