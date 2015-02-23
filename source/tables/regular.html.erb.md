@@ -118,7 +118,7 @@ In the header row, the `col` value for `scope` associates each header cell with 
 ## Table with header cells in the top row and first column
 {:.ex}
 
-The following tables of countries and their capital cities has the first row of cells marked as '<th>' cells and also has the first column with the country names marked up as `<th>` cells. It needs the `scope` attribute with the value of `row` to declare the applicability of each header cell. Otherwise some screen readers will associate header cells with other header cells because they are in the same column. For example in the cell marked “Holland” some screen readers will read “Belgium – France – Holland” if the `scope` attribute is not provided. The first cell in the table also needs scope to indicte whether it is a heading for the other cells in the same row or for the cells in the same column.
+The following tables of countries and their capital cities has the first row of cells marked as `<th>` cells and also has the first column with the country names marked up as `<th>` cells. It needs the `scope` attribute with the value of `row` to declare the applicability of each header cell. Otherwise some screen readers will associate header cells with other header cells because they are in the same column. For example in the cell marked “Holland” some screen readers will read “Belgium – France – Holland” if the `scope` attribute is not provided. The first cell in the table also needs scope to indicte whether it is a heading for the other cells in the same row or for the cells in the same column.
 
 {::nomarkdown}
 <%= sample_start %>
