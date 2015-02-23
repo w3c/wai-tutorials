@@ -12,7 +12,7 @@ contributors:
 support: <strong>Developed with support</strong> from the <a href="http://www.w3.org/WAI/ACT/">WAI-ACT</a> project, co-funded by the European Commission <abbr title="Information Society Technologies">IST</abbr> Programme.
 ---
 
-This decision tree shows some cases of when to use which alternative text solution when embedding an image using the `<img>` element. In some cases using other techniques (for example using CSS instead of an image for decorative images) might be used, as described in detail from the linked tutorial pages.
+This decision tree shows when to use which alternative text solution when embedding an image using the `<img>` element. In some cases other techniques (such as CSS) might be used, as described in detail from the linked tutorial pages.
 
 -   **Does the image contain text?**
 	-   {:.yes} **Yes:**
