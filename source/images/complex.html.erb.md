@@ -135,6 +135,27 @@ This approach provides a text link next to the image that refers to a separate w
 <%= code_end %>
 {:/nomarkdown}
 
+To associate the link with the image, HTML5 `<figure>` and `<figcaption>` elements can be used. The WAI-ARIA `role` of `group` helps to maintain backwards compatibility with web browsers that don’t support the native semantics of the `<figure>` element.
+
+{::nomarkdown}
+<%= code_start %>
+{:/nomarkdown}
+
+~~~ html
+<figure role="group">
+    <img
+        src="chart.png"
+        alt="Bar chart showing monthly and total visitors for the first quarter 2014 for sites 1 to 3">
+    <figcaption>
+        <a href="2014-first-qtr.html">Example.com Site visitors Jan to March 2014 text description of the bar chart</a>
+    </figcaption>
+</figure>
+~~~
+
+{::nomarkdown}
+<%= code_end %>
+{:/nomarkdown}
+
 {::nomarkdown}
 <%= notes_start %>
 {:/nomarkdown}
@@ -172,7 +193,7 @@ When a long description is provided on the same web page as an image, its locati
 ### Structurally associating the image and its adjacent long description (HTML5)
 {:.ap}
 
-The HTML5 `<figure>` element can be used to enclose both the image and its long description. The long description (presented as headings, text, and a table) is wrapped in the `<figcaption>` element. It is explicitly associated to the image using `role="group"` on the containing `<figure>` element.
+The HTML5 `<figure>` element can be used to enclose both the image and its long description. The long description (presented as headings, text, and a table) is wrapped in the `<figcaption>` element. It is explicitly associated to the image using `role="group"` on the containing `<figure>` element in web browsers that don’t convey the semantics of the `<figure>` element.
 
 {::nomarkdown}
 <%= code_start %>
