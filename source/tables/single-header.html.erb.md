@@ -1,5 +1,6 @@
 ---
-title: Simple Tables
+title: Single Header Tables
+nav_title: Single Headers
 order: 2
 technologies: HTML5
 wcag_techniques:
@@ -13,9 +14,9 @@ contributors:
 support: <strong>Developed with support</strong> from the <a href="http://www.w3.org/WAI/ACT/">WAI-ACT</a> project, co-funded by the European Commission <abbr title="Information Society Technologies">IST</abbr> Programme.
 ---
 
-When the content of a simple table is descriptive on its own, only a header row or column is needed to give the user an impression of the data in the table.
+When the content of a table is descriptive on its own, only a header row or column is needed to give the user an impression of the data in the table.
 
-If the table has both column and row headings, the `scope` attribute should be used to avoid confusion. For more guidance on such tables, see [Regular Tables](regular.html).
+If the table content is abiguous or has both column and row headings, the `scope` attribute should be used to avoid confusion. For more guidance on such tables, see [Double Header Tables](double-header.html).
 
 ## Table with header cells in the top row only
 {:.ex}
@@ -143,6 +144,74 @@ In the following table the data from the previous example is laid out differentl
 		<td>West Wing</td>
 		<td>Main Hall</td>
 	</tr>
+</table>
+~~~
+
+{::nomarkdown}
+<%= code_end %>
+{:/nomarkdown}
+
+## Table with ambiguous data
+{:.ex}
+
+In this example the first and last names and cities can’t be distinguished from one another without the appropriate header information. By using the `scope` element with the value `col`, the data cells are clearly associated with their header cells “Last Name”, “First Name” and “City”.
+
+{::nomarkdown}
+<%= sample_start %>
+<table>
+  <caption>Teddy bear collectors:</caption>
+  <tr>
+    <th scope="col">Last Name</th>
+    <th scope="col">First Name</th>
+    <th scope="col">City</th>
+  </tr>
+  <tr>
+    <td>Phoenix</td>
+    <td>Imari</td>
+    <td>Henry</td>
+  </tr>
+  <tr>
+    <td>Zeki</td>
+    <td>Rome</td>
+    <td>Min</td>
+  </tr>
+  <tr>
+    <td>Apirka</td>
+    <td>Kelly</td>
+    <td>Brynn</td>
+  </tr>
+</table>
+
+<%= sample_end %>
+{:/nomarkdown}
+
+{::nomarkdown}
+<%= code_start %>
+{:/nomarkdown}
+
+~~~ html
+<table>
+  <caption>Teddy bear collectors:</caption>
+  <tr>
+    <th scope="col">Last Name</th>
+    <th scope="col">First Name</th>
+    <th scope="col">City</th>
+  </tr>
+  <tr>
+    <td>Phoenix</td>
+    <td>Imari</td>
+    <td>Henry</td>
+  </tr>
+  <tr>
+    <td>Zeki</td>
+    <td>Rome</td>
+    <td>Min</td>
+  </tr>
+  <tr>
+    <td>Apirka</td>
+    <td>Kelly</td>
+    <td>Brynn</td>
+  </tr>
 </table>
 ~~~
 
