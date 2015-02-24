@@ -1,5 +1,6 @@
 ---
-title: Multi-level Tables
+title: Multi-level Header Tables
+nav_title: Multi-level Headers
 order: 5
 technologies: HTML5
 wcag_techniques:
@@ -13,14 +14,14 @@ contributors:
 support: <strong>Developed with support</strong> from the <a href="http://www.w3.org/WAI/ACT/">WAI-ACT</a> project, co-funded by the European Commission <abbr title="Information Society Technologies">IST</abbr> Programme.
 ---
 
-Multi-level tables are too complex to identify a strict horizontal or vertical association between header and data cells. In such tables, each table header is identified with an (document-wide) unique `id`. Data cells refer to those `id`s by listing one or more in their `headers` attribute, separated by spaces.
+Multi-level header tables are too complex to identify a strict horizontal or vertical association between header and data cells. In such tables, each table header is identified with an (document-wide) unique `id`. Data cells refer to those `id`s by listing one or more in their `headers` attribute, separated by spaces.
 
 Tables that should be marked up this way include:
 
 - Tables with column headers that repeat or change part-way through the table.
 - Tables with three or more header cells associated to each data cell.
 
-Multi-level tables may also need to have a caption to identify it and a summary to describe the layout of the table, see [Caption & Summary](caption-summary.html).
+Multi-level header tables may also need to have a caption to identify it and a summary to describe the layout of the table, see [Caption & Summary](caption-summary.html).
 
 In many cases it is worth to consider to restructure the information in such tables to make them less complex for all readers, for example by splitting the information in smaller, more manageable tables as shown in [Example 3](#split-up-multi-level-tables).
 
