@@ -25,17 +25,7 @@ Whether to treat an image as decorative or [informative](informative.html) is a 
 -   Illustrative of adjacent text but not contributing information (“eye-candy”);
 -   Identified and described by surrounding text.
 
-{::nomarkdown}
-<%= notes_start %>
-{:/nomarkdown}
-
-**Note:** Where possible decorative images should be part of the CSS
-styling rather than being in the HTML.
-
-{::nomarkdown}
-<%= notes_end %>
-{:/nomarkdown}
-
+The examples below show how to use the `alt` attribute when embedding an image using the `<img>` element. Where possible, CSS background images should be used to embed decorative images that are used in the general layout of the page.
 
 ## Image used as part of page design
 {:.ex}
