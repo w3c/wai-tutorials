@@ -1,5 +1,6 @@
 ---
-title: Regular Tables
+title: Double Header Tables
+nav_title: Double Headers
 order: 3
 technologies: HTML5
 wcag_techniques:
@@ -13,7 +14,7 @@ contributors:
 support: <strong>Developed with support</strong> from the <a href="http://www.w3.org/WAI/ACT/">WAI-ACT</a> project, co-funded by the European Commission <abbr title="Information Society Technologies">IST</abbr> Programme.
 ---
 
-It is necessary to indicate what table data cell is labelled by each table heading cell, when a table includes a more complex heading structure than [Simple Tables](simple.html). To accomplish this authors can mark up the table headers using the `<th>` element and use the `scope` attribute to declare the direction of each header. The `scope` attribute can be set to `row` or `col` to denote that a header applies to the entire row or column, respectively.
+It is necessary to indicate what table data cell is labelled by each table heading cell, when a table includes column and row headers. To accomplish this authors can mark up the table headers using the `<th>` element and use the `scope` attribute to declare the direction of each header. The `scope` attribute can be set to `row` or `col` to denote that a header applies to the entire row or column, respectively.
 
 Additionally, you can use the `<caption>` element to identify the table in a document. This is particularly useful for screen-reader users browsing the web page in “tables mode” where they can navigate from table to table. More background and guidance on the using `<caption>` element is provied on the [Caption & Summary page](caption-summary.html).
 
@@ -22,14 +23,13 @@ Additionally, you can use the `<caption>` element to identify the table in a doc
 
 The following table of opening times has header information in both the top row and the first column. All header cells are marked up as `<th>` cells with `scope` attributes added.
 
-In the header row, the `col` value for `scope` associates each header cell with the data cells in the column. In the header column, the `row` value associates the individual headers with their rows.
+In the header row, the `col` value for `scope` associates each header cell with the data cells in the column. In the header column, the `row` value associates the individual headers with their rows. It is important to define the relationship between header and data cells to help users to understand table data. In the example, the “Open” and “Closed” labels are only useful if they can be assigned to a specific day and time.
 
 {::nomarkdown}
 <%= sample_start %>
 
-<p><strong>Delivery slots:</strong></p>
-
 <table>
+  <caption>Delivery slots:</caption>
   <tr>
     <td></td>
     <th scope="col">Monday</th>
@@ -81,6 +81,7 @@ In the header row, the `col` value for `scope` associates each header cell with 
 
 ~~~ html
 <table>
+  <caption>Delivery slots:</caption>
   <tr>
     <td></td>
     <th scope="col">Monday</th>
@@ -114,84 +115,6 @@ In the header row, the `col` value for `scope` associates each header cell with 
 {:/nomarkdown}
 
 [Full code for “Table with header cells in the top row and first column”](examples/headertoprowfirstcol.html)
-
-## Table with header cells in the top row and first column
-{:.ex}
-
-The following tables of countries and their capital cities has the first row of cells marked as `<th>` cells and also has the first column with the country names marked up as `<th>` cells. It needs the `scope` attribute with the value of `row` to declare the applicability of each header cell. Otherwise some screen readers will associate header cells with other header cells because they are in the same column. For example in the cell marked “Holland” some screen readers will read “Belgium – France – Holland” if the `scope` attribute is not provided. The first cell in the table also needs scope to indicte whether it is a heading for the other cells in the same row or for the cells in the same column.
-
-{::nomarkdown}
-<%= sample_start %>
-
-<table>
-  <caption>
-    Capital cities
-  </caption>
-  <tr>
-    <th scope="col">Country</th>
-    <th scope="col">Capital city</th>
-  </tr>
-  <tr>
-    <th scope="row">Belgium</th>
-    <td>Brussels</td>
-  </tr>
-  <tr>
-    <th scope="row">France</th>
-    <td>Paris</td>
-  </tr>
-  <tr>
-    <th scope="row">Holland</th>
-    <td>Amsterdam</td>
-  </tr>
-  <tr>
-    <th scope="row">Luxembourg</th>
-    <td>Luxembourg</td>
-  </tr>
-  <tr>
-    <th scope="row">Spain</th>
-    <td>Madrid</td>
-  </tr>
-  <tr>
-    <th scope="row">UK</th>
-    <td>London</td>
-  </tr>
-</table>
-
-<%= sample_end %>
-{:/nomarkdown}
-
-{::nomarkdown}
-<%= code_start %>
-{:/nomarkdown}
-
-~~~ html
-<table>
-  <caption>Capital cities</caption>
-  <tr>
-    <th scope="col">Country</th>
-    <th scope="col">Capital city</th>
-  </tr>
-  <tr>
-    <th scope="row">Belgium</th>
-    <td>Brussels</td>
-  </tr>
-  <tr>
-    <th scope="row">France</th>
-    <td>Paris</td>
-  </tr>
-  <tr>
-    <th scope="row">Holland</th>
-    <td>Amsterdam</td>
-  </tr>
-  […]
-</table>
-~~~
-
-{::nomarkdown}
-<%= code_end %>
-{:/nomarkdown}
-
-[Full code Example “Table with header cells in the top row and first column”](examples/scope-simple.html)
 
 ## Table with an offset column of header cells
 {:.ex}
