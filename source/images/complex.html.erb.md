@@ -135,7 +135,9 @@ This approach provides a text link next to the image that refers to a separate w
 <%= code_end %>
 {:/nomarkdown}
 
-To associate the link with the image, HTML5 `<figure>` and `<figcaption>` elements can be used. The WAI-ARIA `role` of `group` helps to maintain backwards compatibility with web browsers that don’t support the native semantics of the `<figure>` element.
+This approach is supported by all web browsers and assistive technologies, and makes the long descriptions available to everyone. However the link is not associated with the image in a semantic way.
+
+The HTML5 `<figure>` and `<figcaption>` elements can be used to group image and link semantically. Adding `role="group"` to the figure maintains backwards compatibility with web browsers that don’t support the native semantics of the `<figure>` element.
 
 {::nomarkdown}
 <%= code_start %>
@@ -154,16 +156,6 @@ To associate the link with the image, HTML5 `<figure>` and `<figcaption>` elemen
 
 {::nomarkdown}
 <%= code_end %>
-{:/nomarkdown}
-
-{::nomarkdown}
-<%= notes_start %>
-{:/nomarkdown}
-
-**Note:** This approach is supported by all web browsers and assistive technologies, and makes the long descriptions available to everyone.
-
-{::nomarkdown}
-<%= notes_end %>
 {:/nomarkdown}
 
 ### Describing the location of the long description in the `alt` attribute
