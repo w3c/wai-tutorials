@@ -25,7 +25,7 @@ Whether to treat an image as decorative or [informative](informative.html) is a 
 -   Illustrative of adjacent text but not contributing information (“eye-candy”);
 -   Identified and described by surrounding text.
 
-The examples below show how to use the `alt` attribute when embedding an image using the `<img>` element. Where possible, CSS background images should be used to embed decorative images that are used in the general layout of the page.
+The examples below show how to use the `alt` attribute when decorative images are provided using the `<img>` element. Where possible, decorative images should be provided using CSS background images instead.
 
 ## Image used as part of page design
 {:.ex}
