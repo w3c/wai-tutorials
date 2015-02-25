@@ -1,5 +1,5 @@
 ---
-title: Irregular Header Tables
+title: Tables with irregular headers
 nav_title: Irregular Headers
 order: 4
 technologies: HTML5
@@ -13,7 +13,7 @@ contributors:
 support: <strong>Developed with support</strong> from the <a href="http://www.w3.org/WAI/ACT/">WAI-ACT</a> project, co-funded by the European Commission <abbr title="Information Society Technologies">IST</abbr> Programme.
 ---
 
-Irregular header tables have header cells that span multiple columns and/or rows. The `scope` attribute can be used to define the range of data cells covered by a header cell.
+Tables with irregular headers have header cells that span multiple columns and/or rows. The `scope` attribute can be used to define the range of data cells covered by a header cell.
 
 For example, a header cell that spans three columns should be associated to data cells in this column group of three columns using the `colgroup` value in the `scope` attribute. The same principle applies to a header cell spanning multiple rows. It is associated with its row group by using the `scope` value of `rowgroup`.
 
@@ -34,26 +34,6 @@ In the table below, there are two pairs of column headers. Each pair of column h
 To associate the first-level headers properly with the cells both columns, the column structure needs to be defined at the beginning of the table. A `<col>` element identifies each column, beginning on the left. If a header spans two or more columns, use a `<colgroup>` element instead of that number of `<col>` elements, and the number of columns spanned is noted in the `span` attribute.
 
 In addition, the value of the `scope` attribute in the first-level headers is set to `colgroup` so that it is associated with the entire group of columns. The second-level headers only apply to the corresponding column so the `scope` attribute is set to `col` as shown in previous examples.
-
-<!--
-
-For example, if a table has four columns and a header is spanning column two and three, the columns and column groups would be defined by the following code:
-
-{::nomarkdown}
-<%= code_start %>
-{:/nomarkdown}
-
-~~~html
-<col>
-<colgroup span="2"></colgroup>
-<col>
-~~~
-
-{::nomarkdown}
-<%= code_end %>
-{:/nomarkdown}
-
--->
 
 {::nomarkdown}
 <%= sample_start %>

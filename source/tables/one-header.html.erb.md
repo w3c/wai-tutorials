@@ -1,6 +1,6 @@
 ---
-title: Single Header Tables
-nav_title: Single Headers
+title: Tables with one header
+nav_title: One Header
 order: 2
 technologies: HTML5
 wcag_techniques:
@@ -16,7 +16,7 @@ support: <strong>Developed with support</strong> from the <a href="http://www.w3
 
 When the content of a table is descriptive on its own, only a header row or column is needed to give the user an impression of the data in the table.
 
-If the table content is abiguous or has both column and row headings, the `scope` attribute should be used to avoid confusion. For more guidance on such tables, see [Double Header Tables](double-header.html).
+If the table content is abiguous or has both column and row headings, the `scope` attribute should be used to avoid confusion. For more guidance on such tables, see [tables with two headers](two-headers.html).
 
 ## Table with header cells in the top row only
 {:.ex}

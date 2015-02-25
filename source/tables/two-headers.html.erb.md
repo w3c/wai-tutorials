@@ -1,6 +1,6 @@
 ---
-title: Double Header Tables
-nav_title: Double Headers
+title: Tables with two headers
+nav_title: Two Headers
 order: 3
 technologies: HTML5
 wcag_techniques:

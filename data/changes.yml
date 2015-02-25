@@ -42,7 +42,7 @@ changes:
         commit: f644dd3ccae3872f39782afc2a172d3970166599
   - 2014-06-19:
       - desc: "Rename simple tables to basic tables"
-        page: tables/single-header.html
+        page: tables/one-header.html
         by:
           - EO WG
         commit: 8c8042a04b5f1f0b8e0ea400327e971f49db254b
@@ -76,7 +76,7 @@ changes:
         page: all
         commit: 3cd48d7fcd2911ead54740e953468b69346133d4
       - desc: "Add an example to the simple tables page that has the headers in the first columns"
-        page: tables/single-header.html
+        page: tables/one-header.html
         by:
           - EO WG
         commit: bbda593d3ce4a11199bd3ced387ec068fa3c0d37
@@ -110,13 +110,13 @@ changes:
           - Eric Eggert
         commit: 4947376b543218b6d2558f7eeeb4feed2fe766cf
       - desc: "Clarification of the whole page"
-        page: tables/double-header.html
+        page: tables/two-headers.html
         by:
           - Shadi Abou-Zhara
           - Eric Eggert
         commit: 7bbc58ac1eda52cfb64d8dfcf6bf2d84a7f7e8ed
       - desc: "More clear intro"
-        page: tables/single-header.html
+        page: tables/one-header.html
         by:
           - Shadi Abou-Zhara
         commit: 61524e20cdfb2267a857d37ffef6fd01de8e7cc8
@@ -164,7 +164,7 @@ changes:
         issue:
   - 2014-06-12:
       - desc: "Apply EO WG feedback"
-        page: tables/multi-level.html
+        page: tables/multiple-headers.html
         fragment:
         by:
           - EO WG
@@ -178,7 +178,7 @@ changes:
         commit: f58e0be60da0b619195bf85585fa099cef8db4fb
         issue:
       - desc: "Apply EO WG feedback"
-        page: tables/single-header.html
+        page: tables/one-header.html
         fragment:
         by:
           - EO WG
@@ -202,14 +202,14 @@ changes:
         commit: 75895b7ea9eb455c480994fd56b5ef560f1730d0
         issue:
       - desc: "Move “Offset Column” example from irregular tables"
-        page: tables/single-header.html
+        page: tables/one-header.html
         fragment: "#table-with-an-offset-column-of-header-cells"
         by:
           - Eric
         commit: 1dc606b53bde47d267607ae15c338063c426522a
         issue:
       - desc: "Clarify wording for the different use cases of scope"
-        page: tables/single-header.html
+        page: tables/one-header.html
         fragment:
         by:
           - Shadi Abou-Zhara
@@ -226,7 +226,7 @@ changes:
         issue:
   - 2014-06-10:
       - desc: "Rearrange table examples to include the irregular tables example one as example two on the page about simple tables. Also add scope to the delivery slots example. Change intro text."
-        page: tables/single-header.html
+        page: tables/one-header.html
         fragment: "#table-with-header-cells-in-one-column-only"
         by:
           - EO WG
@@ -234,7 +234,7 @@ changes:
         commit: f38a28f4c5
         issue:
       - desc: "Expand example 1 with an approach that uses scope"
-        page: tables/single-header.html
+        page: tables/one-header.html
         by:
           - Eric
         commit: 8799b531ab
@@ -266,13 +266,13 @@ changes:
         commit: c4757e98cff58b7a69f5ef903c56198cd988ed67
         issue:
       - desc: "Using example.com instead of .co.fr for the made up email addresses"
-        page: tables/multi-level.html
+        page: tables/multiple-headers.html
         by:
           - Shadi Abou-Zhara
         commit: 678b52a49128b2a3af5cdf1a3720734a6d22f122
         issue:
       - desc: "Fix link to captions & summaries"
-        page: tables/multi-level.html
+        page: tables/multiple-headers.html
         by:
           - Andrew Arch
         commit:
