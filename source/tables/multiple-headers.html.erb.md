@@ -88,8 +88,8 @@ In the table below, the headers for the top half of the tables are different to 
 
 ~~~ html
 […]
-<th id="co1">Example1 Ltd</th>
-<th id="co2">Example2 Co</th>
+<th id="co1">Example 1 Ltd</th>
+<th id="co2">Example 2 Co</th>
 […]
 <th id="c1">Contact</th>
 […]
