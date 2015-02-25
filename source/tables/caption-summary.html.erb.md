@@ -69,14 +69,14 @@ The `<caption>` element is placed directly as a child of the `<table>` element.
 <table>
   <caption>Concerts</caption>
   <tr>
+    <th>Date</th>
+    <th>Event</th>
+    <th>Venue</th>
+  </tr>
+  <tr>
     <td>12 Feb</td>
     <td>Waltz with Strauss</td>
     <td>Main Hall</td>
-  </tr>
-  <tr>
-    <td>24 Mar</td>
-    <td>The Obelisks</td>
-    <td>West Wing</td>
   </tr>
   […]
 </table>
