@@ -164,7 +164,7 @@ changes:
         issue:
   - 2014-06-12:
       - desc: "Apply EO WG feedback"
-        page: tables/multiple-headers.html
+        page: tables/multi-level.html
         fragment:
         by:
           - EO WG
@@ -266,13 +266,13 @@ changes:
         commit: c4757e98cff58b7a69f5ef903c56198cd988ed67
         issue:
       - desc: "Using example.com instead of .co.fr for the made up email addresses"
-        page: tables/multiple-headers.html
+        page: tables/multi-level.html
         by:
           - Shadi Abou-Zhara
         commit: 678b52a49128b2a3af5cdf1a3720734a6d22f122
         issue:
       - desc: "Fix link to captions & summaries"
-        page: tables/multiple-headers.html
+        page: tables/multi-level.html
         by:
           - Andrew Arch
         commit:
