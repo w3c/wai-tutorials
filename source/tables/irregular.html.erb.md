@@ -38,7 +38,7 @@ In addition, the value of the `scope` attribute in the first-level headers is se
 {::nomarkdown}
 <%= sample_start %>
 <table class="numbers">
-  <col>
+  <colgroup><col></colgroup>
   <colgroup span="2"></colgroup>
   <colgroup span="2"></colgroup>
   <tr>
@@ -210,19 +210,19 @@ Due to the complexity of the table a [summary technique](caption-summary.html) c
   <tbody>
     <tr>
       <th rowspan="3" scope="rowgroup">Zodiac</th>
-      <td>Full color</td>
+      <th scope="row">Full color</th>
       <td>A2</td>
       <td>A3</td>
       <td>A4</td>
     </tr>
     <tr>
-      <td>Black and white</td>
+      <th scope="row">Black and white</th>
       <td>A1</td>
       <td>A2</td>
       <td>A3</td>
     </tr>
     <tr>
-      <td>Sepia</td>
+      <th scope="row">Sepia</th>
       <td>A3</td>
       <td>A4</td>
       <td>A5</td>
@@ -231,13 +231,13 @@ Due to the complexity of the table a [summary technique](caption-summary.html) c
   <tbody>
     <tr>
       <th rowspan="2" scope="rowgroup">Angels</th>
-      <td>Black and white</td>
+      <th scope="row">Black and white</th>
       <td>A1</td>
       <td>A3</td>
       <td>A4</td>
     </tr>
     <tr>
-      <td>Sepia</td>
+      <th scope="row">Sepia</th>
       <td>A2</td>
       <td>A3</td>
       <td>A5</td>
