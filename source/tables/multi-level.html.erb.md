@@ -1,6 +1,6 @@
 ---
-title: Tables with multiple headers
-nav_title: Multiple Headers
+title: Tables with multi-level headers
+nav_title: Multi-level Headers
 order: 5
 technologies: HTML5
 wcag_techniques:
