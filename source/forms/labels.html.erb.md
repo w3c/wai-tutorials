@@ -228,7 +228,7 @@ The label of a `<button>` element is set inside the element and can include mark
 {:/nomarkdown}
 
 **Note:** If the image button (`<input type="image">`) is used, the label is set in the `alt` attribute, for example:
-`<input type="image" src="searchbutton.png" alt="Search">`. See [Functional Images](/images/functional.html#image-used-in-a-button) to see how to describe images in buttons.
+`<input type="image" src="searchbutton.png" alt="Search">`. See [Functional Images](/images/functional.html#image-used-in-a-button) for more information on how to describe images in buttons.
 
 {::nomarkdown}
 <%= notes_end %>
