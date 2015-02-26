@@ -1289,8 +1289,12 @@ select {
 }
 
 .symbol {
-	float:right;
-	margin: 0 0 1em 1em;
+	float: left;
+	margin: 0 1em 1em 0;
+	@include mq($medium) {
+		float:right;
+		margin: 0 0 1em 1em;
+	}
 }
 
 /* ====== HELPERS ======== EDIT ABOVE! ======== */
