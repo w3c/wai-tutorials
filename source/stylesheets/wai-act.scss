@@ -583,7 +583,7 @@ a {
 }
 
 .content {
-	@include container-full();
+	@include container();
 	h2 {
 		margin-top:0;
 	}
@@ -645,9 +645,11 @@ a {
 }
 
 %annotation {
+	max-width:50%;
 	@include mq($medium) {
 		width: percentage(1/2) - 8%;
 		margin-left: 3%;
+		max-width: auto;
 	}
 	@include mq($big) {
 		width: percentage(1/2) - 4%;
