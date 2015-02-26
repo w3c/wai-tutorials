@@ -38,7 +38,7 @@ In addition, the value of the `scope` attribute in the first-level headers is se
 {::nomarkdown}
 <%= sample_start %>
 <table class="numbers">
-  <colgroup><col></colgroup>
+  <col>
   <colgroup span="2"></colgroup>
   <colgroup span="2"></colgroup>
   <tr>
