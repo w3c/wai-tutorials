@@ -14,9 +14,9 @@ contributors:
 support: <strong>Developed with support</strong> from the <a href="http://www.w3.org/WAI/ACT/">WAI-ACT</a> project, co-funded by the European Commission <abbr title="Information Society Technologies">IST</abbr> Programme.
 ---
 
-![](img-caption.png){:.symbol} Captions and summaries provide information that can help users find, navigate, and understand tables. While they are not required in every case to meet WCAG 2.0, captions and summaries are relatively simple ways to provide such information if needed.
+![](img-caption.png){:.symbol} Captions and summaries provide information that can help users find, navigate, and understand tables. While they are not required in every case to meet WCAG 2.0, captions and summaries are relatively simple ways to provide such information that is often needed.
 
-* A **caption** is like a heading for a table. Most screen readers announce the content of captions, which helps users to find a table and understand what it’s about and decide if they want to read it. If the user uses “Tables Mode”, captions are the primary mechanism to identify tables. The caption is provided by the `<caption>` element.
+* A **caption** is like a heading for a table. Most screen readers announce the content of captions. This helps users to find a table and understand what it’s about, and decide if they want to read it. If the user uses “Tables Mode”, captions are the primary mechanism to identify tables. The caption is provided by the `<caption>` element.
 
 * A **summary** conveys information about the organization of the data in a table and helps users navigate it. For example, if a table has an unconventional structure (as in the examples below), information about what content can be found in which row or column can be provided to the user. A summary is usually only needed for complex tables.
 
@@ -389,7 +389,7 @@ Screen reader users navigating in “Tables Mode” are usually unable to identi
 <%= notes_end %>
 {:/nomarkdown}
 
-In this approach, the summary text is in the `summary` attribute of the table. It is not available to sighted users.
+In this approach, the summary text is in the `summary` attribute of the table. Such summaries are not displayed visually. They are generally only available to screen reader users.
 
 See WCAG 2.0 technique [H73: Using the summary attribute of the table element to give an overview of data tables](http://www.w3.org/TR/WCAG20-TECHS/H73) for advice on the summary attribute.
 
