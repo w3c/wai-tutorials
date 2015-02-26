@@ -154,7 +154,7 @@ In the following table, the data from the previous example is laid out with the 
 ## Table with ambiguous data
 {:.ex}
 
-In this example, the data (first name, last name, and city) can’t be distinguished from one another without knowing which header each corresponds to. The `scope` attribute with the value `col` defines the direction of the header cells, and associates them with the corresponding data cells.
+In this example, the data (first name, last name, and city) can’t be distinguished from one another without knowing which header each corresponds to. The `scope` attribute with the value `col` defines the direction of the header cells, and associates them with the corresponding data cells. The `scope` attribute is also needed for larger tables with one header row or column.
 
 {::nomarkdown}
 <%= sample_start %>
