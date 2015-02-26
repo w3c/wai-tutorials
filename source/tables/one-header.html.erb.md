@@ -14,14 +14,14 @@ contributors:
 support: <strong>Developed with support</strong> from the <a href="http://www.w3.org/WAI/ACT/">WAI-ACT</a> project, co-funded by the European Commission <abbr title="Information Society Technologies">IST</abbr> Programme.
 ---
 
-![](img-simple.png){:.symbol} When the content of a table is descriptive on its own, only a header row or column is needed to give the user an impression of the data in the table.
+![](img-simple.png){:.symbol} In some cases, when the content of a table is descriptive on its own, only a header row or column is needed to give the user an impression of the data in the table.
 
-If the table content is abiguous or has both column and row headings, the `scope` attribute should be used to avoid confusion. For more guidance on such tables, see [tables with two headers](two-headers.html).
+If the table content is ambiguous or has both column and row headings, the `scope` attribute should be used to avoid confusion. For more guidance on such tables, see [tables with two headers](two-headers.html).
 
 ## Table with header cells in the top row only
 {:.ex}
 
-The following table of concerts has the cells in the first row marked up as `<th>` cells without any `scope` direction. This is only acceptable because it is such a small table and the data itself is distinctly different in each column.
+The following table of concerts has the cells in the first row marked up using the `<th>` element. This is only acceptable because it is such a small table and the data itself is distinctly different in each column, so that the relationship between the header and data cells is evident.
 
 {::nomarkdown}
 <%= notes_start %>
@@ -90,7 +90,7 @@ The following table of concerts has the cells in the first row marked up as `<th
 ## Table with header cells in the first column only
 {:.ex}
 
-In the following table the data from the previous example is laid out differently, with a header column on the left. Also in this situation it is acceptable not to use `scope` because it is such a small table and the data itself is distinctly different in each row.
+In the following table, the data from the previous example is laid out with the header column on the left. Also in this situation it is only acceptable to use this codeing because it is such a small and simple table. The next pages in this tutorial explain how to code more complex tables.
 
 {::nomarkdown}
 <%= sample_start %>
@@ -154,7 +154,7 @@ In the following table the data from the previous example is laid out differentl
 ## Table with ambiguous data
 {:.ex}
 
-In this example the first and last names and cities can’t be distinguished from one another without the appropriate header information. By using the `scope` element with the value `col`, the data cells are clearly associated with their header cells “Last Name”, “First Name” and “City”.
+In this example, the data (first name, last name, and city) can’t be distinguished from one another without knowing which header each corresponds to. The `scope` attribute with the value `col` defines the direction of the header cells, and associates them with the corresponding data cells.
 
 {::nomarkdown}
 <%= sample_start %>
