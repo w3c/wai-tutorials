@@ -13,7 +13,7 @@ contributors:
 support: <strong>Developed with support</strong> from the <a href="http://www.w3.org/WAI/ACT/">WAI-ACT</a> project, co-funded by the European Commission <abbr title="Information Society Technologies">IST</abbr> Programme.
 ---
 
-Tables with irregular headers have header cells that span multiple columns and/or rows. The `scope` attribute can be used to define the range of data cells covered by a header cell.
+![](img-irreg.png){:.symbol} Tables with irregular headers have header cells that span multiple columns and/or rows. The `scope` attribute can be used to define the range of data cells covered by a header cell.
 
 For example, a header cell that spans three columns should be associated to data cells in this column group of three columns using the `colgroup` value in the `scope` attribute. The same principle applies to a header cell spanning multiple rows. It is associated with its row group by using the `scope` value of `rowgroup`.
 

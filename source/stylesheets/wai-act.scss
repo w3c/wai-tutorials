@@ -807,7 +807,7 @@ figure {
 		&:before, &:after {display:none;}
 	}
 	&.toc {
-		+ * {
+		+ *, + span + * {
 			margin-top: 0;
 		}
 		@extend %annotation;
@@ -1286,6 +1286,11 @@ select {
 @import 'icons-png';
 .svg {
 	@import 'icons-svg';
+}
+
+.symbol {
+	float:right;
+	margin: 0 0 1em 1em;
 }
 
 /* ====== HELPERS ======== EDIT ABOVE! ======== */
