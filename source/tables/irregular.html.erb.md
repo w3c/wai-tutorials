@@ -13,18 +13,16 @@ contributors:
 support: <strong>Developed with support</strong> from the <a href="http://www.w3.org/WAI/ACT/">WAI-ACT</a> project, co-funded by the European Commission <abbr title="Information Society Technologies">IST</abbr> Programme.
 ---
 
-![](img-irreg.png){:.symbol} Tables with irregular headers have header cells that span multiple columns and/or rows. The `scope` attribute can be used to define the range of data cells covered by a header cell.
+![](img-irreg.png){:.symbol} Tables with irregular headers have header cells that span multiple columns and/or rows. Several elements and attributes can be used to define the structure and relationships of the header and data cells.
 
-For example, a header cell that spans three columns should be associated to data cells in this column group of three columns using the `colgroup` value in the `scope` attribute. The same principle applies to a header cell spanning multiple rows. It is associated with its row group by using the `scope` value of `rowgroup`.
+For example, a header cell that spans three columns should be associated to corresponding data cells in the column group. This can be done by setting the `scope` attribute of the header cell to the value `colgroup`. The same principle applies to header cells spanning multiple rows. In this case they are associated with by using the value `rowgroup` in the `scope`  attribute.
 
-To associate a table header cell to a column group and/or row group using `scope`, the groups have to be explicitly defined in the table markup:
+However, before making these associations, the structure of such groups of columns and rows needs to be defined in the table markup:
 
-* A column group is defined using the `<colgroup>` element in the table.
+* A column group is defined using the `<colgroup>` element.
 * A row group is defined by the `<thead>`, `<tfoot>` and `<tbody>` elements.
-  - `<thead>` and  `<tfoot>` elements can be used once.
-  - Every `<tbody>` element defines a row group.
-
-If neither a column nor a row group is defined in the markup, the header cell is not in a group and there will be no or an incorrect association with data cells.
+  - `<thead>` and  `<tfoot>` elements can be used once in a table.
+  - A table can have any number of `<tbody>` elements that each defines a row group.
 
 ## Table with two tier headers
 {:.ex}
@@ -115,7 +113,7 @@ In addition, the value of the `scope` attribute in the first-level headers is se
 <%= notes_start %>
 {:/nomarkdown}
 
-Note: A `<colgroup>` element can contain a `<col>` element to identify individual columns in the group. The combined sum of `<col>` elements (not in `<colgroup>`s) and column elements indicated by the `span` attributes of the `<colgroup>` elements should be equal to the total number of columns in the table.
+Note: A `<colgroup>` element can contain a `<col>` element to identify individual columns in the group. The combined sum of `<col>` elements (not contained in `<colgroup>` elements) and column elements indicated by the `span` attributes of the `<colgroup>` elements should be equal to the total number of columns in the table.
 
 {::nomarkdown}
 <%= notes_end %>
@@ -124,7 +122,7 @@ Note: A `<colgroup>` element can contain a `<col>` element to identify individua
 ## Table with headers spanning multiple rows or columns
 {:.ex}
 
-In the example below, the table consists of two individual columns and one column group spanning three columns as well as six rows. There are two headers that span multiple rows. To make sure that such header cells that span multiple rows are correctly associated with all the cells in those rows, the rows need to be grouped. To define row groups wrap the corresponding rows in `<tbody>` elements (table body). Additionally the `scope` attribute of header cells spanning rows has to be set to `rowgroup`.
+In the example below, the table consists of two individual columns and one column group spanning three columns. It has six rows. There are two headers that span multiple rows. To make sure that such header cells that span multiple rows are correctly associated with all the cells in those rows, the rows need to be grouped. To define row groups wrap the corresponding rows in `<tbody>` elements (table body). Additionally the `scope` attribute of header cells spanning rows has to be set to `rowgroup`.
 
 If a header spans a multiple header rows, wrap the rows in a `<thead>` element instead of a `<tbody>` element. Use a `<tfoot>` element if a header spans multiple rows in the footer area of a table.
 
