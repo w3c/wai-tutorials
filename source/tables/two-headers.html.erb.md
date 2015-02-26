@@ -14,7 +14,7 @@ contributors:
 support: <strong>Developed with support</strong> from the <a href="http://www.w3.org/WAI/ACT/">WAI-ACT</a> project, co-funded by the European Commission <abbr title="Information Society Technologies">IST</abbr> Programme.
 ---
 
-![](img-multidir.png){:.symbol} It is necessary to indicate what table data cell is labelled by each table heading cell, when a table includes column and row headers. To accomplish this authors can mark up the table headers using the `<th>` element and use the `scope` attribute to declare the direction of each header. The `scope` attribute can be set to `row` or `col` to denote that a header applies to the entire row or column, respectively.
+![](img-multidir.png){:.symbol} When tables have both a header row and column, the relationship between the headers and data cells becomes quickly ambiguous. For such tables, use the `<th>` element to identify the header cells and the `scope` attribute to declare the direction of each header. The `scope` attribute can be set to `row` or `col` to denote that a header applies to the entire row or column, respectively.
 
 Additionally, you can use the `<caption>` element to identify the table in a document. This is particularly useful for screen-reader users browsing the web page in “tables mode” where they can navigate from table to table. More background and guidance on the using `<caption>` element is provied on the [Caption & Summary page](caption-summary.html).
 
@@ -23,7 +23,7 @@ Additionally, you can use the `<caption>` element to identify the table in a doc
 
 The following table of opening times has header information in both the top row and the first column. All header cells are marked up as `<th>` cells with `scope` attributes added.
 
-In the header row, the `col` value for `scope` associates each header cell with the data cells in the column. In the header column, the `row` value associates the individual headers with their rows. It is important to define the relationship between header and data cells to help users to understand table data. In the example, the “Open” and “Closed” labels are only useful if they can be assigned to a specific day and time.
+In the header row, the `col` value for `scope` associates each header cell with the data cells in the column. In the header column, the `row` value associates the individual headers with their rows. Without this information some users would not easily understand the relationship between header and data cells. In the example below, the “Open” and “Closed” labels are only useful if they can be assigned to a specific day and time.
 
 {::nomarkdown}
 <%= sample_start %>
