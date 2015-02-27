@@ -6,6 +6,7 @@ gem "middleman", "~>3.2.2"
 gem "middleman-syntax"
 gem 'middleman-autoprefixer'
 gem 'middleman-gh-pages'
+gem 'middleman-deploy', '~> 1.0'
 
 # Live-reloading plugin
 gem "middleman-livereload", "~> 3.1.0"
