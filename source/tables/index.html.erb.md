@@ -29,7 +29,7 @@ This tutorial shows you how to apply appropriate structural markup to tables. It
 
 -   **[Tables with two headers![](img-multidir.png)](two-headers.html)** have a simple row header and a simple column header: For tables with unclear header directions, define the direction of each header by setting the `scope` attribute to `col` or `row`.
 
--   **[Tables with irregular headers![](img-irreg.png)](irregular.html)** have header cells that span multiple rows or columns: For these tables, define column and row groups and set the range of the header cells using the `colgroup` and `rowgroup` values of the scope attribute.
+-   **[Tables with irregular headers![](img-irreg.png)](irregular.html)** have header cells that span multiple columns and/or rows: For these tables, define column and row groups and set the range of the header cells using the `colgroup` and `rowgroup` values of the scope attribute.
 
 -   **[Tables with multi-level headers![](img-multi.png)](multi-level.html)**  have multiple header cells associated per data cell:  For tables that are so complex that header cells can’t be associated in a strictly horizontal or vertical way, use `id` and `headers` attributes to explicitly associate header and data cells.
 

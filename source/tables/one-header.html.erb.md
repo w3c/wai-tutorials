@@ -15,7 +15,7 @@ contributors:
 support: <strong>Developed with support</strong> from the <a href="http://www.w3.org/WAI/ACT/">WAI-ACT</a> project, co-funded by the European Commission <abbr title="Information Society Technologies">IST</abbr> Programme.
 ---
 
-![](img-simple.png){:.symbol} In some cases, when the content of a table is descriptive on its own, only a header row or column is needed to give the user an impression of the data in the table.
+![](img-simple.png){:.symbol} In some cases, when the content of a table is descriptive on its own, only a header row or header column is needed to give the user an impression of the data in the table.
 
 If the table content is ambiguous or has both column and row headings, the `scope` attribute should be used to avoid confusion. For more guidance on such tables, see [tables with two headers](two-headers.html).
 
