@@ -214,7 +214,7 @@ The HTML5 `<figure>` element can be used to enclose both the image and its long 
 ## Description containing textual information
 {:.ex}
 
-The WAI-ARIA `aria-describedby` attribute can be used to link to a description of the image that is provided on the same web page, in a similar way to the [longdesc approach](#providing-a-link-to-the-long-description-via-longdesc). The value of the attribute is the `id` of the element that provides the long description.
+The WAI-ARIA `aria-describedby` attribute can be used to link to a description of the image that is provided anywhere on the same web page, in a similar way to the [longdesc approach](#providing-a-link-to-the-long-description-via-longdesc). The value of the attribute is the `id` of the element that provides the long description.
 
 Important: The element referenced by `aria-describedby` is treated like one continuous paragraph of text. Screen readers and other assistive technology do not have access to structural information, such as any headings and tables. They will read out or provide the text of any contained elements without indicating their structural relationships, and without the corresponding navigation mechanisms. As a result, this approach only works for long descriptions that are text-only, without needing structural information as was needed in the previous example.
 
@@ -239,6 +239,7 @@ In this example, the head of the peacock is described using a paragraph of text 
 <img src="peacock.jpg"
      alt="Neck of a male peacock"
      aria-describedby="description">
+[…]
 <p id="description">
   The male is metallic blue on the crown, the feathers of the head being short and curled. The fan-shaped crest on the head is made of feathers with bare black shafts and tipped with blush-green webbing. A white stripe above the eye and a crescent shaped white patch below the eye are formed by bare white skin. The sides of the head have iridescent greenish blue feathers. The back has scaly bronze-green feathers with black and copper markings.
 </p>
