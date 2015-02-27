@@ -12,6 +12,13 @@ wcag_techniques:
   - G198
   - SCR1
   - SCR16
+editors:
+  - Eric Eggert: "http://w3.org/People/yatil/"
+  - Shadi Abou-Zahra: "http://w3.org/People/shadi/"
+contributors:
+  - The Web Content Accessibility Guidelines Working Group (<a href="http://www.w3.org/WAI/GL/">WCAG WG</a>)
+  - the Education and Outreach Working Group (<a href="http://www.w3.org/WAI/EO/">EOWG</a>)
+support: <strong>Developed with support</strong> from the <a href="http://www.w3.org/WAI/ACT/">WAI-ACT</a> project, co-funded by the European Commission <abbr title="Information Society Technologies">IST</abbr> Programme.
 ---
 
 Where possible, divide long forms into multiple smaller forms that constitute a series of logical steps or stages. This helps make long forms less daunting and easier to understand, particularly for people who are less experienced using computers or who have various cognitive disabilities. The following basic principles should apply for multi-step forms:

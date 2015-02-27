@@ -17,6 +17,7 @@ contributors:
   - Howard Kramer
   - Sharron Rush
   - Bim Egan
+  - the Web Content Accessibility Guidelines Working Group (<a href="http://www.w3.org/WAI/GL/">WCAG WG</a>)
   - the Education and Outreach Working Group (<a href="http://www.w3.org/WAI/EO/">EOWG</a>)
 support: <strong>Developed with support</strong> from the <a href="http://www.w3.org/WAI/ACT/">WAI-ACT</a> project, co-funded by the European Commission <abbr title="Information Society Technologies">IST</abbr> Programme.
 ---

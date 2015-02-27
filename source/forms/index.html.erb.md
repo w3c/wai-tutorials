@@ -9,6 +9,13 @@ wcag_success_criteria:
   - 3.3.2
   - 4.1.2
 type: intro
+editors:
+  - Eric Eggert: "http://w3.org/People/yatil/"
+  - Shadi Abou-Zahra: "http://w3.org/People/shadi/"
+contributors:
+  - The Web Content Accessibility Guidelines Working Group (<a href="http://www.w3.org/WAI/GL/">WCAG WG</a>)
+  - the Education and Outreach Working Group (<a href="http://www.w3.org/WAI/EO/">EOWG</a>)
+support: <strong>Developed with support</strong> from the <a href="http://www.w3.org/WAI/ACT/">WAI-ACT</a> project, co-funded by the European Commission <abbr title="Information Society Technologies">IST</abbr> Programme.
 ---
 
 Forms are commonly used to provide user interaction in websites and web applications. For example, login, registering, commenting, and purchasing. This tutorial shows you how to create accessible forms. The same concepts apply to all forms, whether they are processed client or server-side.
