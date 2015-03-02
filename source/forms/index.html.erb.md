@@ -9,6 +9,7 @@ wcag_success_criteria:
   - 3.3.2
   - 4.1.2
 type: intro
+first_published: "September 2014"
 editors:
   - Eric Eggert: "http://w3.org/People/yatil/"
   - Shadi Abou-Zahra: "http://w3.org/People/shadi/"
