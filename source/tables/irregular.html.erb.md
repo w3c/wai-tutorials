@@ -14,7 +14,7 @@ contributors:
 support: <strong>Developed with support</strong> from the <a href="http://www.w3.org/WAI/ACT/">WAI-ACT</a> project, co-funded by the European Commission <abbr title="Information Society Technologies">IST</abbr> Programme.
 ---
 
-![](img-irreg.png){:.symbol} Tables with irregular headers have header cells that span multiple columns and/or rows. Several elements and attributes can be used to define the structure and relationships of the header and data cells.
+![](img-irreg.png){:.symbol} This page covers tables with header cells that span multiple columns and/or rows. Several elements and attributes can be used to define the structure and relationships of the header and data cells.
 
 For example, a header cell that spans three columns should be associated to corresponding data cells in the column group. This can be done by setting the `scope` attribute of the header cell to the value `colgroup`. The same principle applies to header cells spanning multiple rows. In this case they are associated with by using the value `rowgroup` in the `scope`  attribute.
 
