@@ -15,4 +15,9 @@
 
 # Ignore .DS_store file
 .DS_Store
+
+# Ignore generator of changes file
 genchange.php
+
+# Ignore Ulysses files
+.Ulysses-Group.plist
