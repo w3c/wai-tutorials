@@ -16,7 +16,7 @@ Navigation inside individual pages can help users to orient themselves on the pa
 
 Everything with an `id` attribute can be used as an anchor that can be linked to. If the main content is using `<div id="content">`, attaching `#content` to the URL will scroll the main content into view and focus on it. This can be helpful to people who bookmark commonly used pages to jump directly to the section of the page of interest. For example, creating a bookmark to the first news item on a news listing page.
 
-If possible, make those anchors visible by adding permalinks to the page. In this tutorial, you can find permalinks in every heading. They are shown visually by the pilcrow symbol (`¶`) and with a `title` attribute that says “permalink”.
+If possible, make those anchors visible by adding permalinks to the page. In this tutorial, you can find permalinks are accessible by using the share button displayed near each heading.
 
 ## Skip links
 
