@@ -78,4 +78,4 @@ A line of text shouldn’t be longer than 80 characters. This helps users with c
 
 ## Highlight section
 
-The HTML5 `<mark>` element can be used to highlight sections of text. By default the text is just <mark>highlighted by color</mark>. It is not supported by assistive technology at the time of writing. It can, however, be used to mark auxiliary information, like a section that is currently read by a page reading plugin. Also search terms can be highlighted in a list of articles to allow better visual orientation.
+The HTML5 `<mark>` element can be used to highlight sections of text. By default the text is just <mark>highlighted by color</mark>. It is not supported by assistive technology at the time of writing. It can, however, be used to mark auxiliary information, like a section that is currently read by a page reading plugin. Also search terms can be highlighted in a list of articles to allow better visual orientation. The color combination of the highlight color, the background color and the text color needs to meet <a href="/WAI/WCAG20/quickref/#qr-visual-audio-contrast-contrast">minimum contrast requirements of WCAG 2.0</a>.
