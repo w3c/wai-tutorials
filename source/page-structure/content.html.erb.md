@@ -289,7 +289,7 @@ q:after { content: ""; }
 
 ## Figures
 
-Figures are an addition to HTML5 that allows captions to be associated with lists, images, tables, and other content. For example an annual report could reference to a table, which contains the sales volumes of a product. It allows users to dive deeper in the data or to skip it. The related content is wrapped in a `<figure>` element, a `<figcaption>` element is added that has the description of the content.
+Figures are an addition to HTML5 that allows captions to be associated with lists, images, tables, and other content. For example an annual report could reference to a diagram, which contains the sales volumes of a product. The related content is wrapped in a `<figure>` element, a `<figcaption>` element is added that has the description of the content.
 
 At the time of writing, WAI-ARIA attributes `role="group"` and `aria-labelledby` are used to provide the information to assistive technologies in a consistent way.
 
@@ -298,18 +298,28 @@ At the time of writing, WAI-ARIA attributes `role="group"` and `aria-labelledby`
 {:/nomarkdown}
 
 ~~~html
-<p>The sales volume of our SpaceBear product was steadily the first three quarters but had a huge success in quarter four with the introduction of SuperBear in time for the holiday season. See table T3 for details.</p>
+<p>The sales volume of our SpaceBear product was steadily the first three quarters but had a huge success in quarter four with the introduction of SuperBear in time for the holiday season. See graphic G3 for details.</p>
 
 <figure role="group" aria-labelledby="fig-t3-capt">
-    <figcaption id="fig-t3-capt">T3: SpaceBear sales volume</figcaption>
-    <table>
-        …
-    </table>
+    <figcaption id="fig-t3-capt">G3: SpaceBear sales volume</figcaption>
+    <img src="…" 
+         alt="SpaceBear sales diagram, showing the huge success in Q4" 
+         longdesc="…">
 </figure>
 ~~~
 
 {::nomarkdown}
 <%=code_end%>
+{:/nomarkdown}
+
+{::nomarkdown}
+<%=notes_start%>
+{:/nomarkdown}
+
+**Note:** For more information on how to mark up diagrams, see the [complex images](/images/complex.html) page.
+
+{::nomarkdown}
+<%=notes_end%>
 {:/nomarkdown}
 
 
