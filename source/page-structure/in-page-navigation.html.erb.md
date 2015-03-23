@@ -22,7 +22,7 @@ If possible, make those anchors visible by adding permalinks to the page. In thi
 
 Skip links are historically needed to jump to different sections on the page. They were used before WAI-ARIA landmarks were implemented in browsers and assistive technologies and can still be useful in some situations. For more information on landmarks see the [Page Sections](sections.html) page.
 
-These tutorials for example have a visually hidden link to the navigation that allows the user to jump directly to the navigation, which comes after the main content of the page. This skip link is hidden by default but made visible as soon as it is focused to not confuse visual keyboard users.
+These tutorials, for example, have a visually hidden link to the navigation that allows the user to jump directly to the navigation, which comes after the main content of the page. This skip link is hidden by default but made visible as soon as it is focused to not confuse sighted keyboard users. As the tutorials are designed in a responsive way, the content is linearized on small screens or when zoom is enabled. In those cases the navigation menu is on the bottom of the page. The skip link is visible to allow all users to jump down to the navigation menus. 
 
 {::nomarkdown}
 <%=code_start%>
@@ -35,8 +35,6 @@ These tutorials for example have a visually hidden link to the navigation that a
 {::nomarkdown}
 <%=code_end%>
 {:/nomarkdown}
-
-If the viewport is so small that only one column fits on the screen (for example on mobiles or when zoom is enabled), the link stays visible to allow users to jump to the navigation menu on the bottom of the page.
 
 ## Table of contents
 
