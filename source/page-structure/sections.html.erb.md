@@ -36,7 +36,7 @@ Most websites have a logo and other information at the top of the page. Sometime
 
 ### Navigation
 
-Sections of the page that provide navigation should be marked up using the HTML5 `<nav>` element which is supposed to carry an implicit `role` of `navigation`. It can contain the main navigation menu or other collections of links whose purpose is to navigate inside the page or the website as a whole. See the [Navigation Menu tutorial](/navigation/index.html) for more information on menus. It can be used multiple times on a page.
+Sections of the page that provide navigation should be marked up using the HTML5 `<nav>` element which is supposed to carry an implicit `role` of `navigation`. It can contain the main navigation menu or other collections of links whose purpose is to navigate inside the page or the website as a whole. See the [Menu tutorial](/menus/index.html) for more information on menus. It can be used multiple times on a page.
 
 {::nomarkdown}
 <%= code_start %>

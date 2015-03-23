@@ -82,4 +82,4 @@ Similar to landmarks, headings can be used to give users a way of navigating thr
 <%=code_end%>
 {:/nomarkdown}
 
-The first heading in such cases is usually the page name. In this case, the heading of the actual content is hard to find between headings that describe the page structure. If possible use [labeled landmarks](landmarks.html) to mark up the page structure as the provide more meaning to assistive technologies.
+The first heading in such cases is usually the page name. In this case, the heading of the actual content is hard to find between headings that describe the page structure. If possible use [labeled page sections](sections.html) to mark up the page structure as the provide more meaning to assistive technologies.
