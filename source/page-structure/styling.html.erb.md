@@ -21,7 +21,7 @@ All headings should be styled differently to the body text. Separating key secti
 
 ## Font size
 
-The user needs to be able to resize the text to 200% of its size anywhere on the page, without the text being cut off or overlapping other text. The font size should be defined in relative units, such as percentages, `em` or `rem`. It is not possible to zoom text set in pixels independently from the rest of the page in some browsers. While the other units calculate the font size from the parent element, `rem` calculates the font size from the root element. Consider the following two declarations:
+The user needs to be able to resize the text to 200% of its size anywhere on the page, without the text being cut off (without horizontal scrolling) or overlapping other text when using text zoom. The font size should be defined in relative units, such as percentages, `em` or `rem`. It is not possible to zoom text set in pixels independently from the rest of the page in some browsers. While the other units calculate the font size from the parent element, `rem` calculates the font size from the root element. Consider the following two declarations:
 
 {::nomarkdown}
 <%=code_start('','em unit')%>
