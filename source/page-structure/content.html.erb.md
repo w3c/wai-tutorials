@@ -305,6 +305,7 @@ At the time of writing, WAI-ARIA attributes `role="group"` and `aria-labelledby`
     <img src="…" 
          alt="SpaceBear sales diagram, showing the huge success in Q4" 
          longdesc="…">
+    <a href="…">Long Description</a>
 </figure>
 ~~~
 
