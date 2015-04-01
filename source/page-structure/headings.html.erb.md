@@ -37,7 +37,7 @@ It is good practice to nest headings properly. When stepping down through headin
 
 ## Organize main page content
 
-When looking at the content, the highest available heading level should be used to mark up the heading of the main content, as this makes it easy to discover. Ideally use an `<h1>` or `<h2>`.
+When looking at the content, the highest available heading level should be used to mark up the heading of the main content, as this makes it easy to discover.
 
 {::nomarkdown}
 <%=code_start('','Showing only headings')%>
