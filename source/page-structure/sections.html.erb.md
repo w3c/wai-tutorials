@@ -149,8 +149,6 @@ The `search role` refers to the “search tool” of the website. This should in
 
 ### Generic sections
 
-//We should consider using some specific examples here.
-
 Other sections of the page can be marked up as `<section>` elements which carry an implicit role of `region` which is a generic landmark. Be careful not to overuse it, as it adds a lot of additional “noise” when encountered using a screen reader. Use it to group items together. It should also always be labeled.
 
 ### A note on the application role
