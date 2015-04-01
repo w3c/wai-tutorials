@@ -27,7 +27,7 @@ The user needs to be able to resize the text to 200% of its size anywhere on the
 <%=code_start('','em unit')%>
 {:/nomarkdown}
 
-(The `px` values assume that the root font-size is `16px`.)
+(This example assumes that the root font-size is `16px`.)
 
 ~~~css
 .content {
@@ -48,7 +48,7 @@ The container with the class `content` has a font size that is `1.25` times the 
 <%=code_start('','rem unit')%>
 {:/nomarkdown}
 
-(The `px` values assume that the root font-size is `16px`.)
+(This example assume that the root font-size is `16px`.)
 
 ~~~css
 .content {
