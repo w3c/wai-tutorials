@@ -8,17 +8,21 @@ wcag_techniques:
 technologies: HTML5, WAI-ARIA
 ---
 
-To help people navigate around the page, they need to be able to identify distinctive page sections such as navigation, main content, headers, and footers. More important parts of a page should be marked up on every website, for example navigation.
+People need to be able to identify distinctive page sections to help navigate around the page. These sections include navigation, main content, headers, and footers. More important parts of a page, such as navigation, should be marked up on every website.
 
-Both, HTML5 and WAI-ARIA, provide mechanisms to mark up such sections in a meaningful way: HTML5 defines distinctive elements for certain types of page sections, for example, `<header>` and `<nav>`. WAI-ARIA utilizes the `role` attribute to add such information. It is mainly used by assistive technologies. Sometimes the WAI-ARIA landmark roles map directly to HTML5 elements, but this is not always the case.
+Both HTML5 and WAI-ARIA provide a way to define the relationship of structural items on a page in a meaningful way. HTML5 defines distinctive elements for certain types of page sections. Examples of these elements include `<header>` and `<nav>`. WAI-ARIA utilizes the landmark `role` attribute to identify sections of a page. Landmarks are mainly used by assistive technologies. Sometimes the landmark roles are mapped directly to HTML5 elements, but this is not always the case.
 
-Some HTML elements are should also carry implicit landmark roles by default, but this is not broadly supported at the time of writing, so the role should be stated explicitly. If HTML4 is used, `<div>` elements with ARIA landmark roles and/or headings are commonly used to identify page sections.
+Technically, some HTML elements should carry implicit landmark roles by default. However, at the time of this writing, this is not broadly supported. Therefore, the role should be stated explicitly. If HTML4 is used, `<div>` elements with ARIA landmark roles and/or headings are commonly used to identify page sections.
+
+//This paragraph is extremely difficult to understand. There is no explanation of what an 'implicit' or 'explicit' landmark role is. Further, there is no info about the Host Language, what that is, what it’s relationship to this paragraph is, or why any of this is important. I think the notion of ‘implicit’ vs. ‘explicit’ is too academic for this audience. It’s not explained very well and I fail to see it’s purpose explained effectively in this tutorial. I think we should reword the usage of explicit/implicit roles to simply state when to use them or not. Therefore I recommend we omit that paragraph and use something like this instead:
+
+WAI-ARIA markup is only intended to be used to enhance or change the built-in meaning. If an element with the functionality already exists, then just use the built-in semantics of that element. An example of this would include a checkbox or radio button. If HTML4 is used, `<div>` elements with ARIA landmark roles and/or headings are commonly used to identify page sections.
 
 ## Common page sections
 
 ### Main page header
 
-Most websites have a logo and other information at the top of the page. Sometimes a search or navigation can be included. This main page header should be identified by an HTML5 `<header>` element and an explicit `banner` role. The banner role is not implicit for `<header>` elements as they can be used in other situations. Usually there will only be one `banner` role per page.
+Most websites have a logo and other information at the top of the page. Sometimes a search or navigation can be included. This main page header should be identified by an HTML5 `<header>` element and use the role of `banner`. Usually there will only be one `banner` role per page, so the `banner` role is important to explain what this particular `<header>` elements represents. This is helpful because the `<header>` element can be used in other situations.
 
 {::nomarkdown}
 <%= code_start %>
@@ -36,7 +40,9 @@ Most websites have a logo and other information at the top of the page. Sometime
 
 ### Navigation
 
-Sections of the page that provide navigation should be marked up using the HTML5 `<nav>` element which is supposed to carry an implicit `role` of `navigation`. It can contain the main navigation menu or other collections of links whose purpose is to navigate inside the page or the website as a whole. See the [Menu tutorial](/menus/index.html) for more information on menus. It can be used multiple times on a page.
+Sections of the page that provide navigation should be marked up using the HTML5 `<nav>` element. It should include the `role` of `navigation`. It can contain the main navigation menu or other collections of links whose purpose is to navigate inside the page or the website as a whole. It can be used multiple times on a page. See the [Menu tutorial](/menus/index.html) for more information on menus. 
+
+//Suggesting that something is ‘supposed to’ be used in a certain way sounds very passive aggressive to me.
 
 {::nomarkdown}
 <%= code_start %>
@@ -54,7 +60,9 @@ Sections of the page that provide navigation should be marked up using the HTML5
 
 ### Main content
 
-Main content of a document should be wrapped in a `<main>` element that implicitly carries a `main` role. In almost all cases a page will have only one instance of this section.
+Main content of a document should be wrapped in a `<main>` element that uses a `role` implying it is the `main` content. In almost all cases a page will have only one instance of this section.
+
+//We should explain why we need to use a role of main for a main content element. It seems redundant and there should be an obvious reason as to why we’re including it. 
 
 {::nomarkdown}
 <%= code_start %>
@@ -73,7 +81,7 @@ Main content of a document should be wrapped in a `<main>` element that implicit
 
 ### Page footer
 
-The term “page footer” refers to a section on the page that contains auxiliary information such as links to copyright or privacy statements. In HTML5 it is usually marked up as a `<footer>` element. It does not carry an implicit role but it makes sense to add `contentinfo` to distinguish the page `<footer>` element from other uses of `<footer>` in the page, for example as the footer of an article.
+The "Footer" refers to a section of the page that has supplemental information like links to copyright or privacy statements. In HTML5, it is usually marked up as a `<footer>` element. This section can be used at the end of an article on a page when it needs to contain extra information related to the article. Thus, when using it at the end of the overall document, it makes sense to add `contentinfo` to distinguish the page `<footer>` element from other uses of <footer> on the page.
 
 {::nomarkdown}
 <%= code_start %>
@@ -91,7 +99,7 @@ The term “page footer” refers to a section on the page that contains auxilia
 
 ### Complementary content
 
-Any section of the document that supports the main content, yet is separate and meaningful on its own, should be marked up using an `<aside>` element, which does not carry an implicit role as it can be used in other circumstances as well. A role of `complementary` can be added to sidebars or links to related content to make the purpose of the section more explicit.
+An `<aside>` element is used whenever there is a section of the document that supports the main content, yet is separate and meaningful on its own. A `role` of `complementary` can be added to sidebars or links to related content when the purpose of the section needs to be stated more clearly.
 
 {::nomarkdown}
 <%= code_start %>
@@ -110,8 +118,7 @@ Any section of the document that supports the main content, yet is separate and 
 
 ### Search section
 
-The `search` role marks the “search tool” of the website. This should include not only the actual input field, but also the search button and options. The form below contains a `<div>` element with a `search` role. There is no HTML5 equivalent for this role.
-
+The `search role` refers to the “search tool” of the website. This should include the actual input field as well as the search button and options. The form below contains a `<div>` element with a `search` role. There is no HTML5 equivalent for this role. 
 {::nomarkdown}
 <%= sample_start %>
 
@@ -141,6 +148,8 @@ The `search` role marks the “search tool” of the website. This should includ
 {:/nomarkdown}
 
 ### Generic sections
+
+//We should consider using some specific examples here.
 
 Other sections of the page can be marked up as `<section>` elements which carry an implicit role of `region` which is a generic landmark. Be careful not to overuse it, as it adds a lot of additional “noise” when encountered using a screen reader. Use it to group items together. It should also always be labeled.
 
