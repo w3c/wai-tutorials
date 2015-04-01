@@ -48,7 +48,7 @@ The container with the class `content` has a font size that is `1.25` times the 
 <%=code_start('','rem unit')%>
 {:/nomarkdown}
 
-(This example assume that the root font-size is `16px`.)
+(This example assumes that the root font-size is `16px`.)
 
 ~~~css
 .content {
