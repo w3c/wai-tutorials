@@ -26,7 +26,7 @@ The content of the page is why people visit websites in the first place. Major b
 
 * **Search engines** can use the data to make better predictions on the real content of a web page.
 * **People using screen readers** can skip to the content directly and navigate to sections that are important to them. Content is read out in the way it is intended.
-* **•	People who use distraction-free reading plugins** will receive better results when the main content is easy to determine.
+* **People who use distraction-free reading plugins** will receive better results when the main content is easy to determine.
 * **People using certain browser plugins** can use landmark roles to jump to specific sections on a page.
 * **Keyboard users** can save the time and trouble to navigate through a number of links using the tab key.
 
