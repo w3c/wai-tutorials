@@ -12,11 +12,7 @@ People need to be able to identify distinctive page sections to help navigate ar
 
 Both HTML5 and WAI-ARIA provide a way to define the relationship of structural items on a page in a meaningful way. HTML5 defines distinctive elements for certain types of page sections. Examples of these elements include `<header>` and `<nav>`. WAI-ARIA utilizes the landmark `role` attribute to identify sections of a page. Landmarks are mainly used by assistive technologies. Sometimes the landmark roles are mapped directly to HTML5 elements, but this is not always the case.
 
-Technically, some HTML elements should carry implicit landmark roles by default. However, at the time of this writing, this is not broadly supported. Therefore, the role should be stated explicitly. If HTML4 is used, `<div>` elements with ARIA landmark roles and/or headings are commonly used to identify page sections.
-
-//This paragraph is extremely difficult to understand. There is no explanation of what an 'implicit' or 'explicit' landmark role is. Further, there is no info about the Host Language, what that is, what it’s relationship to this paragraph is, or why any of this is important. I think the notion of ‘implicit’ vs. ‘explicit’ is too academic for this audience. It’s not explained very well and I fail to see it’s purpose explained effectively in this tutorial. I think we should reword the usage of explicit/implicit roles to simply state when to use them or not. Therefore I recommend we omit that paragraph and use something like this instead:
-
-WAI-ARIA markup is only intended to be used to enhance or change the built-in meaning. If an element with the functionality already exists, then just use the built-in semantics of that element. An example of this would include a checkbox or radio button. If HTML4 is used, `<div>` elements with ARIA landmark roles and/or headings are commonly used to identify page sections.
+While HTML5 requires browsers to apply default roles to certain elements, some browsers have lacking support. In those cases, the role needs to be stated explicitly in the HTML source code (or added to the DOM using JavaScript). If HTML4 is used, `<div>` elements with ARIA landmark roles and/or headings are commonly used to identify page sections.
 
 ## Common page sections
 
@@ -40,7 +36,7 @@ Most websites have a logo and other information at the top of the page. Sometime
 
 ### Navigation
 
-Sections of the page that provide navigation should be marked up using the HTML5 `<nav>` element. By default users are supposed to interpret the `nav` element as if it had the `navigation` `role`. It can contain the main navigation menu or other collections of links whose purpose is to navigate inside the page or the website as a whole. It can be used multiple times on a page. See the [Menu tutorial](/menus/index.html) for more information on menus.
+Sections of the page that provide navigation should be marked up using the HTML5 `<nav>` element. By default users are supposed to interpret the `nav` element as if it had the `navigation` `role`. It can contain the main navigation menu or other collections of links whose purpose is to navigate inside the page or the website as a whole. It can be used multiple times on a page. See the [Menu tutorial](/menus/index.html) for more information on menus. 
 
 {::nomarkdown}
 <%= code_start %>
