@@ -21,3 +21,4 @@ genchange.php
 
 # Ignore Ulysses files
 .Ulysses-Group.plist
+deletedchange.php
