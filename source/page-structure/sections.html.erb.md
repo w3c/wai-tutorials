@@ -111,6 +111,7 @@ An `<aside>` element is used whenever there is a section of the document that su
 ### Search section
 
 The `search role` refers to the “search tool” of the website. This should include the actual input field as well as the search button and options. The form below contains a `<div>` element with a `search` role. There is no HTML5 equivalent for this role. 
+
 {::nomarkdown}
 <%= sample_start %>
 
