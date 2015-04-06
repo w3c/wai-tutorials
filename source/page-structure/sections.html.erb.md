@@ -56,8 +56,6 @@ Sections of the page that provide navigation should be marked up using the HTML5
 
 Main content of a document should be wrapped in a `<main>` element that uses a `role` implying it is the `main` content. In almost all cases a page will have only one instance of this section.
 
-//We should explain why we need to use a role of main for a main content element. It seems redundant and there should be an obvious reason as to why we’re including it. 
-
 {::nomarkdown}
 <%= code_start %>
 {:/nomarkdown}
