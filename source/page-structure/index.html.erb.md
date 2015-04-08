@@ -26,7 +26,7 @@ An accessible page structure benefits users in many situations:
 
 * **People using screen readers** can skip to the content directly and navigate to sections that are important to them.
 * **Keyboard users** will be more efficient when they are able to navigate the page bypassing some sections instead of using multiple strokes can save the time and trouble to navigate through a number of links using the tab key.
-* **People who use distraction-free reading plugins** will receive better results when the main content is easy to determine.
+* **People using plugins to reduce the cognitive load** by showing only the main content of the web page will have better results when the main content is easy to determine.
 * **People using certain browser plugins** can use landmark roles to jump to specific sections on a page.
 * **Search engines** can use the data to make better predictions on the real content of a web page.
 
