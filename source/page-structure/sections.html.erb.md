@@ -177,7 +177,7 @@ The `<article>` element represents a complete, or self-contained, composition in
 1. Mark the main header/footer section of a web page.
 2. Mark the header/footer of a certain `<article>` or `<section>`.
 
-Both elements only carry their default WAI-ARIA roles – `banner` for the `header` element and `contentinfo` for the `<footer>`element – only in the first use case.
+Both elements only carry their default WAI-ARIA roles – `banner` for the `<header>` element and `contentinfo` for the `<footer>`element – only in the first use case. Once `<header>` or `<footer>` are inside an `<article>` or `<section>` element, they are scoped to this element and don’t count as main header or footer of the page, even if they are the only header or footer on the page.
 
 ### The `application` role
 
