@@ -756,6 +756,11 @@ a {
 	}
 }
 
+pre {
+	font-size: 0.75em;
+	margin: 0;
+}
+
 figure {
 	clear: both;
 	margin: 1em 0;
@@ -781,8 +786,6 @@ figure {
 		@extend .box-secondary;
 		pre {
 			background: none;
-			font-size: 0.75em;
-			margin: 0;
 			@extend .box-content;
 		}
 	}
