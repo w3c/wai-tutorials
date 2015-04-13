@@ -54,7 +54,7 @@ When looking at the content, the highest available heading level should be used 
 
 ## Organize page sections
 
-Similar to [page sections](sections.html), headings can be used to give users a way of navigating through web pages. To do this, add a heading to each section of the page (for example navigation), that describes what can be found in the section. Often the heading levels are similar to this example:
+Similar to page sections, headings can be used to give users a way of navigating through web pages. To do this, add a heading to each section of the page (for example navigation), that describes what can be found in the section. Often the heading levels are similar to this example:
 
 {::nomarkdown}
 <%=code_start('','Showing only headings')%>
