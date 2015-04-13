@@ -143,40 +143,17 @@ Every list can be nested into another list. In this example, the order of prepar
 <%=code_end%>
 {:/nomarkdown}
 
-## Definition lists
+## Description lists
+{:.newex}
 
-To provide definitions for one word, definition lists (`<dl>`) can be used. They are different to (un)ordered lists as they don’t use `<li>` elements to mark up list items but `<dt>` (definition term) and `<dd>` (definition description) elements. Each term is put into one `<dt>` element, its definition goes in the `<dd>` element directly following it.
+A description list consists of term and description groupings where each grouping associates one or more terms (the contents of `<dt>` elements) with one or more descriptions (the contents of `<dd>` elements).
 
-Definition lists are typically used in a glossary and are easiest to use when the definitions are put in alphabetical order.
+There can be multiple groupings in one definition list. A grouping begins either on the first item of the list or whenever a `<dt>` element follows an `<dd>` element.
 
-{::nomarkdown}
-<%=sample_start%>
+### One term, multiple descriptions
+{:.ex}
 
-<dl>
-  <dt>Knot</dt>
-  <dd>
-    <p>A <em>knot</em> is a unit of speed equaling 1
-      nautical mile per hour (1.15 miles per hour or 1.852
-      kilometers per hour).</p>
-  </dd>
-  <dt>Port</dt>
-  <dd>
-    <p><em>Port</em> is the nautical term (used on
-      boats and ships) that refers to the left side
-      of a ship, as perceived by a person facing towards
-      the bow (the front of the vessel).</p>
-  </dd>
-  <dt>Starboard</dt>
-  <dd>
-    <p><em>Starboard</em> is the nautical term (used
-      on boats and ships) that refers to the right
-      side of a vessel, as perceived by a person
-      facing towards the bow (the front of the vessel).</p>
-  </dd>
-</dl>
-
-<%=sample_end%>
-{:/nomarkdown}
+In the following example, John and Luke are described as authors and Frank is described as editor.
 
 {::nomarkdown}
 <%=code_start%>
@@ -184,18 +161,54 @@ Definition lists are typically used in a glossary and are easiest to use when th
 
 ~~~html
 <dl>
-  <dt>Knot</dt>
-  <dd>
-    <p>A <em>knot</em> is a unit of speed equaling 1 nautical mile per hour (1.15 miles per hour or 1.852 kilometers per hour).</p>
-  </dd>
-  <dt>Port</dt>
-  <dd>
-    <p><em>Port</em> is the nautical term (used on boats and ships) that refers to the left side of a ship, as perceived by a person facing towards the bow (the front of the vessel).</p>
-  </dd>
-  <dt>Starboard</dt>
-  <dd>
-    <p><em>Starboard</em> is the nautical term (used on boats and ships) that refers to the right side of a vessel, as perceived by a person facing towards the bow (the front of the vessel).</p>
-  </dd>
+  <dt>Authors</dt>
+  <dd>John</dd>
+  <dd>Luke</dd>
+  <dt>Editor</dt>
+  <dd>Frank</dd>
+</dl>
+~~~
+
+{::nomarkdown}
+<%=code_end%>
+{:/nomarkdown}
+
+### Multiple terms, one description
+{:.ex}
+
+In the next example, two different spellings of a word are defined using description lists. In such cases, use the `dfn` element to mark up the defined term. 
+
+{::nomarkdown}
+<%=code_start%>
+{:/nomarkdown}
+
+~~~html
+<dl>
+   <dt lang="en-US"><dfn>color</dfn></dt>
+   <dt lang="en-GB"><dfn>colour</dfn></dt>
+   <dd>A sensation which (in humans) derives from the ability of the fine structure of the eye to distinguish three differently filtered analyses of a view.</dd>
+</dl>
+~~~
+
+{::nomarkdown}
+<%=code_end%>
+{:/nomarkdown}
+
+### Multiple terms, multiple descriptions
+{:.ex}
+
+In this example, there are multiple authors that are also editors:
+
+{::nomarkdown}
+<%=code_start%>
+{:/nomarkdown}
+
+~~~html
+<dl>
+  <dt>Authors</dt>
+  <dt>Editors</dt>
+  <dd>John</dd>
+  <dd>Luke</dd>
 </dl>
 ~~~
 
