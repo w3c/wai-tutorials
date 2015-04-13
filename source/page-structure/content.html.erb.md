@@ -8,17 +8,17 @@ wcag_techniques:
   - H48
   - H49
 ---
-Besides [headings](headings.html), there are a lot of ways to structure content using semantic HTML elements. This helps to keep the website extensible, the content reusable and also conveys more meaning to assistive technologies.
+Semantic HTML provides several ways other than [headings](headings.html)to structure content. This helps to keep the website extensible, the content reusable and also conveys more meaning to assistive technologies.
 
 ## Paragraphs
 
-The most simple form of text structuring is to write texts in paragraphs, adding rhythm and lightness to the page. The paragraph element (`<p>`) should be used, as its consistent styling improves readability of the text. The styling of paragraphs is often altered by user stylesheets to adapt for the user’s needs.
+Adding rhythm and lightness to content using paragraph element (`<p>`).Consistent styling of paragraphs improves text readability. Paragraph styling can be altered by applying user stylesheets that adapt for specific needs.
 
 ## Lists
 
-HTML provides elements to mark up ordered and unordered lists. Use ordered lists if the content has instructions or information that is performed or used in sequence, for example how to prepare a meal. They are enumerated automatically by the browser. In an unordered list the order does not matter, for example on an ingredients list, the purchase order of ingredients is not relevant. Every list item in unordered lists is marked with a bullet. Both types of lists provide orientation for the user.
+HTML provides elements a way to group information onto lists of different types. Ordered lists are used for sequential information and are automatically enumerated by the browser. Unordered lists are used when the order of the items is not relevant. List items in unordered lists are marked with a bullet. Both types of lists provide orientation for the user.
 
-List items can contain all kinds of different HTML elements, including paragraphs, headings, and form elements.
+List items can contain a variety of HTML elements, including paragraphs, headings, form elements, and other lists.
 
 ### Unordered list
 {:.ex}
@@ -211,7 +211,7 @@ Identifying a quotation as such helps clarify that the content is attributed to 
 ### Blockquote
 {:.ex}
 
-For larger quotes, the `<blockquote>` element should be used. It can contain paragraphs, headings, and other text structure elements. The `<cite>` element can be used to refer to the source of the quote.
+For larger quotes use the `<blockquote>` element. It can contain paragraphs, headings, and other text structure elements. The `<cite>` element is used to refer to the source of the quote.
 
 {::nomarkdown}
 <%=sample_start%>
@@ -242,7 +242,7 @@ For larger quotes, the `<blockquote>` element should be used. It can contain par
 ### Inline quote
 {:.ex}
 
-For shorter inline quotes, the `<q>` element should be used.
+For shorter inline quotes use the `<q>` element.
 
 {::nomarkdown}
 <%=sample_start%>
@@ -268,10 +268,22 @@ For shorter inline quotes, the `<q>` element should be used.
 <%=notes_start%>
 {:/nomarkdown}
 
-**Note:** In older browsers adding quotes automatically wasn’t well supported. If such a browser is to be supported, consider adding quotes to the text manually and removing generated quotes in modern browsers:
+**Note:** In older browsers adding quotes automatically wasn’t well supported. If such a browser is to be supported, consider adding quotes inline in the text and removing generated quotes in modern browsers:
 
 {::nomarkdown}
-<%=code_start%>
+<%=code_start('','HTML')%>
+{:/nomarkdown}
+
+~~~html
+<p>Helen Keller said, “<q>Self-pity is our worst enemy and if we yield to it, we can never do anything good in the world.</q>”</p>
+~~~
+
+{::nomarkdown}
+<%=code_end%>
+{:/nomarkdown}
+
+{::nomarkdown}
+<%=code_start('','CSS')%>
 {:/nomarkdown}
 
 ~~~css
@@ -289,7 +301,7 @@ q:after { content: ""; }
 
 ## Figures
 
-Figures are an addition to HTML5 that allows captions to be associated with lists, images, tables, and other content. For example an annual report could reference to a diagram, which contains the sales volumes of a product. The related content is wrapped in a `<figure>` element, a `<figcaption>` element is added that has the description of the content.
+Figures associate captions with lists, images, tables, and other content. For example an annual report could reference to a diagram containing the sales volumes of a product. Related content is wrapped in a `<figure>` element, a `<figcaption>` element is added to describe the content.
 
 At the time of writing, WAI-ARIA attributes `role="group"` and `aria-labelledby` are used to provide the information to assistive technologies in a consistent way.
 
@@ -317,7 +329,7 @@ At the time of writing, WAI-ARIA attributes `role="group"` and `aria-labelledby`
 <%=notes_start%>
 {:/nomarkdown}
 
-**Note:** For more information on how to mark up diagrams, see the [complex images](/images/complex.html) page.
+**Note:** For more information on how to mark up diagrams, see [complex images](/images/complex.html).
 
 {::nomarkdown}
 <%=notes_end%>
@@ -326,8 +338,8 @@ At the time of writing, WAI-ARIA attributes `role="group"` and `aria-labelledby`
 
 ## Images and illustrations
 
-Using images and illustrations in the text can help guiding users, especially in long texts. They can also help to clarify the text for people with reading disabilities. If images or illustrations are used, proper alternative texts need to be added. See the [Images Tutorial](/images/index.html) for more information on images.
+Images and illustrations are useful to create visual engagement for many users. They may also clarify text for people with reading disabilities. Where images or illustrations are used, proper alternative texts need to be added. See the [Images Tutorial](/images/index.html) for more information on images.
 
 ## Tables
 
-For structured data, data tables provide a useful way to display the data in a way that can be accessed by everyone, including people with disabilities. To apply meaning to the data contained in the table, they need to be marked up properly. See the [Tables Tutorial](/tables/index.html) for more information on tables.
+Data tables provide a useful way to display the data so that the structure of the table can be communicated to everyone. Proper table layout allows people to understand meaningful data relationships without seeing the grid. For more details, see the [Tables Tutorial](/tables/index.html).
