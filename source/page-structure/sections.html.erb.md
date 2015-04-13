@@ -15,9 +15,15 @@ To mark up certain sections, use the appropriate HTML5 elements, for example the
 If there are more than one section of a type, sections need to be labeled using one of the techniques below using either `aria-label` or `aria-labelledby`.
 
 <aside class="annotation" id="accesssupport">
-  <h4 class="annotation-header"><span class="subhead">Accessibility Support:</span> WAI-ARIA, Web Browsers, and Assistive Technologies</h4>
+  <h4 class="annotation-header"><span class="subhead">Accessibility Support:</span> HTML5, WAI-ARIA, Web Browsers, and Assistive Technologies</h4>
   <div class="annotation-content">
-    <p>…</p>
+    <p>The support for HTML5 elements and WAI-ARIA individually are really good in modern browsers and assistive technologies. At the time of writing, Internet Explorer up to version 11 provides no semantic information via accessibility APIs for the HTML elements.</p>
+    <p>To provide the information to assistive technologies, the roles can be added to the HTML5 elements, for example:</p>
+    <pre class="highlight html"><span class="nt">&lt;header</span> <span class="na">role=</span><span class="s">"banner"</span><span class="nt">&gt;&lt;/header&gt;</span>
+<span class="nt">&lt;main</span> <span class="na">role=</span><span class="s">"main"</span><span class="nt">&gt;&lt;/main&gt;</span>
+<span class="nt">&lt;nav</span> <span class="na">role=</span><span class="s">"navigation"</span><span class="nt">&gt;&lt;/main&gt;</span>
+<span class="nt">&lt;footer</span> <span class="na">role=</span><span class="s">"contentinfo"</span><span class="nt">&gt;&lt;/footer&gt;</span>
+</pre>
   </div>
 </aside>
 
