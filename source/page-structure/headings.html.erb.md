@@ -17,13 +17,11 @@ wcag_techniques:
   - H42
 ---
 
-Headings add structure and meaning to pages by labeling each content part and indicating the relative importance of those parts.
-
-Assistive technologies and some browsers provide mechanisms to present a list of headings to the user that allows users to jump to individual headings. Headings also provide visual clues that help to skim the page or find a specific section, this is especially useful for people that are easily distracted.
+Headings communicate the way the information on the page is structured, organized and presented. Various user devices, including many assistive technologies, provide users with ways to navigate through page content using headings. They also provide visual clues that help to skim the page or find a specific section.
 
 ## Heading levels
 
-It is good practice to nest headings properly. When stepping down through headings, skipping levels should be avoided. That means that an `<h1>` is followed by an `<h1>` or `<h2>`, an `<h2>` is followed by a `<h2>` or `<h3>` etc. When stepping up through headings it is perfectly legitimate to skip any number of levels.
+Best practice is to nest headings properly. When stepping down through headings, avoid skipping levels. That means that an `<h1>` is followed by an `<h1>` or `<h2>`, an `<h2>` is followed by a `<h2>` or `<h3>` etc. When stepping up through headings it is perfectly legitimate to skip any number of levels.
 
 {::nomarkdown}
 <%=notes_start%>
@@ -56,7 +54,7 @@ When looking at the content, the highest available heading level should be used 
 
 ## Organize page sections
 
-Similar to landmarks, headings can be used to give users a way of navigating through web pages. To do this, each section of the page (for example navigation) has its own heading, describing what can be found in the section. Often the heading levels are similar to this example:
+Similar to [page sections](sections.html), headings can be used to give users a way of navigating through web pages. To do this, add a heading to each section of the page (for example navigation), that describes what can be found in the section. Often the heading levels are similar to this example:
 
 {::nomarkdown}
 <%=code_start('','Showing only headings')%>
@@ -82,4 +80,4 @@ Similar to landmarks, headings can be used to give users a way of navigating thr
 <%=code_end%>
 {:/nomarkdown}
 
-The first heading in such cases is usually the page name. In this case, the heading of the actual content is hard to find between headings that describe the page structure. If possible use [labeled page sections](sections.html) to mark up the page structure as the provide more meaning to assistive technologies.
+The first heading in such cases is usually the page name. In this case, the heading of the actual content is hard to find between headings that describe the page structure. If possible use [labeled page sections](sections.html) to mark up the page structure as these provide more meaning to assistive technologies.
