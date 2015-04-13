@@ -13,15 +13,9 @@ wcag_techniques:
   - G179
 ---
 
-## Visual clarity
-
-Web pages with many components can distract from the main content or purpose of the page, which is especially useful for users that can’t concentrate very well. The main content’s headline should have a distinct visual style that invites the reader to look at the main content first.
-
-All headings should be styled differently to the body text. Separating key sections of the page using background colors or borders can also help users to separate main from auxiliary content.
-
 ## Font size
 
-The user needs to be able to resize the text to 200% of its size anywhere on the page, without the text being cut off (without horizontal scrolling) or overlapping other text when using text zoom. The font size should be defined in relative units, such as percentages, `em` or `rem`. It is not possible to zoom text set in pixels independently from the rest of the page in some browsers. While the other units calculate the font size from the parent element, `rem` calculates the font size from the root element. Consider the following two declarations:
+User preferences for font size vary grately. As users resize text to 200%, it should not become truncated or overlap adjacent content. Define font sizes in relative units, such as percentages, `em`, or `rem`. Text set in pixels  cannot be zoomed independently from the rest of the page in some browsers. While the other units calculate the font size from the parent element, `rem` calculates the font size from the root element. Consider the following two declarations:
 
 {::nomarkdown}
 <%=code_start('','em unit')%>
@@ -65,16 +59,27 @@ The container with the class `content` has a font size that is `1.25` times the 
 
 While the resulting number for the `font-size` property is more complicated, only one step of calculation needs to be performed which makes setting font-sizes more predictable for developers.
 
+Be aware that using `em` and `rem` units are mainly useful for text and text-related measurements. Borders and most margins and paddings can be defined in pixels (`px`) to avoid thick borders or wide margins for users that use text zoom.
 
 ## Text alignment
 
-Main body text should be aligned to one side of the page, usually left in left-to-right languages. This makes the text easy to discover for people using text resizing or zoom. If the text doesn’t start at the same point on the left side, it is also hard to read for users that are not proficient reading text in this language or have a learning disability.
+Main body text should be aligned to one side of the page, left in left-to-right languages. This makes the text easy to discover for people using text resizing or zoom. If the text doesn’t start at the same point on the left side, it is also hard to read for users that are not proficient reading text in this language or have a learning disability.
 
 Centered or justified longer pieces of text can be hard to read as well. Justified text adds space in between words that can cause rivers of white space through lines making reading difficult for some users with dyslexia. If hyphenation is supported this can reduce this effect but hyphenated words can be a barrier for many readers.
 
 ## Line length
 
-A line of text shouldn’t be longer than 80 characters. This helps users with certain reading or visual disabilities that have trouble keeping their place when reading long lines of text. If the width of the text container is resized, it should be allowed to scale in a way so 80 characters or less are shown. An easy way to do this is using `max-width: 70em` in CSS. Another way to ensure good line-length is to use a fluid layout or apply responsive web design techniques that allow the user to resize the window to find a comfortable line length.
+A best practice is to enable users to set column withs in a way that one line of text isn’t longer than 80 characters. This helps users with certain reading or visual disabilities that have trouble keeping their place when reading long lines of text. If the width of the text container is resized, it should be allowed to scale in a way so 80 characters or less are shown. An very basic way to do this is using `max-width: 55em` in CSS. Another way to ensure good line-length is to use a fluid layout or apply responsive web design techniques that allow the user to resize the window to find a comfortable line length.
+
+{::nomarkdown}
+<%=notes_start%>
+{:/nomarkdown}
+
+**Note:** This is only _required_ when conforming to WCAG 2.0, Level AAA.
+
+{::nomarkdown}
+<%=notes_end%>
+{:/nomarkdown}
 
 ## Highlight section
 
