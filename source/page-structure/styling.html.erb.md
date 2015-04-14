@@ -13,6 +13,8 @@ wcag_techniques:
   - G179
 ---
 
+For some people, the visual look and readability of the web page is crucial to understand the content. The following gives a brief overview on best practices to assure good readability.
+
 ## Font size
 
 User preferences for font size vary grately. As users resize text to 200%, it should not become truncated or overlap adjacent content. Define font sizes in relative units, such as percentages, `em`, or `rem`. Text set in pixels  cannot be zoomed independently from the rest of the page in some browsers. While the other units calculate the font size from the parent element, `rem` calculates the font size from the root element. Consider the following two declarations:
@@ -61,6 +63,10 @@ While the resulting number for the `font-size` property is more complicated, onl
 
 Be aware that using `em` and `rem` units are mainly useful for text and text-related measurements. Borders and most margins and paddings can be defined in pixels (`px`) to avoid thick borders or wide margins for users that use text zoom.
 
+## Line height
+
+The line height needs to be large enough to allow good readability. If the line height is too large, it is hard to connect to the next line when the text wraps. The line height is dependent on the font used on the website, a certain line height value can be too small with one font and too large for another. As a rule of thumb larger text needs smaller line-heights. For body text the line height usually varies between 1.3 and 1.75.
+
 ## Text alignment
 
 Main body text should be aligned to one side of the page, left in left-to-right languages. This makes the text easy to discover for people using text resizing or zoom. If the text doesn’t start at the same point on the left side, it is also hard to read for users that are not proficient reading text in this language or have a learning disability.
@@ -75,7 +81,7 @@ A best practice is to enable users to set column withs in a way that one line of
 <%=notes_start%>
 {:/nomarkdown}
 
-**Note:** This is only _required_ when conforming to WCAG 2.0, Level AAA.
+**Note:** This is only required when conforming to WCAG 2.0, Level AAA.
 
 {::nomarkdown}
 <%=notes_end%>
