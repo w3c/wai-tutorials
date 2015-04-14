@@ -12,13 +12,15 @@ Semantic HTML provides several ways other than [headings](headings.html)to struc
 
 ## Paragraphs
 
-Adding rhythm and lightness to content using paragraph element (`<p>`).Consistent styling of paragraphs improves text readability. Paragraph styling can be altered by applying user stylesheets that adapt for specific needs.
+Add rhythm and lightness to content using paragraph element (`<p>`). Consistent styling of paragraphs improves text readability. Paragraph styling can be altered by applying user stylesheets that adapt for specific needs.
 
 ## Lists
 
-HTML provides elements a way to group information onto lists of different types. Ordered lists are used for sequential information and are automatically enumerated by the browser. Unordered lists are used when the order of the items is not relevant. List items in unordered lists are marked with a bullet. Both types of lists provide orientation for the user.
+HTML provides ways to group information onto lists of different types. Ordered lists are used for sequential information and are automatically enumerated by the browser. Unordered lists are used when the order of the items is not relevant. List items in unordered lists are marked with a bullet. 
 
-List items can contain a variety of HTML elements, including paragraphs, headings, form elements, and other lists.
+Definition lists groups of related terms and descriptions and connects those programmatically.
+
+All types of lists provide orientation for the user. List items can contain a variety of HTML elements, including paragraphs, headings, form elements, and other lists.
 
 ### Unordered list
 {:.ex}
@@ -143,17 +145,29 @@ Every list can be nested into another list. In this example, the order of prepar
 <%=code_end%>
 {:/nomarkdown}
 
-## Description lists
+### Description lists
 {:.newex}
 
-A description list consists of term and description groupings where each grouping associates one or more terms (the contents of `<dt>` elements) with one or more descriptions (the contents of `<dd>` elements).
+A description list consists of one or more term and description groupings. Each grouping associates one or more terms (the contents of `<dt>` elements) with one or more descriptions (the contents of `<dd>` elements).
 
-There can be multiple groupings in one definition list. A grouping begins either on the first item of the list or whenever a `<dt>` element follows an `<dd>` element.
+A grouping begins either on the first item of the list or whenever a `<dt>` element follows an `<dd>` element.
 
-### One term, multiple descriptions
+#### One term, multiple descriptions
 {:.ex}
 
 In the following example, John and Luke are described as authors and Frank is described as editor.
+
+{::nomarkdown}
+<%=sample_start%>
+<dl>
+  <dt>Authors</dt>
+  <dd>John</dd>
+  <dd>Luke</dd>
+  <dt>Editor</dt>
+  <dd>Frank</dd>
+</dl>
+<%=sample_end%>
+{:/nomarkdown}
 
 {::nomarkdown}
 <%=code_start%>
@@ -173,10 +187,20 @@ In the following example, John and Luke are described as authors and Frank is de
 <%=code_end%>
 {:/nomarkdown}
 
-### Multiple terms, one description
+#### Multiple terms, one description
 {:.ex}
 
 In the next example, two different spellings of a word are defined using description lists. In such cases, use the `dfn` element to mark up the defined term. 
+
+{::nomarkdown}
+<%=sample_start%>
+<dl>
+   <dt lang="en-US"><dfn>color</dfn></dt>
+   <dt lang="en-GB"><dfn>colour</dfn></dt>
+   <dd>A sensation which (in humans) derives from the ability of the fine structure of the eye to distinguish three differently filtered analyses of a view.</dd>
+</dl>
+<%=sample_end%>
+{:/nomarkdown}
 
 {::nomarkdown}
 <%=code_start%>
@@ -194,10 +218,21 @@ In the next example, two different spellings of a word are defined using descrip
 <%=code_end%>
 {:/nomarkdown}
 
-### Multiple terms, multiple descriptions
+#### Multiple terms, multiple descriptions
 {:.ex}
 
-In this example, there are multiple authors that are also editors:
+In this example, John and Luke authors and also editors:
+
+{::nomarkdown}
+<%=sample_start%>
+<dl>
+  <dt>Authors</dt>
+  <dt>Editors</dt>
+  <dd>John</dd>
+  <dd>Luke</dd>
+</dl>
+<%=sample_end%>
+{:/nomarkdown}
 
 {::nomarkdown}
 <%=code_start%>
@@ -224,7 +259,7 @@ Identifying a quotation as such helps clarify that the content is attributed to 
 ### Blockquote
 {:.ex}
 
-For larger quotes use the `<blockquote>` element. It can contain paragraphs, headings, and other text structure elements. The `<cite>` element is used to refer to the source of the quote.
+For larger quotes use the `<blockquote>` element. It can contain paragraphs, headings, and other text structure elements. Those should reflect the structure of the cited document. The `<cite>` element is used to refer to the source of the quote.
 
 {::nomarkdown}
 <%=sample_start%>
