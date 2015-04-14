@@ -81,3 +81,28 @@ Similar to page sections, headings can be used to give users a way of navigating
 {:/nomarkdown}
 
 The first heading in such cases is usually the page name. In this case, the heading of the actual content is hard to find between headings that describe the page structure. If possible use [labeled page sections](sections.html) to mark up the page structure as these provide more meaning to assistive technologies.
+
+In some situations it is valid to not start with a heading level 1, for example if there is no page name like in the example above. A possible heading structure would then look like this:
+
+{::nomarkdown}
+<%=code_start('','Showing only headings')%>
+{:/nomarkdown}
+
+~~~html
+  <h2>Navigation</h2>
+  <h2>Sidebar</h2>
+    <h3>More news</h3>
+    <h3>What our clients say</h3>
+    <h3>Ratings</h3>
+<h1>An inside look at the new SpaceBear 8™</h2>
+  <h2>Cotton Fur</h2>
+  <h2>Saphire Eyes</h2>
+  <h2>Syntetic Felt Paws</h2>
+  <h2>Footer</h2>
+    <h3>About the company</h3>
+    <h3>Our retail stores</h3>
+~~~
+
+{::nomarkdown}
+<%=code_end%>
+{:/nomarkdown}
