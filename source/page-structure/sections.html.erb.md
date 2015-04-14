@@ -10,14 +10,14 @@ technologies: HTML5, WAI-ARIA
 
 People need to be able to identify distinctive page sections to help navigate around the page. These sections include navigation, main content, headers, and footers. More important parts of a page, such as navigation, should be marked up on every website.
 
-To mark up certain sections, use the appropriate HTML5 elements, for example the `<main>` element denotes the main content of the page. Such sections usually correspond to an WAI-ARIA role, in this case it is called `main`. Those WAI-ARIA roles are picked up by assistive technologies. See [accessibility support information for WAI-ARIA](#accesssupport).
+To mark up certain sections, use the appropriate HTML5 elements. For example the `<main>` element denotes the main content of the page. Such sections usually correspond to an WAI-ARIA role. In case of the `<main>` element the corresponding role is `main`. Those WAI-ARIA roles are picked up by assistive technologies. See [accessibility support information for WAI-ARIA](#accesssupport).
 
-If there are more than one section of a type, sections need to be labeled using one of the techniques below using either `aria-label` or `aria-labelledby`.
+If there are more than one section of a type, sections need to be labeled using either `aria-label` or `aria-labelledby`.
 
 <aside class="annotation" id="accesssupport">
   <h4 class="annotation-header"><span class="subhead">Accessibility Support:</span> HTML5, WAI-ARIA, Web Browsers, and Assistive Technologies</h4>
   <div class="annotation-content">
-    <p>The support for HTML5 elements and WAI-ARIA individually are really good in modern browsers and assistive technologies. At the time of writing, Internet Explorer up to version 11 provides no semantic information via accessibility APIs for the HTML elements.</p>
+    <p>The support for HTML5 elements and WAI-ARIA individually are really good in modern browsers and assistive technologies. At the time of writing, Internet Explorer up to version 11 provides no semantic information via accessibility APIs for the HTML5 elements.</p>
     <p>To provide the information to assistive technologies, the roles can be added to the HTML5 elements, for example:</p>
     <pre class="highlight html"><span class="nt">&lt;header</span> <span class="na">role=</span><span class="s">"banner"</span><span class="nt">&gt;&lt;/header&gt;</span>
 <span class="nt">&lt;main</span> <span class="na">role=</span><span class="s">"main"</span><span class="nt">&gt;&lt;/main&gt;</span>
@@ -29,7 +29,7 @@ If there are more than one section of a type, sections need to be labeled using 
 
 ## Page header
 
-Most websites have a section that contains the website logo and other information, such as a search or navigation options. That section is usually on the top of the page.
+Most websites have a section that contains the website logo and other information, such as search or navigation options. That section is usually on the top of the page.
 
 The main page header is identified by using the `<header>` element which by default has the WAI-ARIA role `banner` if not used inside of `<article>` or `<section>` elements. See [note on scope](#scope).
 
