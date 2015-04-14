@@ -12,7 +12,7 @@ People need to be able to identify distinctive page sections to help navigate ar
 
 To mark up certain sections, use the appropriate HTML5 elements. For example the `<main>` element denotes the main content of the page. Such sections usually correspond to an WAI-ARIA role. In case of the `<main>` element the corresponding role is `main`. Those WAI-ARIA roles are picked up by assistive technologies. See [accessibility support information for WAI-ARIA](#accesssupport).
 
-If there are more than one section of a type, sections need to be labeled using either `aria-label` or `aria-labelledby`.
+Some sections can only be used once, for example `<main>` or the page header. Other sections, like navigations, can be used multiple times. In this case add a label using either `aria-label` or `aria-labelledby`.
 
 <aside class="annotation" id="accesssupport">
   <h4 class="annotation-header"><span class="subhead">Accessibility Support:</span> HTML5, WAI-ARIA, Web Browsers, and Assistive Technologies</h4>
@@ -49,9 +49,9 @@ The main page header is identified by using the `<header>` element which by defa
 
 ## Navigation
 
-The `<nav>` element groups a collection of links and makes them available as a navigation to assistive technologies by applying the WAI-ARIA role `navigation`. As there are often more than one navigation section on a given web page, they should always be labelled. 
+The `<nav>` element groups a collection of links and makes them available as a navigation to assistive technologies, identifying them using the WAI-ARIA role `navigation` by default. As there are often more than one navigation section on a given web page, they should always be labelled. 
 
-In the example below, “Main Navigation” is added to the navigation using the `aria-label` attribute. “Quick Navigation” is already in a heading on the page, so it is possible to refer to it using the `aria-labelledby` attribute. For more information on menus, see the [Menu tutorial](/menus/index.html). 
+In the example below there are two `<nav>` elements, so it is necessary to label them. One the labels, “Main Navigation”, has a title that isn’t shown on the page. In this instance the label is added with the `aria-label` attribute. “Quick Navigation” is already in a heading on the page, so it is possible to refer to it using the `aria-labelledby` attribute. For more information on menus, see the [Menu tutorial](/menus/index.html). 
 
 {::nomarkdown}
 <%= code_start %>
@@ -93,7 +93,7 @@ The main content of a document should be wrapped in the `<main>` element. There 
 
 ## Page footer
 
-A section of the web page that has supplemental information, such as links to copyright or privacy statements, or disclaimers, is called a footer. It should be marked up using the `<footer>` element. 
+A section of the web page that has supplemental information, such as links to copyright or privacy statements, or disclaimers, is called a footer. This information should appear inside a `<footer>` element. 
 
 By default the `<footer>` element has the WAI-ARIA role `contentinfo` if not used inside of `<article>` or `<section>` elements. See [note on scope](#scope).
 
@@ -124,38 +124,6 @@ An `<aside>` element is used whenever there is a section of the document that su
   <h3>Related Articles</h3>
   …
 </aside>
-~~~
-
-{::nomarkdown}
-<%= code_end %>
-{:/nomarkdown}
-
-## Search section
-
-The `search` role refers to the “search tool” of the website. While there is no dedicated HTML5 equivalent for this role, using the `role` attribute with the value `search` is beneficial to users. The element with the `search` role should include the input field as well as the search button and other options. The example below uses the `search` role on a `<div>` element.
-
-{::nomarkdown}
-<%= sample_start %>
-
-<form action="#search">
-  <div role="search">
-    <input type="search" aria-label="Search"> <button type="submit" style="float:none;">Search</button>
-  </div>
-</form>
-
-<%= sample_end %>
-{:/nomarkdown}
-
-{::nomarkdown}
-<%= code_start %>
-{:/nomarkdown}
-
-~~~html
-<form action="…">
-  <div role="search">
-    <input type="search" aria-label="Search"> <button type="submit">Search</button>
-  </div>
-</form>
 ~~~
 
 {::nomarkdown}
@@ -202,6 +170,38 @@ The `<article>` element represents a complete, or self-contained, composition in
 <%= code_end %>
 {:/nomarkdown}
 
+## Search section
+
+The `search` role refers to the “search tool” of the website. While there is no dedicated HTML5 equivalent for this role, using the `role` attribute with the value `search` is beneficial to users. The element with the `search` role should include the input field as well as the search button and other options. The example below uses the `search` role on a `<div>` element.
+
+{::nomarkdown}
+<%= sample_start %>
+
+<form action="#search">
+  <div role="search">
+    <input type="search" aria-label="Search"> <button type="submit" style="float:none;">Search</button>
+  </div>
+</form>
+
+<%= sample_end %>
+{:/nomarkdown}
+
+{::nomarkdown}
+<%= code_start %>
+{:/nomarkdown}
+
+~~~html
+<form action="…">
+  <div role="search">
+    <input type="search" aria-label="Search"> <button type="submit">Search</button>
+  </div>
+</form>
+~~~
+
+{::nomarkdown}
+<%= code_end %>
+{:/nomarkdown}
+
 ## Notes
 
 ### Scope
@@ -211,7 +211,7 @@ The `<article>` element represents a complete, or self-contained, composition in
 1. Mark the main header/footer section of a web page.
 2. Mark the header/footer of a certain `<article>` or `<section>`.
 
-Both elements only carry their default WAI-ARIA roles – `banner` for the `<header>` element and `contentinfo` for the `<footer>`element – only in the first use case. Once `<header>` or `<footer>` are inside an `<article>` or `<section>` element, they are scoped to this element and don’t count as main header or footer of the page, even if they are the only header or footer on the page.
+Both elements only carry their default WAI-ARIA roles – `banner` for the `<header>` element and `contentinfo` for the `<footer>`element – only in the first use case. Once `<header>` or `<footer>` are inside an `<article>` or `<section>` element, they are scoped to this element and don’t count as main header or footer of the page but as header and footer of that specific section or article.
 
 ### The `application` role
 
