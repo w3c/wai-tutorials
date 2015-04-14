@@ -21,7 +21,7 @@ Headings communicate the way the information on the page is structured, organize
 
 ## Heading levels
 
-Best practice is to nest headings properly. When stepping down through headings, avoid skipping levels. That means that an `<h1>` is followed by an `<h1>` or `<h2>`, an `<h2>` is followed by a `<h2>` or `<h3>` etc. When stepping up through headings it is perfectly legitimate to skip any number of levels.
+Best practice is to nest headings properly. When stepping down through headings, avoid skipping levels. That means that an `<h1>` is followed by an `<h1>` or `<h2>`, an `<h2>` is followed by a `<h2>` or `<h3>` etc. When stepping up through headings it is perfectly legitimate to skip any number of levels, for example a `<h1>` can follow a `<h3>`.
 
 {::nomarkdown}
 <%=notes_start%>
