@@ -166,7 +166,41 @@ The `search` role refers to the “search tool” of the website. While there is
 
 The `<section>` element marks a general section of the page or inside an article. It is used for thematic grouping of content. By default it has the WAI-ARIA role of `region`.
 
+{::nomarkdown}
+<%= code_start %>
+{:/nomarkdown}
+
+~~~html
+<section>
+  <h2>Chapter 2</h2>
+  …
+</section>
+~~~
+
+{::nomarkdown}
+<%= code_end %>
+{:/nomarkdown}
+
 The `<article>` element represents a complete, or self-contained, composition in a document, page, application, or site and that is, in principle, independently distributable or reusable. Examples for articles are items in a shop or news articles. The default WAI-ARIA role is `article`.
+
+{::nomarkdown}
+<%= code_start %>
+{:/nomarkdown}
+
+~~~html
+<article>
+  <h2>Space Bear Classic</h2>
+  …
+</article>
+<article>
+  <h2>Space Bear Extrem</h2>
+  …
+</article>
+~~~
+
+{::nomarkdown}
+<%= code_end %>
+{:/nomarkdown}
 
 ## Notes
 
