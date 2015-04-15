@@ -24,6 +24,7 @@ Some sections can only be used once, for example `<main>` or the page header. Ot
 <span class="nt">&lt;nav</span> <span class="na">role=</span><span class="s">"navigation"</span><span class="nt">&gt;&lt;/main&gt;</span>
 <span class="nt">&lt;footer</span> <span class="na">role=</span><span class="s">"contentinfo"</span><span class="nt">&gt;&lt;/footer&gt;</span>
 </pre>
+  <p>Once there is accessibility support, authors are discouraged to use this technique.</p>
   </div>
 </aside>
 
