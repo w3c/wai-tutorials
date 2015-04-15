@@ -18,7 +18,7 @@ Add rhythm and lightness to content using paragraph element (`<p>`). Consistent 
 
 HTML provides ways to group information onto lists of different types. Ordered lists are used for sequential information and are automatically enumerated by the browser. Unordered lists are used when the order of the items is not relevant. List items in unordered lists are marked with a bullet. 
 
-Definition lists groups of related terms and descriptions and connects those programmatically.
+Description lists groups of related terms and descriptions and connects those programmatically.
 
 All types of lists provide orientation for the user. List items can contain a variety of HTML elements, including paragraphs, headings, form elements, and other lists.
 
