@@ -8,7 +8,7 @@ wcag_techniques:
   - H48
   - H49
 ---
-Semantic HTML provides several ways other than [headings](headings.html)to structure content. This helps to keep the website extensible, the content reusable and also conveys more meaning to assistive technologies.
+Semantic HTML provides several ways other than headings to structure content. This helps to keep the website extensible, the content reusable and also conveys more meaning to assistive technologies.
 
 ## Paragraphs
 
