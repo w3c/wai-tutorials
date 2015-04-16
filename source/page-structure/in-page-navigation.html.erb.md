@@ -10,7 +10,7 @@ wcag_techniques:
   - G124
 ---
 
-As Web browsing is non-linear, useful navigation can be provided to efficiently orient users to page content. Such in-page navigation provides users with links to sections of the page that might be hard to discover in a linear fashion. This also benefits people with low vision. In-page links to content also make it easier to share specific content.
+The previous pages of this tutorial showed how users use sections for orientation in websites. As Web browsing is non-linear, useful navigation can be provided to efficiently navigate through page content. Such in-page navigation provides users with links to sections of the page that might be hard to discover in a linear fashion. This also benefits people with low vision. In-page links to content also make it easier to share specific content.
 
 ## Anchors
 
