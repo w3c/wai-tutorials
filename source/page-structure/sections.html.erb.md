@@ -8,31 +8,34 @@ wcag_techniques:
 technologies: HTML5, WAI-ARIA
 ---
 
-People need to be able to identify distinctive page sections to help navigate around the page. These sections include navigation, main content, headers, and footers. More important parts of a page, such as navigation, should be marked up on every website.
+People need to be able to identify page sections to navigate documents. Usually documents include one or more navigations, main content, headers, and footers. Apart from the styling documents  More important parts of a page, such as navigation, should be marked up on every website.
 
-To mark up certain sections, use the appropriate HTML5 elements. For example the `<main>` element denotes the main content of the page. Such sections usually correspond to an WAI-ARIA role. In case of the `<main>` element the corresponding role is `main`. Those WAI-ARIA roles are picked up by assistive technologies. See [accessibility support information for WAI-ARIA](#accesssupport).
+This tutorial shows how to use HTML5 elements to mark up such sections and convey the meaning to users and assistive technologies. Such elements leverage the browser accessibility API by using default WAI-ARIA roles. See [accessibility support information](#accesssupport).
+
+## Overall page sections
+
+Certain sections on web pages define the overall layout and structure. They   are usually the same on every web page of a web site. Other sections are used to structure the content of the individual page.
 
 Some sections can only be used once, for example `<main>` or the page header. Other sections, like navigations, can be used multiple times. In this case add a label using either `aria-label` or `aria-labelledby`.
 
-<aside class="annotation" id="accesssupport">
-  <h4 class="annotation-header"><span class="subhead">Accessibility Support:</span> HTML5, WAI-ARIA, Web Browsers, and Assistive Technologies</h4>
-  <div class="annotation-content">
-    <p>The support for HTML5 elements and WAI-ARIA individually are really good in modern browsers and assistive technologies. At the time of writing, Internet Explorer up to version 11 provides no semantic information via accessibility APIs for the HTML5 elements.</p>
-    <p>To provide the information to assistive technologies, the roles can be added to the HTML5 elements, for example:</p>
-    <pre class="highlight html"><span class="nt">&lt;header</span> <span class="na">role=</span><span class="s">"banner"</span><span class="nt">&gt;&lt;/header&gt;</span>
-<span class="nt">&lt;main</span> <span class="na">role=</span><span class="s">"main"</span><span class="nt">&gt;&lt;/main&gt;</span>
-<span class="nt">&lt;nav</span> <span class="na">role=</span><span class="s">"navigation"</span><span class="nt">&gt;&lt;/main&gt;</span>
-<span class="nt">&lt;footer</span> <span class="na">role=</span><span class="s">"contentinfo"</span><span class="nt">&gt;&lt;/footer&gt;</span>
-</pre>
-  <p>Once there is accessibility support, authors are discouraged to use this technique.</p>
-  </div>
-</aside>
-
-## Page header
+### Page header
+{:.ex}
 
 Most websites have a section that contains the website logo and other information, such as search or navigation options. That section is usually on the top of the page.
 
 The main page header is identified by using the `<header>` element which by default has the WAI-ARIA role `banner` if not used inside of `<article>` or `<section>` elements. See [note on scope](#scope).
+
+<aside class="annotation" id="scope">
+  <h4 class="annotation-header">Scope</h4>
+  <div class="annotation-content">
+    <p><code>&lt;header&gt;</code> and <code>&lt;footer&gt;</code> elements have two use cases in HTML5:</p>
+    <ol>
+      <li>Mark the main header/footer section of a web page.</li>
+      <li>Mark the header/footer of a certain <code>&lt;article&gt;</code> or <code>&lt;section&gt;</code>.</li>
+    </ol>
+    <p>Both elements only carry their default WAI-ARIA roles – <code>banner</code> for the <code>&lt;header&gt;</code> element and <code>contentinfo</code> for the <code>&lt;footer&gt;</code>element – only in the first use case. Once <code>&lt;header&gt;</code> or <code>&lt;footer&gt;</code> are inside an <code>&lt;article&gt;</code> or <code>&lt;section&gt;</code> element, they are scoped to this element and don’t count as main header or footer of the page but as header and footer of that specific section or article.</p>
+  </div>
+</aside>
 
 {::nomarkdown}
 <%= code_start %>
@@ -48,7 +51,8 @@ The main page header is identified by using the `<header>` element which by defa
 <%= code_end %>
 {:/nomarkdown}
 
-## Navigation
+### Navigation
+{:.ex}
 
 The `<nav>` element groups a collection of links and makes them available as a navigation to assistive technologies, identifying them using the WAI-ARIA role `navigation` by default. As there are often more than one navigation section on a given web page, they should always be labelled. 
 
@@ -73,7 +77,8 @@ In the example below there are two `<nav>` elements, so it is necessary to label
 <%= code_end %>
 {:/nomarkdown}
 
-## Main content
+### Main content
+{:.ex}
 
 The main content of a document should be wrapped in the `<main>` element. There is only one main element per document allowed. This helps assistive technologies to identify the main content and guide users to it.
 
@@ -92,7 +97,8 @@ The main content of a document should be wrapped in the `<main>` element. There 
 <%= code_end %>
 {:/nomarkdown}
 
-## Page footer
+### Page footer
+{:.ex}
 
 A section of the web page that has supplemental information, such as links to copyright or privacy statements, or disclaimers, is called a footer. This information should appear inside a `<footer>` element. 
 
@@ -112,7 +118,8 @@ By default the `<footer>` element has the WAI-ARIA role `contentinfo` if not use
 <%= code_end %>
 {:/nomarkdown}
 
-## Complementary content
+### Complementary content
+{:.ex}
 
 An `<aside>` element is used whenever there is a section of the document that supports the main content, yet is separate and meaningful on its own. It carries a `complementary` role by default.
 
@@ -131,9 +138,15 @@ An `<aside>` element is used whenever there is a section of the document that su
 <%= code_end %>
 {:/nomarkdown}
 
-## General sections and articles
+## In-page sections
+{:.newex}
 
-The `<section>` element marks a general section of the page or inside an article. It is used for thematic grouping of content. By default it has the WAI-ARIA role of `region`.
+To structure content on the pages, use sections and articles. They can differ from page type to page type and even from web page to web page.
+
+### Sections
+{:.ex}
+
+The `<section>` element marks a general section on the page or inside an article. It is used for thematic grouping of content. By default it has the WAI-ARIA role of `region`.
 
 {::nomarkdown}
 <%= code_start %>
@@ -149,6 +162,9 @@ The `<section>` element marks a general section of the page or inside an article
 {::nomarkdown}
 <%= code_end %>
 {:/nomarkdown}
+
+### Articles
+{:.ex}
 
 The `<article>` element represents a complete, or self-contained, composition in a document, page, application, or site and that is, in principle, independently distributable or reusable. Examples for articles are items in a shop or news articles. The default WAI-ARIA role is `article`.
 
@@ -171,7 +187,8 @@ The `<article>` element represents a complete, or self-contained, composition in
 <%= code_end %>
 {:/nomarkdown}
 
-## Search section
+### Search
+{:.ex}
 
 The `search` role refers to the “search tool” of the website. While there is no dedicated HTML5 equivalent for this role, using the `role` attribute with the value `search` is beneficial to users. The element with the `search` role should include the input field as well as the search button and other options. The example below uses the `search` role on a `<div>` element.
 
@@ -203,17 +220,22 @@ The `search` role refers to the “search tool” of the website. While there is
 <%= code_end %>
 {:/nomarkdown}
 
-## Notes
-
-### Scope
-
-`<header>` and `<footer>` elements have two use cases in HTML5:
-
-1. Mark the main header/footer section of a web page.
-2. Mark the header/footer of a certain `<article>` or `<section>`.
-
-Both elements only carry their default WAI-ARIA roles – `banner` for the `<header>` element and `contentinfo` for the `<footer>`element – only in the first use case. Once `<header>` or `<footer>` are inside an `<article>` or `<section>` element, they are scoped to this element and don’t count as main header or footer of the page but as header and footer of that specific section or article.
-
-### The `application` role
+## A note on the `application` role
 
 The role `application` declares a section as a web application, as opposed to a web document. The role of application should be **used with caution**, as it gives a signal to screen reading software to turn off usual web navigation controls. Simple widgets should generally not be given the application role, nor should an entire web page be given the application role, unless it is not supposed to be used at all like a web page, and not without much user testing with assistive technology.
+
+## Accessibility Support
+{:#accessupport}
+
+The support for HTML5 elements and WAI-ARIA individually are really good in modern browsers and assistive technologies. At the time of writing, Internet Explorer up to version 11 provides no semantic information via accessibility APIs for the HTML5 elements.
+
+To provide the information to assistive technologies, the roles can be added to the HTML5 elements, for example:
+
+~~~html
+<header role="banner"></header>
+<main role="main"></main>
+<nav role="navigation"></main>
+<footer role="contentinfo"></footer>
+~~~
+
+Once there is accessibility support, authors are discouraged to use this technique.
