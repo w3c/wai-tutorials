@@ -8,17 +8,17 @@ topic_order: 6
 type: intro
 ---
 
-This tutorial shows how to use HTML and WAI-ARIA to improve navigation through a web page and application. Proper page structure makes it easier to everyone to understand the content. It also facilitates the effectiveness of assistive technology and other alternative devices when they are used to use the web.
+Proper page structure makes it easier for everyone to understand the content. It also facilitates the effectiveness of users that use assistive technology or other alternative devices. This tutorial shows how to use HTML and WAI-ARIA to improve navigation and orientation on web pages and applications. 
 
-* **[Page Sections](sections.html):** Identify and mark section on pages using HTML5 and WAI-ARIA roles. This ensures the purpose of each individual section is conveyed to users.
+* **[Page Sections](sections.html):** Identify and mark up sections on web pages using HTML5 and WAI-ARIA roles.
 
-* **[Headings](headings.html):** Add logically nested headings of different levels to create sections of content.
+* **[Headings](headings.html):** Add logically nested headings of different levels to label sections of content.
 
-* **[Content Structure](content.html):** Mark up the content on a page in a way that uses the best available element for the content. This allows users to style the content in a way they like and also allows assistive technology to differentiate between types of content.
+* **[Content Structure](content.html):** Mark up the content on a page in a way that uses the best available element.
 
-* **[Styling](styling.html):** Consistent styling allows users to keep track of their position in the web page and of what is important on the page.
+* **[Styling](styling.html):** Use consistent styling to allow users to keep track of their position in the web page and of what is important on the page.
 
-* **[In-page Navigation](in-page-navigation.html):** Provide navigation aids that allow users to get to specific sections of a web page more easily. Consider using a “table of content” for longer pieces of content.
+* **[In-page Navigation](in-page-navigation.html):** Provide mechanisms to navigate between sections of a web page. Consider using a “table of contents” for longer pieces of content.
 
 ## Why is this important?
 
