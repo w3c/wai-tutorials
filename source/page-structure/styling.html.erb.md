@@ -13,7 +13,7 @@ wcag_techniques:
   - G179
 ---
 
-For some people, the visual look and readability of the web page is crucial to understand the content as web pages with many components can distract from the main content or purpose of the page. Visual clues, like a distinct main headline, can will help users to orient around the page. Key sections of the page can be separated from other content using background colors or borders. Navigation sections can be easier to find if they have a distinctive look.
+For some people, the visual look and readability of the web page is crucial to understand the content as web pages with many components can distract from the main content or purpose of the page. Visual cues, like a distinct main headline, can will help users to orient around the page. Key sections of the page can be separated from other content using background colors or borders. Navigation sections can be easier to find if they have a distinctive look.
 
 The following gives a brief overview on best practices to assure good readability.
 
