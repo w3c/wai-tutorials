@@ -8,7 +8,7 @@ wcag_techniques:
 technologies: HTML5, WAI-ARIA
 ---
 
-People need to be able to identify page sections to navigate documents. Usually documents include one or more navigations, main content, headers, and footers. Apart from the styling documents  More important parts of a page, such as navigation, should be marked up on every website.
+People need to be able to identify page sections to navigate documents. Usually documents include one or more navigations, main content, headers, and footers. More important parts of a page, such as navigation, should be marked up on every website.
 
 This tutorial shows how to use HTML5 elements to mark up such sections and convey the meaning to users and assistive technologies. Such elements leverage the browser accessibility API by using default WAI-ARIA roles. See [accessibility support information](#accesssupport).
 
