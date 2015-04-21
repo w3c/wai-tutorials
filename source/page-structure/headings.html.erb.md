@@ -17,7 +17,7 @@ wcag_techniques:
   - H42
 ---
 
-Headings communicate the way the information on the page is structured, organized and presented. Various user devices, including many assistive technologies, provide users with ways to navigate through page content using headings. They also provide visual clues that help to skim the page or find a specific section.
+Headings communicate the way the information on the page is structured, organized and presented. Various user devices, including many assistive technologies, provide users with ways to navigate through page content using headings. They also provide visual cues that help to skim the page or find a specific section.
 
 ## Heading levels
 
