@@ -1,5 +1,5 @@
 ---
-title: Page Sections
+title: Page Regions
 status: draft
 order: 2
 wcag_success_criteria:
@@ -8,20 +8,20 @@ wcag_techniques:
 technologies: HTML5, WAI-ARIA
 ---
 
-People need to be able to identify page sections to navigate documents. Usually documents include one or more navigations, main content, headers, and footers. More important parts of a page, such as navigation, should be marked up on every website.
+People need to be able to identify page regions to navigate documents. Usually documents include one or more navigations, main content, headers, and footers. More important parts of a page, such as navigation, should be marked up on every website.
 
-This tutorial shows how to use HTML5 elements to mark up such sections and convey the meaning to users and assistive technologies. Such elements leverage the browser accessibility API by using default WAI-ARIA roles. See [accessibility support information](#accesssupport).
+This tutorial shows how to use HTML5 elements to mark up such regions and convey the meaning to users and assistive technologies. Such elements leverage the browser accessibility API by using default WAI-ARIA roles. See [accessibility support information](#accesssupport).
 
-## Overall page sections
+## Overall page regions
 
-Certain sections on web pages define the overall layout and structure. They   are usually the same on every web page of a web site. Other sections are used to structure the content of the individual page.
+Certain regions on web pages define the overall layout and structure. They   are usually the same on every web page of a web site. Other regions are used to structure the content of the individual page.
 
-Some sections can only be used once, for example `<main>` or the page header. Other sections, like navigations, can be used multiple times. In this case add a label using either `aria-label` or `aria-labelledby`.
+Some regions can only be used once, for example `<main>` or the page header. Others, like navigations, can be used multiple times. In this case add a label using either `aria-label` or `aria-labelledby`.
 
 ### Page header
 {:.ex}
 
-Most websites have a section that contains the website logo and other information, such as search or navigation options. That section is usually on the top of the page.
+Most websites have a regiaon that contains the website logo and other information, such as search or navigation options. That region is usually on the top of the page.
 
 The main page header is identified by using the `<header>` element which by default has the WAI-ARIA role `banner` if not used inside of `<article>` or `<section>` elements. See [note on scope](#scope).
 
@@ -100,7 +100,7 @@ The main content of a document should be wrapped in the `<main>` element. There 
 ### Page footer
 {:.ex}
 
-A section of the web page that has supplemental information, such as links to copyright or privacy statements, or disclaimers, is called a footer. This information should appear inside a `<footer>` element. 
+A region of the web page that has supplemental information, such as links to copyright or privacy statements, or disclaimers, is called a footer. This information should appear inside a `<footer>` element. 
 
 By default the `<footer>` element has the WAI-ARIA role `contentinfo` if not used inside of `<article>` or `<section>` elements. See [note on scope](#scope).
 
@@ -121,7 +121,7 @@ By default the `<footer>` element has the WAI-ARIA role `contentinfo` if not use
 ### Complementary content
 {:.ex}
 
-An `<aside>` element is used whenever there is a section of the document that supports the main content, yet is separate and meaningful on its own. It carries a `complementary` role by default.
+An `<aside>` element is used whenever there is a part of the document that supports the main content, yet is separate and meaningful on its own. It carries a `complementary` role by default.
 
 {::nomarkdown}
 <%= code_start %>
@@ -138,7 +138,40 @@ An `<aside>` element is used whenever there is a section of the document that su
 <%= code_end %>
 {:/nomarkdown}
 
-## In-page sections
+### Search
+{:.ex}
+
+The search region refers to the “search tool” of the website. There is no dedicated HTML5 element to use for this region but it can be marked up using the WAI-ARIA `role` attribute with the value `search`. The element with the `search` role should include the input field as well as the search button and other search options. The example below uses the `search` role on a `<div>` element.
+
+{::nomarkdown}
+<%= sample_start %>
+
+<form action="#search">
+  <div role="search">
+    <input type="search" aria-label="Search"> <button type="submit" style="float:none;">Search</button>
+  </div>
+</form>
+
+<%= sample_end %>
+{:/nomarkdown}
+
+{::nomarkdown}
+<%= code_start %>
+{:/nomarkdown}
+
+~~~html
+<form action="…">
+  <div role="search">
+    <input type="search" aria-label="Search"> <button type="submit">Search</button>
+  </div>
+</form>
+~~~
+
+{::nomarkdown}
+<%= code_end %>
+{:/nomarkdown}
+
+## In-page regions
 {:.newex}
 
 To structure content on the pages, use sections and articles. They can differ from page type to page type and even from web page to web page.
@@ -146,7 +179,7 @@ To structure content on the pages, use sections and articles. They can differ fr
 ### Sections
 {:.ex}
 
-The `<section>` element marks a general section on the page or inside an article. It is used for thematic grouping of content. By default it has the WAI-ARIA role of `region`.
+The `<section>` element marks a general region on the page or inside an article. It is used for thematic grouping of content. By default it has the WAI-ARIA role of `region`.
 
 {::nomarkdown}
 <%= code_start %>
@@ -181,39 +214,6 @@ The `<article>` element represents a complete, or self-contained, composition in
   <h2>Space Bear Extrem</h2>
   …
 </article>
-~~~
-
-{::nomarkdown}
-<%= code_end %>
-{:/nomarkdown}
-
-### Search
-{:.ex}
-
-The `search` role refers to the “search tool” of the website. While there is no dedicated HTML5 equivalent for this role, using the `role` attribute with the value `search` is beneficial to users. The element with the `search` role should include the input field as well as the search button and other options. The example below uses the `search` role on a `<div>` element.
-
-{::nomarkdown}
-<%= sample_start %>
-
-<form action="#search">
-  <div role="search">
-    <input type="search" aria-label="Search"> <button type="submit" style="float:none;">Search</button>
-  </div>
-</form>
-
-<%= sample_end %>
-{:/nomarkdown}
-
-{::nomarkdown}
-<%= code_start %>
-{:/nomarkdown}
-
-~~~html
-<form action="…">
-  <div role="search">
-    <input type="search" aria-label="Search"> <button type="submit">Search</button>
-  </div>
-</form>
 ~~~
 
 {::nomarkdown}
