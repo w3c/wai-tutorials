@@ -18,7 +18,7 @@ Items containing a submenu should be marked in a way that is obvious. In the fol
 {::nomarkdown}
 <%= sample_start('show-overflow') %>
 
-<nav role="navigation" aria-label="Main Navigation" aria-presentation="true" id="flyoutnav">
+<nav role="presentation" aria-label="Main Navigation" id="flyoutnav">
 		<ul>
 				<li><a href="#flyoutnav">Home</a></li>
 				<li><a href="#flyoutnav">Shop</a></li>
@@ -169,7 +169,7 @@ By using JavaScript, it is possible to react to keyboard usage and abrupt mouse 
 {::nomarkdown}
 <%= sample_start('show-overflow') %>
 
-<nav role="navigation" aria-label="Main Navigation" aria-presentation="true" id="flyoutnavmousefixed">
+<nav role="presentation" aria-label="Main Navigation" id="flyoutnavmousefixed">
 		<ul>
 				<li><a href="#flyoutnavmousefixed">Home</a></li>
 				<li><a href="#flyoutnavmousefixed">Shop</a></li>
@@ -306,7 +306,7 @@ The activation of the top-level menu item won’t link to the page in its `href`
 {::nomarkdown}
 <%= sample_start('show-overflow') %>
 
-<nav role="navigation" aria-label="Main Navigation" aria-presentation="true" id="flyoutnavkbfixed">
+<nav role="presentation" aria-label="Main Navigation" id="flyoutnavkbfixed">
 		<ul>
 				<li><a href="#flyoutnavkbfixed">Home</a></li>
 				<li><a href="#flyoutnavkbfixed">Shop</a></li>
@@ -505,7 +505,7 @@ If the top-level menu item should stay a link to a page, adding a separate butto
 {::nomarkdown}
 <%= sample_start('show-overflow') %>
 
-<nav role="navigation" aria-label="Main Navigation" aria-presentation="true" id="flyoutnavkbbtn">
+<nav role="presentation" aria-label="Main Navigation" id="flyoutnavkbbtn">
 		<ul>
 				<li><a href="#flyoutnavkbbtn">Home</a></li>
 				<li><a href="#flyoutnavkbbtn">Shop</a></li>
@@ -765,7 +765,7 @@ Currently, screen reader users are unable to tell if an item has a submenu or no
 {::nomarkdown}
 <%= sample_start('show-overflow') %>
 
-<nav role="navigation" aria-label="Main Navigation" aria-presentation="true" id="flyoutaria">
+<nav role="presentation" aria-label="Main Navigation" id="flyoutaria">
 		<ul>
 				<li><a href="#flyoutaria">Home</a></li>
 				<li><a href="#flyoutaria">Shop</a></li>
@@ -895,11 +895,16 @@ var timer1, timer2;
 Array.prototype.forEach.call(menuItems1, function(el, i){
 		el.addEventListener("mouseover", function(event){
 				this.className = "has-submenu open";
+				this.setAttribute('aria-expanded', "true");
 				clearTimeout(timer1);
 		});
 		el.addEventListener("mouseout", function(event){
 				timer1 = setTimeout(function(event){
-						document.querySelector("#flyoutaria .has-submenu.open").className = "has-submenu";
+						var opennav = document.querySelector("#flyoutaria .has-submenu.open");
+						if (opennav) {
+							opennav.className = "has-submenu";
+							opennav.querySelector("[aria-expanded]").setAttribute('aria-expanded', "false");
+						}
 				}, 1000);
 		});
 		el.querySelector('a').addEventListener("click",  function(event){
@@ -926,7 +931,7 @@ Array.prototype.forEach.call(menuItems1, function(el, i){
 					var opennav = document.querySelector("#flyoutaria .has-submenu.open")
 					if (opennav) {
 						opennav.className = "has-submenu";
-						document.querySelector("#flyoutaria .has-submenu.open [aria-expanded]").setAttribute('aria-expanded', "false");
+						opennav.querySelector("[aria-expanded]").setAttribute('aria-expanded', "false");
 					}
 				}, 10);
 			});
