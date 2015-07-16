@@ -27,21 +27,21 @@ wcag_techniques:
   - G183
 ---
 
-Menus are used to browse around websites (“navigation menus”) or initiate actions inside a web page (“application menus”). Both types of menus are often used as fly-out menus, with some additional possibilities to make application menus accessible. As they are vital to operate websites and web applications, they need to be usable regardless of how users interact with websites. This tutorial covers the following topics:
+Menus are used to browse around websites (“navigation menus”) or initiate actions inside a web application (“application menus”). They are often implemented in the form of fly-out menus. Due to their important role to operate websites and web applications, they need to be usable in all circumstances. This tutorial covers the following topics:
 
 * **[Structure](structure.html):** Mark up menus using lists to enable easy access to all pages of the website.
 
 * **[Styling](styling.html):** Lay out different types of menus, depending on the situation, using commonly recognized design patterns and indicate the current page’s menu item.
 
-* **[Fly-out Menus](flyout.html):** Use fly-out menus to give users quick access to pages in lower hierarchies.
+* **[Fly-out Menus](flyout.html):** Use fly-out menus to give users quick access to pages further down in the navigation tree.
 
-* **[Web Application Menus](application.html):** By applying special markup and behavior, menus for web applications can behave like a desktop application.
+* **[Web Application Menus](application.html):** By applying special markup and interactive behavior, menus for web applications can act like similar menus in desktop applications.
 
-* **[Multiple Ways](multiple-ways.html):** Many users benefit from alternative ways to traverse through the content of a website, for example by using sitemaps or breadcrumb trails.
+* **[Multiple Ways](multiple-ways.html):** Many users benefit from alternative ways to traverse through the content of a website, for example by using site maps or breadcrumb trails.
 
 ## Why is this important?
 
-Navigation menus reflect the underlying structure of the website’s content. If that content structure is coherent, users will find what they are looking for more easily. Application menus are one way to provide functionality for operating to use the web application.
+Navigation menus reflect the underlying structure of the website content. If that content structure is coherent, users will find what they are looking for more easily, regardless of disability. Application menus are one way to provide functionality for operating web applications.
 
 * **Screen reader and keyboard users** should be aware which link is currently in focus. The menu link to the page the user is currently on should be indicated as well.
 
