@@ -211,7 +211,8 @@ Array.prototype.forEach.call(appsMenuItems, function(el, i){
 					gotoSubIndex(submenu, subindex);
 					break;
 				case keys.esc:
-					document.querySelector('a[href="#related"]').focus();
+					document.querySelector('#escape').setAttribute('tabindex', '-1');
+					document.querySelector('#escape').focus();
 			}
 			event.preventDefault();
 		});
