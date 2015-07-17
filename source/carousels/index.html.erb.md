@@ -12,15 +12,15 @@ wcag_success_criteria:
   - 4.1.2
 ---
 
-Carousels, commonly also referred to as “slide shows” or “sliders”, display a series of content items one at a time; for example, a series of news headlines. Carousels often use animations to move from slide to slide which can be distracting for some users. They may also move so fast automatically that their content is hard or impossible to grasp, which is why every carousel should have a function to pause the animation.
+Carousels, commonly also referred to as “slide shows” or “sliders”, display one item from a series of content items. Common examples are scrolling news headlines or image sliders. Carousels often use animations to move from slide to slide which can be distracting for some users. They may also move so fast automatically that their content is hard or impossible to read. 
 
-Also, carousels often pose traps to keyboard users, not allowing them to use the carousel. They may even get stuck inside, without a chance to leave the carousel and read the rest of the page. This tutorial highlights the particular accessibility considerations for such carousels:
+Carousels should have a function that allows users to pause and advance the animation. They need to be implemented in a way thatis not interfering with keyboard use. In some instances keyboard users may even get stuck inside the carousel, without a chance to leave it and access the rest of the page. This tutorial highlights accessibility considerations for carousels:
 
 - **[Structure](structure.html):** Provide structural markup for the carousel and its items, and later enhance these structures with styling and scripting.
 
-- **[Functionality](functionality.html):** Provide functionality to display the carousel items one at a time, and to allow users to browse through them.
+- **[Functionality](functionality.html):** Add the functionality to display one carousel item at a time, and to allow users to browse through them.
 
-- **[Animations](animations.html):** Provide users with control over any animations in your carousel.
+- **[Animations](animations.html):** Enhance the carousel using animation and give users control over those animations.
 
 - **[Full Content](examples/carousel.html):** The complete example source code.
 
