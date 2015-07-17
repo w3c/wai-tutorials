@@ -224,16 +224,6 @@ When carousels use text that overlays a background image, the contrast ratio (â€
 The example below shows how the carousel structure from the previous example is styled. As the background images can be distracting, using a background color for the overlaying text is a good way to ensure a good contrast ratio regardless of the image. Here, a semi-transparent background with a high opacity (here: 80%) is added to the text. 
 
 {::nomarkdown}
-<%= notes_start %>
-{:/nomarkdown}
-
-**Note:** The carousel demo in this tutorial has a fixed-width implementation to keep the tutorial simple.
-
-{::nomarkdown}
-<%= notes_end %>
-{:/nomarkdown}
-
-{::nomarkdown}
 <%= sample_start %>
 {:/nomarkdown}
 
