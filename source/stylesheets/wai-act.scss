@@ -35,6 +35,7 @@ $container_margin:  0.5%;         // auto|px|%    //
 
 .font-secondary {
 	font-family: "Vollkorn", Georgia, Times, "Times New Roman", serif;
+	font-feature-settings: "lnum", "pnum";
 }
 
 // Body
