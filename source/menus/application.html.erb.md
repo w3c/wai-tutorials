@@ -6,13 +6,17 @@ order: 5
 wcag_techniques:
 ---
 
-Web application menus have a similar basis to navigation menus. They often consist of a horizontal menu bar and use fly-out functionality. There are some WAI-ARIA roles that are helping users with assistive technology to operate menus similar to desktop software menus. When using the menu WAI-ARIA attributes, the keyboard interaction should be similar to desktop software as well: the tab key is used to iterate through the top-level items only, the up and down arrows are used to navigate the sub menus. This keyboard behavior doesn’t come with the WAI-ARIA attributes, but needs to be added using scripting. A detailed explanation on the WAI-ARIA attributes and keyboard behavior can be found in the [WAI-ARIA Authoring Practices document (draft)](http://www.w3.org/TR/wai-aria-practices/#menu).
+Web application menus use the same basic structure as navigation menus: They often consist of a horizontal menu bar and use fly-out functionality. 
+
+Some additional WAI-ARIA roles help users with assistive technology to operate those menus in a way that is similar to desktop software menus. When using them, the keyboard interaction should be similar to desktop software as well: the tab key is used to iterate through the top-level items only, the up and down arrows are used to navigate the sub menus. 
+
+Note that the keyboard behavior is not automatically changed when adding those roles, but needs to be added using scripting. A detailed explanation on the WAI-ARIA attributes and keyboard behavior can be found in the [WAI-ARIA Authoring Practices document (draft)](http://www.w3.org/TR/wai-aria-practices/#menu).
 
 In addition to the `aria-expanded` and `aria-haspopup` attributes, the following roles are used in the example:
 
-* **`aria-menubar`:** Represents a usually horizontal menu bar.
-* **`aria-menu`:** Represents a set of links or commands in a menu bar, it is used for the fly-out menus.
-* **`aria-menuitem`:** Represents an individual menu item.
+* **`menubar`:** Represents a (usually horizontal) menu bar.
+* **`menu`:** Represents a set of links or commands in a menu bar, it is used for the fly-out menus.
+* **`menuitem`:** Represents an individual menu item.
 
 
 {::nomarkdown}
@@ -265,7 +269,8 @@ Array.prototype.forEach.call(subMenuItems, function(el, i){
 <%= sample_end %>
 {:/nomarkdown}
 
-The markup has no links, it is a bare nested list with some WAI-ARIA roles. As we will add keyboard and mouse interaction on our own, this is enough.
+The markup has no links at all: It is a nested list with some WAI-ARIA roles as the application would be non-functional without JavaScript available anyway. Also the example recreates the behavior of desktop application menus using scripting.
+{:#escape}
 
 {::nomarkdown}
 <%= code_start %>
