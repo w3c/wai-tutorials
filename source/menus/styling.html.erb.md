@@ -23,7 +23,7 @@ A vertical menu provides space for a lot of links as all items can be easily rea
 {::nomarkdown}
 <%= sample_start %>
 
-<nav role="navigation" aria-label="Main Navigation" aria-presentation="true" id="verticalnav">
+<nav aria-label="Main Navigation" role="presentation" id="verticalnav">
 		<ul>
 				<li><a href="#samplenav">Home</a></li>
 				<li><a href="#samplenav">Shop</a></li>
@@ -73,7 +73,7 @@ If a menu has so few items that they can fit in one line on the screen, a horizo
 {::nomarkdown}
 <%= sample_start %>
 
-<nav role="navigation" aria-label="Main Navigation" aria-presentation="true" id="samplenav">
+<nav aria-label="Main Navigation" role="presentation" id="samplenav">
 		<ul>
 				<li><a href="#samplenav">Home</a></li>
 				<li><a href="#samplenav">Shop</a></li>
@@ -131,7 +131,7 @@ In the following example, the active menu item is not only marked using differen
 {::nomarkdown}
 <%= sample_start %>
 
-<nav role="navigation" aria-label="Main Navigation" aria-presentation="true" id="currentnav">
+<nav aria-label="Main Navigation" role="presentation" id="currentnav">
 		<ul>
 				<li><a href="#currentnav">Home</a></li>
 				<li><a href="#currentnav">Shop</a></li>

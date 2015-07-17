@@ -120,7 +120,7 @@ Items containing a submenu should be marked in a way that is obvious. In the fol
 {:/nomarkdown}
 
 ~~~ html
-<nav role="navigation" aria-label="Main Navigation">
+<nav role="presentation" aria-label="Main Navigation">
 		<ul>
 				<li><a href="…">Home</a></li>
 				<li><a href="…">Shop</a></li>
