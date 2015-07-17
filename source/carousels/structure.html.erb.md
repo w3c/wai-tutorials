@@ -11,7 +11,7 @@ wcag_techniques:
   - H48
 ---
 
-Provide structural markup for the carousel and its items, and later enhance these structures with styling and scripting. This ensures that the content of the carousel has meaning on its own, without styling and scripting, and can be rendered and used in more situations.
+Structural markup ensures that the content of the carousel has meaning on its own, without styling and scripting, and can be rendered and used in more situations. For example the carousel could be just a list of articles on mobile.
 
 ## Carousel framework
 
@@ -135,6 +135,7 @@ If there is already some text identifying the carousel in HTML, it is usually mo
 {:/nomarkdown}
 
 ## Item structure
+{:.newex}
 
 Provide proper structure for content within individual carousel items. This makes them independent pieces of content that can be rendered and used in different ways.
 
@@ -171,7 +172,7 @@ In the following example, each carousel item only consists of an image, so that 
 ### Complex content
 {:.ex}
 
-This example also uses a list, even though the carousel items consist of more substantial content than in the previous example. This approach was selected as the individual carousel items are not independent pieces of content and thus not suitable for the  `<article>` element. Each individual list item includes a heading, text, and links.
+This example also uses a list, even though the carousel items consist of more substantial content than in the previous example. The individual carousel items are not independent pieces of content and thus not suitable for the  `<article>` element. Each list item includes a heading, text, and links.
 
 {::nomarkdown}
 <%= code_start %>
@@ -213,14 +214,14 @@ This example also uses a list, even though the carousel items consist of more su
 ## Carousel styling
 {:.newex}
 
-At this stage the carousel does not have any functionality. This is added later using scripting, based on the class names of the elements. This ensures that if scripting is not enabled for various reasons, including bad network connection or user choice, the content will still be meaningful.
+At this stage the carousel does not have any functionality. This is added later using scripting, based on the class names of the elements. By using this approach, the content is still meaningfull even in situations when scripting is not enabled, including bad network connection or user choice. Basic styling for the carousel is provided so that it looks appropriate even when scripting is not enabled. 
 
-This does not prevent you from providing the basic styling for the carousel so that it looks appropriate even when scripting is not enabled. In many cases carousels are styled with background images and overlaid text, so contrast ratio (“color contrast”) requirements need to be met.
+When carousels use text that overlays a background image, the contrast ratio (“color contrast”) requirements need to be met.
 
 ### Styled carousel
 {:.ex}
 
-The example below shows how the carousel structure from the previous example is styled. As the background images can be distracting, using a background color for the overlaying text is a good way to ensure a good ratio even if images change. In this example, a semi-transparent background is used behind the overlaid text. Note that the opacity is high (80%) to make sure that the contrast ratio is met. Testing for contrast ratio conformance needs to be done using the resulting, visible color on the element, not the semi-transparent base color.
+The example below shows how the carousel structure from the previous example is styled. As the background images can be distracting, using a background color for the overlaying text is a good way to ensure a good contrast ratio regardless of the image. Here, a semi-transparent background with a high opacity (here: 80%) is added to the text. 
 
 {::nomarkdown}
 <%= notes_start %>
@@ -268,7 +269,6 @@ The example below shows how the carousel structure from the previous example is 
     width: 480px;
     padding:0;
     margin: 0;
-    /* overflow: hidden; */
   }
   .carousel {
     position: relative;
@@ -278,7 +278,6 @@ The example below shows how the carousel structure from the previous example is 
     padding: 0;
   }
   .slide {
-    /*position: absolute;*/
     height: 360px;
     background-size: cover;
     position: relative;
