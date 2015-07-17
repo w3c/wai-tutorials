@@ -61,6 +61,11 @@ A vertical menu provides space for a lot of links as all items can be easily rea
 		background-color: #fff;
 		text-decoration: underline;
 	}
+	#verticalnav a:active {
+		color: #fff;
+		background-color: #024;
+		text-decoration: underline;
+	}
 </style>
 
 <%= sample_end %>
@@ -113,6 +118,11 @@ If a menu has so few items that they can fit in one line on the screen, a horizo
 		background-color: #fff;
 		text-decoration: underline;
 	}
+	#samplenav a:active {
+		color: #fff;
+		background-color: #024;
+		text-decoration: underline;
+	}
 </style>
 
 <%= sample_end %>
@@ -121,6 +131,9 @@ If a menu has so few items that they can fit in one line on the screen, a horizo
 ## Indicating hover and focus
 
 When the user focuses a menu item or hovers over one using the mouse pointer, the individual menu item should change so users know where the focus is or which menu item is hovered. In the examples in this tutorial, the menu item is inverted and the words are underlined. Another possibility is to change the shape of the menu item, for example by introducing a bullet or an arrow while the menu item is hovered.
+## Active items
+
+The active state indicates a menu item that has just been activated by click, tap, or by using the keyboard. This helps users to spot if they have activated the wrong link before the new page has finished loading. The styling usually indicates a pressed state.
 
 ## Indicating the current page
 
@@ -177,6 +190,11 @@ In the following example, the active menu item is not only marked using differen
 	#currentnav a:focus {
 		color: #036;
 		background-color: #fff;
+		text-decoration: underline;
+	}
+	#currentnav a:active {
+		color: #fff;
+		background-color: #024;
 		text-decoration: underline;
 	}
 </style>
