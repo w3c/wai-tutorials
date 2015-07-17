@@ -222,7 +222,7 @@ The sample below is a demo of the final carousel that is built by putting togeth
     right: 0;
     margin:0;
     clear:both;
-    padding: 1em 5em 1em 3em;
+    padding: 5px;
     background-color: rgba(255,255,255,.8);
   }
   .slide a {
@@ -260,7 +260,7 @@ The sample below is a demo of the final carousel that is built by putting togeth
   border:0;
   background: rgba(255,255,255,.6);
   line-height: 1;
-  padding:2em .5em;
+  padding:10px 5px;
   transition: padding .4s ease-out;
 }
 
@@ -268,8 +268,8 @@ The sample below is a demo of the final carousel that is built by putting togeth
 .btn-next:focus,
 .btn-prev:hover,
 .btn-prev:focus {
-  padding-left: 2em;
-  padding-right:2em;
+  padding-left: 15px;
+  padding-right:15px;
 }
 
 .btn-prev {
@@ -283,7 +283,7 @@ The sample below is a demo of the final carousel that is built by putting togeth
 }
 
 .carousel.with-slidenav {
-  padding-bottom: 4em;
+  padding-bottom: 2em;
   background-color: #fff;
 }
 .carousel.with-slidenav .slide {
@@ -292,7 +292,7 @@ The sample below is a demo of the final carousel that is built by putting togeth
 
 .slidenav {
   position: absolute;
-  bottom:1em;
+  bottom:.25em;
   left: 0;
   right: 0;
   text-align: center;
@@ -307,8 +307,8 @@ The sample below is a demo of the final carousel that is built by putting togeth
   border: 2px solid #036;
   background-color: #036;
   line-height: 1em;
-  height: 2em;
-  width:2em;
+  height: 1.5em;
+  width:auto;
   font-weight: bold;
   color: #fff;
 }

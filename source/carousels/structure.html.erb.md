@@ -292,7 +292,7 @@ The example below shows how the carousel structure from the previous example is 
     right: 0;
     margin:0;
     clear:both;
-    padding: 1em 5em 1em 3em;
+    padding: 5px;
     background-color: rgba(255,255,255,.8);
   }
   .slide a {

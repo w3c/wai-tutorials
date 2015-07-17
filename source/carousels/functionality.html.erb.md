@@ -115,7 +115,7 @@ The outcome looks like this:
     right: 0;
     margin:0;
     clear:both;
-    padding: 1em 5em 1em 3em;
+    padding: 5px;
     background-color: rgba(255,255,255,.8);
   }
   .slide a {
@@ -216,21 +216,21 @@ carousel.appendChild(ctrls);
 ~~~css
 .btn-prev,
 .btn-next {
-  position: absolute;
+  position:absolute;
   z-index: 700;
   top: 50%;
   margin-top: -2.5em;
   border:0;
   background: rgba(255,255,255,.6);
   line-height: 1;
-  padding:2em .5em;
+  padding:10px 5px;
   transition: padding .4s ease-out;
 }
 
 .btn-next:hover, .btn-next:focus,
 .btn-prev:hover, .btn-prev:focus {
-  padding-left: 2em;
-  padding-right: 2em;
+  padding-left: 15px;
+  padding-right:15px;
 }
 
 .btn-prev {
@@ -319,26 +319,26 @@ Combined, the carousel looks and functions like this:
 </div>
 
 <style>
-  .btn-prev,
-  .btn-next {
-    position:absolute;
-    z-index: 700;
-    top: 50%;
-    margin-top: -2.5em;
-    border:0;
-    background: rgba(255,255,255,.6);
-    line-height: 1;
-    padding:2em .5em;
-    transition: padding .4s ease-out;
-  }
+.btn-prev,
+.btn-next {
+  position:absolute;
+  z-index: 700;
+  top: 50%;
+  margin-top: -2.5em;
+  border:0;
+  background: rgba(255,255,255,.6);
+  line-height: 1;
+  padding:10px 5px;
+  transition: padding .4s ease-out;
+}
 
-  .btn-next:hover,
-  .btn-next:focus,
-  .btn-prev:hover,
-  .btn-prev:focus {
-    padding-left: 2em;
-    padding-right:2em;
-  }
+.btn-next:hover,
+.btn-next:focus,
+.btn-prev:hover,
+.btn-prev:focus {
+  padding-left: 15px;
+  padding-right:15px;
+}
 
   .btn-prev {
     left:0;
@@ -458,7 +458,7 @@ Combined, the carousel looks and functions like this:
 
 <style>
 .carousel.with-slidenav {
-  padding-bottom: 4em;
+  padding-bottom: 2em;
   background-color: #fff;
 }
 .carousel.with-slidenav .slide {
@@ -482,8 +482,8 @@ Combined, the carousel looks and functions like this:
   border: 2px solid #036;
   background-color: #036;
   line-height: 1em;
-  height: 2em;
-  width:2em;
+  height: 1.5em;
+  width:auto;
   font-weight: bold;
   color: #fff;
 }
@@ -691,26 +691,26 @@ The sample below is the complete working demo of the carousel. It includes butto
 </div>
 
 <style>
-  .btn-prev,
-  .btn-next {
-    position:absolute;
-    z-index: 700;
-    top: 50%;
-    margin-top: -2.5em;
-    border:0;
-    background: rgba(255,255,255,.6);
-    line-height: 1;
-    padding:2em .5em;
-    transition: padding .4s ease-out;
-  }
+.btn-prev,
+.btn-next {
+  position:absolute;
+  z-index: 700;
+  top: 50%;
+  margin-top: -2.5em;
+  border:0;
+  background: rgba(255,255,255,.6);
+  line-height: 1;
+  padding:10px 5px;
+  transition: padding .4s ease-out;
+}
 
-  .btn-next:hover,
-  .btn-next:focus,
-  .btn-prev:hover,
-  .btn-prev:focus {
-    padding-left: 2em;
-    padding-right:2em;
-  }
+.btn-next:hover,
+.btn-next:focus,
+.btn-prev:hover,
+.btn-prev:focus {
+  padding-left: 15px;
+  padding-right:15px;
+}
 
   .btn-prev {
     left:0;
@@ -875,7 +875,7 @@ c3.init({
 
 <style>
 .carousel.with-slidenav {
-  padding-bottom: 4em;
+  padding-bottom: 2em;
   background-color: #fff;
 }
 .carousel.with-slidenav .slide {
@@ -884,7 +884,7 @@ c3.init({
 
 .slidenav {
   position: absolute;
-  bottom:1em;
+  bottom:.25em;
   left: 0;
   right: 0;
   text-align: center;
@@ -899,8 +899,8 @@ c3.init({
   border: 2px solid #036;
   background-color: #036;
   line-height: 1em;
-  height: 2em;
-  width:2em;
+  height: 1.5em;
+  width:auto;
   font-weight: bold;
   color: #fff;
 }
