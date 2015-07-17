@@ -1494,3 +1494,23 @@ ul.inline {
 		}
 	}
 }
+
+@media print {
+	body {
+		background-color: #fff;
+	}
+	figure {
+		page-break-inside: avoid;
+	}
+	.permalink, .navigation, .github, .btn-jump {
+		display: none;
+	}
+	.content a[href^="http"]:after, .content a[href^="#"]:after {
+		content: " (" attr(href) ") ";
+		color: #666;
+		background-image:none !important;
+		width: auto;
+		height: auto;
+	}
+
+}
