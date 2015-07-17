@@ -7,13 +7,13 @@ wcag_techniques:
   - H4
 ---
 
-If the user should be able to access pages deep in the website’s structure, fly-out menus are frequently used to archive the desired effect. Such fly-out menus are often called dropdown menus.
+Fly-out menus (also: dropdown menus) are frequently used to give users the ability to access pages deep in the website’s structure.
 
-As interactive components, fly-out menus need to be developed with accessibility in mind to make sure that they are operable using the keyboard as well. Hiding menu items not displayed from keyboards and assistive technologies makes sure that the menu can be easily navigated. For people with reduced dexterity it is also important that submenus don’t snap back immediately when the mouse leaves the clickable area.
+As interactive components, fly-out menus need to be developed with accessibility in mind to make sure that they are operable using assistive technologies and the keyboard. For people with reduced dexterity it is also important that submenus don’t snap back immediately when the mouse leaves the clickable area.
 
-Usually the first-level menu items are links to individual pages whether they have a submenu or not. The submenu should then be duplicated as a secondary navigation on the linked web page to make sure that those pages are quickly reachable from there. Submenus are individual lists (`<ul>` or `<ol>`), nested in the parent’s list item (`<li>`).
+To make navigating a fly-out menu easier, hidden links should not be part of the keyboard navigation by default and also hidden from assistive technologies. They should, however, show up when requested by the user.
 
-Items containing a submenu should be marked in a way that is obvious. In the following example, the SpaceBears menu item has a submenu:
+Usually the first-level menu items are links to individual pages whether they have a submenu or not. Items containing a submenu should be marked in a way that is obvious. In the following example, only the SpaceBears menu item has a submenu:
 
 {::nomarkdown}
 <%= sample_start('show-overflow') %>
@@ -120,7 +120,7 @@ Items containing a submenu should be marked in a way that is obvious. In the fol
 {:/nomarkdown}
 
 ~~~ html
-<nav role="navigation" aria-label="Main Navigation">
+<nav role="presentation" aria-label="Main Navigation">
 		<ul>
 				<li><a href="…">Home</a></li>
 				<li><a href="…">Shop</a></li>
@@ -141,7 +141,7 @@ Items containing a submenu should be marked in a way that is obvious. In the fol
 <%= code_end %>
 {:/nomarkdown}
 
-For mouse users, hiding the submenu until the mouse hovers over the first-level menu item is quite easy, but has the disadvantage that the menu immediately closes once the mouse leaves the list item (and the containing submenu).
+For mouse users, hiding the submenu until the mouse hovers over the first-level menu item is quite easy to do in CSS only, but this method has the disadvantage that the menu immediately closes once the mouse leaves the list item (and the containing submenu).
 
 {::nomarkdown}
 <%= code_start('','CSS') %>
@@ -162,7 +162,7 @@ nav > ul li:hover ul {
 
 ## Enhancing the menu using JavaScript
 
-By using JavaScript, it is possible to react to keyboard usage and abrupt mouse movements. As soon as the mouse leaves the menu a timer is started which closes the menu after one second. If the mouse re-enters the submenu again, the timer is canceled.
+By using JavaScript, it is possible to react to keyboard usage and mouse movements. As soon as the mouse leaves the menu a timer is started which closes the menu after one second. If the mouse re-enters the submenu during that time, the timer is canceled and the submenu doesn’t close.
 
 ### Improve mouse support
 
@@ -219,12 +219,12 @@ By using JavaScript, it is possible to react to keyboard usage and abrupt mouse 
 	#flyoutnavmousefixed a {
 			color: #fff;
 			text-decoration: none;
+			border: 1px solid #036;
 	}
 	#flyoutnavmousefixed a:hover,
-		#flyoutnavmousefixed a:focus {
+	#flyoutnavmousefixed a:focus {
 			background-color: #fff;
 			color: #036;
-			border: 1px solid #036;
 			text-decoration: underline;
 	}
 	#flyoutnavmousefixed .current {
@@ -297,11 +297,19 @@ Array.prototype.forEach.call(menuItems, function(el, i){
 
 ### Improve keyboard support
 
-To improve Keyboard support, the decision has to be made if the top-level menu item should serve as a toggle for the menu for all users or be a link itself. Don’t open the submenu as soon as the focus enters the top-level menu item, as that would mean a keyboard user needs to step through all the submenu links to get to the next top-level item.
+There are two roles top-level menu items in fly-out menus can have for keyboard users:
+
+1. It is just a toggle for the sub menu.
+2. It links to a page itself and needs to toggle the sub menu.
+
+Usually the submenu should not open when the focus enters the top-level menu item. This would mean a keyboard user needs to step through all the submenu links to get to the next top-level item.
 
 #### Toggle submenu using the top-level menu item
+{:.ap}
 
-The activation of the top-level menu item won’t link to the page in its `href` attribute but instead show the sub menu. A script stops the browser from following the link to the page. If the focus leaves the submenu (for example by using the tab key on the last submenu item), the submenu needs to close.
+When JavaScript is available, the top-level menu item won’t link to the page in its `href` attribute but instead showing the sub menu. (If JavaScript is not available, the link will work as usual.)
+
+If the focus leaves the submenu (for example by using the tab key on the last submenu item), the submenu is closed.
 
 {::nomarkdown}
 <%= sample_start('show-overflow') %>
@@ -474,13 +482,14 @@ Array.prototype.forEach.call(menuItems1, function(el, i){
 <%= sample_end %>
 {:/nomarkdown}
 
-The following code iterates through all menu items and adds click event to the first (top-level) link in each menu item. The click event fires regardless of input method as soon as the link gets activated. If the submenu is closed when the link is activated, the script opens the submenu, and vice versa.
+The following code iterates through all top-level items that have a submenu (indicated through the class `has-submenu`) and adds click event to the first (top-level) link in each menu item. Despite their name, click events are activated regardless of the input method as soon as the link gets activated. If the submenu is closed at the time the link is activated, the script opens the submenu, and vice versa.
 
 {::nomarkdown}
 <%= code_start('', 'JavaScript') %>
 {:/nomarkdown}
 
 ~~~js
+var menuItems = document.querySelectorAll('li.has-submenu');
 Array.prototype.forEach.call(menuItems, function(el, i){
 	el.querySelector('a').addEventListener("click",  function(event){
 		if (this.parentNode.className == "has-submenu") {
@@ -499,6 +508,7 @@ Array.prototype.forEach.call(menuItems, function(el, i){
 {:/nomarkdown}
 
 #### Toggle submenu using a special “show submenu” button
+{:.ap}
 
 If the top-level menu item should stay a link to a page, adding a separate button that toggles the submenu is the most reliable way to address the issue.
 
@@ -506,19 +516,19 @@ If the top-level menu item should stay a link to a page, adding a separate butto
 <%= sample_start('show-overflow') %>
 
 <nav role="presentation" aria-label="Main Navigation" id="flyoutnavkbbtn">
-		<ul>
-				<li><a href="#flyoutnavkbbtn">Home</a></li>
-				<li><a href="#flyoutnavkbbtn">Shop</a></li>
-				<li class="has-submenu">
-						<a href="#flyoutnavkbbtn">SpaceBears</a>
-						<ul>
-								<li><a href="#flyoutnavkbbtn">SpaceBear 6</a></li>
-								<li><a href="#flyoutnavkbbtn">SpaceBear 6 Plus</a></li>
-						</ul>
-				</li>
-				<li><a href="#flyoutnavkbbtn">MarsCars</a></li>
-				<li><a href="#flyoutnavkbbtn">Contact</a></li>
-		</ul>
+	<ul>
+		<li><a href="#flyoutnavkbbtn">Home</a></li>
+		<li><a href="#flyoutnavkbbtn">Shop</a></li>
+		<li class="has-submenu">
+			<a href="#flyoutnavkbbtn">SpaceBears</a>
+			<ul>
+				<li><a href="#flyoutnavkbbtn">SpaceBear 6</a></li>
+				<li><a href="#flyoutnavkbbtn">SpaceBear 6 Plus</a></li>
+			</ul>
+		</li>
+		<li><a href="#flyoutnavkbbtn">MarsCars</a></li>
+		<li><a href="#flyoutnavkbbtn">Contact</a></li>
+	</ul>
 </nav>
 
 <style>
@@ -671,15 +681,11 @@ function hasClass(el, className) {
 var menuItems1 = document.querySelectorAll('#flyoutnavkbbtn li.has-submenu');
 var timer1, timer2;
 
-
-
 var parseHTML = function(str) {
 	var tmp = document.implementation.createHTMLDocument();
 	tmp.body.innerHTML = str;
 	return tmp.body.children;
 };
-
-
 
 Array.prototype.forEach.call(menuItems1, function(el, i){
 		var btn = '<button><span><span class="visuallyhidden">show submenu</span></span></button>';
@@ -725,13 +731,14 @@ Array.prototype.forEach.call(menuItems1, function(el, i){
 <%= sample_end %>
 {:/nomarkdown}
 
-In the following code, a button is attached to every menu item link with a submenu. The click event listener is applied to this button and toggles the menu. The invisible button text is changed from show to hide submenu according to the state of the submenu.
+In the following code, a button is attached to every menu item link with a submenu. The click event listener is applied to this button and toggles the menu just like above. The invisible button text is changed from “show submenu” to “hide submenu” reflecting the state of the submenu.
 
 {::nomarkdown}
 <%= code_start('','JavaScript') %>
 {:/nomarkdown}
 
 ~~~js
+var menuItems = document.querySelectorAll('li.has-submenu');
 Array.prototype.forEach.call(menuItems, function(el, i){
 	var btn = '<button><span><span class="visuallyhidden">show submenu</span></span></button>';
 	var topLevelLink = el.querySelector('a');
@@ -757,10 +764,10 @@ Array.prototype.forEach.call(menuItems, function(el, i){
 
 ## Improve screen reader support using WAI-ARIA
 
-Currently, screen reader users are unable to tell if an item has a submenu or not and if it is opened. WAI-ARIA helps to convey this information by adding the following two attributes to the menu’s HTML:
+Screen reader users need to know if an item has a submenu or not and if that submenu is currently opened. While this can be done with hidden text as above, WAI-ARIA helps to convey this information programmatically, using following two attributes to the menu’s HTML:
 
 * **`aria-haspopup="true"`** is used so screen readers are able to announce that the link has a submenu.
-* **`aria-expanded`** is initially set to `false` but changed to `true` when the submenu opens which forces screen readers to announce that this menu item is now expanded.
+* **`aria-expanded`** is initially set to `false` but changed to `true` when the submenu opens which helps screen readers to announce that this menu item is now expanded.
 
 {::nomarkdown}
 <%= sample_start('show-overflow') %>

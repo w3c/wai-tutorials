@@ -10,17 +10,17 @@ wcag_techniques:
   - ARIA11
 ---
 
-Semantic markup of menus makes them more easily adaptable to different situations such as display on small screens, zoomed in, or for assistive technologies by conveying the menu structure to users.
+Semantic markup of menus makes them more easily adaptable to different situations such as display on small screens, zoomed in, and for assistive technologies by conveying the structure of the menu to users.
 
 ## List of Links
 {:.newap}
 
-If a navigation consists of more than a few links, using a list of links is the most effective way to convey the menu structure to users. For example, lists help assistive technologies to announce how many items are in the menu and also provide possibilities to adapt to user needs.
+If a navigation consists of more than very few links, using a list of links is the most effective way to convey the menu structure to users. Amongst other things, lists help assistive technologies to announce how many items are in the menu in total and provide possibilities to adapt to user needs.
 
 ### Unordered list
 {:.ap}
 
-For websites where the order in which the user reads the pages doesn’t matter, an unordered list (`<ul>`) should be used. In the following example, the user is not required to read the home page before advancing to the shop or get information about the products to make sense of the website as a whole. Most navigational and application menus are unordered.
+If the order in which the user reads the pages is not important to understand the website, an unordered list (`<ul>`) should be used. In the following example, the user is not required to read the home page before advancing to the shop or get information about the products. Most menus are unordered.
 
 {::nomarkdown}
 <%= code_start('','HTML') %>
@@ -68,28 +68,18 @@ In some instances, pages need to be read in a certain order, for example if the 
 
 ## Identifying the menu
 
-To identify the menu, there are additional special elements and attributes in HTML and WAI-ARIA that, for example, enable users of assistive technology to jump directly to the menu. To enable this functionality, a WAI-ARIA landmark role of `navigation` should be added to the element wrapping the navigation links.
+To identify the menu, use the `<nav>` element in HTML5. It allows users to directly jump to the menu as it has an implicit WAI-ARIA landmark role of `navigation`. The `<nav>` element wraps the unordered or ordered list that contains the navigation options.
 
 {::nomarkdown}
 <%= code_start('','HTML') %>
 {:/nomarkdown}
 
 ~~~ html
-<div role="navigation">…</div>
-~~~
-
-{::nomarkdown}
-<%= code_end %>
-{:/nomarkdown}
-
-If HTML5 is used, the `<nav>` element is supposed to apply the landmark role implicitly. As some browser don’t do this at the time of writing, and to improve the experience for users with older browsers, the navigation role should be added as well.
-
-{::nomarkdown}
-<%= code_start('','HTML') %>
-{:/nomarkdown}
-
-~~~ html
-<nav role="navigation">…</nav>
+<nav>
+	<ul>
+		…
+	</ul>
+</nav>
 ~~~
 
 {::nomarkdown}
@@ -100,15 +90,18 @@ If HTML5 is used, the `<nav>` element is supposed to apply the landmark role imp
 <%= notes_start %>
 {:/nomarkdown}
 
-**Note:** Role and other ARIA attributes won’t validate in HTML4. If valid HTML4 needs to be provided, the ARIA attributes can be added to the HTML dynamically using JavaScript. If that is also no possibility, [provide a heading](#using-a-hidden-heading) to enable users to find the menu easily.
+**Note:** At the time of writing, some browsers don’t properly add the implicit WAI-ARIA `navigation` role to the `<nav>` element. In those instances add the `role` attribute: `<nav role="navigation">…</nav>`. For more information on roles and regions, see the [Page Structure Tutorial](/page-structure/index.html).
+
+Role and other ARIA attributes won’t validate in HTML4. If valid HTML4 needs to be provided, the ARIA attributes can be added to the HTML dynamically using JavaScript. If that is also no possibility, [provide a heading](#using-a-hidden-heading) to enable users to find the menu easily.
 
 {::nomarkdown}
 <%= notes_end %>
 {:/nomarkdown}
 
 ## Labeling navigations
+{:.newap}
 
-To make it easier to find menus, they should be labeled according to their individual function. This helps to distinguish between multiple navigational menus on a page. Such labels can be invisible to users that experience the website visually. Such labels can also be used by assistive technology to enable jumping directly to `navigation` landmarks or headings.
+To make it easier to find menus, they should be labeled according to their individual function. This helps to distinguish between multiple navigational menus on a page. Such labels can be invisible to users that experience the website visually and can also be used by assistive technology to enable jumping directly to `navigation` landmarks or headings.
 
 ### Using a (hidden) heading
 {:.ap}
@@ -129,34 +122,12 @@ Users that use headings to find relevant sections on web pages, for example scre
 <%= code_end %>
 {:/nomarkdown}
 
-Note that the heading **can not** be hidden using `display: none;` or `visually: hidden;` as both also hide content from screen readers. Use absolute positioning and a negative margin to hide the text from screen or use this code snippet which does the same:
-
-{::nomarkdown}
-<%= code_start('','CSS') %>
-{:/nomarkdown}
-
-~~~ css
-.visuallyhidden {
-	border: 0;
-	clip: rect(0 0 0 0);
-	height: 1px;
-	margin: -1px;
-	overflow: hidden;
-	padding: 0;
-	position: absolute;
-	width: 1px;
-}
-~~~
-
-{::nomarkdown}
-<%= code_end %>
-{:/nomarkdown}
-
+Note that the heading **can not** be hidden using `display: none;` or `visually: hidden;` as both also hide content from screen readers, too. See this section in the forms tutorial for an [alternative, accessible way to hide elements](/forms/labels.html#note-on-hiding-elements).
 
 ### Using `aria-label`
 {:.ap}
 
-The `aria-label` provides a description of the section to users that use landmarks to navigate the page. This approach makes it possible to use headings only in the main content of the page. The label of the menu is announced when entering the menu as well as when navigating to it.
+The `aria-label` provides a description of the section to users that use landmarks to navigate the page. The label of the menu is announced when entering the menu and when navigating to it.
 
 {::nomarkdown}
 <%= code_start('','HTML') %>
@@ -169,6 +140,16 @@ The `aria-label` provides a description of the section to users that use landmar
 
 {::nomarkdown}
 <%= code_end %>
+{:/nomarkdown}
+
+{::nomarkdown}
+<%= notes_start %>
+{:/nomarkdown}
+
+**Note:** This approach makes it possible to use headings in the main content of the page only and not using them for adding structural information.
+
+{::nomarkdown}
+<%= notes_end %>
 {:/nomarkdown}
 
 ### Using a heading and `aria-labelledby`

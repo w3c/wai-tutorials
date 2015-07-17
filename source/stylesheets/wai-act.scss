@@ -35,6 +35,7 @@ $container_margin:  0.5%;         // auto|px|%    //
 
 .font-secondary {
 	font-family: "Vollkorn", Georgia, Times, "Times New Roman", serif;
+	font-feature-settings: "lnum", "pnum";
 }
 
 // Body
@@ -462,7 +463,8 @@ a {
 		text-transform: uppercase;
 	}
 	.current-a .status {
-		background-color: #aaa;
+		background-color: #666;
+		color: #fff;
 	}
 	ul {
 		background-color: #ddd;
