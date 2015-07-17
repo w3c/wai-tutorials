@@ -124,7 +124,7 @@ The sample below is a demo of the final carousel that is built by putting togeth
 <%= sample_start %>
 {:/nomarkdown}
 
-<h3 role="presentational">Featured Articles:</h3>
+<h3 role="presentation">Featured Articles:</h3>
 <div id="c" class="carousel">
     <ul>
         <li class="slide" style="background-image: url('../../img/ex-teddy1.jpg');">

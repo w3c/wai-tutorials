@@ -49,7 +49,7 @@ The outcome looks like this:
 <%= sample_start %>
 {:/nomarkdown}
 
-<h3 role="presentational">Featured Articles:</h3>
+<h3 role="presentation">Featured Articles:</h3>
 <div id="c1" class="carousel">
     <ul>
         <li class="slide" style="background-image: url('../../img/ex-teddy1.jpg');">
@@ -291,7 +291,7 @@ Combined, the carousel looks and functions like this:
 <%= sample_start %>
 {:/nomarkdown}
 
-<h3 role="presentational">Featured Articles:</h3>
+<h3 role="presentation">Featured Articles:</h3>
 <div id="c2" class="carousel">
     <ul>
         <li class="slide" style="background-image: url('../../img/ex-teddy1.jpg');">
@@ -663,7 +663,7 @@ The sample below is the complete working demo of the carousel. It includes butto
 <%= sample_start %>
 {:/nomarkdown}
 
-<h3 role="presentational">Featured Articles:</h3>
+<h3 role="presentation">Featured Articles:</h3>
 <div id="c3" class="carousel">
     <ul>
         <li class="slide" style="background-image: url('../../img/ex-teddy1.jpg');">

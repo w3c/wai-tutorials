@@ -237,7 +237,7 @@ The example below shows how the carousel structure from the previous example is 
 <%= sample_start %>
 {:/nomarkdown}
 
-<h3 role="presentational">Featured Articles:</h3>
+<h3 role="presentation">Featured Articles:</h3>
 <div class="carousel">
     <ul>
         <li class="slide" style="background-image: url('../../img/ex-teddy1.jpg');">
