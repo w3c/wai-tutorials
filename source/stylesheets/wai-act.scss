@@ -24,18 +24,20 @@ $container_margin:  0.5%;         // auto|px|%    //
 
 // Font definitions
 
-@include font-face("Vollkorn", font-files("vollkorn/vollkorn-regular.woff"), "vollkorn/vollkorn-regular.eot");
-/*@include font-face("Vollkorn", font-files("vollkorn/vollkorn-italic.woff"), "vollkorn/vollkorn-italic.eot", normal, italic);
-@include font-face("Vollkorn", font-files("vollkorn/vollkorn-bold.woff"), "vollkorn/vollkorn-bold.eot", bold);
-@include font-face("Vollkorn", font-files("vollkorn/vollkorn-bolditalic.woff"), "vollkorn/vollkorn-bolditalic.eot", bold, italic);*/
+@include font-face("Vollkorn", font-files("vollkorn.woff2", "vollkorn.woff"), false);
+/*@include font-face("Vollkorn", font-files("vollkorn-italic.woff"), "vollkorn-italic.eot", normal, italic);*/
+@include font-face("Vollkorn", font-files("vollkorn-bold.woff2", "vollkorn-bold.woff"), false, bold);
+/*@include font-face("Vollkorn", font-files("vollkorn-bolditalic.woff"), "vollkorn-bolditalic.eot", bold, italic);*/
 
 .font-primary {
 	font-family: "Trebuchet MS", "HelveticaNeue", "Helvetica", "Arial", sans-serif;
 }
 
 .font-secondary {
-	font-family: "Vollkorn", Georgia, Times, "Times New Roman", serif;
-	font-feature-settings: "lnum", "pnum";
+	.vollkorn-loaded &{
+		font-family: "Vollkorn", Georgia, Times, "Times New Roman", serif;
+		font-feature-settings: "lnum", "pnum";
+	}
 }
 
 // Body
