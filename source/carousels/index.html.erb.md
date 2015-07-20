@@ -12,21 +12,21 @@ wcag_success_criteria:
   - 4.1.2
 ---
 
-Carousels, commonly also referred to as “slide shows” or “sliders”, display one item from a series of content items. Common examples are scrolling news headlines or image sliders. Carousels often use animations to move from slide to slide which can be distracting for some users. They may also move so fast automatically that their content is hard or impossible to read. 
+Carousels, commonly also referred to as “slide shows” or “sliders”, display one item from a series of content items. Common examples are scrolling news headlines and images. Carousels often use animations to move from slide to slide, which can be distracting for some users. They may also move too fast for some users to be able to read.
 
-Carousels should have a function that allows users to pause and advance the animation. They need to be implemented in a way thatis not interfering with keyboard use. In some instances keyboard users may even get stuck inside the carousel, without a chance to leave it and access the rest of the page. This tutorial highlights accessibility considerations for carousels:
+Carousels should have a function that allows users to pause and advance the animation. They need to be implemented in a way that is not interfering with keyboard use. In some instances, keyboard users may even get stuck inside the carousel, without a chance to leave it and access the rest of the page. This tutorial highlights accessibility considerations for carousels:
 
-- **[Structure](structure.html):** Provide structural markup for the carousel and its items, and later enhance these structures with styling and scripting.
+- **[Structure](structure.html):** Provide structural markup for the carousel and its items.
 
-- **[Functionality](functionality.html):** Add the functionality to display one carousel item at a time, and to allow users to browse through them.
+- **[Functionality](functionality.html):** Add the functionality to display one carousel item at a time.
 
-- **[Animations](animations.html):** Enhance the carousel using animation and give users control over those animations.
+- **[Animations](animations.html):** Add animation and ensure users have control over these animations.
 
 - **[Full Content](examples/carousel.html):** The complete example source code.
 
 ## Why is this important?
 
-Carousels are frequently used, in particular on home pages, to draw the readers' attention to featured articles and products of the website. Given their prominence, inaccessible carousels can be a major obstacle for many website visitors. On the other hand, accessible carousels provide more effective access for many users including:
+Carousels are frequently used, in particular on home pages, to draw readers' attention to featured articles and products of the website. Given their prominence, inaccessible carousels can be a major obstacle for many website visitors. On the other hand, accessible carousels provide more effective access for many users including:
 
 - **People using keyboard navigation and voice input software** can navigate between carousel items.
 - **People using screen readers** will understand where they are and how to navigate between carousel items.
