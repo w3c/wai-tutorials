@@ -8,34 +8,11 @@ wcag_techniques:
 technologies: HTML5, WAI-ARIA
 ---
 
-People need to be able to identify page regions to navigate documents. Usually documents include one or more navigations, main content, headers, and footers. More important parts of a page, such as navigation, should be marked up on every website.
+Mark up the different regions of your web page, so that they can be identified by web browsers and assistive technology. Page regions include the main content, navigation bars, headers, and footers.
 
-This tutorial shows how to use HTML5 elements to mark up such regions and convey the meaning to users and assistive technologies. Such elements leverage the browser accessibility API by using default WAI-ARIA roles. See [accessibility support information](#accesssupport).
+## Page header
 
-## Overall page regions
-
-Certain regions on web pages define the overall layout and structure. They   are usually the same on every web page of a web site. Other regions are used to structure the content of the individual page.
-
-Some regions can only be used once, for example `<main>` or the page header. Others, like navigations, can be used multiple times. In this case add a label using either `aria-label` or `aria-labelledby`.
-
-### Page header
-{:.ex}
-
-Most websites have a regiaon that contains the website logo and other information, such as search or navigation options. That region is usually on the top of the page.
-
-The main page header is identified by using the `<header>` element which by default has the WAI-ARIA role `banner` if not used inside of `<article>` or `<section>` elements. See [note on scope](#scope).
-
-<aside class="annotation" id="scope">
-  <h4 class="annotation-header">Scope</h4>
-  <div class="annotation-content">
-    <p><code>&lt;header&gt;</code> and <code>&lt;footer&gt;</code> elements have two use cases in HTML5:</p>
-    <ol>
-      <li>Mark the main header/footer section of a web page.</li>
-      <li>Mark the header/footer of a certain <code>&lt;article&gt;</code> or <code>&lt;section&gt;</code>.</li>
-    </ol>
-    <p>Both elements only carry their default WAI-ARIA roles – <code>banner</code> for the <code>&lt;header&gt;</code> element and <code>contentinfo</code> for the <code>&lt;footer&gt;</code>element – only in the first use case. Once <code>&lt;header&gt;</code> or <code>&lt;footer&gt;</code> are inside an <code>&lt;article&gt;</code> or <code>&lt;section&gt;</code> element, they are scoped to this element and don’t count as main header or footer of the page but as header and footer of that specific section or article.</p>
-  </div>
-</aside>
+Most websites have a region at the top of every page that contains general content, such as the website logo, search function, and navigation options. HTML5 provides the `<header>` element, which can be used to define such a region. For HTML4, use the WAI-ARIA role `banner` to define such a region.
 
 {::nomarkdown}
 <%= code_start %>
@@ -45,18 +22,29 @@ The main page header is identified by using the `<header>` element which by defa
 <header>
   <img src="/images/logo.png" alt="SpaceBear Inc.">
 </header>
+
+<div role="banner">
+  <img src="/images/logo.png" alt="SpaceBear Inc.">
+</div>
 ~~~
 
 {::nomarkdown}
 <%= code_end %>
 {:/nomarkdown}
 
-### Navigation
-{:.ex}
+{::nomarkdown}
+<%= notes_start %>
+{:/nomarkdown}
 
-The `<nav>` element groups a collection of links and makes them available as a navigation to assistive technologies, identifying them using the WAI-ARIA role `navigation` by default. As there are often more than one navigation section on a given web page, they should always be labelled. 
+**Note:** A `<header>` element inside an `<article>` or `<section>` element only applies within that region. It needs to be placed in the main HTML body to apply to the entire page.
 
-In the example below there are two `<nav>` elements, so it is necessary to label them. One the labels, “Main Navigation”, has a title that isn’t shown on the page. In this instance the label is added with the `aria-label` attribute. “Quick Navigation” is already in a heading on the page, so it is possible to refer to it using the `aria-labelledby` attribute. For more information on menus, see the [Menu tutorial](/menus/index.html). 
+{::nomarkdown}
+<%= notes_end %>
+{:/nomarkdown}
+
+## Navigation
+
+The HTML5 `<nav>` element can be used to identify a navigation menu. For HTML4, use the WAI-ARIA role `navigation` to define such a region. A web page can have any number of navigation menus. Use either the WAI-ARIA `aria-label` or the `aria-labelledby` attribute to identify each navigation menu. The `aria-label` attribute provides a label, and the `aria-labelledby` attribute refers to an existing label, such as a heading on the page.
 
 {::nomarkdown}
 <%= code_start %>
@@ -77,10 +65,19 @@ In the example below there are two `<nav>` elements, so it is necessary to label
 <%= code_end %>
 {:/nomarkdown}
 
-### Main content
-{:.ex}
+{::nomarkdown}
+<%= notes_start %>
+{:/nomarkdown}
 
-The main content of a document should be wrapped in the `<main>` element. There is only one main element per document allowed. This helps assistive technologies to identify the main content and guide users to it.
+**Note:** The [Menus tutorial](/menus/index.html) provides more information about creating menus in more detail.
+
+{::nomarkdown}
+<%= notes_end %>
+{:/nomarkdown}
+
+## Main content
+
+Use the HTML5 `<main>` element to identify the main content of a web page. For HTML4, use the WAI-ARIA role `main` to define such a region. A web page should have only one main content area.
 
 {::nomarkdown}
 <%= code_start %>
@@ -97,12 +94,51 @@ The main content of a document should be wrapped in the `<main>` element. There 
 <%= code_end %>
 {:/nomarkdown}
 
-### Page footer
-{:.ex}
+## Articles
 
-A region of the web page that has supplemental information, such as links to copyright or privacy statements, or disclaimers, is called a footer. This information should appear inside a `<footer>` element. 
+The HTML5 `<article>` element represents a complete or self-contained composition in a web page. Examples of articles include an item in a web shop or a news article on a news site. For HTML4, use the WAI-ARIA role `article` to define such a region.
 
-By default the `<footer>` element has the WAI-ARIA role `contentinfo` if not used inside of `<article>` or `<section>` elements. See [note on scope](#scope).
+{::nomarkdown}
+<%= code_start %>
+{:/nomarkdown}
+
+~~~html
+<article>
+  <h2>Space Bear Classic</h2>
+  …
+</article>
+<article>
+  <h2>Space Bear Extreme</h2>
+  …
+</article>
+~~~
+
+{::nomarkdown}
+<%= code_end %>
+{:/nomarkdown}
+
+## Sections
+
+The HTML5 `<section>` element marks a general region of a web page or an article. It is used for thematic grouping of content. For HTML4, use the WAI-ARIA role `region` to define such a region.
+
+{::nomarkdown}
+<%= code_start %>
+{:/nomarkdown}
+
+~~~html
+<section>
+  <h2>Chapter 2</h2>
+  …
+</section>
+~~~
+
+{::nomarkdown}
+<%= code_end %>
+{:/nomarkdown}
+
+## Page footer
+
+Similar to the page header, most websites also have a region at the bottom of every page that contains general content, such as copyright information, privacy statements, or disclaimers. HTML5 provides the `<footer>` element, which can be used to define such a region. For HTML4, use the WAI-ARIA role `contentinfo` to define such a region.
 
 {::nomarkdown}
 <%= code_start %>
@@ -118,10 +154,19 @@ By default the `<footer>` element has the WAI-ARIA role `contentinfo` if not use
 <%= code_end %>
 {:/nomarkdown}
 
-### Complementary content
-{:.ex}
+{::nomarkdown}
+<%= notes_start %>
+{:/nomarkdown}
 
-An `<aside>` element is used whenever there is a part of the document that supports the main content, yet is separate and meaningful on its own. It carries a `complementary` role by default.
+**Note:** A `<footer>` element inside an `<article>` or `<section>` element only applies within that region. It needs to be placed in the main HTML body to apply to the entire page.
+
+{::nomarkdown}
+<%= notes_end %>
+{:/nomarkdown}
+
+## Complementary content
+
+Use the HTML5 `<aside>` element to identify regions that support the main content, yet are separate and meaningful sections on their own; For example, a side note explaining or annotating the main content. For HTML4, use the WAI-ARIA role `complementary` to define such regions.
 
 {::nomarkdown}
 <%= code_start %>
@@ -138,10 +183,11 @@ An `<aside>` element is used whenever there is a part of the document that suppo
 <%= code_end %>
 {:/nomarkdown}
 
-### Search
-{:.ex}
+## Search
 
-The search region refers to the “search tool” of the website. There is no dedicated HTML5 element to use for this region but it can be marked up using the WAI-ARIA `role` attribute with the value `search`. The element with the `search` role should include the input field as well as the search button and other search options. The example below uses the `search` role on a `<div>` element.
+Use the WAI-ARIA `role` attribute with the value `search` to identify the main search function of the website that typically appears in the header of all web pages. This is not intended for identifying other search funcationality that only appears on individual web pages, such as searching for an entry in a database.
+
+The element with the `search` role should include the input field as well as the search button and other search options. The example below uses the `search` role on a `<div>` element.
 
 {::nomarkdown}
 <%= sample_start %>
@@ -171,71 +217,14 @@ The search region refers to the “search tool” of the website. There is no de
 <%= code_end %>
 {:/nomarkdown}
 
-## In-page regions
-{:.newex}
-
-To structure content on the pages, use sections and articles. They can differ from page type to page type and even from web page to web page.
-
-### Sections
-{:.ex}
-
-The `<section>` element marks a general region on the page or inside an article. It is used for thematic grouping of content. By default it has the WAI-ARIA role of `region`.
-
-{::nomarkdown}
-<%= code_start %>
-{:/nomarkdown}
-
-~~~html
-<section>
-  <h2>Chapter 2</h2>
-  …
-</section>
-~~~
-
-{::nomarkdown}
-<%= code_end %>
-{:/nomarkdown}
-
-### Articles
-{:.ex}
-
-The `<article>` element represents a complete, or self-contained, composition in a document, page, application, or site and that is, in principle, independently distributable or reusable. Examples for articles are items in a shop or news articles. The default WAI-ARIA role is `article`.
-
-{::nomarkdown}
-<%= code_start %>
-{:/nomarkdown}
-
-~~~html
-<article>
-  <h2>Space Bear Classic</h2>
-  …
-</article>
-<article>
-  <h2>Space Bear Extrem</h2>
-  …
-</article>
-~~~
-
-{::nomarkdown}
-<%= code_end %>
-{:/nomarkdown}
-
-## A note on the `application` role
-
-The role `application` declares a section as a web application, as opposed to a web document. The role of application should be **used with caution**, as it gives a signal to screen reading software to turn off usual web navigation controls. Simple widgets should generally not be given the application role, nor should an entire web page be given the application role, unless it is not supposed to be used at all like a web page, and not without much user testing with assistive technology.
-
 ## Accessibility Support
 {:#accessupport}
 
-The support for HTML5 elements and WAI-ARIA individually are really good in modern browsers and assistive technologies. At the time of writing, Internet Explorer up to version 11 provides no semantic information via accessibility APIs for the HTML5 elements.
-
-To provide the information to assistive technologies, the roles can be added to the HTML5 elements, for example:
+Most current web browsers support the above HTML5 elements and convey the information to assistive technology through the accessibility APIs. However, to maximize compatibility with web browsers and assistive technologies that support WAI-ARIA but do not yet support HTML5, it is currently advisable to use both the HTML5 elements and the corresponding WAI-ARIA roles; for example:
 
 ~~~html
-<header role="banner"></header>
-<main role="main"></main>
-<nav role="navigation"></main>
-<footer role="contentinfo"></footer>
+<header role="banner">...</header>
+<main role="main">...</main>
+<nav role="navigation">...</main>
+<footer role="contentinfo">...</footer>
 ~~~
-
-Once there is accessibility support, authors are discouraged to use this technique.
