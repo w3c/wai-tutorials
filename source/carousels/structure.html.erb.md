@@ -27,8 +27,8 @@ In many situations, the carousel items are fairly brief so that a simple a list 
 {:/nomarkdown}
 
 ~~~html
-<div class="carousel" ...>
-...
+<div class="carousel" …>
+…
     <ul>
         <li class="slide">…</li>
         <li class="slide">…</li>
@@ -51,8 +51,8 @@ If carousel items have a lot of content, other elements can be used for the caro
 {:/nomarkdown}
 
 ~~~html
-<div class="carousel" ...>
-...
+<div class="carousel" …>
+…
     <article class="slide">
       <h4>…</h4>
       …
