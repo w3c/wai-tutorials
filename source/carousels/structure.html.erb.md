@@ -27,7 +27,7 @@ In many situations, the carousel items are fairly brief so that a simple a list 
 {:/nomarkdown}
 
 ~~~html
-<div class="carousel">
+<div class="carousel" ...>
 ...
     <ul>
         <li class="slide">…</li>
@@ -51,7 +51,7 @@ If carousel items have a lot of content, other elements can be used for the caro
 {:/nomarkdown}
 
 ~~~html
-<div class="carousel">
+<div class="carousel" ...>
 ...
     <article class="slide">
       <h4>…</h4>
@@ -71,6 +71,10 @@ If carousel items have a lot of content, other elements can be used for the caro
 {::nomarkdown}
 <%= code_end %>
 {:/nomarkdown}
+
+### Carousel region
+
+Provide semantic markup to define the carousel as a distinct part of your web page. For example, if the main purpose of a carousel is to serve as a navigation mechanism, then use the HTML5 `<nav>` element. Also `<section>`, `<article>`, `<complementary>`, and `<aside>` could be applicable. At the very least, the WAI-ARIA `role` attribute with the value `region` should be used to define the carousel as page region. This also works in HTML4 with the `<div>` element.
 
 ### Label carousels
 
