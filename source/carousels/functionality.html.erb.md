@@ -9,19 +9,14 @@ wcag_success_criteria:
   - 4.1.2
 ---
 
-Provide functionality using scripting to display the carousel items one at a time, and to allow users to browse through them.
+Carusels display the one of their items at once while hiding the others. They allow users to browse through them.
 
-## Displaying carousel items
+## Position slides
 
-Carousel items that are visually hidden should also be hidden from assistive technology, to avoid a mismatch between what is visually on the screen and what the user is interacting with. All carousel items that are not displayed visually are hidden by using the CSS `display: none` declaration.
-
-### Styling when scripting is enabled
-{:.ex}
-
-In the example below, JavaScript is used to add the class name `active` to the carousel container. The styling hides all the slides in a stack with only the slide with the class name `current` being visible on top. That class name is added to the item using JavaScript as well.
+If the JavaScript is enabled, a class `active` is added to the carousel region so we can distinguish between that state and the non-JavaScript fallback. The slides are positioned absolutely in the carousel, and the current slide is positioned frontmost using `z-index`.
 
 {::nomarkdown}
-<%= code_start('','CSS') %>
+<%= code_start %>
 {:/nomarkdown}
 
 ~~~css
@@ -159,21 +154,9 @@ The outcome looks like this:
 
 ## Adding previous and next buttons
 
-Scripting is used to add buttons that allow users to switch back and forth between carousel items. While those buttons can be individually styled, it is useful to code them using `<button>` elements. This gives them semantic meaning and also makes them more compatible with assistive technology and keyboard use. 
+Add `<button>` elements that allow users to switch back and forth between carousel items. They can be individually styled and also provide semantic meaning. Such elements are also compatible with assistive technology and keyboard use. 
 
-In the example below, JavaScript is used to generate buttons and insert them into the carousel. These particular buttons are visually displayed as arrows that overlay the carousel items. The images use the alternative text "Previous Slide" and "Next Slide", respectively.
-
-As with the text, a semi-transparent white background is used to ensure sufficient color contrast between the black arrows and the slide images. The buttons also increase in size when users hover over or focuses them. This provides more click area for people with reduced dexterity and better highlight where the current focus is.
-
-{::nomarkdown}
-<%= notes_start %>
-{:/nomarkdown}
-
-**Note:** If the carousel uses `<a>` instead of `<button>` elements, a `href` attribute needs to be present to enable keyboard access. Additionally `role="button"` should be applied to the link so assistive technology users know that they expect an interaction on the page rather than a link to another page.
-
-{::nomarkdown}
-<%= notes_end %>
-{:/nomarkdown}
+In the example below, JavaScript is used to generate buttons and insert them into the carousel. These particular buttons are visually displayed as arrows that overlay the carousel items.
 
 {::nomarkdown}
 <%= code_start('', 'JavaScript') %>
@@ -247,7 +230,9 @@ carousel.appendChild(ctrls);
 <%= code_end %>
 {:/nomarkdown}
 
-Additionally, a WAI-ARIA live region should be used to inform screen reader users which slide is now visible. Note that the current slide does not receive focus when activation the previous or next button as a user might want to skip several slides without navigating to the controls after every slide change.
+## Announcing slides
+
+When the current item changes, a WAI-ARIA live region should be used to inform screen reader users which slide is currently visible. Note that the current slide is not activated by moving the keyboard focus there. This is done to allow users to skip several items at once.
 
 {::nomarkdown}
 <%= code_start('', 'Extend event listeners') %>
@@ -513,9 +498,9 @@ Combined, the carousel looks and functions like this:
 ## Items indicator
 {:.newex}
 
-Indicating the total number of carousel items and which one of them is currently being displayed helps users to orient themselves. Ideally each carousel item has a corresponding button that is styled acording to the state of the carousel item. Providing these buttons within a list, adds meaning and semantics to the content, such as the number and order of the carousel items.
+Indicating the total number of carousel items and the active one helps users to orient themselves. Ideally each carousel item has a corresponding button that is styled to reflect the state of the carousel item. Providing these buttons within a list, adds meaning and semantics to the content, such as the number and order of the carousel items.
 
-The list with buttons below is added to the carousel using JavaScript and then styled: The buttons are numbered matching the corresponding carousel items. The button corresponding to the currently displayed carousel item is highlighted both visually and using hidden text. Also the button that currently has the keyboard or mouse focus is highlighted.
+The list with buttons below is added to the carousel using JavaScript and then styled: The buttons are numbered matching the corresponding carousel items. The button for the active carousel item is highlighted both visually and using hidden text.
 
 {::nomarkdown}
 <%= code_start %>
@@ -613,9 +598,9 @@ The list with buttons below is added to the carousel using JavaScript and then s
 
 ### Focusing carousel items
 
-In contrast to the previous/next buttons, when users select a carousel item directly through the item buttons, the focus should be set to the corresponding carousel item.
+In contrast to the previous/next buttons, when users select a carousel item directly through the item indicator, the focus should be set to the corresponding carousel item.
 
-Carousel items will often be coded using elements that, by default, are not focusable, such as `<li>` or  `<article>` elements. Use the `tabindex` attribute with its value set to `-1`, to make such elements capable of receiving focus using JavaScript, then set the focus on them, see the code snippet below. It illustrates how the `tabindex` attribute and the focus are set when a carousel item is selected, and how the carousel item indicator is updated accordingly.
+The `<li>` elements used for the carousel items itself are not focusable by default. However if the `tabindex` attribute with a value `-1` is added to the items, JavaScript is able to set the focus to those items.
 
 {::nomarkdown}
 <%= code_start('', 'JavaScript') %>
@@ -651,13 +636,14 @@ slidenav.addEventListener('click', function(event) {
   }
 }, true);
 ~~~
+
 {::nomarkdown}
 <%= code_end %>
 {:/nomarkdown}
 
 ## Putting it all together
 
-The sample below is the complete working demo of the carousel. It includes buttons for users to advance back and forth between the carousel items, and a carousel item indicator that allows users to see which carousel item they are currently viewing and to jump to other carousel items. Animating this carousel will be explained on the next page.
+The sample below is the complete working demo of the carousel. It includes buttons for users to advance back and forth between the carousel items, and a carousel item indicator that allows users to see which carousel item they are currently viewing and to jump to other carousel items.
 
 {::nomarkdown}
 <%= sample_start %>
