@@ -11,7 +11,7 @@ wcag_techniques:
   - H48
 ---
 
-Structural markup ensures that the content of the carousel has meaning on its own, without styling and scripting, and can be rendered and used in more situations. For example the carousel could be just a list of articles on mobile.
+Structural markup ensures that the content of a carousel has meaning on its own, without styling and scripting, so that can be used in more situations. For example, a carousel could be presented as just a list of articles on a mobile device.
 
 ## Carousel framework
 
@@ -20,14 +20,15 @@ A carousel is a collection of items that are displayed one at a time. Provide a 
 ### List of items
 {:.ap}
 
-In many situations, the carousel items are fairly brief so that a simple a list (`<ul>`) with individual list items (`<li>`) is sufficient to represent the carousel. See the example below for a demo of this robust approach:
+In many situations, the carousel items are fairly brief so that a simple a list (`<ul>`) with individual list items (`<li>`) is sufficient to represent the carousel. See the example below for a demo of this approach:
 
 {::nomarkdown}
 <%= code_start %>
 {:/nomarkdown}
 
 ~~~html
-<div class="carousel">
+<div class="carousel" ...>
+...
     <ul>
         <li class="slide">…</li>
         <li class="slide">…</li>
@@ -43,14 +44,15 @@ In many situations, the carousel items are fairly brief so that a simple a list 
 ### Set of articles
 {:.ap}
 
-If carousel items have a lot of complex content, other elements can be used for the carousel framework. For example, HTML5 provides the `<article>` element, which is useful for carousels with items that are independent pieces of content. Make sure to provide headings for each article. The example below shows the use of `<article>` elements to represent a carousel.
+If carousel items have a lot of content, other elements can be used for the carousel framework. For example, HTML5 provides the `<article>` element, which is useful for carousels with items that are independent pieces of content. Make sure to provide headings for each article. The example below shows the use of `<article>` elements to represent a carousel.
 
 {::nomarkdown}
 <%= code_start %>
 {:/nomarkdown}
 
 ~~~html
-<div class="carousel">
+<div class="carousel" ...>
+...
     <article class="slide">
       <h4>…</h4>
       …
@@ -70,14 +72,18 @@ If carousel items have a lot of complex content, other elements can be used for 
 <%= code_end %>
 {:/nomarkdown}
 
+### Carousel region
+
+Provide semantic markup to define the carousel as a distinct part of your web page. For example, if the main purpose of a carousel is to serve as a navigation mechanism, then use the HTML5 `<nav>` element. Also `<section>`, `<article>`, `<complementary>`, and `<aside>` could be applicable. At the very least, the WAI-ARIA `role` attribute with the value `region` should be used to define the carousel as page region. This also works in HTML4 with the `<div>` element.
+
 ### Label carousels
 
-For assistive technology users, it is important to add information to the carousel container that informs the user where the carousel starts and ends, as a carousel is typically a distinct part of a web page. A heading (`<h1>` to `<h6>`) or WAI-ARIA attributes can be used to label them.
+Provide labels to identify the carousels. This can be done using one of the following approaches.
 
 #### Using headings
-{:.ex}
+{:.ap}
 
-In the example below, a heading shows the start of the carousel, the end of the carousel would be marked by the next heading of the same level.
+In the example below, an HTML heading is used to identify the carousel.
 
 {::nomarkdown}
 <%= code_start %>
@@ -98,10 +104,10 @@ In the example below, a heading shows the start of the carousel, the end of the 
 <%= code_end %>
 {:/nomarkdown}
 
-#### Using WAI-ARIA roles and labels
-{:.ex}
+#### Using WAI-ARIA `aria-label`
+{:.ap}
 
-To group the carousel in a way that is perceivable for assistive technologies, the `role` attribute with a value of `region` can be used. To identify the region, the `aria-label` attribute can be used, as show in the example below:
+In the following example, the WAI-ARIA `aria-label` attribute is used to provide a label for the carousel. In addition, the `role` attribute with a value of `region` is used to define the entire carousel as a distinct region.
 
 {::nomarkdown}
 <%= code_start %>
@@ -117,7 +123,10 @@ To group the carousel in a way that is perceivable for assistive technologies, t
 <%= code_end %>
 {:/nomarkdown}
 
-If there is already some text identifying the carousel in HTML, it is usually more appropriate to use the `aria-labelledby` attribute to assign that text to the carousel.
+#### Using WAI-ARIA `aria-labelledby`
+{:.ap}
+
+In the following example, the WAI-ARIA `aria-labelledby` attribute is used to refer to an existing HTML heading as the label for the carousel. Also here, the `role` attribute with a value of `region` is used to define the entire carousel as a distinct region.
 
 {::nomarkdown}
 <%= code_start %>
@@ -149,17 +158,17 @@ In the following example, each carousel item only consists of an image, so that 
 {:/nomarkdown}
 
 ~~~html
-<h3>Photos of our trip to Paris:</h3>
 <div class="carousel">
+  <h3>Space Teddys:</h3>
   <ul>
       <li class="slide">
-          <img src="path/to/image1.jpg" alt="Alternative text 1">
+          <img src="path/to/image1.jpg" alt="Super Teddy">
       </li>
       <li class="slide">
-          <img src="path/to/image2.jpg" alt="Alternative text 2">
+          <img src="path/to/image2.jpg" alt="Spider Teddy">
       </li>
       <li class="slide">
-          <img src="path/to/image3.jpg" alt="Alternative text 3">
+          <img src="path/to/image3.jpg" alt="Teddy Man">
       </li>
   </ul>
 </div>
@@ -172,15 +181,15 @@ In the following example, each carousel item only consists of an image, so that 
 ### Complex content
 {:.ex}
 
-This example also uses a list, even though the carousel items consist of more substantial content than in the previous example. The individual carousel items are not independent pieces of content and thus not suitable for the  `<article>` element. Each list item includes a heading, text, and links.
+This example also uses a list, even though the carousel items consist of more substantial content than in the previous example. Each list item includes a heading, text, and links.
 
 {::nomarkdown}
 <%= code_start %>
 {:/nomarkdown}
 
 ~~~html
-<h3>Featured Articles:</h3>
 <div class="carousel">
+  <h3>Featured Articles:</h3>
     <ul>
         <li class="slide" style="background-image: url('teddy1.jpg');">
             <h4>Space Teddy production reaches all-time high</h4>
