@@ -22,7 +22,7 @@ Carousels should have a function that allows users to pause and advance the anim
 
 - **[Animations](animations.html):** Add animation and ensure users have control over these animations.
 
-- **[Full Content](examples/carousel.html):** The complete example source code.
+- **[Complete code example](full-code.html):** The full JavaScript code on one page.
 
 ## Why is this important?
 
