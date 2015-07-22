@@ -1490,6 +1490,18 @@ ul.inline {
 	}
 }
 
+
+.reference {
+	@extend %annotation;
+	font-size: .85em;
+	:first-child {
+		margin-top: 0;
+	}
+	:last-child {
+		margin-bottom: 0;
+	}
+}
+
 @media print {
 	body {
 		background-color: #fff;
