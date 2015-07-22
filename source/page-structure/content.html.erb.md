@@ -1,7 +1,7 @@
 ---
 title: Content Structure
 status: draft
-order: 4
+order: 5
 wcag_techniques:
   - H40
   - G62

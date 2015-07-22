@@ -1,7 +1,7 @@
 ---
 title: In-page Navigation
 status: draft
-order: 6
+order: 7
 wcag_success_criteria:
   - 2.4.1
 wcag_techniques:
