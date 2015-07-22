@@ -1,5 +1,6 @@
 ---
-title: Structure
+title: Carousel Structure
+nav_title: Structure
 status: approved-draft
 order: 2
 wcag_success_criteria:
@@ -14,6 +15,16 @@ wcag_techniques:
 Structural markup ensures that the content of a carousel has meaning on its own, without styling and scripting, so that can be used in more situations. For example, a carousel could be presented as a list of articles on a mobile device.
 
 ## Carousel region
+
+{::nomarkdown}
+<%= reference :start %>
+{:/}
+
+For more information on regions, see the [regions tutorial](/page-structure/regions.html).
+
+{::nomarkdown}
+<%= reference :end %>
+{:/}
 
 Provide semantic markup to define the carousel as a distinct part of a web page. For example, if the main purpose of a carousel is to navigate the website, then use the HTML5 `<nav>` element. Depending on the role of the slider, `<article>`, `<complementary>`, and `<aside>` elements could also be used. At the very least, the `<section>` element should be used to define the carousel as generic region.
 
@@ -45,51 +56,19 @@ In HTML4, the `<div>` element with the WAI-ARIA `role` attribute with the value 
 
 ## Carousel label
 
-As any distinct part of a website, carousels need labels that allow users to identify its purpose by using one of the following approaches.
+{::nomarkdown}
+<%= reference %>
+{:/}
 
-### Using headings
-{:.ap}
-
-In the example below, an HTML heading is used to identify the carousel.
+For more information on labels, see the [labeling regions tutorial](/page-structure/labels.html).
 
 {::nomarkdown}
-<%= code_start %>
-{:/nomarkdown}
+<%= reference :end %>
+{:/}
 
-~~~html
-<section class="carousel">
-  <h3>Recent news</h3>
-  …
-</section>
-~~~
+Label carousels according to their individual function to make them easier to find and understand. This helps to distinguish between multiple carousels on a web page. Use a heading, `aria-label`, or `aria-labelledby` to provide the label.
 
-{::nomarkdown}
-<%= code_end %>
-{:/nomarkdown}
-
-### Using `aria-label`
-{:.ap}
-
-In the following example, the WAI-ARIA `aria-label` attribute is used to provide a label for the carousel. This approach can be used if the label is not supposed to be visually on the page.
-
-{::nomarkdown}
-<%= code_start %>
-{:/nomarkdown}
-
-~~~html
-<section class="carousel" aria-label="Recent news">
-  …
-</section>
-~~~
-
-{::nomarkdown}
-<%= code_end %>
-{:/nomarkdown}
-
-### Using `aria-labelledby`
-{:.ap}
-
-By using the WAI-ARIA `aria-labelledby` attribute, an existing text – like a heading – can be used to label the carusel. This approach provides labels in multiple ways, so users can find and navigate the carousel more easily. 
+In carousels tutorial examples, `aria-labelledby` with a hidden heading is used:
 
 {::nomarkdown}
 <%= code_start %>
@@ -97,7 +76,7 @@ By using the WAI-ARIA `aria-labelledby` attribute, an existing text – like a h
 
 ~~~html
 <section class="carousel" aria-labelledby="carouselheading">
-  <h3 id="carouselheading">Recent news</h3>
+  <h3 id="carouselheading" class="visuallyhidden">Recent news</h3>
     …
 </section>
 ~~~
