@@ -11,7 +11,7 @@ Fly-out menus (also: dropdown menus) are frequently used to give users the abili
 
 As interactive components, fly-out menus need to be developed with accessibility in mind to make sure that they are operable using assistive technologies and the keyboard. For people with reduced dexterity it is also important that submenus don’t snap back immediately when the mouse leaves the clickable area.
 
-To make navigating a fly-out menu easier, hidden links should not be part of the keyboard navigation by default and also hidden from assistive technologies. They should, however, show up when requested by the user.
+To make navigating a fly-out menu easier, hidden links should not be part of the keyboard navigation by default and also hidden from assistive technologies. They should only show up when requested by the user.
 
 Usually the first-level menu items are links to individual pages whether they have a submenu or not. Items containing a submenu should be marked in a way that is obvious. In the following example, only the SpaceBears menu item has a submenu:
 
@@ -162,9 +162,11 @@ nav > ul li:hover ul {
 
 ## Enhancing the menu using JavaScript
 
-By using JavaScript, it is possible to react to keyboard usage and mouse movements. As soon as the mouse leaves the menu a timer is started which closes the menu after one second. If the mouse re-enters the submenu during that time, the timer is canceled and the submenu doesn’t close.
+By using JavaScript, it is possible to react to keyboard usage and mouse movements to improve the user interaction with the menu.
 
 ### Improve mouse support
+
+To avoid submenu items vanishing as soon as the mouse pointer leaves the menu, a timer is started which closes the menu after one second. If the mouse re-enters the submenu during that time, the timer is canceled and the submenu doesn’t close.
 
 {::nomarkdown}
 <%= sample_start('show-overflow') %>
@@ -302,12 +304,12 @@ There are two roles top-level menu items in fly-out menus can have for keyboard 
 1. It is just a toggle for the sub menu.
 2. It links to a page itself and needs to toggle the sub menu.
 
-Usually the submenu should not open when the focus enters the top-level menu item. This would mean a keyboard user needs to step through all the submenu links to get to the next top-level item.
+Usually the submenu should not open when the focus enters the top-level menu item as a keyboard would need to step through all the submenu items to get to the next top-level item.
 
 #### Toggle submenu using the top-level menu item
 {:.ap}
 
-When JavaScript is available, the top-level menu item won’t link to the page in its `href` attribute but instead showing the sub menu. (If JavaScript is not available, the link will work as usual.)
+When JavaScript is available, the top-level menu item won’t link to the page in its `href` attribute but instead showing the sub menu. (If JavaScript is not available, the link will work as usual so the page the menu is linking to should provide a way to get to the submenu items.)
 
 If the focus leaves the submenu (for example by using the tab key on the last submenu item), the submenu is closed.
 
@@ -482,7 +484,7 @@ Array.prototype.forEach.call(menuItems1, function(el, i){
 <%= sample_end %>
 {:/nomarkdown}
 
-The following code iterates through all top-level items that have a submenu (indicated through the class `has-submenu`) and adds click event to the first (top-level) link in each menu item. Despite their name, click events are activated regardless of the input method as soon as the link gets activated. If the submenu is closed at the time the link is activated, the script opens the submenu, and vice versa.
+The following code example iterates through all top-level items that have a submenu (indicated through the class `has-submenu`) and adds click event to the first (top-level) link in each menu item. Despite the name, click events are activated regardless of the input method as soon as the link gets activated. If the submenu is closed at the time the link is activated, the script opens the submenu, and vice versa.
 
 {::nomarkdown}
 <%= code_start('', 'JavaScript') %>
@@ -731,7 +733,7 @@ Array.prototype.forEach.call(menuItems1, function(el, i){
 <%= sample_end %>
 {:/nomarkdown}
 
-In the following code, a button is attached to every menu item link with a submenu. The click event listener is applied to this button and toggles the menu just like above. The invisible button text is changed from “show submenu” to “hide submenu” reflecting the state of the submenu.
+In the following code example, a button is added to every menu item link with a submenu. When the button is activated, it toggles the menu just like above. The invisible button text is changed from “show submenu” to “hide submenu” reflecting the state of the submenu.
 
 {::nomarkdown}
 <%= code_start('','JavaScript') %>
@@ -764,7 +766,7 @@ Array.prototype.forEach.call(menuItems, function(el, i){
 
 ## Improve screen reader support using WAI-ARIA
 
-Screen reader users need to know if an item has a submenu or not and if that submenu is currently opened. While this can be done with hidden text as above, WAI-ARIA helps to convey this information programmatically, using following two attributes to the menu’s HTML:
+Screen reader users need to know if an item has a submenu or not and if that submenu is currently open. While this can be done with hidden text as shown above, WAI-ARIA helps to convey this information programmatically so it can be picked up by assistive technologies in a consistent way. The two relevant WAI-ARIA attributes are:
 
 * **`aria-haspopup="true"`** is used so screen readers are able to announce that the link has a submenu.
 * **`aria-expanded`** is initially set to `false` but changed to `true` when the submenu opens which helps screen readers to announce that this menu item is now expanded.
