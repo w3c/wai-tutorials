@@ -1,6 +1,6 @@
 ---
 title: Functionality
-status: approved-draft
+status: editors-draft
 order: 3
 wcag_success_criteria:
   - 1.3.1
@@ -9,7 +9,7 @@ wcag_success_criteria:
   - 4.1.2
 ---
 
-Carusels display the one of their items at once while hiding the others. They allow users to browse through them.
+Carusels display the one content item at a time while hiding the others. They allow users to browse through them.
 
 ## Position slides
 
@@ -495,12 +495,12 @@ Combined, the carousel looks and functions like this:
 <%= sample_end %>
 {:/nomarkdown}
 
-## Items indicator
+## Items navigation
 {:.newex}
 
-Indicating the total number of carousel items and the active one helps users to orient themselves. Ideally each carousel item has a corresponding button that is styled to reflect the state of the carousel item. Providing these buttons within a list, adds meaning and semantics to the content, such as the number and order of the carousel items.
+Display a list of buttons that indicate which carousel item is currently displayed and allow users to switch to any carousel item.
 
-The list with buttons below is added to the carousel using JavaScript and then styled: The buttons are numbered matching the corresponding carousel items. The button for the active carousel item is highlighted both visually and using hidden text.
+In the example below, the list with buttons is added to the carousel using JavaScript and then styled: The buttons are numbered matching the corresponding carousel items. The button for the active carousel item is highlighted both visually and using hidden text.
 
 {::nomarkdown}
 <%= code_start %>
@@ -598,9 +598,11 @@ The list with buttons below is added to the carousel using JavaScript and then s
 
 ### Focusing carousel items
 
-In contrast to the previous/next buttons, when users select a carousel item directly through the item indicator, the focus should be set to the corresponding carousel item.
+Whe a user selects an item through the carousel navigation it should be focused by default. A keyboard or assistive technology user is sent to the item immediately.
 
 The `<li>` elements used for the carousel items itself are not focusable by default. However if the `tabindex` attribute with a value `-1` is added to the items, JavaScript is able to set the focus to those items.
+
+This behavior is different to the behavior of the previous and next buttons as the user may want to skip several items at once using those buttons.
 
 {::nomarkdown}
 <%= code_start('', 'JavaScript') %>
