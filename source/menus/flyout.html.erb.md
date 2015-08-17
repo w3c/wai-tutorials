@@ -7,13 +7,13 @@ wcag_techniques:
   - H4
 ---
 
-Fly-out menus (also: dropdown menus) are frequently used to give users the ability to access pages deep in the website’s structure.
+Fly-out menus (also: dropdown menus) are frequently used to give users the ability to access pages deep in the structure of the website by showing dropdown-like overlays.
 
-As interactive components, fly-out menus need to be developed with accessibility in mind to make sure that they are operable using assistive technologies and the keyboard. For people with reduced dexterity it is also important that submenus don’t snap back immediately when the mouse leaves the clickable area.
+They need to be operable using assistive technologies and the keyboard. For people with reduced dexterity it is also important that submenus don’t close immediately when the mouse leaves the clickable area.
 
-To make navigating a fly-out menu easier, hidden links should not be part of the keyboard navigation by default and also hidden from assistive technologies. They should only show up when requested by the user.
+To make navigating a fly-out menu easier, invisible links should be hidden completely from the page. They should only show up when requested by the user to minimize unnecessary and potentially confusing keyboard interaction and not read out by screen readers.
 
-Usually the first-level menu items are links to individual pages whether they have a submenu or not. Items containing a submenu should be marked in a way that is obvious. In the following example, only the SpaceBears menu item has a submenu:
+Usually the first-level menu items are links to individual pages whether they have a submenu or not. It is important to be able to distinguish menu items with and without sub menus, both visually and in code. In the following example, only the SpaceBears menu item has a submenu:
 
 {::nomarkdown}
 <%= sample_start('show-overflow') %>
