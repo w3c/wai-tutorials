@@ -7,7 +7,7 @@ wcag_techniques:
   - H4
 ---
 
-Fly-out menus (also: dropdown menus) are frequently used to give users the ability to access pages deep in the structure of the website by showing dropdown-like overlays.
+Fly-out menus contextual menu items that give users more choice when they interact with a menu item. They are used to provide links to sub pages of the main menu item and are sometimes called dropdown menus.
 
 They need to be operable using assistive technologies and the keyboard. For people with reduced dexterity it is also important that submenus don’t close immediately when the mouse leaves the clickable area.
 
