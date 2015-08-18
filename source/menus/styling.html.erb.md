@@ -12,7 +12,7 @@ wcag_techniques:
   - G183
 ---
 
-With a consistent styling users are able to find the navigation more easily. There are two basic design patterns that are commonly used on web sites: vertical and horizontal menus.
+With a consistent styling users are able to find menus more easily. There are two basic design patterns that are commonly used on web sites: vertical and horizontal menus.
 
 Regardless of the orientation, each menu item should have enough space so it doesn’t overlap other content on the page or gets cut off. Such items are a potential accessibility barrier, especially for users increasing the font size and can also be a problem when translating the menu into another language. Try to avoid line breaks or hyphenation in menu items as they are harder to understand.
 
