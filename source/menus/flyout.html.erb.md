@@ -9,11 +9,14 @@ wcag_techniques:
 
 Fly-out menus contextual menu items that give users more choice when they interact with a menu item. They are used to provide links to sub pages of the main menu item and are sometimes called dropdown menus.
 
-They need to be operable using assistive technologies and the keyboard. For people with reduced dexterity it is also important that submenus don’t close immediately when the mouse leaves the clickable area.
+## Indicate submenus
 
-To make navigating a fly-out menu easier, invisible links should be hidden completely from the page. They should only show up when requested by the user to minimize unnecessary and potentially confusing keyboard interaction and not read out by screen readers.
+{::comment}Keep submenu items visible for a short while when the mouse leaves the clickable area to allow users to reenter the menu if they left the menu by accident. Hide links not currently visible completely from the page to minimize unnecessary and potentially confusing keyboard interactions. This ensures that they are not read out by screen readers.{:/}
 
-Usually the first-level menu items are links to individual pages whether they have a submenu or not. It is important to be able to distinguish menu items with and without sub menus, both visually and in code. In the following example, only the SpaceBears menu item has a submenu:
+It is important to be able to distinguish menu items with and without sub menus. In the following example, only the SpaceBears menu item has a submenu. For visual users an arrow is added to the menu item to indicate the submenu. For assistive technologies, this information also needs to be provided in the code using WAI-ARIA attributes:
+
+* `aria-haspopup="true"` is used so screen readers are able to announce that the link has a submenu.
+* `aria-expanded` is initially set to `false` to indicate that the submenu is not visible. {::comment}but changed to `true` when the submenu opens which helps screen readers to announce that this menu item is now expanded.{:/}
 
 {::nomarkdown}
 <%= sample_start('show-overflow') %>
@@ -23,7 +26,7 @@ Usually the first-level menu items are links to individual pages whether they ha
 				<li><a href="#flyoutnav">Home</a></li>
 				<li><a href="#flyoutnav">Shop</a></li>
 				<li class="has-submenu">
-						<a href="#flyoutnav">SpaceBears</a>
+						<a href="#flyoutnav" aria-haspopup="true" aria-expanded="false">SpaceBears</a>
 						<ul>
 								<li><a href="#flyoutnav">SpaceBear 6</a></li>
 								<li><a href="#flyoutnav">SpaceBear 6 Plus</a></li>
@@ -125,7 +128,9 @@ Usually the first-level menu items are links to individual pages whether they ha
 				<li><a href="…">Home</a></li>
 				<li><a href="…">Shop</a></li>
 				<li class="has-submenu">
-						<a href="…">SpaceBears</a>
+						<a href="…" aria-haspopup="true" aria-expanded="false">
+							SpaceBears
+						</a>
 						<ul>
 								<li><a href="…">SpaceBear 6</a></li>
 								<li><a href="…">SpaceBear 6 Plus</a></li>
@@ -141,7 +146,11 @@ Usually the first-level menu items are links to individual pages whether they ha
 <%= code_end %>
 {:/nomarkdown}
 
-For mouse users, hiding the submenu until the mouse hovers over the first-level menu item is quite easy to do in CSS only, but this method has the disadvantage that the menu immediately closes once the mouse leaves the list item (and the containing submenu).
+## Add functionality
+
+### Mouse users
+
+For users of mice or other pointing devices, such as trackpads or trackballs, hiding the submenu until the mouse hovers over the first-level menu item is quite easy to do in CSS only, but this method has the disadvantage that the menu immediately closes once the mouse leaves the list item around the top-level menu item (including the submenu).
 
 {::nomarkdown}
 <%= code_start('','CSS') %>
@@ -160,13 +169,7 @@ nav > ul li:hover ul {
 <%= code_end %>
 {:/nomarkdown}
 
-## Enhancing the menu using JavaScript
-
-By using JavaScript, it is possible to react to keyboard usage and mouse movements to improve the user interaction with the menu.
-
-### Improve mouse support
-
-To avoid submenu items vanishing as soon as the mouse pointer leaves the menu, a timer is started which closes the menu after one second. If the mouse re-enters the submenu during that time, the timer is canceled and the submenu doesn’t close.
+By using scripting this behavior can be avoided: a timer is started which closes the menu after one second. If the mouse re-enters the submenu during that time, that timer is canceled and, as a result, the submenu stays open.
 
 {::nomarkdown}
 <%= sample_start('show-overflow') %>
@@ -176,7 +179,7 @@ To avoid submenu items vanishing as soon as the mouse pointer leaves the menu, a
 				<li><a href="#flyoutnavmousefixed">Home</a></li>
 				<li><a href="#flyoutnavmousefixed">Shop</a></li>
 				<li class="has-submenu">
-						<a href="#flyoutnavmousefixed">SpaceBears</a>
+						<a href="#flyoutnavmousefixed" aria-haspopup="true" aria-expanded="false">SpaceBears</a>
 						<ul>
 								<li><a href="#flyoutnavmousefixed">SpaceBear 6</a></li>
 								<li><a href="#flyoutnavmousefixed">SpaceBear 6 Plus</a></li>
@@ -297,14 +300,9 @@ Array.prototype.forEach.call(menuItems, function(el, i){
 <%= code_end %>
 {:/nomarkdown}
 
-### Improve keyboard support
+### Keyboard users
 
-There are two roles top-level menu items in fly-out menus can have for keyboard users:
-
-1. It is just a toggle for the sub menu.
-2. It links to a page itself and needs to toggle the sub menu.
-
-Usually the submenu should not open when the focus enters the top-level menu item as a keyboard would need to step through all the submenu items to get to the next top-level item.
+Usually the submenu should not open when the top-level menu item is focused as a keyboard user would need to step through all the submenu items to get to the next top-level item.
 
 #### Toggle submenu using the top-level menu item
 {:.ap}
@@ -456,8 +454,10 @@ Array.prototype.forEach.call(menuItems1, function(el, i){
 		el.querySelector('a').addEventListener("click",  function(event){
 			if (this.parentNode.className == "has-submenu") {
 				this.parentNode.className = "has-submenu open";
+				this.setAttribute('aria-expanded', "true");
 			} else {
 				this.parentNode.className = "has-submenu";
+				this.setAttribute('aria-expanded', "false");
 			}
 			event.preventDefault();
 		});
@@ -484,7 +484,19 @@ Array.prototype.forEach.call(menuItems1, function(el, i){
 <%= sample_end %>
 {:/nomarkdown}
 
-The following code example iterates through all top-level items that have a submenu (indicated through the class `has-submenu`) and adds click event to the first (top-level) link in each menu item. Despite the name, click events are activated regardless of the input method as soon as the link gets activated. If the submenu is closed at the time the link is activated, the script opens the submenu, and vice versa.
+The following code iterates through all top-level items that have a submenu (indicated through the class `has-submenu`) and adds a click event to the first link (which is the top-level item). When the link is activated, the script opens or closes the submenu depending on its state.
+
+In addition, the `aria-expanded` attribute is set to `true` when the menu is shown and to `false` when it is hidden from view.
+
+{::nomarkdown}
+<%= notes_start() %>
+{:/}
+
+**Note:** Despite the name, click events are activated regardless of the input method as soon as the link gets activated. 
+
+{::nomarkdown}
+<%= notes_end() %>
+{:/}
 
 {::nomarkdown}
 <%= code_start('', 'JavaScript') %>
@@ -496,8 +508,10 @@ Array.prototype.forEach.call(menuItems, function(el, i){
 	el.querySelector('a').addEventListener("click",  function(event){
 		if (this.parentNode.className == "has-submenu") {
 			this.parentNode.className = "has-submenu open";
+			this.setAttribute('aria-expanded', "true");
 		} else {
 			this.parentNode.className = "has-submenu";
+			this.setAttribute('aria-expanded', "false");
 		}
 		event.preventDefault();
 		return false;
@@ -512,7 +526,7 @@ Array.prototype.forEach.call(menuItems, function(el, i){
 #### Toggle submenu using a special “show submenu” button
 {:.ap}
 
-If the top-level menu item should stay a link to a page, adding a separate button that toggles the submenu is the most reliable way to address the issue.
+If the top-level menu item should stay a link to a page, adding a separate button that toggles the submenu is the most reliable way to address the issue. This button can act as a visual submenu indicator as well.
 
 {::nomarkdown}
 <%= sample_start('show-overflow') %>
@@ -705,8 +719,10 @@ Array.prototype.forEach.call(menuItems1, function(el, i){
 		el.querySelector('a button').addEventListener("click",  function(event){
 			if (this.parentNode.parentNode.className == "has-submenu") {
 				this.parentNode.parentNode.className = "has-submenu open";
+				this.parentNode.setAttribute('aria-expanded', "true");
 			} else {
 				this.parentNode.parentNode.className = "has-submenu";
+				this.parentNode.setAttribute('aria-expanded', "false");
 			}
 			event.preventDefault();
 		});
@@ -749,9 +765,11 @@ Array.prototype.forEach.call(menuItems, function(el, i){
 	el.querySelector('a button').addEventListener("click",  function(event){
 		if (this.parentNode.parentNode.className == "has-submenu") {
 			this.parentNode.parentNode.className = "has-submenu open";
+			this.parentNode.setAttribute('aria-expanded', "true");
 			this.querySelector('.visuallyhidden').innerText = 'hide submenu';
 		} else {
 			this.parentNode.parentNode.className = "has-submenu";
+			this.parentNode.setAttribute('aria-expanded', "false");
 			this.querySelector('.visuallyhidden').innerText = 'show submenu';
 		}
 		event.preventDefault();
@@ -761,192 +779,4 @@ Array.prototype.forEach.call(menuItems, function(el, i){
 
 {::nomarkdown}
 <%= code_end %>
-{:/nomarkdown}
-
-
-## Improve screen reader support using WAI-ARIA
-
-Screen reader users need to know if an item has a submenu or not and if that submenu is currently open. While this can be done with hidden text as shown above, WAI-ARIA helps to convey this information programmatically so it can be picked up by assistive technologies in a consistent way. The two relevant WAI-ARIA attributes are:
-
-* **`aria-haspopup="true"`** is used so screen readers are able to announce that the link has a submenu.
-* **`aria-expanded`** is initially set to `false` but changed to `true` when the submenu opens which helps screen readers to announce that this menu item is now expanded.
-
-{::nomarkdown}
-<%= sample_start('show-overflow') %>
-
-<nav role="presentation" aria-label="Main Navigation" id="flyoutaria">
-		<ul>
-				<li><a href="#flyoutaria">Home</a></li>
-				<li><a href="#flyoutaria">Shop</a></li>
-				<li class="has-submenu">
-						<a href="#" aria-haspopup="true" aria-expanded="false">SpaceBears</a>
-						<ul>
-								<li><a href="#flyoutaria">SpaceBear 6</a></li>
-								<li><a href="#flyoutaria">SpaceBear 6 Plus</a></li>
-						</ul>
-				</li>
-				<li><a href="#flyoutaria">MarsCars</a></li>
-				<li><a href="#flyoutaria">Contact</a></li>
-		</ul>
-</nav>
-
-<style>
-.show-overflow {
-		overflow: visible !important;
-}
-
-.show-overflow .box-content {
-		overflow: visible !important;
-}
-	#flyoutaria {
-			display:table;
-			width:100%;
-	}
-	#flyoutaria > ul {
-			margin: 0;
-			padding: 0;
-			display: table-row;
-			background-color: #036;
-			color: #fff;
-	}
-	#flyoutaria > ul > li {
-			display:table-cell;
-			width: 20%;
-			text-align: center;
-			position:relative;
-	}
-	#flyoutaria a,
-	#flyoutaria .current {
-			display: block;
-			padding: .25em;
-			border-color: #E8E8E8;
-	}
-	#flyoutaria a {
-			color: #fff;
-			text-decoration: none;
-	}
-	#flyoutaria a:hover,
-		#flyoutaria a:focus {
-			background-color: #fff;
-			color: #036;
-			border: 1px solid #036;
-			text-decoration: underline;
-	}
-	#flyoutaria .current {
-			background-color: #bbb;
-			color: #000;
-			border-color: #444;
-	}
-
-	#flyoutaria > ul > li > ul {
-		display: none;
-		position:absolute;
-		left:0;
-		right:0;
-		top:100%;
-		padding:0;
-		margin:0;
-		background-color: #036;
-	}
-
-#flyoutaria > ul > li.open > ul {
-		display:block;
-	}
-
-	#flyoutaria > ul > li > ul a{
-		border-bottom-width: 1px;
-	}
-</style>
-
-<script>
-/* focusin/out event polyfill (firefox) */
-!function(){
-	var w = window,
-	d = w.document;
-
-	if( w.onfocusin === undefined ){
-		d.addEventListener('focus' ,addPolyfill ,true);
-		d.addEventListener('blur' ,addPolyfill ,true);
-		d.addEventListener('focusin' ,removePolyfill ,true);
-		d.addEventListener('focusout' ,removePolyfill ,true);
-	}
-	function addPolyfill(e){
-		var type = e.type === 'focus' ? 'focusin' : 'focusout';
-		var event = new CustomEvent(type, { bubbles:true, cancelable:false });
-		event.c1Generated = true;
-		e.target.dispatchEvent( event );
-	}
-	function removePolyfill(e){
-if(!e.c1Generated){ // focus after focusin, so chrome will the first time trigger tow times focusin
-	d.removeEventListener('focus' ,addPolyfill ,true);
-	d.removeEventListener('blur' ,addPolyfill ,true);
-	d.removeEventListener('focusin' ,removePolyfill ,true);
-	d.removeEventListener('focusout' ,removePolyfill ,true);
-}
-setTimeout(function(){
-	d.removeEventListener('focusin' ,removePolyfill ,true);
-	d.removeEventListener('focusout' ,removePolyfill ,true);
-});
-}
-}();
-
-function hasClass(el, className) {
-	if (el.classList) {
-		return el.classList.contains(className);
-	} else {
-		return new RegExp('(^| )' + className + '( |$)', 'gi').test(el.className);
-	}
-}
-
-var menuItems1 = document.querySelectorAll('#flyoutaria li.has-submenu');
-var timer1, timer2;
-
-Array.prototype.forEach.call(menuItems1, function(el, i){
-		el.addEventListener("mouseover", function(event){
-				this.className = "has-submenu open";
-				this.setAttribute('aria-expanded', "true");
-				clearTimeout(timer1);
-		});
-		el.addEventListener("mouseout", function(event){
-				timer1 = setTimeout(function(event){
-						var opennav = document.querySelector("#flyoutaria .has-submenu.open");
-						if (opennav) {
-							opennav.className = "has-submenu";
-							opennav.querySelector("[aria-expanded]").setAttribute('aria-expanded', "false");
-						}
-				}, 1000);
-		});
-		el.querySelector('a').addEventListener("click",  function(event){
-			if (this.parentNode.className == "has-submenu") {
-				this.parentNode.className = "has-submenu open";
-				this.setAttribute('aria-expanded', "true");
-			} else {
-				this.parentNode.className = "has-submenu";
-				this.setAttribute('aria-expanded', "false");
-			}
-			event.preventDefault();
-			return false;
-		});
-		var links = el.querySelectorAll('a');
-		Array.prototype.forEach.call(links, function(el, i){
-			el.addEventListener("focus", function() {
-				if (timer2) {
-					clearTimeout(timer2);
-					timer2 = null;
-				}
-			});
-			el.addEventListener("blur", function(event) {
-				timer2 = setTimeout(function () {
-					var opennav = document.querySelector("#flyoutaria .has-submenu.open")
-					if (opennav) {
-						opennav.className = "has-submenu";
-						opennav.querySelector("[aria-expanded]").setAttribute('aria-expanded', "false");
-					}
-				}, 10);
-			});
-		});
-});
-</script>
-
-<%= sample_end %>
 {:/nomarkdown}
