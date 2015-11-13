@@ -205,7 +205,7 @@ In this example, the head of the peacock is described using a paragraph of text 
 <aside class="annotation">
   <h4 class="annotation-header"><span class="subhead">Accessibility Support:</span> <code>Longdesc</code>, Web Browsers, and Assistive Technologies</h4>
   <div class="annotation-content icon-warning-sign">
-    <p>In Firefox, long descriptions linked by <code>longdesc</code> are available to mouse users through “View description” in the image’s context menu. There is an <a href="https://chrome.google.com/webstore/detail/long-descriptions-in-cont/ohbmencljkleiedahijfkagnmmhbilgp">official Chrome Extension</a> that adds long description access in a similar way. Safari has no support for <code>longdesc</code>. In other web browsers, <code>longdesc</code> is currently available only to screen reader users. Mobile platforms currently do not support <code>longdesc</code>.</p>
+    <p><strong>Warning!</strong> In Firefox, long descriptions linked by <code>longdesc</code> are available to mouse users through “View description” in the image’s context menu. There is an <a href="https://chrome.google.com/webstore/detail/long-descriptions-in-cont/ohbmencljkleiedahijfkagnmmhbilgp">official Chrome Extension</a> that adds long description access in a similar way. Safari has no support for <code>longdesc</code>. In other web browsers, <code>longdesc</code> is currently available only to screen reader users. Mobile platforms currently do not support <code>longdesc</code>.</p>
     <p>No browser indicates the presence of the <code>longdesc</code> attribute visually.</p>
   </div>
 </aside>
