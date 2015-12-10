@@ -225,7 +225,7 @@ In this example, the head of the peacock is described using a paragraph of text 
 {::nomarkdown}
 <%= sample_start %>
 
-<img src="../../img/peafowl.jpg" alt="Neck of a male peacock" aria-describedby="description">
+<img src="../../img/peafowl.jpg" alt="Male peacock head" aria-describedby="description">
 <p id="description">
   The male is metallic blue on the crown, the feathers of the head being short and curled. The fan-shaped crest on the head is made of feathers with bare black shafts and tipped with blush-green webbing. A white stripe above the eye and a crescent shaped white patch below the eye are formed by bare white skin. The sides of the head have iridescent greenish blue feathers. The back has scaly bronze-green feathers with black and copper markings.
 </p>
@@ -239,7 +239,7 @@ In this example, the head of the peacock is described using a paragraph of text 
 
 ~~~ html
 <img src="peacock.jpg"
-     alt="Neck of a male peacock"
+     alt="Male peacock head"
      aria-describedby="description">
 […]
 <p id="description">
