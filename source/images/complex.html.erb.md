@@ -161,51 +161,13 @@ The HTML5 `<figure>` element can be used to enclose both the image and its long 
 <%= code_end %>
 {:/nomarkdown}
 
-## Description containing textual information
-{:.ex}
-
-The WAI-ARIA `aria-describedby` attribute can be used to link to a description of the image that is provided anywhere on the same web page, in a similar way to the [longdesc approach](#providing-a-link-to-the-long-description-via-longdesc). The value of the attribute is the `id` of the element that provides the long description.
-
-Important: The element referenced by `aria-describedby` is treated like one continuous paragraph of text. Screen readers and other assistive technology do not have access to structural information, such as any headings and tables. They will read out or provide the text of any contained elements without indicating their structural relationships, and without the corresponding navigation mechanisms. As a result, this approach only works for long descriptions that are text-only, without needing structural information as was needed in the previous example.
-
-In this example, the head of the peacock is described using a paragraph of text that is on the web page.
-
-{::nomarkdown}
-<%= sample_start %>
-
-<img src="../../img/peafowl.jpg" alt="Neck of a male peacock" aria-describedby="description">
-<p id="description">
-  The male is metallic blue on the crown, the feathers of the head being short and curled. The fan-shaped crest on the head is made of feathers with bare black shafts and tipped with blush-green webbing. A white stripe above the eye and a crescent shaped white patch below the eye are formed by bare white skin. The sides of the head have iridescent greenish blue feathers. The back has scaly bronze-green feathers with black and copper markings.
-</p>
-
-<%= sample_end %>
-{:/nomarkdown}
-
-{::nomarkdown}
-<%= code_start %>
-{:/nomarkdown}
-
-~~~ html
-<img src="peacock.jpg"
-     alt="Neck of a male peacock"
-     aria-describedby="description">
-[…]
-<p id="description">
-  The male is metallic blue on the crown, the feathers of the head being short and curled. The fan-shaped crest on the head is made of feathers with bare black shafts and tipped with blush-green webbing. A white stripe above the eye and a crescent shaped white patch below the eye are formed by bare white skin. The sides of the head have iridescent greenish blue feathers. The back has scaly bronze-green feathers with black and copper markings.
-</p>
-~~~
-
-{::nomarkdown}
-<%= code_end %>
-{:/nomarkdown}
-
 ### Providing a link to the long description via `longdesc`
 {:.ap}
 
 <aside class="annotation">
   <h4 class="annotation-header"><span class="subhead">Accessibility Support:</span> <code>Longdesc</code>, Web Browsers, and Assistive Technologies</h4>
-  <div class="annotation-content icon-warning-sign">
-    <p><strong>Warning!</strong> In Firefox, long descriptions linked by <code>longdesc</code> are available to mouse users through “View description” in the image’s context menu. There is an <a href="https://chrome.google.com/webstore/detail/long-descriptions-in-cont/ohbmencljkleiedahijfkagnmmhbilgp">official Chrome Extension</a> that adds long description access in a similar way. Safari has no support for <code>longdesc</code>. In other web browsers, <code>longdesc</code> is currently available only to screen reader users. Mobile platforms currently do not support <code>longdesc</code>.</p>
+  <div class="annotation-content">
+    <p><strong><span class="icon icon-warning-sign" aria-hidden="true"></span>Warning!</strong> In Firefox, long descriptions linked by <code>longdesc</code> are available to mouse users through “View description” in the image’s context menu. There is an <a href="https://chrome.google.com/webstore/detail/long-descriptions-in-cont/ohbmencljkleiedahijfkagnmmhbilgp">official Chrome Extension</a> that adds long description access in a similar way. Safari has no support for <code>longdesc</code>. In other web browsers, <code>longdesc</code> is currently available only to screen reader users. Mobile platforms currently do not support <code>longdesc</code>.</p>
     <p>No browser indicates the presence of the <code>longdesc</code> attribute visually.</p>
   </div>
 </aside>
@@ -245,6 +207,44 @@ When the `longdesc` attribute contains a fragment identifier (`#` followed by th
 <div id="chart-longdesc">
 	[…]
 </div>
+~~~
+
+{::nomarkdown}
+<%= code_end %>
+{:/nomarkdown}
+
+## Description containing textual information
+{:.ex}
+
+The WAI-ARIA `aria-describedby` attribute can be used to link to a description of the image that is provided anywhere on the same web page, in a similar way to the [longdesc approach](#providing-a-link-to-the-long-description-via-longdesc). The value of the attribute is the `id` of the element that provides the long description.
+
+Important: The element referenced by `aria-describedby` is treated like one continuous paragraph of text. Screen readers and other assistive technology do not have access to structural information, such as any headings and tables. They will read out or provide the text of any contained elements without indicating their structural relationships, and without the corresponding navigation mechanisms. As a result, this approach only works for long descriptions that are text-only, without needing structural information as was needed in the previous example.
+
+In this example, the head of the peacock is described using a paragraph of text that is on the web page.
+
+{::nomarkdown}
+<%= sample_start %>
+
+<img src="../../img/peafowl.jpg" alt="Neck of a male peacock" aria-describedby="description">
+<p id="description">
+  The male is metallic blue on the crown, the feathers of the head being short and curled. The fan-shaped crest on the head is made of feathers with bare black shafts and tipped with blush-green webbing. A white stripe above the eye and a crescent shaped white patch below the eye are formed by bare white skin. The sides of the head have iridescent greenish blue feathers. The back has scaly bronze-green feathers with black and copper markings.
+</p>
+
+<%= sample_end %>
+{:/nomarkdown}
+
+{::nomarkdown}
+<%= code_start %>
+{:/nomarkdown}
+
+~~~ html
+<img src="peacock.jpg"
+     alt="Neck of a male peacock"
+     aria-describedby="description">
+[…]
+<p id="description">
+  The male is metallic blue on the crown, the feathers of the head being short and curled. The fan-shaped crest on the head is made of feathers with bare black shafts and tipped with blush-green webbing. A white stripe above the eye and a crescent shaped white patch below the eye are formed by bare white skin. The sides of the head have iridescent greenish blue feathers. The back has scaly bronze-green feathers with black and copper markings.
+</p>
 ~~~
 
 {::nomarkdown}
