@@ -29,7 +29,7 @@ This example shows two image icons – one of a telephone, one of a fax machine.
 <%= sample_start %>
 {:/nomarkdown}
 
-![Phone:](phone.png){:style="vertical-align:middle;"} 0123 456 7890
+![Telephone:](phone.png){:style="vertical-align:middle;"} 0123 456 7890
 
 ![Fax:](fax.png){:style="vertical-align:middle;"} 0123 456 7891
 
@@ -43,7 +43,7 @@ This example shows two image icons – one of a telephone, one of a fax machine.
 
 ~~~ html
 <p>
-	<img src="phone.png" alt="Phone:"> 0123 456 7890
+	<img src="phone.png" alt="Telephone:"> 0123 456 7890
 </p>
 <p>
 	<img src="fax.png" alt="Fax:"> 0123 456 7891
