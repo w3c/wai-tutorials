@@ -6,5 +6,9 @@ reviewers:
   members:
   - yatil
   - nitedog
+  - susanatx
+  - haltersweb
+  - dboudreau
+  - hkramer
   name: default
-  required: 1
+  required: 2
