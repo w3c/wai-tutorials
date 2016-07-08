@@ -240,22 +240,22 @@ At the time of writing this tutorial, web browsers usually display the placehold
 
 ~~~ css
 ::-webkit-input-placeholder {
-	 color: #777;
+	 color: #767676;
 	 opacity: 1;
 }
 
 :-moz-placeholder { /* Firefox 18- */
-	 color: #777;
+	 color: #767676;
 	 opacity: 1;
 }
 
 ::-moz-placeholder {  /* Firefox 19+ */
-	 color: #777;
+	 color: #767676;
 	 opacity: 1;
 }
 
 :-ms-input-placeholder {
-	 color: #777;
+	 color: #767676;
 	 opacity: 1;
 }
 ~~~
