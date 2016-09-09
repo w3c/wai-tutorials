@@ -11,8 +11,6 @@ Fly-out menus contextual menu items that give users more choice when they intera
 
 ## Indicate submenus
 
-{::comment}Keep submenu items visible for a short while when the mouse leaves the clickable area to allow users to reenter the menu if they left the menu by accident. Hide links not currently visible completely from the page to minimize unnecessary and potentially confusing keyboard interactions. This ensures that they are not read out by screen readers.{:/}
-
 It is important to be able to distinguish menu items with and without sub menus. In the following example, only the SpaceBears menu item has a submenu. For visual users an arrow is added to the menu item to indicate the submenu. For assistive technologies, this information also needs to be provided in the code using WAI-ARIA attributes:
 
 * `aria-haspopup="true"` is used so screen readers are able to announce that the link has a submenu.
@@ -150,7 +148,7 @@ It is important to be able to distinguish menu items with and without sub menus.
 
 ### Mouse users
 
-For users of mice or other pointing devices, such as trackpads or trackballs, hiding the submenu until the mouse hovers over the first-level menu item is quite easy to do in CSS only, but this method has the disadvantage that the menu immediately closes once the mouse leaves the list item around the top-level menu item (including the submenu).
+Hiding a submenu until the cursor of a mouse (or another pointing device) hovers over the first-level menu item can be done by CSS alone. However, this method has the disadvantage that the menu immediately snaps back once the cursor leaves the hovered element.
 
 {::nomarkdown}
 <%= code_start('','CSS') %>
@@ -169,7 +167,7 @@ nav > ul li:hover ul {
 <%= code_end %>
 {:/nomarkdown}
 
-By using scripting this behavior can be avoided: a timer is started which closes the menu after one second. If the mouse re-enters the submenu during that time, that timer is canceled and, as a result, the submenu stays open.
+This behavior can be avoided by adding some scripting. When the cursor leaves the menu item, a timer is started which schedules to close the menu after one second. If the mouse re-enters the submenu during that time, that timer is canceled and the submenu stays open.
 
 {::nomarkdown}
 <%= sample_start('show-overflow') %>
@@ -302,14 +300,16 @@ Array.prototype.forEach.call(menuItems, function(el, i){
 
 ### Keyboard users
 
-Usually the submenu should not open when the top-level menu item is focused as a keyboard user would need to step through all the submenu items to get to the next top-level item.
+Usually submenus are not supposed to open when tabbing through the menu using the keyboard as a keyboard user would need to step through all submenu items to get to the next top-level item.
+
+Different approaches address the need of keeping the top-level link accessible or not.
 
 #### Toggle submenu using the top-level menu item
 {:.ap}
 
-When JavaScript is available, the top-level menu item won’t link to the page in its `href` attribute but instead showing the sub menu. (If JavaScript is not available, the link will work as usual so the page the menu is linking to should provide a way to get to the submenu items.)
+The submenu is opened by a script when the user activates the top-level menu item. The value of the `href` attribute is ignored.
 
-If the focus leaves the submenu (for example by using the tab key on the last submenu item), the submenu is closed.
+When the focus leaves the submenu (for example by using the tab key on the last submenu item), the submenu is closed.
 
 {::nomarkdown}
 <%= sample_start('show-overflow') %>
@@ -484,9 +484,7 @@ Array.prototype.forEach.call(menuItems1, function(el, i){
 <%= sample_end %>
 {:/nomarkdown}
 
-The following code iterates through all top-level items that have a submenu (indicated through the class `has-submenu`) and adds a click event to the first link (which is the top-level item). When the link is activated, the script opens or closes the submenu depending on its state.
-
-In addition, the `aria-expanded` attribute is set to `true` when the menu is shown and to `false` when it is hidden from view.
+The following code iterates through all top-level items with the class `has-submenu` and adds a click event to it which opens or closes the submenu, depending on its state. In addition, the `aria-expanded` attribute is set to `true` while the submenu is shown and otherwise to `false`.
 
 {::nomarkdown}
 <%= notes_start() %>
@@ -526,7 +524,7 @@ Array.prototype.forEach.call(menuItems, function(el, i){
 #### Toggle submenu using a special “show submenu” button
 {:.ap}
 
-If the top-level menu item should stay a link to a page, adding a separate button that toggles the submenu is the most reliable way to address the issue. This button can act as a visual submenu indicator as well.
+If the top-level menu item needs to stay a proper link that links to a page, a separate button can be added to the top-level item that opens/closes the menu. This button can also act as a visual indicator for the presence of a submenu.
 
 {::nomarkdown}
 <%= sample_start('show-overflow') %>
@@ -749,7 +747,7 @@ Array.prototype.forEach.call(menuItems1, function(el, i){
 <%= sample_end %>
 {:/nomarkdown}
 
-In the following code example, a button is added to every menu item link with a submenu. When the button is activated, it toggles the menu just like above. The invisible button text is changed from “show submenu” to “hide submenu” reflecting the state of the submenu.
+In the following code example, a button is added to every top-level menu item link with a submenu. When the button is activated, it shows or hides the submenu. The invisible label of the button is set to “show submenu” or “hide submenu”, reflecting the state of the submenu.
 
 {::nomarkdown}
 <%= code_start('','JavaScript') %>
