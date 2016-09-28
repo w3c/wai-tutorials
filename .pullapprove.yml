@@ -6,7 +6,8 @@ groups:
       enabled: true
       reject_regex: ^Rejected
     required: 2
-    reset_on_push: false
+    reset_on_push: 
+      enabled: true
     users:
     - dboudreau
     - haltersweb
