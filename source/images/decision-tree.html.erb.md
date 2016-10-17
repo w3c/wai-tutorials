@@ -36,7 +36,7 @@ This decision tree describes how to use the `alt` attribute of the `<img>` eleme
 		-   **… and it’s a graph or complex piece of information.**
 			_Include the information contained in the image elsewhere on the page. See [Complex Images](complex.html)._
 		-   **… and it shows content that is redundant to *real* text nearby.**
-			_Use an empty `alt` attribute. See [Functional Images](functional.html#logo-image-within-link-text)._
+			_Use an empty `alt` attribute. See (redundant) [Functional Images](functional.html#logo-image-within-link-text)._
 	-   {:.no} **No:**
 		-   Continue.
 -   **Is the image purely decorative or not intended for the user?**
