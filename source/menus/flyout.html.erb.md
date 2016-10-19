@@ -7,14 +7,14 @@ wcag_techniques:
   - H4
 ---
 
-Fly-out menus contextual menu items that give users more choice when they interact with a menu item. They are used to provide links to sub pages of the main menu item and are sometimes called dropdown menus.
+Some websites use fly-out menus to allow users to access additional pages further down the page hierarchy. This removes the need for multiple page loads if the user knows where to find the specific content. It also allows for getting an overview of the content of the website.
 
-## Indicate submenus
+## Indicate the presence of a submenu
 
-It is important to be able to distinguish menu items with and without sub menus. In the following example, only the SpaceBears menu item has a submenu. For visual users an arrow is added to the menu item to indicate the submenu. For assistive technologies, this information also needs to be provided in the code using WAI-ARIA attributes:
+Users need to be aware which menu items have a submenu and which don’t. In the following example, only the “SpaceBears” item has one. An arrow icon is shown to inform visual users about the submenu, but for other uses, like assistive technologies, the following ARIA attributes provide the information programatically:
 
-* `aria-haspopup="true"` is used so screen readers are able to announce that the link has a submenu.
-* `aria-expanded` is initially set to `false` to indicate that the submenu is not visible. {::comment}but changed to `true` when the submenu opens which helps screen readers to announce that this menu item is now expanded.{:/}
+* `aria-haspopup="true"` prompts assistive technologies to give the information that a submenu is present to the user
+* `aria-expanded` holds the status of the submenu: it is initially set to `false` to indicate that the submenu is not visible
 
 {::nomarkdown}
 <%= sample_start('show-overflow') %>
@@ -144,11 +144,11 @@ It is important to be able to distinguish menu items with and without sub menus.
 <%= code_end %>
 {:/nomarkdown}
 
-## Add functionality
+## Improving the menu
 
 ### Mouse users
 
-Hiding a submenu until the cursor of a mouse (or another pointing device) hovers over the first-level menu item can be done by CSS alone. However, this method has the disadvantage that the menu immediately snaps back once the cursor leaves the hovered element.
+CSS can be used to show submenus when their parent menu is hovered. However, this method has the disadvantage that the menu immediately snaps back once the cursor leaves the hovered element.
 
 {::nomarkdown}
 <%= code_start('','CSS') %>
