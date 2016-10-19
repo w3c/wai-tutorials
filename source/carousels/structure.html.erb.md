@@ -1,7 +1,7 @@
 ---
 title: Carousel Structure
 nav_title: Structure
-status: approved-draft
+status: editors-draft
 order: 2
 wcag_success_criteria:
   - 1.3.1
@@ -12,7 +12,7 @@ wcag_techniques:
   - H48
 ---
 
-Structural markup ensures that the content of a carousel has meaning on its own, without styling and scripting, so that can be used in more situations. For example, a carousel could be presented as a list of articles on a mobile device.
+Structural markup ensures that the content of a carousel has meaning on its own, without styling and scripting, so that can be used in more diverse situations. For example, a carousel can be presented as a list of articles on a mobile device or if JavaScript fails to load.
 
 ## Carousel region
 
@@ -26,7 +26,7 @@ For more information on regions, see the [regions tutorial](/page-structure/regi
 <%= reference :end %>
 {:/}
 
-Provide semantic markup to define the carousel as a distinct part of a web page. For example, if the main purpose of a carousel is to navigate the website, then use the HTML5 `<nav>` element. Depending on the role of the slider, `<article>`, `<complementary>`, and `<aside>` elements could also be used. At the very least, the `<section>` element should be used to define the carousel as generic region.
+Use semantic markup to define the carousel as a distinct part of a web page. For example, if the main purpose of a carousel is to navigate the website, use the HTML5 `<nav>` element. Depending on the role of the slider, `<article>`, `<complementary>`, and `<aside>` elements can also be used. At the very least, the `<section>` element should be used to define the carousel as generic region.
 
 {::nomarkdown}
 <%= code_start('', 'HTML5') %>
@@ -66,9 +66,9 @@ For more information on labels, see the [labeling regions tutorial](/page-struct
 <%= reference :end %>
 {:/}
 
-Label carousels according to their individual function to make them easier to find and understand. This helps to distinguish between multiple carousels on a web page. Use a heading, `aria-label`, or `aria-labelledby` to provide the label.
+Label carousels according to their individual function to make them easier to find and understand. This helps to distinguish between multiple carousels on a web page and between other regions on the page. Use a heading, `aria-label`, and/or `aria-labelledby` to provide the label.
 
-In carousels tutorial examples, `aria-labelledby` with a hidden heading is used:
+In the following tutorial examples, a hidden heading is referenced by `aria-labelledby`:
 
 {::nomarkdown}
 <%= code_start %>
@@ -87,9 +87,7 @@ In carousels tutorial examples, `aria-labelledby` with a hidden heading is used:
 
 ## Carousel body
 
-A carousel is a collection of items that are displayed one at a time. Provide a corresponding structure in the code to represent this collection of items.
-
-Usually, carousel items are collected in a list (`<ul>`), with list items (`<li>`) grouping the content of each individual slide.
+A carousel is a collection of content items where only one item is displayed at a time. The markup is for such a collection is usually a (unordered) list (`<ul>`), with list items (`<li>`) enclosing the content of each individual slide.
 
 {::nomarkdown}
 <%= code_start %>
@@ -113,9 +111,9 @@ Usually, carousel items are collected in a list (`<ul>`), with list items (`<li>
 
 ## Item content
 
-Individual carousel items can consist of simple content, like only an `<img>` element for an image slider. In other instances complex content is represented in each carousel item, for example complete articles or sections of a web page or even website.
+Carousel items can consist of simple content or more complex content. For a simple image slider, using a sole `<img>` element can be the right choice. In other instances each carousel item represents a complete article, a section of a web page or even a section of the whole website.
 
-Mark up the content inside the carousel items like you would in the normal document content. If the content can stand on its own, you may even use articles inside of the carousel item.
+Use the same markup for content in the carousel as would be used outside of an carousel. If the content can stand on its own, you may even use headings, sections, lists or even articles inside of the carousel item.
 
 {::nomarkdown}
 <%= code_start('', 'Simple Content') %>
@@ -194,7 +192,7 @@ For the rest of the tutorial, the following code is used as the foundations for 
 <%= code_end %>
 {:/nomarkdown}
 
-### Add styling
+### Basic styling
 
 To improve the flexibility of the carousel, a progressive enhancement approach is used. Styling is applied to the carousel items so they appear as a list of teasers if no JavaScript is available.
 
@@ -284,7 +282,7 @@ To improve the flexibility of the carousel, a progressive enhancement approach i
 <%= notes_start %>
 {:/nomarkdown}
 
-**Note:** As the background images can be distracting, a (semi-transparent) background color for the overlaying text ca help to improve the contrast.
+**Note:** As the background images can be distracting, a (semi-transparent) background color for the overlaying text helps to improve the contrast.
 
 {::nomarkdown}
 <%= notes_end %>
