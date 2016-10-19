@@ -191,7 +191,7 @@ $class_push:        'push';     //              //
     // create rule for each element
     @for $i from 1 through $_cols_per_row{
 
-        #{$_column_selector}:nth-child(#{$_cols_per_row}n+#{$i}){
+        #{$_column_selector}:nth-child(unquote("#{$_cols_per_row}n+#{$i}")){
             @include push((($i - 1)*$_element_width));
             margin-bottom: $gutter_width;
 
@@ -215,7 +215,7 @@ $class_push:        'push';     //              //
 
         $selector: #{$_column_selector};
         @for $ii from 2 through $i{
-            $selector: #{$selector}+#{$_column_selector};
+            $selector: unquote("#{$selector}+#{$_column_selector}")
         }
 
 
