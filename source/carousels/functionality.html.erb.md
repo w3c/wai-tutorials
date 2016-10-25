@@ -9,7 +9,7 @@ wcag_success_criteria:
   - 4.1.2
 ---
 
-Carousels display the one of multiple content items at a time while hiding the others. They allow users to browse through them.
+Carousels display multiple content items one at a time, allowing users to browse through all of them in turn.
 
 ## Position slides
 
