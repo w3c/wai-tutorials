@@ -16,7 +16,7 @@ Develop carousels using progressive enhancement techniques:
 
 - **[Structure](structure.html):** Provide structure markup for the carousel body and its items.
 
-- **[Functionality](functionality.html):** Add functionality to display one carousel item at a time.
+- **[Functionality](functionality.html):** Add functionality to display and announce carousel items.
 
 - **[Animations](animations.html):** Add animation and ensure users have control over these animations.
 
