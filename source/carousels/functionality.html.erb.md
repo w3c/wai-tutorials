@@ -9,7 +9,7 @@ wcag_success_criteria:
   - 4.1.2
 ---
 
-Carousels display multiple content items one at a time, allowing users to browse through all of them in turn.
+Provide functionality to display the carousel items one at a time, and to announce the changes that occur in display.
 
 ## Position slides
 
@@ -154,9 +154,9 @@ The outcome looks like this:
 
 ## Add previous and next buttons
 
-Add `<button>` elements that allow users to switch back and forth between items. They can be individually styled, provide semantic meaning and do also work with assistive technology and keyboard usage out of the box. 
+Use `<button>` elements to allow users to manually switch back and forth between items. These can be individually styled as needed, but provide semantic meaning to support assistive technology and keyboard use.
 
-In the example below, JavaScript is used to generate buttons and them to the carousel. Visually the buttons appear as arrows overlaying the individual items.
+In the example below, JavaScript is used to generate buttons and add them to the carousel. Visually the buttons appear as arrows overlaying the individual items.
 
 {::nomarkdown}
 <%= code_start('', 'JavaScript') %>
@@ -232,7 +232,7 @@ carousel.appendChild(ctrls);
 
 ## Announce the current slide
 
-When the current item changes, a WAI-ARIA live region informs screen reader users which slide is currently visible. Note that the current slide does not receive keyboard focus in this case to allow users to skip several items at once.
+When the current item changes, a WAI-ARIA live region informs screen reader users which slide is currently visible. Note that the current slide does not automatically receive keyboard focus, to allow users to skip over and leave the carousel.
 
 {::nomarkdown}
 <%= code_start('', 'Extend event listeners') %>
@@ -495,12 +495,12 @@ Combined, the carousel looks and functions like this:
 <%= sample_end %>
 {:/nomarkdown}
 
-## Items navigation
+## Provide overview on items
 {:.newex}
 
-Display a list of buttons that indicate which carousel item is currently displayed and als allows users to navigate directly to any carousel item.
+Display a list of buttons that indicate the available carousel items and highlight the currently displayed items. This allows users to get an overview on the contents of the carousels, where they are, and navigate directly to any carousel item.
 
-In the example below, the list with buttons is added to the carousel using JavaScript and then styled: The buttons are numbered matching the corresponding carousel items. The button for the active carousel item is highlighted both visually and by using visually hidden text.
+In the example below, the list with buttons is added to the carousel using JavaScript and then styled: The buttons are numbered matching the corresponding carousel items. The button for the active carousel item is highlighted both visually and by using visually hidden text (for screen readers).
 
 {::nomarkdown}
 <%= code_start %>
@@ -598,9 +598,9 @@ In the example below, the list with buttons is added to the carousel using JavaS
 
 ### Focus the current carousel item
 
-Whe a user selects an item through the carousel navigation it should be receive focus immediately. This allows keyboard or assistive technology users to interact with the item immediately.
+When users select items through the carousel navigation buttons, the items should receive focus immediately. This makes interaction easier for keyboard and assistive technology users.
 
-By default, `<li>` itself cannot receive focus by default. However if the `tabindex` attribute is set to `-1`, JavaScript is able to set the focus to the items.
+By default, `<li>` elements cannot receive focus. Setting the `tabindex` attribute of the element to `-1` allows it to receive focus through JavaScript.
 
 To allow users to skip multiple items using the previous and next buttons, this approach is not used there.
 
