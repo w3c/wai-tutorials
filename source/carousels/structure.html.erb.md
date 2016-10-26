@@ -12,9 +12,33 @@ wcag_techniques:
   - H48
 ---
 
-Structural markup ensures that the content of a carousel has meaning on its own, without styling and scripting, so that can be used in more diverse situations. For example, a carousel can be presented as a list of articles on a mobile device or if JavaScript fails to load.
+Use structural markup to ensure that the content of a carousel has meaning on its own. For example, a carousel can be presented as a list of articles on a mobile device or when JavaScript is disabled.
 
-## Carousel region
+## Create carousel body
+
+As a collection of content items, carousels are typically best represented as unordered list items (`<ul>` and `<li>`). Depending on the content they could also be collections of `<article>`, `<section>`, or heading items (`<h1>` to `<h6>`). Important is to ensure semantic meaning of the carousel as a whole.
+
+{::nomarkdown}
+<%= code_start %>
+{:/nomarkdown}
+
+~~~html
+    …
+  <ul>
+    <li class="slide">…</li>
+    <li class="slide">…</li>
+    <li class="slide">…</li>
+    …
+  </ul>
+~~~
+
+{::nomarkdown}
+<%= code_end %>
+{:/nomarkdown}
+
+## Declare carousel
+
+Use semantic markup to define carousels as distinct parts of your web page. For example, if the main purpose of a carousel is to navigate the website, use the HTML5 `<nav>` element. Depending on the context, `<article>`, `<complementary>`, and `<aside>` elements can also be used. At the very least, the `<section>` element should be used to declare the carousel.
 
 {::nomarkdown}
 <%= reference :start %>
@@ -26,21 +50,43 @@ For more information on regions, see the [regions tutorial](/page-structure/regi
 <%= reference :end %>
 {:/}
 
-Use semantic markup to define the carousel as a distinct part of a web page. For example, if the main purpose of a carousel is to navigate the website, use the HTML5 `<nav>` element. Depending on the role of the slider, `<article>`, `<complementary>`, and `<aside>` elements can also be used. At the very least, the `<section>` element should be used to define the carousel as generic region.
+Also label carousels according to their individual function, to make them easier to find and understand. This helps to distinguish between multiple carousels and other regions on a web page. Use a heading, `aria-label`, and/or `aria-labelledby` to provide the label.
 
 {::nomarkdown}
-<%= code_start('', 'HTML5') %>
+<%= reference %>
+{:/}
+
+For more information on labels, see the [labeling regions tutorial](/page-structure/labels.html).
+
+{::nomarkdown}
+<%= reference :end %>
+{:/}
+
+{::nomarkdown}
+<%= code_start %>
 {:/nomarkdown}
 
 ~~~html
-<section class="carousel" …>…</section>
+<section class="carousel" aria-labelledby="carouselheading">
+  <h3 id="carouselheading" class="visuallyhidden">Recent news</h3>
+  <ul>
+    <li class="slide">…</li>
+    <li class="slide">…</li>
+    <li class="slide">…</li>
+    …
+  </ul>
+</section>
 ~~~
 
 {::nomarkdown}
 <%= code_end %>
 {:/nomarkdown}
 
-In HTML4, the `<div>` element with the WAI-ARIA `role` attribute with the value `region` serves the same purpose.
+{::nomarkdown}
+<%= code_end %>
+{:/nomarkdown}
+
+Note: In HTML4, a `<div>` element with the WAI-ARIA `role` attribute with the value `region` is needed.
 
 {::nomarkdown}
 <%= code_start('', 'HTML4') %>
@@ -54,69 +100,12 @@ In HTML4, the `<div>` element with the WAI-ARIA `role` attribute with the value 
 <%= code_end %>
 {:/nomarkdown}
 
-## Carousel label
-
-{::nomarkdown}
-<%= reference %>
-{:/}
-
-For more information on labels, see the [labeling regions tutorial](/page-structure/labels.html).
-
-{::nomarkdown}
-<%= reference :end %>
-{:/}
-
-Label carousels according to their individual function to make them easier to find and understand. This helps to distinguish between multiple carousels on a web page and between other regions on the page. Use a heading, `aria-label`, and/or `aria-labelledby` to provide the label.
-
-In the following tutorial examples, a hidden heading is referenced by `aria-labelledby`:
-
-{::nomarkdown}
-<%= code_start %>
-{:/nomarkdown}
-
-~~~html
-<section class="carousel" aria-labelledby="carouselheading">
-  <h3 id="carouselheading" class="visuallyhidden">Recent news</h3>
-    …
-</section>
-~~~
-
-{::nomarkdown}
-<%= code_end %>
-{:/nomarkdown}
-
-## Carousel body
-
-A carousel is a collection of content items where only one item is displayed at a time. The markup is for such a collection is usually a (unordered) list (`<ul>`), with list items (`<li>`) enclosing the content of each individual slide.
-
-{::nomarkdown}
-<%= code_start %>
-{:/nomarkdown}
-
-~~~html
-<div class="carousel" …>
-  …
-  <ul>
-    <li class="slide">…</li>
-    <li class="slide">…</li>
-    <li class="slide">…</li>
-    …
-  </ul>
-</div>
-~~~
-
-{::nomarkdown}
-<%= code_end %>
-{:/nomarkdown}
-
 ## Item content
 
-Carousel items can consist of simple content or more complex content. For a simple image slider, using a sole `<img>` element can be the right choice. In other instances each carousel item represents a complete article, a section of a web page or even a section of the whole website.
-
-Use the same markup for content in the carousel as would be used outside of an carousel. If the content can stand on its own, you may even use headings, sections, lists or even articles inside of the carousel item.
+Carousel items often consist of simple content items, sometimes just an `<img>` element. In other cases, each carousel item represents a complete article, a section of a web page or even a section of the entire website. In either case you need to use semantic markup to make each section usable on its own. This includes using headings, sections, lists, articles, and other structures as needed.
 
 {::nomarkdown}
-<%= code_start('', 'Simple Content') %>
+<%= code_start('', 'Example of Simple Content') %>
 {:/nomarkdown}
 
 ~~~html
@@ -132,7 +121,7 @@ Use the same markup for content in the carousel as would be used outside of an c
 {:/nomarkdown}
 
 {::nomarkdown}
-<%= code_start('', 'Stand alone content') %>
+<%= code_start('', 'Example of Richer Content') %>
 {:/nomarkdown}
 
 ~~~html
@@ -146,55 +135,13 @@ Use the same markup for content in the carousel as would be used outside of an c
 </li>
 ~~~
 
-
-{::nomarkdown}
-<%= code_end %>
-{:/nomarkdown}
-
-## Putting it all together
-
-For the rest of the tutorial, the following code is used as the foundations for adding styling, functionality and animations. It contains three teasers to featured content. Each teaser consists of a heading and a short paragraph with a read more link.
-
-{::nomarkdown}
-<%= code_start %>
-{:/nomarkdown}
-
-~~~html
-<section class="carousel" aria-labelledby="featured">
-  <h3 id="featured">Featured Articles:</h3>
-    <ul>
-        <li class="slide" style="background-image: url('teddy1.jpg');">
-            <h4>Space Teddy production reaches all-time high</h4>
-            <p>
-                Teddies in Space Inc. has released outstanding numbers for the last solar year.
-                <a href="…">Full Annual Report</a>
-            </p>
-        </li>
-        <li class="slide" style="background-image: url('teddy2.jpg');">
-            <h4>New Space Teddy Announced!</h4>
-            <p>
-                Space Teddy 6 wears an aluminum space suit. Sapphire glass eyes are first used universe-wide.
-                <a href="…">Everything about the new model</a>
-            </p>
-        </li>
-        <li class="slide" style="background-image: url('teddy3.jpg');">
-            <h4>Adventures of the Space Teddy</h4>
-            <p>
-                Using modern HTML5 technologies, the latest installment of our game performs great on your computer, tablet, or mobile.
-                <a href="…">Play the Game here!</a>
-            </p>
-        </li>
-    </ul>
-</section>
-~~~
-
 {::nomarkdown}
 <%= code_end %>
 {:/nomarkdown}
 
 ### Basic styling
 
-To improve the flexibility of the carousel, a progressive enhancement approach is used. Styling is applied to the carousel items so they appear as a list of teasers if no JavaScript is available.
+Apply styling on the carousel structure to make them appear as needed. Ensure that the default view (without JavaScript) is usable by itself.
 
 {::nomarkdown}
 <%= sample_start %>
