@@ -20,7 +20,7 @@ Develop carousels using progressive enhancement techniques:
 
 - **[Animations](animations.html):** Add animation and ensure users have control over these animations.
 
-See also a [Complete Example](examples/carousel.html) including the full source code.
+See also a [Complete Example](full-code.html) including the full source code.
 
 ## Why is this important?
 
