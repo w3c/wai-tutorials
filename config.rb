@@ -140,14 +140,6 @@ helpers do
     '</div>'
   end
 
-  def reference(which = :start)
-    if which == :start
-      '<aside class="reference">'
-    elsif which == :end
-      '</aside>'
-    end
-  end
-
 end
 
 set :markdown_engine, :kramdown

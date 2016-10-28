@@ -60,7 +60,59 @@ In this example, a bar chart of website visitor statistics has the short descrip
 <%= notes_end %>
 {:/nomarkdown}
 
-Among the approaches below, the first and fourth one make the information available to other programs, such as web browsers and search engines.
+Among the approaches below, the first and second one make the information available to other programs, such as web browsers and search engines.
+
+### Providing a link to the long description via `longdesc`
+{:.ap}
+
+<aside class="annotation">
+  <h4 class="annotation-header"><span class="subhead">Accessibility Support:</span> <code>Longdesc</code>, Web Browsers, and Assistive Technologies</h4>
+  <div class="annotation-content">
+    <p>In Firefox, long descriptions linked by <code>longdesc</code> are available to all users through “View description” in the image’s context menu. There is an <a href="https://chrome.google.com/webstore/detail/long-descriptions-in-cont/ohbmencljkleiedahijfkagnmmhbilgp">official Chrome Extension</a> that adds long description access in a similar way. Safari has no support for <code>longdesc</code>. In other web browsers, <code>longdesc</code> is currently available only to screen reader users. Mobile platforms currently do not support <code>longdesc</code>.</p>
+    <p>No browser indicates the presence of the <code>longdesc</code> attribute visually.</p>
+  </div>
+</aside>
+
+The `longdesc` attribute can contain the URI of a separate web page that provides the long description for an image or a fragment identifier that refers to an element on the same page that provides the long description.
+
+When the `longdesc` attributes contains a URI to refer to another web page with the long description, it is recommended to also apply [Approach 3 (a text link to the long description adjacent to the image)](#a-text-link-to-the-long-description-adjacent-to-the-image). This is a work-around for web browsers and assistive technologies that don’t fully support the `longdesc` attribute.
+
+{::nomarkdown}
+<%= code_start %>
+{:/nomarkdown}
+
+~~~ html
+<img
+	src="chart.png"
+	alt="Bar chart showing monthly and total visitors for the first quarter 2014 for sites 1 to 3"
+	longdesc="2014-first-qtr.html">
+<a href="2014-first-qtr.html">Long Description</a>
+~~~
+
+{::nomarkdown}
+<%= code_end %>
+{:/nomarkdown}
+
+When the `longdesc` attribute contains a fragment identifier (`#` followed by the `id` of an element on the same web page - a “hash link”), it refers to an element on the same web page that provides the long description. It addresses a similar use case as [Example 2, Approach 1](#structurally-associating-image-and-long-description-with-aria-describedby), though the support by web browsers and assistive technologies may vary. An additional link (by applying [Approach 2](#a-text-link-to-the-long-description-adjacent-to-the-image)) is not needed when the long description is in close proximity to the image.
+
+{::nomarkdown}
+<%= code_start %>
+{:/nomarkdown}
+
+~~~ html
+<img
+	src="chart.png"
+	alt="Bar chart showing monthly and total visitors for the first quarter 2014 for sites 1 to 3"
+	longdesc="#chart-longdesc">
+[…]
+<div id="chart-longdesc">
+	[…]
+</div>
+~~~
+
+{::nomarkdown}
+<%= code_end %>
+{:/nomarkdown}
 
 ### A text link to the long description adjacent to the image
 {:.ap}
@@ -161,58 +213,6 @@ The HTML5 `<figure>` element can be used to enclose both the image and its long 
 <%= code_end %>
 {:/nomarkdown}
 
-### Providing a link to the long description via `longdesc`
-{:.ap}
-
-<aside class="annotation">
-  <h4 class="annotation-header"><span class="subhead">Accessibility Support:</span> <code>Longdesc</code>, Web Browsers, and Assistive Technologies</h4>
-  <div class="annotation-content">
-    <p>In Firefox, long descriptions linked by <code>longdesc</code> are available through “View description” in the image’s context menu. There is an <a href="https://chrome.google.com/webstore/detail/long-descriptions-in-cont/ohbmencljkleiedahijfkagnmmhbilgp">official Chrome Extension</a> that adds long description access in a similar way. Safari has no support for <code>longdesc</code>. In other web browsers, <code>longdesc</code> is currently available only to screen reader users. Mobile platforms currently do not support <code>longdesc</code>.</p>
-    <p>No browser indicates the presence of the <code>longdesc</code> attribute visually, other than through the image context menus as noted above.</p>
-  </div>
-</aside>
-
-The `longdesc` attribute can contain the URI of a separate web page that provides the long description for an image or a fragment identifier that refers to an element on the same page that provides the long description.
-
-When the `longdesc` attributes contains a URI to refer to another web page with the long description, it is recommended to also apply [Approach 3 (a text link to the long description adjacent to the image)](#a-text-link-to-the-long-description-adjacent-to-the-image). This is a work-around for web browsers and assistive technologies that don’t fully support the `longdesc` attribute.
-
-{::nomarkdown}
-<%= code_start %>
-{:/nomarkdown}
-
-~~~ html
-<img
-	src="chart.png"
-	alt="Bar chart showing monthly and total visitors for the first quarter 2014 for sites 1 to 3"
-	longdesc="2014-first-qtr.html">
-<a href="2014-first-qtr.html">Long Description</a>
-~~~
-
-{::nomarkdown}
-<%= code_end %>
-{:/nomarkdown}
-
-When the `longdesc` attribute contains a fragment identifier (`#` followed by the `id` of an element on the same web page - a “hash link”), it refers to an element on the same web page that provides the long description. It addresses a similar use case as [Example 2, Approach 1](#structurally-associating-image-and-long-description-with-aria-describedby), though the support by web browsers and assistive technologies may vary. An additional link (by applying [Approach 2](#a-text-link-to-the-long-description-adjacent-to-the-image)) is not needed when the long description is in close proximity to the image.
-
-{::nomarkdown}
-<%= code_start %>
-{:/nomarkdown}
-
-~~~ html
-<img
-	src="chart.png"
-	alt="Bar chart showing monthly and total visitors for the first quarter 2014 for sites 1 to 3"
-	longdesc="#chart-longdesc">
-[…]
-<div id="chart-longdesc">
-	[…]
-</div>
-~~~
-
-{::nomarkdown}
-<%= code_end %>
-{:/nomarkdown}
-
 ## Description containing textual information
 {:.ex}
 
@@ -225,7 +225,7 @@ In this example, the head of the peacock is described using a paragraph of text 
 {::nomarkdown}
 <%= sample_start %>
 
-<img src="../../img/peafowl.jpg" alt="Male peacock head" aria-describedby="description">
+<img src="../../img/peafowl.jpg" alt="Neck of a male peacock" aria-describedby="description">
 <p id="description">
   The male is metallic blue on the crown, the feathers of the head being short and curled. The fan-shaped crest on the head is made of feathers with bare black shafts and tipped with blush-green webbing. A white stripe above the eye and a crescent shaped white patch below the eye are formed by bare white skin. The sides of the head have iridescent greenish blue feathers. The back has scaly bronze-green feathers with black and copper markings.
 </p>
@@ -239,7 +239,7 @@ In this example, the head of the peacock is described using a paragraph of text 
 
 ~~~ html
 <img src="peacock.jpg"
-     alt="Male peacock head"
+     alt="Neck of a male peacock"
      aria-describedby="description">
 […]
 <p id="description">

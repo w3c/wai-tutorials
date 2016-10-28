@@ -1,7 +1,7 @@
 ---
 title: Styling
 status: draft
-order: 6
+order: 5
 wcag_success_criteria:
   - 1.4.4
 wcag_techniques:

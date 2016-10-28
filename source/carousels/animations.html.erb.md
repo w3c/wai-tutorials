@@ -10,10 +10,10 @@ Carousels typically rotate the displayed items periodically. Provide users with 
 
 ## Play/Stop button
 
-Provide a button to allow users to stop and resume the animations. The example below illustrates how such a button can be marked-up. The button label and its function changes, depending on whether the animation is currently running or not.
+One common approach to control carousel animations is to provide a button to allow users to stop and resume the animations. The example below illustrates how such a button can be marked-up. The button label and its function change, depending on whether the animation is currently on or off:
 
 {::nomarkdown}
-<%= code_start('','While animation is running') %>
+<%= code_start %>
 {:/nomarkdown}
 
 ~~~html
@@ -25,7 +25,7 @@ Provide a button to allow users to stop and resume the animations. The example b
 {:/nomarkdown}
 
 {::nomarkdown}
-<%= code_start('','While animation is stopped') %>
+<%= code_start %>
 {:/nomarkdown}
 
 ~~~html
@@ -40,7 +40,7 @@ Provide a button to allow users to stop and resume the animations. The example b
 <%= notes_start %>
 {:/nomarkdown}
 
-**Note:** The script only replaces the value of the button and its attributes.Replace the button entirely would result in a lost keyboard focus.
+**Note:** The script only replaces the value of the button and its attributes, rather than to replace the button entirely. If the button is removed, the focus would be lost for keyboard users.
 
 {::nomarkdown}
 <%= notes_end %>
@@ -48,7 +48,7 @@ Provide a button to allow users to stop and resume the animations. The example b
 
 ## Pause on hover and focus
 
-Another useful approach is to pause the carousel animation when the carousel receives keyboard focus or is hovered over by mouse. Pausing the animation ensures that keyboard users do not lose focus. It is also useful for people who need more time to read the content and to direct the mouse cursor to a link or control inside the carousel item.
+Another useful approach is to pause the carousel animation when the carousel receives focus by keyboard or is hovered over by mouse. Pausing the animation ensures that keyboard users do not lose focus. It is also useful for people who need more time to read the content and to direct the mouse cursor to a link or control inside the carousel item.
 
 {::nomarkdown}
 <%= code_start %>
@@ -92,7 +92,7 @@ carousel.addEventListener('focusout',
 
 While the slides that leave the viewport are visible during transition, they should not be available to assistive technologies, as this can lead to confusion. The `aria-hidden` attribute ensures that those items don’t interfere with assistive technologies. 
 
-The following example shows how to approach this: After determining what the new order of slides is, depending on the slide direction, the next or the previous slide gets an `in-transition` class, which makes the item visible. It also sets `aria-hidden` to `true`. The `aria-hidden` attribute is then removed from the new current menu item.
+The following example shows how to approach this: After determining what the new order of slides is, depending on the slide direction, the next or the previous slide gets an `in-transition` class, which makes the item visible. It also is set to `aria-hidden`. The `aria-hidden` attribute is then removed from the new current menu item.
 
 {::nomarkdown}
 <%= code_start('', 'JavaScript: In initialization') %>
@@ -115,7 +115,8 @@ slides[new_current].removeAttribute('aria-hidden');
 <%= code_end %>
 {:/nomarkdown}
 
-## Putting it all together
+
+## Finalized carousel
 
 The sample below is a demo of the final carousel that is built by putting together all examples of this tutorial:
 
