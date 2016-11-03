@@ -133,6 +133,17 @@ Horizontal menus should be positioned near the top of the screen so they are eas
 While in-text links usually need an underline to help people with low vision or color blindness distinguish them from the surrounding text, this is not needed for links in menus if the menu can be clearly identified as such. If icons or images are used in links, an appropriate alternative text should be provided. See [Images Tutorial](/images/functional.html) for more detailed advice.
 
 ## Menu feedback
+{:.risky}
+
+{::nomarkdown}
+<%= editors_note_start %>
+{:/nomarkdown}
+
+This section needs to be condensed. Also we should talk about [Issue 354](https://github.com/w3c/wai-tutorials/issue/354), the use of `aria-current`.
+
+{::nomarkdown}
+<%= editors_note_end %>
+{:/nomarkdown}
 
 When using the menu, users need feedback mechanisms to operate it properly. Interacting with the menu should change the items visually when they are hovered or focused. Also, indicating the active item (the menu item that was just clicked, tapped, or activated using the keyboard) helps users to understand which item was activated. The current page should also be clearly marked to give users a sense of where they are in the website structure.
 
