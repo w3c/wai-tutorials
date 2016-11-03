@@ -6,6 +6,16 @@ order: 5
 wcag_techniques:
 ---
 
+{::nomarkdown}
+<%= editors_note_start %>
+{:/nomarkdown}
+
+Consider adding a separator, and submenus. See discussion in Issues [353](https://github.com/w3c/wai-tutorials/issue/353) and [352](https://github.com/w3c/wai-tutorials/issue/352).
+
+{::nomarkdown}
+<%= editors_note_end %>
+{:/nomarkdown}
+
 Web application menus use the same basic structure as navigation menus: They often consist of a horizontal menu bar and use fly-out functionality. 
 
 Some additional WAI-ARIA roles help users with assistive technology to operate those menus in a way that is similar to the way they use menus in desktop software. When using those roles, the keyboard interaction should be similar to desktop software as well: the tab key is used to iterate through the top-level items only, the up and down arrows are used to navigate the sub menus. 
