@@ -760,7 +760,11 @@ a {
 
 .todo {
 	@extend %noting;
+  font-size: .8em;
 	background-color: lighten(#f00, 40%);
+  > .figcontent {
+    padding: 0 !important;
+  }
 	&:after {
 		content: "TODO";
 		color: #fff;
