@@ -22,44 +22,42 @@ In addition to the `aria-expanded` and `aria-haspopup` attributes, the following
 {::nomarkdown}
 <%= sample_start('show-overflow2') %>
 
-<div role="menubar">
-	<ul role="menu" aria-label="functions" id="appmenu">
-			<li role="menuitem" aria-haspopup="true">
-				File
-				<ul role="menu">
-							<li role="menuitem">New</li>
-							<li role="menuitem">Open</li>
-							<li role="menuitem">Print</li>
-					</ul>
-			</li>
-			<li role="menuitem" aria-haspopup="true">
-				Edit
-				<ul role="menu">
-							<li role="menuitem">Undo</li>
-							<li role="menuitem">Redo</li>
-							<li role="menuitem">Cut</li>
-							<li role="menuitem">Copy</li>
-							<li role="menuitem">Paste</li>
-					</ul>
-			</li>
-			<li role="menuitem" aria-haspopup="true">
-					Format
-					<ul role="menu">
-							<li role="menuitem">Font</li>
-							<li role="menuitem">Text</li>
-					</ul>
-			</li>
-			<li role="menuitem" aria-haspopup="true">
-				View
-				<ul role="menu">
-					<li role="menuitem">100%</li>
-					<li role="menuitem">Zoom In</li>
-					<li role="menuitem">Zoom Out</li>
+<ul role="menubar" aria-label="functions" id="appmenu">
+		<li role="menuitem" aria-haspopup="true">
+			File
+			<ul role="menu">
+						<li role="menuitem">New</li>
+						<li role="menuitem">Open</li>
+						<li role="menuitem">Print</li>
 				</ul>
-			</li>
-			<li role="menuitem">Help</li>
-	</ul>
-</div>
+		</li>
+		<li role="menuitem" aria-haspopup="true">
+			Edit
+			<ul role="menu">
+						<li role="menuitem">Undo</li>
+						<li role="menuitem">Redo</li>
+						<li role="menuitem">Cut</li>
+						<li role="menuitem">Copy</li>
+						<li role="menuitem">Paste</li>
+				</ul>
+		</li>
+		<li role="menuitem" aria-haspopup="true">
+				Format
+				<ul role="menu">
+						<li role="menuitem">Font</li>
+						<li role="menuitem">Text</li>
+				</ul>
+		</li>
+		<li role="menuitem" aria-haspopup="true">
+			View
+			<ul role="menu">
+				<li role="menuitem">100%</li>
+				<li role="menuitem">Zoom In</li>
+				<li role="menuitem">Zoom Out</li>
+			</ul>
+		</li>
+		<li role="menuitem">Help</li>
+</ul>
 
 <style>
 .show-overflow2 {
@@ -277,19 +275,17 @@ The markup has no links at all: It is a nested list with WAI-ARIA roles as the a
 {:/nomarkdown}
 
 ~~~html
-<div role="menubar">
-	<ul role="menu" aria-label="functions" id="appmenu">
-		<li role="menuitem" aria-haspopup="true">
-			File
-			<ul role="menu">
-				<li role="menuitem">New</li>
-				<li role="menuitem">Open</li>
-				<li role="menuitem">Print</li>
-			</ul>
-		</li>
-		…
-	</ul>
-</div>
+<ul role="menubar" aria-label="functions" id="appmenu">
+	<li role="menuitem" aria-haspopup="true">
+		File
+		<ul role="menu">
+			<li role="menuitem">New</li>
+			<li role="menuitem">Open</li>
+			<li role="menuitem">Print</li>
+		</ul>
+	</li>
+	…
+</ul>
 ~~~
 
 {::nomarkdown}
