@@ -123,6 +123,24 @@ ul {
 	}
 }
 
+.risky {
+  &:after {
+    @extend .font-secondary;
+    background-color: #930;
+    color: #fff;
+    font-weight: normal;
+    border-radius: 100%;
+    width: 1.2em;
+    height: 1.2em;
+    margin-left: .6em;
+    line-height: 1.2;
+    text-align: center;
+    display: inline-block;
+    content: "!";
+  }
+}
+
+
 .no-js {
 	.ex {
 		counter-increment: examples;
@@ -743,7 +761,11 @@ a {
 
 .todo {
 	@extend %noting;
-	background-color: lighten(#f00, 40%);
+	font-size: .8em;
+  background-color: lighten(#f00, 40%);
+  > .figcontent {
+    padding: 0 !important;
+  }
 	&:after {
 		content: "TODO";
 		color: #fff;
