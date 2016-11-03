@@ -11,6 +11,8 @@ wcag_success_criteria:
 
 Provide functionality to display the carousel items one at a time, and to announce the changes that occur in display.
 
+{::comment}
+
 ## Position slides
 
 If the JavaScript is enabled, a class `active` is added to the carousel region so we can apply specific CSS when JavaScript is active. The slides are positioned inside the carousel using `position: absolute`. A class `current` is added to the current slide, CSS positions it frontmost, using `z-index`.
@@ -152,11 +154,13 @@ The outcome looks like this:
 <%= sample_end %>
 {:/nomarkdown}
 
-## Add previous and next buttons
+{:/comment}
 
-Use `<button>` elements to allow users to manually switch back and forth between items. These can be individually styled as needed, but provide semantic meaning to support assistive technology and keyboard use.
+## Previous and next buttons
 
-In the example below, JavaScript is used to generate buttons and add them to the carousel. Visually the buttons appear as arrows overlaying the individual items.
+Use `<button>` elements to allow users to switch back and forth between items. Such elements provide semantic meaning to support assistive technologies and consistent keyboard use out of the box. They can be individually styled as needed.
+
+Generate the buttons with JavaScript to avoid having useless buttons in the HTML code when JavaScript is unavailable, and add them to the carousel:
 
 {::nomarkdown}
 <%= code_start('', 'JavaScript') %>
@@ -191,6 +195,8 @@ carousel.appendChild(ctrls);
 {::nomarkdown}
 <%= code_end %>
 {:/nomarkdown}
+
+Visually the buttons appear as arrows overlaying the individual items.
 
 {::nomarkdown}
 <%= code_start('', 'CSS') %>
