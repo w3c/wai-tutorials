@@ -14,7 +14,7 @@ Some websites use fly-out menus to allow users to access additional pages furthe
 Users need to be aware which menu items have a submenu and which don’t. In the following example, only the “SpaceBears” item has one. An arrow icon is shown to inform visual users about the submenu, but for other uses, like assistive technologies, the following ARIA attributes provide the information programatically:
 
 * `aria-haspopup="true"` prompts assistive technologies to give the information that a submenu is present to the user
-* `aria-expanded` holds the status of the submenu: it is initially set to `false` to indicate that the submenu is not visible
+* `aria-expanded` conveys the state of the submenu: It is initially set to “false” as the submenu is not visible.
 
 {::nomarkdown}
 <%= sample_start('show-overflow') %>
