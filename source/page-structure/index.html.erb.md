@@ -29,4 +29,5 @@ A good page structure makes prioritizing and identifying content easier for ever
 * **People using software that only shows the main content** of a web page, such as people with cognitive disabilities, will receive better results if the page structure is correctly marked up.
 * **Mobile web users** often have access to a so-called “reader” or “reading” mode that will only show the main content of the page if it is correctly marked up.
 * **People using certain browser plugins** can use landmark roles to jump to specific sections on a page.
-* **Search engines** are able to distinguish between main content and other sections of the page. They could also identify the navigation and show links to sub pages directly on the search results page.
+
+There are additional benefits to a good, accessible page structure, beyond those experienced by people with disabilities. As an example, search engines can use the data to make better predictions on the real content of a web page.
