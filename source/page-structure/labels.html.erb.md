@@ -76,3 +76,15 @@ Use the WAI-ARIA `aria-labelledby` attribute to assign an existing element – l
 {::nomarkdown}
 <%= code_end %>
 {:/nomarkdown}
+
+## Related WCAG 2.0 resources
+{:.risky}
+{::nomarkdown}
+<%= editors_note_start %>
+{:/nomarkdown}
+
+Currently missing.
+
+{::nomarkdown}
+<%= editors_note_end %>
+{:/nomarkdown}
