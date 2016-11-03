@@ -1,7 +1,7 @@
 ---
 title: Menu Structure
 nav_title: Structure
-status: draft
+status: editors-draft
 order: 2
 wcag_success_criteria:
   - 4.1.2
@@ -10,93 +10,21 @@ wcag_techniques:
   - ARIA11
 ---
 
-Semantic markup of menu structures makes them adaptable to different situations, such as displaying on small screens, zooming, and interaction with assistive technologies.
+Semantic markup conveys the structure of the menu to users. It also makes the menu adaptable when used in different situations such as small screen display, zoomed in, and used with assistive technologies.
 
-## Menu region
-
-{::nomarkdown}
-<%= reference :start %>
-{:/}
-
-For more information on regions, see the [regions tutorial](/page-structure/regions.html).
-
-{::nomarkdown}
-<%= reference :end %>
-{:/}
-
-
-Provide semantic markup to define the menu as a distinct part of the web page. Use the `<nav>` element in HTML5 as container for the menu to ensure that it can be located by web browsers and assistive technologies. For example, some tools allow users to directly jump to these regions through keyboard controls.
-
-{::nomarkdown}
-<%= code_start('','HTML5') %>
-{:/nomarkdown}
-
-~~~ html
-<nav>…</nav>
-~~~
-
-{::nomarkdown}
-<%= code_end %>
-{:/nomarkdown}
-
-In HTML4, use WAI-ARIA to define the menu by setting the `role` attribute to the value `navigation` on the element that contains the menu; usually a `<div>`.
-
-{::nomarkdown}
-<%= code_start('','HTML4') %>
-{:/nomarkdown}
-
-~~~ html
-<div role="navigation">…</div>
-~~~
-
-{::nomarkdown}
-<%= code_end %>
-{:/nomarkdown}
-
-## Menu label
+## List of Links
 {:.newap}
 
-{::nomarkdown}
-<%= reference %>
-{:/}
-
-For more information on regions, see the [labeling regions tutorial](/page-structure/labels.html).
-
-{::nomarkdown}
-<%= reference :end %>
-{:/}
-
-Label menus according to their individual function to make them easier to find and understand. This helps to distinguish between multiple menus on a web page. Use a heading, `aria-label`, or `aria-labelledby` to provide the label.
-
-In menu tutorial examples, `aria-labelledby` with a hidden heading is used:
-
-{::nomarkdown}
-<%= code_start('','HTML') %>
-{:/nomarkdown}
-
-~~~ html
-<nav aria-labelledby="mainmenulabel">
-	<h2 id="mainmenulabel">Main Menu</h2>
-</nav>
-~~~
-
-{::nomarkdown}
-<%= code_end %>
-{:/nomarkdown}
-
-## Menu body
-{:.newap}
-
-Menus can be described as a collection of links. Use lists to convey this structure. For example, assistive technologies can then describe the menu to users by announcing the number of items it contains, or display the menu in different way, such as item by item.
+If a navigation consists of more than very few links, using a list is the most effective way to convey the menu structure to users. With this structural information assistive technologies can announce the number of items in the menu.
 
 ### Unordered list
 {:.ap}
 
-Use an unordered list (`<ul>`) when the order of the menu items is not important. In the following example, there is no dependency between the menu items. Most menus are unordered.
+If the sequence of reading the pages is not important to understand the website, an unordered list (`<ul>`) should be used. In the following example, the user is not required to read the home page before advancing to the shop or get information about the products. Most menus are unordered.
 
 {::nomarkdown}
 <%= code_start('','HTML') %>
-{:/nomarkdown}
+{:/}
 
 ~~~ html
 <ul>
@@ -111,17 +39,17 @@ Use an unordered list (`<ul>`) when the order of the menu items is not important
 
 {::nomarkdown}
 <%= code_end %>
-{:/nomarkdown}
+{:/}
 
 
 ### Ordered list
 {:.ap}
 
-Some menus imply a certain order, such as book chapters or steps through forms. In the example below, the menu links to different sections of instructions for building a space ship. It uses an ordered list to reflect the order in which these sections are organized.
+In some instances, pages need to be read in a certain sequence, for example if the menu provides access to chapters in prose or steps in a construction manual. In the example below, following the order is important to properly build the space ship.
 
 {::nomarkdown}
 <%= code_start('','HTML') %>
-{:/nomarkdown}
+{:/}
 
 ~~~ html
 <ol>
@@ -136,4 +64,66 @@ Some menus imply a certain order, such as book chapters or steps through forms. 
 
 {::nomarkdown}
 <%= code_end %>
-{:/nomarkdown}
+{:/}
+
+## Identifying the menu
+
+To identify the menu, use the `<nav>` element in HTML5. It allows users to directly jump to the menu if WAI-ARIA landmarks are supported. The `<nav>` element wraps the unordered or ordered list that contains the navigation options.
+
+{::nomarkdown}
+<%= reference :start %>
+{:/}
+
+For more information on regions, see the [regions tutorial](/page-structure/regions.html).
+
+{::nomarkdown}
+<%= reference :end %>
+{:/}
+
+{::nomarkdown}
+<%= code_start('','HTML') %>
+{:/}
+
+~~~ html
+<nav>
+	<ul>
+		…
+	</ul>
+</nav>
+~~~
+
+{::nomarkdown}
+<%= code_end %>
+{:/}
+
+## Labeling navigations
+{:.newap}
+
+
+{::nomarkdown}
+<%= reference %>
+{:/}
+
+For more information on labels, see the [labeling regions tutorial](/page-structure/labels.html).
+
+{::nomarkdown}
+<%= reference :end %>
+{:/}
+
+Label menus according to their individual function to make them easier to find and understand. This helps to distinguish between multiple menus on a web page. Use a heading, `aria-label`, or `aria-labelledby` to provide the label.
+
+In menu tutorial examples, `aria-labelledby` with a hidden heading is used:
+
+{::nomarkdown}
+<%= code_start('','HTML') %>
+{:/}
+
+~~~ html
+<nav role="navigation" aria-labelledby="mainmenulabel">
+	<h2 id="mainmenulabel" class="visuallyhidden">Main Menu</h2>
+</nav>
+~~~
+
+{::nomarkdown}
+<%= code_end %>
+{:/}
