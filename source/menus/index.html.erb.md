@@ -6,7 +6,6 @@ order: 1
 topic_order: 6
 type: intro
 wcag_success_criteria:
-  - 1.4.1
   - 2.4.3
   - 2.4.5
   - 2.4.7
@@ -27,19 +26,19 @@ wcag_techniques:
   - G183
 ---
 
-Menus are used to browse around web pages (“navigation menus”) or initiate actions inside web applications (“application menus”). They are often implemented in the form of fly-out menus. Due to their important role to operate web pages and web applications, they need to be usable in all circumstances. This tutorial covers the following topics:
+Menus are used to browse around web pages (“navigation menus”) or initiate actions inside web applications (“application menus”). Due to their important role to operate web pages and web applications, they need to be usable in all circumstances. This tutorial covers the following topics:
 
-* **[Structure](structure.html):** Mark up menus to reflect their structure and to identify them.
+* **[Structure](structure.html):** Mark up menus in a way that reflects the structure of its content and makes identification possible.
 
-* **[Styling](styling.html):** Use commonly recognized design patterns and indicate the current menu item.
+* **[Styling](styling.html):** Use commonly recognized design patterns to identify menus and indicate the state of menu items.
 
-* **[Fly-out Menus](flyout.html):** Use fly-out menus to organize menus with branching sub-items.
+* **[Fly-out Menus](flyout.html):** Implement fly-out menus to organize menus with branching sub-items.
 
-* **[Web Application Menus](application.html):** Use markup to define the functionality of menu items.
+* **[Web Application Menus](application.html):** Use markup and scripting to define the functionality and alter the behavior of menu items to mimic desktop applications.
 
 ## Why is this important?
 
-Navigation menus reflect the underlying structure of websites, individual web pages, and multi-step processes such as check-out forms. Applications menus reflect the available functionality. Both types of menus allow users to get an overview on the content and access information and functionality more easily, when menus are implemented properly.
+Navigation menus reflect the underlying structure of websites, individual web pages, and multi-step processes such as check-out forms. Applications menus contain the functionality available. Both types of menus allow users to get an overview on the content and access information and functionality more easily when implemented properly.
 
 * **Screen reader and keyboard users** benefit from keyboard interoperability and markup that allows users to operate the menus in different ways.
 
