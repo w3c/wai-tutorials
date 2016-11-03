@@ -8,7 +8,7 @@ wcag_techniques:
 
 Web application menus use the same basic structure as navigation menus: They often consist of a horizontal menu bar and use fly-out functionality. 
 
-Some additional WAI-ARIA roles help users with assistive technology to operate those menus in a way that is similar to desktop software menus. When using them, the keyboard interaction should be similar to desktop software as well: the tab key is used to iterate through the top-level items only, the up and down arrows are used to navigate the sub menus. 
+Some additional WAI-ARIA roles help users with assistive technology to operate those menus in a way that is similar to the way they use menus in desktop software. When using those roles, the keyboard interaction should be similar to desktop software as well: the tab key is used to iterate through the top-level items only, the up and down arrows are used to navigate the sub menus. 
 
 Note that the keyboard behavior is not automatically changed when adding those roles, but needs to be added using scripting. A detailed explanation on the WAI-ARIA attributes and keyboard behavior can be found in the [WAI-ARIA Authoring Practices document (draft)](http://www.w3.org/TR/wai-aria-practices/#menu).
 
@@ -269,7 +269,7 @@ Array.prototype.forEach.call(subMenuItems, function(el, i){
 <%= sample_end %>
 {:/nomarkdown}
 
-The markup has no links at all: It is a nested list with some WAI-ARIA roles as the application would be non-functional without JavaScript available anyway. Also the example recreates the behavior of desktop application menus using scripting.
+The markup has no links at all: It is a nested list with WAI-ARIA roles as the application would be non-functional without JavaScript available anyway.
 {:#escape}
 
 {::nomarkdown}
@@ -296,7 +296,7 @@ The markup has no links at all: It is a nested list with some WAI-ARIA roles as 
 <%= code_end %>
 {:/nomarkdown}
 
-First, we collect all top-level menu items in a variable (`appsMenuItems`) as well as all submenu items (`subMenuItems`). An object is defined with the key codes of the keys that need to be handled. This makes the code much more readable. Two variables keep track of the focus in top-level items (`currentIndex`) and in submenus (`subIndex`).
+The behavior of desktop application menus is added to the menu by this JavaScript. First, we collect all top-level menu items in one variable (`appsMenuItems`) and all submenu items in another (`subMenuItems`). Two variables keep track of the focus in top-level items (`currentIndex`) and in submenus (`subIndex`).
 
 {::nomarkdown}
 <%= code_start %>
@@ -349,7 +349,7 @@ Array.prototype.forEach.call(subMenuItems, function(el, i){
 <%= code_end %>
 {:/nomarkdown}
 
-All top-level menu items close open submenus when they receive focus and reset the `subIndex` variable. When individual items are clicked, the visibility of the submenu is toggled by changing the `aria-expanded` value. If a key is pressed, the appropriate action is carried out.
+All top-level menu items open their submenus when they receive focus and reset the `subIndex` variable. When individual items are clicked, the visibility of the submenu is toggled by changing the `aria-expanded` value. If a key is pressed, the appropriate action is carried out. See the following table for more details on the behavior of top-level menu items:
 
 <table>
 	<caption>Key mapping for top-level menu items</caption>
