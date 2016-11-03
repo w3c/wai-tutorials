@@ -17,25 +17,26 @@ wcag_techniques:
   - H42
 ---
 
-Headings communicate the way the information on the page is structured, organized and presented. Various user devices, including many assistive technologies, provide users with ways to navigate through page content using headings. They also provide visual cues that help to skim the page or find a specific section.
+Headings communicate the way the information on the page is organized. Web browsers, plug-ins, and assistive technologies provide mechanisms for users to navigate through web pages using headings. They also provide visual cues to help people skim web pages and find specific sections.
 
 ## Heading levels
 
-Best practice is to nest headings properly. When stepping down through headings, avoid skipping levels. That means that an `<h1>` is followed by an `<h1>` or `<h2>`, an `<h2>` is followed by a `<h2>` or `<h3>` etc. When stepping up through headings it is perfectly legitimate to skip any number of levels, for example a `<h1>` can follow a `<h3>`.
+Best practice is to nest headings properly. When stepping down through headings, avoid skipping levels. That means that an `<h1>` is followed by an `<h1>` or `<h2>`, an `<h2>` is followed by an `<h2>` or `<h3>`, and so forth. When stepping up through headings it is perfectly legitimate to skip any number of levels, for example an `<h1>` can follow an `<h3>`.
 
 {::nomarkdown}
 <%=notes_start%>
 {:/nomarkdown}
 
-**Note:** HTML5 has introduced [an outline algorithm](http://www.w3.org/TR/html5/sections.html#headings-and-sections) that assigns heading levels based on how deep sectioning elements are nested inside each other, regardless of the actual heading level. At the time of writing, this is not supported by any browser or assistive technology and **should not** be used.
+**Note:** HTML5 has introduced [an outline algorithm](http://www.w3.org/TR/html5/sections.html#headings-and-sections) that assigns heading levels based on how deep sectioning elements are nested inside each other, regardless of the actual heading level. At the time of writing, this is not supported by web browsers and assistive technologies, and **should not** be used.
 
 {::nomarkdown}
 <%=notes_end%>
 {:/nomarkdown}
 
-## Organize main page content
+### Organize main content
+{:.ex}
 
-When looking at the content, the highest available heading level should be used to mark up the heading of the main content, as this makes it easy to discover.
+In the following example, headings are used to organize the main content of the web page:
 
 {::nomarkdown}
 <%=code_start('','Showing only headings')%>
@@ -52,12 +53,13 @@ When looking at the content, the highest available heading level should be used 
 <%=code_end%>
 {:/nomarkdown}
 
-## Organize page sections
+### Organize page regions
+{:.ex}
 
-Similar to page sections, headings can be used to give users a way of navigating through web pages. To do this, add a heading to each section of the page (for example navigation), that describes what can be found in the section. Often the heading levels are similar to this example:
+In the following examples, headings are used to organize the different regions of a web page:
 
 {::nomarkdown}
-<%=code_start('','Showing only headings')%>
+<%=code_start('','Main heading appears before navigation')%>
 {:/nomarkdown}
 
 ~~~html
@@ -80,12 +82,8 @@ Similar to page sections, headings can be used to give users a way of navigating
 <%=code_end%>
 {:/nomarkdown}
 
-The first heading in such cases is usually the page name. In this case, the heading of the actual content is hard to find between headings that describe the page structure. If possible use [labeled page sections](sections.html) to mark up the page structure as these provide more meaning to assistive technologies.
-
-In some situations it is valid to not start with a heading level 1, for example if there is no page name like in the example above. A possible heading structure would then look like this:
-
 {::nomarkdown}
-<%=code_start('','Showing only headings')%>
+<%=code_start('','Main heading appears after navigation')%>
 {:/nomarkdown}
 
 ~~~html
@@ -105,4 +103,14 @@ In some situations it is valid to not start with a heading level 1, for example 
 
 {::nomarkdown}
 <%=code_end%>
+{:/nomarkdown}
+
+{::nomarkdown}
+<%= notes_start %>
+{:/nomarkdown}
+
+**Note:** These examples are only outlining the headings structure. Additional markup, such as `<header>`, `<main>`, `<nav>`, and `<footer>` would appear in the full code.
+
+{::nomarkdown}
+<%= notes_end %>
 {:/nomarkdown}
