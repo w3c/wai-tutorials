@@ -1,6 +1,6 @@
 ---
 title: Styling
-status: draft
+status: editors-draft
 order: 6
 wcag_success_criteria:
   - 1.4.4
@@ -12,6 +12,16 @@ wcag_techniques:
   - C28
   - G179
 ---
+
+{::nomarkdown}
+<%= editors_note_start %>
+{:/nomarkdown}
+
+Needs to be serverly condensed. Also: This part of the tutorial feels not right here, maybe move it in a more design-oriented tutorial?
+
+{::nomarkdown}
+<%= editors_note_end %>
+{:/nomarkdown}
 
 For some people, the visual look and readability of the web page is crucial to understand the content as web pages with many components can distract from the main content or purpose of the page. Visual cues, like a distinct main headline, can will help users to orient around the page. Key sections of the page can be separated from other content using background colors or borders. Navigation sections can be easier to find if they have a distinctive look.
 
