@@ -8,7 +8,7 @@ topic_order: 6
 type: intro
 ---
 
-Proper page structure makes it easier for everyone to understand the content. It also facilitates the effectiveness of users that use assistive technology or other alternative devices. This tutorial shows how to use HTML and WAI-ARIA to improve navigation and orientation on web pages and applications. 
+A good page structure makes it easier for everyone to understand the content and also facilitates the effectiveness of users that use assistive technology. Use HTML and WAI-ARIA to improve navigation and orientation on web pages and in applications. 
 
 * **[Page Regions](regions.html):** Identify and mark up regions on web pages using HTML5 and WAI-ARIA roles.
 
