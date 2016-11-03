@@ -12,13 +12,13 @@ wcag_techniques:
   - G183
 ---
 
-There are no definitive rules on how a menu should look like, but a few design patterns have emerged on how and where menus appear on the page, especially for main navigation menus.
+With a consistent styling users are able to find menus more easily. There are two basic design patterns that are commonly used on web sites: vertical and horizontal menus.
 
-While in-text links usually need an underline to help people with low vision or color blindness distinguish them from the surrounding text, this is not needed for links in menus if the menu can be clearly identified as such. If icons or images are used in links, an appropriate alternative text should be provided. See [Images Tutorial](/images/functional.html) for more advice.
+Regardless of the orientation, each menu item should have enough space so it doesn’t overlap other content on the page or gets cut off. Such items are a potential accessibility barrier, especially for users increasing the font size and can also be a problem when translating the menu into another language. Try to avoid line breaks or hyphenation in menu items as they are harder to understand.
 
-## Vertical Menu
+## Vertical menu
 
-A vertical menu provides space for a lot of links as all items can be easily reached by scrolling the page. Using them in narrow columns on the side of the page may cause longer words to overlap into the main content or getting cut off. This is a potential accessibility barrier, especially for users increasing the font size. It can also be a problem when translating the menu into another language.
+Ensure that the menu column is wide enough to accommodate all current and future menu items.
 
 {::nomarkdown}
 <%= sample_start %>
@@ -73,7 +73,7 @@ A vertical menu provides space for a lot of links as all items can be easily rea
 
 ## Horizontal menu
 
-If a menu has so few items that they can fit in one line on the screen, a horizontal menu bar can be used. They are usually positioned near the top of the page. While this is a compact way to display a menu, horizontal space can be limited on small-screen devices or when the font size is increased. In such cases CSS media queries can help to transform a horizontal into a vertical menu.
+Horizontal menus should be positioned near the top of the screen so they are easier to find.
 
 {::nomarkdown}
 <%= sample_start %>
@@ -128,19 +128,25 @@ If a menu has so few items that they can fit in one line on the screen, a horizo
 <%= sample_end %>
 {:/nomarkdown}
 
-## Hover and focus states
+## Styling menu items
 
-When the user focuses a menu item or hovers over one using the mouse pointer, the individual menu item should change so users know where the focus is or which menu item is hovered. In the examples in this tutorial, the menu item is inverted and the words are underlined. Another possibility is to change the shape of the menu item, for example by introducing a bullet or an arrow while the menu item is hovered or focused. Both states should not be indicated using color alone as that may not be perceivable for some users.
+While in-text links usually need an underline to help people with low vision or color blindness distinguish them from the surrounding text, this is not needed for links in menus if the menu can be clearly identified as such. If icons or images are used in links, an appropriate alternative text should be provided. See [Images Tutorial](/images/functional.html) for more detailed advice.
 
-## Active items
+## Menu feedback
 
-The active state indicates a menu item that has just been activated by click, tap, or by using the keyboard. This helps users to spot if they have activated the wrong link before the new page has finished loading. The styling usually indicates a pressed state.
+When using the menu, users need feedback mechanisms to operate it properly. Interacting with the menu should change the items visually when they are hovered or focused. Also, indicating the active item (the menu item that was just clicked, tapped, or activated using the keyboard) helps users to understand which item was activated. The current page should also be clearly marked to give users a sense of where they are in the website structure.
 
-## Indicating the current page
+Apart from changing the color, another means of changing the menu item should be used by adding an underline or a border, or by changing the shape of an icon in the menu.
 
-The current page should be clearly marked to give users a sense of where they are in the site’s structure. This needs to be done in a way that does not rely on color alone. For example in these tutorials an inverted box and a small arrow are used to point out the current page. In most cases, the current page item should not be a link to the current page.
+In this menu tutorial, feedback is given through the following means:
 
-In the following example, the active menu item is not only marked using different colors but also by adding a border to the bottom of the menu item. A visually hidden text “Current Page:” indicates the current page for screen readers and other assistive technologies.
+* **Hover and focus** states are indicated by using an inverted color scheme (blue on white instead of white on blue) and by underlining the items.
+
+* The **active** state is shown with a darker blue as a background and keeping the menu item underlined.
+
+* The **current page item** uses a different color scheme (black on grey) and has a bottom border that gives the item a distinct shape.
+
+  The item has also an invisible text “Current Page:” added to the menu item. Additonally the current page item is not linking to the current page.
 
 {::nomarkdown}
 <%= sample_start %>
@@ -231,6 +237,18 @@ nav .current {
 	background-color: #bbb;
 	color: #000;
 	border-bottom: .25em solid #444;
+}
+
+nav a:hover,
+nav a:focus {
+	color: #036;
+	background-color: #fff;
+	text-decoration: underline;
+}
+nav a:active {
+	color: #fff;
+	background-color: #024;
+	text-decoration: underline;
 }
 ~~~
 
