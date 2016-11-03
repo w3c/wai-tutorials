@@ -22,7 +22,7 @@ In addition to the `aria-expanded` and `aria-haspopup` attributes, the following
 {::nomarkdown}
 <%= sample_start('show-overflow2') %>
 
-<ul role="menubar" aria-label="functions" id="appmenu">
+<ul role="menubar" id="appmenu">
 		<li role="menuitem" aria-haspopup="true">
 			File
 			<ul role="menu">
@@ -275,7 +275,7 @@ The markup has no links at all: It is a nested list with WAI-ARIA roles as the a
 {:/nomarkdown}
 
 ~~~html
-<ul role="menubar" aria-label="functions" id="appmenu">
+<ul role="menubar" id="appmenu">
 	<li role="menuitem" aria-haspopup="true">
 		File
 		<ul role="menu">
