@@ -26,7 +26,7 @@ wcag_techniques:
   - G183
 ---
 
-Menus are used to browse around web pages (“navigation menus”) or initiate actions inside web applications (“application menus”). Due to their important role to operate web pages and web applications, they need to be usable in all circumstances. This tutorial covers the following topics:
+Menus are used to browse around web pages (“navigation menus”) or initiate actions inside web applications (“application menus”). Due to their important role to operate web pages and applications, they need to be usable in all circumstances. This tutorial covers the following topics:
 
 * **[Structure](structure.html):** Mark up menus in a way that reflects the structure of its content and makes identification possible.
 
