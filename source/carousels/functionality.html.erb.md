@@ -179,12 +179,12 @@ var ctrls = document.createElement('ul');
 ctrls.className = 'controls';
 ctrls.innerHTML = '<li>' +
     '<button type="button" class="btn-prev">' +
-      '<img src="img/chevron-left.png" alt="Previous Slide">' +
+      '<img src="img/chevron-left.png" alt="Previous Item">' +
     '</button>' +
   '</li>' +
   '<li>' +
     '<button type="button" class="btn-next">' +
-      '<img src="img/chevron-right.png" alt="Next Slide">' +
+      '<img src="img/chevron-right.png" alt="Next Item">' +
     '</button>' +
   '</li>';
 
@@ -243,9 +243,9 @@ Visually the buttons appear as arrows overlaying the individual items.
 <%= code_end %>
 {:/nomarkdown}
 
-## Announce the current slide
+## Announce the current item
 
-When the current item changes, a WAI-ARIA live region informs screen reader users which slide is currently visible. Note that the current slide does not automatically receive keyboard focus, to allow users to skip over and leave the carousel.
+When the current item changes, a WAI-ARIA live region informs screen reader users which item is currently visible. Note that the current item does not automatically receive keyboard focus, to allow users to skip over and leave the carousel.
 
 {::nomarkdown}
 <%= code_start('', 'Extend event listeners') %>
@@ -432,10 +432,10 @@ Combined, the carousel looks and functions like this:
 
   ctrls.className = 'controls';
   ctrls.innerHTML = '<li>' +
-      '<button type="button" class="btn-prev"><img src="/img/chevron-left.png" alt="Previous Slide"></button>' +
+      '<button type="button" class="btn-prev"><img src="/img/chevron-left.png" alt="Previous Item"></button>' +
     '</li>' +
     '<li>' +
-      '<button type="button" class="btn-next"><img src="/img/chevron-right.png" alt="Next Slide"></button>' +
+      '<button type="button" class="btn-next"><img src="/img/chevron-right.png" alt="Next Item"></button>' +
     '</li>';
 
     ctrls.querySelector('.btn-prev').addEventListener('click', function(){
