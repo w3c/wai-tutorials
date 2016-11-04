@@ -89,8 +89,18 @@ carousel.addEventListener('focusout',
 {:/nomarkdown}
 
 ## Hiding in-transition elements from assistive technologies
+{:.risky}
 
-While items leave the viewport, they are visible during the transition. However, they should not be available to assistive technologies during this period to avoid confusion. The `aria-hidden` attribute ensures that those items don’t interfere with assistive technologies. 
+{::nomarkdown}
+<%= editors_note_start %>
+{:/nomarkdown}
+
+This section, or parts of it, might move to a “carousel styling” page in the future.
+
+{::nomarkdown}
+<%= editors_note_end %>
+{:/nomarkdown}
+
 
 The following example shows how to approach this: After determining what the new order of items is, depending on the direction of item rotation, the next or the previous item gets an `in-transition` class, which makes the item visible. It also sets `aria-hidden` to `true`. The `aria-hidden` attribute is then removed from the new current carousel item.
 
@@ -116,6 +126,17 @@ slides[new_current].removeAttribute('aria-hidden');
 {:/nomarkdown}
 
 ## Putting it all together
+{:.risky}
+
+{::nomarkdown}
+<%= editors_note_start %>
+{:/nomarkdown}
+
+This section, or parts of it, might move to a “carousel styling” page in the future.
+
+{::nomarkdown}
+<%= editors_note_end %>
+{:/nomarkdown}
 
 The sample below is a demo of the final carousel that is built by putting together all examples of this tutorial:
 
