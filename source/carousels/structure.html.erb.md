@@ -89,6 +89,17 @@ While carousel items are often just images, they can also provide more complex c
 {:/nomarkdown}
 
 ### Basic styling
+{:.risky}
+
+{::nomarkdown}
+<%= editors_note_start %>
+{:/nomarkdown}
+
+Suggest moving this section to its own page, similar to the [menus tutorial](/menus/index.html).
+
+{::nomarkdown}
+<%= editors_note_end %>
+{:/nomarkdown}
 
 Apply styling on the carousel structure to make them appear as needed. Ensure that the default view (without JavaScript) is usable by itself.
 
