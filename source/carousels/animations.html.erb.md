@@ -6,9 +6,9 @@ wcag_success_criteria:
   - 2.2.2
 ---
 
-Carousels typically rotate the displayed items periodically. Provide users with control over any animations in your carousel. Stopping animation is essential for people who find the changes distracting and for people who need more time to read carousel items.
+Provide users with control over the animations in your carousel. Pausing animation is essential for people who find the changes distracting and for people who need more time to read carousel items.
 
-## Play/Stop button
+## Add Play/Stop button
 
 Provide a button to allow users to stop and resume the animations. The example below illustrates how such a button can be marked-up. The button label and its function changes, depending on whether the animation is currently running or not.
 
@@ -40,7 +40,7 @@ Provide a button to allow users to stop and resume the animations. The example b
 <%= notes_start %>
 {:/nomarkdown}
 
-**Note:** The script only replaces the value of the button and its attributes.Replace the button entirely would result in a lost keyboard focus.
+**Note:** The script only replaces the value of the button and its attributes. Replacing the button entirely would result in loss of keyboard focus.
 
 {::nomarkdown}
 <%= notes_end %>
@@ -48,7 +48,7 @@ Provide a button to allow users to stop and resume the animations. The example b
 
 ## Pause on hover and focus
 
-Another useful approach is to pause the carousel animation when the carousel receives keyboard focus or is hovered over by mouse. Pausing the animation ensures that keyboard users do not lose focus. It is also useful for people who need more time to read the content and to direct the mouse cursor to a link or control inside the carousel item.
+Another useful approach is to pause the carousel animation when the carousel receives keyboard focus or is hovered over by mouse. Pausing the animation ensures that keyboard users do not lose focus. It is also useful for people who need more time to read the content, and to use links and controls inside the carousel items.
 
 {::nomarkdown}
 <%= code_start %>
@@ -89,10 +89,21 @@ carousel.addEventListener('focusout',
 {:/nomarkdown}
 
 ## Hiding in-transition elements from assistive technologies
+{:.risky}
 
-While the slides that leave the viewport are visible during transition, they should not be available to assistive technologies, as this can lead to confusion. The `aria-hidden` attribute ensures that those items don’t interfere with assistive technologies. 
+{::nomarkdown}
+<%= editors_note_start %>
+{:/nomarkdown}
 
-The following example shows how to approach this: After determining what the new order of slides is, depending on the slide direction, the next or the previous slide gets an `in-transition` class, which makes the item visible. It also sets `aria-hidden` to `true`. The `aria-hidden` attribute is then removed from the new current menu item.
+This section, or parts of it, might move to a “carousel styling” page in the future.
+
+{::nomarkdown}
+<%= editors_note_end %>
+{:/nomarkdown}
+
+During the transitions, both, the current and the next item are visible. This also means that two items are available to assistive technologies, with the current item disappearing in a relatively short time.
+
+This can be distracting and disorienting for users of screen readers, for example. In the following example the item that is showing up gets an `in-transition` class to show it and `aria-hidden` is set to `true`. Once the trasition has ended, the `aria-hidden` attribute is removed.
 
 {::nomarkdown}
 <%= code_start('', 'JavaScript: In initialization') %>
@@ -116,6 +127,17 @@ slides[new_current].removeAttribute('aria-hidden');
 {:/nomarkdown}
 
 ## Putting it all together
+{:.risky}
+
+{::nomarkdown}
+<%= editors_note_start %>
+{:/nomarkdown}
+
+This section, or parts of it, might move to a “carousel styling” page in the future.
+
+{::nomarkdown}
+<%= editors_note_end %>
+{:/nomarkdown}
 
 The sample below is a demo of the final carousel that is built by putting together all examples of this tutorial:
 
@@ -398,10 +420,10 @@ var myCarousel = (function() {
 
     ctrls.className = 'controls';
     ctrls.innerHTML = '<li>' +
-        '<button type="button" class="btn-prev"><%= image_tag 'chevron-left.png', :alt => "Previous Slide" %></button>' +
+        '<button type="button" class="btn-prev"><%= image_tag 'chevron-left.png', :alt => "Previous Item" %></button>' +
       '</li>' +
       '<li>' +
-        '<button type="button" class="btn-next"><%= image_tag 'chevron-right.png', :alt => "Next Slide" %>' +
+        '<button type="button" class="btn-next"><%= image_tag 'chevron-right.png', :alt => "Next Item" %>' +
       '</li>';
 
     ctrls.querySelector('.btn-prev')
@@ -438,7 +460,7 @@ var myCarousel = (function() {
         forEachElement(slides, function(el, i){
           var li = document.createElement('li');
           var klass = (i===0) ? 'class="current" ' : '';
-          var kurrent = (i===0) ? ' <span class="visuallyhidden">(Current Slide)</span>' : '';
+          var kurrent = (i===0) ? ' <span class="visuallyhidden">(Current Item)</span>' : '';
 
           li.innerHTML = '<button '+ klass +'data-slide="' + i + '"><span class="visuallyhidden">News</span> ' + (i+1) + kurrent + '</button>';
           slidenav.appendChild(li);
@@ -541,7 +563,7 @@ var myCarousel = (function() {
         buttons[j].innerHTML = '<span class="visuallyhidden">News</span> ' + (j+1);
       }
       buttons[new_current].className = "current";
-      buttons[new_current].innerHTML = '<span class="visuallyhidden">News</span> ' + (new_current+1) + ' <span class="visuallyhidden">(Current Slide)</span>';
+      buttons[new_current].innerHTML = '<span class="visuallyhidden">News</span> ' + (new_current+1) + ' <span class="visuallyhidden">(Current Item)</span>';
     }
 
     index = new_current;
