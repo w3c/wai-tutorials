@@ -12,7 +12,7 @@ wcag_success_criteria:
   - 4.1.2
 ---
 
-Develop carousels in an accessible way using best practices:
+Accessible carousels have robust structure and provide user control:
 
 - **[Structure](structure.html):** Provide structure markup for the carousel body and its items.
 
@@ -22,11 +22,21 @@ Develop carousels in an accessible way using best practices:
 
 See also a [Complete Example](full-code.html) including the full source code.
 
-Carousels allow users to select to view one item from a series of content items. Common examples are slide shows other sliders, like scrolling news headlines, images or featured articles. Carousels often move from item to item automatically, which can be too fast to read or distracting for some users.
+## What are carousels?
+
+Carousels, also known as "slide shows" and "sliders", show a collection of items one at a time. For example, scrolling news headlines and featured articles on homepages are common uses of carousels.
+
+## What are the key points?
+
+- Users must be able to pause carousel movement because it can be too fast to read or distracting.
+
+- All functionality, including navigating between carousel items, needs to be usable by keyboard.
+
+- Carousel item changes must be announced to users, and may not interfere with the current focus.
 
 ## Why is this important?
 
-Carousels should have functionality to allow users to pause movement. All functionalit needs to be usable by keyboard. Implementing them accessibly is essential for many website visitors including:
+Carousels are typically prominently located and provide important functionality. Accessible carousels are essential for many website users including:
 
 - **People using keyboard navigation and voice input software** can navigate between carousel items.
 - **People using screen readers** will understand where they are and how to navigate between carousel items.
