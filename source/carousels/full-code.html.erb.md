@@ -1,8 +1,19 @@
 ---
-title: Full Carousel Code
-source: ../index.html
-layout: fullcode
+title: Complete Carousel Example
+nav_title: Complete Example
+order: 9
+type: tips
 ---
+
+{::nomarkdown}
+<%= editors_note_start %>
+{:/nomarkdown}
+
+Insert working carousel here.
+
+{::nomarkdown}
+<%= editors_note_end %>
+{:/nomarkdown}
 
 {::nomarkdown}
 <%= code_start %>

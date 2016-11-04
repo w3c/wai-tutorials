@@ -133,7 +133,7 @@ slides[new_current].removeAttribute('aria-hidden');
 <%= editors_note_start %>
 {:/nomarkdown}
 
-This section, or parts of it, might move to a “carousel styling” page in the future.
+This section might move to a “carousel styling” page or to the [complete example](full-code.html) in the future.
 
 {::nomarkdown}
 <%= editors_note_end %>
