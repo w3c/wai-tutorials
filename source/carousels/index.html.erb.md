@@ -12,7 +12,7 @@ wcag_success_criteria:
   - 4.1.2
 ---
 
-Develop carousels using progressive enhancement techniques:
+Develop carousels in an accessible way using best practices:
 
 - **[Structure](structure.html):** Provide structure markup for the carousel body and its items.
 
@@ -22,11 +22,11 @@ Develop carousels using progressive enhancement techniques:
 
 See also a [Complete Example](full-code.html) including the full source code.
 
+Carousels allow users to select to view one item from a series of content items. Common examples are slide shows other sliders, like scrolling news headlines, images or featured articles. Carousels often move from item to item automatically, which can be too fast to read or distracting for some users.
+
 ## Why is this important?
 
-Carousels, also referred to as “slide shows” and “sliders”, display one item from a series of content items. Common examples are scrolling news headlines and images, like featured articles. Carousels often use animations to move from item to item, which can be distracting for some users. They may also move too fast for some users to be able to read.
-
-Carousels should have functionality to allow users to pause and advance animations. They also need to be implemented in a way that is usable by keyboard. Given their prominence, accessible carousels are essential for many website visitors including:
+Carousels should have functionality to allow users to pause movement. All functionalit needs to be usable by keyboard. Implementing them accessibly is essential for many website visitors including:
 
 - **People using keyboard navigation and voice input software** can navigate between carousel items.
 - **People using screen readers** will understand where they are and how to navigate between carousel items.
