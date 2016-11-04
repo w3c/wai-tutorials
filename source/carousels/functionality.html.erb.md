@@ -615,8 +615,6 @@ When users select items through the carousel navigation buttons, the items shoul
 
 By default, `<li>` elements cannot receive focus. Setting the `tabindex` attribute of the element to `-1` allows it to receive focus through JavaScript.
 
-To allow users to skip multiple items using the previous and next buttons, this approach is not used there.
-
 {::nomarkdown}
 <%= code_start('', 'JavaScript') %>
 {:/nomarkdown}
@@ -655,3 +653,5 @@ slidenav.addEventListener('click', function(event) {
 {::nomarkdown}
 <%= code_end %>
 {:/nomarkdown}
+
+Note that the focus is not set to the item when the _previous and next buttons_ are used to allow users skip multiple items.
