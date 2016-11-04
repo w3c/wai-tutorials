@@ -602,14 +602,14 @@ In the example below, the list with buttons is added to the carousel using JavaS
 
 <style>
   .slidenav.as-sample {
-    position:static;
+    position: static;
   }
 </style>
 
 <%= sample_end %>
 {:/nomarkdown}
 
-### Focus the current carousel item
+### Focus the selected carousel item
 
 When users select items through the carousel navigation buttons, the items should receive focus immediately. This makes interaction easier for keyboard and assistive technology users.
 
