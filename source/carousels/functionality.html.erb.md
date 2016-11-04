@@ -11,11 +11,20 @@ wcag_success_criteria:
 
 Provide functionality to display the carousel items one at a time, and to announce the changes that occur in display.
 
-{::comment}
+## Position items
+{:.risky}
 
-## Position slides
+{::nomarkdown}
+<%= editors_note_start %>
+{:/nomarkdown}
 
-If the JavaScript is enabled, a class `active` is added to the carousel region so we can apply specific CSS when JavaScript is active. The slides are positioned inside the carousel using `position: absolute`. A class `current` is added to the current slide, CSS positions it frontmost, using `z-index`.
+Proposal to move this section to a dedicated “carousel styling” page that can then be referenced from several parts of the other pages.
+
+{::nomarkdown}
+<%= editors_note_end %>
+{:/nomarkdown}
+
+If the JavaScript is enabled, a class `active` is added to the carousel region so we can apply specific CSS when JavaScript is active. The items are positioned inside the carousel using `position: absolute`. A class `current` is added to the current item, CSS positions it frontmost, using `z-index`.
 
 {::nomarkdown}
 <%= code_start %>
@@ -153,8 +162,6 @@ The outcome looks like this:
 {::nomarkdown}
 <%= sample_end %>
 {:/nomarkdown}
-
-{:/comment}
 
 ## Previous and next buttons
 
