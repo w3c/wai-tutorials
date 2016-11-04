@@ -88,7 +88,7 @@ While carousel items are often just images, they can also provide more complex c
 <%= code_end %>
 {:/nomarkdown}
 
-### Basic styling
+## Basic styling
 {:.risky}
 
 {::nomarkdown}
