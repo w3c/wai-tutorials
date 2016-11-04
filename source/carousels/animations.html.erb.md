@@ -101,9 +101,9 @@ This section, or parts of it, might move to a “carousel styling” page in the
 <%= editors_note_end %>
 {:/nomarkdown}
 
-During the transitions, both, the current and the next item are visible. This also means that two items are available to assistive technologies, with the current item disappearing in a relatively short time.
+During the transitions, both, the current and the next item are visible. This also means that two items are available to assistive technologies, with the current item disappearing in a relatively short time. In some cases this can be confusing to screen reader users.
 
-This can be distracting and disorienting for users of screen readers, for example. In the following example the item that is showing up gets an `in-transition` class to show it and `aria-hidden` is set to `true`. Once the trasition has ended, the `aria-hidden` attribute is removed.
+In the following example the item that is being activated gets an `in-transition` class to show it but with the `aria-hidden` attribute set to `true`. This hides the item from assitive technologies. When the trasition completes, the `aria-hidden` attribute is removed.
 
 {::nomarkdown}
 <%= code_start('', 'JavaScript: In initialization') %>
