@@ -1,6 +1,7 @@
 ---
-title: Structure
-status: approved-draft
+title: Carousel Structure
+nav_title: Structure
+status: editors-draft
 order: 2
 wcag_success_criteria:
   - 1.3.1
@@ -11,226 +12,96 @@ wcag_techniques:
   - H48
 ---
 
-Structural markup ensures that the content of a carousel has meaning on its own, without styling and scripting, so that can be used in more situations. For example, a carousel could be presented as just a list of articles on a mobile device.
+Use structural markup to ensure that the content of a carousel can be used in a variety of situations. For example, a carousel can be presented as a list of articles on a mobile device or when JavaScript isn’t available.
 
-## Carousel framework
+## Overall structure
 
-A carousel is a collection of items that are displayed one at a time. Provide a corresponding structure in the code to represent this collection of items.
+As a collection of content items, carousels are typically best represented as unordered list items, `<ul>` and `<li>`. Every carousel should be enclosed in a labeled region to allow users find the carousel more easily. In the following example a `<section>` element is used to define the region and `aria-labelledby` defines the heading that contains the label.
 
-### List of items
-{:.ap}
+{::nomarkdown}
+<%= reference :start %>
+{:/}
 
-In many situations, the carousel items are fairly brief so that a simple a list (`<ul>`) with individual list items (`<li>`) is sufficient to represent the carousel. See the example below for a demo of this approach:
+See the Page Structure Tutorial for more information on [regions](/page-structure/regions.html) and [labels](/page-structure/labels.html).
+
+{::nomarkdown}
+<%= reference :end %>
+{:/}
 
 {::nomarkdown}
 <%= code_start %>
 {:/nomarkdown}
 
 ~~~html
-<div class="carousel" ...>
-...
-    <ul>
-        <li class="slide">…</li>
-        <li class="slide">…</li>
-        <li class="slide">…</li>
-    </ul>
-</div>
-~~~
-
-{::nomarkdown}
-<%= code_end %>
-{:/nomarkdown}
-
-### Set of articles
-{:.ap}
-
-If carousel items have a lot of content, other elements can be used for the carousel framework. For example, HTML5 provides the `<article>` element, which is useful for carousels with items that are independent pieces of content. Make sure to provide headings for each article. The example below shows the use of `<article>` elements to represent a carousel.
-
-{::nomarkdown}
-<%= code_start %>
-{:/nomarkdown}
-
-~~~html
-<div class="carousel" ...>
-...
-    <article class="slide">
-      <h4>…</h4>
-      …
-    </article>
-    <article class="slide">
-      <h4>…</h4>
-      …
-    </article>
-    <article class="slide">
-      <h4>…</h4>
-      …
-    </article>
-</div>
-~~~
-
-{::nomarkdown}
-<%= code_end %>
-{:/nomarkdown}
-
-### Carousel region
-
-Provide semantic markup to define the carousel as a distinct part of your web page. For example, if the main purpose of a carousel is to serve as a navigation mechanism, then use the HTML5 `<nav>` element. Also `<section>`, `<article>`, `<complementary>`, and `<aside>` could be applicable. At the very least, the WAI-ARIA `role` attribute with the value `region` should be used to define the carousel as page region. This also works in HTML4 with the `<div>` element.
-
-### Label carousels
-
-Provide labels to identify the carousels. This can be done using one of the following approaches.
-
-#### Using headings
-{:.ap}
-
-In the example below, an HTML heading is used to identify the carousel.
-
-{::nomarkdown}
-<%= code_start %>
-{:/nomarkdown}
-
-~~~html
-<div class="carousel">
-  <h3>Recent news</h3>
-    <article class="slide">
-      <h4>…</h4>
-      …
-    </article>
-    …
-</div>
-~~~
-
-{::nomarkdown}
-<%= code_end %>
-{:/nomarkdown}
-
-#### Using WAI-ARIA `aria-label`
-{:.ap}
-
-In the following example, the WAI-ARIA `aria-label` attribute is used to provide a label for the carousel. In addition, the `role` attribute with a value of `region` is used to define the entire carousel as a distinct region.
-
-{::nomarkdown}
-<%= code_start %>
-{:/nomarkdown}
-
-~~~html
-<div class="carousel" role="region" aria-label="Recent news">
-    …
-</div>
-~~~
-
-{::nomarkdown}
-<%= code_end %>
-{:/nomarkdown}
-
-#### Using WAI-ARIA `aria-labelledby`
-{:.ap}
-
-In the following example, the WAI-ARIA `aria-labelledby` attribute is used to refer to an existing HTML heading as the label for the carousel. Also here, the `role` attribute with a value of `region` is used to define the entire carousel as a distinct region.
-
-{::nomarkdown}
-<%= code_start %>
-{:/nomarkdown}
-
-~~~html
-<div class="carousel" role="region" aria-labelledby="carouselheading">
-  <h3 id="carouselheading">Recent news</h3>
-    …
-</div>
-~~~
-
-{::nomarkdown}
-<%= code_end %>
-{:/nomarkdown}
-
-## Item structure
-{:.newex}
-
-Provide proper structure for content within individual carousel items. This makes them independent pieces of content that can be rendered and used in different ways.
-
-### Brief content
-{:.ex}
-
-In the following example, each carousel item only consists of an image, so that a simple list is used to represent the carousel. The carousel itself is identified using a heading, and the text alternatives are provided for the images within the carousel items. The code provides structure and meaning, even without any styling and scripting added.
-
-{::nomarkdown}
-<%= code_start %>
-{:/nomarkdown}
-
-~~~html
-<div class="carousel">
-  <h3>Space Teddys:</h3>
+<section class="carousel" aria-labelledby="carouselheading">
+  <h3 id="carouselheading" class="visuallyhidden">Recent news</h3>
   <ul>
-      <li class="slide">
-          <img src="path/to/image1.jpg" alt="Super Teddy">
-      </li>
-      <li class="slide">
-          <img src="path/to/image2.jpg" alt="Spider Teddy">
-      </li>
-      <li class="slide">
-          <img src="path/to/image3.jpg" alt="Teddy Man">
-      </li>
+    <li class="slide">…</li>
+    <li class="slide">…</li>
+    <li class="slide">…</li>
+    …
   </ul>
-</div>
+</section>
 ~~~
 
 {::nomarkdown}
 <%= code_end %>
 {:/nomarkdown}
 
-### Complex content
-{:.ex}
+## Item content
 
-This example also uses a list, even though the carousel items consist of more substantial content than in the previous example. Each list item includes a heading, text, and links.
+While carousel items are often just images, they can also provide more complex content, such as teaser, articles, or a section of a web page or web site. In any case use semantic markup to make each section usable on its own. This includes using headings, sections, lists, articles, and other structures as needed.
 
 {::nomarkdown}
-<%= code_start %>
+<%= code_start('', 'Example of Simple Content') %>
 {:/nomarkdown}
 
 ~~~html
-<div class="carousel">
-  <h3>Featured Articles:</h3>
-    <ul>
-        <li class="slide" style="background-image: url('teddy1.jpg');">
-            <h4>Space Teddy production reaches all-time high</h4>
-            <p>
-                Teddies in Space Inc. has released outstanding numbers for the last solar year.
-                <a href="…">Full Annual Report</a>
-            </p>
-        </li>
-        <li class="slide" style="background-image: url('teddy2.jpg');">
-            <h4>New Space Teddy Announced!</h4>
-            <p>
-                Space Teddy 6 wears an aluminum space suit. Sapphire glass eyes are first used universe-wide.
-                <a href="…">Everything about the new model</a>
-            </p>
-        </li>
-        <li class="slide" style="background-image: url('teddy3.jpg');">
-            <h4>Adventures of the Space Teddy</h4>
-            <p>
-                Using modern HTML5 technologies, the latest installment of our game performs great on your computer, tablet, or mobile.
-                <a href="…">Play the Game here!</a>
-            </p>
-        </li>
-    </ul>
-</div>
+…
+<li class="slide">
+  <img src="teddy1.jpg" alt="Space Teddy">
+</li>
+…
 ~~~
 
 {::nomarkdown}
 <%= code_end %>
 {:/nomarkdown}
 
-## Carousel styling
-{:.newex}
+{::nomarkdown}
+<%= code_start('', 'Example of Richer Content') %>
+{:/nomarkdown}
 
-At this stage the carousel does not have any functionality. This is added later using scripting, based on the class names of the elements. By using this approach, the content is still meaningfull even in situations when scripting is not enabled, including bad network connection or user choice. Basic styling for the carousel is provided so that it looks appropriate even when scripting is not enabled. 
+~~~html
+…
+<li class="slide" style="background-image: url('teddy1.jpg');">
+  <article>
+    <h4>Space Teddy production reaches all-time high</h4>
+    <p>Teddies in Space Inc. has released outstanding numbers for the last solar year. The production of Space Teddies increased by 17%. The new version, scheduled to be released in a few months, will likely be the biggest Space Teddy release ever.</p>
+    …
+  </article>
+</li>
+…
+~~~
 
-When carousels use text that overlays a background image, the contrast ratio (“color contrast”) requirements need to be met.
+{::nomarkdown}
+<%= code_end %>
+{:/nomarkdown}
 
-### Styled carousel
-{:.ex}
+### Basic styling
+{:.risky}
 
-The example below shows how the carousel structure from the previous example is styled. As the background images can be distracting, using a background color for the overlaying text is a good way to ensure a good contrast ratio regardless of the image. Here, a semi-transparent background with a high opacity (here: 80%) is added to the text. 
+{::nomarkdown}
+<%= editors_note_start %>
+{:/nomarkdown}
+
+Suggest moving this section to its own page, similar to the [menus tutorial](/menus/index.html).
+
+{::nomarkdown}
+<%= editors_note_end %>
+{:/nomarkdown}
+
+Apply styling on the carousel structure to make them appear as needed. Ensure that the default view (without JavaScript) is usable by itself.
 
 {::nomarkdown}
 <%= sample_start %>
@@ -312,4 +183,14 @@ The example below shows how the carousel structure from the previous example is 
 
 {::nomarkdown}
 <%= sample_end %>
+{:/nomarkdown}
+
+{::nomarkdown}
+<%= notes_start %>
+{:/nomarkdown}
+
+**Note:** As the background images can be distracting, a (semi-transparent) background color for the overlaying text helps to improve the contrast.
+
+{::nomarkdown}
+<%= notes_end %>
 {:/nomarkdown}
