@@ -12,51 +12,17 @@ wcag_techniques:
   - H48
 ---
 
-Use structural markup to ensure that the content of a carousel has meaning on its own. For example, a carousel can be presented as a list of articles on a mobile device or when JavaScript is disabled.
+Use structural markup to ensure that the content of a carousel can be used in a variety of situations. For example, a carousel can be presented as a list of articles on a mobile device or when JavaScript isn’t available.
 
-## Create carousel body
+## Overall structure
 
-As a collection of content items, carousels are typically best represented as unordered list items (`<ul>` and `<li>`). Depending on the content they could also be collections of `<article>`, `<section>`, or heading items (`<h1>` to `<h6>`). Important is to ensure semantic meaning of the carousel as a whole.
-
-{::nomarkdown}
-<%= code_start %>
-{:/nomarkdown}
-
-~~~html
-    …
-  <ul>
-    <li class="slide">…</li>
-    <li class="slide">…</li>
-    <li class="slide">…</li>
-    …
-  </ul>
-~~~
-
-{::nomarkdown}
-<%= code_end %>
-{:/nomarkdown}
-
-## Declare carousel
-
-Use semantic markup to define carousels as distinct parts of your web page. For example, if the main purpose of a carousel is to navigate the website, use the HTML5 `<nav>` element. Depending on the context, `<article>`, `<complementary>`, and `<aside>` elements can also be used. At the very least, the `<section>` element should be used to declare the carousel.
+As a collection of content items, carousels are typically best represented as unordered list items, `<ul>` and `<li>`. Every carousel should be enclosed in a labeled region to allow users find the carousel more easily. In the following example a `<section>` element is used to define the region and `aria-labelledby` defines the heading that contains the label.
 
 {::nomarkdown}
 <%= reference :start %>
 {:/}
 
-For more information on regions, see the [regions tutorial](/page-structure/regions.html).
-
-{::nomarkdown}
-<%= reference :end %>
-{:/}
-
-Also label carousels according to their individual function, to make them easier to find and understand. This helps to distinguish between multiple carousels and other regions on a web page. Use a heading, `aria-label`, and/or `aria-labelledby` to provide the label.
-
-{::nomarkdown}
-<%= reference %>
-{:/}
-
-For more information on labels, see the [labeling regions tutorial](/page-structure/labels.html).
+See the Page Structure Tutorial for more information on [regions](/page-structure/regions.html) and [labels](/page-structure/labels.html).
 
 {::nomarkdown}
 <%= reference :end %>
@@ -82,27 +48,9 @@ For more information on labels, see the [labeling regions tutorial](/page-struct
 <%= code_end %>
 {:/nomarkdown}
 
-{::nomarkdown}
-<%= code_end %>
-{:/nomarkdown}
-
-Note: In HTML4, a `<div>` element with the WAI-ARIA `role` attribute with the value `region` is needed.
-
-{::nomarkdown}
-<%= code_start('', 'HTML4') %>
-{:/nomarkdown}
-
-~~~html
-<div class="carousel" role="region" …>…</div>
-~~~
-
-{::nomarkdown}
-<%= code_end %>
-{:/nomarkdown}
-
 ## Item content
 
-Carousel items often consist of simple content items, sometimes just an `<img>` element. In other cases, each carousel item represents a complete article, a section of a web page or even a section of the entire website. In either case you need to use semantic markup to make each section usable on its own. This includes using headings, sections, lists, articles, and other structures as needed.
+While carousel items are often just images, they can also provide more complex content, such as teaser, articles, or a section of a web page or web site. In any case use semantic markup to make each section usable on its own. This includes using headings, sections, lists, articles, and other structures as needed.
 
 {::nomarkdown}
 <%= code_start('', 'Example of Simple Content') %>
@@ -133,6 +81,7 @@ Carousel items often consist of simple content items, sometimes just an `<img>` 
     …
   </article>
 </li>
+…
 ~~~
 
 {::nomarkdown}
@@ -140,6 +89,17 @@ Carousel items often consist of simple content items, sometimes just an `<img>` 
 {:/nomarkdown}
 
 ### Basic styling
+{:.risky}
+
+{::nomarkdown}
+<%= editors_note_start %>
+{:/nomarkdown}
+
+Suggest moving this section to its own page, similar to the [menus tutorial](/menus/index.html).
+
+{::nomarkdown}
+<%= editors_note_end %>
+{:/nomarkdown}
 
 Apply styling on the carousel structure to make them appear as needed. Ensure that the default view (without JavaScript) is usable by itself.
 
