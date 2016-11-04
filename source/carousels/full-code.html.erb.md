@@ -1,7 +1,8 @@
 ---
-title: Full Carousel Code
-source: ../index.html
-layout: fullcode
+title: Complete code example
+status: approved-draft
+order: 5
+type: tips
 ---
 
 {::nomarkdown}
