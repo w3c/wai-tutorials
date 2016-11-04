@@ -420,10 +420,10 @@ var myCarousel = (function() {
 
     ctrls.className = 'controls';
     ctrls.innerHTML = '<li>' +
-        '<button type="button" class="btn-prev"><%= image_tag 'chevron-left.png', :alt => "Previous Slide" %></button>' +
+        '<button type="button" class="btn-prev"><%= image_tag 'chevron-left.png', :alt => "Previous Item" %></button>' +
       '</li>' +
       '<li>' +
-        '<button type="button" class="btn-next"><%= image_tag 'chevron-right.png', :alt => "Next Slide" %>' +
+        '<button type="button" class="btn-next"><%= image_tag 'chevron-right.png', :alt => "Next Item" %>' +
       '</li>';
 
     ctrls.querySelector('.btn-prev')
@@ -460,7 +460,7 @@ var myCarousel = (function() {
         forEachElement(slides, function(el, i){
           var li = document.createElement('li');
           var klass = (i===0) ? 'class="current" ' : '';
-          var kurrent = (i===0) ? ' <span class="visuallyhidden">(Current Slide)</span>' : '';
+          var kurrent = (i===0) ? ' <span class="visuallyhidden">(Current Item)</span>' : '';
 
           li.innerHTML = '<button '+ klass +'data-slide="' + i + '"><span class="visuallyhidden">News</span> ' + (i+1) + kurrent + '</button>';
           slidenav.appendChild(li);
@@ -563,7 +563,7 @@ var myCarousel = (function() {
         buttons[j].innerHTML = '<span class="visuallyhidden">News</span> ' + (j+1);
       }
       buttons[new_current].className = "current";
-      buttons[new_current].innerHTML = '<span class="visuallyhidden">News</span> ' + (new_current+1) + ' <span class="visuallyhidden">(Current Slide)</span>';
+      buttons[new_current].innerHTML = '<span class="visuallyhidden">News</span> ' + (new_current+1) + ' <span class="visuallyhidden">(Current Item)</span>';
     }
 
     index = new_current;
