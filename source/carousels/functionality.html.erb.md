@@ -24,7 +24,9 @@ Proposal to move this section to a dedicated “carousel styling” page that ca
 <%= editors_note_end %>
 {:/nomarkdown}
 
-If the JavaScript is enabled, a class `active` is added to the carousel region so we can apply specific CSS when JavaScript is active. The items are positioned inside the carousel using `position: absolute`. A class `current` is added to the current item, CSS positions it frontmost, using `z-index`.
+When JavaScript is enabled, a class corresponding to specific CSS styling is added to the carousel. In this example the class `active` is added, and hides all the carousel items initially.
+
+Another class, in this example `current`, is added to the current carousel item. The corresponding CSS styles show and position the current item as the foremost, using `z-index` values.
 
 {::nomarkdown}
 <%= code_start %>
@@ -163,11 +165,11 @@ The outcome looks like this:
 <%= sample_end %>
 {:/nomarkdown}
 
-## Previous and next buttons
+## Add previous and next buttons
 
 Use `<button>` elements to allow users to switch back and forth between items. Such elements provide semantic meaning to support assistive technologies and consistent keyboard use out of the box. They can be individually styled as needed.
 
-Generate the buttons with JavaScript to avoid having useless buttons in the HTML code when JavaScript is unavailable, and add them to the carousel:
+Generate the buttons and add them to the carousel with JavaScript, to avoid having useless buttons in the HTML code when JavaScript is disabled:
 
 {::nomarkdown}
 <%= code_start('', 'JavaScript') %>
@@ -508,7 +510,7 @@ Combined, the carousel looks and functions like this:
 <%= sample_end %>
 {:/nomarkdown}
 
-## Provide overview on items
+## Indicate items and provide access
 {:.newex}
 
 Display a list of buttons that indicate the available carousel items and highlight the currently displayed items. This allows users to get an overview on the contents of the carousels, where they are, and navigate directly to any carousel item.
@@ -654,4 +656,4 @@ slidenav.addEventListener('click', function(event) {
 <%= code_end %>
 {:/nomarkdown}
 
-Note that the focus is not set to the item when the _previous and next buttons_ are used to allow users skip multiple items.
+Note that the focus is not set to the item when the _previous and next buttons_ are used, to allow users to continue scrolling through items.
