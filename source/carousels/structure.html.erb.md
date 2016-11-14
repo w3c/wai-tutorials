@@ -35,12 +35,12 @@ See the Page Structure Tutorial for more information on [regions](/page-structur
 {:/nomarkdown}
 
 ~~~html
-<section … aria-labelledby="carouselheading">
+<section class="carousel" aria-labelledby="carouselheading">
   <h3 id="carouselheading" class="visuallyhidden">Recent news</h3>
   <ul>
-    <li …>…</li>
-    <li …>…</li>
-    <li …>…</li>
+    <li class="slide">…</li>
+    <li class="slide">…</li>
+    <li class="slide">…</li>
     …
   </ul>
 </section>
