@@ -8,22 +8,34 @@ wcag_techniques:
   - H48
   - H49
 ---
-In addition to headings, individual website content needs to be marked up semantically to provide a reusable structure. This helps to keep the website extensible, the content reusable and also conveys more meaning to assistive technologies.
+
+{::nomarkdown}
+<%= editors_note_start %>
+{:/nomarkdown}
+
+Add Articles + Sections from Regions on top.
+
+{::nomarkdown}
+<%= editors_note_end %>
+{:/nomarkdown}
+
+Mark-up website content semantically, so that the website is extensible, the content reusable and also conveys more meaning to assistive technologies.
 
 ## Paragraphs
 
-Add rhythm and lightness to content using paragraph element (`<p>`). Consistent styling of paragraphs improves text readability. Paragraph styling can be altered by applying user stylesheets that adapt for specific needs.
+Use the paragraph element (`<p>`) to mark-up paragraphs of text, such as this one. Consistent styling of paragraphs improves text readability. It also gives users more control when customizing their view.
 
 ## Lists
 
-HTML provides ways to group information onto lists of different types. Ordered lists are used for sequential information and are automatically enumerated by the browser. Unordered lists are used when the order of the items is not relevant. List items in unordered lists are marked with a bullet. 
+Use different types of lists to group information according to its nature to provide orientation for users. 
 
-Description lists groups of related terms and descriptions and connects those programmatically.
+* Unordered lists are used when the order of the items is not relevant. List items in unordered lists are marked with a bullet. 
+* Ordered lists are used for sequential information and are automatically enumerated by the browser. 
+* Description lists groups of related terms and descriptions and connects those programmatically.
 
-All types of lists provide orientation for the user. List items can contain a variety of HTML elements, including paragraphs, headings, form elements, and other lists.
+Individual list items can contain a variety of HTML elements, including paragraphs, headings, form elements, and other (nested) lists.
 
 ### Unordered list
-{:.ex}
 
 The unordered list consists of one `<ul>` element and multiple list item (`<li>`) elements:
 
@@ -60,7 +72,6 @@ The unordered list consists of one `<ul>` element and multiple list item (`<li>`
 {:/nomarkdown}
 
 ### Ordered list
-{:.ex}
 
 The unordered list consists of one `<ol>` element and multiple list item (`<li>`) elements:
 
@@ -97,9 +108,8 @@ The unordered list consists of one `<ol>` element and multiple list item (`<li>`
 {:/nomarkdown}
 
 ### Nested lists
-{:.ex}
 
-Every list can be nested into another list. In this example, the order of preparation is not important, but it should be done before using them. The information is still easy to digest, assistive technology can easily inform users about the number of steps.
+Every list can be nested into another list. In the following example, the order of preparation is not important, but the preparation itself should be done before using the ingredients. The information is still easy to digest, assistive technology can easily inform users about the number of steps.
 
 {::nomarkdown}
 <%=sample_start%>
@@ -259,7 +269,7 @@ Identifying a quotation as such helps clarify that the content is attributed to 
 ### Blockquote
 {:.ex}
 
-For larger quotes use the `<blockquote>` element. It can contain paragraphs, headings, and other text structure elements. Those should reflect the structure of the cited document. The `<cite>` element is used to refer to the source of the quote.
+Use the `<blockquote>` element for longer and more complex quotes. It can contain paragraphs, headings, and other text structure elements. Those should reflect the structure of the cited document. The `<cite>` element is used to refer to the source of the quote.
 
 {::nomarkdown}
 <%=sample_start%>
@@ -290,7 +300,7 @@ For larger quotes use the `<blockquote>` element. It can contain paragraphs, hea
 ### Inline quote
 {:.ex}
 
-For shorter inline quotes use the `<q>` element.
+For shorter quotes, that are usually embedded in another sentence, use the `<q>` element.
 
 {::nomarkdown}
 <%=sample_start%>
@@ -314,6 +324,16 @@ For shorter inline quotes use the `<q>` element.
 
 {::nomarkdown}
 <%=notes_start%>
+{:/nomarkdown}
+
+{::nomarkdown}
+<%= editors_note_start %>
+{:/nomarkdown}
+
+Remove note? Support is much better, and it only adds more information.
+
+{::nomarkdown}
+<%= editors_note_end %>
 {:/nomarkdown}
 
 **Note:** In older browsers adding quotes automatically wasn’t well supported. If such a browser is to be supported, consider adding quotes inline in the text and removing generated quotes in modern browsers:
@@ -349,9 +369,10 @@ q:after { content: ""; }
 
 ## Figures
 
-Figures associate captions with lists, images, tables, and other content. For example an annual report could reference to a diagram containing the sales volumes of a product. Related content is wrapped in a `<figure>` element, a `<figcaption>` element is added to describe the content.
+Figures are blocks with additional information to the main content of the page – sometimes referenced from the main text. They typically contain  lists, images, tables, but can also contain other content. For example an annual report could reference to a diagram containing the sales volumes of a product.
 
-At the time of writing, WAI-ARIA attributes `role="group"` and `aria-labelledby` are used to provide the information to assistive technologies in a consistent way.
+Each figure is wrapped in a `<figure>` element and labeled using a nested `<figcaption>` element.
+
 
 {::nomarkdown}
 <%=code_start%>
@@ -377,7 +398,9 @@ At the time of writing, WAI-ARIA attributes `role="group"` and `aria-labelledby`
 <%=notes_start%>
 {:/nomarkdown}
 
-**Note:** For more information on how to mark up diagrams, see [complex images](/images/complex.html).
+* **Note:** At the time of writing, WAI-ARIA attributes `role="group"` and `aria-labelledby` are used to provide the information to assistive technologies in a consistent way.
+
+* **Note:** For more information on how to mark up diagrams, see [complex images](/images/complex.html).
 
 {::nomarkdown}
 <%=notes_end%>
@@ -386,7 +409,7 @@ At the time of writing, WAI-ARIA attributes `role="group"` and `aria-labelledby`
 
 ## Images and illustrations
 
-Images and illustrations are useful to create visual engagement for many users. They may also clarify text for people with reading disabilities. Where images or illustrations are used, proper alternative texts need to be added. See the [Images Tutorial](/images/index.html) for more information on images.
+Images and illustrations are useful to create visual engagement for many users. They may also clarify text for people with reading disabilities. Where images or illustrations are used, proper alternative texts need to be added. See the [Images Tutorial](/images/index.html) for guidance on alternative texts.
 
 ## Tables
 
