@@ -6,6 +6,16 @@ order: 5
 wcag_techniques:
 ---
 
+{::nomarkdown}
+<%= editors_note_start %>
+{:/nomarkdown}
+
+Consider adding a separator, and submenus. See discussion in Issues [353](https://github.com/w3c/wai-tutorials/issue/353) and [352](https://github.com/w3c/wai-tutorials/issue/352).
+
+{::nomarkdown}
+<%= editors_note_end %>
+{:/nomarkdown}
+
 Web application menus use the same basic structure as navigation menus: They often consist of a horizontal menu bar and use fly-out functionality. 
 
 Some additional WAI-ARIA roles help users with assistive technology to operate those menus in a way that is similar to the way they use menus in desktop software. When using those roles, the keyboard interaction should be similar to desktop software as well: the tab key is used to iterate through the top-level items only, the up and down arrows are used to navigate the sub menus. 
@@ -22,44 +32,42 @@ In addition to the `aria-expanded` and `aria-haspopup` attributes, the following
 {::nomarkdown}
 <%= sample_start('show-overflow2') %>
 
-<div role="menubar">
-	<ul role="menu" aria-label="functions" id="appmenu">
-			<li role="menuitem" aria-haspopup="true">
-				File
-				<ul role="menu">
-							<li role="menuitem">New</li>
-							<li role="menuitem">Open</li>
-							<li role="menuitem">Print</li>
-					</ul>
-			</li>
-			<li role="menuitem" aria-haspopup="true">
-				Edit
-				<ul role="menu">
-							<li role="menuitem">Undo</li>
-							<li role="menuitem">Redo</li>
-							<li role="menuitem">Cut</li>
-							<li role="menuitem">Copy</li>
-							<li role="menuitem">Paste</li>
-					</ul>
-			</li>
-			<li role="menuitem" aria-haspopup="true">
-					Format
-					<ul role="menu">
-							<li role="menuitem">Font</li>
-							<li role="menuitem">Text</li>
-					</ul>
-			</li>
-			<li role="menuitem" aria-haspopup="true">
-				View
-				<ul role="menu">
-					<li role="menuitem">100%</li>
-					<li role="menuitem">Zoom In</li>
-					<li role="menuitem">Zoom Out</li>
+<ul role="menubar" id="appmenu">
+		<li role="menuitem" aria-haspopup="true">
+			File
+			<ul role="menu">
+						<li role="menuitem">New</li>
+						<li role="menuitem">Open</li>
+						<li role="menuitem">Print</li>
 				</ul>
-			</li>
-			<li role="menuitem">Help</li>
-	</ul>
-</div>
+		</li>
+		<li role="menuitem" aria-haspopup="true">
+			Edit
+			<ul role="menu">
+						<li role="menuitem">Undo</li>
+						<li role="menuitem">Redo</li>
+						<li role="menuitem">Cut</li>
+						<li role="menuitem">Copy</li>
+						<li role="menuitem">Paste</li>
+				</ul>
+		</li>
+		<li role="menuitem" aria-haspopup="true">
+				Format
+				<ul role="menu">
+						<li role="menuitem">Font</li>
+						<li role="menuitem">Text</li>
+				</ul>
+		</li>
+		<li role="menuitem" aria-haspopup="true">
+			View
+			<ul role="menu">
+				<li role="menuitem">100%</li>
+				<li role="menuitem">Zoom In</li>
+				<li role="menuitem">Zoom Out</li>
+			</ul>
+		</li>
+		<li role="menuitem">Help</li>
+</ul>
 
 <style>
 .show-overflow2 {
@@ -277,19 +285,17 @@ The markup has no links at all: It is a nested list with WAI-ARIA roles as the a
 {:/nomarkdown}
 
 ~~~html
-<div role="menubar">
-	<ul role="menu" aria-label="functions" id="appmenu">
-		<li role="menuitem" aria-haspopup="true">
-			File
-			<ul role="menu">
-				<li role="menuitem">New</li>
-				<li role="menuitem">Open</li>
-				<li role="menuitem">Print</li>
-			</ul>
-		</li>
-		…
-	</ul>
-</div>
+<ul role="menubar" id="appmenu">
+	<li role="menuitem" aria-haspopup="true">
+		File
+		<ul role="menu">
+			<li role="menuitem">New</li>
+			<li role="menuitem">Open</li>
+			<li role="menuitem">Print</li>
+		</ul>
+	</li>
+	…
+</ul>
 ~~~
 
 {::nomarkdown}
