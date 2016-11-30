@@ -1,7 +1,7 @@
 ---
 title: Headings
 status: editors-draft
-order: 4
+order: 5
 wcag_success_criteria:
   - 1.3.1
   - 2.4.1
@@ -25,7 +25,7 @@ Use headings to communicate organization of the content on the page. They allow 
 <%= editors_note_start %>
 {:/nomarkdown}
 
-This section is too wordy – clarifications welcome. 
+This section is too wordy – clarifications welcome.
 
 {::nomarkdown}
 <%= editors_note_end %>

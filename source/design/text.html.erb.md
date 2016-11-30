@@ -1,7 +1,7 @@
 ---
 title: Styling
 status: editors-draft
-order: 6
+order: 2
 wcag_success_criteria:
   - 1.4.4
 wcag_techniques:

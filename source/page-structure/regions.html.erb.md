@@ -8,6 +8,20 @@ wcag_techniques:
 technologies: HTML5, WAI-ARIA
 ---
 
+{::nomarkdown}
+<%= editors_note_start %>
+{:/nomarkdown}
+
+Ideas for this from our F2F session:
+
+* Wireframe illustrations?
+* Interactive demo?
+* Complete page source code example?
+
+{::nomarkdown}
+<%= editors_note_end %>
+{:/nomarkdown}
+
 Mark up different regions of web pages and web applications, so that they can be identified by web browsers and assistive technologies.
 
 ## Page header

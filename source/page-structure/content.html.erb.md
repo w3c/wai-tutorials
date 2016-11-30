@@ -1,7 +1,7 @@
 ---
 title: Content Structure
 status: draft
-order: 5
+order: 6
 wcag_techniques:
   - H40
   - G62
@@ -27,10 +27,10 @@ Use the paragraph element (`<p>`) to mark-up paragraphs of text, such as this on
 
 ## Lists
 
-Use different types of lists to group information according to its nature to provide orientation for users. 
+Use different types of lists to group information according to its nature to provide orientation for users.
 
-* Unordered lists are used when the order of the items is not relevant. List items in unordered lists are marked with a bullet. 
-* Ordered lists are used for sequential information and are automatically enumerated by the browser. 
+* Unordered lists are used when the order of the items is not relevant. List items in unordered lists are marked with a bullet.
+* Ordered lists are used for sequential information and are automatically enumerated by the browser.
 * Description lists groups of related terms and descriptions and connects those programmatically.
 
 Individual list items can contain a variety of HTML elements, including paragraphs, headings, form elements, and other (nested) lists.
@@ -200,7 +200,7 @@ In the following example, John and Luke are described as authors and Frank is de
 #### Multiple terms, one description
 {:.ex}
 
-In the next example, two different spellings of a word are defined using description lists. In such cases, use the `dfn` element to mark up the defined term. 
+In the next example, two different spellings of a word are defined using description lists. In such cases, use the `dfn` element to mark up the defined term.
 
 {::nomarkdown}
 <%=sample_start%>
@@ -383,8 +383,8 @@ Each figure is wrapped in a `<figure>` element and labeled using a nested `<figc
 
 <figure role="group" aria-labelledby="fig-t3-capt">
     <figcaption id="fig-t3-capt">G3: SpaceBear sales volume</figcaption>
-    <img src="…" 
-         alt="SpaceBear sales diagram, showing the huge success in Q4" 
+    <img src="…"
+         alt="SpaceBear sales diagram, showing the huge success in Q4"
          longdesc="…">
     <a href="…">Long Description</a>
 </figure>
