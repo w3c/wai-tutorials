@@ -1,6 +1,6 @@
 ---
 title: Headings
-status: draft
+status: editors-draft
 order: 4
 wcag_success_criteria:
   - 1.3.1
@@ -17,11 +17,33 @@ wcag_techniques:
   - H42
 ---
 
-Headings communicate the way the information on the page is organized. Web browsers, plug-ins, and assistive technologies provide mechanisms for users to navigate through web pages using headings. They also provide visual cues to help people skim web pages and find specific sections.
+Use headings to communicate organization of the content on the page. They allow web browsers, plug-ins, and assistive technologies provide mechanisms for users to navigate through web pages.
 
 ## Heading levels
 
-Best practice is to nest headings properly. When stepping down through headings, avoid skipping levels. That means that an `<h1>` is followed by an `<h1>` or `<h2>`, an `<h2>` is followed by an `<h2>` or `<h3>`, and so forth. When stepping up through headings it is perfectly legitimate to skip any number of levels, for example an `<h1>` can follow an `<h3>`.
+{::nomarkdown}
+<%= editors_note_start %>
+{:/nomarkdown}
+
+This section is too wordy – clarifications welcome. 
+
+{::nomarkdown}
+<%= editors_note_end %>
+{:/nomarkdown}
+
+Heading levels should be properly nested, where possible. That means that an `<h1>` is followed by an `<h1>` or `<h2>`, an `<h2>` is followed by an `<h2>` or `<h3>`, and so forth. In turn, every heading with a lower leven can follow any heading. That means that it is completely valid to follow an `<h3>` by an `<h1>`, for example.
+
+In fixed sections of the page, for example in the footer, the heading levels _should not_ change depending on the levels that are used in the content area above. In those cases consistency across pages is more important.
+
+{::nomarkdown}
+<%= editors_note_start %>
+{:/nomarkdown}
+
+I’m not 100% sure if we need the following section about the HTML5 algorithm. If we keep it, it should probably be in the right marginal column.
+
+{::nomarkdown}
+<%= editors_note_end %>
+{:/nomarkdown}
 
 {::nomarkdown}
 <%=notes_start%>
@@ -33,13 +55,15 @@ Best practice is to nest headings properly. When stepping down through headings,
 <%=notes_end%>
 {:/nomarkdown}
 
-### Organize main content
-{:.ex}
+The following approaches outline the headings structure. Other markup and content, such as `<header>`, `<main>`, `<nav>`, and `<footer>`, was ommitted for readability:
 
-In the following example, headings are used to organize the main content of the web page:
+## Organize main content
+{:.ap}
+
+Use headings are used to only organize the main content of the web page:
 
 {::nomarkdown}
-<%=code_start('','Showing only headings')%>
+<%=code_start('','')%>
 {:/nomarkdown}
 
 ~~~html
@@ -53,13 +77,16 @@ In the following example, headings are used to organize the main content of the 
 <%=code_end%>
 {:/nomarkdown}
 
-### Organize page regions
+## Organize page regions
+{:.ap}
+
+Headings can also be used to organize the different regions of a web page, similar to [region labels](labels.html).
+
+### Main heading before navigation
 {:.ex}
 
-In the following examples, headings are used to organize the different regions of a web page:
-
 {::nomarkdown}
-<%=code_start('','Main heading appears before navigation')%>
+<%=code_start('','')%>
 {:/nomarkdown}
 
 ~~~html
@@ -82,8 +109,11 @@ In the following examples, headings are used to organize the different regions o
 <%=code_end%>
 {:/nomarkdown}
 
+### Main heading after navigation
+{:.ex}
+
 {::nomarkdown}
-<%=code_start('','Main heading appears after navigation')%>
+<%=code_start('','')%>
 {:/nomarkdown}
 
 ~~~html
@@ -103,14 +133,4 @@ In the following examples, headings are used to organize the different regions o
 
 {::nomarkdown}
 <%=code_end%>
-{:/nomarkdown}
-
-{::nomarkdown}
-<%= notes_start %>
-{:/nomarkdown}
-
-**Note:** These examples are only outlining the headings structure. Additional markup, such as `<header>`, `<main>`, `<nav>`, and `<footer>` would appear in the full code.
-
-{::nomarkdown}
-<%= notes_end %>
 {:/nomarkdown}

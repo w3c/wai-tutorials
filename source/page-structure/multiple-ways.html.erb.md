@@ -11,16 +11,16 @@ wcag_techniques:
   - G127
 ---
 
-Many users benefit from having different ways to access the content of a website. Some may be confused by following a long series of navigation steps to fond a specific web page. Others might arrive on a page deep in the hierarchy after clicking a link on the site or other sites and want to move up the hierarchy step by step to get a better context.
+Many users benefit from having different ways to access the content of a website. Some may be confused by following a long series of navigation steps to find a specific web page. Others might arrive on a page deep in the hierarchy after clicking a link on the site or other sites and want to move up the hierarchy step by step to get a better context.
 
 ## Breadcrumbs
 {:.ap}
 
-Breadcrumbs help users to know where they are in the structure of the website. They are especially important on complex websites that have more than one or two levels of navigation and in cases where not every level of the navigation is immediately visible (for example when using fly-out menus).
+A breadcrumb navigation shows a trail from the front page of a website to the current page, with a link to every level of the hierarchy. It helps users to know where they are in the structure of the website without displaying all the sibling pages. Breadcrumb navigations are especially important on complex websites that have more than one or two levels of navigation and in cases where not every level of the navigation is immediately visible (for example when using fly-out menus).
 
-Breadcrumb navigation show a trail from the front page to the current page, with a link to every page on the way. Those links are usually separated by arrows. If images or icon fonts are used for those separators, they need to be used in an accessible way, for example by providing an alternative text. The title of the current page should be the last item of the breadcrumb navigation and not linked.
+Links in breadcrumb navigations are usually separated by arrows. If images are used for those separators, provide alternative text. The title of the current page should be the last item of the breadcrumb navigation and not linked.
 
-A breadcrumb navigation is usually positioned near the top of the page. As a navigational region, the `<nav>` element can be used. A label, for example “You are here:” should be added.
+Position the breadcrumb navigation near the top of the page, mark it up as a `nav` region and label it, for example “You are here:”.
 
 {::nomarkdown}
 <%= code_start() %>
@@ -52,9 +52,9 @@ A breadcrumb navigation is usually positioned near the top of the page. As a nav
 ## Sitemap
 {:.ap}
 
-A sitemap is a (nested) list of all pages of a website. It provides a good way to get a feeling for the structure of the website and can help users to understand what the site contains and how content is organized. It also is an alternative to complex menu bars.
+A sitemap is a (nested) list of all pages of a website. It can help users understand what the site contains and how content is organized. It also is an alternative to complex menu bars.
 
-Simple sitemaps just show an outline view, while more complex sitemaps might also show complex relationship data as well. If the site map is large, it can make sense to show some levels of the hierarchy only when demanded from the user. A sitemap needs to stay updated when a page is added or deleted, should link to all sections of the site, and present the organization of the website. See the [W3C <abbr title="Web Accessibility Initiative">WAI</abbr> sitemap](http://www.w3.org/WAI/sitemap.html) for an example.
+If the site map is large, it can make sense to show some levels of the hierarchy only when expanded from the user. A sitemap needs to stay updated when a page is added or deleted, should link to all sections of the site, and represent the organization of the website. See the [W3C <abbr title="Web Accessibility Initiative">WAI</abbr> sitemap](http://www.w3.org/WAI/sitemap.html) for an example.
 
 ## Search
 {:.ap}
