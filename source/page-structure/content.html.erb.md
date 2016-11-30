@@ -8,6 +8,17 @@ wcag_techniques:
   - H48
   - H49
 ---
+
+{::nomarkdown}
+<%= editors_note_start %>
+{:/nomarkdown}
+
+Add Articles + Sections from Regions on top.
+
+{::nomarkdown}
+<%= editors_note_end %>
+{:/nomarkdown}
+
 Mark-up website content semantically, so that the website is extensible, the content reusable and also conveys more meaning to assistive technologies.
 
 ## Paragraphs

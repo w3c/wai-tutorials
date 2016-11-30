@@ -239,8 +239,18 @@ The element with the `search` role should include the input field as well as the
 <%= code_end %>
 {:/nomarkdown}
 
-## Accessibility Support
+## Page Regions in HTML 4 using ARIA
 {:#accessupport}
+
+{::nomarkdown}
+<%= editors_note_start %>
+{:/nomarkdown}
+
+Add link to ARIA Practices Guide, be specific to HTML4 + ARIA.
+
+{::nomarkdown}
+<%= editors_note_end %>
+{:/nomarkdown}
 
 Most current web browsers support the above HTML5 elements and convey the information to assistive technology through the accessibility APIs. However, to maximize compatibility with web browsers and assistive technologies that support WAI-ARIA but do not yet support HTML5, it is currently advisable to use both the HTML5 elements and the corresponding WAI-ARIA roles; for example:
 
