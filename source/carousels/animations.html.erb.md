@@ -95,7 +95,7 @@ During the transitions, both, the current and the next item are visible. This al
 In the following example the item that is being activated gets an `in-transition` class to show it but with the `aria-hidden` attribute set to `true`. This hides the item from assistive technologies. When the transition completes, the `aria-hidden` attribute is removed.
 
 {::nomarkdown}
-<%= code_start('', 'JavaScript: In initialization') %>
+<%= code_start('', 'JavaScript') %>
 {:/nomarkdown}
 
 ~~~js
