@@ -17,7 +17,7 @@ support: Developed with support from the <a href="http://www.w3.org/WAI/ACT/">WA
 
 Functional images are used to initiate actions rather than to convey information. They are used in buttons, links, and other interactive elements. The text alternative for the image should convey the action that will be initiated (the purpose of the image), rather than a description of the image. For instance, as shown in examples below, the text alternative should be “print this page” rather than “(image of a) printer”, “search” rather than “magnifying lens” or “Example.com home page” rather than “Example.com logo”.
 
-Missing or empty `alt` values create significant problems for screen reader users because functional images are essential to the functionality of the content. Screen readers will typically announce the image file name, the image URL, or the URL for the link destination, which is unlikely to help users understand the action that will be initated by the image.
+Missing or empty `alt` values create significant problems for screen reader users because functional images are essential to the functionality of the content. Screen readers will typically announce the image file name, the image URL, or the URL for the link destination, which is unlikely to help users understand the action that will be initiated by the image.
 
 ## Image used alone as a linked logo
 {:.ex}
@@ -67,7 +67,7 @@ The following image is the only content of a link that leads to the W3C home pag
 ## Logo image within link text
 {:.ex}
 
-In this example the W3C logo is used to supplement text within a link that leads to the W3C home page. The image does not represent different functionality or convey other information than that already provided by in the link text, so a null (empty) value is applied, (`alt=""`), to avoid redundancy and repetition. In effect the image is a decorative adjunct or visual cue to the link text:
+In this example the W3C logo is used to supplement text within a link that leads to the W3C home page. The image does not represent different functionality or convey other information than that already provided in the link text, so a null (empty) value is applied, (`alt=""`), to avoid redundancy and repetition. In effect the image is a decorative adjunct or visual cue to the link text:
 
 {::nomarkdown}
 <%= sample_start %>
@@ -96,7 +96,7 @@ In this example the W3C logo is used to supplement text within a link that leads
 ## Icon image conveying information within link text
 {:.ex}
 
-In this example the image follows text within a link to inform users that the link will open in a new window. It has the text alternative “new window” to reflect the representation on the image:
+In this example the image follows text within a link to inform users that the link will open in a new window. It has the text alternative “new window” to convey the meaning of the icon:
 
 {::nomarkdown}
 <%= sample_start %>
