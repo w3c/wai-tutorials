@@ -51,12 +51,11 @@ helpers do
   end
 
   def nav_link(link_text, url, options = {})
-    options[:class] ||= ""
     if url == '/' + current_page.path
-      options[:class] << " current"
+      # options[:class] << " current"
       '<span class="current-a"><span class="count"></span><span class="txt"><span class="visuallyhidden">Current: </span>' + link_text + '</span></span>'
     else
-      link_to('<span class="count"></span><span class="txt">' + link_text + '</span>', url, options)
+      x_link_to('<span class="count"></span><span class="txt">' + link_text.to_s + '</span>', url, options)
     end
   end
 
