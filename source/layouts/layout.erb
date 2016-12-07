@@ -87,10 +87,19 @@
       <% if current_page.data.order == 1 %>
         <%= current_page.data.tutorial_title %> Tutorial
       <% else %>
-        <%= current_page.parent.data.tutorial_title %> Tutorial
+        <% if current_page.parent.parent %>
+          <%= current_page.parent.parent.data.tutorial_title %> Tutorial
+        <% else %>
+          <%= current_page.parent.data.tutorial_title %> Tutorial
+        <% end %>
       <% end %>
     </h2>
     <ul aria-labelledby="list-heading-tutorials">
+      <% if current_page.parent.parent && current_page.parent.parent.data.title != "Tutorials Overview" %>
+        <% parent_page = current_page.parent.parent %>
+      <% else %>
+        <% parent_page = current_page.parent %>
+      <% end %>
       <% if current_page.data.type == 'intro' %>
         <% if current_page.data.nav_title %>
           <li<%= ' class="' + current_page.data.type + '"' if current_page.data.type %>><%= nav_link(current_page.data.nav_title, '/' + current_page.path, :relative => true) %></li>
@@ -105,16 +114,38 @@
           <% end %>
         <% end %>
       <% else %>
-        <% if current_page.parent.data.nav_title %>
-          <li<%= ' class="' + current_page.parent.data.type + '"' if current_page.parent.data.type %>><%= nav_link(current_page.parent.data.nav_title, '/' + current_page.parent.path, :relative => true) %></li>
+        <% if parent_page.data.nav_title %>
+          <li<%= ' class="' + parent_page.data.type + '"' if parent_page.data.type %>><%= nav_link(parent_page.data.nav_title, '/' + parent_page.path, :relative => true) %></li>
         <% else %>
-          <li<%= ' class="' + current_page.parent.data.type + '"' if current_page.parent.data.type %>><%= nav_link(current_page.parent.data.title, '/' + current_page.parent.path, :relative => true) %></li>
+          <li<%= ' class="' + parent_page.data.type + '"' if parent_page.data.type %>><%= nav_link(parent_page.data.title, '/' + parent_page.path, :relative => true) %></li>
         <% end %>
-        <% current_page.parent.children.sort_by { |resource| resource.data.order }.each do |item| %>
+        <% parent_page.children.sort_by { |resource| resource.data.order }.each do |item| %>
           <% if item.data.nav_title %>
-            <li<%= ' class="' + item.data.type + '"' if item.data.type %>><%= nav_link(item.data.nav_title, '/' + item.path, :relative => true) %></li>
+            <li<%= ' class="' + item.data.type + '"' if item.data.type %>>
+              <%= nav_link(item.data.nav_title, '/' + item.path, :relative => true) %>
+              <% item.children.sort_by { |resource| resource.data.order }.each do |it| %>
+                <% if it.data.nav_title %>
+                  <li<%= ' class="' + it.data.type + '"' if it.data.type %>><%= nav_link(it.data.nav_title, '/' + it.path, :relative => true) %></li>
+                <% else %>
+                  <li<%= ' class="' + it.data.type + '"' if it.data.type %>><%= nav_link(it.data.title, '/' + it.path, :relative => true) %></li>
+                <% end %>
+              <% end %>
+            </li>
           <% else %>
-            <li<%= ' class="' + item.data.type + '"' if item.data.type %>><%= nav_link(item.data.title, '/' + item.path, :relative => true) %></li>
+            <li<%= ' class="' + item.data.type + '"' if item.data.type %>>
+              <%= nav_link(item.data.title, '/' + item.path, :relative => true) %>
+              <% if item.children.length > 0 %>
+                <ul style="border: 10px solid red;">
+                <% item.children.sort_by { |resource| resource.data.order }.each do |it| %>
+                  <% if it.data.nav_title %>
+                    <li<%= ' class="' + it.data.type + '"' if it.data.type %>><%= nav_link(it.data.nav_title, '/' + it.path, :relative => true) %></li>
+                  <% else %>
+                    <li<%= ' class="' + it.data.type + '"' if it.data.type %>><%= nav_link(it.data.title, '/' + it.path, :relative => true) %></li>
+                  <% end %>
+                <% end %>
+                </ul>
+              <% end %>
+            </li>
           <% end %>
         <% end %>
       <% end %>
