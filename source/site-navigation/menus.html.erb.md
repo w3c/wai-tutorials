@@ -1,10 +1,8 @@
 ---
-title: Menu Concepts
-tutorial_title: Menus
+title: Menus
 status: draft
-order: 1
-topic_order: 6
-type: intro
+order: 2
+subpages: true
 wcag_success_criteria:
   - 2.4.3
   - 2.4.5
