@@ -7,7 +7,7 @@ wcag_success_criteria:
 
 The styling of the carousel can have a huge impact to usability and accessibility.
 
-## Basic styling
+## Item styling
 
 Apply a suitable layout to the carousel items without JavaScript to ensure that the content is available in situations when JavaScript is not available.
 
@@ -95,11 +95,11 @@ In the following example a semi-transparent background color is used in the head
 <%= sample_end %>
 {:/nomarkdown}
 
-## Position items
+## Item Position
 
-When JavaScript is enabled, a class corresponding to specific CSS styling is added to the carousel. In this example the class `active` is added, and hides all the carousel items initially.
+When JavaScript is enabled, a class `active` is added to the carousel that positions the items stacked on top of each other. In addition the items are hidden, using `display: none;` for all items.
 
-Another class, in this example `current`, is added to the current carousel item. The corresponding CSS styles show and position the current item as the foremost, using `z-index` values.
+The `current` item then is shown (`display: block;`) and `z-index` is used to position the slide in front of all other slides – this is important for the animation transition later.
 
 {::nomarkdown}
 <%= code_start %>
@@ -236,31 +236,4 @@ The outcome looks like this:
 
 {::nomarkdown}
 <%= sample_end %>
-{:/nomarkdown}
-
-## Hiding in-transition elements from assistive technologies
-
-During the transitions, both, the current and the next item are visible. This also means that two items are available to assistive technologies, with the current item disappearing in a relatively short time. In some cases this can be confusing to screen reader users.
-
-In the following example the item that is being activated gets an `in-transition` class to show it but with the `aria-hidden` attribute set to `true`. This hides the item from assitive technologies. When the trasition completes, the `aria-hidden` attribute is removed.
-
-{::nomarkdown}
-<%= code_start('', 'JavaScript: In initialization') %>
-{:/nomarkdown}
-
-~~~js
-slides[new_next].className = 'next slide'
-  + ((transition == 'next') ? ' in-transition' : '');
-slides[new_next].setAttribute('aria-hidden', 'true');
-
-slides[new_prev].className = 'prev slide'
-  + ((transition == 'prev') ? ' in-transition' : '');
-slides[new_prev].setAttribute('aria-hidden', 'true');
-
-slides[new_current].className = 'current slide';
-slides[new_current].removeAttribute('aria-hidden');
-~~~
-
-{::nomarkdown}
-<%= code_end %>
 {:/nomarkdown}
