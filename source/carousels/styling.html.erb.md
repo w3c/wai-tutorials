@@ -4,19 +4,14 @@ status: editors-draft
 order: 3
 wcag_success_criteria:
 ---
+
+The styling of the carousel can have a huge impact to usability and accessibility.
+
 ## Basic styling
 
-{::nomarkdown}
-<%= editors_note_start %>
-{:/nomarkdown}
+Apply a suitable layout to the carousel items without JavaScript to ensure that the content is available in situations when JavaScript is not available.
 
-Suggest moving this section to its own page, similar to the [menus tutorial](/menus/index.html).
-
-{::nomarkdown}
-<%= editors_note_end %>
-{:/nomarkdown}
-
-Apply styling on the carousel structure to make them appear as needed. Ensure that the default view (without JavaScript) is usable by itself.
+In the following example a semi-transparent background color is used in the heading and the description text to guarantee that the text is readable when placed on top of the image. (See [Design/Contrast](/design/contrast.html).)
 
 {::nomarkdown}
 <%= sample_start %>
@@ -100,28 +95,7 @@ Apply styling on the carousel structure to make them appear as needed. Ensure th
 <%= sample_end %>
 {:/nomarkdown}
 
-{::nomarkdown}
-<%= notes_start %>
-{:/nomarkdown}
-
-**Note:** As the background images can be distracting, a (semi-transparent) background color for the overlaying text helps to improve the contrast.
-
-{::nomarkdown}
-<%= notes_end %>
-{:/nomarkdown}
-
 ## Position items
-{:.risky}
-
-{::nomarkdown}
-<%= editors_note_start %>
-{:/nomarkdown}
-
-Proposal to move this section to a dedicated “carousel styling” page that can then be referenced from several parts of the other pages.
-
-{::nomarkdown}
-<%= editors_note_end %>
-{:/nomarkdown}
 
 When JavaScript is enabled, a class corresponding to specific CSS styling is added to the carousel. In this example the class `active` is added, and hides all the carousel items initially.
 
@@ -265,17 +239,6 @@ The outcome looks like this:
 {:/nomarkdown}
 
 ## Hiding in-transition elements from assistive technologies
-{:.risky}
-
-{::nomarkdown}
-<%= editors_note_start %>
-{:/nomarkdown}
-
-This section, or parts of it, might move to a “carousel styling” page in the future.
-
-{::nomarkdown}
-<%= editors_note_end %>
-{:/nomarkdown}
 
 During the transitions, both, the current and the next item are visible. This also means that two items are available to assistive technologies, with the current item disappearing in a relatively short time. In some cases this can be confusing to screen reader users.
 
