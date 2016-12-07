@@ -23,7 +23,7 @@ See also the [complete working example](working-example.html) and the [full code
 
 ## What are carousels?
 
-Carousels, also known as "slide shows" and "sliders", show a collection of items one at a time. For example, scrolling news headlines and featured articles on homepages are common uses of carousels.
+Carousels, also known as “slide shows” and “sliders”, show a collection of items one at a time. For example, scrolling news headlines and featured articles on homepages are common uses of carousels.
 
 ## What are the key points?
 
