@@ -1,7 +1,7 @@
 ---
 title: Carousel Concepts
 tutorial_title: Carousels
-status: approved-draft
+status: editors-draft
 order: 1
 topic_order: 4
 type: intro
@@ -14,13 +14,12 @@ wcag_success_criteria:
 
 Accessible carousels have robust structure and provide user control:
 
-- **[Structure](structure.html):** Provide structure markup for the carousel body and its items.
-
+- **[Structure](structure.html):** Use semantic structure for the carousel, as it allows assistive technology to surface more information.
 - **[Functionality](functionality.html):** Add functionality to display and announce carousel items.
-
+- **[Styling](styling.html):** Adhere to good styling principles to make the carousel easier to use.
 - **[Animations](animations.html):** Add animation and ensure users have control over these animations.
 
-See also a [Complete Example](full-code.html) including the full source code.
+See also the [complete working example](working-example.html) and the [full code](full-code.html) of the carousel.
 
 ## What are carousels?
 
