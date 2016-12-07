@@ -1,6 +1,6 @@
 ---
 title: Animations
-status: approved-draft
+status: editors-draft
 order: 5
 wcag_success_criteria:
   - 2.2.2
@@ -86,4 +86,31 @@ carousel.addEventListener('focusout',
 
 {::nomarkdown}
 <%= notes_end %>
+{:/nomarkdown}
+
+## Hiding in-transition elements from assistive technologies
+
+During the transitions, both, the current and the next item are visible. This also means that two items are available to assistive technologies, with the current item disappearing in a relatively short time. In some cases this can be confusing to screen reader users.
+
+In the following example the item that is being activated gets an `in-transition` class to show it but with the `aria-hidden` attribute set to `true`. This hides the item from assistive technologies. When the transition completes, the `aria-hidden` attribute is removed.
+
+{::nomarkdown}
+<%= code_start('', 'JavaScript: In initialization') %>
+{:/nomarkdown}
+
+~~~js
+slides[new_next].className = 'next slide'
+  + ((transition == 'next') ? ' in-transition' : '');
+slides[new_next].setAttribute('aria-hidden', 'true');
+
+slides[new_prev].className = 'prev slide'
+  + ((transition == 'prev') ? ' in-transition' : '');
+slides[new_prev].setAttribute('aria-hidden', 'true');
+
+slides[new_current].className = 'current slide';
+slides[new_current].removeAttribute('aria-hidden');
+~~~
+
+{::nomarkdown}
+<%= code_end %>
 {:/nomarkdown}
