@@ -26,13 +26,13 @@ wcag_techniques:
 
 Menus are used to browse around web pages (“navigation menus”) or initiate actions inside web applications (“application menus”). Due to their important role to operate web pages and applications, they need to be usable in all circumstances. This tutorial covers the following topics:
 
-* **[Structure](structure.html):** Mark up menus in a way that reflects the structure of its content and makes identification possible.
+* **[Structure](menus/structure.html):** Mark up menus in a way that reflects the structure of its content and makes identification possible.
 
-* **[Styling](styling.html):** Use commonly recognized design patterns to identify menus and indicate the state of menu items.
+* **[Styling](menus/styling.html):** Use commonly recognized design patterns to identify menus and indicate the state of menu items.
 
-* **[Fly-out Menus](flyout.html):** Implement fly-out menus to organize menus with branching sub-items.
+* **[Fly-out Menus](menus/flyout.html):** Implement fly-out menus to organize menus with branching sub-items.
 
-* **[Web Application Menus](application.html):** Use markup and scripting to define the functionality and alter the behavior of menu items to mimic desktop applications.
+* **[Web Application Menus](menus/application.html):** Use markup and scripting to define the functionality and alter the behavior of menu items to mimic desktop applications.
 
 ## Why is this important?
 
