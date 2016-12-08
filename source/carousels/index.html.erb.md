@@ -12,32 +12,31 @@ wcag_success_criteria:
   - 4.1.2
 ---
 
-Accessible carousels have robust structure and provide user control:
+To implement an accessible carousel widget, provide a robust structure and user control:
 
-- **[Structure](structure.html):** Use semantic structure for the carousel, as it allows assistive technology to surface more information.
-- **[Functionality](functionality.html):** Add functionality to display and announce carousel items.
-- **[Styling](styling.html):** Adhere to good styling principles to make the carousel easier to use.
-- **[Animations](animations.html):** Add animation and ensure users have control over these animations.
+* **[Structure](structure.html):** Use semantic structure for the carousel, as it allows assistive technology to surface more information.
+* **[Styling](styling.html):** Adhere to good styling principles to make the carousel easier to use.
+* **[Functionality](functionality.html):** Add functionality to display and announce carousel items.
+* **[Animations](animations.html):** Add animation and ensure users have control over these animations.
 
-See also the [complete working example](working-example.html) and the [full code](full-code.html) of the carousel.
+See also the [complete working example](working-example.html) and [full code](full-code.html) of the example carousel.
 
 ## What are carousels?
 
-Carousels, also known as “slide shows” and “sliders”, show a collection of items one at a time. For example, scrolling news headlines and featured articles on homepages are common uses of carousels.
+Carousels show a collection of items one at a time. They are also known as “slide shows” and “sliders”. Scrolling news headlines, featured articles on home pages, and image galleries are common uses of carousels.
 
 ## What are the key points?
 
-- Users must be able to pause carousel movement because it can be too fast to read or distracting.
-
-- All functionality, including navigating between carousel items, needs to be usable by keyboard.
-
-- Carousel item changes must be announced to users, and may not interfere with the current focus.
+- Users must be able to pause carousel movement because it can be too fast or distracting, making text hard to read.
+- All functionality, including navigating between carousel items, needs to be operable by keyboard.
+- Carousel item changes must be announced to all users.
+- The keyboard position (“focus”) is managed in a reasonable and comprehensible fashion.
 
 ## Why is this important?
 
-Carousels are typically prominently located and provide important functionality. Accessible carousels are essential for many website users including:
+Carousels are typically prominently located and are used to provide navigation or show page content. Accessible carousels are essential for many website users including:
 
-- **People using keyboard navigation and voice input software** can navigate between carousel items.
-- **People using screen readers** will understand where they are and how to navigate between carousel items.
-- **People who are distracted by movement** are able to pause the animations while reading the web page.
-- **People who need more time to read** have sufficient time to read and understand each carousel item.
+- **People using keyboard navigation and voice input software** can navigate between individual items.
+- **People using screen readers** will understand which item is currently shown and how to navigate between items.
+- **People who are distracted by movement** are able to pause animations.
+- **People who need more time to read** are able to pause animations, providing them with sufficient time to read and understand carousel content.
