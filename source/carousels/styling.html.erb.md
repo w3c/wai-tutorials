@@ -5,13 +5,13 @@ order: 3
 wcag_success_criteria:
 ---
 
-The styling of the carousel can have a huge impact to usability and accessibility.
+The styling of carousels has a huge impact to usability and accessibility.
 
-## Item styling
+## General Styling
 
-Apply a suitable layout to the carousel items without JavaScript to ensure that the content is available in situations when JavaScript is not available.
+Ensure that the carousel content is readable in situations when JavaScript is not available, to improve the robustness of your website.
 
-In the following example a semi-transparent background color is used in the heading and the description text to guarantee that the text is readable when placed on top of the image. (See [Design/Contrast](/design/contrast.html).)
+In the following example the carousel is styled as three individual items in the normal page flow. A semi-transparent background color is used for text containers to guarantee readable contrast when placed on top of the image. (See [Design/Contrast](#).)
 
 {::nomarkdown}
 <%= sample_start %>
@@ -97,9 +97,9 @@ In the following example a semi-transparent background color is used in the head
 
 ## Item Position
 
-When JavaScript is enabled, a class `active` is added to the carousel that positions the items stacked on top of each other. In addition the items are hidden, using `display: none;` for all items.
+JavaScript is used to add a class `active` to the carousel after page load. CSS then positions the items stacked on top of each other and hides them, using `display:none;` (which hides them visually and from assistive technologies).
 
-The `current` item then is shown (`display: block;`) and `z-index` is used to position the slide in front of all other slides – this is important for the animation transition later.
+The class `current` is then added to the first item. It displays this item (using `display:block;`) and positions the item on top of the stack (`z-index: 500;`) – which is important for the animations later.
 
 {::nomarkdown}
 <%= code_start %>
@@ -124,7 +124,7 @@ The `current` item then is shown (`display: block;`) and `z-index` is used to po
 <%= code_end %>
 {:/nomarkdown}
 
-The outcome looks like this:
+The outcome (without any [functionality](functionality.html) applied) looks like this:
 
 {::nomarkdown}
 <%= sample_start %>
