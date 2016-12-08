@@ -9,13 +9,13 @@ wcag_success_criteria:
   - 4.1.2
 ---
 
-Provide functionality to display the carousel items one at a time, and to announce the changes that occur in display.
+Provide functionality to change witch carousel item is displayed, and inform users about that change.
 
 ## Add previous and next buttons
 
-Use `<button>` elements to allow users to switch back and forth between items. Such elements provide semantic meaning to support assistive technologies and consistent keyboard use out of the box. They can be individually styled as needed.
+Buttons allow users to switch back and forth between items. `<button>` elements provide semantic meaning, support by assistive technologies, and consistent keyboard use out of the box. They can be individually styled as needed.
 
-Generate the buttons and add them to the carousel with JavaScript, to avoid having useless buttons in the HTML code when JavaScript is disabled:
+Generate the buttons and add them with JavaScript to avoid having useless buttons in the page in case JavaScript is not available.
 
 {::nomarkdown}
 <%= code_start('', 'JavaScript') %>
@@ -49,6 +49,16 @@ carousel.appendChild(ctrls);
 
 {::nomarkdown}
 <%= code_end %>
+{:/nomarkdown}
+
+{::nomarkdown}
+<%= editors_note_start %>
+{:/nomarkdown}
+
+The following sentence and code example should probably go to the [styling page](styling.html).
+
+{::nomarkdown}
+<%= editors_note_end %>
 {:/nomarkdown}
 
 Visually the buttons appear as arrows overlaying the individual items.
@@ -91,12 +101,32 @@ Visually the buttons appear as arrows overlaying the individual items.
 <%= code_end %>
 {:/nomarkdown}
 
-## Announce the current item
-
-When the current item changes, a WAI-ARIA live region informs screen reader users which item is currently visible. Note that the current item does not automatically receive keyboard focus, to allow users to skip over and leave the carousel.
+### Announce the current item
 
 {::nomarkdown}
-<%= code_start('', 'Extend event listeners') %>
+<%= editors_note_start %>
+{:/nomarkdown}
+
+The following sentence needs a link to a live region description or a short description in the margins. Probably also for WAI-ARIA.
+
+{::nomarkdown}
+<%= editors_note_end %>
+{:/nomarkdown}
+
+When the current item changes, a WAI-ARIA live region informs screen reader users which item is currently visible. Note that the current item does not automatically receive keyboard focus, to allow users to skip over more than one slide at once, withough having to navigate back to the previous and next buttons again and again.
+
+{::nomarkdown}
+<%= editors_note_start %>
+{:/nomarkdown}
+
+I feel that the following code example needs a bit more context.
+
+{::nomarkdown}
+<%= editors_note_end %>
+{:/nomarkdown}
+
+{::nomarkdown}
+<%= code_start('') %>
 {:/nomarkdown}
 
 ~~~js
@@ -134,9 +164,9 @@ function setSlides(new_current, focus, transition) {
 ## Indicate items and provide access
 {:.newex}
 
-Display a list of buttons that indicate the available carousel items and highlight the currently displayed items. This allows users to get an overview on the contents of the carousels, where they are, and navigate directly to any carousel item.
+Display a list of with buttons for every item and highlight the current item. This allows users to get an overview of the carousel content, where they are in the sequence, and navigate directly to any item.
 
-In the example below, the list with buttons is added to the carousel using JavaScript and then styled: The buttons are numbered matching the corresponding carousel items. The button for the active carousel item is highlighted both visually and by using visually hidden text (for screen readers).
+The list with buttons, in the example below, is added using JavaScript, with the number on the button that corresponds to the slide. The buttons are numbered matching the corresponding carousel items. The button for the active carousel item is highlighted both visually and by using visually hidden text (for screen readers).
 
 {::nomarkdown}
 <%= code_start %>
@@ -265,9 +295,9 @@ In the example below, the list with buttons is added to the carousel using JavaS
 
 ### Focus the selected carousel item
 
-When users select items through the carousel navigation buttons, the items should receive focus immediately. This makes interaction easier for keyboard and assistive technology users.
+When users select an item through those navigation buttons, the focus should be set on the selected item. In this case the focus needs to be set to the `<li>` element that has the class `current` set, after the change or transition. This makes interaction easier for keyboard and assistive technology users.
 
-By default, `<li>` elements cannot receive focus. Setting the `tabindex` attribute of the element to `-1` allows it to receive focus through JavaScript.
+By default, `<li>` elements cannot receive focus. By setting its `tabindex` attribute to `-1` the element is enabled to receive focus through JavaScript.
 
 {::nomarkdown}
 <%= code_start('', 'JavaScript') %>
@@ -307,5 +337,3 @@ slidenav.addEventListener('click', function(event) {
 {::nomarkdown}
 <%= code_end %>
 {:/nomarkdown}
-
-Note that the focus is not set to the item when the _previous and next buttons_ are used, to allow users to continue scrolling through items.
