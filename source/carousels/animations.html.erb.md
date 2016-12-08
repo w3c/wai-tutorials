@@ -6,11 +6,11 @@ wcag_success_criteria:
   - 2.2.2
 ---
 
-Provide users with control over the animations in your carousel. Pausing animation is essential for people who find the changes distracting and for people who need more time to read carousel items.
+Provide users with control over animations in carousels. Pausing animation is essential for people who find movement or who need more time to read carousel content.
 
 ## Add Play/Stop button
 
-Provide a button to allow users to stop and resume the animations. The example below illustrates how such a button can be marked-up. The button label and its function changes, depending on whether the animation is currently running or not.
+Provide a button to allow users stop and resume animation. The example below illustrates how such a button can be marked-up. The button label and its function changes, depending on whether the animation is currently running or not.
 
 {::nomarkdown}
 <%= code_start('','While animation is running') %>
@@ -40,15 +40,15 @@ Provide a button to allow users to stop and resume the animations. The example b
 <%= notes_start %>
 {:/nomarkdown}
 
-**Note:** The script only replaces the value of the button and its attributes. Replacing the button entirely would result in loss of keyboard focus.
+**Note:** The JavaScript only replaces the value of the `<button>` element and its attributes. Replacing the button entirely would result in loss of keyboard focus.
 
 {::nomarkdown}
 <%= notes_end %>
 {:/nomarkdown}
 
-## Pause on hover and focus
+## Pause on mouse hover and keyboard focus
 
-Another useful approach is to pause the carousel animation when the carousel receives keyboard focus or is hovered over by mouse. Pausing the animation ensures that keyboard users do not lose focus. It is also useful for people who need more time to read the content, and to use links and controls inside the carousel items.
+Pause the carousel animation when the carousel is hovered over by mouse or receives keyboard focus. Pausing on mouse hover is useful for people who need more time to read the content and makes it easier to click links in the carousel. Keyboard users do not use their position when the carousel is paused.
 
 {::nomarkdown}
 <%= code_start %>
@@ -82,7 +82,7 @@ carousel.addEventListener('focusout',
 <%= notes_start %>
 {:/nomarkdown}
 
-**Note:** The [`focusin`](http://www.w3.org/TR/DOM-Level-3-Events/#event-type-focusIn) and [`focusout`](http://www.w3.org/TR/DOM-Level-3-Events/#event-type-focusout) events are defined in the [W3C Document Object Model (DOM) Level 3 Events Specification](http://www.w3.org/TR/DOM-Level-3-Events/) (Working Draft) and implemented in many browsers. Firefox needs [a short polyfill](examples/focusinoutpolyfill.js) at the time of publication of this tutorial.
+**Note:** The [`focusin`](http://www.w3.org/TR/DOM-Level-3-Events/#event-type-focusIn) and [`focusout`](http://www.w3.org/TR/DOM-Level-3-Events/#event-type-focusout) events are defined in the [W3C Document Object Model (DOM) Level 3 Events Specification](http://www.w3.org/TR/DOM-Level-3-Events/) (Working Draft) and implemented in many browsers. Firefox needs [a short polyfill](full-code.html) at the time of publication of this tutorial.
 
 {::nomarkdown}
 <%= notes_end %>
@@ -90,15 +90,26 @@ carousel.addEventListener('focusout',
 
 ## Hiding in-transition elements from assistive technologies
 
-During the transitions, both, the current and the next item are visible. This also means that two items are available to assistive technologies, with the current item disappearing in a relatively short time. In some cases this can be confusing to screen reader users.
+During transitions, both items, current and next are visible. This also means that those two items are available to assistive technologies, with the current item disappearing in a relatively short time. In some cases this can be confusing to screen reader users.
 
-In the following example the item that is being activated gets an `in-transition` class to show it but with the `aria-hidden` attribute set to `true`. This hides the item from assistive technologies. When the transition completes, the `aria-hidden` attribute is removed.
+In the following example the item that is being activated gets an `in-transition` class that shows it. The item’s `aria-hidden` is attribute set to `true` which hides it from assistive technologies. When the transition completes, the `aria-hidden` attribute is removed.
+
+{::nomarkdown}
+<%= editors_note_start %>
+{:/nomarkdown}
+
+The following example can be better described.
+
+{::nomarkdown}
+<%= editors_note_end %>
+{:/nomarkdown}
 
 {::nomarkdown}
 <%= code_start('', 'JavaScript') %>
 {:/nomarkdown}
 
 ~~~js
+
 slides[new_next].className = 'next slide'
   + ((transition == 'next') ? ' in-transition' : '');
 slides[new_next].setAttribute('aria-hidden', 'true');
