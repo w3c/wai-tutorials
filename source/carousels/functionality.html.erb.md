@@ -9,13 +9,11 @@ wcag_success_criteria:
   - 4.1.2
 ---
 
-Provide functionality to change witch carousel item is displayed, and inform users about that change.
+Provide functionality to switch the carousel items being displayed, and to inform users about these changes.
 
 ## Add previous and next buttons
 
-Buttons allow users to switch back and forth between items. `<button>` elements provide semantic meaning, support by assistive technologies, and consistent keyboard use out of the box. They can be individually styled as needed.
-
-Generate the buttons and add them with JavaScript to avoid having useless buttons in the page in case JavaScript is not available.
+Provide buttons to allow users to switch back and forth between items. Use `<button>` elements provide semantic meaning, support by assistive technologies, and consistent keyboard use out of the box. Create and add the buttons using JavaScript, because they are only functional when JavaScript is loaded anyway. Style them as needed.
 
 {::nomarkdown}
 <%= code_start('', 'JavaScript') %>
@@ -113,7 +111,9 @@ The following sentence needs a link to a live region description or a short desc
 <%= editors_note_end %>
 {:/nomarkdown}
 
-When the current item changes, a WAI-ARIA live region informs screen reader users which item is currently visible. Note that the current item does not automatically receive keyboard focus, to allow users to skip over more than one slide at once, withough having to navigate back to the previous and next buttons again and again.
+Use WAI-ARIA live region to inform screen reader users when items change, and to indicate the currently active item. In this example the level 'polite' is used to not interrupt screen reader users while they are reading other parts of the web page.
+
+Do not automatically move keyboard focus to the items in focus, to not draw away the user from other parts of the web page each time the items change. Also do not move keyboard focus when the previous and next buttons are used, to allow users to browse back and forth over the slides.
 
 {::nomarkdown}
 <%= editors_note_start %>
@@ -164,7 +164,7 @@ function setSlides(new_current, focus, transition) {
 ## Indicate items and provide access
 {:.newex}
 
-Display a list of with buttons for every item and highlight the current item. This allows users to get an overview of the carousel content, where they are in the sequence, and navigate directly to any item.
+Display a list with buttons for every item and highlight the current item. This allows users to get an overview of the carousel content, where they are in the sequence, and navigate directly to any item.
 
 The list with buttons, in the example below, is added using JavaScript, with the number on the button that corresponds to the slide. The buttons are numbered matching the corresponding carousel items. The button for the active carousel item is highlighted both visually and by using visually hidden text (for screen readers).
 
