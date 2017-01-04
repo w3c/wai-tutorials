@@ -147,6 +147,25 @@ helpers do
     end
   end
 
+  def ref(which = :start)
+    if which == :start
+      '<div class="ref-container">
+      <div class="ref-main">'
+    elsif which == :middle
+      '</div>
+      <aside class="ref-side">
+      <div>
+        <svg style="width: 2em;" viewBox="0 0 32 32" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%">
+            <path d="M16 14 L16 23 M16 8 L16 10" />
+            <circle cx="16" cy="16" r="14" />
+        </svg>'
+    elsif which == :end
+      '</div>
+      </aside>
+      </div>'
+    end
+  end
+
 end
 
 set :markdown_engine, :kramdown
