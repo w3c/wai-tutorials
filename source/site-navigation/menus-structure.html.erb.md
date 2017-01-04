@@ -1,8 +1,7 @@
 ---
 title: Menu Structure
-nav_title: Structure
 status: editors-draft
-order: 2
+order: 3
 wcag_success_criteria:
   - 4.1.2
 wcag_techniques:
@@ -10,20 +9,22 @@ wcag_techniques:
   - ARIA11
 ---
 
-Semantic markup conveys the structure of the menu to users. It also makes the menu adaptable when used in different situations such as small screen display, zoomed in, and used with assistive technologies.
+Semantic markup conveys the menu structure to users. It also makes the menu adaptable to different situations, such as small screen display, zoomed in, or assistive technology use.
 
 ## List of Links
 {:.newap}
 
-If a navigation consists of more than very few links, using a list is the most effective way to convey the menu structure to users. With this structural information assistive technologies can announce the number of items in the menu.
+Convey the menu structure to users effectively by using a list, especially if the menu consists of more than very few links. With this structural information assistive technologies can announce the number of items in the menu.
 
 ### Unordered list
 {:.ap}
 
-If the sequence of reading the pages is not important to understand the website, an unordered list (`<ul>`) should be used. In the following example, the user is not required to read the home page before advancing to the shop or get information about the products. Most menus are unordered.
+If the sequence of reading the pages is not important to understand the website, 
+
+Use an unordered list (`<ul>`), if the sequence of reading the pages is not important to understand the website as a whole. In the following example, the user is not required to read the home page before advancing to the shop or get information about the products. Most menus are unordered.
 
 {::nomarkdown}
-<%= code_start('','HTML') %>
+<%= code_start('','Unordered List') %>
 {:/}
 
 ~~~ html
@@ -45,10 +46,10 @@ If the sequence of reading the pages is not important to understand the website,
 ### Ordered list
 {:.ap}
 
-In some instances, pages need to be read in a certain sequence, for example if the menu provides access to chapters in prose or steps in a construction manual. In the example below, following the order is important to properly build the space ship.
+In instances where pages need to be read in a certain sequence use an ordered list (`<ol>`). This is the case, for example, for menus providing access to chapters in prose, or steps in a construction manual. Following the order is important to properly build the space ship in the example below:
 
 {::nomarkdown}
-<%= code_start('','HTML') %>
+<%= code_start('','Ordered List') %>
 {:/}
 
 ~~~ html
@@ -68,16 +69,20 @@ In some instances, pages need to be read in a certain sequence, for example if t
 
 ## Identifying the menu
 
+{::nomarkdown}
+<%= ref :start %>
+{:/}
+
 To identify the menu, use the `<nav>` element in HTML5. It allows users to directly jump to the menu if WAI-ARIA landmarks are supported. The `<nav>` element wraps the unordered or ordered list that contains the navigation options.
 
 {::nomarkdown}
-<%= reference :start %>
+<%= ref :middle %>
 {:/}
 
 For more information on regions, see the [regions tutorial](/page-structure/regions.html).
 
 {::nomarkdown}
-<%= reference :end %>
+<%= ref :end %>
 {:/}
 
 {::nomarkdown}
