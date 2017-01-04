@@ -1,8 +1,7 @@
 ---
 title: Menu Styling
-nav_title: Styling
 status: approved-draft
-order: 3
+order: 4
 wcag_success_criteria:
   - 1.4.1
 wcag_techniques:
