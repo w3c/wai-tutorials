@@ -1526,28 +1526,30 @@ ul.inline {
 }
 
 .ref-container {
-  // &, * {border: 1px solid red;}
+  /*&, * {border: 1px solid red;}*/
   @include mq($small) {
     display:flex;
+    justify-content: space-between;
   }
   @include mq($big) {
-    margin-right: -50%;
+    margin-right: -51.515151515%;
   }
   .ref-main {
     box-sizing: border-box;
-    flex: 2;
-    margin-right: 1em;
+    flex: 0 0 66%;
+    /*margin-right: 1em;*/
   }
   .ref-side {
     box-sizing: border-box;
-    flex: 1;
+    flex: 0 0 30.36%;
     font-size: .9em;
-    margin-left: 1em;
+    /*margin-left: 1em;*/
     position:relative;
     > div {
       padding: .5em;
       padding-left: 3em;
       border: 2px solid #930;
+      border-radius: 2px;
       margin-top: calc(-.5em + 2px);
     }
     svg {
@@ -1565,6 +1567,21 @@ ul.inline {
       margin-bottom: 0;
     }
   }
+}
+
+.sideimage {
+	border: 1px solid #036;
+	margin: 0 1em .5em;
+	border-radius: 2px;
+	&.left {
+		float: left;
+		margin-left: 0;
+	}
+
+	&.right {
+		float: right;
+		margin-right: 0;
+	}
 }
 
 @media print {
