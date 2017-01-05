@@ -5,235 +5,34 @@ order: 3
 wcag_success_criteria:
 ---
 
-The styling of carousels has a huge impact to usability and accessibility.
+## Contrast
 
-## General Styling
+Ensure sufficient contrast between the foreground and the background of text and interactive elements. This can be a challenge when text or buttons are positioned on top of images.
 
-Ensure that the carousel content is readable in situations when JavaScript is not available, to improve the robustness of your website.
-
-In the following example the carousel is styled as three individual items in the normal page flow. A semi-transparent background color is used for text containers to guarantee readable contrast when placed on top of the image. (See [Design/Contrast](#).)
+Text needs to have a 3:1 ratio if the font size is above 18.5 px (14 pt) bold or above 24 px (18 pt) normal, and a 4.5:1 ratio otherwise. This includes text on images.
 
 {::nomarkdown}
-<%= sample_start %>
-{:/nomarkdown}
+<%= ref :start %>
+{:/}
 
-<h3 role="presentation">Featured Articles:</h3>
-<div class="carousel">
-    <ul>
-        <li class="slide" style="background-image: url('../../img/ex-teddy1.jpg');">
-            <h4>Space Teddy production reaches all-time high</h4>
-            <p>
-                Teddies in Space Inc. has released outstanding numbers for the last solar year.
-                <a href="…">Full Annual Report</a>
-            </p>
-        </li>
-        <li class="slide" style="background-image: url('../../img/ex-teddy2.jpg');">
-            <h4>New Space Teddy Announced!</h4>
-            <p>
-                Space Teddy 6 wears an aluminum space suit. Sapphire glass eyes are first used universe-wide.
-                <a href="…">Everything about the new model</a>
-            </p>
-        </li>
-        <li class="slide" style="background-image: url('../../img/ex-teddy3.jpg');">
-            <h4>Adventures of the Space Teddy</h4>
-            <p>
-                Using modern HTML5 technologies, the latest installment of our game performs great on your computer, tablet, or mobile.
-                <a href="…">Play the Game here!</a>
-            </p>
-        </li>
-    </ul>
-</div>
+![Example using semi-transparent background colors to ensure sufficient contrast.](carousels-styling-contrast.png){:.sideimage.left} While there are no contrast guidelines about other aspects of the interface of a website, it is best practice to ensure the same contrast levels for buttons and other interactive elements. This allows [people with visual disabilities](https://www.w3.org/WAI/intro/people-use-web/diversity#visual) to see and interact with the carousel.
 
-<style>
-  .carousel, .slide {
-    width: 480px;
-    padding:0;
-    margin: 0;
-  }
-  .carousel {
-    position: relative;
-  }
-  .carousel ul {
-    margin:0;
-    padding: 0;
-  }
-  .slide {
-    height: 360px;
-    background-size: cover;
-    position: relative;
-    margin-bottom:1em;
-    border:1px solid #333;
-  }
-  .slide h4 {
-    display:inline-block;
-    float:righ;
-    font-size: 1.25em;
-    margin:0;
-    padding: .25em;
-    text-align: right;
-    background-color: rgba(255,255,255,.8);
-    float:right;
-    border-radius: 0 0 0 .5em;
-  }
-  .slide p {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin:0;
-    clear:both;
-    padding: 5px;
-    background-color: rgba(255,255,255,.8);
-  }
-  .slide a {
-    display:block;
-    text-align: right;
-  }
-</style>
+To ensure sufficient contrast, use a [browser plugin](https://www.w3.org/WAI/ER/tools/?q=wcag-20-w3c-web-content-accessibility-guidelines-20&q=browser-plugin) to test the contrast of your text colors. If you place text on top of an image, a (semi-transparent) background color can help to maintain the contrast regardless of the image used.
 
 {::nomarkdown}
-<%= sample_end %>
-{:/nomarkdown}
+<%= ref :middle %>
+{:/}
 
-## Item Position
-
-JavaScript is used to add a class `active` to the carousel after page load. CSS then positions the items stacked on top of each other and hides them, using `display:none;` (which hides them visually and from assistive technologies).
-
-The class `current` is then added to the first item. It displays this item (using `display:block;`) and positions the item on top of the stack (`z-index: 500;`) – which is important for the animations later.
+More information on contrasts and other aspects of how design influences web accessibility will be provided in a future _Design Tutorial_. In the meantime find more information in the related documents below.
 
 {::nomarkdown}
-<%= code_start %>
-{:/nomarkdown}
+<%= ref :end %>
+{:/}
 
-~~~css
-.active .slide {
-  display: none;
-  position: absolute;
-  top: 0;
-  left: 0;
-  border: none;
-}
+Depending on the visual style you use for previous, next and play/pause buttons, you might need to similarly add a background. Another approach is to move the button outside of the area where the image is displayed.
 
-.slide.current {
-  display: block;
-  z-index: 500;
-}
-~~~
+## Button Size
 
-{::nomarkdown}
-<%= code_end %>
-{:/nomarkdown}
+Use appropriately sized interactive elements (buttons, links) to allow [people with physical impairments](https://www.w3.org/WAI/intro/people-use-web/diversity#physical) to use the carousel more easily. This will also benefit users on mobile devices.
 
-The outcome (without any [functionality](functionality.html) applied) looks like this:
-
-{::nomarkdown}
-<%= sample_start %>
-{:/nomarkdown}
-
-<h3 role="presentation">Featured Articles:</h3>
-<div id="c1" class="carousel">
-    <ul>
-        <li class="slide" style="background-image: url('../../img/ex-teddy1.jpg');">
-            <h4>Space Teddy production reaches all-time high</h4>
-            <p>
-                Teddies in Space Inc. has released outstanding numbers for the last solar year.
-                <a href="…">Full Annual Report</a>
-            </p>
-        </li>
-        <li class="slide" style="background-image: url('../../img/ex-teddy2.jpg');">
-            <h4>New Space Teddy Announced!</h4>
-            <p>
-                Space Teddy 6 wears an aluminum space suit. Sapphire glass eyes are first used universe-wide.
-                <a href="…">Everything about the new model</a>
-            </p>
-        </li>
-        <li class="slide" style="background-image: url('../../img/ex-teddy3.jpg');">
-            <h4>Adventures of the Space Teddy</h4>
-            <p>
-                Using modern HTML5 technologies, the latest installment of our game performs great on your computer, tablet, or mobile.
-                <a href="…">Play the Game here!</a>
-            </p>
-        </li>
-    </ul>
-</div>
-
-<style>
-  .carousel, .slide {
-    width: 480px;
-    padding:0;
-    margin: 0;
-  }
-  .carousel {
-    position: relative;
-  }
-  .carousel ul {
-    margin:0;
-    padding: 0;
-  }
-  .slide {
-    /*position: absolute;*/
-    height: 360px;
-    background-size: cover;
-    position: relative;
-    margin-bottom:1em;
-    border:1px solid #333;
-  }
-  .slide h4 {
-    display:inline-block;
-    float:righ;
-    font-size: 1.25em;
-    margin:0;
-    padding: .25em;
-    text-align: right;
-    background-color: rgba(255,255,255,.8);
-    float:right;
-    border-radius: 0 0 0 .5em;
-  }
-  .slide p {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin:0;
-    clear:both;
-    padding: 5px;
-    background-color: rgba(255,255,255,.8);
-  }
-  .slide a {
-    display:block;
-    text-align: right;
-  }
-</style>
-
-<style>
-.carousel.active {
-  height: 360px;
-  overflow: hidden;
-  border: 1px solid #333;
-  position:relative;
-}
-
-.active .slide {
-  border: none;
-  display: none;
-  position:absolute;
-  top:0;
-  left:0;
-  z-index:200;
-}
-
-.slide.current {
-  display:block;
-  z-index: 500;
-}
-</style>
-
-<script>
-  var carousel = document.getElementById('c1');
-  carousel.querySelectorAll('.slide')[0].className = 'current slide';
-  carousel.className = 'active carousel';
-</script>
-
-{::nomarkdown}
-<%= sample_end %>
-{:/nomarkdown}
+As a rule of thumb, {::comment} See what I did there? {:/} a minimal physical size of 9 × 9 mm for interactive elements [is recommended](https://www.w3.org/TR/mobile-accessibility-mapping/#h-touch-target-size-and-spacing) and it helps if the element is surrounded by a small amount of inactive space. While you could use millimeters in CSS, the physical rendering size might differ from device to device depending on resolution and display size. Use a minimum of 45 × 45 px in CSS to cover a 9 × 9 mm space on many devices.
