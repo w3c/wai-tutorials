@@ -15,7 +15,7 @@ wcag_success_criteria:
 To implement an accessible carousel widget, provide a robust structure and user control:
 
 * **[Structure](structure.html):** Use semantic structure for the carousel, as it allows assistive technology to surface more information.
-* **[Styling](styling.html):** Style the carousel to make sure the content is easily readable for everyone.
+* **[Styling](styling.html):** Style the carousel to make sure the content is readable for everyone.
 * **[Functionality](functionality.html):** Add functionality to display and announce carousel items.
 * **[Animations](animations.html):** Add animation and ensure users have control over these animations.
 
