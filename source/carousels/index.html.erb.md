@@ -17,7 +17,7 @@ To implement an accessible carousel widget, provide a robust structure and user 
 * **[Structure](structure.html):** Use semantic structure for the carousel, as it allows assistive technology to surface more information.
 * **[Styling](styling.html):** Style the carousel to make sure the content is readable for everyone.
 * **[Functionality](functionality.html):** Add functionality to display and announce carousel items.
-* **[Animations](animations.html):** Add animation and ensure users have control over these animations.
+* **[Animations](animations.html):** Add a slide-over animation and ensure users can stop and resume it.
 
 See also the [complete working example](working-example.html) and [full code](full-code.html) of the example carousel.
 
