@@ -1,7 +1,7 @@
 ---
 title: Animations
 status: editors-draft
-order: 5
+order: 4
 wcag_success_criteria:
   - 2.2.2
 ---

@@ -1,7 +1,8 @@
 ---
 title: Styling
 status: editors-draft
-order: 3
+order: 5
+type: tips
 wcag_success_criteria:
 ---
 

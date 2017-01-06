@@ -1,7 +1,7 @@
 ---
 title: Functionality
 status: editors-draft
-order: 4
+order: 3
 wcag_success_criteria:
   - 1.3.1
   - 2.1.1
@@ -9,7 +9,7 @@ wcag_success_criteria:
   - 4.1.2
 ---
 
-Provide functionality to switch the carousel items being displayed, and to inform users about these changes.
+Provide functionality to switch the displayed carousel items and inform users about changes.
 
 ## Add previous and next buttons
 
@@ -45,56 +45,6 @@ ctrls.querySelector('.next').addEventListener('click', function(){
 carousel.appendChild(ctrls);
 ~~~
 
-{::nomarkdown}
-<%= code_end %>
-{:/nomarkdown}
-
-{::nomarkdown}
-<%= editors_note_start %>
-{:/nomarkdown}
-
-The following sentence and code example should probably go to the [styling page](styling.html).
-
-{::nomarkdown}
-<%= editors_note_end %>
-{:/nomarkdown}
-
-Visually the buttons appear as arrows overlaying the individual items.
-
-{::nomarkdown}
-<%= code_start('', 'CSS') %>
-{:/nomarkdown}
-
-~~~css
-.btn-prev,
-.btn-next {
-  position:absolute;
-  z-index: 700;
-  top: 50%;
-  margin-top: -2.5em;
-  border:0;
-  background: rgba(255,255,255,.6);
-  line-height: 1;
-  padding:10px 5px;
-  transition: padding .4s ease-out;
-}
-
-.btn-next:hover, .btn-next:focus,
-.btn-prev:hover, .btn-prev:focus {
-  padding-left: 15px;
-  padding-right:15px;
-}
-
-.btn-prev {
-  left:0;
-  border-radius: 0 .25em .25em 0;
-}
-
-.btn-next {
-  right:0;
-  border-radius: .25em 0 0 .25em;
-}
-~~~
 {::nomarkdown}
 <%= code_end %>
 {:/nomarkdown}
