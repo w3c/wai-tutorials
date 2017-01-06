@@ -1,9 +1,12 @@
 ---
 title: Styling
-status: editors-draft
+status: draft
 order: 5
 type: tips
 wcag_success_criteria:
+- 1.4.1
+- 1.4.3
+- 2.4.7
 ---
 
 ## Button Size

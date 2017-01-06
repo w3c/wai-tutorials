@@ -1,7 +1,7 @@
 ---
 title: Carousel Structure
 nav_title: Structure
-status: editors-draft
+status: draft
 order: 2
 wcag_success_criteria:
   - 1.3.1

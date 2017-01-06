@@ -1,6 +1,7 @@
 ---
 title: Complete Code
 order: 7
+status: draft
 type: tips
 ---
 

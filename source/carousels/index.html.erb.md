@@ -1,7 +1,7 @@
 ---
 title: Carousel Concepts
 tutorial_title: Carousels
-status: editors-draft
+status: draft
 order: 1
 topic_order: 4
 type: intro

@@ -1,11 +1,10 @@
 ---
 title: Functionality
-status: editors-draft
+status: draft
 order: 3
 wcag_success_criteria:
   - 1.3.1
   - 2.1.1
-  - 2.4.7
   - 4.1.2
 ---
 
