@@ -116,7 +116,7 @@ function setSlides(new_current, focus, transition) {
 
 Display a list with buttons for every item and highlight the current item. This allows users to get an overview of the carousel content, where they are in the sequence, and navigate directly to any item.
 
-The list with buttons, in the example below, is added using JavaScript, with the number on the button that corresponds to the slide. The buttons are numbered matching the corresponding carousel items. The button for the active carousel item is highlighted both visually and by using visually hidden text (for screen readers).
+The list with buttons, in the example below, is added using JavaScript, with the number on the button that corresponds to the slide. The buttons are numbered matching the corresponding carousel items. The button for the active carousel item is highlighted both [visually](styling.html#change-shape-to-indicate-status) and by using visually hidden text (for screen readers).
 
 {::nomarkdown}
 <%= code_start %>
@@ -141,41 +141,6 @@ The list with buttons, in the example below, is added using JavaScript, with the
     </button>
   </li>
 </ul>
-~~~
-{::nomarkdown}
-<%= code_end %>
-{:/nomarkdown}
-
-{::nomarkdown}
-<%= code_start('', 'CSS') %>
-{:/nomarkdown}
-
-~~~css
-.slidenav button {
-  border: 2px solid #036;
-  background-color: #036;
-  line-height: 1em;
-  height: 2em;
-  width: 2em;
-  font-weight: bold;
-  color: #fff;
-}
-
-.slidenav button.current {
-  border-radius: .5em;
-  background-color: #fff;
-  color: #333;
-}
-
-.slidenav button:hover,
-.slidenav button:focus {
-  border: 2px dashed #fff;
-}
-
-.slidenav button.current:hover,
-.slidenav button.current:focus {
-  border: 2px dashed #036;
-}
 ~~~
 {::nomarkdown}
 <%= code_end %>

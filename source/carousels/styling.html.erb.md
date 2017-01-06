@@ -6,6 +6,12 @@ type: tips
 wcag_success_criteria:
 ---
 
+## Button Size
+
+Use appropriately sized interactive elements (buttons, links) to allow [people with physical impairments](https://www.w3.org/WAI/intro/people-use-web/diversity#physical) to use the carousel more easily. This will also benefit users on mobile devices.
+
+As a rule of thumb, {::comment} See what I did there? {:/} a minimal physical size of 9 × 9 mm for interactive elements [is recommended](https://www.w3.org/TR/mobile-accessibility-mapping/#h-touch-target-size-and-spacing) and it helps if the element is surrounded by a small amount of inactive space. While you could use millimeters in CSS, the physical rendering size might differ from device to device depending on resolution and display size. Use a minimum of 45 × 45 px in CSS to cover a 9 × 9 mm space on many devices.
+
 ## Contrast
 
 Ensure sufficient contrast between the foreground and the background of text and interactive elements. This can be a challenge when text or buttons are positioned on top of images.
@@ -32,8 +38,8 @@ More information on contrasts and other aspects of how design influences web acc
 
 Depending on the visual style you use for previous, next and play/pause buttons, you might need to similarly add a background. Another approach is to move the button outside of the area where the image is displayed.
 
-## Button Size
+## Change shape to indicate status
 
-Use appropriately sized interactive elements (buttons, links) to allow [people with physical impairments](https://www.w3.org/WAI/intro/people-use-web/diversity#physical) to use the carousel more easily. This will also benefit users on mobile devices.
+![Example using different background colors and borders to distinguish between different states of otherwise unlabeled buttons.](carousels-paging-buttons.png){:.sideimage.left width="132px"} Provide buttons to navigate to any item in the carousel. Because there are often multiple buttons in a small space, it is often preferred to not label the buttons with the title of the slide. To give users at least some indication, a number is used in this example.
 
-As a rule of thumb, {::comment} See what I did there? {:/} a minimal physical size of 9 × 9 mm for interactive elements [is recommended](https://www.w3.org/TR/mobile-accessibility-mapping/#h-touch-target-size-and-spacing) and it helps if the element is surrounded by a small amount of inactive space. While you could use millimeters in CSS, the physical rendering size might differ from device to device depending on resolution and display size. Use a minimum of 45 × 45 px in CSS to cover a 9 × 9 mm space on many devices.
+It is also really important that the status of the button is clear. In this example a filled square is used for inactive buttons. The active button (that corresponds to the current item)has a white background, a blue border and slightly rounded corners. When a keyboard user accesses the navigation, the currently focused button will have a dashed border.
