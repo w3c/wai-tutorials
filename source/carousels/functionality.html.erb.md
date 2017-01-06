@@ -52,28 +52,33 @@ carousel.appendChild(ctrls);
 ### Announce the current item
 
 {::nomarkdown}
-<%= editors_note_start %>
-{:/nomarkdown}
+<%= ref :start %>
+{:/}
 
-The following sentence needs a link to a live region description or a short description in the margins. Probably also for WAI-ARIA.
+Use a [WAI-ARIA live region](https://www.w3.org/TR/wai-aria-1.1/#live_region_roles) to inform screen reader users when items change, and to indicate the currently active item. In this example the level “polite” is used to not interrupt screen reader users while they are reading other parts of the web page. As reading the whole item would be quite long, only the heading is read in this case.
 
-{::nomarkdown}
-<%= editors_note_end %>
-{:/nomarkdown}
-
-Use WAI-ARIA live region to inform screen reader users when items change, and to indicate the currently active item. In this example the level 'polite' is used to not interrupt screen reader users while they are reading other parts of the web page.
-
-Do not automatically move keyboard focus to the items in focus, to not draw away the user from other parts of the web page each time the items change. Also do not move keyboard focus when the previous and next buttons are used, to allow users to browse back and forth over the slides.
+Do _not_ move keyboard focus to the new current item when the carousel changes automatically, to not draw away the user from other parts of the web page each time the items change. Also do not move keyboard focus when the previous and next buttons are used, to allow users to browse back and forth over the slides.
 
 {::nomarkdown}
-<%= editors_note_start %>
-{:/nomarkdown}
+<%= ref :middle %>
+{:/}
 
-I feel that the following code example needs a bit more context.
+Find more information about WAI-ARIA in the [WAI-ARIA Overview](https://www.w3.org/WAI/intro/aria), the [WAI-ARIA Authoring Practices](https://www.w3.org/TR/wai-aria-practices-1.1/) and the [Specification](https://www.w3.org/TR/wai-aria-1.1/).
 
 {::nomarkdown}
-<%= editors_note_end %>
+<%= ref :end %>
+{:/}
+
+{::nomarkdown}
+<%= notes_start %>
 {:/nomarkdown}
+
+**Note:** In the following example `aria-atomic="true"` is used to ensure that the complete heading is read.
+
+{::nomarkdown}
+<%= notes_end %>
+{:/nomarkdown}
+
 
 {::nomarkdown}
 <%= code_start('') %>
@@ -95,10 +100,11 @@ ctrls.querySelector('.next').addEventListener('click', function(){
 function setSlides(new_current, focus, transition) {
   …
 
-  slides[index].removeAttribute('aria-live');
+  slides[index].querySelector('h4').removeAttribute('aria-live');
 
   if (announceSlide) {
-    slides[new_current].setAttribute('aria-live', 'polite');
+    slides[new_current].querySelector('h4').setAttribute('aria-atomic', 'true');
+    slides[new_current].querySelector('h4').setAttribute('aria-live', 'polite');
     announceSlide = false;
   }
   …
