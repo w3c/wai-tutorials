@@ -349,7 +349,7 @@ var myCarousel = (function() {
         var slide = event.target;
         removeClass(slide, 'in-transition');
         if (hasClass(slide, 'current'))  {
-          slide.removeAttribute('aria-live');
+          slide.querySelector('h4').removeAttribute('aria-live');
           announceSlide = false;
           if(setFocus) {
             slide.setAttribute('tabindex', '-1');
@@ -413,7 +413,8 @@ var myCarousel = (function() {
     slides[new_current].className = 'current slide';
     slides[new_current].removeAttribute('aria-hidden');
     if (announceSlide) {
-      slides[new_current].setAttribute('aria-live', 'polite');
+      slides[new_current].querySelector('h4').setAttribute('aria-atomic', 'true');
+      slides[new_current].querySelector('h4').setAttribute('aria-live', 'polite');
     }
 
     if(settings.slidenav) {
