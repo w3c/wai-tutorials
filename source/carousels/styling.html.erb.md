@@ -40,6 +40,70 @@ Depending on the visual style you use for previous, next and play/pause buttons,
 
 ## Change shape to indicate status
 
-![Example using different background colors and borders to distinguish between different states of otherwise unlabeled buttons.](carousels-paging-buttons.png){:.sideimage.left width="132px"} Provide buttons to navigate to any item in the carousel. Because there are often multiple buttons in a small space, it is often preferred to not label the buttons with the title of the slide. To give users at least some indication, a number is used in this example.
+Provide buttons to navigate to any item in the carousel. Because there are often multiple buttons in a small space, it is often preferred to not label the buttons with the title of the slide. To give users at least some indication, a number is used in this example.
 
-It is also really important that the status of the button is clear. In this example a filled square is used for inactive buttons. The active button (that corresponds to the current item)has a white background, a blue border and slightly rounded corners. When a keyboard user accesses the navigation, the currently focused button will have a dashed border.
+It is also really important that the status of the button is clear. In this example a filled square is used for buttons associated with items currently not shown. The “active” button (that is associated with the current item) has a white background, a blue border and slightly rounded corners. When a keyboard user focuses or a mouse user hovers a button, that button will have a dashed border.
+
+In the following example, the carousel is showing item 1.
+
+{::nomarkdown}
+<%= sample_start %>
+
+<style>
+.slidenav li {
+  display: inline-block;
+}
+.slidenav button {
+  border: 2px solid #036;
+  background-color: #036;
+  line-height: 1em;
+  height: 2em;
+  width: 2em;
+  font-weight: bold;
+  color: #fff;
+}
+
+.slidenav button.current {
+  border-radius: .5em;
+  background-color: #fff;
+  color: #333;
+}
+
+.slidenav button:hover,
+.slidenav button:focus {
+  border: 2px dashed #fff;
+}
+
+.slidenav button.current:hover,
+.slidenav button.current:focus {
+  border: 2px dashed #036;
+}
+</style>
+
+<ul class="slidenav as-sample">
+  <li>
+    <button class="current" data-slide="0" type="button">
+      <span class="visuallyhidden">News</span> 1
+      <span class="visuallyhidden">(Current Slide)</span>
+    </button>
+  </li>
+  <li>
+    <button data-slide="1" type="button">
+      <span class="visuallyhidden">News</span> 2
+    </button>
+  </li>
+  <li>
+    <button data-slide="2" type="button">
+      <span class="visuallyhidden">News</span> 3
+    </button>
+  </li>
+</ul>
+
+<style>
+  .slidenav.as-sample {
+    position: static;
+  }
+</style>
+
+<%= sample_end %>
+{:/nomarkdown}
