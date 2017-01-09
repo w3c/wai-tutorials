@@ -247,7 +247,7 @@ setTimeout(function(){
 
 var myCarousel = (function() {
 
-  var carousel, slides, index, slidenav, settings, timer, setFocus, animationSuspended, announceSlide = false;
+  var carousel, slides, index, slidenav, settings, timer, setFocus, animationSuspended;
 
   function forEachElement(elements, fn) {
     for (var i = 0; i < elements.length; i++)
@@ -281,20 +281,18 @@ var myCarousel = (function() {
 
     ctrls.className = 'controls';
     ctrls.innerHTML = '<li>' +
-        '<button type="button" class="btn-prev"><%= image_tag 'chevron-left.png', :alt => "Previous Item" %></button>' +
+        '<button type="button" class="btn-prev"><%= image_tag 'chevron-left.png', :alt => "Previous Item: " %><span class="visuallyhidden btn-label"></span></button>' +
       '</li>' +
       '<li>' +
-        '<button type="button" class="btn-next"><%= image_tag 'chevron-right.png', :alt => "Next Item" %>' +
+        '<button type="button" class="btn-next"><%= image_tag 'chevron-right.png', :alt => "Next Item: " %><span class="visuallyhidden btn-label"></button>' +
       '</li>';
 
     ctrls.querySelector('.btn-prev')
       .addEventListener('click', function () {
-        announceSlide = true;
         prevSlide();
       });
     ctrls.querySelector('.btn-next')
       .addEventListener('click', function () {
-        announceSlide = true;
         nextSlide();
       });
 
@@ -350,8 +348,6 @@ var myCarousel = (function() {
         var slide = event.target;
         removeClass(slide, 'in-transition');
         if (hasClass(slide, 'current'))  {
-          slide.querySelector('h4').removeAttribute('aria-live');
-          announceSlide = false;
           if(setFocus) {
             slide.setAttribute('tabindex', '-1');
             slide.focus();
@@ -408,15 +404,19 @@ var myCarousel = (function() {
 
     slides[new_next].className = 'next slide' + ((transition == 'next') ? ' in-transition' : '');
     slides[new_next].setAttribute('aria-hidden', 'true');
+    var new_next_label = slides[new_next].querySelector('h4').textContent;
+
     slides[new_prev].className = 'prev slide' + ((transition == 'prev') ? ' in-transition' : '');
     slides[new_prev].setAttribute('aria-hidden', 'true');
+    var new_prev_label = slides[new_prev].querySelector('h4').textContent;
 
     slides[new_current].className = 'current slide';
     slides[new_current].removeAttribute('aria-hidden');
-    if (announceSlide) {
-      slides[new_current].querySelector('h4').setAttribute('aria-atomic', 'true');
-      slides[new_current].querySelector('h4').setAttribute('aria-live', 'polite');
-    }
+
+    carousel.querySelector('.btn-prev>.btn-label').textContent = new_prev_label;
+    carousel.querySelector('.btn-next>.btn-label').textContent = new_next_label;
+
+    console.log(carousel.querySelector('.btn-prev>.btn-label'));
 
     if(settings.slidenav) {
       var buttons = carousel.querySelectorAll('.slidenav button[data-slide]');
