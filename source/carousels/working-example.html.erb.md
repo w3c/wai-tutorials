@@ -289,11 +289,11 @@ var myCarousel = (function() {
 
     ctrls.querySelector('.btn-prev')
       .addEventListener('click', function () {
-        prevSlide();
+        prevSlide(true);
       });
     ctrls.querySelector('.btn-next')
       .addEventListener('click', function () {
-        nextSlide();
+        nextSlide(true);
       });
 
     carousel.appendChild(ctrls);
@@ -388,8 +388,9 @@ var myCarousel = (function() {
     }
   }
 
-  function setSlides(new_current, setFocusHere, transition) {
+  function setSlides(new_current, setFocusHere, transition, announceItemHere) {
     setFocus = typeof setFocusHere !== 'undefined' ? setFocusHere : false;
+    announceItem = typeof announceItemHere !== 'undefined' ? announceItemHere : false;
     transition = typeof transition !== 'undefined' ? transition : 'none';
 
     new_current = parseFloat(new_current);
@@ -418,7 +419,10 @@ var myCarousel = (function() {
     slides[new_current].className = 'current slide';
     slides[new_current].removeAttribute('aria-hidden');
 
-    carousel.querySelector('.liveregion').textContent = 'Item ' + (new_current + 1) + ' of ' +   slides.length;
+
+    if (announceItem) {
+      carousel.querySelector('.liveregion').textContent = 'Item ' + (new_current + 1) + ' of ' +   slides.length;
+    }
 
     if(settings.slidenav) {
       var buttons = carousel.querySelectorAll('.slidenav button[data-slide]');
@@ -434,7 +438,8 @@ var myCarousel = (function() {
 
   }
 
-  function nextSlide() {
+  function nextSlide(announceItem) {
+    announceItem = typeof announceItem !== 'undefined' ? announceItem : false;
 
     var length = slides.length,
     new_current = index + 1;
@@ -443,7 +448,7 @@ var myCarousel = (function() {
       new_current = 0;
     }
 
-    setSlides(new_current, false, 'prev');
+    setSlides(new_current, false, 'prev', announceItem);
 
     if (settings.animate) {
       timer = setTimeout(nextSlide, 5000);
@@ -451,7 +456,9 @@ var myCarousel = (function() {
 
   }
 
-  function prevSlide() {
+  function prevSlide(announceItem) {
+    announceItem = typeof announceItem !== 'undefined' ? announceItem : false;
+
     var length = slides.length,
     new_current = index - 1;
 
@@ -459,7 +466,7 @@ var myCarousel = (function() {
       new_current = length-1;
     }
 
-    setSlides(new_current, false, 'next');
+    setSlides(new_current, false, 'next', announceItem);
 
   }
 
