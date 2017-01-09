@@ -40,24 +40,26 @@ setTimeout(function(){
 }
 }();
 
-/* Carousel by Eric Eggert for W3C */
+/*
+   Carousel Prototype
+   Eric Eggert for W3C
+*/
 
 var myCarousel = (function() {
 
   "use strict";
 
-  // Some variables for the instance of the carousel
-  var carousel,
-  slides,
-  index,
-  slidenav,
-  settings,
-  timer,
-  setFocus,
-  animationSuspended,
-  announceSlide = 'false';
+  // Initial variables
+  var carousel, slides, index, slidenav, settings, timer, setFocus, animationSuspended;
 
-  // Helper function for removing classes
+
+  // Helper function: Iterates over an array of elements
+  function forEachElement(elements, fn) {
+    for (var i = 0; i < elements.length; i++)
+      fn(elements[i], i);
+  }
+
+  // Helper function: Remove Class
   function removeClass(el, className) {
     if (el.classList) {
       el.classList.remove(className);
@@ -66,7 +68,7 @@ var myCarousel = (function() {
     }
   }
 
-  // Helper function for detecting if an element has a class
+  // Helper function: Test if element has a specific class
   function hasClass(el, className) {
     if (el.classList) {
       return el.classList.contains(className);
@@ -87,6 +89,7 @@ var myCarousel = (function() {
   //                        to be initiated by clicking
   //                        the play button.
   function init(set) {
+
     // Make settings available to all functions
     settings = set;
 
@@ -96,71 +99,67 @@ var myCarousel = (function() {
 
     carousel.className = 'active carousel';
 
-    // Add the previous/next controls
+
+    // Create unordered list for controls, and attach click events fo previous and next slide
     var ctrls = document.createElement('ul');
 
     ctrls.className = 'controls';
     ctrls.innerHTML = '<li>' +
-    '<button type="button" class="btn-prev"><img src="/img/chevron-left.png" alt="Previous Slide"></button>' +
-    '</li>' +
-    '<li>' +
-    '<button type="button" class="btn-next"><img src="/img/chevron-right.png" alt="Next Slide"></button>' +
-    '</li>';
+        '<button type="button" class="btn-prev"><img src="chevron-left.png" alt="Previous Item"></button>' +
+      '</li>' +
+      '<li>' +
+        '<button type="button" class="btn-next"><img src="chevron-right.png" alt="Next Item"></button>' +
+      '</li>';
 
     ctrls.querySelector('.btn-prev')
-      .addEventListener('click', prevSlide);
+      .addEventListener('click', function () {
+        prevSlide(true);
+      });
     ctrls.querySelector('.btn-next')
-      .addEventListener('click', nextSlide);
+      .addEventListener('click', function () {
+        nextSlide(true);
+      });
 
     carousel.appendChild(ctrls);
 
-    // Add list of slides and/or play/pause button
+    // If the carousel is animated or a slide navigation is requested in the settings, anoter unordered list that contains those elements is added. (Note that you cannot supress the navigation when it is animated.)
     if (settings.slidenav || settings.animate) {
       slidenav = document.createElement('ul');
 
       slidenav.className = 'slidenav';
 
-      var li = document.createElement('li');
-
       if (settings.animate) {
-
-        // Add Play/Pause button if the slider is animated
+        var li = document.createElement('li');
 
         if (settings.startAnimated) {
-          li.innerHTML = '<button data-stop=true><span class="visuallyhidden">Stop Animation </span>￭</button>';
+          li.innerHTML = '<button data-action="stop"><span class="visuallyhidden">Stop Animation </span>￭</button>';
         } else {
-          li.innerHTML = '<button data-start=true><span class="visuallyhidden">Start Animation </span>▶</button>';
+          li.innerHTML = '<button data-action="start"><span class="visuallyhidden">Start Animation </span>▶</button>';
         }
 
         slidenav.appendChild(li);
       }
 
       if (settings.slidenav) {
-
-        // Add button for each slide if slidenav = true
-        for (var i = slides.length - 1; i >= 0; i--) {
+        forEachElement(slides, function(el, i){
+          var li = document.createElement('li');
           var klass = (i===0) ? 'class="current" ' : '';
-          var kurrent = (i===0) ? ' <span class="visuallyhidden">(Current Slide)</span>' : '';
+          var kurrent = (i===0) ? ' <span class="visuallyhidden">(Current Item)</span>' : '';
 
           li.innerHTML = '<button '+ klass +'data-slide="' + i + '"><span class="visuallyhidden">News</span> ' + (i+1) + kurrent + '</button>';
           slidenav.appendChild(li);
-        }
+        });
       }
 
-      // Register click event on the slidenav
       slidenav.addEventListener('click', function(event) {
         var button = event.target;
         if (button.localName == 'button') {
           if (button.getAttribute('data-slide')) {
-            // If the button is from the slide list,
-            // stop the animation and go to the slide
             stopAnimation();
             setSlides(button.getAttribute('data-slide'), true);
-          } else if (button.getAttribute('data-stop')) {
-            // Stop animation if the stop button is activated
+          } else if (button.getAttribute('data-action') == "stop") {
             stopAnimation();
-          } else if (button.getAttribute('data-start')) {
-            // Start animation if the stop button is activated
+          } else if (button.getAttribute('data-action') == "start") {
             startAnimation();
           }
         }
@@ -170,46 +169,49 @@ var myCarousel = (function() {
       carousel.appendChild(slidenav);
     }
 
-    // Register a transitionend event so the slides can be
-    // hidden after the transition
+    // Add a live region to announce the slide number when using the previous/next buttons
+    var liveregion = document.createElement('div');
+    liveregion.setAttribute('aria-live', 'polite');
+    liveregion.setAttribute('aria-atomic', 'true');
+    liveregion.setAttribute('class', 'liveregion visuallyhidden');
+    carousel.appendChild(liveregion);
+
+    // After the slide transitioned, remove the in-transition class, if focus should be set, set the tabindex attribute to -1 and focus the slide.
     slides[0].parentNode.addEventListener('transitionend', function (event) {
       var slide = event.target;
       removeClass(slide, 'in-transition');
-      if (hasClass(slide, 'current')) {
-        // Also, if the global setFocus variable is set
-        // and the transition ended on the current slide,
-        // set the focus on this slide.
-        if (setFocus) {
-          // This is done if the user clicks a slidenav button.
+      if (hasClass(slide, 'current'))  {
+        if(setFocus) {
           slide.setAttribute('tabindex', '-1');
           slide.focus();
           setFocus = false;
         }
-        if (announceSlide) {
-          slide.removeAttribute('aria-live');
-          announceSlide = false;
+      }
+    });
+
+      // When the mouse enters the carousel, suspend the animation.
+      carousel.addEventListener('mouseenter', suspendAnimation);
+
+      // When the mouse leaves the carousel, and the animation is suspended, start the animation.
+      carousel.addEventListener('mouseleave', function(event) {
+        if (animationSuspended) {
+          startAnimation();
         }
-      }
-    });
+      });
 
-    // Suspend the animation if the mouse enters the carousel
-    // or if an element of the carousel (that is not the current
-    // slide) receives focus.
-    // (Re-)start animation when the mouse leaves or the focus
-    // is removed.
-    carousel.addEventListener('mouseenter', suspendAnimation);
-    carousel.addEventListener('mouseleave', startAnimation);
+      // When the focus enters the carousel, suspend the animation
+      carousel.addEventListener('focusin', function(event) {
+        if (!hasClass(event.target, 'slide')) {
+          suspendAnimation();
+        }
+      });
 
-    carousel.addEventListener('focusin', function(event) {
-      if (!hasClass(event.target, 'slide')) {
-        suspendAnimation();
-      }
-    });
-    carousel.addEventListener('focusout', function(event) {
-      if (!hasClass(event.target, 'slide')) {
-        startAnimation();
-      }
-    });
+      // When the focus leaves the carousel, and the animation is suspended, start the animation
+      carousel.addEventListener('focusout', function(event) {
+        if (!hasClass(event.target, 'slide') && animationSuspended) {
+          startAnimation();
+        }
+      });
 
     // Set the index (=current slide) to 0 – the first slide
     index = 0;
@@ -223,15 +225,18 @@ var myCarousel = (function() {
   }
 
   // Function to set a slide the current slide
-  function setSlides(new_current, focus, transition) {
-    // Both, focus and transition are optional parameters.
+  function setSlides(new_current, setFocusHere, transition, announceItemHere) {
+    // Focus, transition and announce Item are optional parameters.
     // focus denotes if the focus should be set after the
     // carousel advanced to slide number new_current.
     // transition denotes if the transition is going into the
     // next or previous direction.
+    // If announceItem is set to true, the live region’s text is changed (and announced)
     // Here defaults are set:
-    setFocus = typeof focus !== 'undefined' ? focus : false;
+
+    setFocus = typeof setFocusHere !== 'undefined' ? setFocusHere : false;
     transition = typeof transition !== 'undefined' ? transition : 'none';
+    announceItem = typeof announceItemHere !== 'undefined' ? announceItemHere : false;
 
     new_current = parseFloat(new_current);
 
@@ -255,26 +260,21 @@ var myCarousel = (function() {
     }
 
     // Add classes to the previous, next and current slide
-    slides[new_next].className = 'next slide';
-    if (transition == 'next') {
-      slides[new_next].className = 'next slide in-transition';
-      slides[new_next].setAttribute('aria-hidden', 'true');
-    }
+    slides[new_next].className = 'next slide' + ((transition == 'next') ? ' in-transition' : '');
+    slides[new_next].setAttribute('aria-hidden', 'true');
 
-    slides[new_prev].className = 'prev slide';
-    if (transition == 'prev') {
-      slides[new_prev].className = 'prev slide in-transition';
-      slides[new_next].setAttribute('aria-hidden', 'true');
-    }
+    slides[new_prev].className = 'prev slide' + ((transition == 'prev') ? ' in-transition' : '');
+    slides[new_prev].setAttribute('aria-hidden', 'true');
 
     slides[new_current].className = 'current slide';
     slides[new_current].removeAttribute('aria-hidden');
 
-    if (announceSlide) {
-      slides[new_current].setAttribute('aria-live', 'polite');
+    // Update the text in the live region which is then announced by screen readers.
+    if (announceItem) {
+      carousel.querySelector('.liveregion').textContent = 'Item ' + (new_current + 1) + ' of ' + slides.length;
     }
 
-    // Update the slidenav buttons
+    // Update the buttons in the slider navigation to match the currently displayed  item
     if(settings.slidenav) {
       var buttons = carousel.querySelectorAll('.slidenav button[data-slide]');
       for (var j = buttons.length - 1; j >= 0; j--) {
@@ -282,7 +282,7 @@ var myCarousel = (function() {
         buttons[j].innerHTML = '<span class="visuallyhidden">News</span> ' + (j+1);
       }
       buttons[new_current].className = "current";
-      buttons[new_current].innerHTML = '<span class="visuallyhidden">News</span> ' + (new_current+1) + ' <span class="visuallyhidden">(Current Slide)</span>';
+      buttons[new_current].innerHTML = '<span class="visuallyhidden">News</span> ' + (new_current+1) + ' <span class="visuallyhidden">(Current Item)</span>';
     }
 
     // Set the global index to the new current value
@@ -291,7 +291,8 @@ var myCarousel = (function() {
   }
 
   // Function to advance to the next slide
-  function nextSlide() {
+  function nextSlide(announceItem) {
+    announceItem = typeof announceItem !== 'undefined' ? announceItem : false;
 
     var length = slides.length,
     new_current = index + 1;
@@ -300,12 +301,10 @@ var myCarousel = (function() {
       new_current = 0;
     }
 
-    announceSlide = true;
-
     // If we advance to the next slide, the previous needs to be
     // visible to the user, so the third parameter is 'prev', not
     // next.
-    setSlides(new_current, false, 'prev');
+    setSlides(new_current, false, 'prev', announceItem);
 
     // If the carousel is animated, advance to the next
     // slide after 5s
@@ -316,20 +315,21 @@ var myCarousel = (function() {
   }
 
   // Function to advance to the previous slide
-  function prevSlide() {
+  function prevSlide(announceItem) {
+    announceItem = typeof announceItem !== 'undefined' ? announceItem : false;
+
     var length = slides.length,
     new_current = index - 1;
 
+    // If we are already on the first slide, show the last slide instead.
     if(new_current < 0) {
       new_current = length-1;
     }
 
-    announceSlide = true;
-
     // If we advance to the previous slide, the next needs to be
     // visible to the user, so the third parameter is 'next', not
     // prev.
-    setSlides(new_current, false, 'next');
+    setSlides(new_current, false, 'next', announceItem);
 
   }
 
@@ -338,23 +338,19 @@ var myCarousel = (function() {
     clearTimeout(timer);
     settings.animate = false;
     animationSuspended = false;
-    var _this = carousel.querySelector('[data-stop], [data-start]');
+    _this = carousel.querySelector('[data-action]');
     _this.innerHTML = '<span class="visuallyhidden">Start Animation </span>▶';
-    _this.removeAttribute('data-stop');
-    _this.setAttribute('data-start', 'true');
+    _this.setAttribute('data-action', 'start');
   }
 
   // Function to start the animation
   function startAnimation() {
     settings.animate = true;
     animationSuspended = false;
-    timer = setTimeout(function () {
-      nextSlide();
-    }, 5000);
-    var _this = carousel.querySelector('[data-stop], [data-start]');
+    timer = setTimeout(nextSlide, 5000);
+    _this = carousel.querySelector('[data-action]');
     _this.innerHTML = '<span class="visuallyhidden">Stop Animation </span>￭';
-    _this.setAttribute('data-stop', 'true');
-    _this.removeAttribute('data-start');
+    _this.setAttribute('data-action', 'stop');
   }
 
   // Function to suspend the animation
