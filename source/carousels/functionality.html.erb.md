@@ -12,7 +12,7 @@ Provide functionality to switch the displayed carousel items and inform users ab
 
 ## Add previous and next buttons
 
-Provide buttons to allow users to switch back and forth between items. Use `<button>` elements provide semantic meaning, support by assistive technologies, and consistent keyboard use out of the box. Create and add the buttons using JavaScript, because they are only functional when JavaScript is loaded anyway. Style them as needed.
+Provide buttons to allow users to switch back and forth between items. Use `<button>` elements provide semantic meaning, support by assistive technologies, and consistent keyboard use out of the box. Create and add the buttons using JavaScript, because they are only functional when JavaScript is loaded anyway.
 
 {::nomarkdown}
 <%= code_start('', 'JavaScript') %>
@@ -33,12 +33,12 @@ ctrls.innerHTML = '<li>' +
     '</button>' +
   '</li>';
 
-ctrls.querySelector('.prev').addEventListener('click', function(){
-  prevSlide();
+ctrls.querySelector('.btn-prev').addEventListener('click', function(){
+  prevSlide(true);
 });
 
-ctrls.querySelector('.next').addEventListener('click', function(){
-  nextSlide();
+ctrls.querySelector('.btn-next').addEventListener('click', function(){
+  nextSlide(true);
 });
 
 carousel.appendChild(ctrls);
@@ -54,7 +54,7 @@ carousel.appendChild(ctrls);
 <%= ref :start %>
 {:/}
 
-Use a [WAI-ARIA live region](https://www.w3.org/TR/wai-aria-1.1/#live_region_roles) to inform screen reader users when items change, and to indicate the currently active item. In this example the level “polite” is used to not interrupt screen reader users while they are reading other parts of the web page. As reading the whole item would be quite long, only the heading is read in this case.
+Use a [WAI-ARIA live region](https://www.w3.org/TR/wai-aria-1.1/#live_region_roles) to inform screen reader users about the currently shown item. In this example a visually hidden, “polite” live region is used and added to the carousel when the carousel is initialized. Then, when clicking on the previous or next buttons, the text “Item x of y” (with <var>x</var> for current item number and <var>y</var> for the number of items) is set to this live region. Capable screen readers then announce this text.
 
 Do _not_ move keyboard focus to the new current item when the carousel changes automatically, to not draw away the user from other parts of the web page each time the items change. Also do not move keyboard focus when the previous and next buttons are used, to allow users to browse back and forth over the slides.
 
@@ -69,47 +69,29 @@ Find more information about WAI-ARIA in the [WAI-ARIA Overview](https://www.w3.o
 {:/}
 
 {::nomarkdown}
-<%= notes_start %>
-{:/nomarkdown}
-
-**Note:** In the following example `aria-atomic="true"` is used to ensure that the complete heading is read.
-
-{::nomarkdown}
-<%= notes_end %>
-{:/nomarkdown}
-
-
-{::nomarkdown}
-<%= code_start('') %>
+<%= code_start('', 'Add a live region to the carousel') %>
 {:/nomarkdown}
 
 ~~~js
-ctrls.querySelector('.prev').addEventListener('click', function(){
-  announceSlide = true;
-  prevSlide();
-});
+var liveregion = document.createElement('div');
+liveregion.setAttribute('aria-live', 'polite');
+liveregion.setAttribute('aria-atomic', 'true');
+liveregion.setAttribute('class', 'liveregion visuallyhidden');
+carousel.appendChild(liveregion);
+~~~
 
-ctrls.querySelector('.next').addEventListener('click', function(){
-  announceSlide = true;
-  nextSlide();
-});
+{::nomarkdown}
+<%= code_end %>
+{:/nomarkdown}
 
-…
+{::nomarkdown}
+<%= code_start('', 'Change text in the liveregion to have that text announced') %>
+{:/nomarkdown}
 
-function setSlides(new_current, focus, transition) {
-  …
-
-  slides[index].querySelector('h4').removeAttribute('aria-live');
-
-  if (announceSlide) {
-    slides[new_current].querySelector('h4').setAttribute('aria-atomic', 'true');
-    slides[new_current].querySelector('h4').setAttribute('aria-live', 'polite');
-    announceSlide = false;
-  }
-  …
+~~~js
+if (announceItem) {
+  carousel.querySelector('.liveregion').textContent = 'Item ' + (new_current + 1) + ' of ' + slides.length;
 }
-
-
 ~~~
 
 {::nomarkdown}
@@ -218,42 +200,3 @@ The list with buttons, in the example below, is added using JavaScript, with the
 When users select an item through those navigation buttons, the focus should be set on the selected item. In this case the focus needs to be set to the `<li>` element that has the class `current` set, after the change or transition. This makes interaction easier for keyboard and assistive technology users.
 
 By default, `<li>` elements cannot receive focus. By setting its `tabindex` attribute to `-1` the element is enabled to receive focus through JavaScript.
-
-{::nomarkdown}
-<%= code_start('', 'JavaScript') %>
-{:/nomarkdown}
-
-~~~js
-function setSlides(new_current, setFocus) {
-  setFocus = typeof setFocusHere !== 'undefined' ? setFocusHere : false;
-
-  new_current = parseFloat(new_current);
-
-  var length = slides.length;
-
-  slide[index].className = 'slide';
-  slides[new_current].className = 'current slide';
-
-  buttons[index].className = "";
-  buttons[new_current].className = "current";
-
-  if (setFocus) {
-    // Only if the slide was directly
-    // picked from the list of slides
-    slides[new_current].setAttribute('tabindex', '-1');
-    slides[new_current].focus();
-  }
-
-  index = new_current;
-}
-
-slidenav.addEventListener('click', function(event) {
-  if (event.target.localName == 'button') {
-    setSlides(event.target.getAttribute('data-slide'), true);
-  }
-}, true);
-~~~
-
-{::nomarkdown}
-<%= code_end %>
-{:/nomarkdown}
