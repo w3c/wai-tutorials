@@ -281,10 +281,10 @@ var myCarousel = (function() {
 
     ctrls.className = 'controls';
     ctrls.innerHTML = '<li>' +
-        '<button type="button" class="btn-prev"><%= image_tag 'chevron-left.png', :alt => "Previous Item: " %><span class="visuallyhidden btn-label"></span></button>' +
+        '<button type="button" class="btn-prev"><%= image_tag 'chevron-left.png', :alt => "Previous Item" %></button>' +
       '</li>' +
       '<li>' +
-        '<button type="button" class="btn-next"><%= image_tag 'chevron-right.png', :alt => "Next Item: " %><span class="visuallyhidden btn-label"></button>' +
+        '<button type="button" class="btn-next"><%= image_tag 'chevron-right.png', :alt => "Next Item" %> </button>' +
       '</li>';
 
     ctrls.querySelector('.btn-prev')
@@ -343,6 +343,12 @@ var myCarousel = (function() {
       carousel.className = 'active carousel with-slidenav';
       carousel.appendChild(slidenav);
     }
+
+    var liveregion = document.createElement('div');
+    liveregion.setAttribute('aria-live', 'polite');
+    liveregion.setAttribute('aria-atomic', 'true');
+    liveregion.setAttribute('class', 'liveregion visuallyhidden');
+    carousel.appendChild(liveregion);
 
       slides[0].parentNode.addEventListener('transitionend', function (event) {
         var slide = event.target;
@@ -404,19 +410,15 @@ var myCarousel = (function() {
 
     slides[new_next].className = 'next slide' + ((transition == 'next') ? ' in-transition' : '');
     slides[new_next].setAttribute('aria-hidden', 'true');
-    var new_next_label = slides[new_next].querySelector('h4').textContent;
 
     slides[new_prev].className = 'prev slide' + ((transition == 'prev') ? ' in-transition' : '');
     slides[new_prev].setAttribute('aria-hidden', 'true');
-    var new_prev_label = slides[new_prev].querySelector('h4').textContent;
+
 
     slides[new_current].className = 'current slide';
     slides[new_current].removeAttribute('aria-hidden');
 
-    carousel.querySelector('.btn-prev>.btn-label').textContent = new_prev_label;
-    carousel.querySelector('.btn-next>.btn-label').textContent = new_next_label;
-
-    console.log(carousel.querySelector('.btn-prev>.btn-label'));
+    carousel.querySelector('.liveregion').textContent = 'Item ' + (new_current + 1) + ' of ' +   slides.length;
 
     if(settings.slidenav) {
       var buttons = carousel.querySelectorAll('.slidenav button[data-slide]');
