@@ -69,6 +69,7 @@ The `<caption>` element is placed directly as a child of the `<table>` element.
 ~~~ html
 <table>
   <caption>Concerts</caption>
+  […]
   <tr>
     <th>Date</th>
     <th>Event</th>
