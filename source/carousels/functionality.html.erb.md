@@ -12,7 +12,7 @@ Provide functionality to switch the displayed carousel items and inform users ab
 
 ## Add previous and next buttons
 
-Provide buttons to allow users to switch back and forth between items. Use `<button>` elements provide semantic meaning, support by assistive technologies, and consistent keyboard use out of the box. Create and add the buttons using JavaScript, because they are only functional when JavaScript is loaded anyway.
+Provide buttons to allow users to switch back and forth between items. Use `<button>` elements to provide semantic meaning, support by assistive technologies, and consistent keyboard use out of the box. Create and add the buttons using JavaScript, because they are only functional when JavaScript is loaded anyway.
 
 {::nomarkdown}
 <%= code_start('', 'JavaScript') %>
@@ -56,7 +56,7 @@ carousel.appendChild(ctrls);
 
 Use a [WAI-ARIA live region](https://www.w3.org/TR/wai-aria-1.1/#live_region_roles) to inform screen reader users about the currently shown item. In this example a visually hidden, “polite” live region is used and added to the carousel when the carousel is initialized. Then, when clicking on the previous or next buttons, the text “Item x of y” (with <var>x</var> for current item number and <var>y</var> for the number of items) is set to this live region. Capable screen readers then announce this text.
 
-Do _not_ move keyboard focus to the new current item when the carousel changes automatically, to not draw away the user from other parts of the web page each time the items change. Also do not move keyboard focus when the previous and next buttons are used, to allow users to browse back and forth over the slides.
+Do _not_ automatically move keyboard focus to the new current item when the carousel changes, to avoid drawing away the user from other parts of the web page each time items change. Also do not move keyboard focus when the previous and next buttons are used, to allow users to browse back and forth over the slides.
 
 {::nomarkdown}
 <%= ref :middle %>
