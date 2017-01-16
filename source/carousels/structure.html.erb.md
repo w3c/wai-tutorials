@@ -12,7 +12,7 @@ wcag_techniques:
   - H48
 ---
 
-Structural markup ensures that the content of a carousel can be used in a variety of situations. For example, it can be presented as a list of articles instead of a more complex carousel on a mobile device.
+Structural markup ensures that the content of a carousel can be used in a variety of situations. For example, a carousel with proper markup could be presented as a list of articles on a mobile device, if needed.
 
 ## General Structure
 
@@ -54,7 +54,7 @@ See the Page Structure Tutorial for more information on [regions](/page-structur
 
 The content of individual carousel items often consists of just images, when used for an image gallery. However more complex content, such as teasers, articles, or entire sections of web pages can also be shown inside carousels. In any case, use appropriate markup to ensure that the structure and meaning of the content is conveyed. Such markup may include headings, sections, lists, articles, and other elements as needed.
 
-This first example shows a carousel item for simple content:
+This first example shows a carousel item with images as content:
 
 {::nomarkdown}
 <%= code_start('', 'Example 1') %>
