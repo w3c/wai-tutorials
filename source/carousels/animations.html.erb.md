@@ -95,16 +95,6 @@ During transitions, both items, current and next are visible. This also means th
 In the following example the item that is being activated gets an `in-transition` class that makes it visible. The `aria-hidden` is attribute set to `true` to hide the item from assistive technologies. When the transition completes, the `aria-hidden` attribute is removed.
 
 {::nomarkdown}
-<%= editors_note_start %>
-{:/nomarkdown}
-
-The following example can be better described.
-
-{::nomarkdown}
-<%= editors_note_end %>
-{:/nomarkdown}
-
-{::nomarkdown}
 <%= code_start('', 'JavaScript') %>
 {:/nomarkdown}
 
