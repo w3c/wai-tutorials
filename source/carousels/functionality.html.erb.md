@@ -12,7 +12,7 @@ Provide functionality to select from the displayed carousel items and inform use
 
 ## Add previous and next buttons
 
-Provide buttons to allow users to switch back and forth between items. Use `<button>` elements provide semantic meaning, support by assistive technologies, and consistent keyboard use out of the box. Create and add the buttons using JavaScript, because they are only functional when JavaScript is loaded anyway.
+Provide buttons to allow users to switch back and forth between items. Use `<button>` elements to provide semantic meaning, support for assistive technologies, and consistent keyboard use out of the box. Create and add the buttons using JavaScript, because they are only functional when JavaScript is loaded.
 
 {::nomarkdown}
 <%= code_start('', 'JavaScript') %>
