@@ -14,7 +14,7 @@ wcag_success_criteria:
 
 To implement an accessible carousel widget, provide a robust structure and user control:
 
-* **[Structure](structure.html):** Use semantic structure for the carousel, as it allows assistive technology to access more information.
+* **[Structure](structure.html):**  Use semantic structure for the carousel to support proper function of assistive technology.
 * **[Functionality](functionality.html):** Add functionality to display and announce carousel items.
 * **[Animations](animations.html):** Add a slide-over animation and ensure users can stop and resume it.
 * **[Styling](styling.html):** Style the carousel to make sure it’s useable and readable by everyone.
@@ -28,7 +28,7 @@ Carousels show a collection of items one at a time. They are also known as “sl
 ## What are the key points?
 
 - Users must be able to pause carousel movement because it can be too fast or distracting, making text hard to read.
-- All functionality, including navigating between carousel items, needs to be operable by keyboard.
+- All functionality, including navigating between carousel items, must be operable by keyboard.
 - Carousel item changes must be announced to all users.
 - The keyboard position (“focus”) is managed in a reasonable and comprehensible fashion.
 
