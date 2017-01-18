@@ -32,6 +32,8 @@ Carousels show a collection of items one at a time. They are also known as “sl
 - Carousel item changes must be announced to all users.
 - The keyboard position (“focus”) is managed in a reasonable and comprehensible fashion.
 
+In addition to these accessibility-focused points, [research shows](http://shouldiuseacarousel.com) that carousels can hurt usability and discoverability of content for _all users_.
+
 ## Why is this important?
 
 Carousels are typically prominently located and are used to provide navigation or show page content. Accessible carousels are essential for many website users including:
