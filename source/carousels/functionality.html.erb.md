@@ -8,7 +8,7 @@ wcag_success_criteria:
   - 4.1.2
 ---
 
-Provide functionality to switch the displayed carousel items and inform users about changes.
+Provide functionality to select from the displayed carousel items and inform users about changes.
 
 ## Add previous and next buttons
 
