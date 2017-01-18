@@ -52,7 +52,7 @@ See the Page Structure Tutorial for more information on [regions](/page-structur
 
 ## Carousel items
 
-The content of individual carousel items often consists of just images, when used for an image gallery. However more complex content, such as teasers, articles, or entire sections of web pages can also be shown inside carousels. In any case, use appropriate markup to ensure that the structure and meaning of the content is conveyed. Such markup may include headings, sections, lists, articles, and other elements as needed.
+Carousels are often used as a gallery to display a series of images. However more complex content, such as teasers, articles, or entire sections of web pages can also be shown inside carousels. In any case, use appropriate markup to ensure that the structure and meaning of the content is conveyed. Such markup may include headings, sections, lists, articles, and other elements as needed.
 
 This first example shows a carousel item with images as content:
 
