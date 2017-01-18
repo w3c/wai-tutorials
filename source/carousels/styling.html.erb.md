@@ -10,41 +10,21 @@ wcag_success_criteria:
 
 ## Button Size
 
-Use appropriately sized interactive elements (buttons, links) to allow [people with physical impairments](https://www.w3.org/WAI/intro/people-use-web/diversity#physical) to use the carousel more easily. This will also benefit users on mobile devices.
+Use appropriately sized buttons and links to allow [people with physical impairments](https://www.w3.org/WAI/intro/people-use-web/diversity#physical) to use the carousel more easily. This will also benefit people using touch screens.
 
 As a rule of thumb, {::comment} See what I did there? {:/} a minimal physical size of 9 × 9 mm for interactive elements [is recommended](https://www.w3.org/TR/mobile-accessibility-mapping/#h-touch-target-size-and-spacing) and it helps if the element is surrounded by a small amount of inactive space. While you could use millimeters in CSS, the physical rendering size might differ from device to device depending on resolution and display size. Use a minimum of 45 × 45 px in CSS to cover a 9 × 9 mm space on many devices.
 
 ## Contrast
 
-Ensure sufficient contrast between the foreground and the background of text and interactive elements. This can be a challenge when text or buttons are positioned on top of images.
+Ensure sufficient contrast between the foreground and the background of text, links, and buttons. This can be a challenge when text or buttons are positioned on top of images. You can use a (semi-transparent) background color or move the buttons outside of the image to ensure sufficient contrast.
 
-Text needs to have a 3:1 ratio if the font size is above 18.5 px (14 pt) bold or above 24 px (18 pt) normal, and a 4.5:1 ratio otherwise. This includes text on images.
+## Labels
 
-{::nomarkdown}
-<%= ref :start %>
-{:/}
+Typically space on the carousel is too limited to provide the full title of each item on the buttons. In this case the items are numbered and used at the button text. @@ In addition, hidden labels can be used to provide the full titles, especially for the next and previous buttons.
 
-![Example using semi-transparent background colors to ensure sufficient contrast.](carousels-styling-contrast.png){:.sideimage.left} While there are no contrast guidelines about other aspects of the interface of a website, it is best practice to ensure the same contrast levels for buttons and other interactive elements. This allows [people with visual disabilities](https://www.w3.org/WAI/intro/people-use-web/diversity#visual) to see and interact with the carousel.
+## Indicating states
 
-To ensure sufficient contrast, use a [browser plugin](https://www.w3.org/WAI/ER/tools/?q=wcag-20-w3c-web-content-accessibility-guidelines-20&q=browser-plugin) to test the contrast of your text colors. If you place text on top of an image, a (semi-transparent) background color can help to maintain the contrast regardless of the image used.
-
-{::nomarkdown}
-<%= ref :middle %>
-{:/}
-
-More information on contrasts and other aspects of how design influences web accessibility will be provided in a future _Design Tutorial_. In the meantime find more information in the related documents below.
-
-{::nomarkdown}
-<%= ref :end %>
-{:/}
-
-Depending on the visual style you use for previous, next and play/pause buttons, you might need to similarly add a background. Another approach is to move the button outside of the area where the image is displayed.
-
-## Change shape to indicate status
-
-Provide buttons to navigate to any item in the carousel. Because there are often multiple buttons in a small space, it is often preferred to not label the buttons with the title of the slide. To give users at least some indication, a number is used in this example.
-
-It is also really important that the status of the button is clear. In this example a filled square is used for buttons associated with items currently not shown. The “active” button (that is associated with the current item) has a white background, a blue border and slightly rounded corners. When a keyboard user focuses or a mouse user hovers a button, that button will have a dashed border.
+Since the buttons are typically small, it is important to indicate their status both in color and shape (in addition to proper naming and labeling). In this example a filled square is used for buttons associated with items currently not shown. The “active” button (that is associated with the current item) has a white background, a blue border and slightly rounded corners. When a keyboard user focuses or a mouse user hovers a button, that button will have a dashed border.
 
 In the following example, the carousel is showing item 1.
 
