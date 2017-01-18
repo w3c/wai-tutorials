@@ -2,7 +2,6 @@
 title: Styling
 status: draft
 order: 5
-type: tips
 wcag_success_criteria:
 - 1.4.1
 - 1.4.3
