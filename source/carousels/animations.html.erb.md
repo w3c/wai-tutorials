@@ -48,7 +48,7 @@ Provide a button to allow users stop and resume animation. The example below ill
 
 ## Pause on mouse hover and keyboard focus
 
-Pause the carousel animation when the mouse pointer is hovering over the carousel or when it receives keyboard focus. Pausing on mouse hover is useful for people who need more time to read the content and makes it easier to click links in the carousel. Keyboard users do not use their position when the carousel is paused.
+Pause the carousel animation when the mouse pointer is hovering over the carousel or when it receives keyboard focus. Pausing on mouse hover is useful for people who need more time to read the content and makes it easier to click links in the carousel. Keyboard users do not lose their position when the carousel is paused.
 
 {::nomarkdown}
 <%= code_start %>
