@@ -12,7 +12,7 @@ wcag_techniques:
   - H48
 ---
 
-Structural markup ensures that the content of a carousel can be used in a variety of situations. For example, a carousel with proper markup could be presented as a list of articles on a mobile device, if needed.
+Structural markup ensures that the content of a carousel can be used in a variety of situations. For example, a carousel with proper markup could be presented as a list of articles on a mobile device.
 
 ## General Structure
 
