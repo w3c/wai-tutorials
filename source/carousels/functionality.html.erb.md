@@ -101,9 +101,23 @@ if (announceItem) {
 ## Indicate items and provide access
 {:.newex}
 
+{::nomarkdown}
+<%= ref :start %>
+{:/}
+
 Display a list with buttons for every item and highlight the current item. This allows users to get an overview of the carousel content, where they are in the sequence, and navigate directly to any item.
 
-The list with buttons, in the example below, is added using JavaScript, with the number on the button that corresponds to the slide. The buttons are numbered matching the corresponding carousel items. The button for the active carousel item is highlighted both [visually](styling.html#change-shape-to-indicate-status) and by using visually hidden text (for screen readers).
+The list with buttons, in the example below, is added using JavaScript, with the number on the button that corresponds to the slide. The buttons are numbered matching the corresponding carousel items. The button for the active carousel item is highlighted both visually, and by using visually hidden text (for screen readers).
+
+{::nomarkdown}
+<%= ref :middle %>
+{:/}
+
+See the [carousel styling](styling.html) page for more information on how to highlight the active carousel item in an accessible way.
+
+{::nomarkdown}
+<%= ref :end %>
+{:/}
 
 {::nomarkdown}
 <%= code_start %>
