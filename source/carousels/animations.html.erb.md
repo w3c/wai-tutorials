@@ -10,7 +10,7 @@ Provide users with control over animations in carousels. Pausing animation is es
 
 ## Add Play/Stop button
 
-Provide a button to allow users stop and resume animation. The example below illustrates how such a button can be marked-up. The button label and its function changes, depending on whether the animation is currently running or not.
+Provide a button to allow users to stop and resume animation. The example below illustrates how such a button can be marked-up. The button label and its function changes, depending on whether the animation is currently running or not.
 
 {::nomarkdown}
 <%= code_start('','While animation is running') %>
