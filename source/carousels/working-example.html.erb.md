@@ -11,25 +11,25 @@ status: draft
 <h3 role="presentation">Featured Articles:</h3>
 <div id="c" class="carousel">
     <ul>
-        <li class="slide" style="background-image: url('../../img/ex-slide1.jpg');">
-            <h4>Production reaches all-time high</h4>
+        <li class="slide" style="background-image: url('../../img/ex-teddy1.jpg');">
+            <h4>Space Teddy production reaches all-time high</h4>
             <p>
-                ACME Inc. has released outstanding numbers for the last year.
+                Teddies in Space Inc. has released outstanding numbers for the last solar year.
                 <a href="…">Full Annual Report</a>
             </p>
         </li>
-        <li class="slide" style="background-image: url('../../img/ex-slide2.jpg');">
-            <h4>New Product Announced!</h4>
+        <li class="slide" style="background-image: url('../../img/ex-teddy2.jpg');">
+            <h4>New Space Teddy Announced!</h4>
             <p>
-                The new ACME Inc. product is one of its kind.
+                Space Teddy 6 wears an aluminum space suit. Sapphire glass eyes are first used universe-wide.
                 <a href="…">Everything about the new model</a>
             </p>
         </li>
-        <li class="slide" style="background-image: url('../../img/ex-slide3.jpg');">
-            <h4>Interactive ACME Inc. Facilities Guide</h4>
+        <li class="slide" style="background-image: url('../../img/ex-teddy3.jpg');">
+            <h4>Adventures of the Space Teddy</h4>
             <p>
-                Using modern HTML5 technologies, you can now explore our production facilities.
-                <a href="…">Visit them here!</a>
+                Using modern HTML5 technologies, the latest installment of our game performs great on your computer, tablet, or mobile.
+                <a href="…">Play the Game here!</a>
             </p>
         </li>
     </ul>
