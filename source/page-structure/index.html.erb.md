@@ -12,9 +12,9 @@ A good page structure makes it easier for everyone to understand the content and
 
 * **[Page Regions](regions.html):** Identify and mark up regions on web pages using HTML5 and WAI-ARIA roles.
 
-* **[Page Labels](labels.html):** <span class="todo">@@@</span>
+* **[Labeling Regions](labels.html):** Name regions to allow users to distinguish and access them.
 
-* **[Search Region](search.html):** <span class="todo">@@@</span>
+* **[Search Region](search.html):** Direct access to a search functionality, when present, makes it easy to find content on websites.
 
 * **[Headings](headings.html):** Add logically nested headings of different levels to label sections of content.
 
