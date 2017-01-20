@@ -10,7 +10,7 @@ wcag_success_criteria:
 
 ## Button Size
 
-Use appropriately sized interactive buttons and links to allow [people with physical impairments](https://www.w3.org/WAI/intro/people-use-web/diversity#physical) to use the carousel more easily. This will also benefit people using touch screens.
+Use appropriately sized interactive buttons and links to allow people with physical impairments to use the carousel more easily. This will also benefit people using touch screens.
 
 As a rule of thumb, {::comment} See what I did there? {:/} a minimal physical size of 9 × 9 mm for interactive elements [is recommended](https://www.w3.org/TR/mobile-accessibility-mapping/#h-touch-target-size-and-spacing) and it helps if the element is surrounded by a small amount of inactive space. While you could use millimeters in CSS, the physical rendering size might differ from device to device depending on resolution and display size. Use a minimum of 45 × 45 px in CSS to cover a 9 × 9 mm space on many devices.
 
@@ -36,7 +36,7 @@ More information on contrasts and other aspects of how design influences web acc
 <%= ref :end %>
 {:/}
 
-While currently there are no contrast guidelines about other aspects of the interface of a website, it is best practice to ensure the same contrast levels for links and buttons. This allows [people with visual disabilities](https://www.w3.org/WAI/intro/people-use-web/diversity#visual) to see, and interact with, the carousel.
+While currently there are no contrast guidelines about other aspects of the interface of a website, it is best practice to ensure the same contrast levels for links and buttons. This allows people with visual disabilities to see, and interact with, the carousel.
 
 ## Use Button Shape to Indicate Status
 
