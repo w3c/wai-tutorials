@@ -56,7 +56,7 @@ carousel.appendChild(ctrls);
 
 Use a [WAI-ARIA live region](https://www.w3.org/TR/wai-aria-1.1/#live_region_roles) to inform screen reader users about the currently shown item. In this example a visually hidden, “polite” live region is used and added to the carousel when the carousel is initialized. Then, when clicking on the previous or next buttons, the text “Item x of y” (with <var>x</var> for current item number and <var>y</var> for the number of items) is set to this live region. Capable screen readers then announce this text.
 
-Do _not_ move keyboard focus to the new current item when the carousel changes automatically; you should not draw the user away from other parts of the page they may be viewing or interacting with each time the items change. Also, do not move keyboard focus when the previous or next buttons are used; moving the focus makes it harder for users to browse back and forth over the slides.
+Allow the user to maintain control of the keyboard focus. This means that when the carousel advances automatically, users should not be drawn away from their current place in the page to focus on the new current carousel item. Also, do not move keyboard focus when the previous or next buttons are used; moving the focus makes it harder for users to browse back and forth over the slides.
 
 {::nomarkdown}
 <%= ref :middle %>
