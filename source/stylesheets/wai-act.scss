@@ -6,9 +6,12 @@
 @import "script";
 @import "grid";
 
+// Color definitions
 
+$wai: #930;
+$w3c: #036;
 
-// MQ-Variables
+// MQ variables
 
 $small:  25em; //* 400px */
 $medium: 43em; //* 700px */
@@ -39,6 +42,7 @@ $container_margin:  0.5%;         // auto|px|%    //
 		font-feature-settings: "lnum", "pnum";
 	}
 }
+
 
 // Body
 
@@ -118,7 +122,7 @@ ul {
 
 .ex, .ap {
 	b, &:before {
-		color: #930;
+		color: $wai;
 		font-weight: inherit;
 	}
 }
@@ -126,7 +130,7 @@ ul {
 .risky {
   &:after {
     @extend .font-secondary;
-    background-color: #930;
+    background-color: $wai;
     color: #fff;
     font-weight: normal;
     border-radius: 100%;
@@ -175,9 +179,9 @@ ul {
 }
 
 .inner a {
-	color: #036;
+	color: $w3c;
 	&:hover, &:visited {
-		color: #930;
+		color: $wai;
 	}
 }
 
@@ -186,7 +190,7 @@ ul {
 header[role=banner] {
 	@include container();
 	margin-bottom: 1em;
-	border-top: 5px solid #930;
+	border-top: 5px solid $wai;
 	div {
 		margin: 0 auto;
 		@include mq($medium) {
@@ -236,7 +240,7 @@ header[role=banner] {
 			text-decoration: none;
 			border: none;
 			position: relative;
-			color: #036;
+			color: $w3c;
 			&:hover, &:focus {
 				text-decoration: underline;
 			}
@@ -278,7 +282,7 @@ header[role=banner] {
 	border-bottom:10px solid #F5F5F5;
 	a {
 		display: block;
-		background-color: #036;
+		background-color: $w3c;
 		color: #fff;
 		font-size: 1em;
 		line-height: 1.5;
@@ -383,11 +387,11 @@ h4 {
 }
 
 a {
-	color: #036;
+	color: $w3c;
 	.content & {
 		border-bottom: 1px solid;
 		text-decoration: none;
-		color: #036;
+		color: $w3c;
 		&:visited {
 			color: lighten(#535, 10%);
 		}
@@ -424,14 +428,14 @@ a {
 
 .breadcrumb {
 	line-height: percentage(44/18);
-	color: #036;
+	color: $w3c;
 	a, svg {
 		color: currentColor;
 		fill: currentColor;
 	}
 	a {
 		&:hover, &:visited {
-			color: #930;
+			color: $wai;
 		}
 	}
 	.icon {
@@ -448,13 +452,13 @@ a {
 	font-size: 1em;
 	margin: 0;
 	text-align: center;
-	background-color: #036;
+	background-color: $w3c;
 	margin-bottom: 2px;
 	color: #fff;
 	line-height: percentage(44/18);
 	font-weight: bold;
 	-moz-osx-font-smoothing: grayscale;
-	&:after { top: 100%; left: 50%; border: solid transparent; content: " "; height: 0; width: 0; position: absolute; pointer-events: none; border-color: rgba(119, 119, 119, 0); border-top-color: #036; border-width: 7px; margin-left: -7px; z-index: 500; }
+	&:after { top: 100%; left: 50%; border: solid transparent; content: " "; height: 0; width: 0; position: absolute; pointer-events: none; border-color: rgba(119, 119, 119, 0); border-top-color: $w3c; border-width: 7px; margin-left: -7px; z-index: 500; }
 }
 
 .alltutorials {
@@ -537,11 +541,11 @@ a {
 				background-color: #F5F5F5;
 				color: #333;
 				.count {
-					background-color: #930;
+					background-color: $wai;
 					color: #fff;
 				}
 				.txt:after {
-					left:-1px;top: 50%; border: solid transparent; content: " "; height: 0; width: 0; position: absolute; pointer-events: none; border-color: rgba(0, 0, 0, 0); border-left-color: #930; border-width: 7px; margin-top: -7px;
+					left:-1px;top: 50%; border: solid transparent; content: " "; height: 0; width: 0; position: absolute; pointer-events: none; border-color: rgba(0, 0, 0, 0); border-left-color: $wai; border-width: 7px; margin-top: -7px;
 				}
 			}
 		}
@@ -557,7 +561,7 @@ a {
 		position: relative;
 		margin-top: 0;
 		margin-bottom: 10px;
-		color: #036;
+		color: $w3c;
 		line-height: 1;
 	}
 	p {
@@ -672,14 +676,14 @@ a {
 	}
 	padding-left:1%;
 	float:right;
-	border-left: 2px solid #930;
+	border-left: 2px solid $wai;
 	margin-top: 1em;
 	clear: both;
 	%annotation-header {
 		margin-top:0;
 		margin-bottom: 0;
 		// font-weight: bold;
-		color: #930;
+		color: $wai;
 		.subhead {
 			color: #333;
 			font-size: .8em;
@@ -812,7 +816,7 @@ figure {
 	&.sample {
 		@extend .box-primary;
 		figcaption {
-			color: #036;
+			color: $w3c;
 		}
 		.box-content {
 			font-size: .9em;
@@ -840,7 +844,7 @@ figure {
 		border:none;
 		font-size: 0.9em;
 		padding-left: 0 !important;
-		// background: linear-gradient(to bottom, #036, rgba(#036, 0));
+		// background: linear-gradient(to bottom, $w3c, rgba($w3c, 0));
 		border-radius: .25em .25em 0 0;
 		ul {
 			margin: 0;
@@ -864,14 +868,14 @@ figure {
 				display:block;
 				padding: 0 0 .1em;
 				border-bottom: none;
-				color: #036;
+				color: $w3c;
 				&:hover, &:focus {
 					text-decoration: underline;
 				}
 			}
 			> ul {
 				list-style-type: disc;
-				color: #036;
+				color: $w3c;
 			}
 		}
 	}
@@ -883,7 +887,7 @@ figure {
 	background-color: #E8E8E8;
 }
 .box-primary {
-	border-color: #036;
+	border-color: $w3c;
 }
 .box-secondary {
 	border-color: #777;
@@ -895,7 +899,7 @@ figure {
 	font-size: 0.75em;
 	@extend .font-primary;
 	.box-primary & {
-		color: #036;
+		color: $w3c;
 	}
 	.box-secondary & {
 
@@ -979,7 +983,7 @@ form {
 
 input[type=submit], button {
   &:focus {
-    box-shadow: 0 0 5px lighten(#036, 30%);
+    box-shadow: 0 0 5px lighten($w3c, 30%);
   }
 }
 
@@ -1061,9 +1065,9 @@ select {
 
 .btn-primary {
 	@extend .btn;
-	background: linear-gradient(to bottom, lighten(#036, 10%), #036);
+	background: linear-gradient(to bottom, lighten($w3c, 10%), $w3c);
 	color: #fff;
-	border-color: darken(#036, 10%);
+	border-color: darken($w3c, 10%);
 	&:hover, &:focus {
 		color: #fff;
 		text-decoration: underline;
@@ -1474,8 +1478,8 @@ select {
 }
 
 [fragmention]:focus {
-	box-shadow: 0 0 10px #036;
-	outline-color: #036;
+	box-shadow: 0 0 10px $w3c;
+	outline-color: $w3c;
 }
 
 ul.inline {
@@ -1549,16 +1553,18 @@ ul.inline {
     > div {
       padding: .5em;
       padding-left: 3em;
-      border: 2px solid #930;
+      border: 2px solid $wai;
       border-radius: 2px;
-      margin-top: calc(-.5em + 2px);
     }
     svg {
-      stroke: #930;
+      stroke: $wai;
       position:absolute;
       left: .5em;
-      top: .25em;
+      top: .4em;
     }
+		a {
+			color: $wai;
+		}
   }
   .ref-main,.ref-side > div {
     p:first-of-type {
@@ -1570,8 +1576,55 @@ ul.inline {
   }
 }
 
+.demo-container {
+  /*&, * {border: 1px solid red;}*/
+  @include mq($small) {
+    display:flex;
+    justify-content: space-between;
+  }
+  @include mq($big) {
+    margin-right: -51.515151515%;
+  }
+  .demo-main {
+    box-sizing: border-box;
+    flex: 0 0 66%;
+    /*margin-right: 1em;*/
+		margin-bottom: 1em;
+  }
+  .demo-side {
+    box-sizing: border-box;
+    flex: 0 0 30.36%;
+    font-size: .9em;
+    /*margin-left: 1em;*/
+    position:relative;
+    > div {
+      padding: .5em;
+      padding-left: 3em;
+      border: 2px solid $w3c;
+      border-radius: 2px;
+    }
+    svg {
+      stroke: $w3c;
+      position:absolute;
+      left: .5em;
+      top: .25em;
+    }
+		a {
+			color: $w3c;
+		}
+  }
+  .demo-main,.demo-side > div {
+    *:first-of-type {
+      margin-top: 0;
+    }
+    *:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+}
+
 .sideimage {
-	border: 1px solid #036;
+	border: 1px solid $w3c;
 	margin: 0 1em .5em;
 	border-radius: 2px;
 	&.left {

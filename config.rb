@@ -166,6 +166,22 @@ helpers do
     end
   end
 
+  def demo(which = :start)
+    if which == :start
+      '<div class="demo-container">
+      <div class="demo-main">'
+    elsif which == :middle
+      '</div>
+      <aside class="demo-side">
+      <div>
+        <svg style="width: 2em;" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.25%"><circle cx="17" cy="15" r="1"/><circle cx="16" cy="16" r="6"/><path d="M2 16S7 6 16 6s14 10 14 10-5 10-14 10S2 16 2 16z"/></symbol>'
+    elsif which == :end
+      '</div>
+      </aside>
+      </div>'
+    end
+  end
+
 end
 
 set :markdown_engine, :kramdown
