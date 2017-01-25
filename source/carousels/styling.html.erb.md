@@ -20,13 +20,13 @@ As a rule of thumb, {::comment} See what I did there? {:/} usable touch controls
 <%= ref :start %>
 {:/}
 
-![Example using semi-transparent background colors to ensure sufficient contrast.](carousels-styling-contrast.png){:.sideimage.left} Ensure sufficient contrast between the foreground and the background of text, links, and buttons. This can be a challenge when text or buttons are positioned on top of images. In that case, a (semi-) opaque background color can help to maintain the contrast regardless of the image used. For more information on contrast ratios, see [“Tips for Designing for Web Accessibility – Provide sufficient contrast between foreground and background”](https://www.w3.org/WAI/gettingstarted/tips/designing.html#provide-sufficient-contrast-between-foreground-and-background).
+![Example using semi-transparent background colors to ensure sufficient contrast.](carousels-styling-contrast.png){:.sideimage.left} Ensure sufficient contrast between the foreground and the background of text, links, and buttons. This can be a challenge when text or buttons are positioned on top of images. In that case, a (semi-) opaque background color can help to maintain the contrast regardless of the image used.
 
 {::nomarkdown}
 <%= ref :middle %>
 {:/}
 
-More information on contrasts and other aspects of how design influences web accessibility will be provided in a future _Design Tutorial_.
+For more information on contrast requirements, see [Provide sufficient contrast between foreground and background](https://www.w3.org/WAI/gettingstarted/tips/designing.html#provide-sufficient-contrast-between-foreground-and-background).
 
 {::nomarkdown}
 <%= ref :end %>
