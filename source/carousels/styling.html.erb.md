@@ -39,6 +39,10 @@ Since the buttons are typically small, it is important to indicate their status 
 The “active” button (that is associated with the current item) has a white background, a blue border and slightly rounded corners. When a keyboard user focuses or a mouse user hovers a button, that button will have a dotted border. In the following example, the carousel is showing item 1.
 
 {::nomarkdown}
+<%= demo %>
+{:/}
+
+{::nomarkdown}
 <%= sample_start %>
 
 <style>
@@ -99,3 +103,13 @@ The “active” button (that is associated with the current item) has a white b
 
 <%= sample_end %>
 {:/nomarkdown}
+
+{::nomarkdown}
+<%= demo :middle %>
+{:/}
+
+A [working demo example](working-example.html) for this code is available.
+
+{::nomarkdown}
+<%= demo :end %>
+{:/}

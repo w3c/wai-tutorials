@@ -203,18 +203,18 @@ status: draft
 
 .slidenav button:hover,
 .slidenav button:focus {
-  border: 2px dashed #fff;
+  border: 2px dotted #fff;
 }
 
 .slidenav button.current:hover,
 .slidenav button.current:focus {
-  border: 2px dashed #036;
+  border: 2px dotted #036;
 }
 
 </style>
 
 <script>
-/* focusin/out event polyfill (firefox) */
+  /* focusin/out event polyfill (firefox) */
 !function(){
   var w = window,
   d = w.document;

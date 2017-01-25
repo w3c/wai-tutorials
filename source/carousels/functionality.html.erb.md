@@ -15,6 +15,10 @@ Provide functionality to select from the displayed carousel items and inform use
 Provide buttons to allow users to switch back and forth between items. Use `<button>` elements to provide semantic meaning, support for assistive technologies, and consistent keyboard use out of the box. Create and add the buttons using JavaScript, because they are only functional when JavaScript is loaded.
 
 {::nomarkdown}
+<%= demo %>
+{:/}
+
+{::nomarkdown}
 <%= code_start('', 'JavaScript') %>
 {:/nomarkdown}
 
@@ -48,6 +52,15 @@ carousel.appendChild(ctrls);
 <%= code_end %>
 {:/nomarkdown}
 
+{::nomarkdown}
+<%= demo :middle %>
+{:/}
+
+A [working demo example](working-example.html) for this code is available.
+
+{::nomarkdown}
+<%= demo :end %>
+{:/}
 ### Announce the current item
 
 {::nomarkdown}

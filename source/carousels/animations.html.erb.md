@@ -13,6 +13,10 @@ Provide users with control over animations in carousels. Pausing animation is es
 Provide a button to allow users to stop and resume animation. The example below illustrates how such a button can be marked-up. The button label and its function changes, depending on whether the animation is currently running or not.
 
 {::nomarkdown}
+<%= demo %>
+{:/}
+
+{::nomarkdown}
 <%= code_start('','While animation is running') %>
 {:/nomarkdown}
 
@@ -35,6 +39,16 @@ Provide a button to allow users to stop and resume animation. The example below 
 {::nomarkdown}
 <%= code_end %>
 {:/nomarkdown}
+
+{::nomarkdown}
+<%= demo :middle %>
+{:/}
+
+A [working demo example](working-example.html) for this code is available.
+
+{::nomarkdown}
+<%= demo :end %>
+{:/}
 
 {::nomarkdown}
 <%= notes_start %>

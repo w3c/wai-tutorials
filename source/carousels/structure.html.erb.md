@@ -18,16 +18,24 @@ Structural markup ensures that the content of a carousel can be used in a variet
 
 As a collection of content items, carousels are typically best represented as unordered lists, using `<ul>` and `<li>`. Depending on the context, other elements can also be used.
 
+{::nomarkdown}
+<%= ref :start %>
+{:/}
+
 Every carousel should be enclosed in a labeled region, to allow users find the carousel more easily. In the following example a `<section>` element is used to define the region and `aria-labelledby` defines the heading that contains the label.
 
 {::nomarkdown}
-<%= reference :start %>
+<%= ref :middle %>
 {:/}
 
 See the Page Structure Tutorial for more information on [regions](/page-structure/regions.html) and [labels](/page-structure/labels.html).
 
 {::nomarkdown}
-<%= reference :end %>
+<%= ref :end %>
+{:/}
+
+{::nomarkdown}
+<%= demo :start %>
 {:/}
 
 {::nomarkdown}
@@ -49,6 +57,16 @@ See the Page Structure Tutorial for more information on [regions](/page-structur
 {::nomarkdown}
 <%= code_end %>
 {:/nomarkdown}
+
+{::nomarkdown}
+<%= demo :middle %>
+{:/}
+
+A [working demo example](working-example.html) for this code is available.
+
+{::nomarkdown}
+<%= demo :end %>
+{:/}
 
 ## Carousel items
 
