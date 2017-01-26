@@ -9,6 +9,8 @@ wcag_techniques:
 
 Some websites use fly-out menus to allow users to access additional pages further down the page hierarchy. This removes the need for multiple page loads if the user knows where to find the specific content. It also allows for getting an overview of the content of the website.
 
+People with tremors, limited fine motor dexterity or other disabilities might have trouble operating fly-out menus in general. Make sure to provide other means to the sub menu items, for example repeat them on the page of the parent menu item. 
+
 ## Indicate the presence of a submenu
 
 Users need to be aware which menu items have a submenu and which don’t. In the following example, only the “SpaceBears” item has one. An arrow icon is shown to inform visual users about the submenu, but for other uses, like assistive technologies, the following ARIA attributes provide the information programatically:
@@ -490,7 +492,7 @@ The following code iterates through all top-level items with the class `has-subm
 <%= notes_start() %>
 {:/}
 
-**Note:** Despite the name, click events are activated regardless of the input method as soon as the link gets activated. 
+**Note:** Despite the name, click events are activated regardless of the input method as soon as the link gets activated.
 
 {::nomarkdown}
 <%= notes_end() %>
