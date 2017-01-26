@@ -7,44 +7,42 @@ status: approved-draft
 
 {::nomarkdown}
 <%= sample_start %>
-<div role="menubar">
-	<ul role="menu" aria-label="functions" id="appmenu">
-			<li role="menuitem" aria-haspopup="true">
-				File
-				<ul role="menu">
-							<li role="menuitem">New</li>
-							<li role="menuitem">Open</li>
-							<li role="menuitem">Print</li>
-					</ul>
-			</li>
-			<li role="menuitem" aria-haspopup="true">
-				Edit
-				<ul role="menu">
-							<li role="menuitem">Undo</li>
-							<li role="menuitem">Redo</li>
-							<li role="menuitem">Cut</li>
-							<li role="menuitem">Copy</li>
-							<li role="menuitem">Paste</li>
-					</ul>
-			</li>
-			<li role="menuitem" aria-haspopup="true">
-					Format
-					<ul role="menu">
-							<li role="menuitem">Font</li>
-							<li role="menuitem">Text</li>
-					</ul>
-			</li>
-			<li role="menuitem" aria-haspopup="true">
-				View
-				<ul role="menu">
-					<li role="menuitem">100%</li>
-					<li role="menuitem">Zoom In</li>
-					<li role="menuitem">Zoom Out</li>
+<ul role="menubar" aria-label="functions" id="appmenu">
+		<li role="menuitem" aria-haspopup="true">
+			File
+			<ul role="menu">
+						<li role="menuitem">New</li>
+						<li role="menuitem">Open</li>
+						<li role="menuitem">Print</li>
 				</ul>
-			</li>
-			<li role="menuitem">Help</li>
-	</ul>
-</div>
+		</li>
+		<li role="menuitem" aria-haspopup="true">
+			Edit
+			<ul role="menu">
+						<li role="menuitem">Undo</li>
+						<li role="menuitem">Redo</li>
+						<li role="menuitem">Cut</li>
+						<li role="menuitem">Copy</li>
+						<li role="menuitem">Paste</li>
+				</ul>
+		</li>
+		<li role="menuitem" aria-haspopup="true">
+				Format
+				<ul role="menu">
+						<li role="menuitem">Font</li>
+						<li role="menuitem">Text</li>
+				</ul>
+		</li>
+		<li role="menuitem" aria-haspopup="true">
+			View
+			<ul role="menu">
+				<li role="menuitem">100%</li>
+				<li role="menuitem">Zoom In</li>
+				<li role="menuitem">Zoom Out</li>
+			</ul>
+		</li>
+		<li role="menuitem">Help</li>
+</ul>
 
 <style>
 .show-overflow2 {
@@ -173,12 +171,15 @@ Array.prototype.forEach.call(appsMenuItems, function(el, i){
 			return false;
 		});
 		el.addEventListener("keydown", function(event) {
+			var prevdef = false;
 			switch (event.keyCode) {
 				case keys.right:
 					gotoIndex(currentIndex + 1);
+					prevdef = true;
 					break;
 				case keys.left:
 					gotoIndex(currentIndex - 1);
+					prevdef = true;
 					break;
 				case keys.tab:
 					if (event.shiftKey) {
@@ -186,23 +187,30 @@ Array.prototype.forEach.call(appsMenuItems, function(el, i){
 					} else {
 						gotoIndex(currentIndex + 1);
 					}
+					prevdef = true;
 					break;
 				case keys.enter:
 				case keys.down:
 					this.click();
 					subindex = 0;
 					gotoSubIndex(this.querySelector('ul'), 0);
+					prevdef = true;
 					break;
 				case keys.up:
 					this.click();
 					var submenu = this.querySelector('ul');
 					subindex = submenu.querySelectorAll('li').length - 1;
 					gotoSubIndex(submenu, subindex);
+					prevdef = true;
 					break;
 				case keys.esc:
-					document.querySelector('a[href="#related"]').focus();
+					document.querySelector('#escape').setAttribute('tabindex', '-1');
+					document.querySelector('#escape').focus();
+					prevdef = true;
 			}
-			event.preventDefault();
+			if (prevdef) {
+				event.preventDefault();
+			}
 		});
 });
 
@@ -216,29 +224,38 @@ Array.prototype.forEach.call(subMenuItems, function(el, i){
 					} else {
 						gotoIndex(currentIndex + 1);
 					}
+					prevdef = true;
 					break;
 				case keys.right:
 					gotoIndex(currentIndex + 1);
+					prevdef = true;
 					break;
 				case keys.left:
 					gotoIndex(currentIndex - 1);
+					prevdef = true;
 					break;
 				case keys.esc:
 					gotoIndex(currentIndex);
+					prevdef = true;
 					break;
 				case keys.down:
 					gotoSubIndex(this.parentNode, subIndex + 1);
+					prevdef = true;
 					break;
 				case keys.up:
 					gotoSubIndex(this.parentNode, subIndex - 1);
+					prevdef = true;
 					break;
 				case keys.enter:
 				case keys.space:
 					alert(this.innerText);
+					prevdef = true;
 					break;
 			}
-			event.preventDefault();
-			event.stopPropagation();
+			if (prevdef) {
+				event.preventDefault();
+				event.stopPropagation();
+			}
 			return false;
 		});
 	el.addEventListener("click", function(event) {
@@ -434,12 +451,15 @@ Array.prototype.forEach.call(appsMenuItems, function(el, i){
 			return false;
 		});
 		el.addEventListener("keydown", function(event) {
+			var prevdef = false;
 			switch (event.keyCode) {
 				case keys.right:
 					gotoIndex(currentIndex + 1);
+					prevdef = true;
 					break;
 				case keys.left:
 					gotoIndex(currentIndex - 1);
+					prevdef = true;
 					break;
 				case keys.tab:
 					if (event.shiftKey) {
@@ -447,23 +467,30 @@ Array.prototype.forEach.call(appsMenuItems, function(el, i){
 					} else {
 						gotoIndex(currentIndex + 1);
 					}
+					prevdef = true;
 					break;
 				case keys.enter:
 				case keys.down:
 					this.click();
 					subindex = 0;
 					gotoSubIndex(this.querySelector('ul'), 0);
+					prevdef = true;
 					break;
 				case keys.up:
 					this.click();
 					var submenu = this.querySelector('ul');
 					subindex = submenu.querySelectorAll('li').length - 1;
 					gotoSubIndex(submenu, subindex);
+					prevdef = true;
 					break;
 				case keys.esc:
-					document.querySelector('a[href="#related"]').focus();
+					document.querySelector('#escape').setAttribute('tabindex', '-1');
+					document.querySelector('#escape').focus();
+					prevdef = true;
 			}
-			event.preventDefault();
+			if (prevdef) {
+				event.preventDefault();
+			}
 		});
 });
 
@@ -477,29 +504,38 @@ Array.prototype.forEach.call(subMenuItems, function(el, i){
 					} else {
 						gotoIndex(currentIndex + 1);
 					}
+					prevdef = true;
 					break;
 				case keys.right:
 					gotoIndex(currentIndex + 1);
+					prevdef = true;
 					break;
 				case keys.left:
 					gotoIndex(currentIndex - 1);
+					prevdef = true;
 					break;
 				case keys.esc:
 					gotoIndex(currentIndex);
+					prevdef = true;
 					break;
 				case keys.down:
 					gotoSubIndex(this.parentNode, subIndex + 1);
+					prevdef = true;
 					break;
 				case keys.up:
 					gotoSubIndex(this.parentNode, subIndex - 1);
+					prevdef = true;
 					break;
 				case keys.enter:
 				case keys.space:
 					alert(this.innerText);
+					prevdef = true;
 					break;
 			}
-			event.preventDefault();
-			event.stopPropagation();
+			if (prevdef) {
+				event.preventDefault();
+				event.stopPropagation();
+			}
 			return false;
 		});
 	el.addEventListener("click", function(event) {
@@ -514,4 +550,3 @@ Array.prototype.forEach.call(subMenuItems, function(el, i){
 {::nomarkdown}
 <%= code_end %>
 {:/nomarkdown}
-

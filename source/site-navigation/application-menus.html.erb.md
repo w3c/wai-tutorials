@@ -17,9 +17,9 @@ Consider adding a separator, and submenus. See discussion in Issues [353](https:
 <%= editors_note_end %>
 {:/nomarkdown}
 
-Web application menus use the same basic structure as navigation menus: They often consist of a horizontal menu bar and use fly-out functionality. 
+Web application menus use the same basic structure as navigation menus: They often consist of a horizontal menu bar and use fly-out functionality.
 
-Some additional WAI-ARIA roles help users with assistive technology to operate those menus in a way that is similar to the way they use menus in desktop software. When using those roles, the keyboard interaction should be similar to desktop software as well: the tab key is used to iterate through the top-level items only, the up and down arrows are used to navigate the sub menus. 
+Some additional WAI-ARIA roles help users with assistive technology to operate those menus in a way that is similar to the way they use menus in desktop software. When using those roles, the keyboard interaction should be similar to desktop software as well: the tab key is used to iterate through the top-level items only, the up and down arrows are used to navigate the sub menus.
 
 Note that the keyboard behavior is not automatically changed when adding those roles, but needs to be added using scripting. A detailed explanation on the WAI-ARIA attributes and keyboard behavior can be found in the [WAI-ARIA Authoring Practices document (draft)](http://www.w3.org/TR/wai-aria-practices/#menu).
 
@@ -197,12 +197,15 @@ Array.prototype.forEach.call(appsMenuItems, function(el, i){
 			return false;
 		});
 		el.addEventListener("keydown", function(event) {
+			var prevdef = false;
 			switch (event.keyCode) {
 				case keys.right:
 					gotoIndex(currentIndex + 1);
+					prevdef = true;
 					break;
 				case keys.left:
 					gotoIndex(currentIndex - 1);
+					prevdef = true;
 					break;
 				case keys.tab:
 					if (event.shiftKey) {
@@ -210,24 +213,30 @@ Array.prototype.forEach.call(appsMenuItems, function(el, i){
 					} else {
 						gotoIndex(currentIndex + 1);
 					}
+					prevdef = true;
 					break;
 				case keys.enter:
 				case keys.down:
 					this.click();
 					subindex = 0;
 					gotoSubIndex(this.querySelector('ul'), 0);
+					prevdef = true;
 					break;
 				case keys.up:
 					this.click();
 					var submenu = this.querySelector('ul');
 					subindex = submenu.querySelectorAll('li').length - 1;
 					gotoSubIndex(submenu, subindex);
+					prevdef = true;
 					break;
 				case keys.esc:
 					document.querySelector('#escape').setAttribute('tabindex', '-1');
 					document.querySelector('#escape').focus();
+					prevdef = true;
 			}
-			event.preventDefault();
+			if (prevdef) {
+				event.preventDefault();
+			}
 		});
 });
 
@@ -241,29 +250,38 @@ Array.prototype.forEach.call(subMenuItems, function(el, i){
 					} else {
 						gotoIndex(currentIndex + 1);
 					}
+					prevdef = true;
 					break;
 				case keys.right:
 					gotoIndex(currentIndex + 1);
+					prevdef = true;
 					break;
 				case keys.left:
 					gotoIndex(currentIndex - 1);
+					prevdef = true;
 					break;
 				case keys.esc:
 					gotoIndex(currentIndex);
+					prevdef = true;
 					break;
 				case keys.down:
 					gotoSubIndex(this.parentNode, subIndex + 1);
+					prevdef = true;
 					break;
 				case keys.up:
 					gotoSubIndex(this.parentNode, subIndex - 1);
+					prevdef = true;
 					break;
 				case keys.enter:
 				case keys.space:
 					alert(this.innerText);
+					prevdef = true;
 					break;
 			}
-			event.preventDefault();
-			event.stopPropagation();
+			if (prevdef) {
+				event.preventDefault();
+				event.stopPropagation();
+			}
 			return false;
 		});
 	el.addEventListener("click", function(event) {
