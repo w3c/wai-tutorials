@@ -6,7 +6,7 @@ wcag_success_criteria:
   - 2.2.2
 ---
 
-Provide users with control over animations in carousels. Pausing animation is essential for people who find movement distracting or who need more time to read.
+Provide users with control over animations in the carousel. Pausing animation is essential for people who find movement distracting or who need more time to read.
 
 ## Add Play/Stop button
 
@@ -104,7 +104,7 @@ carousel.addEventListener('focusout',
 
 ## Hiding in-transition elements from assistive technologies
 
-During transitions, both items, current and next are visible. This also means that those two items are available to assistive technologies, with the current item disappearing in a relatively short time. In some cases this can be confusing to screen reader users.
+During transitions, the current and next items are visible. This also means that those two items are available to assistive technologies, with the current item disappearing, which can be confusing to screen reader users.
 
 In the following example the item that is being activated gets an `in-transition` class that makes it visible. The `aria-hidden` is attribute set to `true` to hide the item from assistive technologies. When the transition completes, the `aria-hidden` attribute is removed.
 

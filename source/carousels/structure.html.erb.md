@@ -22,7 +22,7 @@ As a collection of content items, carousels are typically best represented as un
 <%= ref :start %>
 {:/}
 
-Every carousel should be enclosed in a labeled region, to allow users find the carousel more easily. In the following example a `<section>` element is used to define the region and `aria-labelledby` defines the heading that contains the label.
+Every carousel should be enclosed in a labeled region, to allow users to find the carousel easily. In the following example, a `<section>` element is used to define the region and `aria-labelledby` defines the heading that contains the label.
 
 {::nomarkdown}
 <%= ref :middle %>
@@ -70,7 +70,7 @@ A [working demo example](working-example.html) for this code is available.
 
 ## Carousel items
 
-Carousels are often used as a gallery to display a series of images. However more complex content, such as teasers, articles, or entire sections of web pages can also be shown inside carousels. In any case, use appropriate markup to ensure that the structure and meaning of the content is conveyed. Such markup may include headings, sections, lists, articles, and other elements as needed.
+Carousels are often used as a gallery to display a series of images. However, more complex content, such as teasers, articles, or entire sections of web pages can also be shown inside carousels. In all cases, use appropriate markup to ensure that the structure and meaning of the content is conveyed clearly. Such markup may include headings, sections, lists, articles, and other elements as needed.
 
 This first example shows a carousel item with images as content:
 
@@ -90,7 +90,7 @@ This first example shows a carousel item with images as content:
 <%= code_end %>
 {:/nomarkdown}
 
-More complex content can be used, in this example an article with a heading:
+This example, an article that includes a heading and a paragraph, shows how more complex content can be used.
 
 {::nomarkdown}
 <%= code_start('', 'Example 2') %>

@@ -12,18 +12,18 @@ wcag_success_criteria:
   - 4.1.2
 ---
 
-To implement an accessible carousel widget, provide a robust structure and user control:
+Implement an accessible carousel widget by providing a robust structure and user control:
 
 * **[Structure](structure.html):**  Use semantic structure for the carousel to support proper function of assistive technology.
 * **[Functionality](functionality.html):** Add functionality to display and announce carousel items.
 * **[Animations](animations.html):** Add a transition animation between items and ensure users can stop and resume it.
-* **[Styling](styling.html):** Style the carousel to make sure it’s useable and readable by everyone.
+* **[Styling](styling.html):** Style the carousel to make sure it’s usable and readable by everyone.
 
 See also the [complete working example](working-example.html) and [full code](full-code.html) of the example carousel.
 
 ## What are carousels?
 
-Carousels show a collection of items one at a time. They are also known as “slide shows” and “sliders”. Scrolling news headlines, featured articles on home pages, and image galleries are common uses of carousels.
+Carousels show a collection of items one at a time. They are also known as “slide shows” and “sliders”. Common uses of carousels include scrolling news headlines, featured articles on home pages, and image galleries.
 
 ## What are the key points?
 
@@ -36,7 +36,7 @@ Carousels show a collection of items one at a time. They are also known as “sl
 
 ## Why is this important?
 
-Carousels are typically prominently located and are used to provide navigation or show page content. Accessible carousels are essential for many website users including:
+Typically, carousels are prominently located and are used to provide navigation or show page content. Accessible carousels are essential for many website users including:
 
 - **People using keyboard navigation and voice input software** can navigate between individual items.
 - **People using screen readers** will understand which item is currently shown and how to navigate between items.

@@ -12,7 +12,7 @@ wcag_success_criteria:
 
 Use appropriately sized interactive buttons and links to allow people with physical impairments to use the carousel more easily. This will also benefit people using touch screens.
 
-As a rule of thumb, {::comment} See what I did there? {:/} usable touch controls need to be bigger and have empty space around them to avoid touching the wrong control. While future recommendations of the minimum touch sizes are discussed at the moment, touch areas of less than 45 × 45 px might reduce touch usability significantly.
+As a rule of thumb, {::comment} See what I did there? {:/} usable touch controls need to be bigger and have empty space around them to avoid touching the wrong control. While future recommendations of the minimum touch sizes are being discussed at the moment, touch areas of less than 45 × 45 px might reduce touch usability significantly.
 
 ## Contrast
 
