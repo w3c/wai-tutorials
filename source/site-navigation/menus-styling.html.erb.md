@@ -23,16 +23,6 @@ If icons or images are used in menus, an appropriate alternative text should be 
 
 Communicating the state of the menu clearly will ensure that the menu is easier to use. Style the states in a way so they do not rely on color alone. Add a underline or change the shape of an icon or the menu item to communicate the state to people with reduced color perception.
 
-{::nomarkdown}
-<%= editors_note_start %>
-{:/nomarkdown}
-
-This section needs to be condensed. Also we should talk about [Issue 354](https://github.com/w3c/wai-tutorials/issue/354), the use of `aria-current`.
-
-{::nomarkdown}
-<%= editors_note_end %>
-{:/nomarkdown}
-
 ### Hover and Focus states
 
 Change hovered or focused menu items to give users visual guidance while navigating the page. In the [example below](#example) the hover and focus states are indicated by using an inverted color scheme (blue on white instead of white on blue) and by underlining the items.
@@ -77,57 +67,10 @@ nav a:active {
 
 The current page should also be clearly marked to give users a sense of where they are in the website structure. A different color combination (black on grey) and a bottom border were added to give the item a distinct shape in the [example](#example).
 
-#### Using invisible text
-{:.ap}
-
-The item has also an invisible text “Current Page:” added to the menu item. Additonally the current page item is not linking to the current page.
-
 {::nomarkdown}
-<%= code_start('','HTML') %>
+<%= code_start('','CSS') %>
 {:/nomarkdown}
 
-~~~ html
-<li>
-	<span class="current">
-		<span class="visuallyhidden">Current Page: </span>
-		SpaceBears
-	</span>
-</li>
-~~~
-{::nomarkdown}
-<%= code_end %><%= code_start('','CSS') %>
-{:/nomarkdown}
-~~~ css
-nav .current {
-	background-color: #bbb;
-	color: #000;
-	border-bottom: .25em solid #444;
-}
-~~~
-
-{::nomarkdown}
-<%= code_end %>
-{:/nomarkdown}
-
-#### Using WAI-ARIA
-{:.ap}
-
-If you want to include a link to the main content area of the page or can’t remove the `<a>` element from the navigation, you can alternatively use `aria-current="true"`.
-
-{::nomarkdown}
-<%= code_start('','HTML') %>
-{:/nomarkdown}
-
-~~~ html
-<li>
-	<a href="#main" aria-current="true">
-		SpaceBears
-	</a>
-</li>
-~~~
-{::nomarkdown}
-<%= code_end %><%= code_start('','CSS') %>
-{:/nomarkdown}
 ~~~ css
 nav [aria-current=true] {
 	background-color: #bbb;

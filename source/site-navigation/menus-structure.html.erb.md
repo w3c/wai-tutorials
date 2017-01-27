@@ -79,7 +79,7 @@ To identify the menu, use the `<nav>` element in HTML5. It allows users to direc
 <%= ref :middle %>
 {:/}
 
-For more information on regions, see the [regions tutorial](/page-structure/regions.html).
+For more information on regions, see the [page regions](/page-structure/regions.html) tutorial.
 
 {::nomarkdown}
 <%= ref :end %>
@@ -106,16 +106,20 @@ For more information on regions, see the [regions tutorial](/page-structure/regi
 
 
 {::nomarkdown}
-<%= reference %>
-{:/}
-
-For more information on labels, see the [labeling regions tutorial](/page-structure/labels.html).
-
-{::nomarkdown}
-<%= reference :end %>
+<%= ref :start %>
 {:/}
 
 Label menus according to their individual function to make them easier to find and understand. This helps to distinguish between multiple menus on a web page. Use a heading, `aria-label`, or `aria-labelledby` to provide the label.
+
+{::nomarkdown}
+<%= ref :middle %>
+{:/}
+
+For more information on labels, see the [labeling regions](/page-structure/labels.html) tutorial.
+
+{::nomarkdown}
+<%= ref :end %>
+{:/}
 
 In menu tutorial examples, `aria-labelledby` with a hidden heading is used:
 
@@ -124,7 +128,7 @@ In menu tutorial examples, `aria-labelledby` with a hidden heading is used:
 {:/}
 
 ~~~ html
-<nav role="navigation" aria-labelledby="mainmenulabel">
+<nav aria-labelledby="mainmenulabel">
 	<h2 id="mainmenulabel" class="visuallyhidden">Main Menu</h2>
 </nav>
 ~~~
@@ -132,3 +136,64 @@ In menu tutorial examples, `aria-labelledby` with a hidden heading is used:
 {::nomarkdown}
 <%= code_end %>
 {:/}
+
+## Indicate the current item
+
+{::nomarkdown}
+<%= ref :start %>
+{:/nomarkdown}
+
+The current page should also be clearly marked to give users a sense of where they are in the website structure.
+
+{::nomarkdown}
+<%= ref :middle %>
+{:/nomarkdown}
+
+Information about [styling the current menu item](menus-styling.html#current-item).
+
+{::nomarkdown}
+<%= ref :end %>
+{:/nomarkdown}
+
+
+### Using invisible text
+{:.ap}
+
+The item has also an invisible text “Current Page:” added to the menu item. Additionally the current page item is not linking to the current page.
+
+{::nomarkdown}
+<%= code_start('','HTML') %>
+{:/nomarkdown}
+
+~~~ html
+<li>
+	<span class="current">
+		<span class="visuallyhidden">Current Page: </span>
+		SpaceBears
+	</span>
+</li>
+~~~
+{::nomarkdown}
+<%= code_end %>
+{:/nomarkdown}
+
+### Using WAI-ARIA
+{:.ap}
+
+If you want to include a link to the main content area of the page or can’t remove the `<a>` element from the navigation, you can alternatively use `aria-current="page"`.
+
+{::nomarkdown}
+<%= code_start('','HTML') %>
+{:/nomarkdown}
+
+~~~ html
+<li>
+	<a href="#main" aria-current="page">
+	SpaceBears
+	</a>
+</li>
+~~~
+
+{::nomarkdown}
+<%= code_end %>
+{:/nomarkdown}
