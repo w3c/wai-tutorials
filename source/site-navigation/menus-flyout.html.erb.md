@@ -7,16 +7,16 @@ wcag_techniques:
   - H4
 ---
 
-Some websites use fly-out menus to allow users to access additional pages further down the page hierarchy. This removes the need for multiple page loads if the user knows where to find the specific content. It also allows for getting an overview of the content of the website.
+Some websites use fly-out menus to allow easier access to pages further down the page hierarchy. It removes the need for multiple page loads if the user knows where to find the page. Users also get a grasp of the content of the website.
 
-People with tremors, limited fine motor dexterity or other disabilities might have trouble operating fly-out menus in general. Make sure to provide other means to the sub menu items, for example repeat them on the page of the parent menu item. 
+People with tremors, limited fine motor dexterity or other disabilities might have trouble operating fly-out menus in general. Make sure to provide other means to the sub menu items, for example repeat them on the page of the parent menu item.
 
 ## Indicate the presence of a submenu
 
-Users need to be aware which menu items have a submenu and which don’t. In the following example, only the “SpaceBears” item has one. An arrow icon is shown to inform visual users about the submenu, but for other uses, like assistive technologies, the following ARIA attributes provide the information programatically:
+Users need to be aware which menu items have a submenu and which don’t. An arrow icon identifies that only the “SpaceBears” item has a submenu. For assistive technologies, the following ARIA attributes provide this information:
 
 * `aria-haspopup="true"` prompts assistive technologies to give the information that a submenu is present to the user
-* `aria-expanded` conveys the state of the submenu: It is initially set to “false” as the submenu is not visible.
+* `aria-expanded` conveys the state of the submenu: It is initially set to `false` as the submenu is not visible.
 
 {::nomarkdown}
 <%= sample_start('show-overflow') %>
@@ -123,7 +123,7 @@ Users need to be aware which menu items have a submenu and which don’t. In the
 {:/nomarkdown}
 
 ~~~ html
-<nav role="presentation" aria-label="Main Navigation">
+<nav aria-label="Main Navigation">
 		<ul>
 				<li><a href="…">Home</a></li>
 				<li><a href="…">Shop</a></li>
@@ -146,23 +146,19 @@ Users need to be aware which menu items have a submenu and which don’t. In the
 <%= code_end %>
 {:/nomarkdown}
 
-## Improving the menu
+## Fly-out functionality
 
 ### Mouse users
 
-CSS can be used to show submenus when their parent menu is hovered. However, this method has the disadvantage that the menu immediately snaps back once the cursor leaves the hovered element.
+The following CSS-only code shows the submenu when the parent menu item is hovered. However, it has two disadvantages: It does not work for keyboard users and the menu immediately disappears when the mouse leaves the parent menu items or the submenu.
 
 {::nomarkdown}
 <%= code_start('','CSS') %>
 {:/nomarkdown}
 
 ~~~ css
-nav > ul li ul {
-	display: none;
-}
-nav > ul li:hover ul {
-	display: block;
-}
+nav > ul li       ul { display: none; }
+nav > ul li:hover ul { display: block;}
 ~~~
 
 {::nomarkdown}
