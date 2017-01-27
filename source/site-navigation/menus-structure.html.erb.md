@@ -19,9 +19,7 @@ Convey the menu structure to users effectively by using a list, especially if th
 ### Unordered list
 {:.ap}
 
-If the sequence of reading the pages is not important to understand the website, 
-
-Use an unordered list (`<ul>`), if the sequence of reading the pages is not important to understand the website as a whole. In the following example, the user is not required to read the home page before advancing to the shop or get information about the products. Most menus are unordered.
+If the sequence of reading the pages is not important to understand the website, use an unordered list (`<ul>`). In the following example, the user is not required to read the home page before advancing to the shop or get information about the products. Most menus are unordered.
 
 {::nomarkdown}
 <%= code_start('','Unordered List') %>
@@ -46,7 +44,7 @@ Use an unordered list (`<ul>`), if the sequence of reading the pages is not impo
 ### Ordered list
 {:.ap}
 
-In instances where pages need to be read in a certain sequence use an ordered list (`<ol>`). This is the case, for example, for menus providing access to chapters in prose, or steps in a construction manual. Following the order is important to properly build the space ship in the example below:
+In instances where pages need to be read in a certain sequence, for example chapters in prose or steps in a construction manual, use an ordered list (`<ol>`). Following the order is important to properly build the space ship in the example below:
 
 {::nomarkdown}
 <%= code_start('','Ordered List') %>
@@ -73,7 +71,7 @@ In instances where pages need to be read in a certain sequence use an ordered li
 <%= ref :start %>
 {:/}
 
-To identify the menu, use the `<nav>` element in HTML5. It allows users to directly jump to the menu if WAI-ARIA landmarks are supported. The `<nav>` element wraps the unordered or ordered list that contains the navigation options.
+To identify the menu, use the `<nav>` element in HTML5. It allows users to directly access the menu. The `<nav>` element wraps the list that contains the individual menu items.
 
 {::nomarkdown}
 <%= ref :middle %>
