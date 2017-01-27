@@ -11,128 +11,17 @@ wcag_techniques:
   - G183
 ---
 
-With a consistent styling users are able to find menus more easily. There are two basic design patterns that are commonly used on web sites: vertical and horizontal menus.
+Consistent styling enables users to find menus easily. Usually, menus are aligned horizontally on the top of the web page or vertically on the left side of the page (in left-to-right languages).
 
-Regardless of the orientation, each menu item should have enough space so it doesn’t overlap other content on the page or gets cut off. Such items are a potential accessibility barrier, especially for users increasing the font size and can also be a problem when translating the menu into another language. Try to avoid line breaks or hyphenation in menu items as they are harder to understand.
+Make sure that each item in the menu has enough space available to avoid the text get cut off. Make sure that the menu and its items don’t overlap other content on the page, especially when the font size is increased. This can also avoid problems when translating the menu into another language. Try to avoid line breaks or hyphenation in menu items as they are more difficult to understand.
 
-## Vertical menu
+In contrast to links in running text, menus usually don’t need to be underlined as they stand out as clickable items on their own.
 
-Ensure that the menu column is wide enough to accommodate all current and future menu items.
+If icons or images are used in menus, an appropriate alternative text should be provided. See the [Images Tutorial](/images/index.html) for more details.
 
-{::nomarkdown}
-<%= sample_start %>
+## Item states
 
-<nav aria-label="Main Navigation" role="presentation" id="verticalnav">
-		<ul>
-				<li><a href="#samplenav">Home</a></li>
-				<li><a href="#samplenav">Shop</a></li>
-				<li><a href="#samplenav">SpaceBears</a></li>
-				<li><a href="#samplenav">MarsCars</a></li>
-				<li><a href="#samplenav">Contact</a></li>
-		</ul>
-</nav>
-
-<style>
-	#verticalnav {
-			display:table;
-	}
-	#verticalnav ul {
-			margin: 0;
-			padding: 0;
-			background-color: #036;
-			color: #fff;
-	}
-	#verticalnav li {
-			display:table-row;
-			width: 20%;
-			text-align: left;
-	}
-	#verticalnav a {
-			display: block;
-			padding: .25em .5em;
-			color: #fff;
-			border-bottom: 1px solid;
-			text-decoration: none;
-	}
-	#verticalnav a:hover,
-	#verticalnav a:focus {
-		color: #036;
-		background-color: #fff;
-		text-decoration: underline;
-	}
-	#verticalnav a:active {
-		color: #fff;
-		background-color: #024;
-		text-decoration: underline;
-	}
-</style>
-
-<%= sample_end %>
-{:/nomarkdown}
-
-## Horizontal menu
-
-Horizontal menus should be positioned near the top of the screen so they are easier to find.
-
-{::nomarkdown}
-<%= sample_start %>
-
-<nav aria-label="Main Navigation" role="presentation" id="samplenav">
-		<ul>
-				<li><a href="#samplenav">Home</a></li>
-				<li><a href="#samplenav">Shop</a></li>
-				<li><a href="#samplenav">SpaceBears</a></li>
-				<li><a href="#samplenav">MarsCars</a></li>
-				<li><a href="#samplenav">Contact</a></li>
-		</ul>
-</nav>
-
-<style>
-	#samplenav {
-			display:table;
-			width:100%;
-	}
-	#samplenav ul {
-			margin: 0;
-			padding: 0;
-			display: table-row;
-			background-color: #036;
-			color: #fff;
-	}
-	#samplenav li {
-			display:table-cell;
-			width: 20%;
-			text-align: center;
-	}
-	#samplenav a {
-			display: block;
-			padding: .25em;
-			border-bottom: .25em solid #E8E8E8;
-			color: #fff;
-			text-decoration: none;
-	}
-	#samplenav a:hover,
-	#samplenav a:focus {
-		color: #036;
-		background-color: #fff;
-		text-decoration: underline;
-	}
-	#samplenav a:active {
-		color: #fff;
-		background-color: #024;
-		text-decoration: underline;
-	}
-</style>
-
-<%= sample_end %>
-{:/nomarkdown}
-
-## Styling menu items
-
-While in-text links usually need an underline to help people with low vision or color blindness distinguish them from the surrounding text, this is not needed for links in menus if the menu can be clearly identified as such. If icons or images are used in links, an appropriate alternative text should be provided. See [Images Tutorial](/images/functional.html) for more detailed advice.
-
-## Menu feedback
-{:.risky}
+Communicating the state of the menu clearly will ensure that the menu is easier to use. Style the states in a way so they do not rely on color alone. Add a underline or change the shape of an icon or the menu item to communicate the state to people with reduced color perception.
 
 {::nomarkdown}
 <%= editors_note_start %>
@@ -144,19 +33,114 @@ This section needs to be condensed. Also we should talk about [Issue 354](https:
 <%= editors_note_end %>
 {:/nomarkdown}
 
-When using the menu, users need feedback mechanisms to operate it properly. Interacting with the menu should change the items visually when they are hovered or focused. Also, indicating the active item (the menu item that was just clicked, tapped, or activated using the keyboard) helps users to understand which item was activated. The current page should also be clearly marked to give users a sense of where they are in the website structure.
+### Hover and Focus states
 
-Apart from changing the color, another means of changing the menu item should be used by adding an underline or a border, or by changing the shape of an icon in the menu.
+Change hovered or focused menu items to give users visual guidance while navigating the page. In the [example below](#example) the hover and focus states are indicated by using an inverted color scheme (blue on white instead of white on blue) and by underlining the items.
 
-In this menu tutorial, feedback is given through the following means:
+{::nomarkdown}
+<%= code_start('','CSS') %>
+{:/nomarkdown}
 
-* **Hover and focus** states are indicated by using an inverted color scheme (blue on white instead of white on blue) and by underlining the items.
+~~~ css
+nav a:hover,
+nav a:focus {
+	color: #036;
+	background-color: #fff;
+	text-decoration: underline;
+}
+~~~
+{::nomarkdown}
+<%= code_end %>
+{:/nomarkdown}
 
-* The **active** state is shown with a darker blue as a background and keeping the menu item underlined.
+### Active state
 
-* The **current page item** uses a different color scheme (black on grey) and has a bottom border that gives the item a distinct shape.
+Indicate the menu item that was just clicked, tapped, or activated using the keyboard (the active item) to let users know what item they did activate. This helps to spot mis-clicks early although the active state is usually only briefly displayed. The [example](#example) below shows the active item with darker blue background and underlined.
 
-  The item has also an invisible text “Current Page:” added to the menu item. Additonally the current page item is not linking to the current page.
+{::nomarkdown}
+<%= code_start('','CSS') %>
+{:/nomarkdown}
+
+~~~ css
+nav a:active {
+	color: #fff;
+	background-color: #024;
+	text-decoration: underline;
+}
+~~~
+
+{::nomarkdown}
+<%= code_end %>
+{:/nomarkdown}
+
+### Current item
+
+The current page should also be clearly marked to give users a sense of where they are in the website structure. A different color combination (black on grey) and a bottom border were added to give the item a distinct shape in the [example](#example).
+
+#### Using invisible text
+{:.ap}
+
+The item has also an invisible text “Current Page:” added to the menu item. Additonally the current page item is not linking to the current page.
+
+{::nomarkdown}
+<%= code_start('','HTML') %>
+{:/nomarkdown}
+
+~~~ html
+<li>
+	<span class="current">
+		<span class="visuallyhidden">Current Page: </span>
+		SpaceBears
+	</span>
+</li>
+~~~
+{::nomarkdown}
+<%= code_end %><%= code_start('','CSS') %>
+{:/nomarkdown}
+~~~ css
+nav .current {
+	background-color: #bbb;
+	color: #000;
+	border-bottom: .25em solid #444;
+}
+~~~
+
+{::nomarkdown}
+<%= code_end %>
+{:/nomarkdown}
+
+#### Using WAI-ARIA
+{:.ap}
+
+If you want to include a link to the main content area of the page or can’t remove the `<a>` element from the navigation, you can alternatively use `aria-current="true"`.
+
+{::nomarkdown}
+<%= code_start('','HTML') %>
+{:/nomarkdown}
+
+~~~ html
+<li>
+	<a href="#main" aria-current="true">
+		SpaceBears
+	</a>
+</li>
+~~~
+{::nomarkdown}
+<%= code_end %><%= code_start('','CSS') %>
+{:/nomarkdown}
+~~~ css
+nav [aria-current=true] {
+	background-color: #bbb;
+	color: #000;
+	border-bottom: .25em solid #444;
+}
+~~~
+
+{::nomarkdown}
+<%= code_end %>
+{:/nomarkdown}
+
+## Example
 
 {::nomarkdown}
 <%= sample_start %>
@@ -217,51 +201,4 @@ In this menu tutorial, feedback is given through the following means:
 </style>
 
 <%= sample_end %>
-{:/nomarkdown}
-
-{::nomarkdown}
-<%= code_start('','HTML') %>
-{:/nomarkdown}
-
-~~~ html
-<li>
-	<span class="current">
-		<span class="visuallyhidden">Current Page: </span>
-		SpaceBears
-	</span>
-</li>
-~~~
-
-{::nomarkdown}
-<%= code_end %>
-{:/nomarkdown}
-
-{::nomarkdown}
-<%= code_start('','CSS') %>
-{:/nomarkdown}
-
-~~~ css
-nav .current {
-	display: block;
-	padding: .25em;
-	background-color: #bbb;
-	color: #000;
-	border-bottom: .25em solid #444;
-}
-
-nav a:hover,
-nav a:focus {
-	color: #036;
-	background-color: #fff;
-	text-decoration: underline;
-}
-nav a:active {
-	color: #fff;
-	background-color: #024;
-	text-decoration: underline;
-}
-~~~
-
-{::nomarkdown}
-<%= code_end %>
 {:/nomarkdown}
