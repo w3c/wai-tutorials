@@ -8,7 +8,7 @@ wcag_success_criteria:
   - 4.1.2
 ---
 
-Provide functionality to select from the displayed carousel items and inform users about changes.
+Provide functionality to select carousel items and to inform users about change of carousel items.
 
 ## Add previous and next buttons
 
@@ -119,7 +119,7 @@ if (announceItem) {
 <%= ref :start %>
 {:/}
 
-Display a buttons for each item in the carousel and highlight the current item. This allows users to get an overview of the carousel content, where they are in the sequence, and will enable them to navigate directly to any item.
+Display buttons for each item in the carousel and highlight the current item. This allows users to get an overview of the carousel content, where they are in the sequence, and will enable them to navigate directly to any item.
 
 The list with buttons in the example below, is added using JavaScript, with a number on the button that corresponds to the carousel item. The buttons are numbered matching the corresponding carousel items. The button for the active carousel item is highlighted both visually, and by using text that is visually hidden (for screen readers).
 
@@ -225,6 +225,6 @@ See the [carousel styling](styling.html) page for more information on how to hig
 
 ### Focus the selected carousel item
 
-When users select an item with these those navigation buttons, the focus should be set on the selected item. In this case the focus needs to be set to the `<li>` element that has the class `current` set, after the change or transition. This makes interaction easier for keyboard and assistive technology users.
+When users select an item with those navigation buttons, the focus should be set on the selected item. In this case the focus needs to be set to the `<li>` element that has the class `current` set, after the change or transition. This makes interaction easier for keyboard and assistive technology users.
 
 By default, `<li>` elements cannot receive focus. By setting its `tabindex` attribute to `-1` the element is enabled to receive focus through JavaScript.
