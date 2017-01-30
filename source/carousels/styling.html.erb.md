@@ -10,9 +10,9 @@ wcag_success_criteria:
 
 ## Button Size
 
-Use appropriately sized interactive buttons and links to allow people with physical impairments to use the carousel more easily. This will also benefit people using touch screens.
+Use appropriately sized buttons and links, and provide whitespace around them, to allow people with reduced dexterity to use the carousel more easily. This also benefits people using touch screens, such as on mobile devices.
 
-As a rule of thumb, {::comment} See what I did there? {:/} usable touch controls need to be bigger and have empty space around them to avoid touching the wrong control. While future recommendations of the minimum touch sizes are being discussed at the moment, touch areas of less than 45 × 45 px might reduce touch usability significantly.
+WCAG 2.0 does not have specific recommendations for button and link sizes, and surrounding white space. Refer to the suggested improvements for [target size](http://w3c.github.io/Mobile-A11y-TF-Note/#targetSize) that are currently in discussion. At a minimum, touch areas of less than 45 × 45 px should be avoided.
 
 ## Contrast
 
@@ -32,11 +32,11 @@ For more information on contrast requirements, see [Provide sufficient contrast 
 <%= ref :end %>
 {:/}
 
-## Use Button Shape to Indicate Status
+## Use Redundant Status Indicators
 
-Since the buttons are typically small, it is important to indicate their status both in color and shape (in addition to proper naming and labeling). In this example a filled square is used for buttons associated with items currently not shown.
+Since the navigation buttons added to the carousel are typically small, it is important to indicate their status both in color and shape (in addition to proper naming and labeling). This makes it easier for people to differentiate the buttons and their current status.
 
-The “active” button (that is associated with the current item) has a white background, a blue border and slightly rounded corners. When a keyboard user focuses or a mouse user hovers a button, that button will have a dotted border. In the following example, the carousel is showing item 1.
+In the following example a filled square is used for buttons associated with items currently not shown. The button for the item shown has rounded corners and inverted colors. When users hover over these buttons using a mouse or focus them using a keyboard, their border is dotted.
 
 {::nomarkdown}
 <%= demo %>
