@@ -90,7 +90,7 @@ This first example shows a carousel item with images as content:
 <%= code_end %>
 {:/nomarkdown}
 
-This example, an article that includes a heading and a paragraph, shows how more complex content can be used.
+This example of an article that includes a heading and a paragraph, shows how more complex content can be used.
 
 {::nomarkdown}
 <%= code_start('', 'Example 2') %>
