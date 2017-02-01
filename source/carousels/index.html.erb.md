@@ -29,7 +29,7 @@ Carousels show a collection of items one at a time. They are also known as “sl
 
 - Users must be able to pause carousel movement because it can be too fast or distracting, making text hard to read.
 - All functionality, including navigating between carousel items, must be operable by keyboard.
-- Carousel item changes must be announced to all users.
+- Changes to carousel items must be communicated to all users, including screen reader users.
 - The keyboard position (“focus”) is managed in a reasonable and comprehensible fashion.
 
 **Note:** Carousels are disputed from a usability perspective because their content can be hard to discover. Ensuring accessibility can also improve usability.
