@@ -32,7 +32,7 @@ For more information on contrast requirements, see [Provide sufficient contrast 
 <%= ref :end %>
 {:/}
 
-## Use Redundant Status Indicators
+## Indicate Button Status
 
 Since the navigation buttons added to the carousel are typically small, it is important to indicate their status both in color and shape (in addition to proper naming and labeling). This makes it easier for people to differentiate the buttons and their current status.
 
