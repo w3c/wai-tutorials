@@ -227,7 +227,7 @@ This example shows form fields to enter shipping and billing addresses. As the l
 ## Associating related controls with WAI-ARIA
 {:.ap}
 
-WAI-ARIA provides a grouping role that functions similarly to `fieldset` and `legend`.  In this example the `div` element has `role=group` to indicate that the contained elements are members of a group and the `aria-labelledby` attribute references the `id` for text that will serve as the label for the group.
+<a href="https://www.w3.org/WAI/intro/aria">WAI-ARIA</a> provides a grouping role that functions similarly to `fieldset` and `legend`.  In this example the `div` element has `role=group` to indicate that the contained elements are members of a group and the `aria-labelledby` attribute references the `id` for text that will serve as the label for the group.
 
 This technique provides additional styling possibilities.
 
