@@ -25,7 +25,7 @@ See also the [complete working example](working-example.html) and [full code](fu
 
 Carousels show a collection of items one at a time. They are also known as “slide shows” and “sliders”. Common uses of carousels include scrolling news headlines, featured articles on home pages, and image galleries.
 
-## What are the key points?
+## What makes a carousel accessible?
 
 - Users must be able to pause carousel movement because it can be too fast or distracting, making text hard to read.
 - All functionality, including navigating between carousel items, must be operable by keyboard.
