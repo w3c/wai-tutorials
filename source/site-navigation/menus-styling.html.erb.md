@@ -11,21 +11,22 @@ wcag_techniques:
   - G183
 ---
 
-Consistent styling enables users to find menus easily. Usually, menus are aligned horizontally on the top of the web page or vertically on the left side of the page (in left-to-right languages).
+Consistent styling enables users to find menus easily:
 
-Make sure that each item in the menu has enough space available to avoid the text get cut off. Make sure that the menu and its items don’t overlap other content on the page, especially when the font size is increased. This can also avoid problems when translating the menu into another language. Try to avoid line breaks or hyphenation in menu items as they are more difficult to understand.
-
-In contrast to links in running text, menus usually don’t need to be underlined as they stand out as clickable items on their own.
-
-If icons or images are used in menus, an appropriate alternative text should be provided. See the [Images Tutorial](/images/index.html) for more details.
+* Align horizontal menus on the **top of the page** or vertical ones on the **left of the page** (in left-to-right languages).
+* Each item in the menu should have **enough space** to avoid the text get cut off.
+* The menu and its items should **not overlap** other content on the page, especially when the font size is increased. This avoids problems when translating menus.
+* **Avoid line breaks or hyphenation** in menu items, if possible, as they are more difficult to read.
+* In contrast to links in running text, menus are **usually not underlined**, as they stand out as clickable items on their own.
+* Appropriate **alternative text** is provided if icons or other images are used in menus. See the [Images Tutorial](/images/index.html) for more details.
 
 ## Item states
 
-Communicating the state of the menu clearly will ensure that the menu is easier to use. Style the states in a way so they do not rely on color alone. Add a underline or change the shape of an icon or the menu item to communicate the state to people with reduced color perception.
+Menus are easier to use if the state of each menu item is clearly communicated. Make sure to not rely on color alone to convey the state: Add an underline or change the shape of an icon or the menu item as a whole provides the state to people with reduced color perception.
 
 ### Hover and Focus states
 
-Change hovered or focused menu items to give users visual guidance while navigating the page. In the [example below](#example) the hover and focus states are indicated by using an inverted color scheme (blue on white instead of white on blue) and by underlining the items.
+Change hovered or focused menu items to give users visual guidance while navigating the page. In the [example below](#example), hover and focus states use an inverted color scheme (blue on white instead of white on blue) and underline the items.
 
 {::nomarkdown}
 <%= code_start('','CSS') %>
@@ -45,7 +46,7 @@ nav a:focus {
 
 ### Active state
 
-Indicate the menu item that was just clicked, tapped, or activated using the keyboard (the active item) to let users know what item they did activate. This helps to spot mis-clicks early although the active state is usually only briefly displayed. The [example](#example) below shows the active item with darker blue background and underlined.
+Indicate the menu item that was just clicked, tapped, or activated using the keyboard (the active item) to let users know what item they did activate. This helps to spot mis-clicks early, although the active state is usually only briefly displayed. The [example](#example) below shows the active item with darker blue background and underlined.
 
 {::nomarkdown}
 <%= code_start('','CSS') %>
@@ -63,7 +64,7 @@ nav a:active {
 <%= code_end %>
 {:/nomarkdown}
 
-### Current item
+### Current state
 
 The current page should also be clearly marked to give users a sense of where they are in the website structure. A different color combination (black on grey) and a bottom border were added to give the item a distinct shape in the [example](#example).
 
@@ -72,7 +73,7 @@ The current page should also be clearly marked to give users a sense of where th
 {:/nomarkdown}
 
 ~~~ css
-nav [aria-current=true] {
+nav [aria-current=page] {
 	background-color: #bbb;
 	color: #000;
 	border-bottom: .25em solid #444;
@@ -83,16 +84,20 @@ nav [aria-current=true] {
 <%= code_end %>
 {:/nomarkdown}
 
+### Visited state
+
+While it can be helpful to know which pages have been visited in some circumstances, the expectation of users is usually that the menu does not change.
+
 ## Example
 
 {::nomarkdown}
 <%= sample_start %>
 
-<nav aria-label="Main Navigation" role="presentation" id="currentnav">
+<nav aria-label="(example) Main Navigation" id="currentnav">
 		<ul>
 				<li><a href="#currentnav">Home</a></li>
 				<li><a href="#currentnav">Shop</a></li>
-				<li><span class="current"><span class="visuallyhidden">Current Page: </span>SpaceBears</span></li>
+				<li><a href="#currentnav" aria-current="page">SpaceBears</a></li>
 				<li><a href="#currentnav">MarsCars</a></li>
 				<li><a href="#currentnav">Contact</a></li>
 		</ul>
@@ -115,8 +120,7 @@ nav [aria-current=true] {
 			width: 20%;
 			text-align: center;
 	}
-	#currentnav a,
-	#currentnav .current {
+	#currentnav a {
 			display: block;
 			padding: .25em;
 			border-bottom: .25em solid #E8E8E8;
@@ -125,7 +129,7 @@ nav [aria-current=true] {
 			color: #fff;
 			text-decoration: none;
 	}
-	#currentnav .current {
+	#currentnav [aria-current=page] {
 			background-color: #bbb;
 			color: #000;
 			border-color: #444;
