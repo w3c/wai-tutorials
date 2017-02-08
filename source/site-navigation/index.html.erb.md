@@ -27,14 +27,14 @@ wcag_techniques:
   - G183
 ---
 
-Provide a consistent navigation and accessible navigation patterns to allow users to access all content on your website.
+Structure your page navigation consistently and use the proper structure to allow users easily access all content on your website.
 
-* **Menus** are used to browse around web pages. Due to their important role to operate web pages and applications, they need to be usable in all circumstances. This tutorial covers the following topics:
+* **Menus** are used to browse around web pages. Due to their important role to operate web pages and applications, they need to be usable in all circumstances.
 
   * **[Structure](menus/structure.html):** Mark up menus in a way that reflects the structure of its content and makes identification possible.
   * **[Styling](menus/styling.html):** Use commonly recognized design patterns to identify menus and indicate the state of menu items.
   * **[Fly-out Menus](menus/flyout.html):** Implement fly-out menus to organize menus with branching sub-items.
-  * In addition, [Web Application Menus](menus/application.html) use markup and scripting to define the menu functionality and behavior in web applications mimicking desktop applications.
+  * **[Web Application Menus](menus/application.html):** Use special markup and scripting to define a menu for a web application that works like application menus in desktop operating systems.
 
 * **[In-page Navigation](in-page-navigation.html):** Provide mechanisms to navigate between sections of a web page. Consider using a “table of contents” for longer pieces of content.
 
