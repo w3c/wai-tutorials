@@ -1,7 +1,7 @@
 ---
 title: "Fly-out Menus"
 status: approved-draft
-order: 5
+order: 4
 wcag_techniques:
   - SCR26
   - H4

@@ -2,8 +2,7 @@
 title: "Web Application Menus"
 nav_title: "Applications Menu"
 status: draft
-order: 8
-type: tips
+order: 5
 wcag_techniques:
 ---
 

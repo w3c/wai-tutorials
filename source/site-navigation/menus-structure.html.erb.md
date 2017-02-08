@@ -1,7 +1,7 @@
 ---
 title: Menu Structure
 status: editors-draft
-order: 3
+order: 2
 wcag_success_criteria:
   - 4.1.2
 wcag_techniques:
