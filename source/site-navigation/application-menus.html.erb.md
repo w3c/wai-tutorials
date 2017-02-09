@@ -6,28 +6,30 @@ order: 5
 wcag_techniques:
 ---
 
+Web application menus use the same basic structure as navigation menus. They often consist of a horizontal menu bar and use fly-out functionality.
+
+## Structure
+
+To allow users operate application menus like their desktop counterparts, special WAI-ARIA roles need to be added. In addition, the keyboard behavior needs to be managed so, for example, the tab key is used to iterate through the top-level items only and the up and down arrows are used to navigate sub menus.
+
 {::nomarkdown}
-<%= editors_note_start %>
-{:/nomarkdown}
+<%= ref :start %>
+{:/}
 
-Consider adding a separator, and submenus. See discussion in Issues [353](https://github.com/w3c/wai-tutorials/issue/353) and [352](https://github.com/w3c/wai-tutorials/issue/352).
-
-{::nomarkdown}
-<%= editors_note_end %>
-{:/nomarkdown}
-
-Web application menus use the same basic structure as navigation menus: They often consist of a horizontal menu bar and use fly-out functionality.
-
-Some additional WAI-ARIA roles help users with assistive technology to operate those menus in a way that is similar to the way they use menus in desktop software. When using those roles, the keyboard interaction should be similar to desktop software as well: the tab key is used to iterate through the top-level items only, the up and down arrows are used to navigate the sub menus.
-
-Note that the keyboard behavior is not automatically changed when adding those roles, but needs to be added using scripting. A detailed explanation on the WAI-ARIA attributes and keyboard behavior can be found in the [WAI-ARIA Authoring Practices document (draft)](http://www.w3.org/TR/wai-aria-practices/#menu).
+The keyboard behavior is **not** automatically changed when the roles are added. It needs to be added using scripting. A detailed explanation on the WAI-ARIA attributes and keyboard behavior can be found in the [WAI-ARIA Authoring Practices document (draft)](http://www.w3.org/TR/wai-aria-practices/#menu).
 
 In addition to the `aria-expanded` and `aria-haspopup` attributes, the following roles are used in the example:
 
 * **`menubar`:** Represents a (usually horizontal) menu bar.
 * **`menu`:** Represents a set of links or commands in a menu bar, it is used for the fly-out menus.
 * **`menuitem`:** Represents an individual menu item.
+* **`separator`:** Represents a separator between two groups of menuitems in a menu.
 
+{::nomarkdown}<%= ref :middle %>{:/}
+
+To keep this example simple, sub-submenus are not shown in this tutorial.
+
+{::nomarkdown}<%= ref :end %>{:/}
 
 {::nomarkdown}
 <%= sample_start('show-overflow2') %>
@@ -46,6 +48,7 @@ In addition to the `aria-expanded` and `aria-haspopup` attributes, the following
 			<ul role="menu">
 						<li role="menuitem">Undo</li>
 						<li role="menuitem">Redo</li>
+						<li role="separator"></li>
 						<li role="menuitem">Cut</li>
 						<li role="menuitem">Copy</li>
 						<li role="menuitem">Paste</li>
@@ -133,11 +136,18 @@ In addition to the `aria-expanded` and `aria-haspopup` attributes, the following
 #appmenu > li[aria-expanded="true"] > ul {
 		display:block;
 	}
+#appmenu li[role="separator"] {
+ padding: 0;
+}
+#appmenu li[role="separator"]:hover,
+#appmenu li[role="separator"]:focus {
+	border: 1px solid #fff;
+}
 </style>
 
 <script>
-var appsMenuItems = document.querySelectorAll('#appmenu > li');
-var subMenuItems = document.querySelectorAll('#appmenu > li li');
+var appsMenuItems = document.querySelectorAll('#appmenu > li[role=menuitem]');
+var subMenuItems = document.querySelectorAll('#appmenu > li li[role=menuitem]');
 var keys = {
 	tab:    9,
 	enter:  13,
@@ -304,14 +314,18 @@ The markup has no links at all: It is a nested list with WAI-ARIA roles as the a
 
 ~~~html
 <ul role="menubar" id="appmenu">
+	…
 	<li role="menuitem" aria-haspopup="true">
-		File
+		Edit
 		<ul role="menu">
-			<li role="menuitem">New</li>
-			<li role="menuitem">Open</li>
-			<li role="menuitem">Print</li>
-		</ul>
-	</li>
+			<li role="menuitem">Undo</li>
+			<li role="menuitem">Redo</li>
+			<li role="separator"></li>
+			<li role="menuitem">Cut</li>
+			<li role="menuitem">Copy</li>
+			<li role="menuitem">Paste</li>
+			</ul>
+		</li>
 	…
 </ul>
 ~~~
@@ -320,6 +334,8 @@ The markup has no links at all: It is a nested list with WAI-ARIA roles as the a
 <%= code_end %>
 {:/nomarkdown}
 
+## Functionality
+
 The behavior of desktop application menus is added to the menu by this JavaScript. First, we collect all top-level menu items in one variable (`appsMenuItems`) and all submenu items in another (`subMenuItems`). Two variables keep track of the focus in top-level items (`currentIndex`) and in submenus (`subIndex`).
 
 {::nomarkdown}
@@ -327,8 +343,8 @@ The behavior of desktop application menus is added to the menu by this JavaScrip
 {:/nomarkdown}
 
 ~~~js
-var appsMenuItems = document.querySelectorAll('#appmenu > li');
-var subMenuItems = document.querySelectorAll('#appmenu > li li');
+var appsMenuItems = document.querySelectorAll('#appmenu > li[role="menuitem"]');
+var subMenuItems = document.querySelectorAll('#appmenu > li li[role="menuitem"]');
 var keys = {
 	tab:     9,
 	enter:  13,
@@ -346,7 +362,9 @@ var currentIndex, subIndex;
 <%= code_end %>
 {:/nomarkdown}
 
-To make the menu work for keyboard users, a `tabindex` attribute with the value `-1` is added to the menu items. This enables scripts to set the focus on the element. The first menu item (“File” in this example) is assigned a `tabindex` value of `0` which adds it to the tab order and lets the user access the menu. The `currentIndex` variable is initialized as soon as this first item gets focus.
+To make the menu work for keyboard users, a `tabindex` attribute with the value `-1` is added to the menu items which allows to set the focus on the element.
+
+The first main menu item (“File” in this example) is assigned a `tabindex` value of `0` which adds it to the tab order and lets the user access the menu. The `currentIndex` variable is initialized as soon as this first item gets focus.
 
 {::nomarkdown}
 <%= code_start %>
@@ -373,7 +391,9 @@ Array.prototype.forEach.call(subMenuItems, function(el, i){
 <%= code_end %>
 {:/nomarkdown}
 
-All top-level menu items open their submenus when they receive focus and reset the `subIndex` variable. When individual items are clicked, the visibility of the submenu is toggled by changing the `aria-expanded` value. If a key is pressed, the appropriate action is carried out. See the following table for more details on the behavior of top-level menu items:
+### Top-Level Menu Items
+
+All top-level menu items reset the `subIndex` variable when they receive focused. When individual items are activated (click or enter), the visibility of the submenu is toggled by changing the `aria-expanded` value. If a key is pressed, the appropriate action is carried out. See the following table for more details on the behavior of top-level menu items:
 
 <table>
 	<caption>Key mapping for top-level menu items</caption>
@@ -433,7 +453,15 @@ All top-level menu items open their submenus when they receive focus and reset t
 
 ~~~js
 Array.prototype.forEach.call(appsMenuItems, function(el, i){
-	/* code above */
+
+	if (0 == i) {
+		el.setAttribute('tabindex', '0');
+		el.addEventListener("focus", function() {
+			currentIndex = 0;
+		});
+	} else {
+		el.setAttribute('tabindex', '-1');
+	}
 
 	el.addEventListener("focus", function() {
 		subIndex = 0;
@@ -443,8 +471,7 @@ Array.prototype.forEach.call(appsMenuItems, function(el, i){
 	});
 
 	el.addEventListener("click",  function(event){
-		if (this.getAttribute('aria-expanded') == 'false'
-				|| this.getAttribute('aria-expanded') ==  null) {
+		if (this.getAttribute('aria-expanded') == 'false' || this.getAttribute('aria-expanded') ==  null) {
 			this.setAttribute('aria-expanded', "true");
 		} else {
 			this.setAttribute('aria-expanded', "false");
@@ -454,12 +481,15 @@ Array.prototype.forEach.call(appsMenuItems, function(el, i){
 	});
 
 	el.addEventListener("keydown", function(event) {
+		var prevdef = false;
 		switch (event.keyCode) {
 			case keys.right:
 				gotoIndex(currentIndex + 1);
+				prevdef = true;
 				break;
 			case keys.left:
 				gotoIndex(currentIndex - 1);
+				prevdef = true;
 				break;
 			case keys.tab:
 				if (event.shiftKey) {
@@ -467,24 +497,32 @@ Array.prototype.forEach.call(appsMenuItems, function(el, i){
 				} else {
 					gotoIndex(currentIndex + 1);
 				}
+				prevdef = true;
 				break;
 			case keys.enter:
-			case keys.space:
 			case keys.down:
 				this.click();
 				subindex = 0;
 				gotoSubIndex(this.querySelector('ul'), 0);
+				prevdef = true;
 				break;
 			case keys.up:
 				this.click();
 				var submenu = this.querySelector('ul');
 				subindex = submenu.querySelectorAll('li').length - 1;
 				gotoSubIndex(submenu, subindex);
+				prevdef = true;
 				break;
 			case keys.esc:
-				document.querySelector('a[href="#related"]').focus();
+				document.querySelector('#escape').setAttribute('tabindex', '-1');
+				document.querySelector('#escape').focus();
+				prevdef = true;
 		}
-		event.preventDefault();
+
+		if (prevdef) {
+			event.preventDefault();
+		}
+
 	});
 });
 ~~~
@@ -492,6 +530,8 @@ Array.prototype.forEach.call(appsMenuItems, function(el, i){
 {::nomarkdown}
 <%= code_end %>
 {:/nomarkdown}
+
+### Sub-Menu Items
 
 Submenu items do behave differently when interacting with them on the keyboard, see the following table for details:
 
@@ -558,44 +598,54 @@ Submenu items do behave differently when interacting with them on the keyboard, 
 Array.prototype.forEach.call(subMenuItems, function(el, i){
 	el.setAttribute('tabindex', '-1');
 	el.addEventListener("keydown", function(event) {
-			switch (event.keyCode) {
-				case keys.tab:
-					if (event.shiftKey) {
-						gotoIndex(currentIndex - 1);
-					} else {
-						gotoIndex(currentIndex + 1);
-					}
-					break;
-				case keys.right:
-					gotoIndex(currentIndex + 1);
-					break;
-				case keys.left:
+		switch (event.keyCode) {
+			case keys.tab:
+				if (event.shiftKey) {
 					gotoIndex(currentIndex - 1);
-					break;
-				case keys.esc:
-					gotoIndex(currentIndex);
-					break;
-				case keys.down:
-					gotoSubIndex(this.parentNode, subIndex + 1);
-					break;
-				case keys.up:
-					gotoSubIndex(this.parentNode, subIndex - 1);
-					break;
-				case keys.space:
-				case keys.enter:
-					alert(this.innerText);
-					break;
-			}
+				} else {
+					gotoIndex(currentIndex + 1);
+				}
+				prevdef = true;
+				break;
+			case keys.right:
+				gotoIndex(currentIndex + 1);
+				prevdef = true;
+				break;
+			case keys.left:
+				gotoIndex(currentIndex - 1);
+				prevdef = true;
+				break;
+			case keys.esc:
+				gotoIndex(currentIndex);
+				prevdef = true;
+				break;
+			case keys.down:
+				gotoSubIndex(this.parentNode, subIndex + 1);
+				prevdef = true;
+				break;
+			case keys.up:
+				gotoSubIndex(this.parentNode, subIndex - 1);
+				prevdef = true;
+				break;
+			case keys.enter:
+			case keys.space:
+				alert(this.innerText);
+				prevdef = true;
+				break;
+		}
+		if (prevdef) {
 			event.preventDefault();
 			event.stopPropagation();
-			return false;
-		});
+		}
+		return false;
+	});
+
 	el.addEventListener("click", function(event) {
-			alert(this.innerHTML);
-			event.preventDefault();
-			event.stopPropagation();
-			return false;
-		});
+		alert(this.innerHTML);
+		event.preventDefault();
+		event.stopPropagation();
+		return false;
+	});
 });
 ~~~
 
