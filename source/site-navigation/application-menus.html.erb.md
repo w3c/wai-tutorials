@@ -34,6 +34,8 @@ To keep this example simple, sub-submenus are not shown in this tutorial.
 {::nomarkdown}
 <%= sample_start('show-overflow2') %>
 
+<p><a id="#tab-before" href="#">Interactive element before the menu</a></p>
+
 <ul role="menubar" id="appmenu">
 		<li role="menuitem" aria-haspopup="true">
 			File
@@ -71,6 +73,8 @@ To keep this example simple, sub-submenus are not shown in this tutorial.
 		</li>
 		<li role="menuitem">Help</li>
 </ul>
+
+<p><a id="#tab-after" href="#">Interactive element after the menu</a></p>
 
 <style>
 .show-overflow2 {
@@ -218,9 +222,11 @@ Array.prototype.forEach.call(appsMenuItems, function(el, i){
 					break;
 				case keys.tab:
 					if (event.shiftKey) {
-						gotoIndex(currentIndex - 1);
+						document.querySelector('#tab-before').setAttribute('tabindex', '-1');
+						document.querySelector('#tab-before').focus();
 					} else {
-						gotoIndex(currentIndex + 1);
+						document.querySelector('#tab-after').setAttribute('tabindex', '-1');
+						document.querySelector('#tab-after').focus();
 					}
 					prevdef = true;
 					break;
@@ -239,8 +245,8 @@ Array.prototype.forEach.call(appsMenuItems, function(el, i){
 					prevdef = true;
 					break;
 				case keys.esc:
-					document.querySelector('#escape').setAttribute('tabindex', '-1');
-					document.querySelector('#escape').focus();
+					document.querySelector('#tab-before').setAttribute('tabindex', '-1');
+					document.querySelector('#tab-before').focus();
 					prevdef = true;
 			}
 			if (prevdef) {
@@ -254,10 +260,15 @@ Array.prototype.forEach.call(subMenuItems, function(el, i){
 	el.addEventListener("keydown", function(event) {
 			switch (event.keyCode) {
 				case keys.tab:
+					Array.prototype.forEach.call(appsMenuItems, function (elem) {
+						elem.setAttribute('aria-expanded', 'false');
+					});
 					if (event.shiftKey) {
-						gotoIndex(currentIndex - 1);
+						document.querySelector('#tab-before').setAttribute('tabindex', '-1');
+						document.querySelector('#tab-before').focus();
 					} else {
-						gotoIndex(currentIndex + 1);
+						document.querySelector('#tab-after').setAttribute('tabindex', '-1');
+						document.querySelector('#tab-after').focus();
 					}
 					prevdef = true;
 					break;
@@ -306,7 +317,6 @@ Array.prototype.forEach.call(subMenuItems, function(el, i){
 {:/nomarkdown}
 
 The markup has no links at all: It is a nested list with WAI-ARIA roles as the application would be non-functional without JavaScript available anyway.
-{:#escape}
 
 {::nomarkdown}
 <%= code_start %>
@@ -406,19 +416,21 @@ All top-level menu items reset the `subIndex` variable when they receive focused
 	<tbody>
 		<tr>
 			<th scope="row"><kbd>tab ⇥</kbd></th>
-			<td rowspan="2">Select the next top-level menu item</td>
+			<td>Select the next focusable element outside of the menu.</td>
 		</tr>
 		<tr>
-			<th scope="row"><kbd>right &rarr;</kbd></th>
+			<th scope="row"><kbd>shift ⇧</kbd> + <kbd>tab ⇥</kbd></th>
+			<td>Select the previous focusable element outside of the menu.</td>
 		</tr>
 	</tbody>
 	<tbody>
 		<tr>
-			<th scope="row"><kbd>shift ⇧</kbd> + <kbd>tab ⇥</kbd></th>
-			<td rowspan="2">Select the previous top-level menu item</td>
+			<th scope="row"><kbd>right &rarr;</kbd></th>
+			<td>Select the next top-level menu item</td>
 		</tr>
 		<tr>
 			<th scope="row"><kbd>left &larr;</kbd></th>
+			<td>Select the previous top-level menu item</td>
 		</tr>
 	</tbody>
 	<tbody>
@@ -453,77 +465,75 @@ All top-level menu items reset the `subIndex` variable when they receive focused
 
 ~~~js
 Array.prototype.forEach.call(appsMenuItems, function(el, i){
-
-	if (0 == i) {
-		el.setAttribute('tabindex', '0');
-		el.addEventListener("focus", function() {
-			currentIndex = 0;
-		});
-	} else {
-		el.setAttribute('tabindex', '-1');
-	}
-
-	el.addEventListener("focus", function() {
-		subIndex = 0;
-		Array.prototype.forEach.call(appsMenuItems, function(el, i){
-			el.setAttribute('aria-expanded', "false");
-		});
-	});
-
-	el.addEventListener("click",  function(event){
-		if (this.getAttribute('aria-expanded') == 'false' || this.getAttribute('aria-expanded') ==  null) {
-			this.setAttribute('aria-expanded', "true");
+		if (0 == i) {
+			el.setAttribute('tabindex', '0');
+			el.addEventListener("focus", function() {
+				currentIndex = 0;
+			});
 		} else {
-			this.setAttribute('aria-expanded', "false");
+			el.setAttribute('tabindex', '-1');
 		}
-		event.preventDefault();
-		return false;
-	});
-
-	el.addEventListener("keydown", function(event) {
-		var prevdef = false;
-		switch (event.keyCode) {
-			case keys.right:
-				gotoIndex(currentIndex + 1);
-				prevdef = true;
-				break;
-			case keys.left:
-				gotoIndex(currentIndex - 1);
-				prevdef = true;
-				break;
-			case keys.tab:
-				if (event.shiftKey) {
-					gotoIndex(currentIndex - 1);
-				} else {
-					gotoIndex(currentIndex + 1);
-				}
-				prevdef = true;
-				break;
-			case keys.enter:
-			case keys.down:
-				this.click();
-				subindex = 0;
-				gotoSubIndex(this.querySelector('ul'), 0);
-				prevdef = true;
-				break;
-			case keys.up:
-				this.click();
-				var submenu = this.querySelector('ul');
-				subindex = submenu.querySelectorAll('li').length - 1;
-				gotoSubIndex(submenu, subindex);
-				prevdef = true;
-				break;
-			case keys.esc:
-				document.querySelector('#escape').setAttribute('tabindex', '-1');
-				document.querySelector('#escape').focus();
-				prevdef = true;
-		}
-
-		if (prevdef) {
+		el.addEventListener("focus", function() {
+			subIndex = 0;
+			Array.prototype.forEach.call(appsMenuItems, function(el, i){
+				el.setAttribute('aria-expanded', "false");
+			});
+		});
+		el.addEventListener("click",  function(event){
+			if (this.getAttribute('aria-expanded') == 'false' || this.getAttribute('aria-expanded') ==  null) {
+				this.setAttribute('aria-expanded', "true");
+			} else {
+				this.setAttribute('aria-expanded', "false");
+			}
 			event.preventDefault();
-		}
-
-	});
+			return false;
+		});
+		el.addEventListener("keydown", function(event) {
+			var prevdef = false;
+			switch (event.keyCode) {
+				case keys.right:
+					gotoIndex(currentIndex + 1);
+					prevdef = true;
+					break;
+				case keys.left:
+					gotoIndex(currentIndex - 1);
+					prevdef = true;
+					break;
+				case keys.tab:
+					// In this demo, we know what the ID of the previous/next interactive element was. In practice this should be automatically determined.
+					if (event.shiftKey) {
+						document.querySelector('#tab-before').setAttribute('tabindex', '-1');
+						document.querySelector('#tab-before').focus();
+					} else {
+						document.querySelector('#tab-after').setAttribute('tabindex', '-1');
+						document.querySelector('#tab-after').focus();
+					}
+					prevdef = true;
+					break;
+				case keys.enter:
+				case keys.down:
+					this.click();
+					subindex = 0;
+					gotoSubIndex(this.querySelector('ul'), 0);
+					prevdef = true;
+					break;
+				case keys.up:
+					this.click();
+					var submenu = this.querySelector('ul');
+					subindex = submenu.querySelectorAll('li').length - 1;
+					gotoSubIndex(submenu, subindex);
+					prevdef = true;
+					break;
+				case keys.esc:
+					// In this demo, we know what the ID of the previous/next interactive element was. In practice this should be automatically determined.
+					document.querySelector('#tab-before').setAttribute('tabindex', '-1');
+					document.querySelector('#tab-before').focus();
+					prevdef = true;
+			}
+			if (prevdef) {
+				event.preventDefault();
+			}
+		});
 });
 ~~~
 
@@ -546,19 +556,21 @@ Submenu items do behave differently when interacting with them on the keyboard, 
 	<tbody>
 		<tr>
 			<th scope="row"><kbd>tab ⇥</kbd></th>
-			<td rowspan="2">Close the submenu, select the next top-level menu item</td>
+			<td>Close the submenu, select the next focusable element outside of the menu.</td>
 		</tr>
 		<tr>
-			<th scope="row"><kbd>right &rarr;</kbd></th>
+			<th scope="row"><kbd>shift ⇧</kbd> + <kbd>tab ⇥</kbd></th>
+			<td>Close the submenu, select the previous focusable element outside of the menu.</td>
 		</tr>
 	</tbody>
 	<tbody>
 		<tr>
-			<th scope="row"><kbd>shift ⇧</kbd> + <kbd>tab ⇥</kbd></th>
-			<td rowspan="2">Close the submenu, select the previous top-level menu item</td>
+			<th scope="row"><kbd>right &rarr;</kbd></th>
+			<td>Close the submenu, select the next top-level menu item.</td>
 		</tr>
 		<tr>
 			<th scope="row"><kbd>left &larr;</kbd></th>
+			<td>Close the submenu, select the previous top-level menu item.</td>
 		</tr>
 	</tbody>
 	<tbody>
@@ -573,19 +585,19 @@ Submenu items do behave differently when interacting with them on the keyboard, 
 	<tbody>
 		<tr>
 			<th scope="row"><kbd>down &darr;</kbd></th>
-			<td>Select next submenu item</td>
+			<td>Select next submenu item.</td>
 		</tr>
 	</tbody>
 	<tbody>
 		<tr>
 			<th scope="row"><kbd>up &uarr;</kbd></th>
-			<td>Select previous submenu item</td>
+			<td>Select previous submenu item.</td>
 		</tr>
 	</tbody>
 	<tbody>
 		<tr>
 			<th scope="row"><kbd>esc</kbd></th>
-			<td>Close the submenu, select the current top-level menu item</td>
+			<td>Close the submenu, select the current top-level menu item.</td>
 		</tr>
 	</tbody>
 </table>
@@ -598,54 +610,60 @@ Submenu items do behave differently when interacting with them on the keyboard, 
 Array.prototype.forEach.call(subMenuItems, function(el, i){
 	el.setAttribute('tabindex', '-1');
 	el.addEventListener("keydown", function(event) {
-		switch (event.keyCode) {
-			case keys.tab:
-				if (event.shiftKey) {
-					gotoIndex(currentIndex - 1);
-				} else {
+			switch (event.keyCode) {
+				case keys.tab:
+					// Close all menus.
+					Array.prototype.forEach.call(appsMenuItems, function (elem) {
+						elem.setAttribute('aria-expanded', 'false');
+					});
+					// In this demo, we know what the ID of the previous/next interactive element was. In practice this should be automatically determined.
+					if (event.shiftKey) {
+						document.querySelector('#tab-before').setAttribute('tabindex', '-1');
+						document.querySelector('#tab-before').focus();
+					} else {
+						document.querySelector('#tab-after').setAttribute('tabindex', '-1');
+						document.querySelector('#tab-after').focus();
+					}
+					prevdef = true;
+					break;
+				case keys.right:
 					gotoIndex(currentIndex + 1);
-				}
-				prevdef = true;
-				break;
-			case keys.right:
-				gotoIndex(currentIndex + 1);
-				prevdef = true;
-				break;
-			case keys.left:
-				gotoIndex(currentIndex - 1);
-				prevdef = true;
-				break;
-			case keys.esc:
-				gotoIndex(currentIndex);
-				prevdef = true;
-				break;
-			case keys.down:
-				gotoSubIndex(this.parentNode, subIndex + 1);
-				prevdef = true;
-				break;
-			case keys.up:
-				gotoSubIndex(this.parentNode, subIndex - 1);
-				prevdef = true;
-				break;
-			case keys.enter:
-			case keys.space:
-				alert(this.innerText);
-				prevdef = true;
-				break;
-		}
-		if (prevdef) {
+					prevdef = true;
+					break;
+				case keys.left:
+					gotoIndex(currentIndex - 1);
+					prevdef = true;
+					break;
+				case keys.esc:
+					gotoIndex(currentIndex);
+					prevdef = true;
+					break;
+				case keys.down:
+					gotoSubIndex(this.parentNode, subIndex + 1);
+					prevdef = true;
+					break;
+				case keys.up:
+					gotoSubIndex(this.parentNode, subIndex - 1);
+					prevdef = true;
+					break;
+				case keys.enter:
+				case keys.space:
+					alert(this.innerText);
+					prevdef = true;
+					break;
+			}
+			if (prevdef) {
+				event.preventDefault();
+				event.stopPropagation();
+			}
+			return false;
+		});
+	el.addEventListener("click", function(event) {
+			alert(this.innerHTML);
 			event.preventDefault();
 			event.stopPropagation();
-		}
-		return false;
-	});
-
-	el.addEventListener("click", function(event) {
-		alert(this.innerHTML);
-		event.preventDefault();
-		event.stopPropagation();
-		return false;
-	});
+			return false;
+		});
 });
 ~~~
 
