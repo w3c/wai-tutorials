@@ -13,7 +13,7 @@ In-page navigation provides users with links to individual sections of the page.
 
 ## Anchors
 
-The `id` attribute of any element can be used as an anchor and directly linked to from within the page or externally. If the main content is using `<main id="content">`, attaching `#content` to the end of the URL will scroll the main content into view and focus on it. This can be helpful to people who bookmark commonly used pages to jump directly to the section of the page of interest.
+The `id` attribute of any element can be used as an anchor and directly linked to from within the page or externally. If the main content is using `<main id="content">`, attaching `#content` to the end of the URL will scroll the main content into view and focus on it. This is also helpful to people who bookmark commonly used pages and jump directly to the section of the page of interest.
 
 If possible, make those anchors discoverable by adding links to the section on the web page. In this tutorial, you can find such anchors by using the share button displayed near each heading.
 
