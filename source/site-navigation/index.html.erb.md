@@ -27,7 +27,7 @@ wcag_techniques:
   - G183
 ---
 
-Structure your page navigation consistently and use the proper structure to allow users easily access all content on your website.
+Structure your page navigation consistently and use the proper structure to allow users to easily access all content on your website.
 
 * **Menus** are used to browse around web pages. Due to their important role to operate web pages and applications, they need to be usable in all circumstances.
 
