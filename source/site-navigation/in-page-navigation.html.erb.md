@@ -23,7 +23,7 @@ If possible, make those anchors discoverable by adding links to the section on t
 <%= ref :start %>
 {:/}
 
-Skip links are used to move directly to different sections on the page. While some of their functionality is duplicated by WAI-ARIA regions, skip links are still useful for users who use the keyboard without other assistive technologies. Many screen reader users are used to move to the main content using skip links.
+Skip links are used to move directly to different sections on the page. While some of their functionality is duplicated by WAI-ARIA regions, skip links are still useful for users who use the keyboard without other assistive technologies. Many screen reader users are familiar with moving to the main content using skip links.
 
 {::nomarkdown}
 <%= ref :middle %>
@@ -60,4 +60,4 @@ The following example shows skip links that allow users to jump directly to the 
 
 ## Table of contents
 
-A table of contents can be a useful way to skim the page by providing an outline for the user. It should be contained in a navigation region, so it can be easily discovered. The “On this Page” box on every tutorial page is an example for such a table of contents. The anchors on every heading are used to allow users to skip to those headings directly.
+A table of contents can be a useful way to skim the page by providing an outline for the user. It should be contained in a navigation region, so it can be easily discovered. The “On this Page” box on every tutorial page is an example of a table of contents. The anchors on every heading allow users to skip to those headings directly.
