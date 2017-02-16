@@ -1,6 +1,6 @@
 ---
 title: Menu Structure
-status: editors-draft
+status: draft
 order: 2
 wcag_success_criteria:
   - 4.1.2

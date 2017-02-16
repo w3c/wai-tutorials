@@ -1,6 +1,6 @@
 ---
 title: Menu Styling
-status: approved-draft
+status: draft
 order: 3
 wcag_success_criteria:
   - 1.4.1
