@@ -1,5 +1,6 @@
 ---
 title: Menu Styling
+nav_title: Styling
 status: draft
 order: 3
 wcag_success_criteria:

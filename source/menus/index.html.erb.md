@@ -1,6 +1,6 @@
 ---
-title: Navigation Concepts
-tutorial_title: Navigation
+title: Menu Concepts
+tutorial_title: Menus
 nav_title: Concepts
 status: draft
 order: 1

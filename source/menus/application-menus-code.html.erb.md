@@ -1,6 +1,6 @@
 ---
 title: Application Menu Example
-nav_title: "Menu Code"
+nav_title: "Web App Menu Code"
 status: draft
 order: 6
 type: tips

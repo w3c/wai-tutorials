@@ -1,5 +1,6 @@
 ---
 title: Menu Structure
+nav_title: Structure
 status: draft
 order: 2
 wcag_success_criteria:
