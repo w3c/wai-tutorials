@@ -1,7 +1,7 @@
 ---
 title: Menu Structure
 status: editors-draft
-order: 3
+order: 2
 wcag_success_criteria:
   - 4.1.2
 wcag_techniques:
@@ -9,17 +9,17 @@ wcag_techniques:
   - ARIA11
 ---
 
-Semantic markup conveys the menu structure to users. It also makes the menu adaptable to different situations, such as small screen display, zoomed in, or assistive technology use.
+Semantic markup conveys the menu structure to users. It makes the menu adaptable to different situations, such as small screen display, zoomed in, or assistive technology use.
 
-## List of Links
-{:.newap}
+## Menus as List of Links
+{:#lists-of-links.newap}
 
 Convey the menu structure to users effectively by using a list, especially if the menu consists of more than very few links. With this structural information assistive technologies can announce the number of items in the menu.
 
 ### Unordered list
 {:.ap}
 
-If the sequence of reading the pages is not important to understand the website, use an unordered list (`<ul>`). In the following example, the user is not required to read the home page before advancing to the shop or get information about the products. Most menus are unordered.
+In the following example, the user is not required to read the home page before advancing to the shop or get information about the products. As the sequence of reading the pages is not important to understand the website as a whole, use an unordered list (`<ul>`) – this approach can be used on most websites.
 
 {::nomarkdown}
 <%= code_start('','Unordered List') %>
@@ -44,7 +44,7 @@ If the sequence of reading the pages is not important to understand the website,
 ### Ordered list
 {:.ap}
 
-In instances where pages need to be read in a certain sequence, for example chapters in prose or steps in a construction manual, use an ordered list (`<ol>`). Following the order is important to properly build the space ship in the example below:
+In instances where pages need to be read in a certain sequence, for example chapters in prose or steps in a construction manual, use an ordered list (`<ol>`). The order is important to properly build the space ship in the example below:
 
 {::nomarkdown}
 <%= code_start('','Ordered List') %>
@@ -65,13 +65,13 @@ In instances where pages need to be read in a certain sequence, for example chap
 <%= code_end %>
 {:/}
 
-## Identifying the menu
+## Identify menus
 
 {::nomarkdown}
 <%= ref :start %>
 {:/}
 
-To identify the menu, use the `<nav>` element in HTML5. It allows users to directly access the menu. The `<nav>` element wraps the list that contains the individual menu items.
+To identify the menu, use the `<nav>` element in HTML5 to wrap the list that contains the individual menu items. This allows users to directly access the menu.
 
 {::nomarkdown}
 <%= ref :middle %>
@@ -99,7 +99,7 @@ For more information on regions, see the [page regions](/page-structure/regions.
 <%= code_end %>
 {:/}
 
-## Labeling navigations
+## Label menus
 {:.newap}
 
 
@@ -107,7 +107,7 @@ For more information on regions, see the [page regions](/page-structure/regions.
 <%= ref :start %>
 {:/}
 
-Label menus according to their individual function to make them easier to find and understand. This helps to distinguish between multiple menus on a web page. Use a heading, `aria-label`, or `aria-labelledby` to provide the label.
+Label menus to make them easier to find and understand. The label should be short but descriptive, which allows users to distinguish between multiple menus on a web page. Use a heading, `aria-label`, or `aria-labelledby` to provide the label.
 
 {::nomarkdown}
 <%= ref :middle %>
@@ -178,7 +178,7 @@ The item has also an invisible text “Current Page:” added to the menu item. 
 ### Using WAI-ARIA
 {:.ap}
 
-If you want to include a link to the main content area of the page or can’t remove the `<a>` element from the navigation, you can alternatively use `aria-current="page"`.
+If a link to the main content area of the page is required or if the `<a>` element cannot be removed from the navigation, use `aria-current="page"` as an alternative.
 
 {::nomarkdown}
 <%= code_start('','HTML') %>
