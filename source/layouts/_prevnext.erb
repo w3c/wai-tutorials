@@ -1,4 +1,4 @@
-<div role="navigation" id="tools">
+<nav role="navigation" aria-label="Previous/Next" id="tools">
   <ul>
     <% if current_page.data.type == 'intro' %>
       <% current_page.children.sort_by { |resource| resource.data.order }.each do |item| %>
@@ -43,4 +43,4 @@
       <% end %>
     <% end %>
   </ul>
-</div>
+</nav>
