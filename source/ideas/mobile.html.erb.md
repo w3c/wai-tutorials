@@ -1,5 +1,6 @@
 ---
 title: Mobile First
+nav_title: Mobile First (f. Design)
 status: editors-draft
 order: 4
 wcag_success_criteria:
