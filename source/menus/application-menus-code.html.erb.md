@@ -1,11 +1,10 @@
 ---
 title: Application Menu Example
-nav_title: App. Menu Code
+nav_title: "Menu Code"
 status: draft
 order: 6
 type: tips
 ---
-
 {::nomarkdown}
 <%= sample_start %>
 <ul role="menubar" aria-label="functions" id="appmenu">

@@ -3,7 +3,6 @@ title: "Web Application Menus"
 nav_title: "Application Menus"
 status: draft
 order: 5
-wcag_techniques:
 ---
 
 Web application menus use the same basic structure as navigation menus. They often consist of a horizontal menu bar and use fly-out functionality.
