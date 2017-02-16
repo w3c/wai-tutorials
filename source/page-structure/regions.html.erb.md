@@ -118,7 +118,7 @@ A [complete example](example.html) for all regions combined is available.
 <%= ref :middle %>
 {:/nomarkdown}
 
-**Note:** The [Naivgation tutorial](/site-navigation/index.html) provides more information about creating menus in more detail.
+**Note:** The [Menus tutorial](/menus/index.html) provides more information about creating menus in more detail.
 
 {::nomarkdown}
 <%= ref :end %>

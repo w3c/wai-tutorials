@@ -1,6 +1,6 @@
 ---
 title: "Web Application Menus"
-nav_title: "Applications Menu"
+nav_title: "Application Menus"
 status: draft
 order: 5
 wcag_techniques:
@@ -671,4 +671,4 @@ Array.prototype.forEach.call(subMenuItems, function(el, i){
 <%= code_end %>
 {:/nomarkdown}
 
-[See the complete example code.](/menus/examples/appmenu.html)
+[See the complete example code.](application-menus-code.html)
