@@ -36,9 +36,9 @@ Structure your page navigation consistently and use the proper structure to allo
   * **[Fly-out Menus](menus-flyout.html):** Implement fly-out menus to organize menus with branching sub-items.
   * **[Web Application Menus](application-menus.html):** Use special markup and scripting to define a menu for a web application that works like application menus in desktop operating systems.
 
-* **[In-page Navigation](in-page-navigation.html):** Provide mechanisms to navigate between sections of a web page. Consider using a “table of contents” for longer pieces of content.
+* **[In-page Navigation](in-page-navigation.html):** Provide mechanisms to navigate between sections of a web page, like skip links, anchors, and/or a table of contents.
 
-* **[Multiple Ways](multiple-ways.html):** Most websites benefit from having multiple ways to access content, like a sitemap or search.
+* **[Multiple Ways](multiple-ways.html):** Most websites benefit from having multiple ways, like a breadcrumb navigation, a sitemap or a search, to discover content.
 
 ## Why is this important?
 
