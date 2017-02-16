@@ -29,7 +29,7 @@ wcag_techniques:
 
 Structure your page navigation consistently and use the proper structure to allow users to easily access all content on your website.
 
-* **Menus** are used to browse around web pages. Due to their important role to operate web pages and applications, they need to be usable in all circumstances.
+* **Menus** are used to navigate and interact with web pages, therefore they need to be usable in all circumstances.
 
   * **[Structure](menus-structure.html):** Mark up menus in a way that reflects the structure of its content and makes identification possible.
   * **[Styling](menus-styling.html):** Use commonly recognized design patterns to identify menus and indicate the state of menu items.
@@ -42,7 +42,7 @@ Structure your page navigation consistently and use the proper structure to allo
 
 ## Why is this important?
 
-Navigations reflect the underlying structure of websites, individual web pages, and multi-step processes such as check-out forms.They allow users to get an overview on the content and access information and functionality more easily when implemented properly.
+Navigation mechanisms reflect the underlying structure of websites, individual web pages, and multi-step processes such as check-out forms. They allow users to get an overview on the content and access information and functionality more easily when implemented properly.
 
 * **Screen reader and keyboard users** benefit from keyboard interoperability and markup that allows them to operate menus in different ways.
 
