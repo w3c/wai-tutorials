@@ -112,7 +112,7 @@ Use markup to indicate the current item of a menu, such as the current page on a
 ### Using invisible text
 {:.ap}
 
-Provide an invisible label that is read aloud to screen reader users and used by other assistive technologies to mark the current item. This allows custom label text. 
+Provide an invisible label that is read aloud to screen reader users and used by other assistive technologies to mark the current item. This allows custom label text.
 
 Remove the anchor (`<a>`), so users cannot interact with the current item. This avoids misunderstandings and emphasizes that the current menu item is active.
 
@@ -137,9 +137,9 @@ In the following example the menu item has the invisible text â€œCurrent Page:â€
 ### Using WAI-ARIA
 {:.ap}
 
-Use the `aria-current="page"` attribute to indicate the current menu item and its type. This is particularly useful for application menus and ordered menus, such as instructional steps.
+Use the `aria-current="page"` attribute to indicate the current page in the menu. This is particularly useful when the menu item is supposed to stay a link, or when the HTML cannot be changed to remove the anchor.
 
-In the following example WAI-ARIA is used to indicate the current menu item:
+In the following example the link in the navigation points to the main content of the page.
 
 {::nomarkdown}
 <%= code_start('','HTML') %>
