@@ -10,7 +10,7 @@ wcag_techniques:
   - ARIA11
 ---
 
-Semantic markup conveys the menu structure to users. It makes the menu adaptable to different situations, such as small screen displays, magnification, and use with assistive technology. Styling is applied later to give this structure the desired visual appearance of the menu and its items.
+Semantic markup conveys the menu structure to users. Menus can easily adapt to different situations, such as small screen displays, screen magnification and other assistive technology, when coded semantically.
 
 ## Menu representation
 {:#lists-of-links.newap}
