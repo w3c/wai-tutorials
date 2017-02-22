@@ -30,7 +30,7 @@ Consider making the label of menus visible to everyone. For example, in these tu
 
 ### Size
 
-Ensure appropriate sizing of menus and menu items to fit the text. This includes varying text sizes to accommodate people who need larger text and languages with longer words. Where possible avoid line breaks and hyphenation, as these are often distracting and difficult to read. Also provide sufficient blank space to support people with reduced dexterity and small touch screens on mobile devices. At the same time, make sure that menus do not overlap themselves and other content of the page when text size is increased or when the page is magnified.
+Ensure appropriate sizing of menus and menu items to fit the text. This includes varying text sizes to accommodate people who need larger text and languages with longer words. Where possible avoid line breaks and hyphenation, as these are often distracting and difficult to read. Also provide sufficient white space, like padding, to support people with reduced dexterity and small touch screens on mobile devices. At the same time, make sure that menus do not overlap themselves and other content of the page when text size is increased or when the page is magnified.
 
 ## Menu items
 
