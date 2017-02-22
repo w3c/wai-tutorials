@@ -13,7 +13,7 @@ wcag_techniques:
 Semantic markup conveys the menu structure to users. Menus can easily adapt to different situations, such as small screen displays, screen magnification and other assistive technology, when coded semantically.
 
 ## Menu representation
-{:#lists-of-links.newap}
+{:.newap}
 
 Convey the menu structure, typically by using a list. Such structural information allows assistive technologies to announce the number of items in the menu and provide corresponding navigation functionality.
 
