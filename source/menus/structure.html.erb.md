@@ -112,11 +112,11 @@ Use markup to indicate the current item of a menu, such as the current page on a
 ### Using invisible text
 {:.ap}
 
-Provide invisible text that is only read aloud to screen reader users. This allows customized text, if needed.
+Provide an invisible label that is read aloud to screen reader users and used by other assistive technologies to mark the current item. This allows custom label text. 
 
-For navigation menus the anchor is often removed to further emphasize that the current menu item is active.
+Remove the anchor (`<a>`), so users cannot interact with the current item. This avoids misunderstandings and emphasizes that the current menu item is active.
 
-In the following example the menu item has the invisible text “Current Page:” and the (`<a>` element) is removed:
+In the following example the menu item has the invisible text “Current Page:” and the `<a>` element is replaced by a `<span>` with a class `current`:
 
 {::nomarkdown}
 <%= code_start('','HTML') %>
