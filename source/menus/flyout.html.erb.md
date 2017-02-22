@@ -207,7 +207,7 @@ Sub-menus should not open when using the tab key to navigate through the menu, a
 #### Use parent as toggle
 {:.ap}
 
-This is for situations when the parent menu item only summarizes the sub-menu and doesn’t need to carry out a function, such as link to a web page. In this case the submenu is opened by a script when the user activates the top-level item, and is closed when the focus leaves the sub-menu.
+Use this approach in situations where the parent menu item only summarizes the sub-menu and doesn’t need to carry out a function, such as link to a web page. In this case the sub-menu is opened by a script when the user activates the top-level item, and is closed when the focus leaves the sub-menu.
 
 {::nomarkdown}
 <%= notes_start() %>
