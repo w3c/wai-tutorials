@@ -53,7 +53,7 @@ Application menus typically do not have links and rely on scripting to provide t
 
 ## Functionality
 
-Functionality and keyboard behavior are **not** automatically enabled when WAI-ARIA roles are added. These need to be added using scripting. A detailed explanation on the WAI-ARIA attributes and keyboard behavior can be found in the [WAI-ARIA Authoring Practices document (draft)](http://www.w3.org/TR/wai-aria-practices/#menu).
+Adding the WAI-ARIA roles does **not** automatically enable the menu’s functionality or keyboard behavior. These need to be added using scripting. A detailed explanation on the WAI-ARIA attributes and keyboard behavior can be found in the [WAI-ARIA Authoring Practices document (draft)](http://www.w3.org/TR/wai-aria-practices/#menu).
 
 ## Keyboard behavior
 
