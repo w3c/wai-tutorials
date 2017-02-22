@@ -1,6 +1,5 @@
 ---
 title: "Application Menus"
-nav_title: "Application Menus"
 status: draft
 order: 5
 ---
