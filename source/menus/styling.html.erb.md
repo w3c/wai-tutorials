@@ -16,7 +16,7 @@ Clear and consistent styling allows users to find and recognize menus more easil
 
 ## General considerations
 
-Menus often use images, such as icons that are decorative or that communicate functionality. These require text alternatives, as described in the [Images Tutorial](/images/index.html). Also color contrast requirements are applicable to menus and menu items.
+Menus often use images, such as icons, that can be decorative or communicate functionality. These require text alternatives, as described in the [Images Tutorial](/images/index.html). Also contrast requirements are applicable to menus and their items.
 
 ### Location
 
