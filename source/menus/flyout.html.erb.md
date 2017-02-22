@@ -69,7 +69,7 @@ nav > ul li:hover ul { display: block;}
 
 In addition, scripting is used to slightly delay the immediate closing of sub-menu items when the mouse leaves the area. This makes it easier to use the menu when navigation by mouse is not very precise.
 
-In the following example, a on-second delay is add using a timer:
+In the following example, a delay of one second is added using a timer:
 
 {::nomarkdown}
 <%= sample_start('show-overflow') %>
