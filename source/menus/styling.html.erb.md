@@ -20,7 +20,7 @@ Menus often use images, such as icons, that can be decorative or communicate fun
 
 ### Location
 
-Consider the location of the menu in relation to the expectation of your target audience. For example, on websites (in left-to-right languages) the main navigation menu is commonly located vertically on the left of the pages, and sometimes horizontally across the top. Application menus are often expected horizontally across the top as well.
+Display the menu where the target audience of the website expects it. For example, on websites the main navigation menu is commonly located either vertically on the left of the pages (in left-to-right languages), or horizontally across the top. Application menus are usually expected horizontally across the top.
 
 ### Identification
 
