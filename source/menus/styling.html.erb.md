@@ -38,7 +38,7 @@ Use colors and styling to identify menu items and their states, yet do not rely 
 
 ### Default state
 
-Use distinct styling to visually indicate menu items as regions of the page that can be activated. However, avoid exaggerated text decoration, such as all-capitalized, as these make text harder to read.
+Use distinct styling to visually indicate menu items as regions of the page that can be activated. However, avoid exaggerated text decoration, such as words in uppercase or small caps, as these make text harder to read.
 
 ### Hover and Focus states
 
