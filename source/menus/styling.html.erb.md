@@ -34,7 +34,7 @@ Ensure appropriate sizing of menus and menu items to fit the text. This includes
 
 ## Menu items
 
-Use colors and styling to identify menu items and their states, yet do not rely on color alone to convey such information. For example, change the shape of a menu item, or add an icon, in addition to changing its color when it is selected.
+Convey menu items and their states by using color and other styling options. Don’t rely on color alone as some users will be unable to perceive such changes. For example, change the shape of a menu item, or add an icon, in addition to changing its color when it is selected.
 
 ### Default state
 
