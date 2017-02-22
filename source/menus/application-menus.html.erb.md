@@ -8,10 +8,6 @@ Web application menus use the same basic structure as navigation menus. They oft
 
 ## Additional markup
 
-{::nomarkdown}
-<%= ref :start %>
-{:/}
-
 In addition to the `aria-expanded` and `aria-haspopup` attributes, the following WAI-ARIA roles are used to provide the necessary semantics of an application menu:
 
 * **`menubar`:** Represents a (usually horizontal) menu bar.
@@ -19,11 +15,9 @@ In addition to the `aria-expanded` and `aria-haspopup` attributes, the following
 * **`menuitem`:** Represents an individual menu item.
 * **`separator`:** Represents a separator between two groups of menuitems in a menu.
 
-{::nomarkdown}<%= ref :middle %>{:/}
-
-Application menus typically do not have links and rely on scripting to provide the functionality.
-
-{::nomarkdown}<%= ref :end %>{:/}
+{::nomarkdown}
+<%= ref :start %>
+{:/}
 
 {::nomarkdown}
 <%= code_start %>
@@ -50,6 +44,12 @@ Application menus typically do not have links and rely on scripting to provide t
 {::nomarkdown}
 <%= code_end %>
 {:/nomarkdown}
+
+{::nomarkdown}<%= ref :middle %>{:/}
+
+Application menus typically do not have links and rely on scripting to provide the functionality.
+
+{::nomarkdown}<%= ref :end %>{:/}
 
 ## Functionality
 
