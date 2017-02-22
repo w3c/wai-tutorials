@@ -42,7 +42,11 @@ Use distinct styling to visually indicate menu items as regions of the page that
 
 ### Hover and Focus states
 
-Change hovered or focused menu items to give users visual guidance while navigating the menu. In this example (see [running code](#example)), hover and focus states use an inverted color scheme (blue on white instead of white on blue) and underline.
+Change hovered or focused menu items to give users visual guidance while navigating the menu. In this example, hover and focus states use an inverted color scheme (blue on white instead of white on blue) and underline.
+
+{::nomarkdown}
+<%= demo :start %>
+{:/nomarkdown}
 
 {::nomarkdown}
 <%= code_start('','CSS') %>
@@ -60,9 +64,24 @@ nav a:focus {
 <%= code_end %>
 {:/nomarkdown}
 
+{::nomarkdown}
+<%= demo :middle %>
+{:/nomarkdown}
+
+See this code in action in the [live example](#example).
+
+{::nomarkdown}
+<%= demo :end %>
+{:/nomarkdown}
+
+
 ### Active state
 
-Indicate the menu item that was activated through clicking, tapping, or a keyboard. This helps people to identify unintended activation, for example by mis-clicking. In this example (see [runing code](#example)) the active item has darker blue background and is underlined.
+Indicate the menu item that was activated through clicking, tapping, or a keyboard. This helps people to identify unintended activation, for example by mis-clicking. In this example the active item has darker blue background and is underlined.
+
+{::nomarkdown}
+<%= demo :start %>
+{:/nomarkdown}
 
 {::nomarkdown}
 <%= code_start('','CSS') %>
@@ -80,11 +99,25 @@ nav a:active {
 <%= code_end %>
 {:/nomarkdown}
 
+{::nomarkdown}
+<%= demo :middle %>
+{:/nomarkdown}
+
+See this code in action in the [live example](#example).
+
+{::nomarkdown}
+<%= demo :end %>
+{:/nomarkdown}
+
 ### Current state
 
 Also visually indicate the current menu item in addition to the structural markup discussed in the previous section.
 
-In this example a different color combination (black on grey) and a bottom border were added to give the current menu item a distinct color and shape (see [running code](#example)).
+In this example a different color combination (black on grey) and a bottom border were added to give the current menu item a distinct color and shape.
+
+{::nomarkdown}
+<%= demo :start %>
+{:/nomarkdown}
 
 {::nomarkdown}
 <%= code_start('','CSS') %>
@@ -100,6 +133,16 @@ nav [aria-current=page] {
 
 {::nomarkdown}
 <%= code_end %>
+{:/nomarkdown}
+
+{::nomarkdown}
+<%= demo :middle %>
+{:/nomarkdown}
+
+See this code in action in the [live example](#example).
+
+{::nomarkdown}
+<%= demo :end %>
 {:/nomarkdown}
 
 ### Visited state
