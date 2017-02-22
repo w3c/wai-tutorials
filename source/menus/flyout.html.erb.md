@@ -7,7 +7,7 @@ wcag_techniques:
   - H4
 ---
 
-Fly-out (or drop-down) menus are used to organize menus in hierarchy. It removes the need for multiple page loads provided that users know where to find the information.
+Use fly-out (or drop-down) menus to provide an overview of a web site’s page hierarchy. It removes the need for multiple page loads provided that users know where to find the information. Application menus are usually implemented this way, too.
 
 People with reduced dexterity, such as tremors, often have trouble operating fly-out menus. For some, it might be impossible. Make sure to provide other ways to the sub-menu items, for example by repeating them on the page of the parent menu item.
 
