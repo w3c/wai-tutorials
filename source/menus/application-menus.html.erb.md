@@ -57,9 +57,9 @@ Adding the WAI-ARIA roles does **not** automatically enable the menu’s functio
 
 ## Keyboard behavior
 
-Web application menus are expected to work like desktop application menus. For example, the tab key is typically used to iterate through the top-level items, and the up and down arrows are used to navigate sub-menus.
+Web application menus are expected to work like desktop application menus. For example, the left and right keys are used to iterate through the top-level items, and the up and down arrows are used to navigate sub-menus. Pressing the tab key focuses the next item after the menu instead of the next menu item.
 
-To allow focus to be set to menu items by keyboard the are given a `tabindex` attribute with the value `-1`. The first main menu item (“File” in this example) is assigned a `tabindex` value of `0` which adds it to the tab order and lets the user access the menu.
+To allow focus to be set to menu items by keyboard the are given a `tabindex` attribute with the value `-1`. The first main menu item (“File” in this example) is assigned a `tabindex` value of `0` which adds it to the tab order and lets the user access the menu using the keyboard.
 
 {::nomarkdown}
 <%= code_start %>
