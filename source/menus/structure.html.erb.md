@@ -89,9 +89,7 @@ Identify the menu, ideally using the HTML5 `<nav>` element. This allows users to
 ## Label menus
 {:.newap}
 
-Label menus to make them easier to find and understand. Labels should be short but descriptive, to allow users to distinguish between multiple menus on a web page. Use a heading, `aria-label`, or `aria-labelledby` to provide the label.
-
-The following example uses `aria-labelledby` with a hidden heading. Other techniques are described in the [labeling regions](/page-structure/labels.html) tutorial.
+Label menus to make them easier to find and understand. Labels should be short but descriptive, to allow users to distinguish between multiple menus on a web page. Use a heading, `aria-label`, or `aria-labelledby` to provide the label. Those techniques are described in the [labeling regions](/page-structure/labels.html) tutorial.
 
 {::nomarkdown}
 <%= code_start('','HTML') %>
