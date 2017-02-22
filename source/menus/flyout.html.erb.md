@@ -202,7 +202,7 @@ Array.prototype.forEach.call(menuItems, function(el, i){
 
 ### Keyboard Users
 
-Sub-menus should not open when using the tab key to navigate through the menu, as keyboards user would then need to step through all sub-menu items to get to the next top-level item. Instead, one of the following approaches can be used.
+Sub-menus should not open when using the tab key to navigate through the menu, as keyboard users would then need to step through all sub-menu items to get to the next top-level item. Instead, one of the following approaches can be used.
 
 #### Use parent as toggle
 {:.ap}
