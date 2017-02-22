@@ -20,9 +20,7 @@ Convey the menu structure, typically by using a list. Such structural informatio
 ### Unordered list
 {:.ap}
 
-Use an unordered list (`<ul>`) when the menu items do not represent a particular sequence. This is usually the case for most types of menus, such as website navigation.
-
-In the following example, the sequence of the menu items is not necessarily the intended order for accessing these pages of a website:
+Use an unordered list (`<ul>`) when the menu items are not in a specific order. This is the case for most types of menus, such as website navigation.
 
 {::nomarkdown}
 <%= code_start('','Unordered List') %>
