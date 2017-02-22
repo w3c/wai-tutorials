@@ -107,7 +107,7 @@ Label menus to make them easier to find and understand. Labels should be short b
 
 ## Indicate the current item
 
-Use markup to indicate the current item of a menu, such as the current page on a website. This provides orientation for users on where they are.
+Use markup to indicate the current item of a menu, such as the current page on a website, to improve orientation in the menu.
 
 ### Using invisible text
 {:.ap}
