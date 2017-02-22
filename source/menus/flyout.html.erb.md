@@ -55,7 +55,7 @@ The fly-out functionality is created using CSS and scripting with slightly separ
 The following example uses this CSS code to show and hide the sub-menus when the parent menu items are hovered:
 
 {::nomarkdown}
-<%= code_start('','CSS code') %>
+<%= code_start('','CSS') %>
 {:/nomarkdown}
 
 ~~~ css
