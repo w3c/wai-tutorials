@@ -394,7 +394,7 @@ Array.prototype.forEach.call(menuItems1, function(el, i){
 <%= sample_end %>
 {:/nomarkdown}
 
-The following code iterates through all top-level items with the class `has-submenu` and adds a click event, which opens or closes the submenu depending on its state. In addition, the `aria-expanded` attribute is set to `true` while the submenu is shown, and to `false` otherwise.
+The following code iterates through all top-level items with the class `has-submenu` and adds a click event, which opens or closes the sub-menu depending on its state. In addition, the `aria-expanded` attribute is set to `true` while the sub-menu is shown, and to `false` otherwise.
 
 {::nomarkdown}
 <%= notes_start() %>
@@ -659,13 +659,13 @@ Array.prototype.forEach.call(menuItems1, function(el, i){
 <%= sample_end %>
 {:/nomarkdown}
 
-The following code adds a button to every top-level menu item with a sub-menu. When the button is activated, it shows or hides the sub-menu. The invisible label of the button is set to “show submenu” or “hide submenu”, reflecting the state of the sub-menu.
+The following code adds a button to every top-level menu item with a sub-menu. When the button is activated, it shows or hides the sub-menu. The invisible label of the button is set to “show sub-menu” or “hide sub-menu”, reflecting the state of the sub-menu.
 
 {::nomarkdown}
 <%= notes_start() %>
 {:/}
 
-**Note:** If possible, include the name of the parent menu item in the button label; for example: “show Space Bears submenu”.
+**Note:** If possible, include the name of the parent menu item in the button label; for example: “show Space Bears sub-menu”.
 
 {::nomarkdown}
 <%= notes_end() %>
@@ -678,7 +678,7 @@ The following code adds a button to every top-level menu item with a sub-menu. W
 ~~~js
 var menuItems = document.querySelectorAll('li.has-submenu');
 Array.prototype.forEach.call(menuItems, function(el, i){
-	var btn = '<button><span><span class="visuallyhidden">show submenu</span></span></button>';
+	var btn = '<button><span><span class="visuallyhidden">show sub-menu</span></span></button>';
 	var topLevelLink = el.querySelector('a');
 	topLevelLink.innerHTML = topLevelLink.innerHTML + ' ' + btn;
 
