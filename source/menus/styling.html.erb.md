@@ -12,7 +12,7 @@ wcag_techniques:
   - G183
 ---
 
-Clear and consistent styling allows users to find and recognize menus more easily. This includes consistency in the appearance, relative location of where menus appear on web pages across a website, and how they behave.
+Clear and consistent styling allows users to find and recognize menus more easily. This includes consistency in the behavior, appearance, and relative location on pages across a website.
 
 ## General considerations
 
