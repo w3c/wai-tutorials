@@ -68,9 +68,7 @@ Use an ordered list (`<ol>`) when the sequence of the menu items is important. I
 
 ## Identify menus
 
-Identify the menu, ideally using the HTML5 `<nav>` element. This allows users to directly access the menu.
-
-The following example uses the HTML5 `<nav>` element to identify a menu. Other techniques are described in the [page regions](/page-structure/regions.html) tutorial.
+Identify the menu, ideally using the HTML5 `<nav>` element. This allows users to directly access the menu. Other techniques to identify a menu are described in the [page regions](/page-structure/regions.html) tutorial.
 
 {::nomarkdown}
 <%= code_start('','HTML') %>
