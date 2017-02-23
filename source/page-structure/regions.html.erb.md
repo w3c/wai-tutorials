@@ -56,7 +56,7 @@ If the `<header>` element is used inside `<article>` and `<section>` elements, i
 
 ## Page footer
 
-Similar to the page header, most websites also have a region at the bottom of every page that contains general content, such as copyright information, privacy statements, or disclaimers. HTML5 provides the `<footer>` element, which can be used to define such a region.
+Similar to the page header, most websites also have a region at the bottom of every page that contains site-wide content, such as copyright information, privacy statements, or disclaimers. HTML5 provides the `<footer>` element, which can be used to define such a region.
 
 {::nomarkdown}
 <%= code_start %>
