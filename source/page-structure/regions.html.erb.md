@@ -26,7 +26,7 @@ Mark up different regions of web pages and web applications, so that they can be
 
 ## Page header
 
-Most websites have a region at the top of every page that contains general content, such as the website logo, search function, and navigation options. HTML5 provides the `<header>` element, which can be used to define such a region.
+Most websites have a region at the top of every page that contains site-specific information, such as the website logo, search function, and navigation options. HTML5 provides the `<header>` element, which can be used to define such a region.
 
 {::nomarkdown}
 <%= code_start %>
