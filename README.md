@@ -22,4 +22,4 @@ Note that the changes are not immediately reflected on any page. If you want to 
 
 [LivePage]:http://www.w3.org/WAI/tutorials/
 [GHPage]:http://w3c.github.io/wai-tutorials/
-[exmpIMG]:https://github.com/w3c/wai-tutorials/blob/master/source/images/informative.html.md.erb
+[exmpIMG]:https://github.com/w3c/wai-tutorials/blob/master/source/images/informative.html.erb.md
