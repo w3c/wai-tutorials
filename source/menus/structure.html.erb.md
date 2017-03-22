@@ -10,17 +10,17 @@ wcag_techniques:
   - ARIA11
 ---
 
-Semantic markup conveys the menu structure to users. It makes the menu adaptable to different situations, such as small screen display, zoomed in, or assistive technology use.
+Semantic markup conveys the menu structure to users. Menus can easily adapt to different situations, such as small screen displays, screen magnification and other assistive technology, when coded semantically.
 
-## Menus as List of Links
-{:#lists-of-links.newap}
+## Menu representation
+{:.newap}
 
-Convey the menu structure to users effectively by using a list, especially if the menu consists of more than very few links. With this structural information assistive technologies can announce the number of items in the menu.
+Convey the menu structure, typically by using a list. Such structural information allows assistive technologies to announce the number of items in the menu and provide corresponding navigation functionality.
 
 ### Unordered list
 {:.ap}
 
-In the following example, the user is not required to read the home page before advancing to the shop or get information about the products. As the sequence of reading the pages is not important to understand the website as a whole, use an unordered list (`<ul>`) – this approach can be used on most websites.
+Use an unordered list (`<ul>`) when the menu items are not in a specific order. This is the case for most types of menus, such as website navigation.
 
 {::nomarkdown}
 <%= code_start('','Unordered List') %>
@@ -30,8 +30,8 @@ In the following example, the user is not required to read the home page before 
 <ul>
 	<li><a href="…">Home</a></li>
 	<li><a href="…">Shop</a></li>
-	<li><a href="…">SpaceBears</a></li>
-	<li><a href="…">MarsCars</a></li>
+	<li><a href="…">Space Bears</a></li>
+	<li><a href="…">Mars Cars</a></li>
 	<li><a href="…">Contact</a></li>
 	…
 </ul>
@@ -45,7 +45,7 @@ In the following example, the user is not required to read the home page before 
 ### Ordered list
 {:.ap}
 
-In instances where pages need to be read in a certain sequence, for example chapters in prose or steps in a construction manual, use an ordered list (`<ol>`). The order is important to properly build the space ship in the example below:
+Use an ordered list (`<ol>`) when the sequence of the menu items is important. In the following example the menu items represent the steps of a construction manual, so that the reading order is important:
 
 {::nomarkdown}
 <%= code_start('','Ordered List') %>
@@ -68,21 +68,7 @@ In instances where pages need to be read in a certain sequence, for example chap
 
 ## Identify menus
 
-{::nomarkdown}
-<%= ref :start %>
-{:/}
-
-To identify the menu, use the `<nav>` element in HTML5 to wrap the list that contains the individual menu items. This allows users to directly access the menu.
-
-{::nomarkdown}
-<%= ref :middle %>
-{:/}
-
-For more information on regions, see the [page regions](/page-structure/regions.html) tutorial.
-
-{::nomarkdown}
-<%= ref :end %>
-{:/}
+Identify the menu, ideally using the HTML5 `<nav>` element. This allows users to directly access the menu. Other techniques to identify a menu are described in the [page regions](/page-structure/regions.html) tutorial.
 
 {::nomarkdown}
 <%= code_start('','HTML') %>
@@ -103,24 +89,7 @@ For more information on regions, see the [page regions](/page-structure/regions.
 ## Label menus
 {:.newap}
 
-
-{::nomarkdown}
-<%= ref :start %>
-{:/}
-
-Label menus to make them easier to find and understand. The label should be short but descriptive, which allows users to distinguish between multiple menus on a web page. Use a heading, `aria-label`, or `aria-labelledby` to provide the label.
-
-{::nomarkdown}
-<%= ref :middle %>
-{:/}
-
-For more information on labels, see the [labeling regions](/page-structure/labels.html) tutorial.
-
-{::nomarkdown}
-<%= ref :end %>
-{:/}
-
-In menu tutorial examples, `aria-labelledby` with a hidden heading is used:
+Label menus to make them easier to find and understand. Labels should be short but descriptive, to allow users to distinguish between multiple menus on a web page. Use a heading, `aria-label`, or `aria-labelledby` to provide the label. Those techniques are described in the [labeling regions](/page-structure/labels.html) tutorial.
 
 {::nomarkdown}
 <%= code_start('','HTML') %>
@@ -138,27 +107,16 @@ In menu tutorial examples, `aria-labelledby` with a hidden heading is used:
 
 ## Indicate the current item
 
-{::nomarkdown}
-<%= ref :start %>
-{:/nomarkdown}
-
-The current page should also be clearly marked to give users a sense of where they are in the website structure.
-
-{::nomarkdown}
-<%= ref :middle %>
-{:/nomarkdown}
-
-Information about [styling the current menu item](menus-styling.html#current-item).
-
-{::nomarkdown}
-<%= ref :end %>
-{:/nomarkdown}
-
+Use markup to indicate the current item of a menu, such as the current page on a website, to improve orientation in the menu.
 
 ### Using invisible text
 {:.ap}
 
-The item has also an invisible text “Current Page:” added to the menu item. Additionally the current page item is not linking to the current page.
+Provide an invisible label that is read aloud to screen reader users and used by other assistive technologies to mark the current item. This allows custom label text.
+
+Remove the anchor (`<a>`), so users cannot interact with the current item. This avoids misunderstandings and emphasizes that the current menu item is active.
+
+In the following example the menu item has the invisible text “Current Page:” and the `<a>` element is replaced by a `<span>` with a class `current`:
 
 {::nomarkdown}
 <%= code_start('','HTML') %>
@@ -168,7 +126,7 @@ The item has also an invisible text “Current Page:” added to the menu item. 
 <li>
 	<span class="current">
 		<span class="visuallyhidden">Current Page: </span>
-		SpaceBears
+		Space Bears
 	</span>
 </li>
 ~~~
@@ -179,7 +137,9 @@ The item has also an invisible text “Current Page:” added to the menu item. 
 ### Using WAI-ARIA
 {:.ap}
 
-If a link to the main content area of the page is required or if the `<a>` element cannot be removed from the navigation, use `aria-current="page"` as an alternative.
+Use the `aria-current="page"` attribute to indicate the current page in the menu. This is particularly useful when the menu item is supposed to stay a link, or when the HTML cannot be changed to remove the anchor.
+
+In the following example the link in the navigation points to the main content of the page.
 
 {::nomarkdown}
 <%= code_start('','HTML') %>
@@ -188,7 +148,7 @@ If a link to the main content area of the page is required or if the `<a>` eleme
 ~~~ html
 <li>
 	<a href="#main" aria-current="page">
-	SpaceBears
+	Space Bears
 	</a>
 </li>
 ~~~
