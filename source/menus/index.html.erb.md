@@ -26,22 +26,22 @@ wcag_techniques:
   - G182
   - G183
 ---
-Menus are used to browse around web pages. Due to their important role to operate web pages and applications, they need to be usable in all circumstances.
+Menus are used for navigation and to provide functionality, and are critical parts of web pages.
 
-* **[Structure](menus-structure.html):** Mark up menus in a way that reflects the structure of its content and makes identification possible.
+* **[Structure](structure.html):** Mark up menus in a way that reflects their structure and labels them.
 
-* **[Styling](menus-styling.html):** Use commonly recognized design patterns to identify menus and indicate the state of menu items.
+* **[Styling](styling.html):** Use commonly recognized design patterns to distinguish menus and the state of menu items.
 
-* **[Fly-out Menus](menus-flyout.html):** Implement fly-out menus to organize menus with branching sub-items.
+* **[Fly-out Menus](flyout.html):** Ensure fly-out (drop-down) sub-menus can be used appropriately by mouse and keyboard.
 
-* **[Web Application Menus](application-menus.html):** Use special markup and scripting to define a menu for a web application that works like application menus in desktop operating systems.
+* **[Application Menus](application-menus.html):** Add particular markup and keyboard behavior to resemble desktop application menus.
 
 ## Why is this important?
 
-Menus reflect the underlying structure of websites, individual web pages, and multi-step processes such as check-out forms.They allow users to get an overview on the content and access information and functionality more easily when implemented properly.
+Navigation menus reflect the underlying structure of websites. Application menus provide access to key functionality of an application. Thus menus are critical parts of web pages and applications, and require particular attention during design and development.
 
 * **Screen reader and keyboard users** benefit from keyboard interoperability and markup that allows them to operate menus in different ways.
 
-* **Users with fine motor difficulties and touch screen users** have larger targets to click or tap on. In fly-out menus, submenus do not disappear immediately after the mouse has left the clickable area.
+* **Users with fine motor difficulties and touch screen users** have larger targets to click or tap on. In fly-out menus, sub-menus do not disappear immediately after the mouse has left the clickable area.
 
-* **People with limited attention or short term memory** benefit from being able to easily discover the current page in the menu.
+* **People with limited attention or short term memory** benefit from clear and distinct menus with easily identifiable states, such as the current page.
