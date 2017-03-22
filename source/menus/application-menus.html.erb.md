@@ -1,6 +1,5 @@
 ---
 title: "Application Menus"
-nav_title: "Application Menus"
 status: draft
 order: 5
 ---
@@ -9,10 +8,6 @@ Web application menus use the same basic structure as navigation menus. They oft
 
 ## Additional markup
 
-{::nomarkdown}
-<%= ref :start %>
-{:/}
-
 In addition to the `aria-expanded` and `aria-haspopup` attributes, the following WAI-ARIA roles are used to provide the necessary semantics of an application menu:
 
 * **`menubar`:** Represents a (usually horizontal) menu bar.
@@ -20,11 +15,9 @@ In addition to the `aria-expanded` and `aria-haspopup` attributes, the following
 * **`menuitem`:** Represents an individual menu item.
 * **`separator`:** Represents a separator between two groups of menuitems in a menu.
 
-{::nomarkdown}<%= ref :middle %>{:/}
-
-Application menus typically do not have links and rely on scripting to provide the functionality.
-
-{::nomarkdown}<%= ref :end %>{:/}
+{::nomarkdown}
+<%= ref :start %>
+{:/}
 
 {::nomarkdown}
 <%= code_start %>
@@ -52,15 +45,21 @@ Application menus typically do not have links and rely on scripting to provide t
 <%= code_end %>
 {:/nomarkdown}
 
+{::nomarkdown}<%= ref :middle %>{:/}
+
+Application menus typically do not have links and rely on scripting to provide the functionality.
+
+{::nomarkdown}<%= ref :end %>{:/}
+
 ## Functionality
 
-Functionality and keyboard behavior are **not** automatically enabled when WAI-ARIA roles are added. These need to be added using scripting. A detailed explanation on the WAI-ARIA attributes and keyboard behavior can be found in the [WAI-ARIA Authoring Practices document (draft)](http://www.w3.org/TR/wai-aria-practices/#menu).
+Adding the WAI-ARIA roles does **not** automatically enable the menu’s functionality or keyboard behavior. These need to be added using scripting. A detailed explanation on the WAI-ARIA attributes and keyboard behavior can be found in the [WAI-ARIA Authoring Practices document (draft)](http://www.w3.org/TR/wai-aria-practices/#menu).
 
 ## Keyboard behavior
 
-Web application menus are expected to work like desktop application menus. For example, the tab key is typically used to iterate through the top-level items, and the up and down arrows are used to navigate sub-menus.
+Web application menus are expected to work like desktop application menus. For example, the left and right keys are used to iterate through the top-level items, and the up and down arrows are used to navigate sub-menus. Pressing the tab key focuses the next item after the menu instead of the next menu item.
 
-To allow focus to be set to menu items by keyboard the are given a `tabindex` attribute with the value `-1`. The first main menu item (“File” in this example) is assigned a `tabindex` value of `0` which adds it to the tab order and lets the user access the menu.
+To allow focus to be set to menu items by keyboard the are given a `tabindex` attribute with the value `-1`. The first main menu item (“File” in this example) is assigned a `tabindex` value of `0` which adds it to the tab order and lets the user access the menu using the keyboard.
 
 {::nomarkdown}
 <%= code_start %>
