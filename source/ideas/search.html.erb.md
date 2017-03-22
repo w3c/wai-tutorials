@@ -1,7 +1,8 @@
 ---
 title: Search
+nav_title: Search (for Forms)
 status: editors-draft
-order: 6
+order: 2
 ---
 
 ## Search Form

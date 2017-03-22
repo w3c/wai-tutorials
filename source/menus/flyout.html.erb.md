@@ -1,122 +1,22 @@
 ---
 title: "Fly-out Menus"
-status: approved-draft
-order: 5
+status: draft
+order: 4
 wcag_techniques:
   - SCR26
   - H4
 ---
 
-Some websites use fly-out menus to allow easier access to pages further down the page hierarchy. It removes the need for multiple page loads if the user knows where to find the page. Users also get a grasp of the content of the website.
+Use fly-out (or drop-down) menus to provide an overview of a web site’s page hierarchy. It removes the need for multiple page loads provided that users know where to find the information. Application menus are usually implemented this way, too.
 
-People with tremors, limited fine motor dexterity or other disabilities might have trouble operating fly-out menus in general. Make sure to provide other means to the sub menu items, for example repeat them on the page of the parent menu item.
+People with reduced dexterity, such as tremors, often have trouble operating fly-out menus. For some, it might be impossible. Make sure to provide other ways to the sub-menu items, for example by repeating them on the page of the parent menu item.
 
-## Indicate the presence of a submenu
+## Indicate sub-menus
 
-Users need to be aware which menu items have a submenu and which don’t. An arrow icon identifies that only the “SpaceBears” item has a submenu. For assistive technologies, the following ARIA attributes provide this information:
+Indicate menu items with sub-menus visually and using markup. In the following example an icon is used for visual indication. In addition, the following WAI-ARIA markup is used:
 
-* `aria-haspopup="true"` prompts assistive technologies to give the information that a submenu is present to the user
-* `aria-expanded` conveys the state of the submenu: It is initially set to `false` as the submenu is not visible.
-
-{::nomarkdown}
-<%= sample_start('show-overflow') %>
-
-<nav role="presentation" aria-label="Main Navigation" id="flyoutnav">
-		<ul>
-				<li><a href="#flyoutnav">Home</a></li>
-				<li><a href="#flyoutnav">Shop</a></li>
-				<li class="has-submenu">
-						<a href="#flyoutnav" aria-haspopup="true" aria-expanded="false">SpaceBears</a>
-						<ul>
-								<li><a href="#flyoutnav">SpaceBear 6</a></li>
-								<li><a href="#flyoutnav">SpaceBear 6 Plus</a></li>
-						</ul>
-				</li>
-				<li><a href="#flyoutnav">MarsCars</a></li>
-				<li><a href="#flyoutnav">Contact</a></li>
-		</ul>
-</nav>
-
-<style>
-.show-overflow {
-		overflow: visible !important;
-}
-
-.show-overflow .box-content {
-		overflow: visible !important;
-}
-	#flyoutnav {
-			display:table;
-			width:100%;
-	}
-	#flyoutnav > ul {
-			margin: 0;
-			padding: 0;
-			display: table-row;
-			background-color: #036;
-			color: #fff;
-	}
-	#flyoutnav > ul > li {
-			display:table-cell;
-			width: 20%;
-			text-align: center;
-			position:relative;
-	}
-	#flyoutnav a,
-	#flyoutnav .current {
-			display: block;
-			padding: .25em;
-			border-bottom: .25em solid #E8E8E8;
-	}
-	#flyoutnav a {
-			color: #fff;
-			text-decoration: none;
-	}
-	#flyoutnav a:hover,
-	#flyoutnav a:focus {
-			background-color: #fff;
-			color: #036;
-			border-color: #036;
-			text-decoration: underline;
-	}
-	#flyoutnav .current {
-			background-color: #bbb;
-			color: #000;
-			border-color: #444;
-	}
-
-	#flyoutnav > ul > li > ul {
-		display: none;
-		position:absolute;
-		left:0;
-		right:0;
-		top:100%;
-		padding:0;
-		margin:0;
-		background-color: #036;
-	}
-
-#flyoutnav > ul > li:hover > ul {
-		display:block;
-	}
-
-	#flyoutnav > ul > li > ul a{
-		border-bottom-width: 1px;
-	}
-
-	.has-submenu > a:after {
-		margin-left: 5px;
-		line-height: 14px;
-		content: url(../../img/ex-dropdown-inactive.png);
-	}
-	.has-submenu:hover > a:hover:after,
-	.has-submenu > a:focus:after {
-		content: url(../../img/ex-dropdown-active.png);
-	}
-</style>
-
-<%= sample_end %>
-{:/nomarkdown}
+* `aria-haspopup="true"` declares that a menu item has a sub-menu.
+* `aria-expanded="false"` declares that the sub-menu is hidden.
 
 {::nomarkdown}
 <%= code_start('','HTML') %>
@@ -129,14 +29,14 @@ Users need to be aware which menu items have a submenu and which don’t. An arr
 				<li><a href="…">Shop</a></li>
 				<li class="has-submenu">
 						<a href="…" aria-haspopup="true" aria-expanded="false">
-							SpaceBears
+							Space Bears
 						</a>
 						<ul>
-								<li><a href="…">SpaceBear 6</a></li>
-								<li><a href="…">SpaceBear 6 Plus</a></li>
+								<li><a href="…">Space Bear 6</a></li>
+								<li><a href="…">Space Bear 6 Plus</a></li>
 						</ul>
 				</li>
-				<li><a href="…">MarsCars</a></li>
+				<li><a href="…">Mars Cars</a></li>
 				<li><a href="…">Contact</a></li>
 		</ul>
 </nav>
@@ -148,9 +48,11 @@ Users need to be aware which menu items have a submenu and which don’t. An arr
 
 ## Fly-out functionality
 
+The fly-out functionality is created using CSS and scripting with slightly separate considerations for mouse and keyboard users.
+
 ### Mouse users
 
-The following CSS-only code shows the submenu when the parent menu item is hovered. However, it has two disadvantages: It does not work for keyboard users and the menu immediately disappears when the mouse leaves the parent menu items or the submenu.
+The following example uses this CSS code to show and hide the sub-menus when the parent menu items are hovered:
 
 {::nomarkdown}
 <%= code_start('','CSS') %>
@@ -165,7 +67,9 @@ nav > ul li:hover ul { display: block;}
 <%= code_end %>
 {:/nomarkdown}
 
-This behavior can be avoided by adding some scripting. When the cursor leaves the menu item, a timer is started which schedules to close the menu after one second. If the mouse re-enters the submenu during that time, that timer is canceled and the submenu stays open.
+In addition, scripting is used to slightly delay the immediate closing of sub-menu items when the mouse leaves the area. This makes it easier to use the menu when navigation by mouse is not very precise.
+
+In the following example, a delay of one second is added using a timer:
 
 {::nomarkdown}
 <%= sample_start('show-overflow') %>
@@ -175,13 +79,13 @@ This behavior can be avoided by adding some scripting. When the cursor leaves th
 				<li><a href="#flyoutnavmousefixed">Home</a></li>
 				<li><a href="#flyoutnavmousefixed">Shop</a></li>
 				<li class="has-submenu">
-						<a href="#flyoutnavmousefixed" aria-haspopup="true" aria-expanded="false">SpaceBears</a>
+						<a href="#flyoutnavmousefixed" aria-haspopup="true" aria-expanded="false">Space Bears</a>
 						<ul>
-								<li><a href="#flyoutnavmousefixed">SpaceBear 6</a></li>
-								<li><a href="#flyoutnavmousefixed">SpaceBear 6 Plus</a></li>
+								<li><a href="#flyoutnavmousefixed">Space Bear 6</a></li>
+								<li><a href="#flyoutnavmousefixed">Space Bear 6 Plus</a></li>
 						</ul>
 				</li>
-				<li><a href="#flyoutnavmousefixed">MarsCars</a></li>
+				<li><a href="#flyoutnavmousefixed">Mars Cars</a></li>
 				<li><a href="#flyoutnavmousefixed">Contact</a></li>
 		</ul>
 </nav>
@@ -296,18 +200,24 @@ Array.prototype.forEach.call(menuItems, function(el, i){
 <%= code_end %>
 {:/nomarkdown}
 
-### Keyboard users
+### Keyboard Users
 
-Usually submenus are not supposed to open when tabbing through the menu using the keyboard as a keyboard user would need to step through all submenu items to get to the next top-level item.
+Sub-menus should not open when using the tab key to navigate through the menu, as keyboard users would then need to step through all sub-menu items to get to the next top-level item. Instead, one of the following approaches can be used.
 
-Different approaches address the need of keeping the top-level link accessible or not.
-
-#### Toggle submenu using the top-level menu item
+#### Use parent as toggle
 {:.ap}
 
-The submenu is opened by a script when the user activates the top-level menu item. The value of the `href` attribute is ignored.
+Use this approach in situations where the parent menu item only summarizes the sub-menu and doesn’t need to carry out a function, such as link to a web page. In this case the sub-menu is opened by a script when the user activates the top-level item, and is closed when the focus leaves the sub-menu.
 
-When the focus leaves the submenu (for example by using the tab key on the last submenu item), the submenu is closed.
+{::nomarkdown}
+<%= notes_start() %>
+{:/}
+
+**Note:** The value of the `href` attribute is ignored but you might still want to link to an existing document in case JavaScript is not loaded.
+
+{::nomarkdown}
+<%= notes_end() %>
+{:/}
 
 {::nomarkdown}
 <%= sample_start('show-overflow') %>
@@ -317,13 +227,13 @@ When the focus leaves the submenu (for example by using the tab key on the last 
 				<li><a href="#flyoutnavkbfixed">Home</a></li>
 				<li><a href="#flyoutnavkbfixed">Shop</a></li>
 				<li class="has-submenu">
-						<a href="#flyoutnavkbfixed">SpaceBears</a>
+						<a href="#flyoutnavkbfixed">Space Bears</a>
 						<ul>
-								<li><a href="#flyoutnavkbfixed">SpaceBear 6</a></li>
-								<li><a href="#flyoutnavkbfixed">SpaceBear 6 Plus</a></li>
+								<li><a href="#flyoutnavkbfixed">Space Bear 6</a></li>
+								<li><a href="#flyoutnavkbfixed">Space Bear 6 Plus</a></li>
 						</ul>
 				</li>
-				<li><a href="#flyoutnavkbfixed">MarsCars</a></li>
+				<li><a href="#flyoutnavkbfixed">Mars Cars</a></li>
 				<li><a href="#flyoutnavkbfixed">Contact</a></li>
 		</ul>
 </nav>
@@ -362,6 +272,7 @@ When the focus leaves the submenu (for example by using the tab key on the last 
 	#flyoutnavkbfixed a {
 			color: #fff;
 			text-decoration: none;
+      border: 1px solid #036;
 	}
 	#flyoutnavkbfixed a:hover,
 		#flyoutnavkbfixed a:focus {
@@ -397,7 +308,8 @@ When the focus leaves the submenu (for example by using the tab key on the last 
 </style>
 
 <script>
-/* focusin/out event polyfill (firefox) */
+// focusin/out event polyfill (firefox)
+
 !function(){
 	var w = window,
 	d = w.document;
@@ -482,7 +394,7 @@ Array.prototype.forEach.call(menuItems1, function(el, i){
 <%= sample_end %>
 {:/nomarkdown}
 
-The following code iterates through all top-level items with the class `has-submenu` and adds a click event to it which opens or closes the submenu, depending on its state. In addition, the `aria-expanded` attribute is set to `true` while the submenu is shown and otherwise to `false`.
+The following code iterates through all top-level items with the class `has-submenu` and adds a click event, which opens or closes the sub-menu depending on its state. In addition, the `aria-expanded` attribute is set to `true` while the sub-menu is shown, and to `false` otherwise.
 
 {::nomarkdown}
 <%= notes_start() %>
@@ -519,10 +431,10 @@ Array.prototype.forEach.call(menuItems, function(el, i){
 <%= code_end %>
 {:/nomarkdown}
 
-#### Toggle submenu using a special “show submenu” button
+#### Use button as toggle
 {:.ap}
 
-If the top-level menu item needs to stay a proper link that links to a page, a separate button can be added to the top-level item that opens/closes the menu. This button can also act as a visual indicator for the presence of a submenu.
+For situations when the parent menu item needs to carry out a function, such as link to a web page, a separate button can be added to the parent item, to open and close the sub-menu. This button can also act as a visual indicator for the presence of a sub-menu.
 
 {::nomarkdown}
 <%= sample_start('show-overflow') %>
@@ -532,13 +444,13 @@ If the top-level menu item needs to stay a proper link that links to a page, a s
 		<li><a href="#flyoutnavkbbtn">Home</a></li>
 		<li><a href="#flyoutnavkbbtn">Shop</a></li>
 		<li class="has-submenu">
-			<a href="#flyoutnavkbbtn">SpaceBears</a>
+			<a href="#flyoutnavkbbtn" aria-haspopup="true">Space Bears</a>
 			<ul>
-				<li><a href="#flyoutnavkbbtn">SpaceBear 6</a></li>
-				<li><a href="#flyoutnavkbbtn">SpaceBear 6 Plus</a></li>
+				<li><a href="#flyoutnavkbbtn">Space Bear 6</a></li>
+				<li><a href="#flyoutnavkbbtn">Space Bear 6 Plus</a></li>
 			</ul>
 		</li>
-		<li><a href="#flyoutnavkbbtn">MarsCars</a></li>
+		<li><a href="#flyoutnavkbbtn">Mars Cars</a></li>
 		<li><a href="#flyoutnavkbbtn">Contact</a></li>
 	</ul>
 </nav>
@@ -577,6 +489,7 @@ If the top-level menu item needs to stay a proper link that links to a page, a s
 	#flyoutnavkbbtn a {
 			color: #fff;
 			text-decoration: none;
+      border: 1px solid #036;
 	}
 	#flyoutnavkbbtn a:hover,
 		#flyoutnavkbbtn a:focus {
@@ -651,7 +564,8 @@ If the top-level menu item needs to stay a proper link that links to a page, a s
 </style>
 
 <script>
-/* focusin/out event polyfill (firefox) */
+// focusin/out event polyfill (firefox)
+
 !function(){
 	var w = window,
 	d = w.document;
@@ -745,7 +659,17 @@ Array.prototype.forEach.call(menuItems1, function(el, i){
 <%= sample_end %>
 {:/nomarkdown}
 
-In the following code example, a button is added to every top-level menu item link with a submenu. When the button is activated, it shows or hides the submenu. The invisible label of the button is set to “show submenu” or “hide submenu”, reflecting the state of the submenu.
+The following code adds a button to every top-level menu item with a sub-menu. When the button is activated, it shows or hides the sub-menu. The invisible label of the button is set to “show sub-menu” or “hide sub-menu”, reflecting the state of the sub-menu.
+
+{::nomarkdown}
+<%= notes_start() %>
+{:/}
+
+**Note:** If possible, include the name of the parent menu item in the button label; for example: “show Space Bears sub-menu”.
+
+{::nomarkdown}
+<%= notes_end() %>
+{:/}
 
 {::nomarkdown}
 <%= code_start('','JavaScript') %>
@@ -754,7 +678,7 @@ In the following code example, a button is added to every top-level menu item li
 ~~~js
 var menuItems = document.querySelectorAll('li.has-submenu');
 Array.prototype.forEach.call(menuItems, function(el, i){
-	var btn = '<button><span><span class="visuallyhidden">show submenu</span></span></button>';
+	var btn = '<button><span><span class="visuallyhidden">show sub-menu</span></span></button>';
 	var topLevelLink = el.querySelector('a');
 	topLevelLink.innerHTML = topLevelLink.innerHTML + ' ' + btn;
 
