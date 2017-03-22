@@ -21,41 +21,9 @@ Use headings to communicate organization of the content on the page. They allow 
 
 ## Heading levels
 
-{::nomarkdown}
-<%= editors_note_start %>
-{:/nomarkdown}
+Heading levels should be properly nested, where possible. An `<h1>` should only be followed by `<h1>` or `<h2>`, an `<h2>` by an `<h2>` or `<h3>`, and so forth. However it is possible to go back several levels, so an `<h4>` can be followed by an `<h2>` if it makes logical sense.
 
-This section is too wordy – clarifications welcome.
-
-{::nomarkdown}
-<%= editors_note_end %>
-{:/nomarkdown}
-
-Heading levels should be properly nested, where possible. That means that an `<h1>` is followed by an `<h1>` or `<h2>`, an `<h2>` is followed by an `<h2>` or `<h3>`, and so forth. In turn, every heading with a lower leven can follow any heading. That means that it is completely valid to follow an `<h3>` by an `<h1>`, for example.
-
-In fixed sections of the page, for example in the footer, the heading levels _should not_ change depending on the levels that are used in the content area above. In those cases consistency across pages is more important.
-
-{::nomarkdown}
-<%= editors_note_start %>
-{:/nomarkdown}
-
-I’m not 100% sure if we need the following section about the HTML5 algorithm. If we keep it, it should probably be in the right marginal column.
-
-{::nomarkdown}
-<%= editors_note_end %>
-{:/nomarkdown}
-
-{::nomarkdown}
-<%=notes_start%>
-{:/nomarkdown}
-
-**Note:** HTML5 has introduced [an outline algorithm](http://www.w3.org/TR/html5/sections.html#headings-and-sections) that assigns heading levels based on how deep sectioning elements are nested inside each other, regardless of the actual heading level. At the time of writing, this is not supported by web browsers and assistive technologies, and **should not** be used.
-
-{::nomarkdown}
-<%=notes_end%>
-{:/nomarkdown}
-
-The following approaches outline the headings structure. Other markup and content, such as `<header>`, `<main>`, `<nav>`, and `<footer>`, was ommitted for readability:
+In fixed sections of the page, for example in the footer, the heading levels _should not_ change depending on the levels that are used in the content area. In those cases consistency across pages is more important. The following approaches show how headings can be used in the main content and for page regions:
 
 ## Organize main content
 {:.ap}

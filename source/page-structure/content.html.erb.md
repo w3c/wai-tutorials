@@ -2,24 +2,57 @@
 title: Content Structure
 status: draft
 order: 6
+wcag_success_criteria:
+  - 1.3.1
 wcag_techniques:
   - H40
   - G62
   - H48
   - H49
 ---
-
-{::nomarkdown}
-<%= editors_note_start %>
-{:/nomarkdown}
-
-Add Articles + Sections from Regions on top.
-
-{::nomarkdown}
-<%= editors_note_end %>
-{:/nomarkdown}
-
 Mark-up website content semantically, so that the website is extensible, the content reusable and also conveys more meaning to assistive technologies.
+
+## Articles
+
+The HTML5 `<article>` element represents a complete or self-contained composition in a web page. Examples of articles include an item in a web shop or a news article on a news site.
+
+{::nomarkdown}
+<%= code_start %>
+{:/nomarkdown}
+
+~~~html
+<article>
+  <h2>Space Bear Classic</h2>
+  …
+</article>
+<article>
+  <h2>Space Bear Extreme</h2>
+  …
+</article>
+~~~
+
+{::nomarkdown}
+<%= code_end %>
+{:/nomarkdown}
+
+## Sections
+
+The HTML5 `<section>` element marks a general region of a web page or an article. It is used for thematic grouping of content.
+
+{::nomarkdown}
+<%= code_start %>
+{:/nomarkdown}
+
+~~~html
+<section>
+  <h2>Chapter 2</h2>
+  …
+</section>
+~~~
+
+{::nomarkdown}
+<%= code_end %>
+{:/nomarkdown}
 
 ## Paragraphs
 
@@ -320,51 +353,6 @@ For shorter quotes, that are usually embedded in another sentence, use the `<q>`
 
 {::nomarkdown}
 <%=code_end%>
-{:/nomarkdown}
-
-{::nomarkdown}
-<%=notes_start%>
-{:/nomarkdown}
-
-{::nomarkdown}
-<%= editors_note_start %>
-{:/nomarkdown}
-
-Remove note? Support is much better, and it only adds more information.
-
-{::nomarkdown}
-<%= editors_note_end %>
-{:/nomarkdown}
-
-**Note:** In older browsers adding quotes automatically wasn’t well supported. If such a browser is to be supported, consider adding quotes inline in the text and removing generated quotes in modern browsers:
-
-{::nomarkdown}
-<%=code_start('','HTML')%>
-{:/nomarkdown}
-
-~~~html
-<p>Helen Keller said, “<q>Self-pity is our worst enemy and if we yield to it, we can never do anything good in the world.</q>”</p>
-~~~
-
-{::nomarkdown}
-<%=code_end%>
-{:/nomarkdown}
-
-{::nomarkdown}
-<%=code_start('','CSS')%>
-{:/nomarkdown}
-
-~~~css
-q:before { content: ""; }
-q:after { content: ""; }
-~~~
-
-{::nomarkdown}
-<%=code_end%>
-{:/nomarkdown}
-
-{::nomarkdown}
-<%=notes_end%>
 {:/nomarkdown}
 
 ## Figures

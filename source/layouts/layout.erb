@@ -82,16 +82,12 @@
   </article>
 </main>
 <div class="navigation">
-  <nav role="navigation" aria-label="Navigation" id="nav">
+  <nav role="navigation" aria-label="Main" id="nav">
     <h2 class="list-heading" id="list-heading-tutorials">
       <% if current_page.data.order == 1 %>
         <%= current_page.data.tutorial_title %> Tutorial
       <% else %>
-        <% if current_page.parent.parent %>
-          <%= current_page.parent.parent.data.tutorial_title %> Tutorial
-        <% else %>
           <%= current_page.parent.data.tutorial_title %> Tutorial
-        <% end %>
       <% end %>
     </h2>
     <ul aria-labelledby="list-heading-tutorials">

@@ -1,10 +1,10 @@
 ---
-title: Example for an Application Menu
-source: ../flyout.html#web-application-menus
-layout: fullcode
-status: approved-draft
+title: Application Menu Example
+nav_title: "Web App Menu Code"
+status: draft
+order: 6
+type: tips
 ---
-
 {::nomarkdown}
 <%= sample_start %>
 <ul role="menubar" aria-label="functions" id="appmenu">

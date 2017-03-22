@@ -1,5 +1,6 @@
 ---
-title: Styling
+title: Text
+nav_title: Text (for Design)
 status: editors-draft
 order: 2
 wcag_success_criteria:

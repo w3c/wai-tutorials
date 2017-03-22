@@ -1,5 +1,6 @@
 ---
 title: Layout
+nav_title: Layout (for Design)
 status: editors-draft
 order: 3
 wcag_success_criteria:
