@@ -34,7 +34,7 @@ Menus are used for navigation and to provide functionality, and are critical par
 
 * **[Fly-out Menus](flyout.html):** Ensure fly-out (drop-down) sub-menus can be used appropriately by mouse and keyboard.
 
-* **[Application Menus](application-menus.html):** Add special markup and keyboard behavior to resemble desktop application menus.
+* **[Application Menus](application-menus.html):** Add particular markup and keyboard behavior to resemble desktop application menus.
 
 ## Why is this important?
 
