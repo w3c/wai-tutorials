@@ -26,19 +26,19 @@ wcag_techniques:
   - G182
   - G183
 ---
-Menus are used for navigation and to provide functionality, and critical parts of web pages.
+Menus are used for navigation and to provide functionality, and are critical parts of web pages.
 
-* **[Structure](structure.html):** Mark up menus in a way that reflects their structure and that identifies them as such.
+* **[Structure](structure.html):** Mark up menus in a way that reflects their structure and labels them.
 
 * **[Styling](styling.html):** Use commonly recognized design patterns to distinguish menus and the state of menu items.
 
 * **[Fly-out Menus](flyout.html):** Ensure fly-out (drop-down) sub-menus can be used appropriately by mouse and keyboard.
 
-* **[Application Menus](application-menus.html):** Add markup and keyboard behavior to resemble desktop application menus.
+* **[Application Menus](application-menus.html):** Add particular markup and keyboard behavior to resemble desktop application menus.
 
 ## Why is this important?
 
-Navigation menus reflect the underlying structure of websites, individual web pages, and multi-step processes, such as a check-out form. Application menus provide key functionality of the application. Thus menus are critical parts of web pages and require particular attention during design and development.
+Navigation menus reflect the underlying structure of websites. Application menus provide access to key functionality of an application. Thus menus are critical parts of web pages and applications, and require particular attention during design and development.
 
 * **Screen reader and keyboard users** benefit from keyboard interoperability and markup that allows them to operate menus in different ways.
 
