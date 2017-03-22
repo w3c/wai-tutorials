@@ -28,9 +28,13 @@ Ensure that menus and their items are identifiable as such. In addition to the s
 
 Consider making the label of menus visible to everyone. For example, in these tutorials, the "Menus Tutorial", "All Tutorials", "On this page" are menu labels provided as visible headings that are available for all users.
 
+### Readability
+
+Ensure appropriate sizing of menus and menu items to fit all text and also adapts to varying text sizes, to accommodate people who need larger text and languages with longer words. Where possible avoid all uppercase text, line breaks, and hyphenation, as these are often distracting and difficult to read.
+
 ### Size
 
-Ensure appropriate sizing of menus and menu items to fit the text. This includes varying text sizes to accommodate people who need larger text and languages with longer words. Where possible avoid line breaks and hyphenation, as these are often distracting and difficult to read. Also provide sufficient white space, like padding, to support people with reduced dexterity and small touch screens on mobile devices. At the same time, make sure that menus do not overlap themselves and other content of the page when text size is increased or when the page is magnified.
+Provide sufficient white space, like padding, to support people with reduced dexterity and small touch screens on mobile devices. At the same time, make sure that menus do not overlap themselves and other content of the page when text size is increased or when the page is magnified.
 
 ## Menu items
 
