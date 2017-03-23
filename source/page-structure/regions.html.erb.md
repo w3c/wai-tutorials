@@ -169,15 +169,20 @@ A [complete example](example.html) for all regions combined is available.
 <%= ref :start %>
 {:/nomarkdown}
 
-Most current web browsers support the above HTML5 elements and convey the information to assistive technology through the accessibility APIs. However, to maximize compatibility with web browsers and assistive technologies that support WAI-ARIA but do not yet support HTML5, it is currently advisable to use both the HTML5 elements and the corresponding WAI-ARIA roles; for example:
+Most current web browsers support the above HTML5 elements and convey the information to assistive technology through the accessibility APIs. However, to maximize compatibility with web browsers and assistive technologies that support WAI-ARIA but do not yet support HTML5, it is currently advisable to use both the HTML5 elements and the corresponding WAI-ARIA roles.
 
-
+{::nomarkdown}
+<%= code_start('', 'Examples') %>
+{:/nomarkdown}
 ~~~html
 <header role="banner">…</header>
 <main role="main">…</main>
 <nav role="navigation">…</main>
 <footer role="contentinfo">…</footer>
 ~~~
+{::nomarkdown}
+<%= code_end %>
+{:/nomarkdown}
 
 {::nomarkdown}
 <%= ref :middle %>
