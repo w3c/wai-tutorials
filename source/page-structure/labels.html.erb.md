@@ -10,7 +10,7 @@ wcag_techniques:
   - ARIA11
 technologies: HTML5, WAI-ARIA
 ---
-Most regions need to be labeled, especially if there are multiple regions of the same type, for example multiple navigation options, on a page. WAI-ARIA provides simple mechanisms to label a region, enabling users to easily navigate around the page.
+Most regions on a page need to be labeled. This is especially important when there are multiple regions of the same type on one page, such as multiple navigation options. WAI-ARIA provides simple mechanisms to label a region, enabling users to easily navigate around the page.
 
 Sections should also be organized using [headings](headings.html).
 
