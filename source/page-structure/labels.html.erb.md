@@ -12,7 +12,7 @@ technologies: HTML5, WAI-ARIA
 ---
 Most regions need to be labeled, especially if there are multiple regions of the same type, for example multiple navigation options, on a page. WAI-ARIA provides simple mechanisms to label a region, enabling users to easily navigate around the page.
 
-Sections should also organized using [headings](headings.html).
+Sections should also be organized using [headings](headings.html).
 
 ## Using `aria-label`
 {:.ap}
@@ -21,7 +21,7 @@ Sections should also organized using [headings](headings.html).
 <%= ref :start %>
 {:/nomarkdown}
 
-Use the WAI-ARIA `aria-label` attribute to label the carousel. This approach can be used if the label is not supposed to be visually on the page.
+Use the WAI-ARIA `aria-label` attribute to label the region. This approach can be used if the label is not supposed to appear visually on the page.
 
 {::nomarkdown}
 <%= ref :middle %>
