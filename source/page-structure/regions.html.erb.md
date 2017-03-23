@@ -15,7 +15,7 @@ Mark up different regions of web pages and web applications, so that they can be
 
 ## Page header
 
-{::nomarkdown}<%= image_tag 'page-structure-header.png', srcset: '../../img/page-structure-header.png, ../../img/page-structure-header@2x.png 2x, ../../img/page-structure-header@3x.png 3x', :alt => '', :class => "symbol" %>{:/nomarkdown} Most websites have a region at the top of every page that contains site-specific information content, such as the website logo, search function, and navigation options. HTML5 provides the `<header>` element, which can be used to define such a region.
+{::nomarkdown}<%= image_tag 'page-structure-header.png', srcset: '../../img/page-structure-header.png, ../../img/page-structure-header@2x.png 2x, ../../img/page-structure-header@3x.png 3x', :alt => '', :class => "symbol" %>{:/nomarkdown} Most websites have a region at the top of every page that contains site-wide information content, such as the website logo, search function, and navigation options. HTML5 provides the `<header>` element, which can be used to define such a region.
 
 {::nomarkdown}
 <%= notes_start %>
@@ -59,7 +59,7 @@ A [complete example](example.html) for all regions combined is available.
 
 ## Page footer
 
-{::nomarkdown}<%= image_tag 'page-structure-footer.png', srcset: '../../img/page-structure-footer.png, ../../img/page-structure-footer@2x.png 2x, ../../img/page-structure-footer@3x.png 3x', :alt => '', :class => "symbol" %>{:/nomarkdown} Similar to the page header, most websites also have a region at the bottom of every page that contains general content, such as copyright information, privacy statements, or disclaimers. HTML5 provides the `<footer>` element, which can be used to define such a region.
+{::nomarkdown}<%= image_tag 'page-structure-footer.png', srcset: '../../img/page-structure-footer.png, ../../img/page-structure-footer@2x.png 2x, ../../img/page-structure-footer@3x.png 3x', :alt => '', :class => "symbol" %>{:/nomarkdown} Similar to the page header, most websites also have a region at the bottom of every page that contains site-wide content, such as copyright information, privacy statements, or disclaimers. HTML5 provides the `<footer>` element, which can be used to define such a region.
 
 {::nomarkdown}
 <%= notes_start %>
