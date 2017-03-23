@@ -13,7 +13,7 @@ wcag_success_criteria:
   - 2.4.10
 ---
 
-A good page structure makes it easier for everyone to understand the content of web pages. It provides information to assistive technology which allows users to use them more efficiently. HTML and WAI-ARIA can improve navigation and orientation on web pages and in applications.
+Page structure is a useful way for all users to quickly understand how content is related. For users of assistive technology, well structured content allows more efficient navigation and processing. Use HTML and WAI-ARIA to improve navigation and orientation on web pages and in applications.
 
 * **[Page Regions](regions.html):** Identify and mark up regions on web pages using HTML5 and WAI-ARIA roles.
 
