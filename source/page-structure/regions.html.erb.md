@@ -93,7 +93,7 @@ A [complete example](example.html) for all regions combined is available.
 <%= ref :start %>
 {:/nomarkdown}
 
-{::nomarkdown}<%= image_tag 'page-structure-navigation.png', srcset: '../../img/page-structure-navigation.png, ../../img/page-structure-navigation@2x.png 2x, ../../img/page-structure-navigation@3x.png 3x', :alt => '', :class => "symbol" %>{:/nomarkdown} The HTML5 `<nav>` element can be used to identify a navigation menu.A web page can have any number of navigation menus. Use [labels](labels.html) to identify each navigation menu.
+{::nomarkdown}<%= image_tag 'page-structure-navigation.png', srcset: '../../img/page-structure-navigation.png, ../../img/page-structure-navigation@2x.png 2x, ../../img/page-structure-navigation@3x.png 3x', :alt => '', :class => "symbol" %>{:/nomarkdown} The HTML5 `<nav>` element can be used to identify a navigation menu. A web page can have any number of navigation menus. Use [labels](labels.html) to identify each navigation menu.
 
 {::nomarkdown}
 <%= code_start %>
