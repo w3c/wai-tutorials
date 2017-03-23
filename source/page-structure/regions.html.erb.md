@@ -15,7 +15,7 @@ Mark up different regions of web pages and web applications, so that they can be
 
 ## Page header
 
-{::nomarkdown}<%= image_tag 'page-structure-header.png', srcset: '../../img/page-structure-header.png, ../../img/page-structure-header@2x.png 2x, ../../img/page-structure-header@3x.png 3x', :alt => '', :class => "symbol" %>{:/nomarkdown} Most websites have a region at the top of every page that contains general content, such as the website logo, search function, and navigation options. HTML5 provides the `<header>` element, which can be used to define such a region.
+{::nomarkdown}<%= image_tag 'page-structure-header.png', srcset: '../../img/page-structure-header.png, ../../img/page-structure-header@2x.png 2x, ../../img/page-structure-header@3x.png 3x', :alt => '', :class => "symbol" %>{:/nomarkdown} Most websites have a region at the top of every page that contains site-specific information content, such as the website logo, search function, and navigation options. HTML5 provides the `<header>` element, which can be used to define such a region.
 
 {::nomarkdown}
 <%= notes_start %>
