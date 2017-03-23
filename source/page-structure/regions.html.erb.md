@@ -15,7 +15,7 @@ Mark up different regions of web pages and applications, so that they can be ide
 
 ## Page header
 
-{::nomarkdown}<%= image_tag 'page-structure-header.png', srcset: '../../img/page-structure-header.png, ../../img/page-structure-header@2x.png 2x, ../../img/page-structure-header@3x.png 3x', :alt => '', :class => "symbol" %>{:/nomarkdown} Most websites have a region at the top of every page that contains site-wide information content, such as the website logo, search function, and navigation options. HTML5 provides the `<header>` element, which can be used to define such a region.
+{::nomarkdown}<%= image_tag 'page-structure-header.png', srcset: image_path('page-structure-header.png') + ', ' + image_path('page-structure-header@2x.png') + ' 2x, ' + image_path('page-structure-header@3x.png') + ' 3x', :alt => '', :class => "symbol" %>{:/nomarkdown} Most websites have a region at the top of every page that contains site-wide information, such as the website logo, search function, and navigation options. HTML5 provides the `<header>` element, which can be used to define such a region.
 
 {::nomarkdown}
 <%= notes_start %>
@@ -59,7 +59,7 @@ A [complete example](example.html) for all regions combined is available.
 
 ## Page footer
 
-{::nomarkdown}<%= image_tag 'page-structure-footer.png', srcset: '../../img/page-structure-footer.png, ../../img/page-structure-footer@2x.png 2x, ../../img/page-structure-footer@3x.png 3x', :alt => '', :class => "symbol" %>{:/nomarkdown} Similar to the page header, most websites also have a region at the bottom of every page that contains site-wide content, such as copyright information, privacy statements, or disclaimers. HTML5 provides the `<footer>` element, which can be used to define such a region.
+{::nomarkdown}<%= image_tag 'page-structure-footer.png', srcset: image_path('page-structure-footer.png') + ', ' + image_path('page-structure-footer@2x.png') + ' 2x, ' + image_path('page-structure-footer@3x.png') + ' 3x', :alt => '', :class => "symbol" %>{:/nomarkdown} Similar to the page header, most websites also have a region at the bottom of every page that contains site-wide information, such as copyright information, privacy statements, or disclaimers. HTML5 provides the `<footer>` element, which can be used to define such a region.
 
 {::nomarkdown}
 <%= notes_start %>
@@ -93,7 +93,7 @@ A [complete example](example.html) for all regions combined is available.
 <%= ref :start %>
 {:/nomarkdown}
 
-{::nomarkdown}<%= image_tag 'page-structure-navigation.png', srcset: '../../img/page-structure-navigation.png, ../../img/page-structure-navigation@2x.png 2x, ../../img/page-structure-navigation@3x.png 3x', :alt => '', :class => "symbol" %>{:/nomarkdown} The HTML5 `<nav>` element can be used to identify a navigation menu. A web page can have any number of navigation menus. Use [labels](labels.html) to identify each navigation menu.
+{::nomarkdown}<%= image_tag 'page-structure-navigation.png', srcset: image_path('page-structure-navigation.png') + ', ' + image_path('page-structure-navigation@2x.png') + ' 2x, ' + image_path('page-structure-navigation@3x.png') + ' 3x', :alt => '', :class => "symbol" %>{:/nomarkdown} The HTML5 `<nav>` element can be used to identify a navigation menu. A web page can have any number of navigation menus. Use [labels](labels.html) to identify each navigation menu.
 
 {::nomarkdown}
 <%= code_start %>
@@ -126,7 +126,7 @@ A [complete example](example.html) for all regions combined is available.
 
 ## Main content
 
-{::nomarkdown}<%= image_tag 'page-structure-main.png', srcset: '../../img/page-structure-main.png, ../../img/page-structure-main@2x.png 2x, ../../img/page-structure-main@3x.png 3x', :alt => '', :class => "symbol" %>{:/nomarkdown} Use the HTML5 `<main>` element to identify the main content region of a web page or application.
+{::nomarkdown}<%= image_tag 'page-structure-main.png', srcset: image_path('page-structure-main.png') + ', ' + image_path('page-structure-main@2x.png') + ' 2x, ' + image_path('page-structure-main@3x.png') + ' 3x', :alt => '', :class => "symbol" %>{:/nomarkdown} Use the HTML5 `<main>` element to identify the main content region of a web page or application.
 
 {::nomarkdown}
 <%= code_start %>
@@ -145,7 +145,7 @@ A [complete example](example.html) for all regions combined is available.
 
 ## Complementary content
 
-{::nomarkdown}<%= image_tag 'page-structure-aside.png', srcset: '../../img/page-structure-aside.png, ../../img/page-structure-aside@2x.png 2x, ../../img/page-structure-aside@3x.png 3x', :alt => '', :class => "symbol" %>{:/nomarkdown} Use the HTML5 `<aside>` element to identify regions that support the main content, yet are separate and meaningful sections on their own; For example, a side note explaining or annotating the main content.
+{::nomarkdown}<%= image_tag 'page-structure-aside.png', srcset: image_path('page-structure-aside.png') + ', ' + image_path('page-structure-aside@2x.png') + ' 2x, ' + image_path('page-structure-aside@3x.png') + ' 3x', :alt => '', :class => "symbol" %>{:/nomarkdown} Use the HTML5 `<aside>` element to identify regions that support the main content, yet are separate and meaningful sections on their own; For example, a side note explaining or annotating the main content.
 
 {::nomarkdown}
 <%= code_start %>
