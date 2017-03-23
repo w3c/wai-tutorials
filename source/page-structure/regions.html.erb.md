@@ -11,7 +11,7 @@ wcag_techniques:
 technologies: HTML5, WAI-ARIA
 ---
 
-Mark up different regions of web pages and web applications, so that they can be identified by web browsers and assistive technologies.
+Mark up different regions of web pages and applications, so that they can be identified by web browsers and assistive technologies.
 
 ## Page header
 
