@@ -106,7 +106,7 @@ The unordered list consists of one `<ul>` element and multiple list item (`<li>`
 
 ### Ordered list
 
-The unordered list consists of one `<ol>` element and multiple list item (`<li>`) elements:
+The ordered list consists of one `<ol>` element and multiple list item (`<li>`) elements:
 
 {::nomarkdown}
 <%=sample_start%>
