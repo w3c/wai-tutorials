@@ -2,7 +2,7 @@
 title: Page Structure Code Example
 nav_title: Example
 status: draft
-order: 7
+order: 6
 type: tips
 ---
 {::nomarkdown}

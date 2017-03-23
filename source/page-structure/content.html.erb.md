@@ -1,7 +1,7 @@
 ---
 title: Content Structure
 status: draft
-order: 6
+order: 5
 wcag_success_criteria:
   - 1.3.1
 wcag_techniques:

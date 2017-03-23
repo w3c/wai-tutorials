@@ -1,7 +1,7 @@
 ---
 title: Headings
 status: editors-draft
-order: 5
+order: 4
 wcag_success_criteria:
   - 1.3.1
   - 2.4.1
