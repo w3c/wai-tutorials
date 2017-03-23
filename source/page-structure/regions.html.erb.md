@@ -162,7 +162,7 @@ A [complete example](example.html) for all regions combined is available.
 <%= code_end %>
 {:/nomarkdown}
 
-## Page Regions in HTML 4 Using WAI-ARIA
+## Page Regions in HTML5 Using WAI-ARIA
 {:#accessupport}
 
 {::nomarkdown}
@@ -171,8 +171,10 @@ A [complete example](example.html) for all regions combined is available.
 
 Most current web browsers support the above HTML5 elements and convey the information to assistive technology through the accessibility APIs. However, to maximize compatibility with web browsers and assistive technologies that support WAI-ARIA but do not yet support HTML5, it is currently advisable to use both the HTML5 elements and the corresponding WAI-ARIA roles.
 
+Such regions should also be [labeled](/page-structure/labels.html).
+
 {::nomarkdown}
-<%= code_start('', 'Examples') %>
+<%= code_start('', 'Examples in HTML5') %>
 {:/nomarkdown}
 ~~~html
 <header role="banner">…</header>
@@ -193,3 +195,23 @@ More [information about WAI-ARIA](https://www.w3.org/WAI/intro/aria) is availabl
 {::nomarkdown}
 <%= ref :end %>
 {:/nomarkdown}
+
+## Page Regions in HTML4 Using WAI-ARIA
+{:#accessupport}
+
+If HTML5 cannot be used or if an HTML4 page is retrofitted to improve accessibility, add WAI-ARIA code to `div` elements that function as their HTML5 counterparts, for example:
+
+{::nomarkdown}
+<%= code_start('', 'Examples in HTML4') %>
+{:/nomarkdown}
+~~~html
+<div class="header" role="banner">…</div>
+<div id="main" role="main">…</div>
+<div id="nav" role="navigation">…</div>
+<div id="footer" role="contentinfo">…</div>
+~~~
+{::nomarkdown}
+<%= code_end %>
+{:/nomarkdown}
+
+Such regions should also be [labeled](/page-structure/labels.html).
