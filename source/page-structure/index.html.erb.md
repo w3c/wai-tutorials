@@ -34,4 +34,4 @@ Well structured pages are essential for many web users, including:
 * **People with visual impairments**, including people with low vision, have cues that provide orientation on the page and in the content.
 * **Mobile web users** often have access to a so-called “reader” or “reading” mode that will only show the main content of the page if it is correctly marked up.
 * **People using certain browser plugins** can use landmark roles to jump to specific sections on a page.
-* There are additional benefits to a good, accessible page structure, beyond those experienced by people with disabilities. As an example, search engines can use the data to better index content of a web page.
+* There are additional benefits to a good, accessible page structure, beyond those experienced by people with disabilities. As an example, search engines can use the data to better index the content of a page.
