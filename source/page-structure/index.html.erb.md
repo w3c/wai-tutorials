@@ -19,9 +19,9 @@ Page structure is a useful way for all users to quickly understand how content i
 
 * **[Labeling Regions](labels.html):** Name regions to allow users to distinguish and access them.
 
-* **[Headings](headings.html):** Add logically nested headings of different levels to label sections of content.
+* **[Headings](headings.html):** Add headings and nest them logically to label sections of web pages according to their relationships and importance.
 
-* **[Content Structure](content.html):** Mark up the content on a page in a way that uses the best available elements.
+* **[Content Structure](content.html):** Mark up the content on a page in a way that uses appropriate and meaningful elements.
 
 ## Why is this important?
 
