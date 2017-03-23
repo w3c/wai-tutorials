@@ -17,7 +17,7 @@ wcag_techniques:
   - H42
 ---
 
-Use headings to communicate organization of the content on the page. They allow web browsers, plug-ins, and assistive technologies provide mechanisms for users to navigate through web pages.
+Use headings to communicate the organization of the content on the page. Headings provide web browsers, plug-ins, and assistive technology mechanisms for users to navigate through web pages.
 
 ## Heading levels
 
