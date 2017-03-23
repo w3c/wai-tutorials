@@ -25,12 +25,13 @@ A good page structure makes it easier for everyone to understand the content of 
 
 ## Why is this important?
 
-A good page structure makes prioritizing and identifying content easier for everyone, in particular for those with cognitive and learning disabilities. The visual structure serves as cues that are used by people with visual impairments, including people with low vision, to orient themselves on the page and in the content.
+Well structured pages are essential for many web users, including:
 
+* **People with cognitive and learning disabilities** will be able to easier prioritize and find content on the page.
 * **People using screen readers** can skip to the content directly and navigate to sections that are important to them.
 * **Keyboard users** will be more efficient when they are able to navigate the page bypassing some sections. If this is not possible, users need to use multiple strokes of the tab key to navigate through the links in a specific section.
 * **People using software that only shows the main content** of a web page, such as people with cognitive disabilities, will receive better results if the page structure is correctly marked up.
+* **People with visual impairments**, including people with low vision, have cues that provide orientation on the page and in the content.
 * **Mobile web users** often have access to a so-called “reader” or “reading” mode that will only show the main content of the page if it is correctly marked up.
 * **People using certain browser plugins** can use landmark roles to jump to specific sections on a page.
-
-There are additional benefits to a good, accessible page structure, beyond those experienced by people with disabilities. As an example, search engines can use the data to make better predictions on the real content of a web page.
+* There are additional benefits to a good, accessible page structure, beyond those experienced by people with disabilities. As an example, search engines can use the data to better index content of a web page.
