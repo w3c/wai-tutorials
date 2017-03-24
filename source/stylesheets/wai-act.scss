@@ -822,6 +822,9 @@ figure {
 		pre {
 			background: none;
 			@extend .box-content;
+			>code {
+				display:block;
+			}
 		}
 	}
 	&.sample {
