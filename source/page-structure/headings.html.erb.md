@@ -17,17 +17,21 @@ wcag_techniques:
   - H42
 ---
 
-Use headings to communicate the organization of the content on the page. Headings provide web browsers, plug-ins, and assistive technology mechanisms for users to navigate through web pages.
+{::nomarkdown}<%= image_tag 'page-structure-headings.png', srcset: image_path('page-structure-headings.png') + ', ' + image_path('page-structure-headings@2x.png') + ' 2x, ' + image_path('page-structure-headings@3x.png') + ' 3x', :alt => '', :class => "symbol" %>{:/nomarkdown} Use headings to communicate the organization of the content on the page. Web browsers, plug-ins, and assistive technologies use headings to provide navigation for the page to users.
 
-## Heading levels
+## Heading ranks
 
-Heading levels should be properly nested, where possible. An `<h1>` should only be followed by `<h1>` or `<h2>`, an `<h2>` by an `<h2>` or `<h3>`, and so forth. However it is possible to go back several levels, so an `<h4>` can be followed by an `<h2>` if it makes logical sense.
+Nest headings by their rank (or level). The most important heading has the rank 1 (`<h1>`), the least important heading rank 6 (`<h6>`). Headings with an equal or higher rank start a new section, headings with a lower rank start new subsections that are part of the higher ranked section.
 
-In fixed sections of the page, for example in sidebars, the heading levels _should not_ change depending on the levels that are used in the content area. In those cases consistency across pages is more important. The following approaches show how headings can be used in the main content and for page regions:
+Do not skip ranks when creating subsections: Make sure that a `<h3>` is followed by an `<h4>`, for example. It is ok to skip ranks when closing subsections, so an `<h2>` can follow an `<h4>`.
+
+### Exception for fixed page sections
+
+In fixed sections of the page, for example in sidebars, the heading levels _should not_ change depending on the levels that are used in the content area. In those cases consistency across pages is more important.
 
 ## Organize passages of text
 
-Headings are used to only organize passages of text on a page, for example the main content:
+In the following example, headings are used to only organize passages of text on a page, for example the main content:
 
 {::nomarkdown}
 <%=code_start('','')%>
@@ -46,7 +50,21 @@ Headings are used to only organize passages of text on a page, for example the m
 
 ## Organize page regions
 
-In addition, headings can also be used to organize the different regions of a web page, similar to [region labels](labels.html).
+{::nomarkdown}
+<%= ref :start %>
+{:/nomarkdown}
+
+The following two examples show consistent headings when used to _also_ structure the page in a similar way to [page region labels](labels.html).
+
+{::nomarkdown}
+<%= ref :middle %>
+{:/nomarkdown}
+
+Labels can used with ARIA to also act as page region labels, by using [aria-labelledby](https://w3c.github.io/wai-tutorials/page-structure/labels/#using-aria-labelledby).
+
+{::nomarkdown}
+<%= ref :end %>
+{:/nomarkdown}
 
 ### Main heading before navigation
 {:.ex}
