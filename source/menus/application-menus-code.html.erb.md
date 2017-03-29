@@ -1,6 +1,5 @@
 ---
-title: Application Menu Example
-nav_title: "Web App Menu Code"
+title: Application Menu Example & Code
 status: draft
 order: 6
 type: tips
@@ -276,44 +275,42 @@ Array.prototype.forEach.call(subMenuItems, function(el, i){
 {:/nomarkdown}
 
 ~~~ html
-<div role="menubar">
-	<ul role="menu" aria-label="functions" id="appmenu">
-			<li role="menuitem" aria-haspopup="true">
-				File
-				<ul role="menu">
-							<li role="menuitem">New</li>
-							<li role="menuitem">Open</li>
-							<li role="menuitem">Print</li>
-					</ul>
-			</li>
-			<li role="menuitem" aria-haspopup="true">
-				Edit
-				<ul role="menu">
-							<li role="menuitem">Undo</li>
-							<li role="menuitem">Redo</li>
-							<li role="menuitem">Cut</li>
-							<li role="menuitem">Copy</li>
-							<li role="menuitem">Paste</li>
-					</ul>
-			</li>
-			<li role="menuitem" aria-haspopup="true">
-					Format
-					<ul role="menu">
-							<li role="menuitem">Font</li>
-							<li role="menuitem">Text</li>
-					</ul>
-			</li>
-			<li role="menuitem" aria-haspopup="true">
-				View
-				<ul role="menu">
-					<li role="menuitem">100%</li>
-					<li role="menuitem">Zoom In</li>
-					<li role="menuitem">Zoom Out</li>
-				</ul>
-			</li>
-			<li role="menuitem">Help</li>
-	</ul>
-</div>
+<ul role="menubar" aria-label="functions" id="appmenu">
+	<li role="menuitem" aria-haspopup="true">
+		File
+		<ul role="menu">
+			<li role="menuitem">New</li>
+			<li role="menuitem">Open</li>
+			<li role="menuitem">Print</li>
+		</ul>
+	</li>
+	<li role="menuitem" aria-haspopup="true">
+		Edit
+		<ul role="menu">
+			<li role="menuitem">Undo</li>
+			<li role="menuitem">Redo</li>
+			<li role="menuitem">Cut</li>
+			<li role="menuitem">Copy</li>
+			<li role="menuitem">Paste</li>
+		</ul>
+	</li>
+	<li role="menuitem" aria-haspopup="true">
+		Format
+		<ul role="menu">
+			<li role="menuitem">Font</li>
+			<li role="menuitem">Text</li>
+		</ul>
+	</li>
+	<li role="menuitem" aria-haspopup="true">
+		View
+		<ul role="menu">
+			<li role="menuitem">100%</li>
+			<li role="menuitem">Zoom In</li>
+			<li role="menuitem">Zoom Out</li>
+		</ul>
+	</li>
+	<li role="menuitem">Help</li>
+</ul>
 ~~~
 
 {::nomarkdown}
@@ -334,14 +331,12 @@ Array.prototype.forEach.call(subMenuItems, function(el, i){
 	background-color: #369;
 	padding: .25em;
 }
-
 #appmenu li {
 	white-space: nowrap;
 	display:block;
 	padding: .25em .75em;
 	border: 1px solid #fff;
 }
-
 #appmenu > li {
 	float: left;
 	background-color: #036;
@@ -349,7 +344,6 @@ Array.prototype.forEach.call(subMenuItems, function(el, i){
 	position:relative;
 	cursor: pointer;
 }
-
 #appmenu :hover,
 #appmenu :focus {
 	background-color: #fff;
