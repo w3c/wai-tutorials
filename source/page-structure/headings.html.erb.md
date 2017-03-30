@@ -25,7 +25,7 @@ Nest headings by their rank (or level). The most important heading has the rank 
 
 Do not skip ranks when creating subsections: Make sure that a `<h3>` is followed by an `<h4>`, for example. It is ok to skip ranks when closing subsections, so an `<h2>` can follow an `<h4>`.
 
-{::nomarkdown}<%= image_tag 'page-structure-headings.png', srcset: image_path('page-structure-headings.png') + ', ' + image_path('page-structure-headings@2x.png') + ' 2x, ' + image_path('page-structure-headings@3x.png') + ' 3x', :alt => 'One h1 heading with several h2s and h3 creating subsections. One subsection’s heading is ”(h3) Sapphire Eyes” which has a subsection “(h4) How they are made”. The next heading is an h2, indicating that the (h4) and (h3) subsections are both closed now.', :class => "" %>{:/nomarkdown}
+{::nomarkdown}<%= sample_start %><%= image_tag 'page-structure-headings.png', srcset: image_path('page-structure-headings.png') + ', ' + image_path('page-structure-headings@2x.png') + ' 2x, ' + image_path('page-structure-headings@3x.png') + ' 3x', :alt => 'One h1 heading with several h2s and h3 creating subsections. One subsection’s heading is ”(h3) Sapphire Eyes” which has a subsection “(h4) How they are made”. The next heading is an h2, indicating that the (h4) and (h3) subsections are both closed now.', :class => "" %><%= sample_end %>{:/nomarkdown}
 
 ### Exception for fixed page sections
 
