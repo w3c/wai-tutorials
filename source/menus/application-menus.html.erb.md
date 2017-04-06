@@ -59,7 +59,7 @@ Adding the WAI-ARIA roles does **not** automatically enable the menu’s functio
 
 Web application menus are expected to work like desktop application menus. For example, the left and right keys are used to iterate through the top-level items, and the up and down arrows are used to navigate sub-menus. Pressing the tab key focuses the next item after the menu instead of the next menu item.
 
-To allow focus to be set to menu items by keyboard the are given a `tabindex` attribute with the value `-1`. The first main menu item (“File” in this example) is assigned a `tabindex` value of `0` which adds it to the tab order and lets the user access the menu using the keyboard.
+To allow focus to be set to menu items by keyboard, the items are given a `tabindex` attribute with the value `-1`. The first main menu item (“File” in this example) is assigned a `tabindex` value of `0` which adds it to the tab order and lets the user access the menu using the keyboard.
 
 {::nomarkdown}
 <%= code_start %>
@@ -111,11 +111,11 @@ The following table summarizes the typical behavior of top-level menu items:
 	<tbody>
 		<tr>
 			<th scope="row"><kbd>right &rarr;</kbd></th>
-			<td>Select the next top-level menu item</td>
+			<td>Select the next top-level menu item.</td>
 		</tr>
 		<tr>
 			<th scope="row"><kbd>left &larr;</kbd></th>
-			<td>Select the previous top-level menu item</td>
+			<td>Select the previous top-level menu item.</td>
 		</tr>
 	</tbody>
 	<tbody>
@@ -139,7 +139,7 @@ The following table summarizes the typical behavior of top-level menu items:
 	<tbody>
 		<tr>
 			<th scope="row"><kbd>esc</kbd></th>
-			<td>Leave the menu</td>
+			<td>Leave the menu.</td>
 		</tr>
 	</tbody>
 </table>

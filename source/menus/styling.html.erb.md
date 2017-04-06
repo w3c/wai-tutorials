@@ -16,7 +16,7 @@ Clear and consistent styling allows users to find and recognize menus more easil
 
 ## General considerations
 
-Menus often use images, such as icons, that can be decorative or communicate functionality. These require text alternatives, as described in the [Images Tutorial](/images/index.html). Also contrast requirements are applicable to menus and their items.
+Menus often use images, such as icons, that can be decorative or communicate functionality. These images require text alternatives, as described in the [Images Tutorial](/images/index.html). Contrast requirements are also applicable to menus and their items.
 
 ### Location
 
@@ -24,13 +24,13 @@ Display the menu where the target audience of the website expects it. For exampl
 
 ### Identification
 
-Ensure that menus and their items are identifiable as such. In addition to the structural markup discussed in the previous section, also the color scheme is important to visually communicate the presence of menus and items.
+Ensure that menus and their items are identifiable as such. In addition to the structural markup discussed in the previous section, the color scheme is important to visually communicate the presence of menus and items.
 
 Consider making the label of menus visible to everyone. For example, in these tutorials, the "Menus Tutorial", "All Tutorials", "On this page" are menu labels provided as visible headings that are available for all users.
 
 ### Readability
 
-Ensure appropriate sizing of menus and menu items to fit all text and also adapts to varying text sizes, to accommodate people who need larger text and languages with longer words. Where possible avoid all uppercase text, line breaks, and hyphenation, as these are often distracting and difficult to read.
+Ensure appropriate sizing of menus and menu items to fit all text. The menu size should also adapt to varying text sizes, to accommodate languages with longer words and people who need larger text. Where possible avoid all uppercase text, line breaks, and hyphenation, as these are often distracting and difficult to read.
 
 ### Size
 
@@ -81,7 +81,7 @@ See this code in action in the [live example](#example).
 
 ### Active state
 
-Indicate the menu item that was activated through clicking, tapping, or a keyboard. This helps people to identify unintended activation, for example by mis-clicking. In this example the active item has darker blue background and is underlined.
+Indicate the menu item that was activated through clicking, tapping, or keyboard selection. This helps people to identify unintended activation, for example by mis-clicking. In this example the active item has darker blue background and is underlined.
 
 {::nomarkdown}
 <%= demo :start %>

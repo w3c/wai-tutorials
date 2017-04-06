@@ -10,7 +10,7 @@ wcag_techniques:
   - ARIA11
 ---
 
-Semantic markup conveys the menu structure to users. Menus can easily adapt to different situations, such as small screen displays, screen magnification and other assistive technology, when coded semantically.
+Semantic markup conveys the menu structure to users. Menus coded semantically can easily adapt to different situations, such as small screen displays, screen magnification and other assistive technology.
 
 ## Menu representation
 {:.newap}
@@ -137,7 +137,7 @@ In the following example the menu item has the invisible text â€œCurrent Page:â€
 ### Using WAI-ARIA
 {:.ap}
 
-Use the `aria-current="page"` attribute to indicate the current page in the menu. This is particularly useful when the menu item is supposed to stay a link, or when the HTML cannot be changed to remove the anchor.
+Use the `aria-current="page"` attribute to indicate the current page in the menu. This is particularly useful when the anchor (`<a>`) cannot be removed from the HTML.
 
 In the following example the link in the navigation points to the main content of the page.
 
