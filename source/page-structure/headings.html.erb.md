@@ -29,7 +29,7 @@ Do not skip ranks when creating subsections: Make sure that a `<h3>` is followed
 
 ### Exception for fixed page sections
 
-In fixed sections of the page, for example in sidebars, the heading levels _should not_ change depending on the levels that are used in the content area. In those cases consistency across pages is more important.
+In fixed sections of the page, for example in sidebars, the heading levels _should not_ change depending on the levels that are used in the content area. In those cases, consistency across pages is more important.
 
 ## Organize passages of text
 
@@ -62,7 +62,7 @@ The following two examples show consistent headings when used to _also_ structur
 <%= ref :middle %>
 {:/nomarkdown}
 
-Labels can used with ARIA to also act as page region labels, by using [aria-labelledby](https://w3c.github.io/wai-tutorials/page-structure/labels/#using-aria-labelledby).
+Labels can be used with ARIA to also act as page region labels, by using [aria-labelledby](https://w3c.github.io/wai-tutorials/page-structure/labels/#using-aria-labelledby).
 
 {::nomarkdown}
 <%= ref :end %>

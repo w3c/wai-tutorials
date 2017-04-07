@@ -309,7 +309,7 @@ Use the `<blockquote>` element for longer and more complex quotes. It can contai
 
 <p>The following is an excerpt from the <cite>The Story of my Life</cite> by Helen Keller</p>
 <blockquote>
-    <p>Even in the days before my teacher came, I used to feel along the square stiff boxwood hedges, and, guided by the sense of smell, would find the first violets and lilies. There, too, after a fit of temper, I went to find comfort and to hide my hot face  in the cool leaves and grass.</p>
+    <p>Even in the days before my teacher came, I used to feel along the square stiff boxwood hedges, and, guided by the sense of smell, would find the first violets and lilies. There, too, after a fit of temper, I went to find comfort and to hide my hot face in the cool leaves and grass.</p>
 </blockquote>
 
 <%=sample_end%>
@@ -322,7 +322,7 @@ Use the `<blockquote>` element for longer and more complex quotes. It can contai
 ~~~html
 <p>The following is an excerpt from the <cite>The Story of my Life</cite> by Helen Keller</p>
 <blockquote>
-    <p>Even in the days before my teacher came, I used to feel along the square stiff boxwood hedges, and, guided by the sense of smell, would find the first violets and lilies. There, too, after a fit of temper, I went to find comfort and to hide my hot face  in the cool leaves and grass.</p>
+    <p>Even in the days before my teacher came, I used to feel along the square stiff boxwood hedges, and, guided by the sense of smell, would find the first violets and lilies. There, too, after a fit of temper, I went to find comfort and to hide my hot face in the cool leaves and grass.</p>
 </blockquote>
 ~~~
 
@@ -357,7 +357,7 @@ For shorter quotes, that are usually embedded in another sentence, use the `<q>`
 
 ## Figures
 
-Figures are blocks with additional information to the main content of the page – sometimes referenced from the main text. They typically contain  lists, images, tables, but can also contain other content. For example an annual report could reference to a diagram containing the sales volumes of a product.
+Figures are blocks with additional information to the main content of the page – sometimes referenced from the main text. They typically contain  lists, images, tables, but can also contain other content. For example, an annual report could reference to a diagram containing the sales volumes of a product.
 
 Each figure is wrapped in a `<figure>` element and labeled using a nested `<figcaption>` element.
 
@@ -397,7 +397,7 @@ Each figure is wrapped in a `<figure>` element and labeled using a nested `<figc
 
 ## Images and illustrations
 
-Images and illustrations are useful to create visual engagement for many users. They may also clarify text for people with reading disabilities. Where images or illustrations are used, proper alternative texts need to be added. See the [Images Tutorial](/images/index.html) for guidance on alternative texts.
+Images and illustrations are useful to create visual engagement for many users. They may also clarify text for people with reading disabilities. Where images or illustrations are used, proper alternative text needs to be added. See the [Images Tutorial](/images/index.html) for guidance on alternative text.
 
 ## Tables
 
