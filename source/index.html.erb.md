@@ -19,10 +19,10 @@ support: Developed with support from the <a href="http://www.w3.org/WAI/ACT/">WA
 
 This collection of tutorials shows you how to develop web content that is accessible to people with disabilities, and that provides a better user experience for everyone.
 
-The tutorials are designed to be used by a variety of people, including:
+The tutorials are designed to be used by a variety of individuals, including:
 
 * **Web developers** will find guidance and boilerplate solutions for many common coding challenges.
-* **Web designers** will learn how to create web page components with built-in inclusive design.
+* **Web designers** will learn how to create web page components with a built-in inclusive design.
 * **Web trainers** will find examples to teach people about accessible web design and development.
 * **Content authors** will learn concepts and techniques for preparing their content in an accessible way.
 * **Project managers** will gain an understanding of ways to integrate accessibility into their projects.
@@ -33,7 +33,7 @@ Web authoring tools (Content Management Systems (CMS), <abbr title="What you see
 
 ## Relationship to WCAG 2.0
 
-These tutorials provide best-practice guidance on implementing accessibility in different situations. They combine WCAG 2.0 success criteria and techniques from different conformance levels. Each tutorial page lists the specific success criteria and techniques used on that page. A more comprehensive coverage of the normative  [WCAG 2.0 standard](http://www.w3.org/TR/WCAG20/) and its supporting materials is provided in **[How to Meet WCAG 2.0: A customizable quick reference](http://www.w3.org/WAI/WCAG20/quickref/)**.
+These tutorials provide best-practice guidance on implementing accessibility in different situations. They combine WCAG 2.0 success criteria and techniques from various conformance levels. Each tutorial page lists the specific success criteria and techniques used on that page. A more comprehensive coverage of the normative  [WCAG 2.0 standard](http://www.w3.org/TR/WCAG20/) and its supporting materials is provided in **[How to Meet WCAG 2.0: A customizable quick reference](http://www.w3.org/WAI/WCAG20/quickref/)**.
 
 ## Additional Resources
 
