@@ -21,7 +21,7 @@ Sections should also be organized using [headings](headings.html).
 <%= ref :start %>
 {:/nomarkdown}
 
-Use the WAI-ARIA `aria-label` attribute to label the region. This approach can be used if the label is not supposed to appear visually on the page.
+Use the WAI-ARIA `aria-label` attribute to label the region. This approach can be used if the label should not appear visually on the page.
 
 {::nomarkdown}
 <%= ref :middle %>
