@@ -297,7 +297,7 @@ In this example, John and Luke authors and also editors:
 ## Quotes
 {:.newex}
 
-Identifying a quotation as such helps clarify that the content is attributed to another author. Quotes can be marked up as inline or as blocks of text.
+Identifying a quotation as such helps clarify that the content is attributed to another author. Quotes can be marked up as inline or as blocks of text. Assistive technologies can convey to users where a quote starts and ends, which can avoid misunderstandings.
 
 ### Blockquote
 {:.ex}
