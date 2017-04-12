@@ -1,19 +1,4 @@
----
-title: An alt Decision Tree
-order: 9
-type: tips
-editors:
-  - Eric Eggert: "http://w3.org/People/yatil/"
-  - Shadi Abou-Zahra: "http://w3.org/People/shadi/"
-contributors:
-  - Steve Faulkner
-  - Anna Belle Leiserson
-  - the Web Content Accessibility Guidelines Working Group (<a href="http://www.w3.org/WAI/GL/">WCAG WG</a>)
-  - the Education and Outreach Working Group (<a href="http://www.w3.org/WAI/EO/">EOWG</a>)
-support: Developed with support from the <a href="http://www.w3.org/WAI/ACT/">WAI-ACT project</a>, co-funded by the <strong>European Commission <abbr title="Information Society Technologies">IST</abbr> Programme</strong>.
----
-
-This decision tree describes how to use the `alt` attribute of the `<img>` element in various situations. For some types of images there are alternative approaches, such as using CSS background images for decorative images or webfonts instead of images of text.
+This decision tree describes how to use the `alt` attribute of the `<img>` element in various situations. For some types of images, there are alternative approaches, such as using CSS background images for decorative images or web fonts instead of images of text.
 
 -   **Does the image contain text?**
 	-   {:.yes} **Yes:**

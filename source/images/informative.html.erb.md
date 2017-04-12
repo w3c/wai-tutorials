@@ -23,7 +23,7 @@ In some situations a detailed literal description may be needed, but only when t
 ## Images used to label other information
 {:.ex}
 
-This example shows two image icons – one of a telephone, one of a fax machine. Each image is followed by a phone number. Consistent with the visual presentation, the text alternatives “Telephone:” and “Fax:” are used to identify the device associated with each number.
+This example shows two image icons – one of a telephone, one of a fax machine. A phone number follows each image. Consistent with the visual presentation, the text alternatives “Telephone:” and “Fax:” are used to identify the device associated with each number.
 
 {::nomarkdown}
 <%= sample_start %>
@@ -57,7 +57,7 @@ This example shows two image icons – one of a telephone, one of a fax machine.
 ## Images used to supplement other information
 {:.ex}
 
-The following image shows a dog wearing a bell. It supplements the adjacent text that explains the purpose of this bell. A short text alternative is sufficient to describe the information that is displayed visually but is not explained in the text; in this case the text alternative is “Dog with a bell attached to its collar.”.
+The following image shows a dog wearing a bell. It supplements the adjacent text that explains the purpose of this bell. A short text alternative is sufficient to describe the information that is displayed visually but is not explained in the text; in this case, the text alternative is “Dog with a bell attached to its collar.”.
 
 {::nomarkdown}
 <%= sample_start %>
@@ -123,9 +123,9 @@ This simple diagram illustrates a counter-clockwise direction for unscrewing a b
 <%= notes_start %>
 {:/nomarkdown}
 
-**Note 1:** An alternative technique would be to provide the instructions within the main content rather than as a text alternative to the image. This makes all information available in text for everyone, while providing an illustration for people who prefer to view the information visually.
+**Note 1:** An alternative technique would be to provide the instructions within the main content rather than as a text alternative to the image. This technique makes all information available in text for everyone while providing an illustration for people who prefer to view the information visually.
 
-**Note 2:** If more information than that of the diagram is intended to be conveyed by the image, for example if the fact that this diagram appears on the bottle or if the shape and size of the bottle were relevant pieces of information, then it may be better to follow one of the approaches described in [Complex images](complex.html).
+**Note 2:** If more information than that of the diagram is intended to be conveyed by the image, it may be better to follow one of the approaches described in [Complex images](complex.html). For example, if the fact that this diagram appears on a bottle or if the shape and size of the bottle were relevant pieces of information, use a more detailed alternative text.
 
 {::nomarkdown}
 <%= notes_end %>
@@ -134,7 +134,7 @@ This simple diagram illustrates a counter-clockwise direction for unscrewing a b
 ## Images conveying an impression or emotion
 {:.ex}
 
-This photograph shows a smiling family group. It’s a stock image so the individuals should not be identified. It’s being used to give the impression that the website or the company it represents is family-friendly. The text alternative is “We’re family-friendly” as this best describes the intended impression.
+This photograph shows a happy family group. It’s a stock image so the individuals should not be identified. It’s being used to give the impression that the website or the company it represents is family-friendly. The text alternative is “We’re family-friendly” as this best describes the intended impression.
 
 {::nomarkdown}
 <%= sample_start %>
@@ -162,7 +162,7 @@ This photograph shows a smiling family group. It’s a stock image so the indivi
 <%= notes_start %>
 {:/nomarkdown}
 
-**Note:** If the purpose of this image were simply to improve the look of a page rather than convey an impression, it could be deemed to be decorative, as shown in [“Decorative Images: Image used for ambience”](decorative.html#image-used-for-ambience-eye-candy). The author determines the purpose for using the image.
+**Note:** If the purpose of this image were simply to improve the look of a page rather than convey an impression, it could be deemed to be decorative, as shown in [“Decorative Images: Image used for ambiance”](decorative.html#image-used-for-ambiance-eye-candy). The author determines the purpose for using the image.
 
 {::nomarkdown}
 <%= notes_end %>
@@ -215,7 +215,7 @@ type for each link:
 <%= notes_start %>
 {:/nomarkdown}
 
-**Note 1:** If the format identification were written as part of the link text, the image might be considered [decorative](decorative.html) and have a null (empty) `alt` attribute (`alt=""`). It could still remain in the same link element (`<a>`) as the text, to include it in the clickable area. Further discussion is provided in [“Functional Images: Logo image within link text”](functional.html#logo-image-within-link-text).
+**Note 1:** If the format identification were written as part of the link text, the image might be considered [decorative](decorative.html) and have a null (empty) `alt` attribute (`alt=""`). It could remain in the same link element (`<a>`) as the text, to include it in the clickable area. Further discussion is provided in [“Functional Images: Logo image within link text”](functional.html#logo-image-within-link-text).
 
 **Note 2:** This particular example is similar to the [Functional Images: icon within linked text in ](functional.html#icon-image-conveying-information-within-link-text) in that the image conveys information that isn’t given in the link text.
 
