@@ -56,7 +56,7 @@ The HTML5 `<section>` element marks a general region of a web page or an article
 
 ## Paragraphs
 
-Use the paragraph element (`<p>`) to mark up paragraphs of text, such as this one. Consistent styling of paragraphs improves text readability. It also gives users more control when customizing their view.
+Use the paragraph element (`<p>`) to mark up paragraphs of text, such as this one. The consistent styling of paragraphs improves text readability. It also gives users more control when customizing their view.
 
 ## Lists
 
@@ -142,7 +142,7 @@ The ordered list consists of one `<ol>` element and multiple list item (`<li>`) 
 
 ### Nested lists
 
-Every list can be nested into another list. In the following example, the order of preparation is not important, but the preparation itself should be done before using the ingredients. The information is still easy to digest, assistive technology can easily inform users about the number of steps.
+Every list can be nested into another list. In the following example, the order of preparation is not critical, but the preparation itself should be done before using the ingredients. The information is still easy to digest, assistive technology can easily inform users about the number of steps.
 
 {::nomarkdown}
 <%=sample_start%>
@@ -198,7 +198,7 @@ A grouping begins either on the first item of the list or whenever a `<dt>` elem
 #### One term, multiple descriptions
 {:.ex}
 
-In the following example, John and Luke are described as authors and Frank is described as editor.
+In the following example, John and Luke are described as authors, and Frank is described as editor.
 
 {::nomarkdown}
 <%=sample_start%>
@@ -357,7 +357,7 @@ For shorter quotes, that are usually embedded in another sentence, use the `<q>`
 
 ## Figures
 
-Figures are blocks with additional information to the main content of the page – sometimes referenced from the main text. They typically contain  lists, images, tables, but can also contain other content. For example, an annual report could reference to a diagram containing the sales volumes of a product.
+Figures are blocks with additional information to the main content of the page – sometimes referenced from the main text. They typically contain lists, images, tables, but can also include other content. For example, an annual report could reference to a diagram containing the sales volumes of a product.
 
 Each figure is wrapped in a `<figure>` element and labeled using a nested `<figcaption>` element.
 

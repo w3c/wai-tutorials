@@ -29,7 +29,7 @@ Skipping heading levels can be confusing and should be avoided where possible: M
 
 ### Exception for fixed page sections
 
-In fixed sections of the page, for example in sidebars, the heading levels _should not_ change depending on the levels that are used in the content area. In those cases, consistency across pages is more important.
+In fixed sections of the page, for example in sidebars, the heading levels _should not_ change depending on the levels  in the content area. In those cases, consistency across pages is more important.
 
 ## Organize passages of text
 
