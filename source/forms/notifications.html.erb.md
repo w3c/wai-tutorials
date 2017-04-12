@@ -219,6 +219,8 @@ The example below shows a form with two input fields. The first input field, “
 
 When the form is submitted, the entries are checked and feedback is provided to the user. Appropriate success and error messages are displayed for each input field to help the user complete the form.
 
+If the submitted data contains errors, it is convenient to set the focus to the first `<input>` element that contains an error.
+
 {::nomarkdown}
 <%= sample_start %>
 
