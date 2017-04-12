@@ -51,7 +51,7 @@ Mark up different regions of web pages and applications, so that they can be ide
 <%= demo :middle %>
 {:/}
 
-A [complete example](example.html) for all regions combined is available.
+View a [complete code example](example.html) for all regions combined.
 
 {::nomarkdown}
 <%= demo :end %>
@@ -118,7 +118,7 @@ A [complete example](example.html) for all regions combined is available.
 <%= ref :middle %>
 {:/nomarkdown}
 
-**Note:** The [Menus tutorial](/menus/index.html) provides more information about creating menus in more detail.
+The [Menus tutorial](/menus/index.html) provides more details on creating menus.
 
 {::nomarkdown}
 <%= ref :end %>
@@ -190,7 +190,10 @@ Such regions should also be [labeled](/page-structure/labels.html).
 <%= ref :middle %>
 {:/nomarkdown}
 
-More [information about WAI-ARIA](https://www.w3.org/WAI/intro/aria) is available, including [Notes on Using ARIA in HTML](https://www.w3.org/TR/aria-in-html/).
+Explore other WAI-ARIA resources:
+
+* [WAI-ARIA Overview](https://www.w3.org/WAI/intro/aria)
+* [Notes on Using ARIA in HTML](https://www.w3.org/TR/aria-in-html/)
 
 {::nomarkdown}
 <%= ref :end %>
