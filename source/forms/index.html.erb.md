@@ -19,7 +19,7 @@ contributors:
 support: Developed with support from the <a href="http://www.w3.org/WAI/ACT/">WAI-ACT project</a>, co-funded by the <strong>European Commission <abbr title="Information Society Technologies">IST</abbr> Programme</strong>.
 ---
 
-Forms are commonly used to provide user interaction in websites and web applications. For example, login, registering, commenting, and purchasing. This tutorial shows you how to create accessible forms. The same concepts apply to all forms, whether they are processed client or server-side.
+Forms are commonly used to provide user interaction on websites and in web applications. For example, login, registering, commenting, and purchasing. This tutorial shows you how to create accessible forms. The same concepts apply to all forms, whether they are processed client or server-side.
 
 Aside from technical considerations, users usually prefer simple and short forms. Only ask users to enter what is required to complete the transaction or process; if irrelevant or excessive data is requested, users are more likely to abandon the form.
 
@@ -29,21 +29,21 @@ Aside from technical considerations, users usually prefer simple and short forms
 
 - **[Form Instructions](instructions.html):** Provide instructions to help users understand how to complete the form and individual form controls.
 
-- **[Validating Input](validation.html):** Validate input provided by the user, and provide options to undo changes and confirm data entry.
+- **[Validating Input](validation.html):** Validate input provided by the user and provide options to undo changes and confirm data entry.
 
 - **[User Notifications](notifications.html):** Notify users about successful task completion, any errors, and provide instructions to help them correct mistakes.
 
-- **[Multi-Page Forms](multi-page.html):** Divide long forms into multiple smaller forms that constitute a series of logical steps or stages, and inform users about their progress.
+- **[Multi-Page Forms](multi-page.html):** Divide long forms into multiple smaller forms that constitute a series of logical steps or stages and inform users about their progress.
 
 - **[Custom Controls](custom-controls.html):** Use stylized form elements and other progressive enhancement techniques to provide custom controls.
 
 ## A note on time limits
 
-If possible, forms should not be subject to a time limit to allow users to complete the form at their own pace. If a time limit needs to be in place, for example, for security reasons, the user should have the option to turn it off or extend it. This does not apply if the time limit is due to a live event, such as an auction or a game, or if the time to complete the form is essential for a valid submission.
+If possible, forms should not be subject to a time limit to allow users to complete the form at their pace. If a time limit needs to be in place, for example, for security reasons, the user should have the option to turn it off or extend it. This restriction does not apply if the time limit is due to a live event, such as an auction or a game, or if the time to complete the form is essential for a valid submission.
 
 ## Why is this important?
 
-Forms can be visually and cognitively complex and difficult to use. Accessible forms are easier to use for everyone, including people with disabilities.
+Forms can be visually and cognitively complex and challenging to use. Accessible forms are easier to use for everyone, including people with disabilities.
 
 - **People with cognitive disabilities** can better understand the form and how to complete it, as making forms accessible improves the layout structure, instructions, and feedback.
 

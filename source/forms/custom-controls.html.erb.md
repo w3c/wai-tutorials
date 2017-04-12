@@ -12,7 +12,7 @@ contributors:
 support: Developed with support from the <a href="http://www.w3.org/WAI/ACT/">WAI-ACT project</a>, co-funded by the <strong>European Commission <abbr title="Information Society Technologies">IST</abbr> Programme</strong>.
 ---
 
-Sometimes form designs require something beyond what is achievable with standard form controls. In such cases it is possible to build additional functionality and styling to standard controls. To ensure robustness, try to reuse HTML elements that do a subset of the functionality that the final control is intended to cover, and build from there. The following examples provide some general guidance on what to consider to ensure the additions are made accessible.
+Sometimes form designs require something beyond what is achievable with standard form controls. In such cases, it is possible to build additional functionality and styling to standard controls. To ensure robustness, try to reuse HTML elements that do a subset of the functionality that the final control is intended to cover, and build from there. The following examples provide some general guidance on what to consider to ensure the additions are made accessible.
 
 For components where there is no adequate HTML element to build on, WAI-ARIA attributes can be useful to convey the functionality for people using assistive technologies.
 
@@ -21,9 +21,9 @@ For components where there is no adequate HTML element to build on, WAI-ARIA att
 
 The example below shows a social media "share button" that has two functions: it shows how many people have already activated the button ("shared"), and allows users to press the button to activate the share function.
 
-The custom button relies on CSS to style a regular `<button>` element, so that the basic functionality remains intact when it is rendered without CSS. For example, most screen readers will announce the button and its contents.
+The custom button relies on CSS to style a regular `<button>` element so that the basic functionality remains intact when it is rendered without CSS. For example, most screen readers will announce the button and its contents.
 
-In addition, the `action` attribute of the `<form>` element references a server-side script that carries out the same functionality for cases when JavaScript is not supported.
+Also, the `action` attribute of the `<form>` element references a server-side script that carries out the same functionality for cases when JavaScript is not supported.
 
 {::nomarkdown}
 <%= sample_start %>
@@ -126,9 +126,9 @@ document.getElementById('share-btn').addEventListener('click', function(event){
 
 A star rating usually consists of images of five stars that can be used to rate a particular item. A mouse user hovers over the stars and clicks one to select it. For example, if the user clicks on the third star from the left, the rating of the item is 3 of 5 stars.
 
-To make this as accessible as possible, a form is used with its fields visually hidden. It contains 6 radio buttons, one for each star and another for 0 stars, which is checked by default. The labels for the radio buttons contain actual text (“1 Star”, “2 Stars”, …), and are also hidden visually. The form also contains a visually hidden submit button so that the form is not automatically submitted when keyboard users browse through the radio buttons.
+To make this as accessible as possible, a form is used with its fields visually hidden. It contains six radio buttons, one for each star and another for 0 stars, which is checked by default. The labels for the radio buttons contain actual text (“1 Star”, “2 Stars”, …), and are also hidden visually. The form also contains a visually hidden submit button so that the form is not automatically submitted when keyboard users browse through the radio buttons.
 
-The images of the stars are generated using <abbr title="Scalable Vector Graphics">SVG</abbr>. The coloring animation of these stars is initiated through the <abbr title="Cascading Style Sheets">CSS</abbr> `:focus` and `:hover` pseudo classes, so that they can be activated using a mouse, keyboard, and other input methods. The `:checked` pseudo class and the general sibling selector `~` are used to indicate the selected, active, and inactive stars.
+The images of the stars are generated using <abbr title="Scalable Vector Graphics">SVG</abbr>. The coloring animation of these stars is initiated through the <abbr title="Cascading Style Sheets">CSS</abbr> `:focus` and `:hover` pseudo-classes so that they can be activated using a mouse, keyboard, and other input methods. The `:checked` pseudo-class and the general sibling selector `~` are used to indicate the selected, active, and inactive stars.
 
 {::nomarkdown}
 <%= sample_start %>
