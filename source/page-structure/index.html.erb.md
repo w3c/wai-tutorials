@@ -25,7 +25,7 @@ Well-structured content allows more efficient navigation and processing. Use HTM
 
 ## Why is this important?
 
-Well-structured pages are essential for many web users, including:
+Pages with well-structured content are essential for many web users, for example:
 
 * **People with cognitive and learning disabilities** are more easily able to prioritize and find content on the page.
 * **People using screen readers** can skip to the main content directly and navigate to sections that are important to them.
