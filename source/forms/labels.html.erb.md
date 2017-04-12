@@ -112,7 +112,7 @@ In this approach, the `<label>` element is provided to identify a form control w
 #### Using aria-label
 {:.ap}
 
-The `aria-label` attribute can also be used to identify form controls. This approach is generally well supported by screen readers and other assistive technology, but, unlike the `title` attribute (see next section), the information is not conveyed to visual users.
+The `aria-label` attribute can also be used to identify form controls. This approach is generally well supported by screen readers and other assistive technology, but, unlike the `title` attribute (see below), the information is not conveyed to visual users. The approach should therefore only be used when the label of the control is clear from the surrounding content, like the button in the example below.
 
 {::nomarkdown}
 <%= code_start %>
@@ -121,6 +121,26 @@ The `aria-label` attribute can also be used to identify form controls. This appr
 ~~~ html
 <input type="text" name="search" aria-label="Search">
 <button type="submit">Search</button>
+~~~
+
+{::nomarkdown}
+<%= code_end %>
+{:/nomarkdown}
+
+#### Using aria-labelledby
+{:.ap}
+
+The `aria-labelledby` attribute can also be used to identify form controls. This approach is generally well supported by screen readers and other assistive technology, but, unlike the `title` attribute (see below), the information is not conveyed to visual users. The approach should therefore only be used when the label of the control is clear from the surrounding content, like the button in the example below.
+
+The `id` of the element containing the label text is used as the value of the `aria-labelledby` attribute.
+
+{::nomarkdown}
+<%= code_start %>
+{:/nomarkdown}
+
+~~~ html
+<input type="text" name="search" aria-labelledby="searchbutton">
+<button id="searchbutton" type="submit">Search</button>
 ~~~
 
 {::nomarkdown}
