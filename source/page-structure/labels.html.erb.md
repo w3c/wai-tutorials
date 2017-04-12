@@ -27,7 +27,10 @@ Use the WAI-ARIA `aria-label` attribute to label the region. This approach can b
 <%= ref :middle %>
 {:/nomarkdown}
 
-More [information about WAI-ARIA](https://www.w3.org/WAI/intro/aria) is available, including [Notes on Using ARIA in HTML](https://www.w3.org/TR/aria-in-html/).
+Explore other WAI-ARIA resources:
+
+* [WAI-ARIA Overview](https://www.w3.org/WAI/intro/aria)
+* [Notes on Using ARIA in HTML](https://www.w3.org/TR/aria-in-html/)
 
 {::nomarkdown}
 <%= ref :end %>
@@ -55,7 +58,7 @@ More [information about WAI-ARIA](https://www.w3.org/WAI/intro/aria) is availabl
 <%= demo :middle %>
 {:/}
 
-A [complete example](example.html), including labels, is available.
+View a [complete code example](example.html) with regions and labels.
 
 {::nomarkdown}
 <%= demo :end %>
