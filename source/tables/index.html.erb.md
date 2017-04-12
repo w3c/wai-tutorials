@@ -19,9 +19,9 @@ contributors:
 support: Developed with support from the <a href="http://www.w3.org/WAI/ACT/">WAI-ACT project</a>, co-funded by the <strong>European Commission <abbr title="Information Society Technologies">IST</abbr> Programme</strong>.
 ---
 
-Data tables are used to organize data with a logical relationship in grids. Accessible tables need HTML markup that indicates header cells and data cells, and defines their relationship. Assistive technologies use this information to provide context to users.
+Data tables are used to organize data with a logical relationship in grids. Accessible tables need HTML markup that indicates header cells and data cells and defines their relationship. Assistive technologies use this information to provide context to users.
 
-To make tables accessible, header cells must be marked up with `<th>`, and data cells with `<td>`. For more complex tables, explicit associations may be needed using `scope`, `id`, and `headers` attributes.
+Header cells must be marked up with `<th>`, and data cells with `<td>` to make tables accessible. For more complex tables, explicit associations may be needed using `scope`, `id`, and `headers` attributes.
 
 This tutorial shows you how to apply appropriate structural markup to tables. It includes the following pages:
 
@@ -31,20 +31,20 @@ This tutorial shows you how to apply appropriate structural markup to tables. It
 
 -   **[Tables with irregular headers![](img-irreg.png)](irregular.html)** have header cells that span multiple columns and/or rows: For these tables, define column and row groups and set the range of the header cells using the `colgroup` and `rowgroup` values of the scope attribute.
 
--   **[Tables with multi-level headers![](img-multi.png)](multi-level.html)**  have multiple header cells associated per data cell:  For tables that are so complex that header cells can’t be associated in a strictly horizontal or vertical way, use `id` and `headers` attributes to explicitly associate header and data cells.
+-   **[Tables with multi-level headers![](img-multi.png)](multi-level.html)**  have multiple header cells associated per data cell:  For tables that are so complex that header cells can’t be associated in a strictly horizontal or vertical way, use `id` and `headers` attributes to associate header and data cells explicitly.
 
 -   **[Caption & Summary![](img-caption.png)](caption-summary.html):** A caption identifies the overall topic of a table and is useful in most situations. A summary provides orientation or navigation hints in complex tables.
 {:.withicons.nobullets}
 
 Some document formats other than HTML, such as PDF, provide similar mechanisms to markup table structures. Word processing applications may also provide mechanisms to markup tables. Tables markup is often lost when converting from one format to another, though some programs may provide functionality to assist converting table markup.
 
-Many web authoring tools and content management systems (CMS) provide functions to define header cells during table creation without having to manually edit the code.
+Many web authoring tools and content management systems (CMS) provide functions to define header cells during table creation without having to edit the code manually.
 
 {::nomarkdown}
 <%= notes_start %>
 {:/nomarkdown}
 
-**Notes:** This tutorial provides guidance for creating tables used to display data in a grid. This tutorial does not apply to tables used for layout. As a general rule, tables aren't meant to be used for layout purposes. Instead, best practice is to use Cascading Style Sheets (CSS) for visual presentation.
+**Notes:** This tutorial provides guidance for creating tables used to display data in a grid. This tutorial does not apply to tables used for layout. As a general rule, tables aren't meant to be used for layout purposes. Instead, a best practice is to use Cascading Style Sheets (CSS) for visual presentation.
 
 {::nomarkdown}
 <%= notes_end %>
@@ -56,4 +56,4 @@ Tables without structural markup to differentiate and properly link between head
 
 -   **People using screen readers** can have the row and column headers read aloud as they navigate through the table. Screen readers speak one cell at a time and reference the associated header cells, so the reader doesn’t lose context.
 
--    **Some people use alternative ways to render the data**, for example by using custom stylesheets to display header cells more prominently. Techniques like this enable them to change text size and colors, and display the information as lists rather than grids. In order to allow alternative renderings, table code needs to be properly structured.
+-    **Some people use alternative ways to render the data**, for example by using custom stylesheets to display header cells more prominently. Techniques like this enable them to change text size and colors and display the information as lists rather than grids. The table code needs to be properly structured to allow alternative renderings.
