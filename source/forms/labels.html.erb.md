@@ -205,6 +205,8 @@ The common approach used to hide information visually but keep them available to
 <%= code_end %>
 {:/nomarkdown}
 
+Note that interactive elements are still active when using this code, so it is not suitable to hide other parts of forms but the labels.
+
 ## Associating labels implicitly
 {:.newap}
 
