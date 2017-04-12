@@ -4,7 +4,7 @@ status: draft
 order: 5
 ---
 
-Web application menus use the same basic structure as navigation menus. They often consist of a horizontal menu bar and use fly-out functionality. However, additional markup and keyboard behavior needs to be added.
+Web application menus use the same basic structure as navigation menus. They often consist of a horizontal menu bar and use fly-out functionality. However, additional markup and keyboard behavior need to be added.
 
 ## Additional markup
 
@@ -13,7 +13,7 @@ In addition to the `aria-expanded` and `aria-haspopup` attributes, the following
 * **`menubar`:** Represents a (usually horizontal) menu bar.
 * **`menu`:** Represents a set of links or commands in a menu bar, it is used for the fly-out menus.
 * **`menuitem`:** Represents an individual menu item.
-* **`separator`:** Represents a separator between two groups of menuitems in a menu.
+* **`separator`:** Represents a separator between two groups of menu items in a menu.
 
 {::nomarkdown}
 <%= ref :start %>
@@ -57,7 +57,7 @@ Adding the WAI-ARIA roles does **not** automatically enable the menu’s functio
 
 ## Keyboard behavior
 
-Web application menus are expected to work like desktop application menus. For example, the left and right keys are used to iterate through the top-level items, and the up and down arrows are used to navigate sub-menus. Pressing the tab key focuses the next item after the menu instead of the next menu item.
+Web application menus are expected to work like desktop application menus. For example, the left and right keys are used to iterate through the top-level items, and the up and down arrows are used to navigate submenus. Pressing the tab key focuses the next item after the menu instead of the next menu item.
 
 To allow focus to be set to menu items by keyboard, the items are given a `tabindex` attribute with the value `-1`. The first main menu item (“File” in this example) is assigned a `tabindex` value of `0` which adds it to the tab order and lets the user access the menu using the keyboard.
 
@@ -144,12 +144,12 @@ The following table summarizes the typical behavior of top-level menu items:
 	</tbody>
 </table>
 
-### Sub-Menu Items
+### submenu Items
 
-The following table summarizes the typical behavior of sub-menu items:
+The following table summarizes the typical behavior of submenu items:
 
 <table>
-	<caption>Key mapping for sub-menu items</caption>
+	<caption>Key mapping for submenu items</caption>
 	<thead>
 		<tr>
 			<th scope="col">Key</th>

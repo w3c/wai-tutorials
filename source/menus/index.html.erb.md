@@ -32,7 +32,7 @@ Menus are used for navigation and to provide functionality which are critical pa
 
 * **[Styling](styling.html):** Use commonly recognized design patterns to distinguish menus and the state of menu items.
 
-* **[Fly-out Menus](flyout.html):** Ensure fly-out (drop-down) sub-menus can be used appropriately by mouse and keyboard.
+* **[Fly-out Menus](flyout.html):** Ensure fly-out (drop-down) submenus can be used appropriately by mouse and keyboard.
 
 * **[Application Menus](application-menus.html):** Add particular markup and keyboard behavior to resemble desktop application menus.
 
@@ -42,6 +42,6 @@ Navigation menus reflect the underlying structure of websites. Application menus
 
 * **Screen reader and keyboard users** benefit from keyboard interoperability and markup that allows them to operate menus in different ways.
 
-* **Users with fine motor difficulties and touch screen users** require larger targets to click or tap on. In fly-out menus, sub-menus should not disappear immediately after the mouse has left the clickable area.
+* **Users with fine motor difficulties and touch screen users** require larger targets to click or tap on. In fly-out menus, submenus should not disappear immediately after the mouse has left the clickable area.
 
 * **People with limited attention or short-term memory** benefit from clear and distinct menus with easily identifiable states, such as the current page.

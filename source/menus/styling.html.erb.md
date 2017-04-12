@@ -12,7 +12,7 @@ wcag_techniques:
   - G183
 ---
 
-Clear and consistent styling allows users to find and recognize menus more easily. This includes consistency in the behavior, appearance, and relative location on pages across a website.
+Clear and consistent styling allows users to find and recognize menus more quickly. Such styling includes consistency in the behavior, appearance, and relative location on pages across a website.
 
 ## General considerations
 
@@ -20,33 +20,33 @@ Menus often use images, such as icons, that can be decorative or communicate fun
 
 ### Location
 
-Display the menu where the target audience of the website expects it. For example, on websites the main navigation menu is commonly located either vertically on the left of the pages (in left-to-right languages), or horizontally across the top. Application menus are usually expected horizontally across the top.
+Display the menu where the target audience of the website expects it. For example, on websites, the main navigation menu is commonly located either vertically on the left of the pages (in left-to-right languages), or horizontally across the top. Application menus are usually expected horizontally across the top.
 
 ### Identification
 
-Ensure that menus and their items are identifiable as such. In addition to the structural markup discussed in the previous section, the color scheme is important to visually communicate the presence of menus and items.
+Ensure that menus and their items are identifiable as such. In addition to the structural markup discussed in the previous section, the color scheme is necessary to communicate the presence of menus and items visually.
 
 Consider making the label of menus visible to everyone. For example, in these tutorials, the "Menus Tutorial", "All Tutorials", "On this page" are menu labels provided as visible headings that are available for all users.
 
 ### Readability
 
-Ensure appropriate sizing of menus and menu items to fit all text. The menu size should also adapt to varying text sizes, to accommodate languages with longer words and people who need larger text. Where possible avoid all uppercase text, line breaks, and hyphenation, as these are often distracting and difficult to read.
+Ensure appropriate sizing of menus and menu items to fit all text. The menu size should also adapt to varying text sizes, to accommodate languages with longer words and people who need larger text. Where possible avoid all uppercase text, line breaks, and hyphenation, as these are often distracting and hard to read.
 
 ### Size
 
-Provide sufficient white space, like padding, to support people with reduced dexterity and small touch screens on mobile devices. At the same time, make sure that menus do not overlap themselves and other content of the page when text size is increased or when the page is magnified.
+Provide sufficient white space, like padding, to support people with reduced dexterity and small touch screens on mobile devices. At the same time, make sure that menus do not overlap themselves and other content of the page when users increase the text size or zoom the page.
 
 ## Menu items
 
-Convey menu items and their states by using color and other styling options. Don’t rely on color alone as some users will be unable to perceive such changes. For example, change the shape of a menu item, or add an icon, in addition to changing its color when it is selected.
+Convey menu items and their states by using color and other styling options. Don’t rely on color alone as some users will be unable to perceive such changes. For example, alter the shape of a menu item, or add an icon, in addition to changing its color when it is selected.
 
 ### Default state
 
-Use distinct styling to visually indicate menu items as regions of the page that can be activated. However, avoid exaggerated text decoration, such as words in uppercase or small caps, as these make text harder to read.
+Use distinct styling to visually indicate menu items as regions of the page that can be activated. However, avoid exaggerated text decoration, such as words in upper case or small caps, as these make text harder to read.
 
 ### Hover and Focus states
 
-Change hovered or focused menu items to give users visual guidance while navigating the menu. In this example, hover and focus states use an inverted color scheme (blue on white instead of white on blue) and underline.
+Change hovered or focused menu items, which gives users visual guidance when navigating the menu. In this example, hover and focus states use an inverted color scheme (blue on white instead of white on blue) and underline.
 
 {::nomarkdown}
 <%= demo :start %>
@@ -81,7 +81,7 @@ See this code in action in the [live example](#example).
 
 ### Active state
 
-Indicate the menu item that was activated through clicking, tapping, or keyboard selection. This helps people to identify unintended activation, for example by mis-clicking. In this example the active item has darker blue background and is underlined.
+Indicate the menu item that was activated through clicking, tapping, or keyboard selection. Users can identify unintended activation, for instance when they have clicked on the wrong menu item. In this example, the active item has a darker blue background and an underline.
 
 {::nomarkdown}
 <%= demo :start %>
@@ -117,7 +117,7 @@ See this code in action in the [live example](#example).
 
 Also visually indicate the current menu item in addition to the structural markup discussed in the previous section.
 
-In this example a different color combination (black on grey) and a bottom border were added to give the current menu item a distinct color and shape.
+In this example, a different color combination (black on gray) and a bottom border were added to give the current menu item a distinct color and shape.
 
 {::nomarkdown}
 <%= demo :start %>
@@ -151,7 +151,7 @@ See this code in action in the [live example](#example).
 
 ### Visited state
 
-For some types of menus, such as instructional steps, it may be useful to indicate menu items that have already been visited. However, most menus are not expected to change based on the visited state.
+For some types of menus, such as instructional steps, it may be useful to indicate menu items that a user had already visited. However, most menus are not expected to change based on the visited state.
 
 ## Example
 

@@ -10,7 +10,7 @@ wcag_techniques:
   - ARIA11
 ---
 
-Semantic markup conveys the menu structure to users. Menus coded semantically can easily adapt to different situations, such as small screen displays, screen magnification and other assistive technology.
+Semantic markup conveys the menu structure to users. Menus coded semantically can easily adapt to different situations, such as small screen displays, screen magnification, and other assistive technology.
 
 ## Menu representation
 {:.newap}
@@ -20,7 +20,7 @@ Convey the menu structure, typically by using a list. Such structural informatio
 ### Unordered list
 {:.ap}
 
-Use an unordered list (`<ul>`) when the menu items are not in a specific order. This is the case for most types of menus, such as website navigation.
+Use an unordered list (`<ul>`) when the menu items are not in a specific order. Most types of menus, such as website navigation, fall in this category.
 
 {::nomarkdown}
 <%= code_start('','Unordered List') %>
@@ -45,7 +45,7 @@ Use an unordered list (`<ul>`) when the menu items are not in a specific order. 
 ### Ordered list
 {:.ap}
 
-Use an ordered list (`<ol>`) when the sequence of the menu items is important. In the following example the menu items represent the steps of a construction manual, so that the reading order is important:
+Use an ordered list (`<ol>`) when the sequence of the menu items is important. In the following example, the menu items represent the steps of a construction manual:
 
 {::nomarkdown}
 <%= code_start('','Ordered List') %>
@@ -68,7 +68,7 @@ Use an ordered list (`<ol>`) when the sequence of the menu items is important. I
 
 ## Identify menus
 
-Identify the menu, ideally using the HTML5 `<nav>` element. This allows users to directly access the menu. Other techniques to identify a menu are described in the [page regions](/page-structure/regions.html) tutorial.
+Identify the menu, ideally using the HTML5 `<nav>` element to allow users access to the menu directly. Other techniques to mark up a menu are described in the [page regions](/page-structure/regions.html) tutorial.
 
 {::nomarkdown}
 <%= code_start('','HTML') %>
@@ -112,11 +112,11 @@ Use markup to indicate the current item of a menu, such as the current page on a
 ### Using invisible text
 {:.ap}
 
-Provide an invisible label that is read aloud to screen reader users and used by other assistive technologies to mark the current item. This allows custom label text.
+Provide an invisible label that is read aloud to screen reader users and used by other assistive technologies to mark the current item which allows custom label text.
 
-Remove the anchor (`<a>`), so users cannot interact with the current item. This avoids misunderstandings and emphasizes that the current menu item is active.
+Remove the anchor (`<a>`), so users cannot interact with the current item. That avoids misunderstandings and emphasizes that the current menu item is active.
 
-In the following example the menu item has the invisible text “Current Page:” and the `<a>` element is replaced by a `<span>` with a class `current`:
+In the following example, the menu item has the invisible text “Current Page:” and the `<a>` element is replaced by a `<span>` with a class `current`:
 
 {::nomarkdown}
 <%= code_start('','HTML') %>
@@ -137,7 +137,7 @@ In the following example the menu item has the invisible text “Current Page:�
 ### Using WAI-ARIA
 {:.ap}
 
-Use the `aria-current="page"` attribute to indicate the current page in the menu. This is particularly useful when the anchor (`<a>`) cannot be removed from the HTML.
+Use the `aria-current="page"` attribute to indicate the current page in the menu. This technique is particularly useful when the anchor (`<a>`) cannot be removed from the HTML.
 
 In the following example the link in the navigation points to the main content of the page.
 
