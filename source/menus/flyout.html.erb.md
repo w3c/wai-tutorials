@@ -9,14 +9,14 @@ wcag_techniques:
 
 Use fly-out (or drop-down) menus to provide an overview of a web site’s page hierarchy. It removes the need for multiple page loads provided that users know where to find the information. Application menus are usually implemented this way, too.
 
-People with reduced dexterity, such as tremors, often have trouble operating fly-out menus. For some, it might be impossible. Make sure to provide other ways to the sub-menu items, for example by repeating them on the page of the parent menu item.
+People with reduced dexterity, such as tremors, often have trouble operating fly-out menus. For some, it might be impossible. Make sure to provide other ways to the submenu items, for example by repeating them on the page of the parent menu item.
 
-## Indicate sub-menus
+## Indicate submenus
 
-Indicate menu items with sub-menus visually and using markup. In the following example an icon is used for visual indication. In addition, the following WAI-ARIA markup is used:
+Indicate menu items with submenus visually and using markup. Indicate menu items with submenus visually and using markup. In the following example, the submenu is indicated visually by an icon and this WAI-ARIA markup:
 
-* `aria-haspopup="true"` declares that a menu item has a sub-menu.
-* `aria-expanded="false"` declares that the sub-menu is hidden.
+* `aria-haspopup="true"` declares that a menu item has a submenu.
+* `aria-expanded="false"` declares that the submenu is hidden.
 
 {::nomarkdown}
 <%= code_start('','HTML') %>
@@ -52,7 +52,7 @@ The fly-out functionality is created using CSS and scripting with slightly separ
 
 ### Mouse users
 
-The following example uses this CSS code to show and hide the sub-menus when the parent menu items are hovered:
+The following example uses this CSS code to show and hide the submenus when the parent menu items are hovered:
 
 {::nomarkdown}
 <%= code_start('','CSS') %>
@@ -67,7 +67,7 @@ nav > ul li:hover ul { display: block;}
 <%= code_end %>
 {:/nomarkdown}
 
-In addition, scripting is used to slightly delay the immediate closing of sub-menu items when the mouse leaves the area. This makes it easier to use the menu when navigation by mouse is not very precise.
+In addition, scripting is used to slightly delay the immediate closing of submenu items when the mouse leaves the area. This delay makes it easier to use the menu when navigation by a mouse is not very precise.
 
 In the following example, a delay of one second is added using a timer:
 
@@ -202,12 +202,12 @@ Array.prototype.forEach.call(menuItems, function(el, i){
 
 ### Keyboard Users
 
-Sub-menus should not open when using the tab key to navigate through the menu, as keyboard users would then need to step through all sub-menu items to get to the next top-level item. Instead, one of the following approaches can be used.
+Sub-menus should not open when using the tab key to navigate through the menu, as keyboard users would then need to step through all submenu items to get to the next top-level item. Instead, consider one of the following approaches.
 
 #### Use parent as toggle
 {:.ap}
 
-Use this approach in situations where the parent menu item only summarizes the sub-menu and doesn’t need to carry out a function, such as link to a web page. In this case the sub-menu is opened by a script when the user activates the top-level item, and is closed when the focus leaves the sub-menu.
+Use this approach in situations where the parent menu item only summarizes the submenu and doesn’t need to carry out a function, such as linking to a web page. In this case, the submenu is opened by a script when the user activates the top-level item and closed when the focus leaves the submenu.
 
 {::nomarkdown}
 <%= notes_start() %>
@@ -394,7 +394,7 @@ Array.prototype.forEach.call(menuItems1, function(el, i){
 <%= sample_end %>
 {:/nomarkdown}
 
-The following code iterates through all top-level items with the class `has-submenu` and adds a click event, which opens or closes the sub-menu depending on its state. In addition, the `aria-expanded` attribute is set to `true` while the sub-menu is shown, and to `false` otherwise.
+The following code iterates through all top-level items with the class `has-submenu` and adds a click event, which opens or closes the submenu depending on its state. Also, the `aria-expanded` attribute is set to `true` while the submenu is open, and to `false` otherwise.
 
 {::nomarkdown}
 <%= notes_start() %>
@@ -434,7 +434,7 @@ Array.prototype.forEach.call(menuItems, function(el, i){
 #### Use button as toggle
 {:.ap}
 
-For situations when the parent menu item needs to carry out a function, such as link to a web page, a separate button can be added to the parent item, to open and close the sub-menu. This button can also act as a visual indicator for the presence of a sub-menu.
+For situations when the parent menu item needs to carry out a function, such as linking to a web page, a separate button can be added to the parent item, to open and close the submenu. This button can also act as a visual indicator for the presence of a submenu.
 
 {::nomarkdown}
 <%= sample_start('show-overflow') %>
@@ -659,13 +659,13 @@ Array.prototype.forEach.call(menuItems1, function(el, i){
 <%= sample_end %>
 {:/nomarkdown}
 
-The following code adds a button to every top-level menu item with a sub-menu. When the button is activated, it shows or hides the sub-menu. The invisible label of the button is set to “show sub-menu” or “hide sub-menu”, reflecting the state of the sub-menu.
+The following code adds a button to every top-level menu item with a submenu. When the button is activated, it shows or hides the submenu. The invisible label of the button is set to “show submenu” or “hide submenu”, reflecting the state of the submenu.
 
 {::nomarkdown}
 <%= notes_start() %>
 {:/}
 
-**Note:** If possible, include the name of the parent menu item in the button label; for example: “show Space Bears sub-menu”.
+**Note:** If possible, include the name of the parent menu item in the button label; for example: “show Space Bears submenu”.
 
 {::nomarkdown}
 <%= notes_end() %>
@@ -678,7 +678,7 @@ The following code adds a button to every top-level menu item with a sub-menu. W
 ~~~js
 var menuItems = document.querySelectorAll('li.has-submenu');
 Array.prototype.forEach.call(menuItems, function(el, i){
-	var btn = '<button><span><span class="visuallyhidden">show sub-menu</span></span></button>';
+	var btn = '<button><span><span class="visuallyhidden">show submenu</span></span></button>';
 	var topLevelLink = el.querySelector('a');
 	topLevelLink.innerHTML = topLevelLink.innerHTML + ' ' + btn;
 
