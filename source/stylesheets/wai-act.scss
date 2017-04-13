@@ -850,7 +850,7 @@ figure {
 		&:before, &:after {display:none;}
 	}
 	&.toc {
-		+ *, + span + * {
+		+ *, + span + *, + span + aside + * {
 			margin-top: 0;
 		}
 		@extend %annotation;
