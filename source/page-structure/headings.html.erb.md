@@ -1,6 +1,7 @@
 ---
 title: Headings
 order: 4
+status: draft
 wcag_success_criteria:
   - 1.3.1
   - 2.4.1
@@ -22,7 +23,7 @@ contributors:
 support: Developed with support from the <a href="https://www.w3.org/WAI/ACT/">WAI-ACT project</a>, co-funded by the <strong>European Commission <abbr title="Information Society Technologies">IST</abbr> Programme</strong>.
 ---
 
-Use headings to communicate the organization of the content on the page. Web browsers, plug-ins, and assistive technologies use headings to provide page navigation.
+Headings communicate the organization of the content on the page. Web browsers, plug-ins, and assistive technologies can use them to provide in-page navigation.
 
 ## Heading ranks
 
@@ -55,23 +56,9 @@ In the following example, headings are used to only organize passages of text on
 <%=code_end%>
 {:/nomarkdown}
 
-## Organize page regions
+## Headings that reflect the page organization
 
-{::nomarkdown}
-<%= ref :start %>
-{:/nomarkdown}
-
-The following two examples show consistent headings when used to structure the page in a similar way to [page region labels](labels.html), in addition to the main content.
-
-{::nomarkdown}
-<%= ref :middle %>
-{:/nomarkdown}
-
-Labels can be used with ARIA to also act as page region labels, by using [aria-labelledby](https://w3c.github.io/wai-tutorials/page-structure/labels/#using-aria-labelledby).
-
-{::nomarkdown}
-<%= ref :end %>
-{:/nomarkdown}
+The following two examples show headings that are used to reflect the organization if the page and also the main content. If headings are used in this way, use them as labels for explicitly created [page regions](regions.html) by associating them with their region using [aria-labelledby](https://w3c.github.io/wai-tutorials/page-structure/labels/#using-aria-labelledby).
 
 ### Main heading before navigation
 {:.ex}
@@ -112,36 +99,6 @@ In this second example, the main heading is not the site name but the content he
 {:/nomarkdown}
 
 ~~~html
-  <h2>Navigation Menu</h2>
-  <h2>Sidebar</h2>
-    <h3>More news</h3>
-    <h3>What our clients say</h3>
-    <h3>Ratings</h3>
-<h1>An inside look at the new SpaceBear 8™</h2>
-  <h2>Cotton Fur</h2>
-  <h2>Sapphire Eyes</h2>
-  <h2>Syntetic Felt Paws</h2>
-  <h2>Footer</h2>
-    <h3>About the company</h3>
-    <h3>Our retail stores</h3>
-~~~
-
-{::nomarkdown}
-<%=code_end%>
-{:/nomarkdown}
-
-## Multiple headings rank 1
-
-It is possible to use multiple rank 1 headings in different circumstances, however as many users rely on finding the main content by navigating to the rank 1 heading directly, an overuse of the `<h1>` element can have an adverse impact on the accessibility of your site.
-
-In this example, both, the site name and the main content, are headings with a rank 1.
-
-{::nomarkdown}
-<%=code_start('','')%>
-{:/nomarkdown}
-
-~~~html
-<h1>SpaceTeddy Inc.</h1>
   <h2>Navigation Menu</h2>
   <h2>Sidebar</h2>
     <h3>More news</h3>
