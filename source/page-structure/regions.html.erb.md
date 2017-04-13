@@ -1,6 +1,5 @@
 ---
 title: Page Regions
-status: draft
 order: 2
 wcag_success_criteria:
   - 1.3.1
@@ -9,6 +8,12 @@ wcag_success_criteria:
 wcag_techniques:
   - ARIA11
 technologies: HTML5, WAI-ARIA
+editors:
+- Eric Eggert: "https://www.w3.org/People/yatil/"
+- Shadi Abou-Zahra: "https://www.w3.org/People/shadi/"
+contributors:
+- The Education and Outreach Working Group (<a href="https://www.w3.org/WAI/EO/">EOWG</a>)
+support: Developed with support from the <a href="https://www.w3.org/WAI/ACT/">WAI-ACT project</a>, co-funded by the <strong>European Commission <abbr title="Information Society Technologies">IST</abbr> Programme</strong>.
 ---
 
 Mark up different regions of web pages and applications, so that they can be identified by web browsers and assistive technologies.

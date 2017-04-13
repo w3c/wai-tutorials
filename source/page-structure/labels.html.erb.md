@@ -1,6 +1,5 @@
 ---
 title: Labeling Regions
-status: draft
 order: 3
 wcag_success_criteria:
   - 2.4.1
@@ -9,6 +8,12 @@ wcag_techniques:
   - H69
   - ARIA11
 technologies: HTML5, WAI-ARIA
+editors:
+- Eric Eggert: "https://www.w3.org/People/yatil/"
+- Shadi Abou-Zahra: "https://www.w3.org/People/shadi/"
+contributors:
+- The Education and Outreach Working Group (<a href="https://www.w3.org/WAI/EO/">EOWG</a>)
+support: Developed with support from the <a href="https://www.w3.org/WAI/ACT/">WAI-ACT project</a>, co-funded by the <strong>European Commission <abbr title="Information Society Technologies">IST</abbr> Programme</strong>.
 ---
 Most regions on a page should be labeled. Labels are especially important when multiple regions of the same type are on one page, such as multiple navigation options. WAI-ARIA provides simple mechanisms for labeling a region, enabling users to navigate around the page quickly.
 

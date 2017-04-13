@@ -2,7 +2,6 @@
 title: Page Structure Concepts
 tutorial_title: Page Structure
 nav_title: Concepts
-status: draft
 order: 1
 topic_order: 6
 type: intro
@@ -11,6 +10,13 @@ wcag_success_criteria:
   - 2.4.1
   - 2.4.6
   - 2.4.10
+first_published: "April 2017"
+editors:
+  - Eric Eggert: "https://www.w3.org/People/yatil/"
+  - Shadi Abou-Zahra: "https://www.w3.org/People/shadi/"
+contributors:
+  - The Education and Outreach Working Group (<a href="https://www.w3.org/WAI/EO/">EOWG</a>)
+support: Developed with support from the <a href="https://www.w3.org/WAI/ACT/">WAI-ACT project</a>, co-funded by the <strong>European Commission <abbr title="Information Society Technologies">IST</abbr> Programme</strong>.
 ---
 
 Well-structured content allows more efficient navigation and processing. Use HTML and WAI-ARIA to improve navigation and orientation on web pages and in applications.

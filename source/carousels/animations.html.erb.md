@@ -1,9 +1,15 @@
 ---
 title: Animations
-status: draft
 order: 4
 wcag_success_criteria:
   - 2.2.2
+first_published: "May 2015"
+editors:
+  - Eric Eggert: "https://www.w3.org/People/yatil/"
+  - Shadi Abou-Zahra: "https://www.w3.org/People/shadi/"
+contributors:
+  - The Education and Outreach Working Group (<a href="https://www.w3.org/WAI/EO/">EOWG</a>)
+support: Developed with support from the <a href="https://www.w3.org/WAI/ACT/">WAI-ACT project</a>, co-funded by the <strong>European Commission <abbr title="Information Society Technologies">IST</abbr> Programme</strong>.
 ---
 
 Provide users with control over animations in the carousel. Pausing animation is essential for people who find movement distracting or who need more time to read.

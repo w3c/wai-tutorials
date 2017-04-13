@@ -1,7 +1,6 @@
 ---
 title: Carousel Concepts
 tutorial_title: Carousels
-status: draft
 order: 1
 topic_order: 4
 type: intro
@@ -10,6 +9,13 @@ wcag_success_criteria:
   - 2.1.1
   - 2.2.2
   - 4.1.2
+first_published: "May 2015"
+editors:
+  - Eric Eggert: "https://www.w3.org/People/yatil/"
+  - Shadi Abou-Zahra: "https://www.w3.org/People/shadi/"
+contributors:
+  - The Education and Outreach Working Group (<a href="https://www.w3.org/WAI/EO/">EOWG</a>)
+support: Developed with support from the <a href="https://www.w3.org/WAI/ACT/">WAI-ACT project</a>, co-funded by the <strong>European Commission <abbr title="Information Society Technologies">IST</abbr> Programme</strong>.
 ---
 
 Implement an accessible carousel widget by providing a robust structure and user control:

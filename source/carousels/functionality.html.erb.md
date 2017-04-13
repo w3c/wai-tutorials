@@ -1,11 +1,17 @@
 ---
 title: Functionality
-status: draft
 order: 3
 wcag_success_criteria:
   - 1.3.1
   - 2.1.1
   - 4.1.2
+first_published: "May 2015"
+editors:
+  - Eric Eggert: "https://www.w3.org/People/yatil/"
+  - Shadi Abou-Zahra: "https://www.w3.org/People/shadi/"
+contributors:
+  - The Education and Outreach Working Group (<a href="https://www.w3.org/WAI/EO/">EOWG</a>)
+support: Developed with support from the <a href="https://www.w3.org/WAI/ACT/">WAI-ACT project</a>, co-funded by the <strong>European Commission <abbr title="Information Society Technologies">IST</abbr> Programme</strong>.
 ---
 
 Provide functionality to select carousel items and to inform users about the change of carousel items.

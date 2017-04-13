@@ -2,7 +2,6 @@
 title: Menu Concepts
 tutorial_title: Menus
 nav_title: Concepts
-status: draft
 order: 1
 topic_order: 6
 type: intro
@@ -25,6 +24,13 @@ wcag_techniques:
   - G128
   - G182
   - G183
+first_published: "May 2015"
+editors:
+  - Eric Eggert: "https://www.w3.org/People/yatil/"
+  - Shadi Abou-Zahra: "https://www.w3.org/People/shadi/"
+contributors:
+  - The Education and Outreach Working Group (<a href="https://www.w3.org/WAI/EO/">EOWG</a>)
+support: Developed with support from the <a href="https://www.w3.org/WAI/ACT/">WAI-ACT project</a>, co-funded by the <strong>European Commission <abbr title="Information Society Technologies">IST</abbr> Programme</strong>.
 ---
 Menus are used for navigation and to provide functionality which are critical parts of web page operability.
 
