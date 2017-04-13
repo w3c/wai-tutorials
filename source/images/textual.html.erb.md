@@ -54,7 +54,7 @@ Previously it was not possible to create such text using CSS styling that would 
 {:.ap}
 
 
-The visual effects in the above image can be produced using CSS3 and an embedded font. Authors and developers that need to support older browsers may find the image example useful if a less styled fallback text isn’t an option.
+The visual effects in the above image can be produced using CSS3 and an embedded font. Authors and developers that have to support older browsers may find the image example useful if a less styled fallback text isn’t an option.
 
 <aside class="annotation">
   <h4 class="annotation-header">Browser Support</h4>

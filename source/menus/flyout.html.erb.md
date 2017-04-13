@@ -202,12 +202,12 @@ Array.prototype.forEach.call(menuItems, function(el, i){
 
 ### Keyboard Users
 
-Sub-menus should not open when using the tab key to navigate through the menu, as keyboard users would then need to step through all submenu items to get to the next top-level item. Instead, consider one of the following approaches.
+Submenus should not open when using the tab key to navigate through the menu, as keyboard users would then have to step through all submenu items to get to the next top-level item. Instead, consider one of the following approaches.
 
 #### Use parent as toggle
 {:.ap}
 
-Use this approach in situations where the parent menu item only summarizes the submenu and doesn’t need to carry out a function, such as linking to a web page. In this case, the submenu is opened by a script when the user activates the top-level item and closed when the focus leaves the submenu.
+Use this approach in situations where the parent menu item only summarizes the submenu and doesn’t have to carry out a function, such as linking to a web page. In this case, the submenu is opened by a script when the user activates the top-level item and closed when the focus leaves the submenu.
 
 {::nomarkdown}
 <%= notes_start() %>

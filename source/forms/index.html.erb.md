@@ -47,7 +47,7 @@ Forms can be visually and cognitively complex and challenging to use. Accessible
 
 - **People with cognitive disabilities** can better understand the form and how to complete it, as making forms accessible improves the layout structure, instructions, and feedback.
 
-- **People using speech input** can use the labels via voice commands to activate controls and move the focus to the fields that they need to complete.
+- **People using speech input** can use the labels via voice commands to activate controls and move the focus to the fields that they have to complete.
 
 - **People with limited dexterity** benefit from large clickable areas that include the labels, especially for smaller controls, such as radio buttons and checkboxes.
 

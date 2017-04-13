@@ -4,7 +4,7 @@ status: draft
 order: 5
 ---
 
-Web application menus use the same basic structure as navigation menus. They often consist of a horizontal menu bar and use fly-out functionality. However, additional markup and keyboard behavior need to be added.
+Web application menus use the same basic structure as navigation menus. They often consist of a horizontal menu bar and use fly-out functionality. However, additional markup and keyboard behavior must be added.
 
 ## Additional markup
 
@@ -53,7 +53,7 @@ Application menus typically do not have links and rely on scripting to provide t
 
 ## Functionality
 
-Adding the WAI-ARIA roles does **not** automatically enable the menu’s functionality or keyboard behavior. These need to be added using scripting. A detailed explanation on the WAI-ARIA attributes and keyboard behavior can be found in the [WAI-ARIA Authoring Practices document (draft)](https://www.w3.org/TR/wai-aria-practices/#menu).
+Adding the WAI-ARIA roles does **not** automatically enable the menu’s functionality or keyboard behavior. These must be added using scripting. A detailed explanation on the WAI-ARIA attributes and keyboard behavior can be found in the [WAI-ARIA Authoring Practices document (draft)](https://www.w3.org/TR/wai-aria-practices/#menu).
 
 ## Keyboard behavior
 

@@ -123,7 +123,7 @@ Note: A `<colgroup>` element can contain a `<col>` element to identify individua
 ## Table with headers spanning multiple rows or columns
 {:.ex}
 
-In the example below, the table consists of two individual columns and one column group spanning three columns. It has six rows. Two headers that span multiple rows. To make sure that such header cells that span multiple rows are correctly associated with all the cells in those rows, the rows need to be grouped. To define row groups wrap the corresponding rows in `<tbody>` elements (table body). Additionally, the `scope` attribute of header cells spanning rows has to be set to `rowgroup`.
+In the example below, the table consists of two individual columns and one column group spanning three columns. It has six rows. Two headers that span multiple rows. To make sure that such header cells that span multiple rows are correctly associated with all the cells in those rows, the rows must be grouped. To define row groups wrap the corresponding rows in `<tbody>` elements (table body). Additionally, the `scope` attribute of header cells spanning rows has to be set to `rowgroup`.
 
 If a header spans multiple header rows, wrap the rows in a `<thead>` element instead of a `<tbody>` element. Use a `<tfoot>` element if a header spans multiple rows in the footer area of a table.
 
