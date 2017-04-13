@@ -303,11 +303,25 @@ a(h))}}setTimeout(function(){w();y(h)},3E3);t(k,function(a){f=a;x()});r(k,h.fami
   if( w.document.documentElement.className.indexOf( "vollkorn-loaded" ) > -1 ){
     return;
   }
-  var fontA = new w.FontFaceObserver( "Vollkorn", {
+  // var fontA = new w.FontFaceObserver( "Vollkorn", {
+  //   weight: 400
+  // });
+  // var fontB = new w.FontFaceObserver( "Vollkorn", {
+  //   weight: 600
+  // });
+	var fontC = new w.FontFaceObserver( "Noto Sans", {
     weight: 400
   });
-  var fontB = new w.FontFaceObserver( "Vollkorn", {
+  var fontD = new w.FontFaceObserver( "Noto Sans", {
     weight: 600
+  });
+	var fontE = new w.FontFaceObserver( "Noto Sans", {
+    weight: 400,
+		style: "italic"
+  });
+  var fontF = new w.FontFaceObserver( "Noto Sans", {
+    weight: 600,
+		style: "italic"
   });
   /*var fontC = new w.FontFaceObserver( "Vollkorn", {
     weight: 400,
@@ -318,8 +332,8 @@ a(h))}}setTimeout(function(){w();y(h)},3E3);t(k,function(a){f=a;x()});r(k,h.fami
     style: "italic"
   });*/
   w.Promise
-    .all([fontA.check(), fontB.check()])
+    .all([fontC.check(), fontD.check(), fontE.check(), fontF.check()])
     .then(function(){
-      w.document.documentElement.className += " vollkorn-loaded";
+      w.document.documentElement.className += " fonts-loaded";
     });
 }( this ));

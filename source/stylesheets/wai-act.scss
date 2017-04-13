@@ -32,16 +32,28 @@ $container_margin:  0.5%;         // auto|px|%    //
 @include font-face("Vollkorn", font-files("vollkorn-bold.woff2", "vollkorn-bold.woff"), false, bold);
 /*@include font-face("Vollkorn", font-files("vollkorn-bolditalic.woff"), "vollkorn-bolditalic.eot", bold, italic);*/
 
-.font-primary {
+@include font-face("Noto Sans", font-files("notosans-regular.woff2", "notosans-regular.woff"), false);
+@include font-face("Noto Sans", font-files("notosans-italic.woff2", "notosans-italic.woff"), false, normal, italic);
+@include font-face("Noto Sans", font-files("notosans-bold.woff2", "notosans-bold.woff"), false, bold);
+@include font-face("Noto Sans", font-files("notosans-bolditalic.woff2", "notosans-bolditalic.woff"), false, bold, italic);
+
+
+.font-primary, .font-secondary {
 	font-family: "Trebuchet MS", "HelveticaNeue", "Helvetica", "Arial", sans-serif;
+	.fonts-loaded &{
+		font-family: "Noto Sans", "Trebuchet MS", "HelveticaNeue", "Helvetica", "Arial", sans-serif;
+	}
 }
 
+/*
 .font-secondary {
-	.vollkorn-loaded &{
+	font-family: Georgia, Times, "Times New Roman", serif;
+	.fonts-loaded &{
 		font-family: "Vollkorn", Georgia, Times, "Times New Roman", serif;
 		font-feature-settings: "lnum", "pnum";
 	}
 }
+*/
 
 
 // Body
@@ -58,7 +70,7 @@ body {
 	background-color: #F5F5F5;
 	color: #333;
 	font-size: percentage(15/16);
-	line-height: (24/18);
+	line-height: 1.5;
 	max-width: 1680px;
 	margin: 0 auto;
 	@include mq($medium) {
@@ -351,7 +363,7 @@ footer {
 
 h1, h2, h3 {
 	@extend .font-secondary;
-	font-weight: normal;
+	font-weight: bold;
 	.subheading {
 		display: block;
 		@extend .font-primary;
@@ -557,7 +569,6 @@ a {
 	h1 {
 		margin-bottom: 0;
 		font-size: percentage(42/18);
-		font-weight: normal;
 		position: relative;
 		margin-top: 0;
 		margin-bottom: 10px;
@@ -811,6 +822,9 @@ figure {
 		pre {
 			background: none;
 			@extend .box-content;
+			>code {
+				display:block;
+			}
 		}
 	}
 	&.sample {

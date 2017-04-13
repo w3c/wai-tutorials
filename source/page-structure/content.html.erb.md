@@ -10,6 +10,7 @@ wcag_techniques:
   - H48
   - H49
 ---
+
 Mark up website content semantically, so that the website is extensible. Valid semantics create content that is reusable and more meaningful to assistive technologies.
 
 ## Articles
@@ -55,6 +56,7 @@ The HTML5 `<section>` element marks a general region of a web page or an article
 {:/nomarkdown}
 
 ## Paragraphs
+
 
 Use the paragraph element (`<p>`) to mark up paragraphs of text, such as this one. The consistent styling of paragraphs improves text readability. It also gives users more control when customizing their view.
 
