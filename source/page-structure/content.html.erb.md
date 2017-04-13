@@ -15,7 +15,7 @@ Mark up website content semantically, so that the website is extensible. Valid s
 
 ## Articles
 
-The HTML5 `<article>` element represents a complete or self-contained composition in a web page. Examples of articles include an item in a web shop or a news article on a news site.
+The HTML5 `<article>` element represents a complete or self-contained composition in a web page. Examples of articles include an item at a shopping site or a news article on a news site.
 
 {::nomarkdown}
 <%= code_start %>
@@ -266,7 +266,7 @@ In the next example, two different spellings of a word are defined using descrip
 #### Multiple terms, multiple descriptions
 {:.ex}
 
-In this example, John and Luke authors and also editors:
+In this example, John and Luke are authors and also editors:
 
 {::nomarkdown}
 <%=sample_start%>
@@ -299,7 +299,7 @@ In this example, John and Luke authors and also editors:
 ## Quotes
 {:.newex}
 
-Identifying a quotation as such helps clarify that the content is attributed to another author. Quotes can be marked up as inline or as blocks of text. Assistive technologies can convey to users where a quote starts and ends, which can avoid misunderstandings.
+Identifying a quotation helps clarify that the content is attributed to another author. Quotes can be marked up as inline or as blocks of text. Assistive technologies can convey to users where a quote starts and ends, which can avoid misunderstandings.
 
 ### Blockquote
 {:.ex}
@@ -359,7 +359,7 @@ For shorter quotes, that are usually embedded in another sentence, use the `<q>`
 
 ## Figures
 
-Figures are blocks with additional information to the main content of the page – sometimes referenced from the main text. They typically contain lists, images, tables, but can also include other content. For example, an annual report could reference to a diagram containing the sales volumes of a product.
+Figures are blocks with additional information set off from the main content of the page – sometimes referenced from the main text. They typically contain lists, images, tables, but can also include other content. For example, an annual report could reference to a diagram containing the sales volumes of a product.
 
 Each figure is wrapped in a `<figure>` element and labeled using a nested `<figcaption>` element.
 
