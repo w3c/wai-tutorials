@@ -3,13 +3,13 @@ title: Tips and Tricks
 order: 7
 type: tips
 editors:
-  - Eric Eggert: "http://w3.org/People/yatil/"
-  - Shadi Abou-Zahra: "http://w3.org/People/shadi/"
+  - Eric Eggert: "https://www.w3.org/People/yatil/"
+  - Shadi Abou-Zahra: "https://www.w3.org/People/shadi/"
 contributors:
   - Anna Belle Leiserson
-  - the Web Content Accessibility Guidelines Working Group (<a href="http://www.w3.org/WAI/GL/">WCAG WG</a>)
-  - the Education and Outreach Working Group (<a href="http://www.w3.org/WAI/EO/">EOWG</a>)
-support: Developed with support from the <a href="http://www.w3.org/WAI/ACT/">WAI-ACT project</a>, co-funded by the <strong>European Commission <abbr title="Information Society Technologies">IST</abbr> Programme</strong>.
+  - the Web Content Accessibility Guidelines Working Group (<a href="https://www.w3.org/WAI/GL/">WCAG WG</a>)
+  - the Education and Outreach Working Group (<a href="https://www.w3.org/WAI/EO/">EOWG</a>)
+support: Developed with support from the <a href="https://www.w3.org/WAI/ACT/">WAI-ACT project</a>, co-funded by the <strong>European Commission <abbr title="Information Society Technologies">IST</abbr> Programme</strong>.
 ---
 
 -   **Keep it simple:** Complex tables are more work for content creators as well as being harder to interpret for users. It’s usually better to [break up complex tables into simple individual tables](multi-level.html#split-up-multi-level-tables), each containing the data for one sub-topic.
@@ -30,7 +30,7 @@ support: Developed with support from the <a href="http://www.w3.org/WAI/ACT/">WA
 
 -   **Styling header cells:** `<th>` elements are used for header cells, using `<td>` elements with different styling will make tables less accessible if not inaccessible. It is also helpful to differentiate `<th>` and `<td>` cells visually. For example, on these tutorial pages, header cells have a dark gray background.
 
--   **Zebra tables:** Styling even and odd rows in a different way can be helpful to people who have reading difficulties or who enlarge text. It acts as a visual guide. Highlighting the cell (and row/column) on mouseover and keyboard focus to support people to see where they are. Make sure that the contrast ratio between the text and background is good for both headers and data cells. [Here is how to check the contrast ratio.](http://www.w3.org/WAI/eval/preliminary#contrast)
+-   **Zebra tables:** Styling even and odd rows in a different way can be helpful to people who have reading difficulties or who enlarge text. It acts as a visual guide. Highlighting the cell (and row/column) on mouseover and keyboard focus to support people to see where they are. Make sure that the contrast ratio between the text and background is good for both headers and data cells. [Here is how to check the contrast ratio.](https://www.w3.org/WAI/eval/preliminary#contrast)
 
 -   **Flexibility:** Due to the layout model of tables, they sometimes don’t fit on small screens small or are too wide if the user is zooming in. In such circumstances, it’s important that the table isn’t cut off (for example by using `overflow: hidden` in CSS). In these tutorials `overflow: scroll` is applied to an element wrapping the table so users can scroll through the table horizontally but there are much more options to display table in such circumstances.
 
@@ -38,4 +38,4 @@ support: Developed with support from the <a href="http://www.w3.org/WAI/ACT/">WA
 
 ## Other W3C Resources
 
--   [Content can be presented in different ways](http://www.w3.org/WAI/intro/people-use-web/principles#adaptable) section of Accessibility Principles in How People with Disabilities Use the Web.
+-   [Content can be presented in different ways](https://www.w3.org/WAI/intro/people-use-web/principles#adaptable) section of Accessibility Principles in How People with Disabilities Use the Web.

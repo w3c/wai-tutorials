@@ -20,6 +20,6 @@ Don’t forget to add some descriptive text at the bottom that comments your cha
 
 Note that the changes are not immediately reflected on any page. If you want to see your changes in HTML that way is more technical and is described briefly in the following part of the document. But there is a preview button in the editor that gives you a fairly good example of how the rendered HTML will look like.
 
-[LivePage]:http://www.w3.org/WAI/tutorials/
+[LivePage]:https://www.w3.org/WAI/tutorials/
 [GHPage]:http://w3c.github.io/wai-tutorials/
 [exmpIMG]:https://github.com/w3c/wai-tutorials/blob/master/source/images/informative.html.erb.md

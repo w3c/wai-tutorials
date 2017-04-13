@@ -3,14 +3,14 @@ title: Tips and Tricks
 order: 10
 type: tips
 editors:
-  - Eric Eggert: "http://w3.org/People/yatil/"
-  - Shadi Abou-Zahra: "http://w3.org/People/shadi/"
+  - Eric Eggert: "https://www.w3.org/People/yatil/"
+  - Shadi Abou-Zahra: "https://www.w3.org/People/shadi/"
 contributors:
   - Anna Belle Leiserson
   - Sharron Rush
-  - the Web Content Accessibility Guidelines Working Group (<a href="http://www.w3.org/WAI/GL/">WCAG WG</a>)
-  - the Education and Outreach Working Group (<a href="http://www.w3.org/WAI/EO/">EOWG</a>)
-support: Developed with support from the <a href="http://www.w3.org/WAI/ACT/">WAI-ACT project</a>, co-funded by the <strong>European Commission <abbr title="Information Society Technologies">IST</abbr> Programme</strong>.
+  - the Web Content Accessibility Guidelines Working Group (<a href="https://www.w3.org/WAI/GL/">WCAG WG</a>)
+  - the Education and Outreach Working Group (<a href="https://www.w3.org/WAI/EO/">EOWG</a>)
+support: Developed with support from the <a href="https://www.w3.org/WAI/ACT/">WAI-ACT project</a>, co-funded by the <strong>European Commission <abbr title="Information Society Technologies">IST</abbr> Programme</strong>.
 ---
 
 ## Tips
@@ -46,6 +46,6 @@ support: Developed with support from the <a href="http://www.w3.org/WAI/ACT/">WA
 
 ## Other W3C Resources
 
--   Background information on [providing text alternatives for non-text content](http://www.w3.org/WAI/intro/people-use-web/principles#alternatives) in How People with Disabilities Use the Web.
--   Test the accessibility of images on your site: [Quick Checks Image text alternatives](http://www.w3.org/WAI/EO/Drafts/eval/checks#images).
--   Examples of good and bad practice in selecting text alternatives can be found in the [Before and After Demonstration](http://www.w3.org/WAI/demos/bad/) (BAD).
+-   Background information on [providing text alternatives for non-text content](https://www.w3.org/WAI/intro/people-use-web/principles#alternatives) in How People with Disabilities Use the Web.
+-   Test the accessibility of images on your site: [Quick Checks Image text alternatives](https://www.w3.org/WAI/EO/Drafts/eval/checks#images).
+-   Examples of good and bad practice in selecting text alternatives can be found in the [Before and After Demonstration](https://www.w3.org/WAI/demos/bad/) (BAD).

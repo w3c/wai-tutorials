@@ -7,13 +7,13 @@ wcag_techniques:
   - ARIA13
 order: 7
 editors:
-  - Eric Eggert: "http://w3.org/People/yatil/"
-  - Shadi Abou-Zahra: "http://w3.org/People/shadi/"
+  - Eric Eggert: "https://www.w3.org/People/yatil/"
+  - Shadi Abou-Zahra: "https://www.w3.org/People/shadi/"
 contributors:
   - Anna Belle Leiserson
-  - the Web Content Accessibility Guidelines Working Group (<a href="http://www.w3.org/WAI/GL/">WCAG WG</a>)
-  - the Education and Outreach Working Group (<a href="http://www.w3.org/WAI/EO/">EOWG</a>)
-support: Developed with support from the <a href="http://www.w3.org/WAI/ACT/">WAI-ACT project</a>, co-funded by the <strong>European Commission <abbr title="Information Society Technologies">IST</abbr> Programme</strong>.
+  - the Web Content Accessibility Guidelines Working Group (<a href="https://www.w3.org/WAI/GL/">WCAG WG</a>)
+  - the Education and Outreach Working Group (<a href="https://www.w3.org/WAI/EO/">EOWG</a>)
+support: Developed with support from the <a href="https://www.w3.org/WAI/ACT/">WAI-ACT project</a>, co-funded by the <strong>European Commission <abbr title="Information Society Technologies">IST</abbr> Programme</strong>.
 ---
 
 Sometimes groups of images are used together to represent one piece of information. For example, a collection of star icons that together represent a rating. In this case, only one of the images needs a text alternative to describe the entire collection, while the other images have a null (empty) `alt` attribute so that they are ignored by assistive technology.

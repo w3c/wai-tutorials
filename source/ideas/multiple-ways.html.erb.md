@@ -72,7 +72,7 @@ Alternatively, you can use the WAI-ARIA attribute `aria-current="location"` to p
 
 A sitemap is a (nested) list of all pages of a website. It can help users understand what the site contains and how content is organized. It can also act as an alternative to complex menus.
 
-If the site map is large, it might be useful to only show certain levels of the site only when the user demands them. A sitemap needs to stay updated when a page is added or deleted, should link to all sections of the site, and represent the organization of the website. See the [W3C <abbr title="Web Accessibility Initiative">WAI</abbr> sitemap](http://www.w3.org/WAI/sitemap.html) for an example.
+If the site map is large, it might be useful to only show certain levels of the site only when the user demands them. A sitemap needs to stay updated when a page is added or deleted, should link to all sections of the site, and represent the organization of the website. See the [W3C <abbr title="Web Accessibility Initiative">WAI</abbr> sitemap](https://www.w3.org/WAI/sitemap.html) for an example.
 
 ## Search
 

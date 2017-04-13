@@ -96,7 +96,7 @@ carousel.addEventListener('focusout',
 <%= notes_start %>
 {:/nomarkdown}
 
-**Note:** The [`focusin`](http://www.w3.org/TR/DOM-Level-3-Events/#event-type-focusIn) and [`focusout`](http://www.w3.org/TR/DOM-Level-3-Events/#event-type-focusout) events are defined in the [W3C Document Object Model (DOM) Level 3 Events Specification](http://www.w3.org/TR/DOM-Level-3-Events/) (Working Draft) and implemented in many browsers. Firefox needs [a short polyfill](full-code.html) at the time of publication of this tutorial.
+**Note:** The [`focusin`](https://www.w3.org/TR/DOM-Level-3-Events/#event-type-focusIn) and [`focusout`](https://www.w3.org/TR/DOM-Level-3-Events/#event-type-focusout) events are defined in the [W3C Document Object Model (DOM) Level 3 Events Specification](https://www.w3.org/TR/DOM-Level-3-Events/) (Working Draft) and implemented in many browsers. Firefox needs [a short polyfill](full-code.html) at the time of publication of this tutorial.
 
 {::nomarkdown}
 <%= notes_end %>

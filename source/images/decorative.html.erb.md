@@ -6,13 +6,13 @@ wcag_techniques:
   - H67
 order: 3
 editors:
-  - Eric Eggert: "http://w3.org/People/yatil/"
-  - Shadi Abou-Zahra: "http://w3.org/People/shadi/"
+  - Eric Eggert: "https://www.w3.org/People/yatil/"
+  - Shadi Abou-Zahra: "https://www.w3.org/People/shadi/"
 contributors:
   - Anna Belle Leiserson
-  - the Web Content Accessibility Guidelines Working Group (<a href="http://www.w3.org/WAI/GL/">WCAG WG</a>)
-  - the Education and Outreach Working Group (<a href="http://www.w3.org/WAI/EO/">EOWG</a>)
-support: Developed with support from the <a href="http://www.w3.org/WAI/ACT/">WAI-ACT project</a>, co-funded by the <strong>European Commission <abbr title="Information Society Technologies">IST</abbr> Programme</strong>.
+  - the Web Content Accessibility Guidelines Working Group (<a href="https://www.w3.org/WAI/GL/">WCAG WG</a>)
+  - the Education and Outreach Working Group (<a href="https://www.w3.org/WAI/EO/">EOWG</a>)
+support: Developed with support from the <a href="https://www.w3.org/WAI/ACT/">WAI-ACT project</a>, co-funded by the <strong>European Commission <abbr title="Information Society Technologies">IST</abbr> Programme</strong>.
 ---
 
 Decorative images don’t add information to the content of a page. For example, the information provided by the image might already be given using adjacent text, or the image might be included to make the website more visually attractive.

@@ -6,13 +6,13 @@ wcag_techniques:
   - H37
   - H36
 editors:
-  - Eric Eggert: "http://w3.org/People/yatil/"
-  - Shadi Abou-Zahra: "http://w3.org/People/shadi/"
+  - Eric Eggert: "https://www.w3.org/People/yatil/"
+  - Shadi Abou-Zahra: "https://www.w3.org/People/shadi/"
 contributors:
   - Anna Belle Leiserson
-  - the Web Content Accessibility Guidelines Working Group (<a href="http://www.w3.org/WAI/GL/">WCAG WG</a>)
-  - the Education and Outreach Working Group (<a href="http://www.w3.org/WAI/EO/">EOWG</a>)
-support: Developed with support from the <a href="http://www.w3.org/WAI/ACT/">WAI-ACT project</a>, co-funded by the <strong>European Commission <abbr title="Information Society Technologies">IST</abbr> Programme</strong>.
+  - the Web Content Accessibility Guidelines Working Group (<a href="https://www.w3.org/WAI/GL/">WCAG WG</a>)
+  - the Education and Outreach Working Group (<a href="https://www.w3.org/WAI/EO/">EOWG</a>)
+support: Developed with support from the <a href="https://www.w3.org/WAI/ACT/">WAI-ACT project</a>, co-funded by the <strong>European Commission <abbr title="Information Society Technologies">IST</abbr> Programme</strong>.
 ---
 
 Functional images are used to initiate actions rather than to convey information. They are used in buttons, links, and other interactive elements. The text alternative for the image should convey the action that will be initiated (the purpose of the image), rather than a description of the image. For instance, as shown in examples below, the text alternative should be “print this page” rather than “(image of a) printer”, “search” rather than “magnifying lens” or “Example.com homepage” rather than “Example.com logo”.
@@ -27,7 +27,7 @@ The following image is the only content of a link that leads to the W3C home pag
 {::nomarkdown}
 <%= sample_start %>
 
-<a href="http://www.w3.org/" style="display:inline-block;">
+<a href="https://www.w3.org/" style="display:inline-block;">
 {:/nomarkdown}
 
 ![W3C home](w3c.png)
@@ -43,7 +43,7 @@ The following image is the only content of a link that leads to the W3C home pag
 {:/nomarkdown}
 
 ~~~ html
-<a href="http://www.w3.org/">
+<a href="https://www.w3.org/">
   <img src="w3c.png" alt="W3C home">
 </a>
 ~~~
@@ -73,7 +73,7 @@ In this example, the W3C logo is used to supplement text within a link that lead
 <%= sample_start %>
 {:/nomarkdown}
 
-[![](../img/w3c.png){:style="vertical-align: middle; margin-right: 1em;"}W3C Home](http://www.w3.org/){:style="display:inline-block;"}
+[![](../img/w3c.png){:style="vertical-align: middle; margin-right: 1em;"}W3C Home](https://www.w3.org/){:style="display:inline-block;"}
 
 {::nomarkdown}
 <%= sample_end %>
@@ -84,7 +84,7 @@ In this example, the W3C logo is used to supplement text within a link that lead
 {:/nomarkdown}
 
 ~~~ html
-<a href="http://www.w3.org/">
+<a href="https://www.w3.org/">
   <img src="w3c.png" alt=""> W3C Home
 </a>
 ~~~
@@ -102,7 +102,7 @@ In this example, the image follows text within a link to inform users that the l
 <%= sample_start %>
 {:/nomarkdown}
 
-[W3C Home page ![new window](new-window.png)](http://www.w3.org/)
+[W3C Home page ![new window](new-window.png)](https://www.w3.org/)
 
 {::nomarkdown}
 <%= sample_end %>
@@ -113,7 +113,7 @@ In this example, the image follows text within a link to inform users that the l
 {:/nomarkdown}
 
 ~~~ html
-<a href="http://www.w3.org/" target="_blank">
+<a href="https://www.w3.org/" target="_blank">
   W3C Homepage <img src="new-window.png" alt="new window">
 </a>
 ~~~

@@ -13,12 +13,12 @@ wcag_techniques:
   - SCR1
   - SCR16
 editors:
-  - Eric Eggert: "http://w3.org/People/yatil/"
-  - Shadi Abou-Zahra: "http://w3.org/People/shadi/"
+  - Eric Eggert: "https://www.w3.org/People/yatil/"
+  - Shadi Abou-Zahra: "https://www.w3.org/People/shadi/"
 contributors:
-  - The Web Content Accessibility Guidelines Working Group (<a href="http://www.w3.org/WAI/GL/">WCAG WG</a>)
-  - the Education and Outreach Working Group (<a href="http://www.w3.org/WAI/EO/">EOWG</a>)
-support: Developed with support from the <a href="http://www.w3.org/WAI/ACT/">WAI-ACT project</a>, co-funded by the <strong>European Commission <abbr title="Information Society Technologies">IST</abbr> Programme</strong>.
+  - The Web Content Accessibility Guidelines Working Group (<a href="https://www.w3.org/WAI/GL/">WCAG WG</a>)
+  - the Education and Outreach Working Group (<a href="https://www.w3.org/WAI/EO/">EOWG</a>)
+support: Developed with support from the <a href="https://www.w3.org/WAI/ACT/">WAI-ACT project</a>, co-funded by the <strong>European Commission <abbr title="Information Society Technologies">IST</abbr> Programme</strong>.
 ---
 
 Where possible, divide long forms into multiple smaller forms that constitute a series of logical steps or stages. This helps make long forms less daunting and easier to understand, particularly for people who are less experienced using computers or who have various cognitive disabilities. The following basic principles should apply for multi-step forms:
@@ -143,7 +143,7 @@ Survey <progress max="7" value="7">(Finished)</progress>
 <%= code_end %>
 {:/nomarkdown}
 
-The progress element, like other form elements, is a component from the operating system rendered directly on the website. Those components are animated in some operating systems which would violate WCAG 2.0’s [2.2.2 Pause, Stop, Hide](http://www.w3.org/TR/WCAG20/#time-limits-pause) success criterion that requires that users are able to disable an animation that starts automatically, lasts more than 5 seconds and is presented in parallel with other content.
+The progress element, like other form elements, is a component from the operating system rendered directly on the website. Those components are animated in some operating systems which would violate WCAG 2.0’s [2.2.2 Pause, Stop, Hide](https://www.w3.org/TR/WCAG20/#time-limits-pause) success criterion that requires that users are able to disable an animation that starts automatically, lasts more than 5 seconds and is presented in parallel with other content.
 
 The animation can be stopped by using custom styling with browser-specific CSS as shown below.
 

@@ -12,12 +12,12 @@ wcag_techniques:
   - G155
   - G168
 editors:
-  - Eric Eggert: "http://w3.org/People/yatil/"
-  - Shadi Abou-Zahra: "http://w3.org/People/shadi/"
+  - Eric Eggert: "https://www.w3.org/People/yatil/"
+  - Shadi Abou-Zahra: "https://www.w3.org/People/shadi/"
 contributors:
-  - The Web Content Accessibility Guidelines Working Group (<a href="http://www.w3.org/WAI/GL/">WCAG WG</a>)
-  - the Education and Outreach Working Group (<a href="http://www.w3.org/WAI/EO/">EOWG</a>)
-support: Developed with support from the <a href="http://www.w3.org/WAI/ACT/">WAI-ACT project</a>, co-funded by the <strong>European Commission <abbr title="Information Society Technologies">IST</abbr> Programme</strong>.
+  - The Web Content Accessibility Guidelines Working Group (<a href="https://www.w3.org/WAI/GL/">WCAG WG</a>)
+  - the Education and Outreach Working Group (<a href="https://www.w3.org/WAI/EO/">EOWG</a>)
+support: Developed with support from the <a href="https://www.w3.org/WAI/ACT/">WAI-ACT project</a>, co-funded by the <strong>European Commission <abbr title="Information Society Technologies">IST</abbr> Programme</strong>.
 ---
 
 In addition to providing instructions, validate user input to help users avoid mistakes. HTML5 defines a range of built-in functionality to validate common types of input, such as email addresses and dates. In some situations, such as validating custom controls or supporting legacy browsers, additional scripting may be necessary to validate user input.
@@ -171,7 +171,7 @@ The example below shows these HTML5 input types in action. Depending on your web
 ## Validating patterned input
 {:.newex}
 
-The HTML5 `pattern` attribute allows the use of [regular expressions](http://www.w3.org/TR/html/forms.html#the-pattern-attribute) to specify custom formats for the input. This is useful for specific types of data patterns such as telephone numbers, postal codes, and serial numbers.
+The HTML5 `pattern` attribute allows the use of [regular expressions](https://www.w3.org/TR/html/forms.html#the-pattern-attribute) to specify custom formats for the input. This is useful for specific types of data patterns such as telephone numbers, postal codes, and serial numbers.
 
 ### Car license plate numbers
 {:.ex}

@@ -6,13 +6,13 @@ wcag_techniques:
   - H73
   - H39
 editors:
-  - Eric Eggert: "http://w3.org/People/yatil/"
-  - Shadi Abou-Zahra: "http://w3.org/People/shadi/"
+  - Eric Eggert: "https://www.w3.org/People/yatil/"
+  - Shadi Abou-Zahra: "https://www.w3.org/People/shadi/"
 contributors:
   - Sharron Rush
-  - the Web Content Accessibility Guidelines Working Group (<a href="http://www.w3.org/WAI/GL/">WCAG WG</a>)
-  - the Education and Outreach Working Group (<a href="http://www.w3.org/WAI/EO/">EOWG</a>)
-support: Developed with support from the <a href="http://www.w3.org/WAI/ACT/">WAI-ACT project</a>, co-funded by the <strong>European Commission <abbr title="Information Society Technologies">IST</abbr> Programme</strong>.
+  - the Web Content Accessibility Guidelines Working Group (<a href="https://www.w3.org/WAI/GL/">WCAG WG</a>)
+  - the Education and Outreach Working Group (<a href="https://www.w3.org/WAI/EO/">EOWG</a>)
+support: Developed with support from the <a href="https://www.w3.org/WAI/ACT/">WAI-ACT project</a>, co-funded by the <strong>European Commission <abbr title="Information Society Technologies">IST</abbr> Programme</strong>.
 ---
 
 ![](img-caption.png){:.symbol} Captions and summaries provide information that can help users find, navigate, and understand tables. While they are not required in every case to meet WCAG 2.0, captions and summaries are fairly straightforward ways to provide such information that is often needed.
@@ -23,7 +23,7 @@ support: Developed with support from the <a href="http://www.w3.org/WAI/ACT/">WA
 
 If both caption and summary are provided for one table, the summary should not duplicate information present in the caption.
 
-See WCAG 2.0 technique [H39: Using caption elements to associate data table captions with data tables](http://www.w3.org/TR/WCAG20-TECHS/H39) for more advice on captions.
+See WCAG 2.0 technique [H39: Using caption elements to associate data table captions with data tables](https://www.w3.org/TR/WCAG20-TECHS/H39) for more advice on captions.
 
 ## Identifying a table using a caption
 {:.ex}
@@ -392,7 +392,7 @@ Screen reader users navigating in “Tables Mode” are usually unable to identi
 
 In this approach, the summary text is in the `summary` attribute of the table. Such summaries are not displayed visually. They are commonly only available to screen reader users.
 
-See WCAG 2.0 technique [H73: Using the summary attribute of the table element to give an overview of data tables](http://www.w3.org/TR/WCAG20-TECHS/H73) for advice on the summary attribute.
+See WCAG 2.0 technique [H73: Using the summary attribute of the table element to give an overview of data tables](https://www.w3.org/TR/WCAG20-TECHS/H73) for advice on the summary attribute.
 
 {::nomarkdown}
 <%= sample_start %>

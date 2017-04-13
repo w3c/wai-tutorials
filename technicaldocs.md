@@ -37,7 +37,7 @@ When you’re done with changes, `git push` them to this repository (`dev` branc
 Use the `rake publish` command to publish your current version automatically. If you do that to a forked repository, don’t open pull requests for changes in that branch.
 
 
-[LivePage]:http://www.w3.org/WAI/tutorials/
+[LivePage]:https://www.w3.org/WAI/tutorials/
 [GHPage]:http://w3c.github.io/wai-tutorials/
 [Middleman]:http://middlemanapp.com/
 [MMInst]:http://middlemanapp.com/basics/getting-started/

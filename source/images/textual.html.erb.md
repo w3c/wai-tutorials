@@ -6,14 +6,14 @@ wcag_techniques:
   - G94
 order: 5
 editors:
-  - Eric Eggert: "http://w3.org/People/yatil/"
-  - Shadi Abou-Zahra: "http://w3.org/People/shadi/"
+  - Eric Eggert: "https://www.w3.org/People/yatil/"
+  - Shadi Abou-Zahra: "https://www.w3.org/People/shadi/"
 contributors:
   - Anna Belle Leiserson
   - David MacDonald
-  - the Web Content Accessibility Guidelines Working Group (<a href="http://www.w3.org/WAI/GL/">WCAG WG</a>)
-  - the Education and Outreach Working Group (<a href="http://www.w3.org/WAI/EO/">EOWG</a>)
-support: Developed with support from the <a href="http://www.w3.org/WAI/ACT/">WAI-ACT project</a>, co-funded by the <strong>European Commission <abbr title="Information Society Technologies">IST</abbr> Programme</strong>.
+  - the Web Content Accessibility Guidelines Working Group (<a href="https://www.w3.org/WAI/GL/">WCAG WG</a>)
+  - the Education and Outreach Working Group (<a href="https://www.w3.org/WAI/EO/">EOWG</a>)
+support: Developed with support from the <a href="https://www.w3.org/WAI/ACT/">WAI-ACT project</a>, co-funded by the <strong>European Commission <abbr title="Information Society Technologies">IST</abbr> Programme</strong>.
 ---
 
 Images of text display text that is intended to be read. With the current CSS capabilities in most web browsers, it is good design practice to use actual text that is styled with CSS rather than image-based text presentation. Genuine text is much more flexible than images: It can be resized without losing clarity, and background and text colors can be modified to suit the reading preferences of users. Images are more likely to distort and pixelate when resized. In those rare situations where images of text must be used, the text alternative must contain the same text presented in the image.
@@ -61,8 +61,8 @@ The visual effects in the above image can be produced using CSS3 and an embedded
   <div class="annotation-content">
     <p>Displaying these effects requires browsers that support the following web technologies:</p>
     <ul>
-      <li><a href="http://www.w3.org/TR/css3-transforms/">CSS Transforms</a></li>
-      <li><a href="http://www.w3.org/TR/css3-webfonts/">CSS Fonts</a></li>
+      <li><a href="https://www.w3.org/TR/css3-transforms/">CSS Transforms</a></li>
+      <li><a href="https://www.w3.org/TR/css3-webfonts/">CSS Fonts</a></li>
     </ul>
   </div>
 </aside>
@@ -161,7 +161,7 @@ The visual effects in the above image can be produced using CSS3 and an embedded
 <%= notes_start %>
 {:/nomarkdown}
 
-**Note:** The code snippet doesn’t show any [vendor prefixes](http://www.w3.org/TR/css-2010/#experimental). These can be added to increase compatibility with older versions of web browsers using their experimental implementation of CSS3 features.
+**Note:** The code snippet doesn’t show any [vendor prefixes](https://www.w3.org/TR/css-2010/#experimental). These can be added to increase compatibility with older versions of web browsers using their experimental implementation of CSS3 features.
 
 {::nomarkdown}
 <%= notes_end %>
@@ -247,7 +247,7 @@ In this particular example, the way that the recurrence is shown is important, s
 
 Images of math expressions should only be used in *exceptional circumstances* – for example when the expression is an exception to the regular content of the page or website. The preferred method for displaying math expressions is MathML, which can present mathematical expressions semantically.
 
-If math forms are a substantial part of the content (for example, for online maths courses), [MathML](http://www.w3.org/Math/) should be used instead. MathML represents both presentation and content semantically, making it potentially more accessible to a wider range of users.
+If math forms are a substantial part of the content (for example, for online maths courses), [MathML](https://www.w3.org/Math/) should be used instead. MathML represents both presentation and content semantically, making it potentially more accessible to a wider range of users.
 
 <aside class="annotation">
 	<h4 class="annotation-header"><span class="subhead">Accessibility Support:</span> MathML, Web Browsers, and Assistive Technologies</h4>
