@@ -17,9 +17,9 @@ support: Developed with support from the <a href="http://www.w3.org/WAI/ACT/">WA
 
 Decorative images don’t add information to the content of a page. For example, the information provided by the image might already be given using adjacent text, or the image might be included to make the website more visually attractive.
 
-In these cases, a null (empty) `alt` text should be provided (`alt=""`) so that they can be ignored by assistive technologies, such as screen readers. Text values for these types of images would add audible clutter to screen reader output or could distract users if the topic is different from that in adjacent text. Leaving out the `alt` attribute is  also not an option because when it is not provided, some screen readers will announce the file name of the image instead.
+In these cases, a null (empty) `alt` text should be provided (`alt=""`) so that they can be ignored by assistive technologies, such as screen readers. Text values for these types of images would add audible clutter to screen reader output or could distract users if the topic is different from that in adjacent text. Leaving out the `alt` attribute is also not an option because when it is not provided, some screen readers will announce the file name of the image instead.
 
-Whether to treat an image as decorative or [informative](informative.html) is a judgement that only the author can make, based on the reason for including the image on the page. Images may be decorative when they are:
+Whether to treat an image as decorative or [informative](informative.html) is a judgment that only the author can make, based on the reason for including the image on the page. Images may be decorative when they are:
 
 -   Visual styling such as borders, spacers, and corners;
 -   Supplementary to link text to improve its appearance or increase the clickable area;
@@ -56,7 +56,7 @@ decorative purpose.
 <%= code_end %>
 {:/nomarkdown}
 
-Screen readers also allow the use of WAI-ARIA to hide elements by using `role="presentation"`. However, currently this feature is not as widely supported as using a null `alt` attribute.
+Screen readers also allow the use of WAI-ARIA to hide elements by using `role="presentation"`. However, currently, this feature is not as widely supported as using a null `alt` attribute.
 
 {::nomarkdown}
 <%= code_start %>
@@ -83,7 +83,7 @@ Screen readers also allow the use of WAI-ARIA to hide elements by using `role="p
 ## Decorative image as part of a text link
 {:.ex}
 
-This illustration of a crocus bulb is used to make the link easier to identify and to increase the clickable area, but doesn’t add to the information already provided in the adjacent link text (of the same anchor). In this case a null (empty) `alt` value should be used for the image.
+This illustration of a crocus bulb is used to make the link easier to identify and to increase the clickable area but doesn’t add to the information already provided in the adjacent link text (of the same anchor). In this case, use a null (empty) `alt` value for the image.
 
 {::nomarkdown}
 <%= sample_start %>
@@ -113,7 +113,7 @@ This illustration of a crocus bulb is used to make the link easier to identify a
 ## Image with adjacent text alternative
 {:.ex}
 
-This picture of a sleeping dog is already sufficiently described by the adjacent text. There is no need to repeat this information and a null (empty) `alt` value can be used for this image.
+This picture of a sleeping dog is already sufficiently described by the adjacent text. There is no need to repeat this information, and a null (empty) `alt` value can be used for this image.
 
 {::nomarkdown}
 <%= sample_start %>
@@ -140,10 +140,10 @@ This picture of a sleeping dog is already sufficiently described by the adjacent
 <%= code_end %>
 {:/nomarkdown}
 
-## Image used for ambience (eye-candy)
+## Image used for ambiance (eye-candy)
 {:.ex}
 
-This image is used only to add ambience or visual interest to the page.
+This image is used only to add ambiance or visual interest to the page.
 
 {::nomarkdown}
 <%= sample_start %>
@@ -171,7 +171,7 @@ This image is used only to add ambience or visual interest to the page.
 <%= notes_start %>
 {:/nomarkdown}
 
-**Note:** If the purpose of this image was to identify a plant or convey other information, rather than to just improve the look of the page, it should probably be treated as [informative](informative.html). The author determines the purpose for the use of the image.
+**Note:** If the purpose of this image was to identify a plant or convey other information, rather than just to improve the look of the page, it should probably be treated as [informative](informative.html). The author determines the purpose for the use of the image.
 
 {::nomarkdown}
 <%= notes_end %>

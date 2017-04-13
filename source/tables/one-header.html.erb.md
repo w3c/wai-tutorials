@@ -22,13 +22,13 @@ If the table content is ambiguous or has both column and row headings, the `scop
 ## Table with header cells in the top row only
 {:.ex}
 
-The following table of concerts has the cells in the first row marked up using the `<th>` element. This is only acceptable because it is such a small table and the data itself is distinctly different in each column, so that the relationship between the header and data cells is evident.
+The following table of concerts has the cells in the first row marked up using the `<th>` element. This is only acceptable because it is such a small table and the data itself is distinctly different in each column so that the relationship between the header and data cells is evident.
 
 {::nomarkdown}
 <%= notes_start %>
 {:/nomarkdown}
 
-**Note:** Some screen readers will read “Date – Event – Venue” on the “Venue” cell  because the direction of the `<th>` elements is ambiguous.
+**Note:** Some screen readers will read “Date – Event – Venue” in the “Venue” cell because the direction of the `<th>` elements is ambiguous.
 
 {::nomarkdown}
 <%= notes_end %>
@@ -91,7 +91,7 @@ The following table of concerts has the cells in the first row marked up using t
 ## Table with header cells in the first column only
 {:.ex}
 
-In the following table, the data from the previous example is laid out with the header column on the left. Also in this situation it is only acceptable to use this codeing because it is such a small and simple table. The next pages in this tutorial explain how to code more complex tables.
+In the following table, the data from the previous example is laid out with the header column on the left. Also in this situation, it is only acceptable to use this code because it is such a small and straightforward table. The next pages in this tutorial explain how to code more complex tables.
 
 {::nomarkdown}
 <%= sample_start %>
@@ -155,7 +155,7 @@ In the following table, the data from the previous example is laid out with the 
 ## Table with ambiguous data
 {:.ex}
 
-In this example, the data (first name, last name, and city) can’t be distinguished from one another without knowing which header each corresponds to. The `scope` attribute with the value `col` defines the direction of the header cells, and associates them with the corresponding data cells. The `scope` attribute is also needed for larger tables with one header row or column.
+In this example, the data (first name, last name, and city) can’t be distinguished from one another without knowing which header each corresponds to. The `scope` attribute with the value `col` defines the direction of the header cells and associates them with the corresponding data cells. The `scope` attribute is also needed for larger tables with one header row or column.
 
 {::nomarkdown}
 <%= sample_start %>

@@ -18,24 +18,24 @@ support: Developed with support from the <a href="http://www.w3.org/WAI/ACT/">WA
 
 -   **Data separation:**
 
-    - Make sure that each separate piece of data has its own cell. Don’t use headers in one column and all data in a second column, as this will make it almost impossible for screen readers to work out the relationships between data across columns.
+    - Make sure that each separate piece of data has its cell. Don’t use headers in one column and all data in a second column, as this will make it almost impossible for screen readers to work out the relationships between data across columns.
 
-        ![On the left, a table with two columns is shown. The header for the first column reads “Shirt” and the header for the second column reads “Sizes and amount in stock”. The second row reads “Blue” in the first column and “S: 6; M: 13, XL: 10”. In the second row, Sizes for a “Red” shirt are “M: 2; L: 9; XL: 10; XXL: 1”. On the right the table is split up in “Shirt”, “Size” and “Stock” columns.](headers-in-one-column-all-data-in-second.png)
+        ![On the left, a table with two columns is shown. The header for the first column reads “Shirt” and the header for the second column reads “Sizes and amount in stock”. The second row reads “Blue” in the first column and “S: 6; M: 13, XL: 10”. In the second row, Sizes for a “Red” shirt are “M: 2; L: 9; XL: 10; XXL: 1”. On the right, the table is split up in “Shirt”, “Size” and “Stock” columns.](headers-in-one-column-all-data-in-second.png)
 
     - Don't use line breaks (`<br>` elements) to create table rows as the data in the pseudo-rows may no longer align correctly when text is resized.
 
-         ![On the top there is a table where the content and header cells are not marked up correctly. Line breaks are usedto make items look like they align correctly. When resizing the text (bottom) the items don’t line up anymore](table-text-resize.png)
+         ![On the top there is a table where the content and header cells are not marked up correctly. Line breaks are used to make items look like they align correctly. When resizing the text (bottom) the items don’t line up anymore](table-text-resize.png)
 
 -   **Alignment:** Align text to the left and numeric data to the right (in left-to-right languages), so that people using larger text sizes or smaller screens will be able to find it. This is especially useful if a cell spans more than one column. It’s  helpful to give column headers the same alignment as the data in the cells below.
 
--   **Styling header cells:** `<th>` elements are used for header cells, using `<td>` elements with different styling will make tables less accessible if not inaccessible. It is also helpful to differentiate `<th>` and `<td>` cells visually. For example, on these tutorial pages header cells have a dark gray background.
+-   **Styling header cells:** `<th>` elements are used for header cells, using `<td>` elements with different styling will make tables less accessible if not inaccessible. It is also helpful to differentiate `<th>` and `<td>` cells visually. For example, on these tutorial pages, header cells have a dark gray background.
 
--   **Zebra tables:** Styling even and odd rows in a different way can be helpful to people who have reading difficulties or who enlarge text. It acts as a visual guide. Highlighting the cell (and row/column) on mouseover and keyboard focus to help people to see where they are also helps. Make sure that the contrast ratio between the text and background is good for both headers and data cells. [Here is how to check the contrast ratio.](http://www.w3.org/WAI/eval/preliminary#contrast)
+-   **Zebra tables:** Styling even and odd rows in a different way can be helpful to people who have reading difficulties or who enlarge text. It acts as a visual guide. Highlighting the cell (and row/column) on mouseover and keyboard focus to support people to see where they are. Make sure that the contrast ratio between the text and background is good for both headers and data cells. [Here is how to check the contrast ratio.](http://www.w3.org/WAI/eval/preliminary#contrast)
 
--   **Flexibility:** Due to the layout model of tables, they sometimes don’t fit on small screens small or are too wide if the user is using zoom. In such circumstances it’s important that the table isn’t cut off (for example by using `overflow: hidden` in CSS). In these tutorials `overflow: scroll` is applied to an element wrapping the table so users can scroll through the table horizontally but there are many more options to display table in such circumstances.
+-   **Flexibility:** Due to the layout model of tables, they sometimes don’t fit on small screens small or are too wide if the user is zooming in. In such circumstances, it’s important that the table isn’t cut off (for example by using `overflow: hidden` in CSS). In these tutorials `overflow: scroll` is applied to an element wrapping the table so users can scroll through the table horizontally but there are much more options to display table in such circumstances.
 
 -   **Tables for Layout:** Tables should not be used for layout purposes. Use Cascading Style Sheets (CSS) for layout. If there are already layout tables present, don’t use structural elements (like `<th>` or `<caption>`) and attributes discussed in this tutorial, and do add `role="presentation"` to the `<table>` element.
 
 ## Other W3C Resources
 
--   [Content can be presented in different ways](http://www.w3.org/WAI/intro/people-use-web/principles#adaptable) secton of Accessibility Principles in How People with Disabilities Use the Web.
+-   [Content can be presented in different ways](http://www.w3.org/WAI/intro/people-use-web/principles#adaptable) section of Accessibility Principles in How People with Disabilities Use the Web.

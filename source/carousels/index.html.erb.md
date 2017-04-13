@@ -23,7 +23,7 @@ See also the [complete working example](working-example.html) and [full code](fu
 
 ## What are carousels?
 
-Carousels show a collection of items one at a time. They are also known as “slide shows” and “sliders”. Common uses of carousels include scrolling news headlines, featured articles on home pages, and image galleries.
+Carousels show a collection of items one at a time. They are also known as “slideshows” and “sliders”. Typical uses of carousels include scrolling news headlines, featured articles on home pages, and image galleries.
 
 ## What makes a carousel accessible?
 
@@ -40,5 +40,5 @@ Typically, carousels are prominently located and are used to provide navigation 
 
 - **People using keyboard navigation and voice input software** can navigate between individual items.
 - **People using screen readers** will understand which item is currently shown and how to navigate between items.
-- **People who are distracted by movement** are able to pause animations.
-- **People who need more time to read** are able to pause animations, providing them with sufficient time to read and understand carousel content.
+- **People who are distracted by movement** can pause animations.
+- **People who need more time to read** can pause animations, providing them with sufficient time to read and understand carousel content.

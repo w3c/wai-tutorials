@@ -25,13 +25,13 @@ Complex images contain substantial information – more than can be conveyed in 
 -   diagrams and illustrations where the page text relies on the user being able to understand the image;
 -   maps showing locations or other information such as weather systems.
 
-In these cases a two-part text alternative is required. The first part is the short description to identify the image and, where appropriate, indicate the location of the long description. The second part is the long description – a textual representation of the essential information conveyed by the image. The following examples show different approaches that can be used to provide such short and long descriptions.
+In these cases, a two-part text alternative is required. The first part is the short description to identify the image and, where appropriate, indicate the location of the long description. The second part is the long description – a textual representation of the essential information conveyed by the image. The following examples show different approaches that can be used to provide such short and long descriptions.
 
 ## Long descriptions
 
 There are situations where the composition of an image is important and needs to be provided in the long description. For example, the sequence of colors used and the relative heights of the columns in a bar chart may be relevant information about the structure of the chart, in addition to the actual values and trends that it depicts.
 
-Remember that complex images can be difficult to understand by many people -- in particular people with learning disabilities and people with low vision. Long descriptions benefit many people and it is good practice to make them available to everyone, for example, as part of the main content. It may also be possible to reduce unnecessary complexity in your images, and make them easier to understand for everyone.
+Remember that complex images can be difficult to understand by many people – in particular people with learning disabilities and people with low vision. Long descriptions benefit many people, and it is good practice to make them available to everyone, for example, as part of the main content. It may also be possible to reduce unnecessary complexity in your images and make them easier to understand for everyone.
 
 It is also good practice to refer to and summarize more complex images from the accompanying text. For example, a reference such as “The following graph shows that visitors were lost in the first quarter, but the numbers recovered in the second quarter” helps to point out the relevant information that the image is intended to present.
 
@@ -85,9 +85,9 @@ This approach provides a text link next to the image that refers to a separate w
 <%= code_end %>
 {:/nomarkdown}
 
-This approach is supported by all web browsers and assistive technologies, and makes the long descriptions available to everyone. However the link is not associated with the image in a semantic way.
+This approach is supported by all web browsers and assistive technologies and makes the long descriptions available to everyone. However, the link is not associated with the image in a semantic way.
 
-The HTML5 `<figure>` and `<figcaption>` elements can be used to group image and link semantically. Adding `role="group"` to the figure maintains backwards compatibility with web browsers that don’t support the native semantics of the `<figure>` element.
+The HTML5 `<figure>` and `<figcaption>` elements can be used to group image and link semantically. Adding `role="group"` to the figure maintains backward compatibility with web browsers that don’t support the native semantics of the `<figure>` element.
 
 {::nomarkdown}
 <%= code_start %>
@@ -135,7 +135,7 @@ When a long description is provided on the same web page as an image, its locati
 ### Structurally associating the image and its adjacent long description (HTML5)
 {:.ap}
 
-The HTML5 `<figure>` element can be used to enclose both the image and its long description. The long description (presented as headings, text, and a table) is wrapped in the `<figcaption>` element. It is explicitly associated to the image using `role="group"` on the containing `<figure>` element in web browsers that don’t convey the semantics of the `<figure>` element.
+The HTML5 `<figure>` element can be used to enclose both the image and its long description. The long description (presented as headings, text, and a table) is wrapped in the `<figcaption>` element. It is explicitly associated with the image using `role="group"` on the containing `<figure>` element in web browsers that don’t convey the semantics of the `<figure>` element.
 
 {::nomarkdown}
 <%= code_start %>
@@ -174,7 +174,7 @@ The HTML5 `<figure>` element can be used to enclose both the image and its long 
 
 The `longdesc` attribute can contain the URI of a separate web page that provides the long description for an image or a fragment identifier that refers to an element on the same page that provides the long description.
 
-When the `longdesc` attributes contains a URI to refer to another web page with the long description, it is recommended to also apply [Approach 3 (a text link to the long description adjacent to the image)](#a-text-link-to-the-long-description-adjacent-to-the-image). This is a work-around for web browsers and assistive technologies that don’t fully support the `longdesc` attribute.
+When the `longdesc` attribute contains a URI to refer to another web page with the long description, it is recommended to also apply [Approach 3 (a text link to the long description adjacent to the image)](#a-text-link-to-the-long-description-adjacent-to-the-image). This method is a workaround for web browsers and assistive technologies that don’t fully support the `longdesc` attribute.
 
 {::nomarkdown}
 <%= code_start %>
@@ -218,7 +218,7 @@ When the `longdesc` attribute contains a fragment identifier (`#` followed by th
 
 The WAI-ARIA `aria-describedby` attribute can be used to link to a description of the image that is provided anywhere on the same web page, in a similar way to the [longdesc approach](#providing-a-link-to-the-long-description-via-longdesc). The value of the attribute is the `id` of the element that provides the long description.
 
-Important: The element referenced by `aria-describedby` is treated like one continuous paragraph of text. Screen readers and other assistive technology do not have access to structural information, such as any headings and tables. They will read out or provide the text of any contained elements without indicating their structural relationships, and without the corresponding navigation mechanisms. As a result, this approach only works for long descriptions that are text-only, without needing structural information as was needed in the previous example.
+Important: The element referenced by `aria-describedby` is treated as one continuous paragraph of text. Screen readers and other assistive technology do not have access to structural information, such as any headings and tables. They will read out or provide the text of any contained elements without indicating their structural relationships, and without the corresponding navigation mechanisms. As a result, this approach only works for long descriptions that are text-only, without needing structural information as was needed in the previous example.
 
 In this example, the head of the peacock is described using a paragraph of text that is on the web page.
 

@@ -8,7 +8,7 @@ wcag_success_criteria:
   - 4.1.2
 ---
 
-Provide functionality to select carousel items and to inform users about change of carousel items.
+Provide functionality to select carousel items and to inform users about the change of carousel items.
 
 ## Add previous and next buttons
 
@@ -68,7 +68,7 @@ A [working demo example](working-example.html) for this code is available.
 <%= ref :start %>
 {:/}
 
-Use a [WAI-ARIA live region](https://www.w3.org/TR/wai-aria-1.1/#live_region_roles) to inform screen reader users what item is currently shown. In this example a visually hidden, “polite” live region is used and added to the carousel when the carousel is loaded. Then, when clicking the previous or next buttons, the text “Item x of y” (with <var>x</var> for current item number and <var>y</var> for the number of items) is set to this live region. Capable screen readers will announce this text.
+Use a [WAI-ARIA live region](https://www.w3.org/TR/wai-aria-1.1/#live_region_roles) to inform screen reader users what item is currently shown. In this example, a visually hidden, “polite” live region is used and added to the carousel when the carousel is loaded. Then, when clicking the previous or next buttons, the text “Item x of y” (with <var>x</var> for current item number and <var>y</var> for the number of items) is set to this live region. Capable screen readers will announce this text.
 
 Allow the user to maintain control of the keyboard focus. When the carousel advances automatically, users should not be drawn away from their current place in the page. Also, do not move keyboard focus when the previous or next buttons are used; moving the focus makes it harder for users to browse back and forth between the slides.
 
@@ -119,9 +119,9 @@ if (announceItem) {
 <%= ref :start %>
 {:/}
 
-Display buttons for each item in the carousel and highlight the current item. This allows users to get an overview of the carousel content, where they are in the sequence, and will enable them to navigate directly to any item.
+Display buttons for each item in the carousel and highlight the current item. This allows users to get an overview of the carousel content, where they are in the sequence and will enable them to navigate directly to any item.
 
-The list with buttons in the example below, is added using JavaScript, with a number on the button that corresponds to the carousel item. The buttons are numbered matching the corresponding carousel items. The button for the active carousel item is highlighted both visually, and by using text that is visually hidden (for screen readers).
+The list with buttons in the example below is added using JavaScript, with a number on the button that corresponds to the carousel item. The buttons are numbered matching the corresponding carousel items. The button for the active carousel item is highlighted both visually, and by using text that is visually hidden (for screen readers).
 
 {::nomarkdown}
 <%= ref :middle %>
@@ -225,6 +225,6 @@ See the [carousel styling](styling.html) page for more information on how to hig
 
 ### Focus the selected carousel item
 
-When users select an item with those navigation buttons, the focus should be set on the selected item. In this case the focus needs to be set to the `<li>` element that has the class `current` set, after the change or transition. This makes interaction easier for keyboard and assistive technology users.
+When users select an item with those navigation buttons, the focus should be set on the selected item. In this case, the focus needs to be set to the `<li>` element that has the class `current` set, after the change or transition. This makes interaction easier for keyboard and assistive technology users.
 
-By default, `<li>` elements cannot receive focus. By setting its `tabindex` attribute to `-1` the element is enabled to receive focus through JavaScript.
+By default, `<li>` elements cannot receive focus. By setting its `tabindex` attribute to `-1`, the element is enabled to receive focus through JavaScript.

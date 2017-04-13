@@ -19,7 +19,7 @@ contributors:
 support: Developed with support from the <a href="http://www.w3.org/WAI/ACT/">WAI-ACT project</a>, co-funded by the <strong>European Commission <abbr title="Information Society Technologies">IST</abbr> Programme</strong>.
 ---
 
-Provide feedback to users about the results of their form submission, whether successful or not. This includes in-line feedback at or near the form controls, and overall feedback that is typically provided after form submission.
+Provide feedback to users about the results of their form submission, whether successful or not. This includes in-line feedback at or near the form controls and overall feedback that is typically provided after form submission.
 
 Notifications need to be concise and clear. In particular, error messages should be easy to understand and should provide simple instructions on how they can be resolved. Success messages are also important to confirm task completion.
 
@@ -30,7 +30,7 @@ When a form is submitted, it is important that the user is notified whether the 
 ### Using the main heading
 {:.ex}
 
-A common way to provide feedback is by using the main heading of the web page, usually the most prominently displayed `<h1>` or `<h2>` element. This technique is particularly useful when forms are processed by the server, but can also be useful for client-side scripting.
+A common way to provide feedback is by using the main heading of the web page, usually, the most prominently displayed `<h1>` or `<h2>` element. This technique is particularly useful when forms are processed by the server, but can also be useful for client-side scripting.
 
 {::nomarkdown}
 <%= code_start('','Error') %>
@@ -56,7 +56,7 @@ A common way to provide feedback is by using the main heading of the web page, u
 <%= notes_start %>
 {:/nomarkdown}
 
-**Note:** The main purpose of the main heading is still to identify the web page that the user is currently on. When the user is sent back to the same web page because of an error, then a simple indication using the word “error” and possibly the number of errors is helpful.
+**Note:** The primary purpose of the main heading is still to identify the web page that the user is currently on. When the user is sent back to the same web page because of an error, then a simple indication using the word “error” and possibly the number of errors is helpful.
 
 {::nomarkdown}
 <%= notes_end %>
@@ -65,7 +65,7 @@ A common way to provide feedback is by using the main heading of the web page, u
 ###  Using the page title
 {:.ex}
 
-It is often useful to also use the `<title>` element of the web page to indicate successes and errors. In particular screen reader users will receive this feedback immediately when the web page is loaded. This can be helpful when the main heading is located deeper within the content, for example, after the navigation menus.
+The `<title>` element of the web page can be useful to indicate successes and errors. In particular, screen reader users will receive this feedback immediately when the web page is loaded. This can be helpful when the main heading is located deeper within the content, for example, after the navigation menus.
 
 {::nomarkdown}
 <%= code_start('','Error') %>
@@ -135,14 +135,14 @@ document.getElementById('alertconfirm')
 ### Listing errors
 {:.ex}
 
-When errors occur, it is helpful to list them at the top of the page, before the form. The list should have a distinctive heading, so that it is easy to identify. Each error listed should:
+When errors occur, it is helpful to list them at the top of the page, before the form. The list should have a distinctive heading so that it is easy to identify. Each error listed should:
 
 - Reference the label of the corresponding form control, to help the user recognize the control;
 - Provide a concise description of the error in a way that is easy to understand by everyone;
 - Provide an indication of how to correct mistakes, and remind users of any format requirements;
 - Include an in-page link to the corresponding form control to make access easier for the users.
 
-Sometimes, for example, when using AJAX techniques, the browser is not loading a new page but shows changes, such as form errors, dynamically on the page. To inform the user in such a case, the list of errors should be inserted into a prominent container on the top. In addition to the advice above, this container should have the `role` attribute set to `alert` to make assistive technology users aware of this change.
+Sometimes, for example, when using AJAX techniques, the browser is not loading a new page but shows changes, such as form errors, dynamically on the page. The list of errors should be inserted into a prominent container on the top to inform the user in such a case. In addition to the advice above, this container should have the `role` attribute set to `alert` to make assistive technology users aware of this change.
 
 {::nomarkdown}
 <%= sample_start %>
@@ -190,7 +190,7 @@ Sometimes, for example, when using AJAX techniques, the browser is not loading a
 <%= code_end %>
 {:/nomarkdown}
 
-In addition, form fields can be associated with the corresponding error message using aria-describedby.
+Also, form fields can be associated with the corresponding error message using aria-describedby.
 
 {::nomarkdown}
 <%= code_start %>
@@ -217,7 +217,9 @@ Typically a combination of messages and visual cues are used to provide in-line 
 
 The example below shows a form with two input fields. The first input field, “username”, is used to register a username. The second input field, “expiry date”, is used to provide a date for when the registration expires.
 
-When the form is submitted, the entries are checked and feedback is provided to the user. Appropriate success and error messages are displayed for each input field to help the user complete the form.
+When the form is submitted, the entries are checked, and feedback is provided to the user. Appropriate success and error messages are displayed for each input field to help the user complete the form.
+
+If the submitted data contains errors, it is convenient to set the focus to the first `<input>` element that contains an error.
 
 {::nomarkdown}
 <%= sample_start %>
@@ -337,7 +339,7 @@ document.getElementById('ex3').addEventListener('submit', function(event){
 ### During typing
 {:.ap.newex}
 
-Instant feedback during typing can be extremely helpful. For example, checking the availability of a username in the previous example required the user to resubmit the form -- possibly multiple times. Providing feedback while users are typing allows them to experiment more easily until they find a suitable username. However, client-side scripting is required for such functionality, and not all situations may be suitable for such feedback.
+Instant feedback during typing can be extremely helpful. For example, checking the availability of a username in the previous example required the user to resubmit the form -- possibly multiple times. Providing feedback while users are typing allows them to experiment more easily until they find a suitable username. However, client-side scripting is required for such functionality, and not all situations may be appropriate for such feedback.
 
 #### Binary messages
 {:.ex.inap}
@@ -527,9 +529,9 @@ document.getElementById('ex2_password').addEventListener('keyup',
 ### On focus change
 {:.ap}
 
-In some cases it does not make sense to check input as it is being typed by the user, because it would display error messages most of the time. This is often the case when data needs to be entered in a particular format, such as a date.
+In some cases, it does not make sense to check input as it is being typed by the user because it would display error messages most of the time. This is often the case when data needs to be entered in a particular format, such as a date.
 
-In the example below, the user is expected to provide an expiry date. The input is checked when the user leaves the form field. That is, when the focus is removed from the form field and the “blur” event is triggered for the element, for example, when the tab key is used to move to the focus to the submit button.
+In the example below, the user is expected to provide an expiry date. The input is checked when the user leaves the form field, for example, by using the tab key to move the focus to the next field or by clicking on another field.
 
 {::nomarkdown}
 <%= sample_start %>

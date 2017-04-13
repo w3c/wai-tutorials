@@ -13,14 +13,16 @@ contributors:
 support: Developed with support from the <a href="http://www.w3.org/WAI/ACT/">WAI-ACT project</a>, co-funded by the <strong>European Commission <abbr title="Information Society Technologies">IST</abbr> Programme</strong>.
 ---
 
-This decision tree describes how to use the `alt` attribute of the `<img>` element in various situations. For some types of images there are alternative approaches, such as using CSS background images for decorative images or webfonts instead of images of text.
+This decision tree describes how to use the `alt` attribute of the `<img>` element in various situations. For some types of images, there are alternative approaches, such as using CSS background images for decorative images or web fonts instead of images of text.
 
 -   **Does the image contain text?**
 	-   {:.yes} **Yes:**
-		-   **… and the text in the image is also present as *real* text nearby.**
+		-   **… and the text is also present as *real* text nearby.**
 			_Use an empty `alt` attribute. See [Decorative Images](decorative.html)._
 		-   **… and the text is only shown for visual effects.**
 			_Use an empty `alt` attribute. See [Decorative Images](decorative.html)._
+		-   **… and the text has a specific function, for example is an icon.**
+      _Use the `alt` attribute to communicate the function of the image. See [Functional Images](functional.html)._
 		-   **… and the text in the image is not present otherwise.** _Use the `alt` attribute to include the text of the image. See [Images of Text](textual.html#image-of-styled-text-with-decorative-effect)._
 	-   {:.no} **No:**
 		- Continue.

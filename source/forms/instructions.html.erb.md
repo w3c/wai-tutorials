@@ -24,16 +24,16 @@ contributors:
 support: Developed with support from the <a href="http://www.w3.org/WAI/ACT/">WAI-ACT project</a>, co-funded by the <strong>European Commission <abbr title="Information Society Technologies">IST</abbr> Programme</strong>.
 ---
 
-Provide instructions to help users understand how to complete the form and use individual form controls. This includes indicating any required and optional input, data formats, and other important information.
+Provide instructions to help users understand how to complete the form and use individual form controls. Indicate any required and optional input, data formats, and other relevant information.
 
 **Important:** Screen readers often switch to “Forms Mode” when they are processing content within a `<form>` element. In this mode they usually only read aloud form elements such as `<input>`, `<select>`, `<textarea>`, `<legend>`, and `<label>`. It is critical to include form instructions in ways that can be read aloud. This will be explained further below.
 
 ## Overall instructions
 {:.newex}
 
-Where relevant, provide overall instructions that apply to the entire form. For example, indicate any required and optional input, allowable data formats, and timing limitations. Provide such instructions before the `<form>` element to ensure that it is read aloud by screen readers before they switch to “Forms Mode”.
+Where relevant, provide overall instructions that apply to the entire form. For example, indicate any required and optional input, allowed data formats, and timing limitations. Provide such instructions before the `<form>` element to ensure that it is read aloud by screen readers before they switch to “Forms Mode”.
 
-In the example below, form instructions indicate how required fields are marked, the expected format for key data fields, and where to find additional help for each input.
+In the example below, form instructions indicate how required fields are marked, the expected format for the main data fields, and where to find additional help for each input.
 
 {::nomarkdown}
 <%= sample_start %>
@@ -87,7 +87,7 @@ In the example below, the required format for the “Expiration Date” is indic
 ### Providing instructions outside labels
 {:.newex}
 
-Providing instructions outside labels allows more flexible positioning and design but sometimes it can be missed. It is also not supported by some web browsers (typically older versions) and assistive technologies that don’t implement WAI-ARIA.
+Providing instructions outside of labels allows more flexible positioning and design, but sometimes it can be missed. It is also not supported by some web browsers (typically older versions) and assistive technologies that don’t implement WAI-ARIA.
 
 #### Using `aria-labelledby`
 {:.ap}
@@ -170,9 +170,9 @@ By using `aria-describedby` to reference the format of the field, this informati
 ### Placeholder text
 {:.newex}
 
-Placeholder text provides instructions or an example of the required data format inside form fields that have not yet been edited by the user. Placeholder text is usually displayed with lower color contrast than text provided by users, and it disappears from form fields when users start entering text. If the placeholder text contains instructional information or examples, having it disappear can make it more difficult for users to check their responses prior to submitting the form.
+Placeholder text provides instructions or an example of the required data format inside form fields that have not yet been edited by the user. Placeholder text is usually displayed with lower color contrast than text provided by users, and it disappears from form fields when users start entering text. If the placeholder text contains instructional information or examples that disappear, it makes it more difficult for users to check their responses before submitting the form.
 
-While placeholder text provides important guidance for many users, **placeholder text is not a replacement for labels**. Assistive technologies, such as screen readers, do not treat placeholder text as labels. Moreover, at the time of writing this tutorial, placeholder text is not broadly supported across assistive technologies and not displayed in older web browsers.
+While placeholder text provides valuable guidance for many users, **placeholder text is not a replacement for labels**. Assistive technologies, such as screen readers, do not treat placeholder text as labels. Moreover, at the time of writing this tutorial, placeholder text is not broadly supported across assistive technologies and not displayed in older web browsers.
 
 Note: Section [Hidden labels](labels.html#hidden) of this tutorial describes how to hide information visually but keep it available to assistive technology. This same approach can be used to avoid visual redundancy of displaying both labels and placeholder text. Be aware that this makes it very hard for users to review the form. To avoid this problem, JavaScript can be used to make labels appear visually (in the associated label element) above or beside the input that has focus.
 

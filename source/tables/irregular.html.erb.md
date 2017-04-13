@@ -16,7 +16,7 @@ support: Developed with support from the <a href="http://www.w3.org/WAI/ACT/">WA
 
 ![](img-irreg.png){:.symbol} This page covers tables with header cells that span multiple columns and/or rows. Several elements and attributes can be used to define the structure and relationships of the header and data cells.
 
-For example, a header cell that spans three columns should be associated to corresponding data cells in the column group. This can be done by setting the `scope` attribute of the header cell to the value `colgroup`. The same principle applies to header cells spanning multiple rows. In this case they are associated with by using the value `rowgroup` in the `scope`  attribute.
+For example, a header cell that spans three columns should be associated with corresponding data cells in the column group. This can be done by setting the `scope` attribute of the header cell to the value `colgroup`. The same principle applies to header cells spanning multiple rows. In this case, they are associated with by using the value `rowgroup` in the `scope`  attribute.
 
 However, before making these associations, the structure of such groups of columns and rows needs to be defined in the table markup:
 
@@ -30,9 +30,9 @@ However, before making these associations, the structure of such groups of colum
 
 In the table below, there are two pairs of column headers. Each pair of column headers, “Produced” and “Sold” is associated with a first-level header that identifies the pair: “Mars” and “Venus”. These first-level headers are made to span two columns by using the `colspan` attribute with the value of `2`.
 
-To associate the first-level headers properly with all cells of both columns, the column structure needs to be defined at the beginning of the table. A `<col>` element identifies each column, beginning on the left. If a header spans two or more columns, use a `<colgroup>` element instead of that number of `<col>` elements, and the number of columns spanned is noted in the `span` attribute.
+The column structure needs to be defined at the beginning of the table to associate first-level headers correctly with all cells of both columns. A `<col>` element identifies each column, beginning on the left. If a header spans two or more columns, use a `<colgroup>` element instead of that number of `<col>` elements, and the number of columns spanned is noted in the `span` attribute.
 
-In addition, the value of the `scope` attribute in the first-level headers is set to `colgroup` so that it is associated with the entire group of columns. The second-level headers only apply to the corresponding column so the `scope` attribute is set to `col` as shown in previous examples.
+Also, the value of the `scope` attribute in the first-level headers is set to `colgroup` so that it is associated with the entire group of columns. The second-level headers only apply to the corresponding column, so the `scope` attribute is set to `col` as shown in previous examples.
 
 {::nomarkdown}
 <%= sample_start %>
@@ -123,9 +123,9 @@ Note: A `<colgroup>` element can contain a `<col>` element to identify individua
 ## Table with headers spanning multiple rows or columns
 {:.ex}
 
-In the example below, the table consists of two individual columns and one column group spanning three columns. It has six rows. There are two headers that span multiple rows. To make sure that such header cells that span multiple rows are correctly associated with all the cells in those rows, the rows need to be grouped. To define row groups wrap the corresponding rows in `<tbody>` elements (table body). Additionally the `scope` attribute of header cells spanning rows has to be set to `rowgroup`.
+In the example below, the table consists of two individual columns and one column group spanning three columns. It has six rows. Two headers that span multiple rows. To make sure that such header cells that span multiple rows are correctly associated with all the cells in those rows, the rows need to be grouped. To define row groups wrap the corresponding rows in `<tbody>` elements (table body). Additionally, the `scope` attribute of header cells spanning rows has to be set to `rowgroup`.
 
-If a header spans a multiple header rows, wrap the rows in a `<thead>` element instead of a `<tbody>` element. Use a `<tfoot>` element if a header spans multiple rows in the footer area of a table.
+If a header spans multiple header rows, wrap the rows in a `<thead>` element instead of a `<tbody>` element. Use a `<tfoot>` element if a header spans multiple rows in the footer area of a table.
 
 Due to the complexity of the table a [summary technique](caption-summary.html) could be used to describe the layout of the table in detail.
 

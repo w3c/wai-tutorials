@@ -24,9 +24,9 @@ Grouping needs to be carried out visually and in the code, for example, by using
 ## Associating related controls with `fieldset`
 {:.ap}
 
-The `<fieldset>` element provides a container for related form controls, and the `<legend>` element acts like a heading to identify the group.
+The `<fieldset>` element provides a container for related form controls, and the `<legend>` element acts as a heading to identify the group.
 
-The legend for a group of controls can also highlight common attributes of all controls, for example to advise that all fields in the group are required.
+The legend for a group of controls can also highlight common attributes of all controls, for example, to advise that all fields in the group are required.
 
 ### Radio buttons
 {:.ex.inap}
@@ -79,7 +79,7 @@ In the example below, there are three radio buttons that allow the user to choos
 ### Checkboxes
 {:.ex.inap}
 
-In the example below, there are three checkboxes that are all part of an opt-in function for receiving different types of information.
+In the example below, three checkboxes are part of an opt-in function for receiving different types of information.
 
 {::nomarkdown}
 <%= sample_start %>
@@ -227,7 +227,7 @@ This example shows form fields to enter shipping and billing addresses. As the l
 ## Associating related controls with WAI-ARIA
 {:.ap}
 
-WAI-ARIA provides a grouping role that functions similarly to `fieldset` and `legend`.  In this example the `div` element has `role=group` to indicate that the contained elements are members of a group and the `aria-labelledby` attribute references the `id` for text that will serve as the label for the group.
+WAI-ARIA provides a grouping role that functions similarly to `fieldset` and `legend`.  In this example, the `div` element has `role=group` to indicate that the contained elements are members of a group and the `aria-labelledby` attribute references the `id` for text that will serve as the label for the group.
 
 This technique provides additional styling possibilities.
 
@@ -321,7 +321,7 @@ Because WAI-ARIA not fully supported in all web browser and screen reader combin
 
 ## Grouping items in `select` elements
 
-For `select` elements with groups of options, the `optgroup` element can be used to indicate such groups. The `label` attribute of the `optgroup` element is used to provide a label for the group. This is especially useful for lists with many related options. In the example below, users can chose from lectures in one of three courses.
+For `select` elements with groups of options, the `optgroup` element can be used to indicate such groups. The `label` attribute of the `optgroup` element is used to provide a label for the group. This is especially useful for lists with many related options. In the example below, users can choose from lectures in one of three courses.
 
 {::nomarkdown}
 <%= sample_start %>
