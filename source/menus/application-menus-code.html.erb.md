@@ -5,7 +5,9 @@ status: draft
 order: 6
 type: tips
 ---
+
 {::nomarkdown}
+<div class="show-overflow2">
 <%= sample_start %>
 <ul role="menubar" aria-label="functions" id="appmenu">
 		<li role="menuitem" aria-haspopup="true">
@@ -55,6 +57,15 @@ type: tips
 		overflow: visible !important;
 		float: left;
 		width: 100%;
+}
+.show-overflow2 .sample:after {
+	content:'';
+	display:block;
+	clear: both;
+}
+
+.show-overflow2 + figure {
+	clear: both;
 }
 	#appmenu {
 			width:80%;
@@ -269,6 +280,7 @@ Array.prototype.forEach.call(subMenuItems, function(el, i){
 
 
 <%= sample_end %>
+</div>
 {:/nomarkdown}
 
 {::nomarkdown}

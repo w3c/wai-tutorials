@@ -1,7 +1,7 @@
 ---
 title: Content Structure
 status: draft
-order: 6
+order: 5
 wcag_success_criteria:
   - 1.3.1
 wcag_techniques:
@@ -10,7 +10,8 @@ wcag_techniques:
   - H48
   - H49
 ---
-Mark up website content semantically, so that the website is extensible, the content reusable and also conveys more meaning to assistive technologies.
+
+Mark up website content semantically, so that the website is extensible. Valid semantics create content that is reusable and more meaningful to assistive technologies.
 
 ## Articles
 
@@ -56,7 +57,8 @@ The HTML5 `<section>` element marks a general region of a web page or an article
 
 ## Paragraphs
 
-Use the paragraph element (`<p>`) to mark up paragraphs of text, such as this one. Consistent styling of paragraphs improves text readability. It also gives users more control when customizing their view.
+
+Use the paragraph element (`<p>`) to mark up paragraphs of text, such as this one. The consistent styling of paragraphs improves text readability. It also gives users more control when customizing their view.
 
 ## Lists
 
@@ -64,7 +66,7 @@ Use different types of lists to group information according to its nature to pro
 
 * Unordered lists are used when the order of the items is not relevant. List items in unordered lists are marked with a bullet.
 * Ordered lists are used for sequential information and are automatically enumerated by the browser.
-* Description lists groups of related terms and descriptions and connects those programmatically.
+* Description lists are groups of related terms and descriptions which are connected programmatically.
 
 Individual list items can contain a variety of HTML elements, including paragraphs, headings, form elements, and other (nested) lists.
 
@@ -106,7 +108,7 @@ The unordered list consists of one `<ul>` element and multiple list item (`<li>`
 
 ### Ordered list
 
-The unordered list consists of one `<ol>` element and multiple list item (`<li>`) elements:
+The ordered list consists of one `<ol>` element and multiple list item (`<li>`) elements:
 
 {::nomarkdown}
 <%=sample_start%>
@@ -142,7 +144,7 @@ The unordered list consists of one `<ol>` element and multiple list item (`<li>`
 
 ### Nested lists
 
-Every list can be nested into another list. In the following example, the order of preparation is not important, but the preparation itself should be done before using the ingredients. The information is still easy to digest, assistive technology can easily inform users about the number of steps.
+Every list can be nested into another list. In the following example, the order of preparation is not critical, but the preparation itself should be done before using the ingredients. The information is still easy to digest, assistive technology can easily inform users about the number of steps.
 
 {::nomarkdown}
 <%=sample_start%>
@@ -198,7 +200,7 @@ A grouping begins either on the first item of the list or whenever a `<dt>` elem
 #### One term, multiple descriptions
 {:.ex}
 
-In the following example, John and Luke are described as authors and Frank is described as editor.
+In the following example, John and Luke are described as authors, and Frank is described as editor.
 
 {::nomarkdown}
 <%=sample_start%>
@@ -297,7 +299,7 @@ In this example, John and Luke authors and also editors:
 ## Quotes
 {:.newex}
 
-Identifying a quotation as such helps clarify that the content is attributed to another author. Quotes can be marked up as inline or as blocks of text.
+Identifying a quotation as such helps clarify that the content is attributed to another author. Quotes can be marked up as inline or as blocks of text. Assistive technologies can convey to users where a quote starts and ends, which can avoid misunderstandings.
 
 ### Blockquote
 {:.ex}
@@ -309,7 +311,7 @@ Use the `<blockquote>` element for longer and more complex quotes. It can contai
 
 <p>The following is an excerpt from the <cite>The Story of my Life</cite> by Helen Keller</p>
 <blockquote>
-    <p>Even in the days before my teacher came, I used to feel along the square stiff boxwood hedges, and, guided by the sense of smell, would find the first violets and lilies. There, too, after a fit of temper, I went to find comfort and to hide my hot face  in the cool leaves and grass.</p>
+    <p>Even in the days before my teacher came, I used to feel along the square stiff boxwood hedges, and, guided by the sense of smell, would find the first violets and lilies. There, too, after a fit of temper, I went to find comfort and to hide my hot face in the cool leaves and grass.</p>
 </blockquote>
 
 <%=sample_end%>
@@ -322,7 +324,7 @@ Use the `<blockquote>` element for longer and more complex quotes. It can contai
 ~~~html
 <p>The following is an excerpt from the <cite>The Story of my Life</cite> by Helen Keller</p>
 <blockquote>
-    <p>Even in the days before my teacher came, I used to feel along the square stiff boxwood hedges, and, guided by the sense of smell, would find the first violets and lilies. There, too, after a fit of temper, I went to find comfort and to hide my hot face  in the cool leaves and grass.</p>
+    <p>Even in the days before my teacher came, I used to feel along the square stiff boxwood hedges, and, guided by the sense of smell, would find the first violets and lilies. There, too, after a fit of temper, I went to find comfort and to hide my hot face in the cool leaves and grass.</p>
 </blockquote>
 ~~~
 
@@ -357,7 +359,7 @@ For shorter quotes, that are usually embedded in another sentence, use the `<q>`
 
 ## Figures
 
-Figures are blocks with additional information to the main content of the page – sometimes referenced from the main text. They typically contain  lists, images, tables, but can also contain other content. For example an annual report could reference to a diagram containing the sales volumes of a product.
+Figures are blocks with additional information to the main content of the page – sometimes referenced from the main text. They typically contain lists, images, tables, but can also include other content. For example, an annual report could reference to a diagram containing the sales volumes of a product.
 
 Each figure is wrapped in a `<figure>` element and labeled using a nested `<figcaption>` element.
 
@@ -397,7 +399,7 @@ Each figure is wrapped in a `<figure>` element and labeled using a nested `<figc
 
 ## Images and illustrations
 
-Images and illustrations are useful to create visual engagement for many users. They may also clarify text for people with reading disabilities. Where images or illustrations are used, proper alternative texts need to be added. See the [Images Tutorial](/images/index.html) for guidance on alternative texts.
+Images and illustrations are useful to create visual engagement for many users. They may also clarify text for people with reading disabilities. Where images or illustrations are used, proper alternative text needs to be added. See the [Images Tutorial](/images/index.html) for guidance on alternative text.
 
 ## Tables
 
