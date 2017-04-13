@@ -10,9 +10,9 @@ wcag_techniques:
   - ARIA11
 technologies: HTML5, WAI-ARIA
 ---
-Most regions need to be labeled, especially if there are multiple regions of the same type, for example multiple navigation options, on a page. WAI-ARIA provides simple mechanisms to label a region, enabling users to easily navigate around the page.
+Most regions on a page need to be labeled. Labels are especially important when multiple regions of the same type are on one page, such as multiple navigation options. WAI-ARIA provides simple mechanisms for labeling a region, enabling users to navigate around the page quickly.
 
-Sections should also organized using [headings](headings.html).
+Sections should also be organized using [headings](headings.html).
 
 ## Using `aria-label`
 {:.ap}
@@ -21,13 +21,16 @@ Sections should also organized using [headings](headings.html).
 <%= ref :start %>
 {:/nomarkdown}
 
-Use the WAI-ARIA `aria-label` attribute to label the carousel. This approach can be used if the label is not supposed to be visually on the page.
+Use the WAI-ARIA `aria-label` attribute to label the region. Consider this approach if the label should not appear visually on the page.
 
 {::nomarkdown}
 <%= ref :middle %>
 {:/nomarkdown}
 
-More [information about WAI-ARIA](https://www.w3.org/WAI/intro/aria) is available, including [Notes on Using ARIA in HTML](https://www.w3.org/TR/aria-in-html/).
+Explore other WAI-ARIA resources:
+
+* [WAI-ARIA Overview](https://www.w3.org/WAI/intro/aria)
+* [Notes on Using ARIA in HTML](https://www.w3.org/TR/aria-in-html/)
 
 {::nomarkdown}
 <%= ref :end %>
@@ -55,7 +58,7 @@ More [information about WAI-ARIA](https://www.w3.org/WAI/intro/aria) is availabl
 <%= demo :middle %>
 {:/}
 
-A [complete example](example.html), including labels, is available.
+View a [complete code example](example.html) with regions and labels.
 
 {::nomarkdown}
 <%= demo :end %>
