@@ -92,7 +92,7 @@ In this first example, the heading with the rank 1 is the first heading in the d
 ### Main heading after navigation
 {:.ex}
 
-In this second example, the main heading is not the site name but the content heading, which is rank 1. The subheadings in the content are rank two as are all the other structural headings.
+In this second example, the main heading is not the site name but the content heading, which is rank 1. The subheadings in the content are rank 2 as are all the other structural headings.
 
 {::nomarkdown}
 <%=code_start('','')%>
