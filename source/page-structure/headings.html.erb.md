@@ -59,7 +59,7 @@ In the following example, headings are used to only organize passages of text on
 ## Headings that reflect the page organization
 
 Headings are useful for labeling page regions. Use aria-labelledby, as described in the [label
-page regions](labels.html/#using-aria-labelledby) section of this tutorial, to associate headings with their  page regions.
+page regions](labels.html#using-aria-labelledby) section of this tutorial, to associate headings with their  page regions.
 
 ### Main heading before navigation
 {:.ex}
