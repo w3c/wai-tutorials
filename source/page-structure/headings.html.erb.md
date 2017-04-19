@@ -58,7 +58,8 @@ In the following example, headings are used to only organize passages of text on
 
 ## Headings that reflect the page organization
 
-The following two examples show headings that are used to reflect the organization if the page and also the main content. If headings are used in this way, use them as labels for explicitly created [page regions](regions.html) by associating them with their region using [aria-labelledby](https://w3c.github.io/wai-tutorials/page-structure/labels/#using-aria-labelledby).
+Headings are useful for labeling page regions. Use aria-labelledby, as described in the [label
+page regions](labels.html#using-aria-labelledby) section of this tutorial, to associate headings with their  page regions.
 
 ### Main heading before navigation
 {:.ex}

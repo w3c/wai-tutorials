@@ -176,8 +176,6 @@ The [Menus tutorial](/menus/index.html) provides more details on creating menus.
 
 Most current web browsers support the above HTML5 elements and convey the information to assistive technology through the accessibility APIs. However, to maximize compatibility with web browsers and assistive technologies that support WAI-ARIA but do not yet support HTML5, it is currently advisable to use both the HTML5 elements and the corresponding WAI-ARIA roles.
 
-Such regions should also be [labeled](/page-structure/labels.html).
-
 {::nomarkdown}
 <%= code_start('', 'Examples in HTML5') %>
 {:/nomarkdown}
@@ -221,5 +219,3 @@ If HTML5 cannot be used or if an HTML4 page is retrofitted to improve accessibil
 {::nomarkdown}
 <%= code_end %>
 {:/nomarkdown}
-
-Such regions should also be [labeled](/page-structure/labels.html).
