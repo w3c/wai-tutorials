@@ -1,5 +1,5 @@
 ---
-title: A Developer's Introduction to Essential ARIA Concepts: Checkbox Example
+title: "A Developer’s Introduction to Essential ARIA Concepts: Checkbox Example"
 order: 2
 ---
 
