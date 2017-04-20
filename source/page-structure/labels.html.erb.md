@@ -15,9 +15,9 @@ contributors:
 - The Education and Outreach Working Group (<a href="https://www.w3.org/WAI/EO/">EOWG</a>)
 support: Developed with support from the <a href="https://www.w3.org/WAI/ACT/">WAI-ACT project</a>, co-funded by the <strong>European Commission <abbr title="Information Society Technologies">IST</abbr> Programme</strong>.
 ---
-Assistive technologies use a generic name (for example “navigation” or “complementary”) for page regions that don’t have a label set explicitly. If the default label (for example, `main`) is sufficient to describe a region, no specific label is needed.
+Assistive technologies use a generic label for page regions that don’t have a label set explicitly. If this generic label (for example “main”) is sufficient to describe a region, no specific label is needed.
 
-Using clear labels on page regions is most important if multiple regions of the same type are present on a single page. The labels allow users of assistive technologies find regions more efficiently.
+Using clear labels on page regions is most important if multiple regions of the same type are present on a single page, for example, “navigation” or “complementary”. The labels allow users of assistive technologies find regions more efficiently.
 
 ## Using `aria-labelledby`
 {:.ap}
