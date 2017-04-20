@@ -1,6 +1,14 @@
 ---
 title: "A Developer’s Introduction to Essential ARIA Concepts: Checkbox Example"
 order: 2
+status: editors-draft
+editors:
+  - Matt King (Facebook)
+  - Judy Brewer: "https://www.w3.org/People/Brewer/"
+contributors:
+  - The Education and Outreach Working Group (<a href="https://www.w3.org/WAI/EO/">EOWG</a>)
+  - The ARIA Working Group (<a href="https://www.w3.org/WAI/ARIA/">ARIA</a>)
+support: Developed with support from the <a href="https://www.w3.org/WAI/WCAGTA/">U.S. Access Board, WCAG TA Project, Task 2</a>.
 ---
 
 HTML gives you a checkbox
@@ -39,7 +47,7 @@ Your CSS makes it look just the way the designers want. It is a beautiful checkb
 
 Now we'll make this checkbox accessible  
 
-ARIA is another way to make things accessible, but it comes with responsibilities. 
+ARIA is another way to make things accessible, but it comes with responsibilities.
 
 Doing so will require more than just ARIA; it will require JavaScript as well.
 
@@ -54,7 +62,7 @@ Let's look at a relevant example from the ARIA Authoring Practices Guide
 * Bear in mind that as a developer, you need to be thinking in roles, states and properties
   * And about these other things too @@@@, @@
 
-## What ARIA roles do 
+## What ARIA roles do
 
 * Explain purpose of role.
 * Explain what it does.

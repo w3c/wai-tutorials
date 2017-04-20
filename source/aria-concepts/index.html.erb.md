@@ -1,9 +1,11 @@
 ---
-title: A Developers' Introduction to Essential ARIA Concepts
+title: "A Developers’ Introduction to Essential ARIA Concepts"
 tutorial_title: ARIA Concepts
 order: 1
+status: editors-draft
+type: intro
 editors:
-  - Matt King: "Facebook"
+  - Matt King (Facebook)
   - Judy Brewer: "https://www.w3.org/People/Brewer/"
 contributors:
   - The Education and Outreach Working Group (<a href="https://www.w3.org/WAI/EO/">EOWG</a>)
@@ -23,7 +25,7 @@ This tutorial uses the process of creating a custom checkbox to demonstrate thre
 
 ARIA is the developer telling the browser what to tell the assistive technology about what the developer has done;
 
-* in order that a screen reader user can reliably know what feature is present, and to be able to operate it (perceive what it is, understand what it means, and operate on it) 
+* in order that a screen reader user can reliably know what feature is present, and to be able to operate it (perceive what it is, understand what it means, and operate on it)
 * if you use any role, the developer is telling the AT via browser that they have provided keyboard support.
 
 ## What ARIA isn’t, and doesn’t do
