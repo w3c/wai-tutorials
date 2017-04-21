@@ -15,9 +15,7 @@ contributors:
 - The Education and Outreach Working Group (<a href="https://www.w3.org/WAI/EO/">EOWG</a>)
 support: Developed with support from the <a href="https://www.w3.org/WAI/ACT/">WAI-ACT project</a>, co-funded by the <strong>European Commission <abbr title="Information Society Technologies">IST</abbr> Programme</strong>.
 ---
-Assistive technologies use a generic label for page regions that don’t have a label set explicitly. If this generic label (for example “main”) is sufficient to describe a region, no specific label is needed.
-
-Using clear labels on page regions is most important if multiple regions of the same type are present on a single page, for example, “navigation” or “complementary”. The labels allow users of assistive technologies find regions more efficiently.
+Provide labels to distinguish two page regions of the same type, such as "main navigation" and "sub-navigation" menus using a <nav> element on the same page. Labels are also used to change the default identification of page regions, for example, to identify a <section> region as "advertisement". Regions that are unique, such as <main>, do not need additional labels.
 
 ## Using `aria-labelledby`
 {:.ap}
@@ -56,6 +54,7 @@ Explore other WAI-ARIA resources:
 <%= ref :end %>
 {:/nomarkdown}
 
+Note: This approach using headings is also backward compatible for older web browsers and assistive technologies do not process HTML5 and WAI-ARIA.
 
 ## Using `aria-label`
 {:.ap}
