@@ -15,7 +15,7 @@ contributors:
 - The Education and Outreach Working Group (<a href="https://www.w3.org/WAI/EO/">EOWG</a>)
 support: Developed with support from the <a href="https://www.w3.org/WAI/ACT/">WAI-ACT project</a>, co-funded by the <strong>European Commission <abbr title="Information Society Technologies">IST</abbr> Programme</strong>.
 ---
-Provide labels to distinguish two page regions of the same type, such as “navigation” and “complementary” menus using <nav> element on the same page. Labels are also used to change the default identification of page regions, for example to identify a <section> region as "advertisement". Regions that are unique, such as <main>, do not need additional labels.
+Provide labels to distinguish two page regions of the same type, such as "main navigation" and "sub-navigation" menus using a <nav> element on the same page. Labels are also used to change the default identification of page regions, for example, to identify a <section> region as "advertisement". Regions that are unique, such as <main>, do not need additional labels.
 
 ## Using `aria-labelledby`
 {:.ap}
