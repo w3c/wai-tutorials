@@ -221,12 +221,12 @@ end
 
 # config.rb
 case ENV['TARGET'].to_s.downcase
-when 'release'
+when 'rendered'
   activate :deploy do |deploy|
     deploy.method = :git
     # Optional Settings
     deploy.remote   = 'git@github.com:w3c/wai-tutorials.git' # remote name or git url, default: origin
-    deploy.branch   = 'gh-pages-release-2015-03' # default: gh-pages
+    deploy.branch   = 'rendered-2015-03' # default: gh-pages
     deploy.build_before = true # default: false
     # deploy.strategy = :submodule      # commit strategy: can be :force_push or :submodule, default: :force_push
     # deploy.commit_message = 'custom-message'      # commit message (can be empty), default: Automated commit at `timestamp` by middleman-deploy `version`
@@ -242,4 +242,3 @@ else
     # deploy.commit_message = 'custom-message'      # commit message (can be empty), default: Automated commit at `timestamp` by middleman-deploy `version`
   end
 end
-
