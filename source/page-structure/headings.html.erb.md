@@ -1,7 +1,6 @@
 ---
 title: Headings
 order: 4
-status: draft
 wcag_success_criteria:
   - 1.3.1
   - 2.4.1
