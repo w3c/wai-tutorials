@@ -1,10 +1,8 @@
-﻿---
+---
 title: "Purpose: What ARIA Does"
 nav_title: Purpose
 order: 3
-tutorial_title: ARIA Use Prerequisites
 status: editors-draft
-type: intro
 editors:
   - Matt King (Facebook)
   - Judy Brewer: "https://www.w3.org/People/Brewer/"

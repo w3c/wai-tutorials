@@ -2,9 +2,7 @@
 title: "Next Steps"
 nav_title: "Next Steps"
 order: 5
-tutorial_title: ARIA Use Prerequisites
 status: editors-draft
-type: intro
 editors:
   - Matt King (Facebook)
   - Judy Brewer: "https://www.w3.org/People/Brewer/"
