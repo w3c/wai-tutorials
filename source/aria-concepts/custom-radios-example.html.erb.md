@@ -1,7 +1,10 @@
----
-title: "A Developer’s Introduction to Essential ARIA Concepts: Checkbox Example"
-order: 2
+﻿---
+title: "Making an ARIA Radio Group"
+nav_title: "ARIA Radio Group"
+order: 4
+tutorial_title: ARIA Use Prerequisites
 status: editors-draft
+type: intro
 editors:
   - Matt King (Facebook)
   - Judy Brewer: "https://www.w3.org/People/Brewer/"

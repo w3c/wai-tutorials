@@ -1,7 +1,8 @@
----
-title: "A Developers’ Introduction to Essential ARIA Concepts"
-tutorial_title: ARIA Concepts
+﻿---
+title: "Developers’ Introduction to Essential ARIA Concepts"
+nav_title: Introduction
 order: 1
+tutorial_title: "ARIA Use Prerequisites"
 status: editors-draft
 type: intro
 editors:
@@ -13,39 +14,19 @@ contributors:
 support: Developed with support from the <a href="https://www.w3.org/WAI/WCAGTA/">U.S. Access Board, WCAG TA Project, Task 2</a>.
 ---
 
-## Abstract
+## Overview
 
-This tutorial uses the process of creating a custom checkbox to demonstrate three fundamental concepts every developer must understand to effectively and safely apply ARIA. It teaches:
+Using a scenario where accessible HTML radio buttons need to be replaced with a custom radio group,
+this tutorial demonstrates three fundamental concepts all developers must understand before using ARIA. 
+To help ensure developers can effectively and safely apply ARIA, it teaches:
 
-* Purpose: What ARIA does
-* Limits: What ARIA does not do
-* Risks: Why appropriate use is important
+1. Purpose: What ARIA does, i.e., understanding the role of ARIA gives developers amazing powers.
+2. Limits: What ARIA does not do, i.e., using those amazing powers comes with critical responsibilities to provide the accessibility that ARIA does not provide.
+3. Risks: Why appropriate use is critical to avoiding negative impacts on accessibility, i.e., why no ARIA is better than bad ARIA.
 
-## What ARIA is and does
+## Objective
 
-ARIA is the developer telling the browser what to tell the assistive technology about what the developer has done;
+Developers gain understanding of ARIA concepts sufficient to:
 
-* in order that a screen reader user can reliably know what feature is present, and to be able to operate it (perceive what it is, understand what it means, and operate on it)
-* if you use any role, the developer is telling the AT via browser that they have provided keyboard support.
-
-## What ARIA isn’t, and doesn’t do
-
-* ARIA does not create any semantics;
-* ARIA does not change what the browser does;
-* ARIA doesn't add any functionality;
-* ARIA is not a cross-platform API for interoperability.
-* When you uses ARIA, you acquire new responsibilities
-
-## Why these ARIA concepts are important
-
-* Using ARIA the wrong way can make accessibility worse;
-* [Matt can you clarify the following] something about input with type number (spin box) or simpler (check box));
-* If you give a check box a role, but don't provide keyboard support, then you’ve essentially said that you’ve made a checkbox but not given it any functionality.
-* Or if you do role="presentation", or role="search" on a button that does search, then that can’t be operated by someone who is a screen reader user [Matt please check]
-* Or if you put ARIA hidden on it, then it hides all of its children, it's no longer accessible.
-
-## References
-
-* [WAI-ARIA Overview](https://www.w3.org/WAI/intro/aria)
-* [WAI-ARIA Authoring Practices](https://www.w3.org/TR/wai-aria-practices-1.1/)
-* And more...
+* Safely and creatively exploit the power of ARIA to build rrich experiences that are fully accessible.
+* Effectively utilize the patterns, examples, guidance,  and techniques available in the WAI-ARIA Authoring Practices.
