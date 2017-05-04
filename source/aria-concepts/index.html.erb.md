@@ -30,3 +30,21 @@ Developers gain understanding of ARIA concepts sufficient to:
 
 * Safely and creatively exploit the power of ARIA to build rrich experiences that are fully accessible.
 * Effectively utilize the patterns, examples, guidance,  and techniques available in the WAI-ARIA Authoring Practices.
+## Plan
+
+1. Set up the problem:
+    * Describe a scenario where replacing an HTML radio group with an ARIA radio group is necessary.
+    * Explain   essential accessibility features automatically provided by browsers when rendering an HTML radio group.
+    * Write the HTML for the custom radio group.
+2. Illustrate purpose:
+    * Add ARIA attributes to the custom radio HTML.
+    * Explain which essential accessibility features are enabled by ARIA roles, states, and properties.
+3. Demonstrate limits:
+    * Examine  significant accessibility gaps, such as a keyboard interface,  that remain even with all the ARIA in place.
+    * Describe how to fill those gaps.
+4. Highlight risks:
+    * Explain the contract authors invoke by using ARIA.
+    * Show how violating that contract can silently obliterate  accessibility.
+5. Wrap up:
+    *     Summarize critical points.
+    * Describe how the ARIA Authoring Practices Guide provides what developers need to unleash their accessibility creativity.

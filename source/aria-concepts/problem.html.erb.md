@@ -1,4 +1,4 @@
----
+﻿---
 title: "The Problem: The Beautifully Accessible HTML Radio Group Isn’t Good Enough"
 nav_title: "The Problem"
 order: 2
@@ -17,28 +17,28 @@ support: Developed with support from the <a href="https://www.w3.org/WAI/WCAGTA/
 A business offers three service levels, and its purchase page includes the following radio buttons.
 
 <fieldset>
-  <legend>Choose plan:</legend>
-  <input id="basic" type="radio" name="plan" value="basic">
-  <label for="basic">Basic</label><br>
-  <input id="Plus" type="radio" name="plan" value="plus">
-  <label for="plus">Plus</label><br>
-  <input id="premium" type="radio" name="plan" value="premium">
-  <label for="premium">Premium</label><br>
+    <legend>Choose plan:</legend>
+    <input id="basic" type="radio" name="plan" value="basic"/>
+    <label for="basic">Basic</label><br>
+    <input id="Plus" type="radio" name="plan" value="plus"/>
+    <label for="plus">Plus</label><br>
+    <input id="premium" type="radio" name="plan" value="premium"/>
+    <label for="premium">Premium</label><br>
 </fieldset>
 
 The HTML is:
 
-```html
+~~~ html
 <fieldset>
-  <legend>Choose plan:</legend>
-  <input id="basic" type="radio" name="plan" value="basic">
-  <label for="basic">Basic</label><br>
-  <input id="Plus" type="radio" name="plan" value="plus">
-  <label for="plus">Plus</label><br>
-  <input id="premium" type="radio" name="plan" value="premium">
-  <label for="premium">Premium</label><br>
+    <legend>Choose plan:</legend>
+    <input id="basic" type="radio" name="plan" value="basic">
+    <label for="basic">Basic</label><br>
+    <input id="Plus" type="radio" name="plan" value="plus">
+    <label for="plus">Plus</label><br>
+    <input id="premium" type="radio" name="plan" value="premium">
+    <label for="premium">Premium</label><br>
 </fieldset>
-```
+~~~
 
 This radio group is fully accessible because:
 
@@ -92,7 +92,7 @@ The HTML radio group illustrates all six types of accessibility semantics needed
 People who can see the visual layout can easily perceive that the radio buttons are related to one another and that they are each a member in a set of three.
 Screen readers can communicate that kind of information to their users by taking advantage of semantics about structure and relationships that are provided by accessibility APIs.
 
-For the radio group, browsers use the structural information provided by the `fieldset` element to populate their accessibility API with structural semantics about the radio group.
+When parsing an HTML radio group, browsers use the structural information provided by the `fieldset` element to populate their accessibility APIs with structural semantics that describe the grouping.
 
 #### Accessible Labels
 
@@ -120,14 +120,14 @@ Focus change
 
 Time to get to work on the redesign.
 
-```html
+~~~ html
 <div id="basic" class="plan-option"><img src="basic.png"></div>
 <div id="plus" class="plan-option"><img src="plus.png"></div>
 <div id="premium" class="plan-option"><img src="premium.png"></div>
-```
+~~~
 
-If these divs work like radios, there is no way for an assistive technology to know. A div containing a clickable image could be anything.
+If these divs support functionality that enables users to choose one of the plan options, i.e., if they work like radio buttons, there is no way for an assistive technology to know. A div containing a clickable image could be anything.
 
-To make the new custom radio group accessible, it will need to express all six types of accessibility semantics and provide a keyboard interface.
-This will require both both ARIA and JavaScript.
+To make this new custom radio group accessible, it will need to express all six types of accessibility semantics and provide a keyboard interface.
+It takes both ARIA and JavaScript to create all the accessibility that was so easily declared and automatically provided when using HTML.
 So, let's next discuss what ARIA does and does not do in this situation.
