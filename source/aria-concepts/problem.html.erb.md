@@ -118,31 +118,18 @@ checked
 state change
 Focus change
 
-### What ARIA is and does
+## Building the Custom Radios
 
-ARIA is the developer telling the browser what to tell the assistive technology about what the developer has done;
+Time to get to work on the redesign.
 
-* in order that a screen reader user can reliably know what feature is present, and to be able to operate it (perceive what it is, understand what it means, and operate on it)
-* if you use any role, the developer is telling the AT via browser that they have provided keyboard support.
+```
+<div id="basic" class="plan-option"><img src="basic.png"></div>
+<div id="plus" class="plan-option"><img src="plus.png"></div>
+<div id="premium" class="plan-option"><img src="premium.png"></div>
+```
 
-## What ARIA isn’t, and doesn’t do
+If these divs work like radios, there is no way for an assistive technology to know. A div containing a clickable image could be anything. 
 
-* ARIA does not create any semantics;
-* ARIA does not change what the browser does;
-* ARIA doesn't add any functionality;
-* ARIA is not a cross-platform API for interoperability.
-* When you uses ARIA, you acquire new responsibilities
-
-## Why these ARIA concepts are important
-
-* Using ARIA the wrong way can make accessibility worse;
-* [Matt can you clarify the following] something about input with type number (spin box) or simpler (check box));
-* If you give a check box a role, but don't provide keyboard support, then you’ve essentially said that you’ve made a checkbox but not given it any functionality.
-* Or if you do role="presentation", or role="search" on a button that does search, then that can’t be operated by someone who is a screen reader user [Matt please check]
-* Or if you put ARIA hidden on it, then it hides all of its children, it's no longer accessible.
-
-## References
-
-* [WAI-ARIA Overview](https://www.w3.org/WAI/intro/aria)
-* [WAI-ARIA Authoring Practices](https://www.w3.org/TR/wai-aria-practices-1.1/)
-* And more...
+To make the new custom radio group accessible, it will need to express all six types of accessibility semantics and provide a keyboard interface. 
+This will require both both ARIA and JavaScript. 
+So, let's next discuss what ARIA does and does not do in this situation.
