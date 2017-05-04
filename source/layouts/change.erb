@@ -25,6 +25,7 @@
 
   <div class="inner">
     <%= yield %>
+    <% if false %>
       <% data.changes.changes.each do |f| %>
         <% f.each do |key, value| %>
 	  <table class="changes" id="date-<%=key%>">
@@ -95,7 +96,7 @@
           </table>
         <% end %>
       <% end %>
-
+<% end %>
     <%= partial "layouts/resources" %>
 
     <%= partial "layouts/contribute" %>

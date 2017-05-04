@@ -15,7 +15,7 @@ contributors:
 - The Education and Outreach Working Group (<a href="https://www.w3.org/WAI/EO/">EOWG</a>)
 support: Developed with support from the <a href="https://www.w3.org/WAI/ACT/">WAI-ACT project</a>, co-funded by the <strong>European Commission <abbr title="Information Society Technologies">IST</abbr> Programme</strong>.
 ---
-Add labels to regions if multiple regions of the same type are on one page, for instance, multiple navigation regions. WAI-ARIA provides simple mechanisms for labeling a region, enabling users to navigate around the page quickly.
+Provide labels to distinguish two page regions of the same type, such as “main navigation” and “sub-navigation” menus using a `<nav>` element on the same page. Labels are also used to change the default identification of page regions, for example, to identify a `<aside>` region as “advertisement”. Regions that are unique, such as `<main>`, do not need additional labels.
 
 ## Using `aria-labelledby`
 {:.ap}
@@ -24,7 +24,7 @@ Add labels to regions if multiple regions of the same type are on one page, for 
 <%= ref :start %>
 {:/nomarkdown}
 
-Use the WAI-ARIA `aria-labelledby` to reference an existing element – like a heading – by its (unique) `id`. The content of the referenced element is then used as the label. Users can navigate by headings to find the region.
+Use `aria-labelledby` to point to an existing element by its (unique) `id`. The label of the region is the content of the referenced element. Every element can be a label this way. Labels should be short and descriptive. If a heading is present in the region, consider using it as the label:
 
 {::nomarkdown}
 <%= code_start %>
@@ -54,6 +54,7 @@ Explore other WAI-ARIA resources:
 <%= ref :end %>
 {:/nomarkdown}
 
+Note: This approach using headings is also backward compatible for older web browsers and assistive technologies do not process HTML5 and WAI-ARIA.
 
 ## Using `aria-label`
 {:.ap}
