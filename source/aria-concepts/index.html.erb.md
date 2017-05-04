@@ -1,8 +1,9 @@
-﻿---
-title: "Developers’ Introduction to Essential ARIA Concepts"
+---
+title: Developers’ Introduction to Essential ARIA Concepts
+tutorial_title: "ARIA Use Prerequisites"
 nav_title: Introduction
 order: 1
-tutorial_title: "ARIA Use Prerequisites"
+topic_order: 7
 status: editors-draft
 type: intro
 editors:
@@ -15,9 +16,8 @@ support: Developed with support from the <a href="https://www.w3.org/WAI/WCAGTA/
 ---
 
 ## Overview
-
 Using a scenario where accessible HTML radio buttons need to be replaced with a custom radio group,
-this tutorial demonstrates three fundamental concepts all developers must understand before using ARIA. 
+this tutorial demonstrates three fundamental concepts all developers must understand before using ARIA.
 To help ensure developers can effectively and safely apply ARIA, it teaches:
 
 1. Purpose: What ARIA does, i.e., understanding the role of ARIA gives developers amazing powers.
