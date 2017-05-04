@@ -101,7 +101,7 @@ For the radio group, browsers use the structural information provided by the `fi
 fieldset legend
 radio labels
 
-### Accessibility Roles
+#### Accessibility Roles
 
 type=radio
 
@@ -113,7 +113,7 @@ value, posinset, setsize
 
 checked
 
-### Accessible Events
+#### Accessible Events
 
 state change
 Focus change
