@@ -16,6 +16,7 @@ support: Developed with support from the <a href="https://www.w3.org/WAI/WCAGTA/
 
 A business offers three service levels, and its purchase page includes the following radio buttons.
 
+<div>
 <fieldset>
     <legend>Choose plan:</legend>
     <input id="basic" type="radio" name="plan" value="basic"/>
@@ -25,6 +26,7 @@ A business offers three service levels, and its purchase page includes the follo
     <input id="premium" type="radio" name="plan" value="premium"/>
     <label for="premium">Premium</label><br>
 </fieldset>
+</div>
 
 The HTML is:
 
