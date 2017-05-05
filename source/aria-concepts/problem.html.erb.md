@@ -1,4 +1,4 @@
-﻿---
+---
 title: "The Problem: The Beautifully Accessible HTML Radio Group Isn’t Good Enough"
 nav_title: "The Problem"
 order: 2

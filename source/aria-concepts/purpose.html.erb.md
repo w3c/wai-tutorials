@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Purpose: What ARIA Does"
 nav_title: Purpose
 order: 3
