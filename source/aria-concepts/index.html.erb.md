@@ -1,4 +1,4 @@
----
+﻿---
 title: Developers’ Introduction to Essential ARIA Concepts
 tutorial_title: "ARIA Use Prerequisites"
 nav_title: Introduction
@@ -30,6 +30,7 @@ Developers gain understanding of ARIA concepts sufficient to:
 
 * Safely and creatively exploit the power of ARIA to build rrich experiences that are fully accessible.
 * Effectively utilize the patterns, examples, guidance,  and techniques available in the WAI-ARIA Authoring Practices.
+
 ## Plan
 
 1. Set up the problem:
