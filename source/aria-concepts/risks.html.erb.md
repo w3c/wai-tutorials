@@ -14,12 +14,16 @@ support: Developed with support from the <a href="https://www.w3.org/WAI/WCAGTA/
 
 ## The ARIA Contract
 
+Reiterate purpose/limits in short form
+
 ## Costs of Violating the Contract
 
-* Using ARIA the wrong way can make accessibility worse;
-* [Matt can you clarify the following] something about input with type number (spin box) or simpler (check box));
-* If you give a check box a role, but don't provide keyboard support, then you’ve essentially said that you’ve made a checkbox but not given it any functionality.
-* Or if you do role="presentation", or role="search" on a button that does search, then that can’t be operated by someone who is a screen reader user [Matt please check]
-* Or if you put ARIA hidden on it, then it hides all of its children, it's no longer accessible.
+Using ARIA the wrong way can make accessibility worse ...
 
+## Examples
+
+* If you give an element a checkbox role, but don't provide keyboard support, then you’ve said that you’ve made a checkbox but not given it any functionality.
+* Or if you do role="presentation", or role="search" on a button that does search, then that can’t be operated by someone who is a screen reader user
+* Or if you put ARIA hidden on it, then it hides all of its children, it's no longer accessible.
+* ...
 
