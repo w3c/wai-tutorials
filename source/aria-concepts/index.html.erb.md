@@ -1,4 +1,4 @@
-﻿---
+---
 title: Developers’ Introduction to Essential ARIA Concepts
 tutorial_title: "ARIA Use Prerequisites"
 nav_title: Introduction
