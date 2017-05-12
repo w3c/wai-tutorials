@@ -4,6 +4,31 @@ successcriteria:
       desc: "All non-text content that is presented to the user has a text alternative that serves the equivalent purpose, except for the situations listed[…]."
       level: A
       slug: text-equiv-all
+  - 1.2.1:
+      desc: "For prerecorded audio-only and prerecorded video-only media, the following are true, except when the audio or video is a media alternative for text and is clearly labeled as such:<ul><li>Prerecorded Audio-only: An alternative for time-based media is provided that presents equivalent information for prerecorded audio-only content.</li><li>Prerecorded Video-only: Either an alternative for time-based media or an audio track is provided that presents equivalent information for prerecorded video-only content.</li></ul>"
+      level: A
+      title: Audio-only and Video-only (Prerecorded)
+      slug: media-equiv-av-only-alt
+  - 1.2.2:
+      desc: "Captions are provided for all prerecorded audio content in synchronized media, except when the media is a media alternative for text and is clearly labeled as such."
+      level: A
+      title: Captions (Prerecorded)
+      slug: media-equiv-captions
+  - 1.2.3:
+      desc: "An alternative for time-based media or audio description of the prerecorded video content is provided for synchronized media, except when the media is a media alternative for text and is clearly labeled as such."
+      level: A
+      title: Audio Descriotion or Media Alternative
+      slug: media-equiv-audio-desc
+  - 1.2.5:
+      desc: "Audio description is provided for all prerecorded video content in synchronized media."
+      level: AA
+      title: Audio Descriotion (Prerecorded)
+      slug: media-equiv-audio-desc-only
+  - 1.2.8:
+      desc: "Audio description is provided for all prerecorded video content in synchronized media."
+      level: AAA
+      title: Media Alternative (Prerecorded)
+      slug: media-equiv-text-doc
   - 1.3.1:
       desc: "Information, structure, and relationships conveyed through presentation can be programmatically determined or are available in text."
       level: A
