@@ -178,10 +178,15 @@ ul {
 	}
 }
 
-.inner a {
-	color: $w3c;
-	&:hover, &:visited {
-		color: $wai;
+.inner {
+	a {
+		color: $w3c;
+		&:hover, &:visited {
+			color: $wai;
+		}
+	}
+	>p>img {
+		max-width: 100%;
 	}
 }
 
