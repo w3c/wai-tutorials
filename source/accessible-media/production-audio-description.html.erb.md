@@ -3,7 +3,14 @@ title: Production options for audio descriptions
 order: 7
 status: editors-draft
 wcag_success_criteria:
-  - 1.2.2
+  - 1.2.3
+  - 1.2.5
+  - 1.2.7
+wcag_techniques:
+  - G8
+  - G78
+  - G159
+  - G203
 editors:
   - Geoff Freed
 contributors:

@@ -4,6 +4,9 @@ order: 2
 status: editors-draft
 wcag_success_criteria:
   - 1.2.2
+wcag_techniques:
+  - G87
+  - G93
 editors:
   - Geoff Freed
 contributors:
@@ -144,7 +147,7 @@ The genome is a storybook that's been edited
 ~~~
 
 {::nomarkdown}
-<%= code_start %>
+<%= code_end %>
 {:/nomarkdown}
 
 ...and the TTML markup for the same caption:
@@ -160,7 +163,7 @@ The genome is a storybook that's been edited<br />
 ~~~
 
 {::nomarkdown}
-<%= code_start %>
+<%= code_end %>
 {:/nomarkdown}
 
 ### Automatically generated captions

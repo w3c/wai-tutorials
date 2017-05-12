@@ -4,6 +4,8 @@ order: 5
 status: editors-draft
 wcag_success_criteria:
   - 1.2.2
+wcag_techniques:
+  - G87
 editors:
   - Geoff Freed
 contributors:
@@ -77,7 +79,7 @@ the language in the `label` attribute:
 ~~~html
 <video controls>
     <source src="myvideo.mp4" type="video/mp4" />
-        track kind="subtitles" src="my_italian_subtitles.vtt" srclang="en" label="Italian" default />
+    <track kind="subtitles" src="my_italian_subtitles.vtt" srclang="en" label="Italian" default />
 </video>
 ~~~
 

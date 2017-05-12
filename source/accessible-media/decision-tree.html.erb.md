@@ -1,10 +1,8 @@
 ---
-title: Captions and descriptions decision tree
-nav_title: Decision Tree
+title: Captions and descriptions decision trees
+nav_title: Decision Trees
 order: 9
 status: editors-draft
-wcag_success_criteria:
-  - 1.2.2
 editors:
   - Geoff Freed
 contributors:

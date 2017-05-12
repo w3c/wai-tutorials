@@ -24,6 +24,11 @@ successcriteria:
       level: AA
       title: Audio Descriotion (Prerecorded)
       slug: media-equiv-audio-desc-only
+  - 1.2.7:
+      desc: "Where pauses in foreground audio are insufficient to allow audio descriptions to convey the sense of the video, extended audio description is provided for all prerecorded video content in synchronized media."
+      level: AAA
+      title: Extended Audio Description (Prerecorded)
+      slug: media-equiv-extended-ad
   - 1.2.8:
       desc: "Audio description is provided for all prerecorded video content in synchronized media."
       level: AAA

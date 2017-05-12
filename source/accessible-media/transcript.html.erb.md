@@ -3,7 +3,11 @@ title: Transcript Concepts and Examples
 order: 6
 status: editors-draft
 wcag_success_criteria:
-  - 1.2.2
+  - 1.2.1
+  - 1.2.8
+wcag_techniques:
+  - G158
+  - G159
 editors:
   - Geoff Freed
 contributors:

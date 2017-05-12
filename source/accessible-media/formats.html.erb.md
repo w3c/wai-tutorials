@@ -4,6 +4,9 @@ order: 3
 status: editors-draft
 wcag_success_criteria:
   - 1.2.2
+wcag_techniques:
+  - G87
+  - H95
 editors:
   - Geoff Freed
 contributors:

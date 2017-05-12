@@ -4,6 +4,7 @@ order: 8
 status: editors-draft
 wcag_success_criteria:
   - 1.2.2
+  - 1.2.5
 editors:
   - Geoff Freed
 contributors:

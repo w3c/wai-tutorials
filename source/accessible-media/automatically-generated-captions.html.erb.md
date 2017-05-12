@@ -60,7 +60,6 @@ YouTube's auto-caption service as an example.
 <%= sample_end %>
 {:/nomarkdown}
 
-
 While authors cannot prevent YouTube from creating the auto-captions,
 the captions should always be disabled once the video has been uploaded
 so that users cannot turn them on. Read the [instructions for disabling
