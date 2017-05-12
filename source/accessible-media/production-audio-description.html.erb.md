@@ -11,8 +11,7 @@ contributors:
 support: Developed with support from the <a href="https://www.w3.org/WAI/@@/">@@ project</a>
 ---
 
-Description basics
-------------------
+## Description basics
 
 Audio descriptions can be open or closed:
 
@@ -43,8 +42,7 @@ one of two options:
     and one without. Authors give users a button or menu to switch from
     one track to the other.
 
-Pre-produced audio descriptions
--------------------------------
+## Pre-produced audio descriptions
 
 Describing a video can be a time-consuming and complex process,
 depending on the subject matter. Before beginning, take a look at the
@@ -59,9 +57,6 @@ exist to convey descriptions as text which are read aloud on the fly by
 screen readers or other text-to-speech (TTS) methods. [Read more about
 text-to-speech descriptions](#tts_dx).
 
-Here, a paragraph is missing…
-
-
 An excellent place to learn the basics about audio descriptions is [The
 Description Key](http://www.descriptionkey.org/). See [an
 example of a described
@@ -73,8 +68,7 @@ American Council of the Blind’s [Audio Description
 Project](http://www.acb.org/adp/).
 
 
-Production workflow: audio descriptions (human-recorded narration)
-------------------------------------------------------------------
+## Production workflow: audio descriptions (human-recorded narration)
 
 ### Basic workflow for creating pre-produced audio descriptions:
 
@@ -123,8 +117,7 @@ highest-quality audio files possible. Keep these points in mind:
     program-audio level to its proper setting. Repeat this process
     (known as "ducking") for every description instance.
 
-Production workflow: audio descriptions (TTS narration)
--------------------------------------------------------
+## Production workflow: audio descriptions (TTS narration)
 
 TTS descriptions are not pre-recorded. Instead, they are transmitted at
 the proper intervals to users during playback, and are read aloud by the

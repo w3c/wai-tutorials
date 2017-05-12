@@ -10,8 +10,7 @@ contributors:
   - The Education and Outreach Working Group (<a href="https://www.w3.org/WAI/EO/">EOWG</a>)
 support: Developed with support from the <a href="https://www.w3.org/WAI/@@/">@@ project</a>
 ---
-The basics of automatic captions
---------------------------------
+## The basics of automatic captions
 
 Tools exist today that use sophisticated speech-to-text (STT) technology
 to turn a program's soundtrack into a timed caption file, ready for
@@ -31,8 +30,7 @@ results in poor-quality captions that often contain...
 -   missing capitalization;
 -   occasional obscenities.
 
-Using automatic captions responsibly {#auto_cc_use}
-------------------------------------
+## Using automatic captions responsibly
 
 **Automatically generated captions should never be used as the sole
 method to produce captions.** However, they can be used as a first-pass

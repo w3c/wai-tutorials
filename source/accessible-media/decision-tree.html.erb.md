@@ -12,8 +12,7 @@ contributors:
 support: Developed with support from the <a href="https://www.w3.org/WAI/@@/">@@ project</a>
 ---
 
-Captions
---------
+## Captions
 
 <ul class="decision-tree">
   <li><strong>Does the media contain audio?</strong>

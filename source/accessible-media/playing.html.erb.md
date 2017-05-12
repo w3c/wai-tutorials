@@ -11,10 +11,9 @@ contributors:
 support: Developed with support from the <a href="https://www.w3.org/WAI/@@/">@@ project</a>
 ---
 
-Captions {#cc_support}
---------
+## Captions
 
-### Desktop-browser media players {#cc_support_desktop}
+### Desktop-browser media players
 
 All modern Web browsers will provide default media players for embedded
 media when they detect the `video` or `audio` elements, and all will
@@ -28,7 +27,7 @@ showing the CC button for toggling captions on and off.
 ![Captions playing in the embedded Chrome video
 player.](am-chrome-captions.png)
 
-### Mobile-browser video players {#cc_support_mobile}
+### Mobile-browser video players
 
 Mobile browsers support captions via the `track` element, just like
 their desktop counterparts, but the presentation mode will vary:
@@ -40,8 +39,7 @@ their desktop counterparts, but the presentation mode will vary:
     Embedded video and audio clips will play within Web pages on the
     iPad. iPhones will play all media clips using the QuickTime player.
 
-Audio descriptions in native desktop- and mobile-browser media players {#ad_support}
-----------------------------------------------------------------------
+## Audio descriptions in native desktop- and mobile-browser media players
 
 No desktop or mobile browsers provide native support for closed audio
 descriptions in a manner that is similar to closed captions. Therefore,
@@ -55,8 +53,7 @@ following methods:
     and one without. Authors give users a button or menu to toggle from
     one track to the other.
 
-User customization of captions {#cc_custom}
-------------------------------
+## User customization of captions
 
 Many online media players, on both desktop and mobile platforms, give
 users a wide variety of caption-customization options. For example,
@@ -71,6 +68,7 @@ player.
 
 ![YouTube's caption-styling options: font family, font color, font size,
 and others.](yt_cc_options.png)
+
 Some custom mobile players-- those embedded in Web pages as well as
 stand-alone media players-- also provide styling options from within the
 applications themselves. See the [mobile player used on the CNN Web

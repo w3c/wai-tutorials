@@ -10,8 +10,7 @@ contributors:
   - The Education and Outreach Working Group (<a href="https://www.w3.org/WAI/EO/">EOWG</a>)
 support: Developed with support from the <a href="https://www.w3.org/WAI/@@/">@@ project</a>
 ---
-Caption formats {#cc_formats}
----------------
+## Caption formats
 
 Nearly all modern user agents (browsers, media players) on both desktop
 and mobile platforms provide support for the display of closed captions,
@@ -65,8 +64,7 @@ alongside the video data in the delivery stream, rather than being
 embedded directly into the video file), and are synchronized and
 displayed by the user agent at the time of playback.
 
-Delivering captions to viewers {#cc_delivery}
-------------------------------
+## Delivering captions to viewers
 
 Captions are delivered to viewers using HTML5's `track` element, which
 was created specifically for carrying text tracks, such as captions,

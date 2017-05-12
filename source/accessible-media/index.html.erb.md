@@ -26,8 +26,7 @@ distributed online, for playback on desktop or mobile devices. Other
 accessibility techniques, such as transcripts and foreign-language
 subtitles, will also be included in the discussion.
 
-Common methods for making media accessible.
--------------------------------------------
+## Common methods for making media accessible.
 
 -   **Audio descriptions**: An extra track of narration that conveys
     information about important on-screen elements, such as body
@@ -47,8 +46,7 @@ Common methods for making media accessible.
     words can selected by the user in order to move to that spot in the
     video.
 
-Quality considerations {#quality}
-----------------------
+## Quality considerations
 
 The quality of the captions and descriptions that are delivered to users
 is of high importance. In the same way that low-quality, incomplete
@@ -59,8 +57,7 @@ audio descriptions that provide misleading or inaccurate information, or
 which provide unnecessary detail (e.g., by giving away clues or
 answers), are of no use to viewers who are blind or visually impaired.
 
-Why is this important?
-----------------------
+## Why is this important?
 
 Without captions, users who are deaf or hard of hearing will not be able
 to understand the audio portion of a media presentation. And without

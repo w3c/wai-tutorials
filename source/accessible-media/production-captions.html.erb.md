@@ -10,8 +10,8 @@ contributors:
   - The Education and Outreach Working Group (<a href="https://www.w3.org/WAI/EO/">EOWG</a>)
 support: Developed with support from the <a href="https://www.w3.org/WAI/@@/">@@ project</a>
 ---
-Caption basics {#cc_basics}
---------------
+
+## Caption basics
 
 Captions are intended for people who are deaf or hard of hearing. They
 can be open or closed:
@@ -45,8 +45,7 @@ missing from the presentation. In this situation, provide a brief
 caption at the beginning of the presentation that indicates that no
 audio is provided.
 
-Production workflow: pre-produced captions
-------------------------------------------
+## Production workflow: pre-produced captions
 
 From an authoring standpoint, captions are simply text presented through
 markup that contains timing information and positioning codes. There are
@@ -60,7 +59,9 @@ captions.
 
 ### Basic workflow for creating pre-produced captions (for playback on desktop or mobile platforms):
 
-Example:
+{::nomarkdown}
+<%= sample_start %>
+{:/nomarkdown}
 
 1.  **Enter caption text into the editor**<br>
     Transcribe the audio directly into the caption editor or, if
@@ -80,13 +81,17 @@ Example:
     Export the captions in the target format. See [caption formats and
     examples](page2.html) for more information.
 
+{::nomarkdown}
+<%= sample_end %>
+{:/nomarkdown}
+
 
 Below is an image of a caption editor showing how captions have been
 formatted and timestamped.
 
 ![A caption editor showing timestamped caption text.](timecodes.png)
 
-### Caption quality {#cc_quality}
+### Caption quality
 
 Always provide the highest-quality captions that convey 100% accuracy.
 See [resources for writing quality captions](#cc_resources) for more
@@ -104,7 +109,7 @@ captions:
 -   Do not censor: the captions should always accurately represent what
     is spoken.
 
-### A word about styling captions {#cc_style}
+### A word about styling captions
 
 Most caption-creation tools give authors the ability to style captions
 in a number of ways: e.g., adding color to the text or background,
@@ -146,15 +151,14 @@ The genome is a storybook that's been edited<br />
 <span tts:fontWeight="bold">for a couple billion years.</span></p>
 ~~~
 
-### Automatically generated captions {#autocaps}
+### Automatically generated captions
 
 Automatically generated captions should **never** be used as the sole
 method to produce captions, but they can be a part of the production
 workflow. See the [discussion about automatic captions](page3.html) for
 more information.
 
-Resources for writing quality captions {#cc_resources}
---------------------------------------
+## Resources for writing quality captions
 
 The importance of presenting users with high-quality, accurate captions
 cannot be overemphasized. Use the guidelines below to help create

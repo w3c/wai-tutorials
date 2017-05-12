@@ -11,8 +11,7 @@ contributors:
 support: Developed with support from the <a href="https://www.w3.org/WAI/@@/">@@ project</a>
 ---
 
-Subtitle basics {#sub_basics}
----------------
+## Subtitle basics
 
 Subtitles (also known as foreign-language subtitles) are, from a
 technical perspective, similar to captions: they are text (or sometimes
@@ -38,8 +37,7 @@ other symbols. The bitmaps themselves can still be transmitted using
 markup, though, by using [TTML Profiles for Internet Media Subtitles and
 Captions 1.0 (IMSC1)](https://www.w3.org/TR/ttml-imsc1/).
 
-Differences between subtitles and captions {#cc_sub_diffs}
-------------------------------------------
+## Differences between subtitles and captions
 
 Subtitles are not the same as captions, nor are they aimed at the same
 audiences. Here are some of the basic differences.
@@ -65,8 +63,7 @@ audiences. Here are some of the basic differences.
 	</tr>
 </table>
 
-Delivering subtitles to viewers {#sub_delivery}
--------------------------------
+##Delivering subtitles to viewers
 
 Subtitles are delivered to viewers using HTML5's `<track>` element.
 `<track>` is used as a child element of the `<video>` element. Be sure

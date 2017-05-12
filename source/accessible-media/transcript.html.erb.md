@@ -11,8 +11,7 @@ contributors:
 support: Developed with support from the <a href="https://www.w3.org/WAI/@@/">@@ project</a>
 ---
 
-Transcript basics
------------------
+## Transcript basics
 
 A transcript is a textual version of a program's audio track. They have
 a wide variety of uses:
@@ -30,8 +29,7 @@ selected by the user in order to move to that spot in the video. See [an
 example of an interactive
 transcript](https://www.w3.org/WAI/perspectives/keyboard.html).
 
-Creating and presenting a transcript
-------------------------------------
+## Creating and presenting a transcript
 
 Most caption-editing tools provide an option to export a plain-text
 transcript (that is, one that is stripped of all timing, positioning and
@@ -90,7 +88,6 @@ of a simple interview (one host, one guest):
     <p><strong>Giles:</strong>  Elsewhere in the conference I bumped into Shawn Henry of the World Wide Web Consortium, the guiding body of the Web. I called her after the conference to ask about the new guidelines from the Web Accessibility Initiative, or WAI, known as WCAG 2.0. I began by asking her why we needed an update when most people haven't yet got to grips with the current guidelines.</p>
 
     <p><strong>Shawn:</strong>  WCAG 2.0 will be much more appropriate for current and future Web development.  WCAG 1.0 was finalized in May of 1999 and it focused on HTML. Obviously a lot has changed since then. WCAG 2.0 is focused on applying more broadly to different technologies and is updated for the state of Web technology currently, as well as designed so that it can apply more relevantly as technology develops in the future.</p>
-
 ...
 </div>
 ~~~
