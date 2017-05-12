@@ -71,7 +71,9 @@ was created specifically for carrying text tracks, such as captions,
 subtitles and [text-based audio descriptions](g). `track` is used as a
 child element of the `video` element:
 
-Code snippet:
+{::nomarkdown}
+<%= code_start %>
+{:/nomarkdown}
 
 ~~~html
 <video controls>
@@ -79,3 +81,7 @@ Code snippet:
         <track kind="captions" src="myvideo_captions.vtt" srclang="en" label="Captions" default />
 </video>
 ~~~
+
+{::nomarkdown}
+<%= code_end %>
+{:/nomarkdown}

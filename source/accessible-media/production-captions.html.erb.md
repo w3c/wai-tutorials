@@ -132,7 +132,9 @@ caption-authoring tool.
 row of text is bold.](text_bold.png)
 And here is the WebVTT markup for that caption...
 
-Code snippet:
+{::nomarkdown}
+<%= code_start %>
+{:/nomarkdown}
 
 ~~~html
 1
@@ -141,15 +143,25 @@ The genome is a storybook that's been edited
 <b>for a couple billion years.</b>
 ~~~
 
+{::nomarkdown}
+<%= code_start %>
+{:/nomarkdown}
+
 ...and the TTML markup for the same caption:
 
-Code snippet:
+{::nomarkdown}
+<%= code_start %>
+{:/nomarkdown}
 
 ~~~html
 <p xml:id="s_1" begin="00:00:00.67" end="00:00:06.67">
 The genome is a storybook that's been edited<br />
 <span tts:fontWeight="bold">for a couple billion years.</span></p>
 ~~~
+
+{::nomarkdown}
+<%= code_start %>
+{:/nomarkdown}
 
 ### Automatically generated captions
 

@@ -70,8 +70,9 @@ Subtitles are delivered to viewers using HTML5's `<track>` element.
 to set the value of the `kind` attribute to `"subtitles"` and to specify
 the language in the `label` attribute:
 
-
-Code snippet:
+{::nomarkdown}
+<%= code_start %>
+{:/nomarkdown}
 
 ~~~html
 <video controls>
@@ -79,6 +80,10 @@ Code snippet:
         track kind="subtitles" src="my_italian_subtitles.vtt" srclang="en" label="Italian" default />
 </video>
 ~~~
+
+{::nomarkdown}
+<%= code_end %>
+{:/nomarkdown}
 
 In some cases, it may be necessary to use captions and subtitles
 together: for example, if an important sound effect is used in the audio

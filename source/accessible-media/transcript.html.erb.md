@@ -78,6 +78,9 @@ Transcripts can be presented to users in a number of ways:
 Here's an example of markup that could be used to present a transcript
 of a simple interview (one host, one guest):
 
+{::nomarkdown}
+<%= code_start %>
+{:/nomarkdown}
 
 ~~~html
 <div id="main">
@@ -91,3 +94,7 @@ of a simple interview (one host, one guest):
 ...
 </div>
 ~~~
+
+{::nomarkdown}
+<%= code_end %>
+{:/nomarkdown}
