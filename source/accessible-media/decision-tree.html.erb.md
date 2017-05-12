@@ -1,7 +1,7 @@
 ---
 title: Captions and descriptions decision tree
 nav_title: Decision Tree
-order: 8
+order: 9
 status: editors-draft
 wcag_success_criteria:
   - 1.2.2
