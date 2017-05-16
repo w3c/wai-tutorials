@@ -1,5 +1,6 @@
 ---
 title: Subtitle concepts and examples
+nav_title: Subtitles
 order: 5
 status: editors-draft
 wcag_success_criteria:

@@ -1,5 +1,6 @@
 ---
 title: Transcript Concepts and Examples
+nav_title: Transcripts
 order: 6
 status: editors-draft
 wcag_success_criteria:

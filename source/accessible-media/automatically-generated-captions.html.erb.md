@@ -1,5 +1,6 @@
 ---
 title: Automatically generated captions
+nav_title: Automatic Captions
 order: 4
 status: editors-draft
 wcag_success_criteria:

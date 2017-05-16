@@ -1,5 +1,6 @@
 ---
 title: Production options for audio descriptions
+nav_title: Audio descriptions
 order: 7
 status: editors-draft
 wcag_success_criteria:

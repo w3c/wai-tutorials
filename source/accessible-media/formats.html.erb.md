@@ -1,5 +1,6 @@
 ---
 title: Caption formats and examples
+nav_title: Caption formats
 order: 3
 status: editors-draft
 wcag_success_criteria:
