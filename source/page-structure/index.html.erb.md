@@ -33,7 +33,7 @@ Well-structured content allows more efficient navigation and processing. Use HTM
 
 Pages with well-structured content are essential for many web users, for example:
 
-* **People with cognitive and learning disabilities** are more easily find and prioritize content on the page.
+* **People with cognitive and learning disabilities** can more easily find and prioritize content on the page.
 * **People using screen readers** can skip to the main content directly and navigate to sections that are important to them.
 * **Keyboard users** can browse pages and their sections more efficiently. Otherwise, users have press the tab key  multiple times to navigate through all links in each section.
 * **People using software that only shows the main content** of a web page, such as people with cognitive disabilities, will receive better results if the page structure is correctly marked up.
