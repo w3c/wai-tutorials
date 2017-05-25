@@ -22,7 +22,7 @@ process](https://support.google.com/youtube/answer/3038280), something
 many authors do not know. [Automatic captions are available in a number
 of languages](https://support.google.com/youtube/answer/6373554?hl=en).
 However, the accuracy of these captions is frequently quite low and
-results in poor-quality captions that often contain...
+results in poor-quality captions that often contain…
 
 -   text that does not match words spoken in the audio;
 -   poor timing (e.g., captions that do not appear synchronously with
@@ -30,14 +30,14 @@ results in poor-quality captions that often contain...
 -   spelling errors;
 -   little or no punctuation;
 -   missing capitalization;
--   occasional obscenities.
+-   occasional obscenities (swears, for example).
 
 ## Using automatic captions responsibly
 
 **Automatically generated captions should never be used as the sole
 method to produce captions.** However, they can be used as a first-pass
 or rough-draft effort in the workflow to create an [accurate,
-high-quality caption track](page1a.html). Below is a sample workflow for
+high-quality caption track](production-captions.html). Below is a sample workflow for
 using auto-captions as part of the caption-production process, using
 YouTube's auto-caption service as an example.
 

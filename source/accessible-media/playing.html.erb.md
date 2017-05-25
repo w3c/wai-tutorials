@@ -44,9 +44,7 @@ their desktop counterparts, but the presentation mode will vary:
 
 ## Audio descriptions in native desktop- and mobile-browser media players
 
-No desktop or mobile browsers provide native support for closed audio
-descriptions in a manner that is similar to closed captions. Therefore,
-most audio-described videos are delivered to viewers using one of the
+Most audio-described videos are delivered to viewers using one of the
 following methods:
 
 -   Two separate videos, one with open descriptions, and the other with
@@ -64,7 +62,7 @@ users can specify caption-font colors, font types and sizes, and
 background colors or transparency levels. Note that in any player on any
 operating system, the settings chosen by the user will override any
 author-specified styling characteristics (see further [comments about
-author styling of captions](page1a.html#cc_style)).
+author styling of captions](production-captions.html#a-word-about-styling-captions)).
 
 Below is an image showing caption-styling options in the YouTube desktop
 player.

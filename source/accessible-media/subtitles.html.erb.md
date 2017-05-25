@@ -39,7 +39,7 @@ In instances where subtitles cannot be presented using true text, they
 can instead be presented as bitmaps: in other words, pictures of text or
 other symbols. The bitmaps themselves can still be transmitted using
 markup, though, by using [TTML Profiles for Internet Media Subtitles and
-Captions 1.0 (IMSC1)](https://www.w3.org/TR/ttml-imsc1/).
+Captions 1.0 (IMSC1)](https://www.w3.org/TR/ttml-imsc1/). Keep in mind that bitmap captions cannot be customized, which may diminish their usefulness to viewers with certain types of visual impairments.  Learn more about [why caption customization is important](production-captions.html#custom_cc).
 
 ## Differences between subtitles and captions
 

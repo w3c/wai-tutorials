@@ -19,7 +19,7 @@ support: Developed with support from the <a href="https://www.w3.org/WAI/WCAGTA/
 
 Nearly all modern user agents (browsers, media players) on both desktop
 and mobile platforms provide support for the display of closed captions,
-but not all support the same caption-delivery formats. The two most
+but not all support the same caption-delivery formats. The three most
 common formats used for online media are listed below.
 
 -   [Timed Text Markup Language
@@ -27,7 +27,11 @@ common formats used for online media are listed below.
 -   [Web Video Text Tracks (WebVTT)](https://w3c.github.io/webvtt/)
 -   [SRT](https://matroska.org/technical/specs/subtitles/srt.html)
 
-The table below shows which formats are supported by which browsers.
+Captions can be displayed by most modern media players on desktop and mobile platforms, in standalone applications as well as in Web browsers:
+
+-   Standalone players typically support WebVTT and/or TTML.
+-   Streaming media services typically use TTML to convey captions to users.
+-   Web browsers support various caption formats, as shown in the table below.
 
 
 <table>
