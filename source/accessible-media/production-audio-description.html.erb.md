@@ -14,9 +14,10 @@ wcag_techniques:
   - G203
 editors:
   - Geoff Freed
+  - Judy Brewer
 contributors:
   - The Education and Outreach Working Group (<a href="https://www.w3.org/WAI/EO/">EOWG</a>)
-support: Developed with support from the <a href="https://www.w3.org/WAI/@@/">@@ project</a>
+support: Developed with support from the <a href="https://www.w3.org/WAI/WCAGTA/">U.S. Access Board, WCAG TA Project</a>
 ---
 
 ## Description basics
