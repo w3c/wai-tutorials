@@ -34,15 +34,14 @@ There are three ways to present captions to viewers:
 -   **Pop-on**: Captions which appear in discrete blocks, usually
     containing 1-3 rows of text. These are normally created for
     pre-produced material, and are used in the majority of captioned
-    online videos. See [an example of pop-on
-    captions](https://www.w3.org/WAI/perspectives/captions.html).
+    online videos.<br />
+    [![An example of pop-on captions.](cc_perspectives.png)](/WAI/perspectives/captions.html)
 -   **Roll-up**: Captions which scroll up, one row at a time, onto the
     screen. These are normally created for live programming, but can
-    also be used for pre-produced material. See [an example of roll-up
-    captions](g).
--   **Paint-on**: Text that appears to "paint" onto the screen, one
-    character at a time, as the data are received. Roll-up captions are
-    usually composed of rows of paint-on captions.
+    also be used for pre-produced material.<br />
+    [![An example of roll-up captions.](roll-up.png)](http://ncamftp.wgbh.org/sp/wai/roll-up_cc.mp4)
+-   **Paint-on**: Text that appears to "paint" onto the screen, one character at a time, as the data are received. Typically, when one row of captions finishes painting onto the screen, the row scrolls up and a new row begins paint onto the screen.<br />
+    [![An example of paint-on captions.](paint-on.png)](http://ncamftp.wgbh.org/sp/wai/paint-on_cc.mp4)
 
 Note that if a video has no narration or dialog, it is important to
 indicate this to viewers so they do not think that captions are simply
@@ -84,7 +83,7 @@ captions.
     happening on-screen.
 5.  **Export a caption file**<br>
     Export the captions in the target format. See [caption formats and
-    examples](page2.html) for more information.
+    examples](formats.html) for more information.
 
 {::nomarkdown}
 <%= sample_end %>
@@ -99,7 +98,7 @@ formatted and timestamped.
 ### Caption quality
 
 Always provide the highest-quality captions that convey 100% accuracy.
-See [resources for writing quality captions](#cc_resources) for more
+See [resources for writing quality captions](#resources-for-writing-quality-captions) for more
 information. Keep the following basic points in mind when writing
 captions:
 
@@ -119,16 +118,16 @@ captions:
 Most caption-creation tools give authors the ability to style captions
 in a number of ways: e.g., adding color to the text or background,
 specifying different font faces and sizes, etc. While [commonly used
-formats](page2.html#cc_formats) (such as WebVTT and TTML) contain
+formats](formats.html#caption-formats) (such as WebVTT and TTML) contain
 styling markup, most media players on both desktop and mobile platforms
 **do not** yet support all styling features reliably or consistently.
 Therefore, unless the target player is known in advance to support
 specific caption style attributes, it is usually best to avoid using
 styling markup to present captions and to rely instead on the browser's
 default presentation style (usually white characters on a black box).
-Note that many media players give users the option to [customize
-captions to personal preferences](page7.html#cc_custom), and these
-preferences always override author styling.
+
+Note that many media players give users the option to [customize captions to personal preferences](playing.html#user-customization-of-captions), and these preferences always override author styling. For some users, customizing captions is essential, not just an enhancement:  styling captions in specific manners (for example, yellow text over a black background, with a very large font size) may be the only way for them to make the text readable.
+{:#cutom_cc}
 
 Below is an image showing how bold text can be added to captions in a
 caption-authoring tool.
@@ -172,7 +171,7 @@ The genome is a storybook that's been edited<br />
 
 Automatically generated captions should **never** be used as the sole
 method to produce captions, but they can be a part of the production
-workflow. See the [discussion about automatic captions](page3.html) for
+workflow. See the [discussion about automatic captions](automatically-generated-captions.html) for
 more information.
 
 ## Resources for writing quality captions
@@ -181,8 +180,8 @@ The importance of presenting users with high-quality, accurate captions
 cannot be overemphasized. Use the guidelines below to help create
 captions that are informative and easy to read.
 
--   [DCMP Captioning
+-   [<abbr title="Described and Captioned Media Program">DCMP</abbr> Captioning
     Key](http://www.captioningkey.org/quality_captioning.html)
--   [DCMP Captioning Tip Sheet](https://www.dcmp.org/ai/225/)
+-   [<abbr title="Described and Captioned Media Program">DCMP</abbr> Captioning Tip Sheet](https://www.dcmp.org/ai/225/)
 -   [Captioning
     FAQ](http://main.wgbh.org/wgbh/pages/mag/services/captioning/faq/sugg-styles-conv-faq.html)
