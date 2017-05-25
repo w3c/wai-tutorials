@@ -17,12 +17,12 @@ successcriteria:
   - 1.2.3:
       desc: "An alternative for time-based media or audio description of the prerecorded video content is provided for synchronized media, except when the media is a media alternative for text and is clearly labeled as such."
       level: A
-      title: Audio Descriotion or Media Alternative
+      title: Audio Description or Media Alternative
       slug: media-equiv-audio-desc
   - 1.2.5:
       desc: "Audio description is provided for all prerecorded video content in synchronized media."
       level: AA
-      title: Audio Descriotion (Prerecorded)
+      title: Audio Description (Prerecorded)
       slug: media-equiv-audio-desc-only
   - 1.2.7:
       desc: "Where pauses in foreground audio are insufficient to allow audio descriptions to convey the sense of the video, extended audio description is provided for all prerecorded video content in synchronized media."
