@@ -18,16 +18,13 @@ support: Developed with support from the <a href="https://www.w3.org/WAI/WCAGTA/
 
 ## Caption basics
 
-Captions are intended for people who are deaf or hard of hearing. They
-can be open or closed:
+Captions were invented for people who are deaf or hard of hearing, although they are [recognized to benefit many audiences](concepts.html#cc+ad_purpose). They can be open or closed:
 
 -   **Closed captions** can be hidden and revealed by users, typically
     by operating a button or menu on the player's control bar.
 -   **Open captions** are visible to everyone and cannot be turned off.
 
-Captions always reflect dialog and narration, and are always written in
-the same language as the audio. They also contain important **non-speech
-information**, such as sound effects or speaker cues.
+Captions always reflect dialog and narration, and are always written in the same language as the audio ([subtitles](subtitles.html), on the other hand, are a translation of the audio into another language). They also contain important **non-speech information**, such as sound effects or speaker cues.
 
 There are three ways to present captions to viewers:
 
@@ -51,17 +48,12 @@ audio is provided.
 
 ## Production workflow: pre-produced captions
 
-From an authoring standpoint, captions are simply text presented through
+From a technical perspective, captions are simply text presented through
 markup that contains timing information and positioning codes. There are
 a variety of do-it-yourself tools available for creating captions for
-pre-produced video and audio clips. (Live or real-time captions are
-created on the fly at the time of transmission or broadcast, and require
-the highly developed skills of trained stenographers. They are not for
-do-it-yourselfers.) For large quantities of material, though, it may be
-more time and cost efficient to hire a caption agency to produce the
-captions.
+pre-produced video and audio clips.
 
-### Basic workflow for creating pre-produced captions (for playback on desktop or mobile platforms):
+### Basic workflow for creating pre-produced captions:
 
 {::nomarkdown}
 <%= sample_start %>
@@ -115,16 +107,7 @@ captions:
 
 ### A word about styling captions
 
-Most caption-creation tools give authors the ability to style captions
-in a number of ways: e.g., adding color to the text or background,
-specifying different font faces and sizes, etc. While [commonly used
-formats](formats.html#caption-formats) (such as WebVTT and TTML) contain
-styling markup, most media players on both desktop and mobile platforms
-**do not** yet support all styling features reliably or consistently.
-Therefore, unless the target player is known in advance to support
-specific caption style attributes, it is usually best to avoid using
-styling markup to present captions and to rely instead on the browser's
-default presentation style (usually white characters on a black box).
+Most caption-creation tools give authors the ability to style captions in a number of ways: e.g., adding color to the text or background, specifying different font faces and sizes, etc. While it is possible to add styling information to captions, the support in browsers and other media players varies. If the media is produced for a specific player, style the captions to that player’s capabilities.  Otherwise, rely instead on the player's default presentation style (usually white characters on a black box).
 
 Note that many media players give users the option to [customize captions to personal preferences](playing.html#user-customization-of-captions), and these preferences always override author styling. For some users, customizing captions is essential, not just an enhancement:  styling captions in specific manners (for example, yellow text over a black background, with a very large font size) may be the only way for them to make the text readable.
 {:#cutom_cc}

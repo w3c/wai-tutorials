@@ -19,15 +19,8 @@ contributors:
   - The Education and Outreach Working Group (<a href="https://www.w3.org/WAI/EO/">EOWG</a>)
 support: Developed with support from the <a href="https://www.w3.org/WAI/WCAGTA/">U.S. Access Board, WCAG TA Project</a>
 ---
-Captions make online video and audio clips accessible to people who are
-deaf or hard of hearing. Audio descriptions make online media accessible
-to people who are blind or visually impaired. This tutorial will
-demonstrate how to add captions and audio descriptions to media
-distributed online, for playback on desktop or mobile devices. Other
-accessibility techniques, such as transcripts and foreign-language
-subtitles, will also be included in the discussion.
-
-## Common methods for making media accessible.
+Captions and audio descriptions make online media accessible to people who have disabilities. This tutorial will demonstrate how to add captions and audio descriptions to online media.  Other accessibility techniques, such as transcripts and foreign-language subtitles, are included in the discussion.  Here are brief definitions of these media-accessibility approaches.
+{:#cc+ad_purpose}
 
 -   **Audio descriptions**: An extra track of narration that conveys
     information about important on-screen elements, such as body
@@ -60,13 +53,10 @@ answers), are of no use to viewers who are blind or visually impaired.
 
 ## Why is this important?
 
-Without captions, users who are deaf or hard of hearing will not be able
-to understand the audio portion of a media presentation. And without
-audio descriptions, users who are blind or visually impaired will not
-know about important visual elements during a video presentation. But
-captions and descriptions have benefits beyond their original target
+Besides providing crucial communication access for viewers who are deaf, hard of hearing, blind or visually impaired, captions and descriptions have benefits beyond their original target
 audiences:
 
+-   Both captions and descriptions can be used to help students and adults with cognitive disabilities engage more directly with media, helping to focus attention or to provide comprehension support.
 -   Captions are useful when teaching children and adults how to read,
     or to help people learn a foreign language.
 -   Captions can be used by all people: for example, in noisy
@@ -77,6 +67,8 @@ audiences:
 -   Audio descriptions can be used to reinforce complex visual concepts,
     especially for children or adults with learning disabilities.
 
+In some cases, captions and descriptions may be the only means by which users can access any information at all from video or audio clips.
+
 For a quick overview on determining whether or not captions and audio
 descriptions are necessary, see the [caption/description decision
-tree](g).
+tree](decision-tree.html).
