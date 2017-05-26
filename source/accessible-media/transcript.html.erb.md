@@ -33,7 +33,7 @@ Transcripts can be static documents or they can be interactive: e.g.,
 words can be highlighted automatically as they are spoken, or words can
 selected by the user in order to move to that spot in the video.
 
-[![An example of an interactive transcript.](xcr_perspectives.png)](/WAI/perspectives/keyboard.html)
+[![An example of an interactive transcript.](xcr_perspectives.png)](https://www.w3.org/WAI/perspectives/keyboard.html)
 
 ## Creating and presenting a transcript
 

@@ -32,7 +32,7 @@ There are three ways to present captions to viewers:
     containing 1-3 rows of text. These are normally created for
     pre-produced material, and are used in the majority of captioned
     online videos.<br />
-    [![An example of pop-on captions.](cc_perspectives.png)](/WAI/perspectives/captions.html)
+    [![An example of pop-on captions.](cc_perspectives.png)](https://www.w3.org/WAI/perspectives/captions.html)
 -   **Roll-up**: Captions which scroll up, one row at a time, onto the
     screen. These are normally created for live programming, but can
     also be used for pre-produced material.<br />
