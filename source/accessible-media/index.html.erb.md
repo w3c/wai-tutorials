@@ -5,7 +5,7 @@ nav_title: Concepts
 order: 1
 topic_order: 4
 type: intro
-status: editors-draft
+status: draft
 wcag_success_criteria:
   - 1.2.1
   - 1.2.2

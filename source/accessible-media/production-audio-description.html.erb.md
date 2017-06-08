@@ -2,7 +2,7 @@
 title: Production options for audio descriptions
 nav_title: Audio descriptions
 order: 7
-status: editors-draft
+status: draft
 wcag_success_criteria:
   - 1.2.3
   - 1.2.5

@@ -2,7 +2,7 @@
 title: Production options for captions
 nav_title: Captions
 order: 2
-status: editors-draft
+status: draft
 wcag_success_criteria:
   - 1.2.2
 wcag_techniques:

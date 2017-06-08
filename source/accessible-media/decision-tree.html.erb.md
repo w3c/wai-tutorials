@@ -2,7 +2,7 @@
 title: Captions and descriptions decision trees
 nav_title: Decision Trees
 order: 9
-status: editors-draft
+status: draft
 editors:
   - Geoff Freed
   - Judy Brewer

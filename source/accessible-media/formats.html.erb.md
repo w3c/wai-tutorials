@@ -2,7 +2,7 @@
 title: Caption formats and examples
 nav_title: Caption formats
 order: 3
-status: editors-draft
+status: draft
 wcag_success_criteria:
   - 1.2.2
 wcag_techniques:
