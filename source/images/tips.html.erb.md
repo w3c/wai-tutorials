@@ -23,6 +23,8 @@ support: Developed with support from the <a href="https://www.w3.org/WAI/ACT/">W
 
 -   **Length of the text alternative:** <br>
     The `alt` text should be the most concise description possible of the image’s purpose. If anything more than a short phrase or sentence is needed, it would be better to use one of the long description methods discussed in [complex images](complex.html).
+    
+-   **Responsive design:** On smaller screens, icons often drop text labels. Ensure that icons are readable at that size, understandable without text, and have text descriptions.
 
 -   **Punctuation within `alt` attributes:**
 
