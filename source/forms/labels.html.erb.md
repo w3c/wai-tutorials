@@ -270,6 +270,6 @@ In left-to-right languages, it is customary to visually position labels to the r
 
 In general, placing labels above the form fields helps reduce horizontal scrolling for people with low vision and mobile device users. However, the usefulness of this approach depends on other design aspects, such as the proximity of other nearby form fields and content, and needs to be assessed individually. The aim should be to maintain a close and distinct visual relationship between the label and the form control.
 
-** Form field controls for mobile
+## Form field controls for mobile
 
-HTML 5 form field controls should be used to automatically show the virtual keyboard. Placing labels above form fields is ideal for mobile layouts. On smaller screens, field labels may drop completely. Ensure that fields have text descriptions.
+HTML5 form field controls should be used to automatically show the virtual keyboard. Placing labels above form fields is ideal for mobile layouts. On smaller screens, field labels may drop completely. Ensure that fields have text descriptions.
