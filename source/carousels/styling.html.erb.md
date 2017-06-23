@@ -119,3 +119,7 @@ A [working demo example](working-example.html) for this code is available.
 {::nomarkdown}
 <%= demo :end %>
 {:/}
+
+## For smaller screens
+
+Make sure carousel text is not too small or cut off from view. Also, make sure touch access works well on the small dots that control the slides.
