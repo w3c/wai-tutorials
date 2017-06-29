@@ -188,6 +188,7 @@ Array.prototype.forEach.call(menuItems1, function(el, i){
 {:/nomarkdown}
 
 ~~~ js
+var menuItems = document.querySelectorAll('li.has-submenu');
 Array.prototype.forEach.call(menuItems, function(el, i){
 	el.addEventListener("mouseover", function(event){
 		this.className = "has-submenu open";
