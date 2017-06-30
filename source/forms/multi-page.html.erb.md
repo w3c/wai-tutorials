@@ -93,7 +93,9 @@ HTML5 provides a `progress` element that can be used to inform users about the p
 
 Survey <progress max="7" value="1">(Step 1 of circa 7)</progress><br>
 
-Survey <progress max="7" value="3">(Step 3 of circa 7)</progress><br>
+Survey <progress max="7" value="2">(Step 2 of circa 7)</progress><br>
+
+[…]
 
 Survey <progress max="7" value="6">(Step 6 of circa 7)</progress><br>
 
@@ -132,7 +134,9 @@ progress::-moz-progress-bar {
 ~~~ html
 Survey <progress max="7" value="1">(Step 1 of circa 7)</progress><br>
 
-Survey <progress max="7" value="3">(Step 3 of circa 7)</progress><br>
+Survey <progress max="7" value="2">(Step 2 of circa 7)</progress><br>
+
+[…]
 
 Survey <progress max="7" value="6">(Step 6 of circa 7)</progress><br>
 
