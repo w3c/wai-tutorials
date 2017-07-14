@@ -16,7 +16,7 @@ You can start editing right away. We use the standard Markdown syntax. If you ge
 
 It is technical for “All right, make your edits, we make sure you can send them in as a proposal!”
 
-Don’t forget to add some descriptive text at the bottom that comments your change. Try to be concise. Klick the “Propose this change” button to continue. Then you get another comment field, you can write down your motivation for the change here. Once you click “Send pull request” the editor of the notified of your proposal and may adopt it.
+Don’t forget to add some descriptive text at the bottom that comments your change. Try to be concise. Klick the “Propose this change” button to continue. Then you get another comment field, you can write down your motivation for the change here. Once you click “Send pull request”, the editor will be notified of your proposal and may adopt it.
 
 Note that the changes are not immediately reflected on any page. If you want to see your changes in HTML that way is more technical and is described briefly in the following part of the document. But there is a preview button in the editor that gives you a fairly good example of how the rendered HTML will look like.
 
