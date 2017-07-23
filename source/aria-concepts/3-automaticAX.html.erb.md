@@ -1,7 +1,7 @@
 ---
-title: "The Scenario: A Site Redesign Plan Replaces  HTML Radios with a Custom Component
-nav_title: "The Scenario"
-order: 2
+title: "Automatic Accessibility: Browsers Provide Accessibility for Semantic HTML"
+nav_title: "Automatic Accessibility"
+order: 3
 status: editors-draft
 editors:
   - Matt King (Facebook)
@@ -12,64 +12,18 @@ contributors:
 support: Developed with support from the <a href="https://www.w3.org/WAI/WCAGTA/">U.S. Access Board, WCAG TA Project, Task 2</a>.
 ---
 
-## Scenario
-
-A business offers three service levels, and its purchase page includes the following radio buttons.
-
-<div>
-<fieldset>
-    <legend>Choose plan:</legend>
-    <input id="basic" type="radio" name="plan" value="basic"/>
-    <label for="basic">Basic</label><br>
-    <input id="Plus" type="radio" name="plan" value="plus"/>
-    <label for="plus">Plus</label><br>
-    <input id="premium" type="radio" name="plan" value="premium"/>
-    <label for="premium">Premium</label><br>
-</fieldset>
-</div>
-
-The HTML is:
-
-~~~ html
-<fieldset>
-    <legend>Choose plan:</legend>
-    <input id="basic" type="radio" name="plan" value="basic">
-    <label for="basic">Basic</label><br>
-    <input id="Plus" type="radio" name="plan" value="plus">
-    <label for="plus">Plus</label><br>
-    <input id="premium" type="radio" name="plan" value="premium">
-    <label for="premium">Premium</label><br>
-</fieldset>
-~~~
-
-This radio group is fully accessible because:
-
-1. The HTML is correctly written so it provides all semantic information required for accessibility.
-2. Browsers automatically derive accessibility semantics from the HTML to provide accessibility information to assistive technologies and enable keyboard interaction.
-
-This is really beautiful because the accessibility is almost free and very robust.
-The effort to include the small bits of HTML, such as the legend element, label element, and name attribute, that enable browsers to make these radios accessible is trivial.
-
-However, site management wants something new.
-They have asked for a site redesign that replaces the vanilla radios with three clickable tiles that include lots of fun visual touches from a new toolkit.
-Unfortunately, it is not feasible to alter the toolkit such that the tiles are made from restyled HTML input elements.
-
-Before throwing away these accessible beauties and building a custom radio group out of divs and images,
-let's first understand the complete nature of the free accessibility that will be thrown out and then have to be recreated from the ground up.
-
 ## Accessibility Features Automatically Provided by Browsers When Rendering Semantic HTML
 
-To grasp the purpose and limits of ARIA, it is helpful to understand what browsers do with the accessibility semantics baked into HTML. 
-When parsing the above HTML radio group, browsers automatically provide two essential accessibility services:
+When parsing HTML elements that have accessibility semantics associated with them, browsers automatically provide two essential accessibility services:
 
-1. A keyboard interface appropriate for the type of element being rendered.
-2. Populating operating system accessibility APIs with semantic information needed by assistive technologies.
+1. If the element is interactive, a keyboard interface appropriate for the type of element being rendered.
+2. Populating operating system accessibility APIs with information assistive technologies use to render and interact with the element.
 
-Let's take a closer look at each of these.
+To grasp the purpose and limits of ARIA, it is helpful to understand some of the details of the accessibility semantics baked into HTML. 
 
 ## Browser-Provided Keyboard Interfaces
 
-For the HTML radio group, the browser automatically:
+For the HTML radio group in our scenario, the browser automatically:
 
 1. Includes the input elements in the tab sequence of the page.
 2. Enables the space key to check the initially focused button if it is not already checked.
@@ -79,6 +33,10 @@ For the HTML radio group, the browser automatically:
 To make keyboard operation as familiar and intuitive as possible, browsers build keyboard interfaces for HTML input elements, links, and buttons that mimic the interfaces of native GUI applications.
 Providing the keyboard interface that is conventionally associated with each type of GUI component is an important aspect of accessibility for rich internet applications.
 Some assistive technologies utilize the keyboard conventions associated with each type of component to help guide users through interactions.
+
+Browsers provide keyboard interfaces for interactive HTML elements. 
+However, ARIA does not change the look or behavior of a web page. 
+So, browsers do not create keyboard interfaces as a part of processing ARIA.
 
 ## Browser-Extracted Accessibility Semantics
 
