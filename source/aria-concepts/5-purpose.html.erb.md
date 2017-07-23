@@ -1,7 +1,7 @@
 ---
 title: "Purpose: What ARIA Does"
 nav_title: Purpose
-order: 4
+order: 5
 status: editors-draft
 editors:
   - Matt King (Facebook)
