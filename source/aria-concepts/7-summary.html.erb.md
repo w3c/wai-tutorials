@@ -1,7 +1,7 @@
 ---
 title: "Summary and Advancing to the Next Level"
 nav_title: Summary
-order: 8
+order: 7
 status: editors-draft
 editors:
   - Matt King (Facebook)

@@ -1,6 +1,6 @@
 ---
 title: What ARIA Does and Does Not Do for a Custom Component
-nav_title: Purpose
+nav_title: Purpose and Limits
 order: 5
 status: editors-draft
 editors:
@@ -21,3 +21,28 @@ Similar to how visual design expresses meaning through color, style, and positio
 Unlike visual design where there are infinite ways of expressing a specific affordance, each ARIA role, state, and property conveys a specific meaning. 
 So, armed with an understanding of the definitions and conventions associated with each ARIA role, state, and property, developers can accurately express the meanings and behaviors of nearly any visual design they can dream.
 
+## Applying ARIA to the Custom Plan Chooser Component
+
+Step one is to determine which ARIA role accurately describes the purpose and behavior of the new plan chooser component. 
+The component:
+
+1. Allows only one plan option to be chosen.
+2. Requires an option to be chosen.
+
+These are behaviors associated with a radio group. 
+However, when choosing a role for an interactive widget, it is important to ensure the component design includes all behaviors minimally expected for a widget with that role.
+To do this, review the keyboard interaction section for patterns that use that role in the WAI-ARIA Authoring Practices.
+In this case, the 
+[ARIA radio group pattern](https://www.w3.org/TR/wai-aria-practices-1.1/#radiobutton)
+indicates that users also expect the radio group to be a single tab stop and to navigate among options with the arrow keys, just like the native HTML `input` with type `radio`.
+
+Once an appropriate pattern is chosen, apply the roles, states, and properties described in the pattern.
+Applying the radio group pattern to the custom plan chooser component yields:
+
+~~~ html
+<div role="radiogroup" aria-label="Choose a plan">
+  <div tabindex="0" role="radio" aria-checked="true" id="basic" class="plan-option"><img src="basic.png" alt="Basic"></div>
+  <div tabindex="-1" role="radio" aria-checked="false" id="plus" class="plan-option"><img src="plus.png" alt="Plus"></div>
+  <div tabindex="-1" role="radio" aria-checked="false" id="premium" class="plan-option"><img src="premium.png" alt="Premium"></div>
+</div>
+~~~
