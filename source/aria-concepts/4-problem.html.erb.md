@@ -1,6 +1,6 @@
 ---
-title: "The Custom Component Problem"
-nav_title: "The Problem"
+title: The Custom Component Problem
+nav_title: The Problem
 order: 4
 status: editors-draft
 editors:

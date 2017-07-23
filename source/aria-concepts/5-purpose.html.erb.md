@@ -1,5 +1,5 @@
 ---
-title: "Purpose: What ARIA Does"
+title: What ARIA Does and Does Not Do for a Custom Component
 nav_title: Purpose
 order: 5
 status: editors-draft

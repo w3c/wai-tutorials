@@ -1,5 +1,5 @@
 ﻿---
-title: "Limits: What ARIA Does Not Do"
+title: What ARIA Does Not Do
 nav_title: Limits
 order: 6
 status: editors-draft

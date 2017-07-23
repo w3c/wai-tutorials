@@ -1,6 +1,6 @@
 ---
-title: "The Scenario: A Site Redesign Plan Replaces  HTML Radios with a Custom Component
-nav_title: "The Scenario"
+title: The Scenario: A Site Redesign Plan Replaces  HTML Radios with a Custom Component
+nav_title: Scenario
 order: 2
 status: editors-draft
 editors:

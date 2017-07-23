@@ -1,6 +1,6 @@
 ---
-title: "Automatic Accessibility: Browsers Provide Accessibility for Semantic HTML"
-nav_title: "Automatic Accessibility"
+title: Automatic Accessibility: Browsers Provide Accessibility for Semantic HTML
+nav_title: Automatic Accessibility
 order: 3
 status: editors-draft
 editors:
