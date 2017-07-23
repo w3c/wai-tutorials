@@ -1,4 +1,4 @@
-﻿---
+---
 title: "The Problem: A Site Redesign Replaces  Beautifully Accessible HTML Radio Group Isn’t Good Enough"
 nav_title: "The Problem"
 order: 2
@@ -59,7 +59,7 @@ let's first understand the complete nature of this free accessibility we will no
 
 ## Accessibility Features Automatically Provided by Browsers When Rendering Semantic HTML
 
-To grasp the purpose and limits of ARIA, it is helpful to understand what browsers do with the accessibility semantics baked into HTML. 
+To grasp the purpose and limits of ARIA, it is helpful to understand what browsers do with the accessibility semantics baked into HTML.
 When parsing the above HTML radio group, browsers automatically provide two essential accessibility services:
 
 1. A keyboard interface.
