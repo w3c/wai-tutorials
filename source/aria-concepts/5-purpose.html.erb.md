@@ -12,9 +12,12 @@ contributors:
 support: Developed with support from the <a href="https://www.w3.org/WAI/WCAGTA/">U.S. Access Board, WCAG TA Project, Task 2</a>.
 ---
 
-### What ARIA is and does
+## What ARIA Does and Does Not Do
 
-ARIA is the developer telling the browser what to tell the assistive technology about what the developer has done;
+1. ARIA tells browsers what to tell assistive technologies about the meaning, purpose, and behaviors of elements. 
+2. ARIA does not create or change appearance or behaviors. 
 
-* in order that a screen reader user can reliably know what feature is present, and to be able to operate it (perceive what it is, understand what it means, and operate on it)
-* if you use any role, the developer is telling the AT via browser that they have provided keyboard support.
+Similar to how visual design expresses meaning through color, style, and position, ARIA expresses meaning with roles, states, and properties. 
+Unlike visual design where there are infinite ways of expressing a specific affordance, each ARIA role, state, and property conveys a specific meaning. 
+So, armed with an understanding of the definitions and conventions associated with each ARIA role, state, and property, developers can accurately express the meanings and behaviors of nearly any visual design they can dream.
+
