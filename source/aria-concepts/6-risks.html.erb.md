@@ -1,4 +1,4 @@
----
+﻿---
 title: "Risks: Why No ARIA is Better Than Bad ARIA"
 nav_title: Risks
 order: 6
@@ -14,7 +14,9 @@ support: Developed with support from the <a href="https://www.w3.org/WAI/WCAGTA/
 
 ## The ARIA Contract
 
-Reiterate purpose/limits in short form
+1. ARIA provides a vocabulary for describing the meaning and behavior of elements in a way that can be parsed by assistive technologies.
+2. Each word in the vocabulary has a precise meaning defined in the ARIA specification and explained in the ARIA Authoring Practices.
+3. Applying ARIA does not change visual appearance or responses to input from keyboard, touch, or mouse.
 
 ## Costs of Violating the Contract
 

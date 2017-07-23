@@ -14,5 +14,9 @@ support: Developed with support from the <a href="https://www.w3.org/WAI/WCAGTA/
 
 ## Essential Take-Aways
 
-## Resources for Unleashing Creativity
+
+
+## Unleash Creativity
+
+
 
