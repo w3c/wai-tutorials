@@ -12,9 +12,9 @@ contributors:
 support: Developed with support from the <a href="https://www.w3.org/WAI/WCAGTA/">U.S. Access Board, WCAG TA Project, Task 2</a>.
 ---
 
-## The Custom Radio Problem
+## Custom Radio HTML
 
-Consider the following HTML.
+Consider the following HTML that could be used to replace the HTML radio group in our scenario.
 
 ~~~ html
 <div id="basic" class="plan-option"><img src="basic.png" alt="Basic"></div>
@@ -22,10 +22,10 @@ Consider the following HTML.
 <div id="premium" class="plan-option"><img src="premium.png" alt="Premium"></div>
 ~~~
 
-If these divs support functionality that enables users to choose one of the plan options, e.g., if clicking one chooses the corresponding plan, that is not something that the browser can determine. 
-Thus, a screen reader user will only be able to perceive the presence of three static images, and a keyboard user will not be able to choose a plan either.
+This HTML contains very little accessibility semantics. 
+A screen reader user can perceive only the presence of three static images -- not very helpful.
 
-To make this new custom radio group accessible, it needs:
+To make this new custom component accessible, it needs:
 
 1. JavaScript and CSS that provide a keyboard interface.
-2. ARIA markup that correctly expresses all six types of accessibility semantics.
+2. ARIA markup that correctly expresses applicable accessibility semantics.
