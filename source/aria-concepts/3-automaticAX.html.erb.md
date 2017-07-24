@@ -23,7 +23,7 @@ To grasp the purpose and limits of ARIA, it is helpful to understand some of the
 
 ## Browser-Provided Keyboard Interfaces
 
-For the HTML radio group in our scenario, the browser automatically:
+For the XYZ purchase page HTML radio group, the browser automatically:
 
 1. Includes the input elements in the tab sequence of the page.
 2. Enables the space key to check the initially focused button if it is not already checked.
