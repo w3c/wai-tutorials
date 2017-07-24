@@ -22,18 +22,18 @@ Consider the following HTML that could be used to replace the HTML radio group i
 <div id="premium" class="plan-option"><img src="premium.png" alt="Premium"></div>
 ~~~
 
-This HTML contains very little accessibility semantics. 
+This HTML contains very little in the way of accessibility semantics. 
 While there may be JavaScript and CSS behind it that make it possible for some people to choose a plan,
 a screen reader user would perceive only the presence of three static images -- not very helpful.
 
-To make this new custom component accessible, it needs:
+ARIA solves this problem by giving developers a vocabulary for describing the meaning and behaviors of elements to assistive technologies that is similar to semantic HTML.
+However, the ARIA vocabulary is far richer than what is available in HTML.
+And unlike semantic HTML, ARIA does not change the appearance or behavior of the content. 
+
+Thus, to make this new custom component accessible, it needs:
 
 1. JavaScript and CSS that provide a keyboard interface.
 2. ARIA markup that correctly expresses applicable accessibility semantics.
 
-ARIA provides a rich vocabulary for describing the meaning and behaviors of elements to assistive technologies in the same way that semantic HTML does. 
-Unlike semantic HTML, though, ARIA does not change the appearance or behavior of the content. 
-Thus, when making components with ARIA, developers are responsible for implementing the keyboard interface as well as accurately describing the accessibility semantics with the ARIA markup.
-
-The upside is that ARIA opens the door to creativity and innovation, enabling developers to make all kinds of custom components accessible to people who rely on assistive technologies. 
+The rich vocabulary of ARIA opens the door to creativity and innovation, enabling developers to make all kinds of custom components accessible to people who rely on assistive technologies. 
 The following pages illustrate considerations essential to doing so successfully.
