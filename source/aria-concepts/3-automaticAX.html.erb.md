@@ -30,17 +30,16 @@ For the HTML radio group in our scenario, the browser automatically:
 3. Because of the common `name` attribute value, includes only one input in the tab sequence and provides arrow key navigation among the radio buttons.
 4. Changes the checked state when focus moves so that only one radio within the `fieldset` is checked.
 
-To make keyboard operation as familiar and intuitive as possible, browsers build keyboard interfaces for HTML input elements, links, and buttons that mimic the interfaces of native GUI applications.
-Providing the keyboard interface that is conventionally associated with each type of GUI component is an important aspect of accessibility for rich internet applications.
-Some assistive technologies utilize the keyboard conventions associated with each type of component to help guide users through interactions.
+To make keyboard operation familiar and intuitive, browsers provide keyboard interfaces that mimic the interfaces of native GUI applications when rendering HTML input elements, links, and buttons.
+In contrast, browsers do not create keyboard interfaces as a result of processing ARIA markup because an important tenant of the contract between ARIA and browsers is that ARIA does not change the look or behavior of a web page. 
 
-Browsers provide keyboard interfaces for interactive HTML elements. 
-However, ARIA does not change the look or behavior of a web page. 
-So, browsers do not create keyboard interfaces as a part of processing ARIA.
+Some assistive technologies utilize the keyboard conventions associated with the component type designated by an accessibility role to help guide users through interactions.
+For instance, when a screen reader encounters a radio group, it may provide users with instructions to use the arrow keys to change the chosen option.
+Thus, providing keyboard interfaces that follow interaction conventions associated with native GUI components is an important aspect of accessibility for rich internet applications.
 
 ## Browser-Extracted Accessibility Semantics
 
-The HTML radio group illustrates all six types of accessibility semantics needed to construct rich user interfaces that can be perceived, understood, and operated by users of assistive technologies:
+The HTML radio group illustrates all six types of accessibility semantics commonly used to construct rich user interfaces that can be perceived, understood, and operated by users of assistive technologies:
 
 1. Structures
 2. Labels
