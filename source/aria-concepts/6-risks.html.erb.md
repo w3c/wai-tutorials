@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Risks: Why No ARIA is Better Than Bad ARIA"
 nav_title: Risks
 order: 6
@@ -24,10 +24,37 @@ Incorrect ARIA markup can have devistating effects for users of assistive techno
 It gives assistive technologies information about the UI that misleads the user.
 Incorrect ARIA ccan not only make learning a UI more difficult but even unintentionally hide information or block interactions.
 
-## Bad ARIA Examples
+## Examples of bad ARIA
+
+**to be written**
+
+### Using the wrong role
+
+**to be written**
 
 * If you give an element a checkbox role, but don't provide keyboard support, then you’ve said that you’ve made a checkbox but not given it any functionality.
-* Or if you do role="presentation", or role="search" on a button that does search, then that can’t be operated by someone who is a screen reader user
-* Or if you put ARIA hidden on it, then it hides all of its children, it's no longer accessible.
-* ...
+* Explain consequences of applying role="search" on a search button.
+
+### Incorrectly applying states and properties
+
+**to be written**
+
+* Explain consequence of putting aria-expanded on end nodes in a tree.
+* Explain consequences of putting aria-haspopup on buttons that don't open a menu.
+* etc.
+
+### Misusing `aria-label`
+
+**to be written**
+
+show howl aria-label can wipe out content on elements that calculate name from content.
+
+### Misusing `aria-hidden`
+
+**to be written**
+
+Show how you can wipe out content of descendants.
+you put ARIA hidden on an element, then it hides all of its children unless they are focusable.
+
+
 
