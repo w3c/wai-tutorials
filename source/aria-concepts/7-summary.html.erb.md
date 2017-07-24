@@ -14,9 +14,12 @@ support: Developed with support from the <a href="https://www.w3.org/WAI/WCAGTA/
 
 ## Essential Take-Aways
 
-
+**to be written**
 
 ## Unleash Creativity
 
+**to be written**
+
+Re-emphasize possibilities, highlight other patterns, such as tree and grid.
 
 
