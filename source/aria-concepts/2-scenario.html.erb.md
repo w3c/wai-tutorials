@@ -14,7 +14,7 @@ support: Developed with support from the <a href="https://www.w3.org/WAI/WCAGTA/
 
 ## Scenario
 
-A business offers three service levels, and its purchase page includes the following radio buttons.
+Company XYZ offers three levels of service, and its purchase page includes the following radio buttons.
 
 <div>
 <fieldset>
@@ -50,8 +50,8 @@ This radio group is fully accessible because:
 This is really beautiful because the accessibility is almost free and very robust.
 The effort to include the small bits of HTML, such as the legend element, label element, and name attribute, that enable browsers to make these radios accessible is trivial.
 
-However, site management wants something new.
-They have asked for a site redesign that replaces the vanilla radios with three clickable tiles that include lots of fun visual touches from a new toolkit.
+However, XYZ web site management wants something new.
+They have asked for a redesign that replaces the vanilla radios with three clickable tiles that include lots of fun visual touches from a new toolkit.
 Unfortunately, it is not feasible to alter the toolkit such that the tiles are made from restyled HTML input elements.
 
 Before throwing away this accessibility beauty and building a custom radio group out of divs and images,
