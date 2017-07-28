@@ -1,5 +1,5 @@
 ---
-title: Browsers Automatically Provide Accessibility for Semantic HTML
+title: Automatic Accessibility Comes with Semantic HTML
 nav_title: Automatic Accessibility
 order: 3
 status: editors-draft
@@ -16,10 +16,10 @@ support: Developed with support from the <a href="https://www.w3.org/WAI/WCAGTA/
 
 When parsing HTML elements that have accessibility semantics associated with them, browsers automatically provide two essential accessibility services:
 
-1. If the element is interactive, a keyboard interface appropriate for the type of element being rendered.
-2. Populating operating system accessibility APIs with information assistive technologies use to render and interact with the element.
+1. If the element is interactive, browsers provide a keyboard interface appropriate for the type of element being rendered.
+2. Browsers populate operating system accessibility APIs with information assistive technologies use to render and interact with the element.
 
-To grasp the purpose and limits of ARIA, it is helpful to understand some of the details of the accessibility semantics baked into HTML. 
+To grasp the purpose and limits of ARIA, it is helpful to understand some details of the accessibility semantics baked into HTML. 
 
 ## Browser-Provided Keyboard Interfaces
 
