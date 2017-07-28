@@ -1,5 +1,5 @@
 ---
-title: The Custom Component Problem Solved by ARIA
+title: The Problem Solved by ARIA
 nav_title: The Problem
 order: 4
 status: editors-draft
@@ -24,13 +24,13 @@ Consider the following HTML that could be used to replace the HTML radio group i
 
 This HTML contains very little in the way of accessibility semantics. 
 While there may be JavaScript and CSS behind it that make it possible for some people to choose a plan,
-a screen reader user would perceive only the presence of three static images -- not very helpful.
+Screen reader users would perceive only the presence of three static images. They would not know the images are interactive. Even if they managed to click, they would not be able to perceive any resulting change.
 
 ARIA solves this problem by giving developers a vocabulary for describing the meaning and behaviors of elements to assistive technologies that is similar to semantic HTML.
 However, the ARIA vocabulary is far richer than what is available in HTML.
 And unlike semantic HTML, ARIA does not change the appearance or behavior of the content. 
 
-Thus, to make this new custom component accessible, it needs:
+Thus, to make this new custom component accessible, it needs both:
 
 1. JavaScript and CSS that provide a keyboard interface.
 2. ARIA markup that correctly expresses applicable accessibility semantics.
