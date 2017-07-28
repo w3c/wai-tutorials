@@ -1,5 +1,5 @@
 ---
-title: What ARIA Does and Does Not Do for a Custom Component
+title: Purpose and Limits: How to Implement with Understanding of What ARIA Does and Does NOT Do
 nav_title: Purpose and Limits
 order: 5
 status: editors-draft
@@ -14,8 +14,8 @@ support: Developed with support from the <a href="https://www.w3.org/WAI/WCAGTA/
 
 ## What the ARIA Solution Does and Does Not Do
 
-1. ARIA tells browsers what to tell assistive technologies about the meaning, purpose, and behaviors of elements. 
-2. ARIA does not create or change appearance or behaviors. 
+1. ARIA tells browsers what to tell assistive technologies about the meaning, purpose, and behaviors of elements. That is, ARIA provides accessibility semantics.
+2. ARIA does not create or change appearance or behaviors. Thus, ARIA does not cause browsers to provide a keyboard interface.
 
 Similar to how visual design expresses meaning through color, style, and position, ARIA expresses meaning with roles, states, and properties. 
 But, unlike visual design where there are infinite ways of expressing a specific affordance, each ARIA role, state, and property conveys a specific meaning. 
