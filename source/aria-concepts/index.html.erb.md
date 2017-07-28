@@ -1,6 +1,6 @@
 ---
-title: Developers’ Introduction to Essential ARIA Concepts
-tutorial_title: "ARIA Use Prerequisites"
+title: Introduction to ARIA Essentials for Developers
+tutorial_title: "ARIA Essentials"
 nav_title: Introduction
 order: 1
 topic_order: 7
@@ -27,26 +27,17 @@ To help ensure developers effectively and safely apply ARIA, it teaches:
 
 ## Objective
 
-Developers gain understanding of ARIA concepts sufficient to:
+Developers gain understanding of essential ARIA concepts sufficient to:
 
 * Safely and creatively exploit ARIA to build rrich experiences that are fully accessible.
 * Effectively utilize the patterns, examples, guidance,  and techniques available in the WAI-ARIA Authoring Practices.
 
 ## Plan
 
-1. Set up the problem:
-    * Describe a scenario where replacing an HTML radio group with an ARIA radio group is advantageous.
-    * Explain   accessibility features automatically provided by browsers when rendering an HTML radio group.
-    * Write the HTML for the custom radio group.
-2. Illustrate purpose:
-    * Add ARIA attributes to the custom radio HTML.
-    * Explain the accessibility features enabled by ARIA roles, states, and properties.
-3. Demonstrate limits:
-    * Examine  significant accessibility gaps, such as a keyboard interface,  that remain even with all the ARIA in place.
-    * Describe how to fill those gaps.
-4. Highlight risks:
+1. Describe scenario: explain accessibility gaps that appear when an HTML radio group is replaced with a custom radio group.
+2. Illustrate purpose and limits: 
+    * Explain the gaps ARIA can fill and how to fill them.
+    * Show the gaps ARIA does not fill and how to fill them with JavaScript and CSS.
+3. Highlight risks:
     * Explain the contract authors invoke by using ARIA.
     * Show how violating that contract can silently obliterate  accessibility.
-5. Wrap up:
-    *     Summarize critical points.
-    * Describe how the ARIA Authoring Practices Guide provides what developers need to unleash their accessibility creativity.
