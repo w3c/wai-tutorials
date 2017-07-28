@@ -26,35 +26,46 @@ Incorrect ARIA ccan not only make learning a UI more difficult but even unintent
 
 ## Examples of bad ARIA
 
-**to be written**
-
 ### Using the wrong role
 
-**to be written**
+Never assume the ARIA definition of a role simply based on its name. For example:
 
-* If you give an element a checkbox role, but don't provide keyboard support, then you’ve said that you’ve made a checkbox but not given it any functionality.
-* Explain consequences of applying role="search" on a search button.
+~~~HTML
+<button role="Search">Search</button>
+~~~
 
-### Incorrectly applying states and properties
+While adding the `search` role to a search button may logically seem to be a way of improving accessibility,
+it actually makes the search button impossible to operate with some assistive technologies. 
+ARIA has three primary classes of roles in the ontology, structures, windows, and widgets. 
+The `search` role is a structural role, and a button is a widget. 
+So, the above code turns the button into a static structure.
 
-**to be written**
+Also consider:
 
-* Explain consequence of putting aria-expanded on end nodes in a tree.
-* Explain consequences of putting aria-haspopup on buttons that don't open a menu.
-* etc.
+~~~HTML
+<ul role="menu">
+    <li><a href="p1">Page 1</a></li>
+    <li><a href="p2">Page 2</a></li>
+    <li><a href="p3">Page 3</a></li>
+</ul>
+~~~
+
+Many people may refer to a list of links for navigating a site as a menu. However, that does not mean it is an ARIA `menu`.
+The ARIA `menu` role, like all ARIA roles, has a very specific meaning. 
+It is a composite widget, which means that it is a container that is expected to contain only certain types of widgets, `menuitem` elements, that have specific behaviors.
+
+If the `menu` role is used without following the [ARIA menu pattern](https://www.w3.org/TR/wai-aria-practices-1.1/#menu),
+the resulting experience is unpredictable and, with most assistive technologies, much less accessible.  
+For example, in the above case, with some screen readers, tabbing to the links would yield silence!
 
 ### Misusing `aria-label`
 
-**to be written**
+~~~
+<a href="url" aria-label="Error Message!">Error 999! You have exceeded the allowed  attempts. Go to reset form.</a>
+~~~
 
-show howl aria-label can wipe out content on elements that calculate name from content.
+Thinking that a little extra information will help out screen reader users? Unfortunately, the above code doesn't give screen reader users extra information. It replaces all the useful information in the link text with the nearly useless information in the `aria-label`.
 
-### Misusing `aria-hidden`
+## The bottom line
 
-**to be written**
-
-Show how you can wipe out content of descendants.
-you put ARIA hidden on an element, then it hides all of its children unless they are focusable.
-
-
-
+ARIA is powerful and good at what it does. In that way, it is like a power saw. Very few people who frame homes from wood for a living would come to work without one. But, in unskilled hands, it isn't difficult to create horrific outcomes with a powerful saw.
