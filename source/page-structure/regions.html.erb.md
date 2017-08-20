@@ -182,7 +182,7 @@ Most current web browsers support the above HTML5 elements and convey the inform
 ~~~html
 <header role="banner">…</header>
 <main role="main">…</main>
-<nav role="navigation">…</main>
+<nav role="navigation">…</nav>
 <footer role="contentinfo">…</footer>
 ~~~
 {::nomarkdown}
