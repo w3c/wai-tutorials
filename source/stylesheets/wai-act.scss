@@ -725,7 +725,7 @@ a {
 		color: inherit;
 		font-size: 1em;
 	}
-	.draft & {
+	.draft &, .review-draft & {
 		background-color: #CFC;
 	}
 	.editors-draft & {
