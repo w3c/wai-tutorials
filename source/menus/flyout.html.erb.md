@@ -18,7 +18,7 @@ People with reduced dexterity, such as tremors, often have trouble operating fly
 
 ## Indicate submenus
 
-Indicate menu items with submenus visually and using markup. Indicate menu items with submenus visually and using markup. In the following example, the submenu is indicated visually by an icon and this WAI-ARIA markup:
+Indicate menu items with submenus visually and using markup. In the following example, the submenu is indicated visually by an icon and this WAI-ARIA markup:
 
 * `aria-haspopup="true"` declares that a menu item has a submenu.
 * `aria-expanded="false"` declares that the submenu is hidden.
