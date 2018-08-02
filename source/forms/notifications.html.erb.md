@@ -458,7 +458,7 @@ The example below illustrates a range of possible types of feedback in addition 
 <%= notes_start %>
 {:/nomarkdown}
 
-The password is shown in plain text for demonstration purposes.
+No data is sent using the following example input field. The password is shown in plain text for demonstration purposes.
 
 {::nomarkdown}
 <%= notes_end %>

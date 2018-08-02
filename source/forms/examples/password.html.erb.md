@@ -4,6 +4,8 @@ source: ../notifications.html#complex-messages
 layout: fullcode
 ---
 
+**No data is sent using the following example input field. The password is shown in plain text for demonstration purposes.**
+
 {::nomarkdown}
 <%= sample_start %>
 
