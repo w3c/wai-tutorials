@@ -233,7 +233,7 @@ Use this approach in situations where the parent menu item only summarizes the s
 				<li><a href="#flyoutnavkbfixed">Home</a></li>
 				<li><a href="#flyoutnavkbfixed">Shop</a></li>
 				<li class="has-submenu">
-						<a href="#flyoutnavkbfixed">Space Bears</a>
+						<a href="#flyoutnavkbfixed" aria-expanded="false" aria-haspopup="true">Space Bears</a>
 						<ul>
 								<li><a href="#flyoutnavkbfixed">Space Bear 6</a></li>
 								<li><a href="#flyoutnavkbfixed">Space Bear 6 Plus</a></li>
@@ -364,7 +364,9 @@ Array.prototype.forEach.call(menuItems1, function(el, i){
 		});
 		el.addEventListener("mouseout", function(event){
 				timer1 = setTimeout(function(event){
-						document.querySelector("#flyoutnavkbfixed .has-submenu.open").className = "has-submenu";
+						var opennav = document.querySelector("#flyoutnavkbfixed .has-submenu.open");
+						opennav.className = "has-submenu";
+						opennav.querySelector('a').setAttribute('aria-expanded', "false");
 				}, 1000);
 		});
 		el.querySelector('a').addEventListener("click",  function(event){
@@ -390,6 +392,7 @@ Array.prototype.forEach.call(menuItems1, function(el, i){
 					var opennav = document.querySelector("#flyoutnavkbfixed .has-submenu.open")
 					if (opennav) {
 						opennav.className = "has-submenu";
+						opennav.querySelector('a').setAttribute('aria-expanded', "false");
 					}
 				}, 10);
 			});
