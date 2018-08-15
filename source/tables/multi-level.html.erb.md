@@ -83,16 +83,19 @@ In the table below, the headers for the top half of the tables are different to 
 <%= sample_end %>
 {:/nomarkdown}
 
+In the following code snippet, the headers for the header cells themselves have been set to an emty cell (with the `id` “blank”). This will prevent some assistive technologies from reading a header for those heading cells.
+
 {::nomarkdown}
 <%= code_start('', 'Assigning <strong>id</strong> attributes to <code>&lt;th></code> cells') %>
 {:/nomarkdown}
 
 ~~~ html
 […]
-<th id="co1">Example 1 Ltd</th>
-<th id="co2">Example 2 Co</th>
+<td id="blank">&nbsp;</td>
+<th id="co1" headers="blank">Example 1 Ltd</th>
+<th id="co2" headers="blank">Example 2 Co</th>
 […]
-<th id="c1">Contact</th>
+<th id="c1" headers="blank">Contact</th>
 […]
 ~~~
 
