@@ -29,7 +29,7 @@ $container_margin:  0.5%;         // auto|px|%    //
 @include font-face("Noto Sans", font-files("notosans-italic.woff2", "notosans-italic.woff"), false, normal, italic);
 @include font-face("Noto Sans", font-files("notosans-bold.woff2", "notosans-bold.woff"), false, bold);
 @include font-face("Noto Sans", font-files("notosans-bolditalic.woff2", "notosans-bolditalic.woff"), false, bold, italic);
-@include font-face("Fira Code", font-files("firacode-regular.woff2", "firacode-regular.woff"), false);
+@include font-face("Fira Mono", font-files("firamono-regular.woff2", "firamono-regular.woff"), false);
 
 .font-primary, .font-secondary {
 	font-family: "Trebuchet MS", "HelveticaNeue", "Helvetica", "Arial", sans-serif;
@@ -40,7 +40,7 @@ $container_margin:  0.5%;         // auto|px|%    //
 
 pre, code {
 	.fonts-loaded &{
-		font-family: "Fira Code", monospace;
+		font-family: "Fira Code","Fira Mono", monospace;
 	}
 }
 
