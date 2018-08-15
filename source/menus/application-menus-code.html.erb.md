@@ -127,6 +127,7 @@ support: Developed with support from the <a href="https://www.w3.org/WAI/ACT/">W
 </style>
 
 <script>
+var appsMenu = document.querySelector('#appmenu');
 var appsMenuItems = document.querySelectorAll('#appmenu > li');
 var subMenuItems = document.querySelectorAll('#appmenu > li li');
 var keys = {
@@ -149,6 +150,7 @@ var gotoIndex = function(idx) {
 	}
 	appsMenuItems[idx].focus();
 	currentIndex = idx;
+	return appsMenuItems[idx];
 };
 
 var gotoSubIndex = function (menu, idx) {
@@ -180,8 +182,11 @@ Array.prototype.forEach.call(appsMenuItems, function(el, i){
 		el.addEventListener("click",  function(event){
 			if (this.getAttribute('aria-expanded') == 'false' || this.getAttribute('aria-expanded') ==  null) {
 				this.setAttribute('aria-expanded', "true");
+				subindex = 0;
+				gotoSubIndex(this.querySelector('ul'), 0);
 			} else {
 				this.setAttribute('aria-expanded', "false");
+				gotoIndex(currentIndex);
 			}
 			event.preventDefault();
 			return false;
@@ -198,15 +203,16 @@ Array.prototype.forEach.call(appsMenuItems, function(el, i){
 					prevdef = true;
 					break;
 				case keys.tab:
-					if (event.shiftKey) {
-						gotoIndex(currentIndex - 1);
-					} else {
-						gotoIndex(currentIndex + 1);
-					}
-					prevdef = true;
+					// if (event.shiftKey) {
+					// 	gotoIndex(currentIndex - 1);
+					// } else {
+					// 	gotoIndex(currentIndex + 1);
+					// }
+					// prevdef = true;
 					break;
 				case keys.enter:
 				case keys.down:
+				case keys.space:
 					this.click();
 					subindex = 0;
 					gotoSubIndex(this.querySelector('ul'), 0);
@@ -233,21 +239,26 @@ Array.prototype.forEach.call(appsMenuItems, function(el, i){
 Array.prototype.forEach.call(subMenuItems, function(el, i){
 	el.setAttribute('tabindex', '-1');
 	el.addEventListener("keydown", function(event) {
+			var prevdef = false;
 			switch (event.keyCode) {
 				case keys.tab:
-					if (event.shiftKey) {
-						gotoIndex(currentIndex - 1);
-					} else {
-						gotoIndex(currentIndex + 1);
-					}
-					prevdef = true;
+					// if (event.shiftKey) {
+					// 	gotoIndex(currentIndex - 1);
+					// } else {
+					// 	gotoIndex(currentIndex + 1);
+					// }
+					// prevdef = true;
 					break;
 				case keys.right:
-					gotoIndex(currentIndex + 1);
+					var newnode = gotoIndex(currentIndex + 1);
+					newnode.click();
+					gotoSubIndex(newnode, 0);
 					prevdef = true;
 					break;
 				case keys.left:
-					gotoIndex(currentIndex - 1);
+					var newnode = gotoIndex(currentIndex - 1);
+					newnode.click();
+					gotoSubIndex(newnode, 0);
 					prevdef = true;
 					break;
 				case keys.esc:
@@ -281,8 +292,19 @@ Array.prototype.forEach.call(subMenuItems, function(el, i){
 			return false;
 		});
 });
+
+window.addEventListener("click", function( event ) {
+	Array.prototype.forEach.call(appsMenuItems, function(el, i){
+		el.setAttribute('aria-expanded', "false");
+	});
+});
+
+appsMenu.addEventListener("click", function( event ) {
+  event.stopPropagation();
+});
 </script>
 
+<div id="escape" style="clear:both">Element after the menu to focus on</div>
 
 <%= sample_end %>
 </div>
