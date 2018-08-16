@@ -83,7 +83,7 @@ In the table below, the headers for the top half of the tables are different to 
 <%= sample_end %>
 {:/nomarkdown}
 
-In the following code snippet, the headers for the header cells themselves have been set to an emty cell (with the `id` “blank”). This will prevent some assistive technologies from reading a header for those heading cells.
+In the following code snippet, the headers for the header cells themselves have been set to an empty cell (with the `id` “blank”). This will prevent some assistive technologies from reading a header for those heading cells.
 
 {::nomarkdown}
 <%= code_start('', 'Assigning <strong>id</strong> attributes to <code>&lt;th></code> cells') %>
