@@ -174,11 +174,11 @@ The following table summarizes the typical behavior of submenu items:
 	<tbody>
 		<tr>
 			<th scope="row"><kbd>right &rarr;</kbd></th>
-			<td>Close the submenu, select the next top-level menu item.</td>
+			<td>Close the submenu, select the first item of the next top-level menu item.</td>
 		</tr>
 		<tr>
 			<th scope="row"><kbd>left &larr;</kbd></th>
-			<td>Close the submenu, select the previous top-level menu item.</td>
+			<td>Close the submenu, select the first item of the previous top-level menu item.</td>
 		</tr>
 	</tbody>
 	<tbody>
