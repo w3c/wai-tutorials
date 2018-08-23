@@ -476,18 +476,19 @@ For situations when the parent menu item needs to carry out a function, such as 
 	#flyoutnavkbbtn > ul {
 			margin: 0;
 			padding: 0;
-			display: table-row;
+			display:flex;
 			background-color: #036;
 			color: #fff;
 	}
 	#flyoutnavkbbtn > ul > li {
-			display:table-cell;
+			display:flex;
 			width: 20%;
 			text-align: center;
 			position:relative;
 	}
 	#flyoutnavkbbtn a,
 	#flyoutnavkbbtn .current {
+			flex:1;
 			display: block;
 			padding: .25em;
 			border-color: #E8E8E8;
@@ -498,7 +499,7 @@ For situations when the parent menu item needs to carry out a function, such as 
       border: 1px solid #036;
 	}
 	#flyoutnavkbbtn a:hover,
-		#flyoutnavkbbtn a:focus {
+	#flyoutnavkbbtn a:focus {
 			background-color: #fff;
 			color: #036;
 			border: 1px solid #036;
@@ -528,8 +529,6 @@ For situations when the parent menu item needs to carry out a function, such as 
 	#flyoutnavkbbtn > ul > li > ul a{
 		border-bottom-width: 1px;
 	}
-
-
 	#flyoutnavkbbtn .has-submenu > a:after {
 		margin-left: 5px;
 		line-height: 14px;
@@ -555,17 +554,21 @@ For situations when the parent menu item needs to carry out a function, such as 
 		background: url(../../img/ex-dropdown-inactive.png) center no-repeat;
 	}
 
-	#flyoutnavkbbtn .has-submenu button:hover > span,
+	#flyoutnavkbbtn .has-submenu:hover button > span,
 	#flyoutnavkbbtn .has-submenu button:focus > span {
 		background: url(../../img/ex-dropdown-active.png) #fff;
 	}
 
-	#flyoutnavkbbtn .has-submenu:hover  button,
-	#flyoutnavkbbtn .has-submenu a:focus button {
+	#flyoutnavkbbtn .has-submenu button,
+	#flyoutnavkbbtn .has-submenu a:focus + button {
 		background-color: #036;
 	}
+	#flyoutnavkbbtn .has-submenu:hover button,
+	#flyoutnavkbbtn .has-submenu button:hover,
 	#flyoutnavkbbtn .has-submenu button:focus {
 		background: #FFF;
+		border: 1px solid #036;
+		border-left: none;
 	}
 </style>
 
@@ -620,25 +623,31 @@ var parseHTML = function(str) {
 };
 
 Array.prototype.forEach.call(menuItems1, function(el, i){
-		var btn = '<button><span><span class="visuallyhidden">show submenu</span></span></button>';
-		var activatingA = el.querySelector('a')
-		activatingA.innerHTML = activatingA.innerHTML + ' ' + btn;
+		var activatingA = el.querySelector('a');
+		var btn = '<button><span><span class="visuallyhidden">show submenu for “' + activatingA.text + '”</span></span></button>';
+		activatingA.insertAdjacentHTML('afterend', btn);
 		el.addEventListener("mouseover", function(event){
 				this.className = "has-submenu open";
+				this.querySelector('a').setAttribute('aria-expanded', "true");
+				this.querySelector('button').setAttribute('aria-expanded', "true");
 				clearTimeout(timer1);
 		});
 		el.addEventListener("mouseout", function(event){
 				timer1 = setTimeout(function(event){
 						document.querySelector("#flyoutnavkbbtn .has-submenu.open").className = "has-submenu";
+						document.querySelector('#flyoutnavkbbtn .has-submenu.open a').setAttribute('aria-expanded', "false");
+						document.querySelector('#flyoutnavkbbtn .has-submenu.open button').setAttribute('aria-expanded', "false");
 				}, 1000);
 		});
-		el.querySelector('a button').addEventListener("click",  function(event){
-			if (this.parentNode.parentNode.className == "has-submenu") {
-				this.parentNode.parentNode.className = "has-submenu open";
-				this.parentNode.setAttribute('aria-expanded', "true");
+		el.querySelector('button').addEventListener("click",  function(event){
+			if (this.parentNode.className == "has-submenu") {
+				this.parentNode.className = "has-submenu open";
+				this.parentNode.querySelector('a').setAttribute('aria-expanded', "true");
+				this.parentNode.querySelector('button').setAttribute('aria-expanded', "true");
 			} else {
-				this.parentNode.parentNode.className = "has-submenu";
-				this.parentNode.setAttribute('aria-expanded', "false");
+				this.parentNode.className = "has-submenu";
+				this.parentNode.querySelector('a').setAttribute('aria-expanded', "false");
+				this.parentNode.querySelector('button').setAttribute('aria-expanded', "false");
 			}
 			event.preventDefault();
 		});
@@ -655,6 +664,8 @@ Array.prototype.forEach.call(menuItems1, function(el, i){
 					var opennav = document.querySelector("#flyoutnavkbbtn .has-submenu.open")
 					if (opennav) {
 						opennav.className = "has-submenu";
+						opennav.querySelector('a').setAttribute('aria-expanded', "false");
+						opennav.querySelector('button').setAttribute('aria-expanded', "false");
 					}
 				}, 10);
 			});
@@ -684,19 +695,19 @@ The following code adds a button to every top-level menu item with a submenu. Wh
 ~~~js
 var menuItems = document.querySelectorAll('li.has-submenu');
 Array.prototype.forEach.call(menuItems, function(el, i){
-	var btn = '<button><span><span class="visuallyhidden">show submenu</span></span></button>';
-	var topLevelLink = el.querySelector('a');
-	topLevelLink.innerHTML = topLevelLink.innerHTML + ' ' + btn;
+	var activatingA = el.querySelector('a');
+	var btn = '<button><span><span class="visuallyhidden">show submenu for “' + activatingA.text + '”</span></span></button>';
+	activatingA.insertAdjacentHTML('afterend', btn);
 
-	el.querySelector('a button').addEventListener("click",  function(event){
-		if (this.parentNode.parentNode.className == "has-submenu") {
-			this.parentNode.parentNode.className = "has-submenu open";
-			this.parentNode.setAttribute('aria-expanded', "true");
-			this.querySelector('.visuallyhidden').innerText = 'hide submenu';
+	el.querySelector('button').addEventListener("click",  function(event){
+		if (this.parentNode.className == "has-submenu") {
+			this.parentNode.className = "has-submenu open";
+			this.parentNode.querySelector('a').setAttribute('aria-expanded', "true");
+			this.parentNode.querySelector('button').setAttribute('aria-expanded', "true");
 		} else {
-			this.parentNode.parentNode.className = "has-submenu";
-			this.parentNode.setAttribute('aria-expanded', "false");
-			this.querySelector('.visuallyhidden').innerText = 'show submenu';
+			this.parentNode.className = "has-submenu";
+			this.parentNode.querySelector('a').setAttribute('aria-expanded', "false");
+			this.parentNode.querySelector('button').setAttribute('aria-expanded', "false");
 		}
 		event.preventDefault();
 	});
