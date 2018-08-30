@@ -3,124 +3,124 @@ successcriteria:
       title: Non-text Content
       desc: "All non-text content that is presented to the user has a text alternative that serves the equivalent purpose, except for the situations listed[…]."
       level: A
-      slug: text-equiv-all
+      slug: non-text-content
   - 1.3.1:
       desc: "Information, structure, and relationships conveyed through presentation can be programmatically determined or are available in text."
       level: A
       title: Info and Relationships
-      slug: content-structure-separation-programmatic
+      slug: info-and-relationships
   - 1.4.1:
       desc: "Color is not used as the only visual means of conveying information, indicating an action, prompting a response, or distinguishing a visual element."
       level: A
       title: Use of Color
-      slug: visual-audio-contrast-without-color
+      slug: use-of-color
   - 1.4.3:
       title: Contrast (Minimum)
       desc: 'The visual presentation of text and images of text has a contrast ratio of at least 4.5:1, except for the following:<ul><li><strong>Large Text: </strong> Large-scale text and images of large-scale text have a contrast ratio of at least 3:1;</li><li><strong>Incidental: </strong> Text or images of text that are part of an inactive user interface component, that are pure decoration, that are not visible to anyone, or that are part of a picture that contains significant other visual content, have no contrast requirement.</li><li><strong>Logotypes: </strong> Text that is part of a logo or brand name has no minimum contrast requirement.</li></ul>'
       level: AA
-      slug: visual-audio-contrast-contrast
+      slug: contrast-minimum
   - 1.4.4:
       title: Resize text
       desc: 'Except for captions and images of text, text can be resized without assistive technology up to 200 percent without loss of content or functionality.'
       level: AA
-      slug: visual-audio-contrast-scale
+      slug: resize-text
   - 1.4.5:
       title: Images of Text
       desc: "If the technologies being used can achieve the visual presentation, text is used to convey information rather than images of text except [for customizable and essential images]"
       level: AA
-      slug: visual-audio-contrast-text-presentation
+      slug: images-of-text
   - 1.4.6:
       title: Contrast (Enhanced)
       desc: 'The visual presentation of text and images of text has a contrast ratio of at least 7:1, except for the following:<ul><li><strong>Large Text: </strong> Large-scale text and images of large-scale text have a contrast ratio of at least 4.5:1;</li><li><strong>Incidental: </strong> Text or images of text that are part of an inactive user interface component, that are pure decoration, that are not visible to anyone, or that are part of a picture that contains significant other visual content, have no contrast requirement.</li><li><strong>Logotypes: </strong> Text that is part of a logo or brand name has no minimum contrast requirement.</li></ul>'
       level: AAA
-      slug: visual-audio-contrast7
+      slug: contrast-enhanced
   - 1.4.9:
       title: Images of Text (No Exception)
       desc: "Images of text are only used for pure decoration or where a particular presentation of text is essential to the information being conveyed"
       level: AAA
-      slug: visual-audio-contrast-text-images
+      slug: images-of-text-no-exception
   - 2.1.1:
       title: Keyboard
       desc: 'All functionality of the content is operable through a keyboard interface without requiring specific timings for individual keystrokes, except where the underlying function requires input that depends on the path of the user’s movement and not just the endpoints.'
       level: A
-      slug: keyboard-operation-keyboard-operable
+      slug: keyboard
   - 2.1.2:
       title: No Keyboard Trap
       desc: 'If keyboard focus can be moved to a component of the page using a keyboard interface, then focus can be moved away from that component using only a keyboard interface, and, if it requires more than unmodified arrow or tab keys or other standard exit methods, the user is advised of the method for moving focus away.'
       level: A
-      slug: keyboard-operation-trapping
+      slug: no-keyboard-trap
   - 2.1.3:
       title: Keyboard (No Exception)
       desc: All functionality of the content is operable through a keyboard interface without requiring specific timings for individual keystrokes.
       level: AAA
-      slug: keyboard-operation-all-funcs
+      slug: keyboard-no-exception
   - 2.2.1:
       title: Timing Adjustable
       desc: 'For each time limit that is set by the content, at least one of the following is true:<ul><li>Turn off: The user is allowed to turn off the time limit before encountering it; or</li>Adjust: The user is allowed to adjust the time limit before encountering it over a wide range that is at least ten times the length of the default setting; or</li><li>Extend: The user is warned before time expires and given at least 20 seconds to extend the time limit with a simple action (for example, "press the space bar"), and the user is allowed to extend the time limit at least ten times; or</li><li>Real-time Exception: The time limit is a required part of a real-time event (for example, an auction), and no alternative to the time limit is possible; or</li><li>Essential Exception: The time limit is essential and extending it would invalidate the activity; or</li><li>20 Hour Exception: The time limit is longer than 20 hours. </li></ul>'
       level: A
-      slug: time-limits-required-behaviors
+      slug: timing-adjustable
   - 2.2.2:
       title: "Pause, Stop, Hide"
       desc: 'For moving, blinking, scrolling, or auto-updating information, all of the following are true:<ul><li><p><strong>Moving, blinking, scrolling: </strong>For any moving, blinking or scrolling information that (1) starts automatically, (2) lasts more than five seconds, and (3) is presented in parallel with other content, there is a mechanism for the user to pause, stop, or hide it unless the movement, blinking, or scrolling is part of an activity where it is essential; and</p></li><li><p><strong>Auto-updating: </strong>For any auto-updating information that (1) starts automatically and (2) is presented in parallel with other content, there is a mechanism for the user to pause, stop, or hide it or to control the frequency of the update unless the auto-updating is part of an activity where it is essential.</p></li></ul>'
       level: A
-      slug: time-limits-pause
+      slug: pause-stop-hide
   - 2.4.1:
       title: "Bypass Blocks"
       desc: 'A mechanism is available to bypass blocks of content that are repeated on multiple Web pages.'
       level: A
-      slug: navigation-mechanisms-skip
+      slug: bypass-blocks
   - 2.4.3:
       title: "Focus Order"
       desc: 'If a Web page can be navigated sequentially and the navigation sequences affect meaning or operation, focusable components receive focus in an order that preserves meaning and operability.'
       level: A
-      slug: navigation-mechanisms-focus-order
+      slug: focus-order
   - 2.4.5:
       title: "Multiple Ways"
       desc: "2.4.5 More than one way is available to locate a Web page within a set of Web pages except where the Web Page is the result of, or a step in, a process."
       level: AA
-      slug: navigation-mechanisms-mult-loc
+      slug: multiple-ways
   - 2.4.6:
       title: "Headings and Labels"
       desc: "Headings and labels describe topic or purpose."
       level: AA
-      slug: navigation-mechanisms-descriptive
+      slug: headings-and-labels
   - 2.4.7:
       title: "Focus Visible"
       desc: "Any keyboard operable user interface has a mode of operation where the keyboard focus indicator is visible."
       level: AA
-      slug: navigation-mechanisms-focus-visible
+      slug: focus-visible
   - 2.4.8:
       title: "Location"
       desc: "Information about the user's location within a set of Web pages is available."
       level: AAA
-      slug: navigation-mechanisms-location
+      slug: location
   - 2.4.10:
       title: "Section Headings"
       desc: 'Section headings are used to organize the content.'
       level: AAA
-      slug: navigation-mechanisms-headings
+      slug: section-headings
   - 3.3.1:
       title: "Error Identifications"
       desc: "If an input error is automatically detected, the item that is in error is identified and the error is described to the user in text."
       level: A
-      slug: minimize-error-identified
+      slug: error-identification
   - 3.3.2:
       title: "Labels or Instructions"
       desc: "Labels or instructions are provided when content requires user input."
       level: A
-      slug: minimize-error-cues
+      slug: labels-or-instructions
   - 3.3.3:
       title: "Error Suggestion"
       desc: "If an input error is automatically detected and suggestions for correction are known, then the suggestions are provided to the user, unless it would jeopardize the security or purpose of the content."
       level: AA
-      slug: minimize-error-suggestions
+      slug: error-suggestion
   - 3.3.4:
       title: Error Prevention (Legal, Financial, Data)
       desc: "For Web pages that cause legal commitments or financial transactions for the user to occur, that modify or delete user-controllable data in data storage systems, or that submit user test responses, at least one of the following is true: Reversible, Checked, Confirmed"
       level: AA
-      slug: minimize-error-reversible
+      slug: error-prevention-legal-financial-data
   - 4.1.2:
       title: "Name, Role, Value"
       desc: "For all user interface components (including but not limited to: form elements, links and components generated by scripts), the name and role can be programmatically determined; states, properties, and values that can be set by the user can be programmatically set; and notification of changes to these items is available to user agents, including assistive technologies."
       level: A
-      slug: ensure-compat-rsv
+      slug: name-role-value

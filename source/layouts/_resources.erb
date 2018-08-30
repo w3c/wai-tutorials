@@ -1,15 +1,15 @@
 <% if (current_page.data.wcag_success_criteria || current_page.data.wcag_techniques) %>
 <div class="resources">
-  <h2 id="related">Related WCAG 2.0 resources</h2>
+  <h2 id="related">Related WCAG 2 resources</h2>
   <div class="resources-inner">
-	  <p>These tutorials provide best-practice guidance on implementing accessibility in different situations. This page combined the following WCAG 2.0 success criteria and techniques from different conformance levels:</p>
+	  <p>These tutorials provide best-practice guidance on implementing accessibility in different situations. This page combined the following WCAG 2 success criteria and techniques from different conformance levels:</p>
 	  <% if current_page.data.wcag_success_criteria %>
 	    <p><strong>Success Criteria:</strong></p>
 	    <ul>
 	      <% data.wcag.successcriteria.each do |f| %>
 	        <% f.each do |key, value| %>
 	          <% if current_page.data.wcag_success_criteria.index(key) %>
-	            <li><p><a href="https://www.w3.org/WAI/WCAG20/quickref/#qr-<%=value.slug%>"><%=key%> <%=value.title%>:</a> <%=value.desc%> (Level&nbsp;<%=value.level%>)</p></li>
+	            <li><p><a href="https://www.w3.org/WAI/WCAG21/quickref/#<%=value.slug%>"><%=key%> <%=value.title%>:</a> <%=value.desc%> (Level&nbsp;<%=value.level%>)</p></li>
 	          <% end %>
 	        <% end %>
 	      <% end %>
@@ -19,10 +19,12 @@
 	    <p><strong>Techniques:</strong></p>
 	    <ul>
 	      <% data.techniques.techniques.each do |f| %>
-	        <% f.map do |key, value| %>
-	          <% if current_page.data.wcag_techniques.index(key) %>
-	            <li><a href="https://www.w3.org/TR/WCAG20-TECHS/<%=key%>"><%=key%>: <%=value%></a></li>
-	          <% end %>
+	      	<% f.techs.each do |t| %>
+		        <% t.map do |key, value| %>
+		          <% if current_page.data.wcag_techniques.index(key) %>
+		            <li><a href="https://www.w3.org/WAI/WCAG21/Techniques/<%=f.type%>/<%=key%>"><%=key%>: <%=value%></a></li>
+		          <% end %>
+		        <% end %>
 	        <% end %>
 	      <% end %>
 	    </ul>
