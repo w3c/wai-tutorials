@@ -232,7 +232,7 @@ Note: Section [Hidden labels](labels.html#hidden) of this tutorial describes how
 
 #### Styling
 
-At the time of writing this tutorial, web browsers usually display the placeholder text in a color that does not meet the [minimum contrast requirement of WCAG 2.0](/WAI/WCAG20/quickref/#qr-visual-audio-contrast-contrast). This means they are hard to see for many people. Web browsers use a combination of color and opacity to achieve this effect. In most web browsers the color of the placeholder can be styled using proprietary CSS selectors. The following code snippet sets the color to a light gray, which has just enough contrast to meet the contrast requirement, assuming the background of the element is white.
+At the time of writing this tutorial, web browsers usually display the placeholder text in a color that does not meet the [minimum contrast requirement of WCAG 2](https://www.w3.org/WAI/WCAG21/quickref/#contrast-minimum). This means they are hard to see for many people. Web browsers use a combination of color and opacity to achieve this effect. In most web browsers the color of the placeholder can be styled using proprietary CSS selectors. The following code snippet sets the color to a light gray, which has just enough contrast to meet the contrast requirement, assuming the background of the element is white.
 
 {::nomarkdown}
 <%= code_start %>
