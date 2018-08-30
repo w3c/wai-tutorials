@@ -99,6 +99,12 @@ successcriteria:
       desc: 'Section headings are used to organize the content.'
       level: AAA
       slug: section-headings
+  - 2.5.5:
+      title: "Target Size"
+      desc: 'The size of the target for pointer inputs is at least 44 by 44 CSS pixels except when: <ul style="display: block;"><li><p><strong>Equivalent:</strong> The target is available through an equivalent link or control on the same page that is at least 44 by 44 CSS pixels;</p></li><li><p><strong>Inline:</strong> The target is in a sentence or block of text;</p></li><li><p><strong>User Agent Control:</strong> The size of the target is determined by the user agent and is not modified by the author;</p></li><li><p><strong>Essential:</strong> A particular presentation of the target is essential to the information being conveyed.</p></li></ul>'
+      level: AAA
+      slug: target-size
+      version: 2.1
   - 3.3.1:
       title: "Error Identifications"
       desc: "If an input error is automatically detected, the item that is in error is identified and the error is described to the user in text."
