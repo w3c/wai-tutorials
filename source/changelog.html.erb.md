@@ -4,6 +4,17 @@ layout: change
 order: 1
 ---
 
+## August 2018
+
+Fixing some issues:
+
+* Minor Editorial fixes: [#554](https://github.com/w3c/wai-tutorials/pull/554), [#555](https://github.com/w3c/wai-tutorials/pull/555)
+* [Clarify table headers/id example (#533)](https://github.com/w3c/wai-tutorials/pull/533)
+* [Changes to Flyout Menus Approach 2 (#534)](https://github.com/w3c/wai-tutorials/pull/534)
+* [Image Maps: Fix full code example (#536)](https://github.com/w3c/wai-tutorials/pull/536)
+* [Fix issue with flyout menu approach one (#562)](https://github.com/w3c/wai-tutorials/pull/562)
+* [Fix issues with application menu (#563)](https://github.com/w3c/wai-tutorials/pull/563)
+
 ## May 2017
 
 ### Overall changes:
