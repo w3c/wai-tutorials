@@ -5,6 +5,7 @@ wcag_success_criteria:
 - 1.4.1
 - 1.4.3
 - 2.4.7
+- 2.5.5
 first_published: "May 2015"
 editors:
   - Eric Eggert: "https://www.w3.org/People/yatil/"
@@ -16,9 +17,7 @@ support: Developed with support from the <a href="https://www.w3.org/WAI/ACT/">W
 
 ## Button Size
 
-Use appropriately sized buttons and links, and provide whitespace around them, to allow people with reduced dexterity to use the carousel more easily. This also benefits people using touch screens, such as on mobile devices.
-
-WCAG 2.0 does not have specific recommendations for button and link sizes, and surrounding white space. Refer to the suggested improvements for [target size](http://w3c.github.io/Mobile-A11y-TF-Note/#targetSize) that are currently in discussion. At a minimum, touch areas of less than 45 × 45 px should be avoided.
+Use appropriately sized buttons and links, and provide whitespace around them, to allow people with reduced dexterity to use the carousel more easily. This also benefits people using touch screens, such as on mobile devices. Buttons and links that are not inline in a block of text should be at least 44 × 44 CSS pixels.
 
 ## Contrast
 
