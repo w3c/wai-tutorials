@@ -33,7 +33,7 @@ Web authoring tools (Content Management Systems (CMS), <abbr title="What you see
 
 ## Relationship to WCAG 2
 
-These tutorials provide best-practice guidance on implementing accessibility in different situations. They combine WCAG 2 success criteria and techniques from various conformance levels. Each tutorial page lists the specific success criteria and techniques used on that page. A more comprehensive coverage of the normative [WCAG 2.0](https://www.w3.org/TR/WCAG20/) and [WCAG 2.1](https://www.w3.org/TR/WCAG21/) standard and its supporting materials is provided in **[How to Meet WCAG 2: A customizable quick reference](https://www.w3.org/WAI/WCAG21/quickref/)**.
+These tutorials provide best-practice guidance on implementing accessibility in different situations. They combine WCAG 2 success criteria and techniques from various conformance levels. Each tutorial page lists the specific success criteria and techniques used on that page. A more comprehensive coverage of the normative [WCAG 2.0](https://www.w3.org/TR/WCAG20/) and [WCAG 2.1](https://www.w3.org/TR/WCAG21/) standards and their supporting materials is provided in **[How to Meet WCAG 2: A customizable quick reference](https://www.w3.org/WAI/WCAG21/quickref/)**.
 
 ## Additional Resources
 
