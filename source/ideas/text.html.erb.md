@@ -94,7 +94,7 @@ A best practice is to enable users to set column withs in a way that one line of
 <%=notes_start%>
 {:/nomarkdown}
 
-**Note:** This is only required when conforming to WCAG 2.0, Level AAA.
+**Note:** This is only required when conforming to WCAG, Level AAA.
 
 {::nomarkdown}
 <%=notes_end%>

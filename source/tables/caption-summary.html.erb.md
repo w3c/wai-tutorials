@@ -15,7 +15,7 @@ contributors:
 support: Developed with support from the <a href="https://www.w3.org/WAI/ACT/">WAI-ACT project</a>, co-funded by the <strong>European Commission <abbr title="Information Society Technologies">IST</abbr> Programme</strong>.
 ---
 
-![](img-caption.png){:.symbol} Captions and summaries provide information that can help users find, navigate, and understand tables. While they are not required in every case to meet WCAG 2, captions and summaries are fairly straightforward ways to provide such information that is often needed.
+![](img-caption.png){:.symbol} Captions and summaries provide information that can help users find, navigate, and understand tables. While they are not required in every case to meet WCAG, captions and summaries are fairly straightforward ways to provide such information that is often needed.
 
 * A **caption** functions like a heading for a table. Most screen readers announce the content of captions. Captions help users to find a table and understand what it’s about and decide if they want to read it. If the user uses “Tables Mode”, captions are the primary mechanism to identify tables. The caption is provided by the `<caption>` element.
 
@@ -23,7 +23,7 @@ support: Developed with support from the <a href="https://www.w3.org/WAI/ACT/">W
 
 If both caption and summary are provided for one table, the summary should not duplicate information present in the caption.
 
-See WCAG 2 technique [H39: Using caption elements to associate data table captions with data tables](https://www.w3.org/WAI/WCAG21/Techniques/html/H39) for more advice on captions.
+See WCAG technique [H39: Using caption elements to associate data table captions with data tables](https://www.w3.org/WAI/WCAG21/Techniques/html/H39) for more advice on captions.
 
 ## Identifying a table using a caption
 {:.ex}
@@ -392,7 +392,7 @@ Screen reader users navigating in “Tables Mode” are usually unable to identi
 
 In this approach, the summary text is in the `summary` attribute of the table. Such summaries are not displayed visually. They are commonly only available to screen reader users.
 
-See WCAG 2 technique [H73: Using the summary attribute of the table element to give an overview of data tables](https://www.w3.org/WAI/WCAG21/Techniques/html/H73) for advice on the summary attribute.
+See WCAG technique [H73: Using the summary attribute of the table element to give an overview of data tables](https://www.w3.org/WAI/WCAG21/Techniques/html/H73) for advice on the summary attribute.
 
 {::nomarkdown}
 <%= sample_start %>

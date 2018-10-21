@@ -31,7 +31,7 @@ The tutorials are designed to be used by a variety of individuals, including:
 
 Web authoring tools (Content Management Systems (CMS), <abbr title="What you see is what you get">WYSIWYG</abbr> editors, word processors, etc.) can often help you create content that is accessible as shown in these tutorials.
 
-## Relationship to WCAG 2
+## Relationship to WCAG
 
 These tutorials provide best-practice guidance on implementing accessibility in different situations. They combine WCAG 2 success criteria and techniques from various conformance levels. Each tutorial page lists the specific success criteria and techniques used on that page. A more comprehensive coverage of the normative [WCAG 2.0](https://www.w3.org/TR/WCAG20/) and [WCAG 2.1](https://www.w3.org/TR/WCAG21/) standards and their supporting materials is provided in **[How to Meet WCAG 2: A customizable quick reference](https://www.w3.org/WAI/WCAG21/quickref/)**.
 
@@ -39,5 +39,5 @@ These tutorials provide best-practice guidance on implementing accessibility in 
 
 * **[How People with Disabilities Use the Web](https://www.w3.org/WAI/people-use-web/):** An introduction covering a variety of disabilities, including age-related impairments
 * **[Accessibility Principles](https://www.w3.org/WAI/fundamentals/accessibility-principles/):** Introduces some of the web accessibility requirements for websites, web applications, browsers, and other tools
-* **[Web Content Accessibility Guidelines (WCAG) 2.0 Overview](https://www.w3.org/WAI/standards-guidelines/wcag/):** Introduces the international standard that defines requirements on how to make web content more accessible to people with disabilities
-* **[Authoring Tool Accessibility Guidelines (ATAG) 2.0 Overview](https://www.w3.org/WAI/standards-guidelines/atag/):** Introduces the international standard that defines requirements on how to make web authoring tools that support accessibility for people with disabilities
+* **[Web Content Accessibility Guidelines (WCAG) Overview](https://www.w3.org/WAI/standards-guidelines/wcag/):** Introduces the international standard that defines requirements on how to make web content more accessible to people with disabilities
+* **[Authoring Tool Accessibility Guidelines (ATAG) Overview](https://www.w3.org/WAI/standards-guidelines/atag/):** Introduces the international standard that defines requirements on how to make web authoring tools that support accessibility for people with disabilities
