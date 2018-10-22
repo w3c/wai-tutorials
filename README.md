@@ -8,7 +8,7 @@ You can find the current draft state of the document on [this Github Pages site]
 
 Basically, editing files works like a Wiki.
 
-Browse to the file using the [Github Page][GHPage] and click on the “Fork and Edit” button of the page. This will bring you to the Github detail page of that file where you can start editing the file using the edit button (“pen icon”) in the top right corner, if you’re logged into Github. [Here’s an example in the Images Tutorial.][exmpImg]
+Browse to the file using the [GitHub Page][GHPage] and click on the “Fork and Edit” button of the page. This will bring you to the GitHub detail page of that file where you can start editing the file using the edit button (“pen icon”) in the top right corner, if you’re logged into Github. [Here’s an example in the Images Tutorial.][exmpImg]
 
 You can start editing right away. We use the standard Markdown syntax. If you get the following note, this is expected behavior:
 
