@@ -232,7 +232,7 @@ In some situations, form controls cannot be labeled explicitly. For example, a c
 <%= code_end %>
 {:/nomarkdown}
 
-## Labelling buttons
+## Labeling buttons
 
 The label of a `<button>` element is set inside the element and can include markup. This allows more advanced accessibility hints to be included, like marking up language change. When using the `<input>` element to create buttons, the label is set in the `value` attribute of the element.
 
