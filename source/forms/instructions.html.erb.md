@@ -149,7 +149,7 @@ One approach is to use the WAI-ARIA `aria-labelledby` attribute to associate ins
 #### Using `aria-describedby`
 {:.ap}
 
-By using `aria-describedby` to reference the format of the field, this information is made available to the users on request. That is, it is not automatically displayed or read aloud. This makes sense if the user has been informed of the format before, or when there are lots of input fields with the same format, for example.
+Another apporach to associate additional instructions with a form field is to use `aria-describedby`. Information referenced by this attribute is made available to the users after the label and other information is announced.
 
 {::nomarkdown}
 <%= code_start %>
