@@ -151,7 +151,7 @@ This photograph shows a happy family group. It’s a stock image so the individu
 {:/nomarkdown}
 
 ~~~ html
-<img src="family.jpg" alt="We’re family-friendly. ">
+<img src="family.jpg" alt="We’re family-friendly.">
 ~~~
 
 {::nomarkdown}
@@ -194,7 +194,7 @@ type for each link:
 <p>
 	<a href="…">
 		2012 Annual report and accounts
-		<img src="html5logo.png" alt="HTML" > (43KB)
+		<img src="html5logo.png" alt="HTML"> (43KB)
 	</a>, also available in
 	<a href="…">
 		<img src="worddocument.png" alt="Word document"> (254KB)
