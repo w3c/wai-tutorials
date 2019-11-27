@@ -112,7 +112,7 @@ carousel.addEventListener('focusout',
 
 During transitions, the current and next items are visible. This also means that those two items are available to assistive technologies, with the current item disappearing, which can be confusing to screen reader users.
 
-In the following example, the item that is being activated gets an `in-transition` class that makes it visible. The `aria-hidden` is attribute set to `true` to hide the item from assistive technologies. When the transition completes, the `aria-hidden` attribute is removed.
+In the following example, the item that is being activated gets an `in-transition` class that makes it visible. The `aria-hidden` attribute is set to `true` to hide the item from assistive technologies. When the transition completes, the `aria-hidden` attribute is removed.
 
 {::nomarkdown}
 <%= code_start('', 'JavaScript') %>
