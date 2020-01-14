@@ -5,3 +5,6 @@ _site
 Gemfile.lock
 .nosync
 .ruby-version
+
+# Local Netlify folder
+.netlify
