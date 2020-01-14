@@ -1,0 +1,12 @@
+[Settings]
+
+ID = "wai-tutorial-images"
+
+[build]
+
+command = "bundle exec jekyll build --config '_config.yml,_config_staging.yml'"
+publish = "_site"
+
+[[redirects]]
+  from = "/"
+  to = "/tutorials/"

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="61px" height="61px" viewBox="0 0 61 61" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.0.3 (7891) - http://www.bohemiancoding.com/sketch -->
+    <title>img-irreg</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Irregular" sketch:type="MSLayerGroup" stroke="#000000">
+            <rect id="Rectangle-8" fill="#777777" sketch:type="MSShapeGroup" x="0" y="0" width="16" height="16"></rect>
+            <rect id="Rectangle-18" fill="#777777" sketch:type="MSShapeGroup" x="15" y="5" width="16" height="10.7651367"></rect>
+            <rect id="Rectangle-26" fill="#777777" sketch:type="MSShapeGroup" x="30" y="5" width="16" height="10.7651367"></rect>
+            <rect id="Rectangle-28" fill="#777777" sketch:type="MSShapeGroup" x="45" y="5" width="16" height="10.7651367"></rect>
+            <rect id="Rectangle-16" fill="#FFFFFF" sketch:type="MSShapeGroup" x="45" y="15" width="16" height="16"></rect>
+            <rect id="Rectangle-21" fill="#FFFFFF" sketch:type="MSShapeGroup" x="15" y="30" width="16" height="16"></rect>
+            <rect id="Rectangle-20" fill="#FFFFFF" sketch:type="MSShapeGroup" x="30" y="30" width="16" height="16"></rect>
+            <rect id="Rectangle-27" fill="#FFFFFF" sketch:type="MSShapeGroup" x="30" y="15" width="16" height="16"></rect>
+            <rect id="Rectangle-29" fill="#FFFFFF" sketch:type="MSShapeGroup" x="15" y="15" width="16" height="16"></rect>
+            <rect id="Rectangle-19" fill="#FFFFFF" sketch:type="MSShapeGroup" x="45" y="30" width="16" height="16"></rect>
+            <rect id="Rectangle-24" fill="#FFFFFF" sketch:type="MSShapeGroup" x="15" y="45" width="16" height="16"></rect>
+            <rect id="Rectangle-23" fill="#FFFFFF" sketch:type="MSShapeGroup" x="30" y="45" width="16" height="16"></rect>
+            <rect id="Rectangle-22" fill="#FFFFFF" sketch:type="MSShapeGroup" x="45" y="45" width="16" height="16"></rect>
+            <rect id="Rectangle-13" fill="#777777" sketch:type="MSShapeGroup" x="0" y="15" width="16" height="31"></rect>
+            <rect id="Rectangle-15" fill="#777777" sketch:type="MSShapeGroup" x="0" y="45" width="16" height="16"></rect>
+            <rect id="Rectangle-10" fill="#777777" sketch:type="MSShapeGroup" x="15" y="0" width="46" height="8"></rect>
+        </g>
+    </g>
+</svg>

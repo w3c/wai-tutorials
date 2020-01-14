@@ -1,0 +1,276 @@
+- name: Accessibility Fundamentals
+  pages:
+  - name: Introduction to Accessibility
+    url: "/fundamentals/accessibility-intro/"
+  - name: Components of Web Accessibility
+    url: "/fundamentals/components/"
+  - name: Accessibility Principles
+    url: "/fundamentals/accessibility-principles/"
+  - name: Perspectives Videos
+    url: "/perspective-videos/"
+    pages:
+    - name: Keyboard Compatibility
+      url: "/perspective-videos/keyboard/"
+    - name: Colors with Good Contrast
+      url: "/perspective-videos/contrast/"
+    - name: Clear Layout and Design
+      url: "/perspective-videos/layout/"
+    - name: Text to Speech
+      url: "/perspective-videos/speech/"
+    - name: Large Links, Buttons, and Controls
+      url: "/perspective-videos/controls/"
+    - name: Video Captions
+      url: "/perspective-videos/captions/"
+    - name: Customizable Text
+      url: "/perspective-videos/customizable/"
+    - name: Voice Recognition
+      url: "/perspective-videos/voice/"
+    - name: Understandable Content
+      url: "/perspective-videos/understandable/"
+    - name: Notifications and Feedback
+      url: "/perspective-videos/notifications/"
+  - name: How People with Disabilities Use the Web
+    url: "/people-use-web/"
+    pages:
+    - name: Stories of Web Users
+      url: "/people-use-web/user-stories/"
+    - name: Diverse Abilities and Barriers
+      url: "/people-use-web/abilities-barriers/"
+    - name: Tools and Techniques
+      url: "/people-use-web/tools-techniques/"
+  - name: Older Users and Accessibility
+    url: "/older-users/"
+    pages:
+    - name: How WCAG 2 Applies
+      url: "/older-users/developing/"
+    - name: Literature Review
+      url: "/older-users/literature/"
+  - name: Accessibility, Usability, Inclusion
+    url: "/fundamentals/accessibility-usability-inclusion/"
+- name: Planning & Policies
+  pages:
+  - name: Overview
+    url: "/planning/"
+  - name: Approaches for Interim Repairs
+    url: "/planning/interim-repairs/"
+  - name: Planning and Managing Accessibility
+    url: "/planning-and-managing/"
+    pages:
+      - name: Initiate
+        url: "/planning-and-managing/initiate/"
+      - name: Plan
+        url: "/planning-and-managing/plan/"
+      - name: Implement
+        url: "/planning-and-managing/implement/"
+      - name: Sustain
+        url: "/planning-and-managing/sustain/"
+  - name: Developing an Organizational Policy
+    url: "/planning/org-policies/"
+  - name: Involving Users for Better Accessibility
+    url: "/planning/involving-users/"
+  - name: International Laws & Policies
+    url: "/policies/"
+- name: Design & Develop
+  pages:
+  - name: Overview
+    url: "/design-develop/"
+  - name: Tips for Writing
+    url: "/tips/writing/"
+  - name: Tips for Designing
+    url: "/tips/designing/"
+  - name: Tips for Developing
+    url: "/tips/developing/"
+  - name: Tutorials
+    url: "https://www.w3.org/WAI/tutorials/"
+    external: true
+    pages:
+    - name: Page Structure
+      url: "/tutorials/page-structure/"
+      pages:
+      - name: Page Regions
+        url: "/tutorials/page-structure/regions/"
+      - name: Labeling Regions
+        url: "/tutorials/page-structure/labels/"
+      - name: Headings
+        url: "/tutorials/page-structure/headings/"
+      - name: Content Structure
+        url: "/tutorials/page-structure/content/"
+      - name: Full Example
+        url: "/tutorials/page-structure/example/"
+    - name: "TODO: Menus"
+      url: "https://www.w3.org/WAI/tutorials/menus/"
+      external: true
+    - name: Images
+      url: "/tutorials/images/"
+      pages:
+      - name: Image Concepts
+        url: "/tutorials/images/"
+      - name: Informative Images
+        url: "/tutorials/images/informative/"
+      - name: Decorative Images
+        url: "/tutorials/images/decorative/"
+      - name: Functional Images
+        url: "/tutorials/images/functional/"
+      - name: Images of Text
+        url: "/tutorials/images/textual/"
+      - name: Complex Images
+        url: "/tutorials/images/complex/"
+        pages:
+        - name: Example
+          url: "/tutorials/images/examples/2014-first-qtr/"
+          hide: true
+      - name: Groups of Images
+        url: "/tutorials/images/groups/"
+      - name: Image Maps
+        url: "/tutorials/images/imagemap/"
+        pages:
+        - name: Example
+          url: "/tutorials/images/examples/imagemap/"
+          hide: true
+      - name: 'An <code style="color: inherit;">alt</code> Decision Tree'
+        url: "/tutorials/images/decision-tree/"
+      - name: Tips and Tricks
+        url: "/tutorials/images/tips/"
+    - name: Tables
+      url: "/tutorials/tables/"
+      pages:
+      - name: Tables Concepts
+        url: "/tutorials/tables/"
+      - name: One Header
+        url: "/tutorials/tables/one-header/"
+      - name: Two Headers
+        url: "/tutorials/tables/two-headers/"
+        pages:
+        - name: "Complete “Table with header cells in the top row only” Example"
+          url: /tutorials/tables/examples/headertoprowfirstcol/
+          hide: true
+      - name: Irregular Headers
+        url: "/tutorials/tables/irregular/"
+      - name: Multi-level Headers
+        url: "/tutorials/tables/multi-level/"
+      - name: Caption & Summary
+        url: "/tutorials/tables/caption-summary/"
+      - name: Tips and Tricks
+        url: "/tutorials/tables/tips/"
+    - name: "TODO: Forms"
+      url: "https://www.w3.org/WAI/tutorials/forms/"
+      external: true
+    - name: "TODO: Carousels"
+      url: "https://www.w3.org/WAI/tutorials/carousels/"
+      external: true
+
+- name: Test & Evaluate
+  pages:
+  - name: Evaluation Overview
+    url: "/test-evaluate/"
+  - name: Easy Checks – A First Review
+    url: "/test-evaluate/preliminary/"
+  - name: Evaluation Tools
+    url: "/test-evaluate/tools/"
+    pages:
+      - name: Selecting Evaluation Tools
+        url: "/test-evaluate/tools/selecting/"
+      - name: List of Evaluation Tools
+        url: "https://www.w3.org/WAI/ER/tools/"
+        external: true
+  - name: Conformance Evaluation
+    url: "/test-evaluate/conformance/"
+    pages:
+      - name: WCAG-EM Conformance Methodology
+        url: "/test-evaluate/conformance/wcag-em/"
+      - name: WCAG-EM Report Tool
+        url: "https://www.w3.org/WAI/eval/report-tool/#/"
+        external: true
+  - name: Report Template
+    url: "/test-evaluate/report-template/"
+  - name: Using Combined Expertise
+    url: "/test-evaluate/combined-expertise/"
+  - name: Involving Users
+    url: "/test-evaluate/involving-users/"
+
+- name: Teach & Advocate
+  pages:
+  - name: Overview
+    url: "/teach-advocate/"
+  - name: Make Presentations Accessible
+    url: "/teach-advocate/accessible-presentations/"
+  - name: Develop Accessibility Training
+    url: "/teach-advocate/accessibility-training/"
+    pages:
+    - name: Topics
+      url: "/teach-advocate/accessibility-training/topics/"
+    - name: Presentation Outlines
+      url: "/teach-advocate/accessibility-training/presentation-outlines/"
+    - name: Workshop Outline
+      url: "/teach-advocate/accessibility-training/workshop-outline/"
+# - name: Presentations You Can Use
+#   url: "/teach-advocate/presentations-to-use/"
+  - name: Before and After Demo (BAD)
+    url: "https://www.w3.org/WAI/demos/bad/"
+    external: true
+  - name: Contacting Inaccessible Websites
+    url: "/teach-advocate/contact-inaccessible-websites/"
+  - name: Business Case
+    url: "/business-case/"
+    pages:
+    - name: Bibliography
+      url: "/business-case/bibliography/"
+  # pages:
+  #   - name: Social Factors
+  #     url: "/business-case/social-factors/"
+  #   - name: Technical Factors
+  #     url: "/business-case/technical-factors/"
+  #   - name: Financial Factors
+  #     url: "/business-case/financial-factors/"
+  #   - name: Legal & Policy Factors
+  #     url: "/business-case/legal-policy-factors/"
+  #   - name: Resources
+  #     url: "/business-case/resources/"
+
+- name: Standards/<wbr>Guidelines
+  pages:
+  - name: Standards Overview
+    url: "/standards-guidelines/"
+  - name: Web Content – WCAG
+    url: "/standards-guidelines/wcag/"
+    pages:
+    - name: "How to Meet WCAG 2 (Quick Reference)"
+      url: "https://www.w3.org/WAI/WCAG21/quickref/"
+      external: true
+    - name: "At a Glance"
+      url: "/standards-guidelines/wcag/glance/"
+    - name: The Documents
+      url: "/standards-guidelines/wcag/docs/"
+    - name: New in 2.1
+      url: "/standards-guidelines/wcag/new-in-21/"
+    - name: Translations
+      url: "/standards-guidelines/wcag/translations/"
+    - name: "Applying to Non-Web ICT"
+      url: "/standards-guidelines/wcag/non-web-ict/"
+    - name: "Commenting"
+      url: "/standards-guidelines/wcag/commenting/"
+    - name: "Conformance Logos"
+      url: "/standards-guidelines/wcag/conformance-logos/"
+    - name: FAQ
+      url: "/standards-guidelines/wcag/faq/"
+  - name: Authoring Tools – ATAG
+    url: "/standards-guidelines/atag/"
+  - name: User Agents – UAAG
+    url: "/standards-guidelines/uaag/"
+  - name: WAI-ARIA
+    url: "/standards-guidelines/aria/"
+  - name: Evaluation – ACT & EARL
+    url: "/standards-guidelines/evaluation/"
+    pages:
+    - name: Accessibility Conformance Testing – ACT
+      url: "/standards-guidelines/act/"
+    - name: Evaluation and Report Language – EARL
+      url: "/standards-guidelines/earl/"
+  - name: Standards Harmonization is Essential
+    url: "/standards-guidelines/harmonization/"
+  - name: W3C Process for Developing Standards
+    url: "/standards-guidelines/w3c-process/"
+  - name: Referencing and Linking to Standards
+    url: "/standards-guidelines/linking/"
+  - name: Mobile Accessibility at W3C
+    url: "/standards-guidelines/mobile/"

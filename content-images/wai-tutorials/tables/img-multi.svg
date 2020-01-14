@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="61px" height="61px" viewBox="0 0 61 61" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.0.1 (7597) - http://www.bohemiancoding.com/sketch -->
+    <title>img-multi</title>
+    <description>Created with Sketch.</description>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+	<g id="Multi-Level" sketch:type="MSLayerGroup" stroke="#000000">
+	    <rect id="Rectangle-10" fill="#777777" sketch:type="MSShapeGroup" x="15" y="0" width="16" height="16"></rect>
+	    <rect id="Rectangle-11" fill="#777777" sketch:type="MSShapeGroup" x="30" y="0" width="16" height="16"></rect>
+	    <rect id="Rectangle-12" fill="#777777" sketch:type="MSShapeGroup" x="45" y="0" width="16" height="16"></rect>
+	    <rect id="Rectangle-25" fill="#FFFFFF" sketch:type="MSShapeGroup" x="0" y="0" width="16" height="16"></rect>
+	    <rect id="Rectangle-21" fill="#777777" sketch:type="MSShapeGroup" x="0" y="30" width="16" height="16"></rect>
+	    <rect id="Rectangle-20" fill="#FFFFFF" sketch:type="MSShapeGroup" x="30" y="30" width="16" height="16"></rect>
+	    <rect id="Rectangle-19" fill="#FFFFFF" sketch:type="MSShapeGroup" x="45" y="30" width="16" height="16"></rect>
+	    <rect id="Rectangle-24" fill="#777777" sketch:type="MSShapeGroup" x="0" y="45" width="16" height="16"></rect>
+	    <rect id="Rectangle-23" fill="#FFFFFF" sketch:type="MSShapeGroup" x="30" y="45" width="16" height="16"></rect>
+	    <rect id="Rectangle-22" fill="#FFFFFF" sketch:type="MSShapeGroup" x="45" y="45" width="16" height="16"></rect>
+	    <rect id="Rectangle-13" fill="#777777" sketch:type="MSShapeGroup" x="0" y="15" width="61" height="16"></rect>
+	    <rect id="Rectangle-14" fill="#FFFFFF" sketch:type="MSShapeGroup" x="15" y="30" width="16" height="16"></rect>
+	    <rect id="Rectangle-15" fill="#FFFFFF" sketch:type="MSShapeGroup" x="15" y="45" width="16" height="16"></rect>
+	</g>
+    </g>
+</svg>
