@@ -81,8 +81,7 @@
   - name: Tips for Developing
     url: "/tips/developing/"
   - name: Tutorials
-    url: "https://www.w3.org/WAI/tutorials/"
-    external: true
+    url: "/tutorials/"
     pages:
     - name: Page Structure
       url: "/tutorials/page-structure/"
@@ -158,6 +157,12 @@
     - name: "TODO: Carousels"
       url: "https://www.w3.org/WAI/tutorials/carousels/"
       external: true
+    - name: "Changelog"
+      url: "/tutorials/changelog/"
+      hide: true
+    - name: "Acknowledgements"
+      url: "/tutorials/acknowledgements/"
+      hide: true
 
 - name: Test & Evaluate
   pages:
