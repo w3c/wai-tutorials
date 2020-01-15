@@ -51,3 +51,4 @@ plugins:
   - jekyll-paginate
   - jekyll-remote-theme
   - wai-website-plugin
+  - jekyll-last-modified-at

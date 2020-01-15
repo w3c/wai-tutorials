@@ -10,3 +10,4 @@ gem 'jekyll-include-cache'
 gem 'jekyll-remote-theme'
 gem 'jekyll-paginate'
 gem 'wai-website-plugin'
+gem "jekyll-last-modified-at"
