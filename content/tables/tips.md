@@ -8,7 +8,7 @@ description:
 image: /content-images/wai-tutorials/tables/social.png
 github:
   repository: w3c/wai-tutorials
-  path: 'content/tips.md'
+  path: 'content/tables/tips.md'
 footer: > # Text in footer in HTML
 
 resource:
@@ -24,11 +24,11 @@ navigation:
 -   **Data separation:**
 
     - Make sure that each separate piece of data has its cell. Don’t use headers in one column and all data in a second column, as this will make it almost impossible for screen readers to work out the relationships between data across columns.
-    
+
       {% include image.html src="tables/headers-in-one-column-all-data-in-second.png" alt="On the left, a table with two columns is shown. The header for the first column reads “Shirt” and the header for the second column reads “Sizes and amount in stock”. The second row reads “Blue” in the first column and “S: 6; M: 13, XL: 10”. In the second row, Sizes for a “Red” shirt are “M: 2; L: 9; XL: 10; XXL: 1”. On the right, the table is split up in “Shirt”, “Size” and “Stock” columns." class="" %}
 
     - Don't use line breaks (`<br>` elements) to create table rows as the data in the pseudo-rows may no longer align correctly when text is resized.
-      
+
       {% include image.html src="tables/table-text-resize.png" alt="On the top there is a table where the content and header cells are not marked up correctly. Line breaks are used to make items look like they align correctly. When resizing the text (bottom) the items don’t line up anymore" class="" %}
 
 -   **Alignment:** Align text to the left and numeric data to the right (in left-to-right languages), so that people using larger text sizes or smaller screens will be able to find it. This is especially useful if a cell spans more than one column. It’s  helpful to give column headers the same alignment as the data in the cells below.

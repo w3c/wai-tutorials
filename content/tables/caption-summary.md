@@ -8,7 +8,7 @@ description:
 image: /content-images/wai-tutorials/tables/social.png
 github:
   repository: w3c/wai-tutorials
-  path: 'content/caption-summary.md'
+  path: 'content/tables/caption-summary.md'
 footer: > # Text in footer in HTML
 
 resource:

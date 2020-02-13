@@ -9,7 +9,7 @@ description:
 image: /content-images/wai-tutorials/tables/social.png
 github:
   repository: w3c/wai-tutorials
-  path: 'content/two-headers.md'
+  path: 'content/tables/two-headers.md'
 footer: > # Text in footer in HTML
 
 resource:

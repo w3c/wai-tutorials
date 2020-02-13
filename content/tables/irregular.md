@@ -9,7 +9,7 @@ description:
 image: /content-images/wai-tutorials/tables/social.png
 github:
   repository: w3c/wai-tutorials
-  path: 'content/irregular.md'
+  path: 'content/tables/irregular.md'
 footer: > # Text in footer in HTML
 
 resource:
