@@ -151,9 +151,29 @@
         url: "/tutorials/tables/caption-summary/"
       - name: Tips and Tricks
         url: "/tutorials/tables/tips/"
-    - name: "TODO: Forms"
-      url: "https://www.w3.org/WAI/tutorials/forms/"
-      external: true
+    - name: "Forms"
+      url: "/tutorials/forms/"
+      pages:
+      - name: Forms Concepts
+        url: "/tutorials/forms/"
+      - name: Labeling Controls
+        url: "/tutorials/forms/labels/"
+      - name: Gruping Controls
+        url: "/tutorials/forms/grouping/"
+      - name: Form Instructions
+        url: "/tutorials/forms/instructions/"
+      - name: Validating Input
+        url: "/tutorials/forms/validation/"
+      - name: User Notifications
+        url: "/tutorials/forms/notifications/"
+        pages:
+        - name: Password Example
+          url: "/tutorials/forms/examples/password/"
+          hide: true
+      - name: Multi-page Forms
+        url: "/tutorials/forms/multi-page/"
+      - name: Custom Controls
+        url: "/tutorials/forms/custom-controls/"
     - name: "TODO: Carousels"
       url: "https://www.w3.org/WAI/tutorials/carousels/"
       external: true
