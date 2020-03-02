@@ -1,4 +1,5 @@
-- name: Accessibility Fundamentals
+- name:
+    en: Accessibility Fundamentals
   pages:
   - name: Introduction to Accessibility
     url: "/fundamentals/accessibility-intro/"
@@ -47,7 +48,8 @@
       url: "/older-users/literature/"
   - name: Accessibility, Usability, Inclusion
     url: "/fundamentals/accessibility-usability-inclusion/"
-- name: Planning & Policies
+- name:
+    en: Planning & Policies
   pages:
   - name: Overview
     url: "/planning/"
@@ -70,9 +72,10 @@
     url: "/planning/involving-users/"
   - name: International Laws & Policies
     url: "/policies/"
-- name: Design & Develop
+- name:
+    en: Design & Develop
   pages:
-  - name: Overview
+  - name: Design & Develop
     url: "/design-develop/"
   - name: Tips for Writing
     url: "/tips/writing/"
@@ -96,9 +99,19 @@
         url: "/tutorials/page-structure/content/"
       - name: Full Example
         url: "/tutorials/page-structure/example/"
-    - name: "TODO: Menus"
-      url: "https://www.w3.org/WAI/tutorials/menus/"
-      external: true
+    - name: "Menus"
+      url: "/tutorials/menus/"
+      pages:
+      - name: Structure
+        url: "/tutorials/menus/structure/"
+      - name: Styling
+        url: "/tutorials/menus/styling/"
+      - name: Fly-Out Menus
+        url: "/tutorials/menus/flyout/"
+      - name: Application Menus
+        url: "/tutorials/menus/application-menus/"
+      - name: Application Menu Example & Code
+        url: "/tutorials/menus/application-menus-code/"
     - name: Images
       url: "/tutorials/images/"
       pages:
@@ -184,7 +197,8 @@
       url: "/tutorials/acknowledgements/"
       hide: true
 
-- name: Test & Evaluate
+- name:
+    en: Test & Evaluate
   pages:
   - name: Evaluation Overview
     url: "/test-evaluate/"
@@ -213,7 +227,8 @@
   - name: Involving Users
     url: "/test-evaluate/involving-users/"
 
-- name: Teach & Advocate
+- name:
+    en: Teach & Advocate
   pages:
   - name: Overview
     url: "/teach-advocate/"
@@ -252,7 +267,8 @@
   #   - name: Resources
   #     url: "/business-case/resources/"
 
-- name: Standards/<wbr>Guidelines
+- name:
+    en: Standards/<wbr>Guidelines
   pages:
   - name: Standards Overview
     url: "/standards-guidelines/"
