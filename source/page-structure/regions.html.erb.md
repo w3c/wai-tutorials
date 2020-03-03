@@ -26,7 +26,7 @@ Mark up different regions of web pages and applications, so that they can be ide
 <%= notes_start %>
 {:/nomarkdown}
 
-**Note:** If the `<header>` element is used inside `<article>` and `<section>` elements, it is not associated with the whole page, but only with that specific `<article>` or `<section>`.
+**Note:** If the `<header>` element is scoped to the `<body>` element, it is associated with the whole page, but as a descendant element of `<main>` element, a sectioning content element, or a sectioning root element other than `<body>` the `<header>` has no implicit role and is therefore not output by assistive technology.
 
 {::nomarkdown}
 <%= notes_end %>
@@ -70,7 +70,7 @@ View a [complete code example](example.html) for all regions combined.
 <%= notes_start %>
 {:/nomarkdown}
 
-**Note:** If the `<footer>` element is used inside `<article>` and `<section>` elements, it is not identified as the footer for the whole page but only relates to that specific `<article>` or `<section>`.
+**Note:** If the `<footer>` element is scoped to the `<body>` element, it is associated with the whole page, but as a descendant element of `<main>` element, a sectioning content element, or a sectioning root element other than `<body>` the `<footer>` has no implicit role and is therefore not output by assistive technology.
 
 {::nomarkdown}
 <%= notes_end %>
