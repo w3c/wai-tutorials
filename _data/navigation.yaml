@@ -187,9 +187,21 @@
         url: "/tutorials/forms/multi-page/"
       - name: Custom Controls
         url: "/tutorials/forms/custom-controls/"
-    - name: "TODO: Carousels"
-      url: "https://www.w3.org/WAI/tutorials/carousels/"
-      external: true
+    - name: "Carousels"
+      url: "/tutorials/carousels/"
+      pages:
+      - name: Structure
+        url: "/tutorials/carousels/structure/"
+      - name: Functionality
+        url: "/tutorials/carousels/functionality/"
+      - name: Animations
+        url: "/tutorials/carousels/animations/"
+      - name: Styling
+        url: "/tutorials/carousels/styling/"
+      - name: Working Example
+        url: "/tutorials/carousels/working-example/"
+      - name: Complete Code
+        url: "/tutorials/carousels/full-code/"
     - name: "Changelog"
       url: "/tutorials/changelog/"
       hide: true
