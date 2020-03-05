@@ -20,6 +20,7 @@ navigation:
 
 wcag_success_criteria:
 wcag_techniques:
+metafooter: true
 editors:
   - Eric Eggert: "https://www.w3.org/People/yatil/"
   - Shadi Abou-Zahra: "https://www.w3.org/People/shadi/"

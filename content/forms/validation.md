@@ -28,6 +28,7 @@ wcag_techniques:
   - G85
   - G155
   - G168
+metafooter: true
 editors:
   - Eric Eggert: "https://www.w3.org/People/yatil/"
   - Shadi Abou-Zahra: "https://www.w3.org/People/shadi/"

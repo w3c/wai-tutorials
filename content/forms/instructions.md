@@ -32,6 +32,7 @@ wcag_techniques:
   - G18
   - ARIA1
   - ARIA9
+metafooter: true
 editors:
   - Eric Eggert: "https://www.w3.org/People/yatil/"
   - Shadi Abou-Zahra: "https://www.w3.org/People/shadi/"

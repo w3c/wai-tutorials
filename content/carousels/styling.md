@@ -21,6 +21,7 @@ wcag_success_criteria:
 - 2.4.7
 - 2.5.5
 first_published: "May 2015"
+metafooter: true
 editors:
   - Eric Eggert: "https://www.w3.org/People/yatil/"
   - Shadi Abou-Zahra: "https://www.w3.org/People/shadi/"
