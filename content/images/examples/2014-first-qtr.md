@@ -7,8 +7,8 @@ description:
 image: /content-images/wai-tutorials/images/social.png
 github:
   repository: w3c/wai-tutorials
-  path: 'content/examples/2014-first-qtr.md'
-footer: > # Text in footer in HTML
+  path: 'content/images/examples/2014-first-qtr.md'
+metafooter: true
 
 
 wcag_techniques:

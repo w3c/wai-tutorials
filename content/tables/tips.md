@@ -9,12 +9,23 @@ image: /content-images/wai-tutorials/tables/social.png
 github:
   repository: w3c/wai-tutorials
   path: 'content/tables/tips.md'
-footer: > # Text in footer in HTML
+metafooter: true
 
 resource:
   ref: /tutorials/tables/
 navigation:
   previous: /tutorials/tables/caption-summary/
+
+
+editors:
+  - Eric Eggert: "https://www.w3.org/People/yatil/"
+  - Shadi Abou-Zahra: "https://www.w3.org/People/shadi/"
+contributors:
+  - Anna Belle Leiserson
+  - the Web Content Accessibility Guidelines Working Group (<a href="https://www.w3.org/WAI/GL/">WCAG WG</a>)
+  - the Education and Outreach Working Group (<a href="https://www.w3.org/WAI/EO/">EOWG</a>)
+support: Developed with support from the <a href="https://www.w3.org/WAI/ACT/">WAI-ACT project</a>, co-funded by the <strong>European Commission <abbr title="Information Society Technologies">IST</abbr> Programme</strong>.
+
 ---
 
 -   **Keep it simple:** Complex tables are more work for content creators as well as being harder to interpret for users. It’s usually better to [break up complex tables into simple individual tables](/tutorials/tables/multi-level/#split-up-multi-level-tables), each containing the data for one sub-topic.

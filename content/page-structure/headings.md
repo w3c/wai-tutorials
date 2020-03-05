@@ -12,8 +12,7 @@ lang: en
 github:
   repository: w3c/wai-tutorials
   path: content/headings.md
-footer: > # Text in footer in HTML
-  <p> This is the text in the footer </p>
+metafooter: true
 
 resource:
   ref: /tutorials/page-structure/
@@ -35,6 +34,14 @@ wcag_techniques:
   - G141
   - ARIA12
   - H42
+
+editors:
+  - Eric Eggert: "https://www.w3.org/People/yatil/"
+  - Shadi Abou-Zahra: "https://www.w3.org/People/shadi/"
+contributors:
+  - The Education and Outreach Working Group (<a href="https://www.w3.org/WAI/EO/">EOWG</a>)
+support: Developed with support from the <a href="https://www.w3.org/WAI/ACT/">WAI-ACT project</a>, co-funded by the <strong>European Commission <abbr title="Information Society Technologies">IST</abbr> Programme</strong>.
+
 ---
 
 Headings communicate the organization of the content on the page. Web browsers, plug-ins, and assistive technologies can use them to provide in-page navigation.

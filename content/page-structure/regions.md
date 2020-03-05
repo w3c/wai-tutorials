@@ -12,8 +12,7 @@ lang: en
 github:
   repository: w3c/wai-tutorials
   path: content/regions.md
-footer: > # Text in footer in HTML
-  <p> This is the text in the footer </p>
+metafooter: true
 
 resource:
   ref: /tutorials/page-structure/
@@ -28,6 +27,15 @@ wcag_success_criteria:
   - 2.4.6
 wcag_techniques:
   - ARIA11
+
+
+editors:
+- Eric Eggert: "https://www.w3.org/People/yatil/"
+- Shadi Abou-Zahra: "https://www.w3.org/People/shadi/"
+contributors:
+- The Education and Outreach Working Group (<a href="https://www.w3.org/WAI/EO/">EOWG</a>)
+support: Developed with support from the <a href="https://www.w3.org/WAI/ACT/">WAI-ACT project</a>, co-funded by the <strong>European Commission <abbr title="Information Society Technologies">IST</abbr> Programme</strong>.
+
 ---
 
 Mark up different regions of web pages and applications, so that they can be identified by web browsers and assistive technologies.

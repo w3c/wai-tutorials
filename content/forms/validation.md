@@ -9,7 +9,7 @@ image: /content-images/wai-tutorials/forms/social.png
 github:
   repository: w3c/wai-tutorials
   path: 'content/forms/validation.md'
-footer: > # Text in footer in HTML
+metafooter: true
 
 resource:
   ref: /tutorials/forms/

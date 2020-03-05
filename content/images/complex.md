@@ -7,8 +7,7 @@ description:
 image: /content-images/wai-tutorials/images/social.png
 github:
   repository: w3c/wai-tutorials
-  path: 'content/complex.md'
-footer: > # Text in footer in HTML
+  path: 'content/images/complex.md'
 
 resource:
   ref: /tutorials/images/
@@ -19,6 +18,17 @@ navigation:
 wcag_techniques:
 - C22
 - G94
+
+metafooter: true
+editors:
+  - Eric Eggert: "https://www.w3.org/People/yatil/"
+  - Shadi Abou-Zahra: "https://www.w3.org/People/shadi/"
+contributors:
+  - Anna Belle Leiserson
+  - Wayne Dick
+  - the Web Content Accessibility Guidelines Working Group (<a href="https://www.w3.org/WAI/GL/">WCAG WG</a>)
+  - the Education and Outreach Working Group (<a href="https://www.w3.org/WAI/EO/">EOWG</a>)
+support: Developed with support from the <a href="https://www.w3.org/WAI/ACT/">WAI-ACT project</a>, co-funded by the <strong>European Commission <abbr title="Information Society Technologies">IST</abbr> Programme</strong>.
 ---
 
 {::nomarkdown}

@@ -53,7 +53,7 @@
 {% if page.metafooter %}
   <footer id="wai-site-footer" class="page-footer default-grid" aria-label="Page">
     <div class="inner">
-      <p><strong>Status:</strong>
+      <div><strong>Status:</strong>
         {% if page.status == "approved-draft" %}
           Draft, approved by <a href="https://www.w3.org/WAI/EO/">EOWG</a>, updated
         {% elsif page.status == "draft" %}
@@ -67,8 +67,8 @@
         {% if page.first_published %}
         (first published {{ page.first_published }})
         {% endif %}
-      </p>
-      <p>
+      </div>
+      <div>
           Editors:
           {% for editor in page.editors %}
           {% if forloop.first %}<ul class="sentence">{% endif %}
@@ -83,8 +83,8 @@
             {% endif%}
           {% if forloop.last %}</ul>{% endif %}
           {% endfor %}
-      </p>
-       <p>
+      </div>
+      <div>
           Contributors:
           {% for contributor in page.contributors %}
           {% if forloop.first %}<ul class="sentence">{% endif %}
@@ -99,7 +99,7 @@
             {% endif%}
           {% if forloop.last %}</ul>{% endif %}
           {% endfor %}
-      </p>
+      </div>
       {% if page.support %}
         <p>{{  page.support  }}</p>
       {% endif %}

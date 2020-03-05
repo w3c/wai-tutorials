@@ -10,7 +10,7 @@ image: /content-images/wai-tutorials/tables/social.png
 github:
   repository: w3c/wai-tutorials
   path: 'content/tables/two-headers.md'
-footer: > # Text in footer in HTML
+metafooter: true
 
 resource:
   ref: /tutorials/tables/
@@ -21,6 +21,16 @@ navigation:
 wcag_techniques:
 - H51
 - H63
+
+editors:
+  - Eric Eggert: "https://www.w3.org/People/yatil/"
+  - Shadi Abou-Zahra: "https://www.w3.org/People/shadi/"
+contributors:
+  - Andrew Kirkpatrick
+  - the Web Content Accessibility Guidelines Working Group (<a href="https://www.w3.org/WAI/GL/">WCAG WG</a>)
+  - the Education and Outreach Working Group (<a href="https://www.w3.org/WAI/EO/">EOWG</a>)
+support: Developed with support from the <a href="https://www.w3.org/WAI/ACT/">WAI-ACT project</a>, co-funded by the <strong>European Commission <abbr title="Information Society Technologies">IST</abbr> Programme</strong>.
+
 ---
 
 {% include image.html src="tables/img-multidir.png" class="small right" %} This page covers tables that have a simple row header and a simple column header. In such tables, the relationship between the headers and data cells becomes quickly ambiguous. For such tables, use the `<th>` element to identify the header cells and the `scope` attribute to declare the direction of each header. The `scope` attribute can be set to `row` or `col` to denote that a header applies to the entire row or column, respectively.

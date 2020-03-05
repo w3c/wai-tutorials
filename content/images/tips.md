@@ -7,8 +7,8 @@ description:
 image: /content-images/wai-tutorials/images/social.png
 github:
   repository: w3c/wai-tutorials
-  path: 'content/tips.md'
-footer: > # Text in footer in HTML
+  path: 'content/images/tips.md'
+metafooter: true
 
 resource:
   ref: /tutorials/images/
@@ -16,6 +16,15 @@ navigation:
   previous: /tutorials/images/decision-tree/
 
 wcag_techniques:
+editors:
+  - Eric Eggert: "https://www.w3.org/People/yatil/"
+  - Shadi Abou-Zahra: "https://www.w3.org/People/shadi/"
+contributors:
+  - Anna Belle Leiserson
+  - Sharron Rush
+  - the Web Content Accessibility Guidelines Working Group (<a href="https://www.w3.org/WAI/GL/">WCAG WG</a>)
+  - the Education and Outreach Working Group (<a href="https://www.w3.org/WAI/EO/">EOWG</a>)
+support: Developed with support from the <a href="https://www.w3.org/WAI/ACT/">WAI-ACT project</a>, co-funded by the <strong>European Commission <abbr title="Information Society Technologies">IST</abbr> Programme</strong>.
 ---
 
 - **Choosing appropriate text alternatives:** <br>
@@ -27,7 +36,7 @@ wcag_techniques:
 - **Length of the text alternative:** <br>
   The `alt` text should be the most concise description possible of the image’s purpose. If anything more than a short phrase or sentence is needed, it would be better to use one of the long description methods discussed in [complex images](/tutorials/images/complex/).
 
-- {% include ednote.html pr="527" repo="w3c/wai-tutorials" note="Add Responsive Design tip as proposed." status="proposed" %} 
+- {% include ednote.html pr="527" repo="w3c/wai-tutorials" note="Add Responsive Design tip as proposed." status="proposed" %}
   **Responsive design:** <br>
   Icons with text labels will often drop the text labels when viewed on smaller screens. Ensure that icons are readable at that size, understandable without text, and have text descriptions.
 

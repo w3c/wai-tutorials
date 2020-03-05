@@ -10,7 +10,7 @@ image: /content-images/wai-tutorials/tables/social.png
 github:
   repository: w3c/wai-tutorials
   path: 'content/tables/irregular.md'
-footer: > # Text in footer in HTML
+metafooter: true
 
 resource:
   ref: /tutorials/tables/
@@ -20,6 +20,15 @@ navigation:
 
 wcag_techniques:
 - H63
+
+editors:
+  - Eric Eggert: "https://www.w3.org/People/yatil/"
+  - Shadi Abou-Zahra: "https://www.w3.org/People/shadi/"
+contributors:
+  - The Web Content Accessibility Guidelines Working Group (<a href="https://www.w3.org/WAI/GL/">WCAG WG</a>)
+  - the Education and Outreach Working Group (<a href="https://www.w3.org/WAI/EO/">EOWG</a>)
+support: Developed with support from the <a href="https://www.w3.org/WAI/ACT/">WAI-ACT project</a>, co-funded by the <strong>European Commission <abbr title="Information Society Technologies">IST</abbr> Programme</strong>.
+
 ---
 
 

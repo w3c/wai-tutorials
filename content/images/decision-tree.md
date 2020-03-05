@@ -8,8 +8,7 @@ description:
 image: /content-images/wai-tutorials/images/social.png
 github:
   repository: w3c/wai-tutorials
-  path: 'content/decision-tree.md'
-footer: > # Text in footer in HTML
+  path: 'content/images/decision-tree.md'
 
 resource:
   ref: /tutorials/images/
@@ -18,6 +17,18 @@ navigation:
   next: /tutorials/images/tips/
 
 wcag_techniques:
+
+
+metafooter: true
+editors:
+  - Eric Eggert: "https://www.w3.org/People/yatil/"
+  - Shadi Abou-Zahra: "https://www.w3.org/People/shadi/"
+contributors:
+  - Steve Faulkner
+  - Anna Belle Leiserson
+  - the Web Content Accessibility Guidelines Working Group (<a href="https://www.w3.org/WAI/GL/">WCAG WG</a>)
+  - the Education and Outreach Working Group (<a href="https://www.w3.org/WAI/EO/">EOWG</a>)
+support: Developed with support from the <a href="https://www.w3.org/WAI/ACT/">WAI-ACT project</a>, co-funded by the <strong>European Commission <abbr title="Information Society Technologies">IST</abbr> Programme</strong>.
 ---
 
 This decision tree describes how to use the `alt` attribute of the `<img>` element in various situations. For some types of images, there are alternative approaches, such as using CSS background images for decorative images or web fonts instead of images of text.

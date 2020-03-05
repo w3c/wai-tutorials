@@ -8,14 +8,25 @@ description:
 image: /content-images/wai-tutorials/images/social.png
 github:
   repository: w3c/wai-tutorials
-  path: 'content/index.md'
-footer: > # Text in footer in HTML
+  path: 'content/images/index.md'
+metafooter: true
 
 resource:
   ref: /tutorials/
 navigation:
   next: /tutorials/images/informative/
 
+editors:
+- Eric Eggert: "https://www.w3.org/People/yatil/"
+- Shadi Abou-Zahra: "https://www.w3.org/People/shadi/"
+contributors:
+- Shawn Lawton Henry: "https://www.w3.org/People/Shawn/"
+- Howard Kramer
+- Sharron Rush
+- Bim Egan
+- the Web Content Accessibility Guidelines Working Group (<a href="https://www.w3.org/WAI/GL/">WCAG WG</a>)
+- the Education and Outreach Working Group (<a href="https://www.w3.org/WAI/EO/">EOWG</a>)
+support: Developed with support from the <a href="https://www.w3.org/WAI/ACT/">WAI-ACT project</a>, co-funded by the <strong>European Commission <abbr title="Information Society Technologies">IST</abbr> Programme</strong>.
 
 
 wcag_success_criteria:

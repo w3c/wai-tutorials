@@ -12,8 +12,6 @@ lang: en
 github:
   repository: w3c/wai-tutorials
   path: content/content.md
-footer: > # Text in footer in HTML
-  <p> This is the text in the footer </p>
 
 resource:
   ref: /tutorials/page-structure/
@@ -21,6 +19,15 @@ resource:
 navigation:
   previous: /tutorials/page-structure/headings/
   next: /tutorials/page-structure/example/
+
+metafooter: true
+editors:
+  - Eric Eggert: "https://www.w3.org/People/yatil/"
+  - Shadi Abou-Zahra: "https://www.w3.org/People/shadi/"
+contributors:
+  - The Education and Outreach Working Group (<a href="https://www.w3.org/WAI/EO/">EOWG</a>)
+support: Developed with support from the <a href="https://www.w3.org/WAI/ACT/">WAI-ACT project</a>, co-funded by the <strong>European Commission <abbr title="Information Society Technologies">IST</abbr> Programme</strong>.
+
 
 wcag_success_criteria:
   - 1.3.1

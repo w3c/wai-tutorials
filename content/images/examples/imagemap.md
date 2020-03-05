@@ -7,8 +7,8 @@ description:
 image: /content-images/wai-tutorials/images/social.png
 github:
   repository: w3c/wai-tutorials
-  path: 'content/examples/imagemap.md'
-footer: > # Text in footer in HTML
+  path: 'content/images/examples/imagemap.md'
+metafooter: true
 
 
 ---

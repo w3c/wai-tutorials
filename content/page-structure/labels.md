@@ -12,8 +12,7 @@ lang: en
 github:
   repository: w3c/wai-tutorials
   path: content/labels.md
-footer: > # Text in footer in HTML
-  <p> This is the text in the footer </p>
+metafooter: true
 
 resource:
   ref: /tutorials/page-structure/
@@ -28,6 +27,13 @@ wcag_success_criteria:
 wcag_techniques:
   - H69
   - ARIA11
+
+editors:
+- Eric Eggert: "https://www.w3.org/People/yatil/"
+- Shadi Abou-Zahra: "https://www.w3.org/People/shadi/"
+contributors:
+- The Education and Outreach Working Group (<a href="https://www.w3.org/WAI/EO/">EOWG</a>)
+support: Developed with support from the <a href="https://www.w3.org/WAI/ACT/">WAI-ACT project</a>, co-funded by the <strong>European Commission <abbr title="Information Society Technologies">IST</abbr> Programme</strong>.
 ---
 
 Provide labels to distinguish two page regions of the same type, such as “main navigation” and “sub-navigation” menus using a `<nav>` element on the same page. Labels are also used to change the default identification of page regions, for example, to identify a `<aside>` region as “advertisement”. Regions that are unique, such as `<main>`, do not need additional labels.

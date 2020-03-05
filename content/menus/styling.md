@@ -13,7 +13,7 @@ resource:
   ref: /tutorials/menus/
 navigation:
   previous: /tutorials/menus/structure/
-  next: /tutorials/menus/fly-out/
+  next: /tutorials/menus/flyout/
 
 wcag_success_criteria:
   - 1.4.1
