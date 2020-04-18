@@ -161,3 +161,7 @@ In the following example the link in the navigation points to the main content o
 {::nomarkdown}
 <%= code_end %>
 {:/nomarkdown}
+
+## Responsive Design
+
+Menu structure should be consistent across screen sizes. Some menu items may be collapsed or even hidden in sub navigation menus, but items that show should appear in the same order. Menus should be accessible by touch and keyboard.
