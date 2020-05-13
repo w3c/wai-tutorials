@@ -14,6 +14,8 @@ support: Developed with support from the <a href="https://www.w3.org/WAI/ACT/">W
 
 -   **Keep it simple:** Complex tables are more work for content creators as well as being harder to interpret for users. It’s usually better to [break up complex tables into simple individual tables](multi-level.html#split-up-multi-level-tables), each containing the data for one sub-topic.
 
+-   **Responsive design:** On smaller screens, responsive tables often change format. Ensure that the structural relationship is available in all formats.
+
 -   **Table separation:** If several tables follow one another, don’t use a single table and put in an additional row of `<th>` cells. Screen readers may read aloud all `<th>` cells in a column, resulting in confusion. [Start a new `<table>` when the topic changes.](multi-level.html#split-up-multi-level-tables)
 
 -   **Data separation:**
@@ -27,6 +29,8 @@ support: Developed with support from the <a href="https://www.w3.org/WAI/ACT/">W
          ![On the top there is a table where the content and header cells are not marked up correctly. Line breaks are used to make items look like they align correctly. When resizing the text (bottom) the items don’t line up anymore](table-text-resize.png)
 
 -   **Alignment:** Align text to the left and numeric data to the right (in left-to-right languages), so that people using larger text sizes or smaller screens will be able to find it. This is especially useful if a cell spans more than one column. It’s  helpful to give column headers the same alignment as the data in the cells below.
+
+-   **Defining table headers:** If a table is rendered as multiple tables, ARIA should be used. If a table is rendered as a list, column and row headers should be available.
 
 -   **Styling header cells:** `<th>` elements are used for header cells, using `<td>` elements with different styling will make tables less accessible if not inaccessible. It is also helpful to differentiate `<th>` and `<td>` cells visually. For example, on these tutorial pages, header cells have a dark gray background.
 
