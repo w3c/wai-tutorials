@@ -129,6 +129,10 @@ The [Menus tutorial](/menus/index.html) provides more details on creating menus.
 <%= ref :end %>
 {:/nomarkdown}
 
+## Responsive Design: 
+
+Page structure should be consistent across different screen sizes and orientations. Components may be collapsed or even hidden on smaller screens, but components that show should appear in the same order.
+
 ## Main content
 
 {::nomarkdown}<%= image_tag 'page-structure-main.png', :alt => '', :class => "symbol" %>{:/nomarkdown} Use the HTML5 `<main>` element to identify the main content region of a web page or application.
