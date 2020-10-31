@@ -90,11 +90,11 @@ alt="The castle lies in ruins, the original tower all that remains in one piece.
 {:/nomarkdown}
 
 ~~~ html
-<figure role="group" aria-labelledby="fig1">
-	<figcaption id="fig1">
-		The castle through the ages: 1423, 1756, and 1966 respectively.
-	</figcaption>
-
+  <figure role="group" aria-labelledby="fig1">
+    <figcaption id="fig1">
+      The castle through the ages: 1423, 1756, and 1966 respectively.
+    </figcaption>
+  </figure>
 
 	<figure role="group" aria-labelledby="fig11">
 		<img src="castle-etching.jpg"
@@ -113,8 +113,6 @@ alt="The castle lies in ruins, the original tower all that remains in one piece.
 			alt="The castle lies in ruins, the original tower all that remains in one piece.">
 		<figcaption id="fig13">Film photograph. <span lang="fr">Séraphin Médéric Mieusement</span>, 1936.</figcaption>
 	</figure>
-
-</figure>
 ~~~
 
 {::nomarkdown}
