@@ -329,7 +329,7 @@ For `select` elements with groups of options, the `optgroup` element can be used
 <form action="#" method="get">
 	<fieldset>
 		<legend>Which course would you like to watch today?</legend>
-		<label id="course">Course:</label>
+		<label for="course">Course:</label>
 		<select name="course" id="course">
 			<option></option>
 			<optgroup label="8.01 Physics I: Classical Mechanics">
