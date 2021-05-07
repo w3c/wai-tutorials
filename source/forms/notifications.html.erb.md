@@ -371,7 +371,7 @@ In the following example, the availability of a username is checked instantly wh
 		}
 		var val = this.value;
 		if (val !== "") {
-			if (taken_usernames.indexOf(val.trim())+1) {
+			if (taken_usernames.includes(val.trim())) {
 				setError(this, '&cross; Sorry, this username is taken.');
 			} else {
 				setSuccess(this, '&check; You can use this username.');
