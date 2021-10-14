@@ -92,7 +92,7 @@ alt="The castle lies in ruins, the original tower all that remains in one piece.
 ~~~ html
 <figure role="group" aria-labelledby="fig1">
 	<figcaption id="fig1">
-		The castle through the ages: 1423, 1756, and 1966 respectively.
+		The castle through the ages: 1423, 1756, and 1936 respectively.
 	</figcaption>
 
 
