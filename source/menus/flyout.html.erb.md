@@ -12,28 +12,25 @@ contributors:
 support: Developed with support from the <a href="https://www.w3.org/WAI/ACT/">WAI-ACT project</a>, co-funded by the <strong>European Commission <abbr title="Information Society Technologies">IST</abbr> Programme</strong>.
 ---
 
-Use fly-out (or drop-down) menus to provide an overview of a web site’s page hierarchy. It removes the need for multiple page loads provided that users know where to find the information. Application menus are usually implemented this way, too.
+Use fly-out (or drop-down) menus to provide an overview of a web site’s page hierarchy. It removes the need for multiple page loads provided that users know where to find the information. Application menus are implemented similarly, but with additional WAI-ARIA markup.
 
-People with reduced dexterity, such as tremors, often have trouble operating fly-out menus. For some, it might be impossible. Make sure to provide other ways to the submenu items, for example by repeating them on the page of the parent menu item.
+People with reduced dexterity, such as tremors, often have trouble operating fly-out menus. For some, it might be impossible. Make sure to provide other ways to reach the submenu items, for example by repeating them on the page of the parent menu item.
 
 ## Indicate submenus
 
-Indicate menu items with submenus visually and using markup. In the following example, the submenu is indicated visually by an icon and this WAI-ARIA markup:
-
-* `aria-haspopup="true"` declares that a menu item has a submenu.
-* `aria-expanded="false"` declares that the submenu is hidden.
+Indicate navigation menu items with submenus visually and using markup. In the following example, the submenu is indicated visually by an icon. The WAI-ARIA markup `aria-expanded="false"` declares that the submenu navigation is presently hidden, or "collapsed".
 
 {::nomarkdown}
 <%= code_start('','HTML') %>
 {:/nomarkdown}
 
 ~~~ html
-<nav aria-label="Main Navigation">
+<nav aria-label="Main">
 		<ul>
 				<li><a href="…">Home</a></li>
 				<li><a href="…">Shop</a></li>
 				<li class="has-submenu">
-						<a href="…" aria-haspopup="true" aria-expanded="false">
+						<a href="…" aria-expanded="false">
 							Space Bears
 						</a>
 						<ul>
@@ -79,12 +76,12 @@ In the following example, a delay of one second is added using a timer:
 {::nomarkdown}
 <%= sample_start('show-overflow') %>
 
-<nav role="presentation" aria-label="Main Navigation" id="flyoutnavmousefixed">
+<nav aria-label="Example" id="flyoutnavmousefixed">
 		<ul>
 				<li><a href="#flyoutnavmousefixed">Home</a></li>
 				<li><a href="#flyoutnavmousefixed">Shop</a></li>
 				<li class="has-submenu">
-						<a href="#flyoutnavmousefixed" aria-haspopup="true" aria-expanded="false">Space Bears</a>
+						<a href="#flyoutnavmousefixed" aria-expanded="false">Space Bears</a>
 						<ul>
 								<li><a href="#flyoutnavmousefixed">Space Bear 6</a></li>
 								<li><a href="#flyoutnavmousefixed">Space Bear 6 Plus</a></li>
@@ -155,7 +152,7 @@ In the following example, a delay of one second is added using a timer:
 	}
 
 #flyoutnavmousefixed > ul > li.open > ul {
-		display:block;
+		display: block;
 	}
 
 	#flyoutnavmousefixed > ul > li > ul a{
@@ -228,12 +225,12 @@ Use this approach in situations where the parent menu item only summarizes the s
 {::nomarkdown}
 <%= sample_start('show-overflow') %>
 
-<nav role="presentation" aria-label="Main Navigation" id="flyoutnavkbfixed">
+<nav aria-label="Example" id="flyoutnavkbfixed">
 		<ul>
 				<li><a href="#flyoutnavkbfixed">Home</a></li>
 				<li><a href="#flyoutnavkbfixed">Shop</a></li>
 				<li class="has-submenu">
-						<a href="#flyoutnavkbfixed" aria-expanded="false" aria-haspopup="true">Space Bears</a>
+						<a href="#flyoutnavkbfixed" aria-expanded="false">Space Bears</a>
 						<ul>
 								<li><a href="#flyoutnavkbfixed">Space Bear 6</a></li>
 								<li><a href="#flyoutnavkbfixed">Space Bear 6 Plus</a></li>
@@ -448,12 +445,12 @@ For situations when the parent menu item needs to carry out a function, such as 
 {::nomarkdown}
 <%= sample_start('show-overflow') %>
 
-<nav role="presentation" aria-label="Main Navigation" id="flyoutnavkbbtn">
+<nav aria-label="Example" id="flyoutnavkbbtn">
 	<ul>
 		<li><a href="#flyoutnavkbbtn">Home</a></li>
 		<li><a href="#flyoutnavkbbtn">Shop</a></li>
 		<li class="has-submenu">
-			<a href="#flyoutnavkbbtn" aria-haspopup="true">Space Bears</a>
+			<a href="#flyoutnavkbbtn">Space Bears</a>
 			<ul>
 				<li><a href="#flyoutnavkbbtn">Space Bear 6</a></li>
 				<li><a href="#flyoutnavkbbtn">Space Bear 6 Plus</a></li>
@@ -637,9 +634,9 @@ Array.prototype.forEach.call(menuItems1, function(el, i){
 		});
 		el.addEventListener("mouseout", function(event){
 				timer1 = setTimeout(function(event){
-						document.querySelector("#flyoutnavkbbtn .has-submenu.open").className = "has-submenu";
 						document.querySelector('#flyoutnavkbbtn .has-submenu.open a').setAttribute('aria-expanded', "false");
 						document.querySelector('#flyoutnavkbbtn .has-submenu.open button').setAttribute('aria-expanded', "false");
+  					document.querySelector("#flyoutnavkbbtn .has-submenu.open").className = "has-submenu";
 				}, 1000);
 		});
 		el.querySelector('button').addEventListener("click",  function(event){
@@ -685,7 +682,7 @@ The following code adds a button to every top-level menu item with a submenu. Wh
 <%= notes_start() %>
 {:/}
 
-**Note:** If possible, include the name of the parent menu item in the button label; for example: “show Space Bears submenu”.
+**Note:** If possible, include the name of the parent menu item in the button's label; for example: “show Space Bears submenu”.
 
 {::nomarkdown}
 <%= notes_end() %>
