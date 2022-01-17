@@ -48,9 +48,7 @@ Mark up different regions of web pages and applications, so that they can be ide
 {% include box.html type="start" title="Note" class="simple notes" %}
 {:/}
 
-{% include ednote.html note="Clarify description for header and footer." issue="590" repo="w3c/wai-tutorials" status="open" %}
-
-**Note:** If the `<header>` element is used inside `<article>` and `<section>` elements, it is not associated with the whole page, but only with that specific `<article>` or `<section>`.
+**Note:** If the `<header>` element is used inside `<article>` and `<section>` elements, it is not associated to those elements. It does not get the WAI-ARIA `banner` role and does not have special behavior in assistive technologies.
 
 {::nomarkdown}
 {% include box.html type="end" %}
@@ -84,9 +82,7 @@ View a [complete code example](/tutorials/page-structure/example/) for all regio
 {% include box.html type="start" title="Note" class="simple notes" %}
 {:/}
 
-{% include ednote.html note="Clarify description for header and footer." issue="590" repo="w3c/wai-tutorials" status="open" %}
-
-**Note:** If the `<footer>` element is used inside `<article>` and `<section>` elements, it is not identified as the footer for the whole page but only relates to that specific `<article>` or `<section>`.
+**Note:** If the `<footer>` element is used inside `<article>` and `<section>` elements, it is not associated to those elements. It does not get the WAI-ARIA `contentinfo` role and does not have special behavior in assistive technologies.
 
 {::nomarkdown}
 {% include box.html type="end" %}
