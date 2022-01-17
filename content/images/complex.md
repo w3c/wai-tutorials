@@ -201,7 +201,7 @@ No browser indicates the presence of the <code>longdesc</code> attribute visuall
 
 The `longdesc` attribute can contain the URI of a separate web page that provides the long description for an image or a fragment identifier that refers to an element on the same page that provides the long description.
 
-When the `longdesc` attribute contains a URI to refer to another web page with the long description, it is recommended to also apply [Approach 3 (a text link to the long description adjacent to the image)](#a-text-link-to-the-long-description-adjacent-to-the-image). This method is a workaround for web browsers and assistive technologies that don’t fully support the `longdesc` attribute.
+When the `longdesc` attribute contains a URI to refer to another web page with the long description, it is recommended to also apply [Approach 1 (a text link to the long description adjacent to the image)](#a-text-link-to-the-long-description-adjacent-to-the-image). This method is a workaround for web browsers and assistive technologies that don’t fully support the `longdesc` attribute.
 
 {::nomarkdown}
 {% include box.html type="start" title="Code" class="example" %}
