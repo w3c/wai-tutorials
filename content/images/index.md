@@ -45,7 +45,7 @@ Images must have text alternatives that describe the information or function rep
 
 -   **[Images of text](/tutorials/images/textual/)**: Readable text is sometimes presented within an image. If the image is not a logo, avoid text in images. However, if images of text are used, the text alternative should contain the same words as in the image.
 
--   **[Complex images](/tutorials/images/complex/)** such as graphs and diagrams: To convey data or detailed information, provide a full-text equivalent of the data or information provided in the image as the text alternative.
+-   **[Complex images](/tutorials/images/complex/)** such as graphs and diagrams: To convey data or detailed information, provide a complete text equivalent of the data or information provided in the image as the text alternative.
 
 -   **[Groups of images](/tutorials/images/groups/)**: If multiple images convey a single piece of information, the text alternative for one image should convey the information for the entire group.
 
