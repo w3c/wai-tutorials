@@ -574,9 +574,6 @@ In the example below, the user is expected to provide an expiry date. The input 
 		<input type="text" name="expire" id="expire5" value="03.2015" aria-describedby="expDesc3">
 		<span id="expDesc3" aria-live="assertive"></span>
 	</div>
-	<div class="error">
-		<button type="submit">Submit</button>
-	</div>
 </form>
 
 <script>
