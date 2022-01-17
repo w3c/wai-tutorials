@@ -130,7 +130,7 @@ The `aria-label` attribute can also be used to identify form controls. This appr
 #### Using aria-labelledby
 {:.ap}
 
-The `aria-labelledby` attribute can also be used to identify form controls. This approach is well supported by screen readers and other assistive technology, but, unlike the `title` attribute (see below), the information is not conveyed to visual users. The approach should therefore only be used when the label of the control is clear from the surrounding content, like the button in the example below.
+The `aria-labelledby` attribute can also be used to identify form controls. This approach is well supported by screen readers and other assistive technology,like the `title` attribute (see below), the information is conveyed to visual users. The approach should therefore only be used when the label of the control is visually shown to the users either by a tooltip or visible text.
 
 The `id` of the element containing the label text is used as the value of the `aria-labelledby` attribute.
 
