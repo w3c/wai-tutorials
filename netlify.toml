@@ -1,12 +1,17 @@
-[Settings]
-
-ID = "wai-tutorial-images"
-
 [build]
-
-command = "bundle exec jekyll build --config '_config.yml,_config_staging.yml'"
+command = "git submodule update --init --remote && bundle exec jekyll build --config '_config.yml,_config_staging.yml'"
 publish = "_site"
+
+
+[build.environment]
+RUBY_VERSION = "2.6.2"
 
 [[redirects]]
   from = "/"
-  to = "/tutorials/"
+  to = "/tutorials"
+
+[dev]
+# NB on win64 (cmd or bash shells) --live reload is broken - s/-w --livereload/--no-watch
+# To run along side another WAI resource use the --port 3001 in the following and on CLI with `netify dev`
+command = "bundle exec jekyll serve -w --livereload --trace --config _config.yml,_config_staging.yml"
+
