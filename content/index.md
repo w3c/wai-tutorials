@@ -1,7 +1,7 @@
 ---
 title: "Tutorials"
 permalink: /tutorials/
-ref: /tutorials/
+ref: /tutorials
 lang: en
 last_updated: 2019-07-27
 description:
