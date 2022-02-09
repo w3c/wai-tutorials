@@ -1,13 +1,3 @@
 source 'https://rubygems.org'
 
-gem 'github-pages'
-gem 'jekyll-github-metadata'
-gem 'jekyll-relative-links'
-gem 'jekyll-seo-tag'
-gem 'jekyll-sitemap'
-gem 'jekyll-redirect-from'
-gem 'jekyll-include-cache'
-gem 'jekyll-remote-theme'
-gem 'jekyll-paginate'
-gem 'wai-website-plugin'
-gem "jekyll-last-modified-at"
+gem "wai-gems", :path => "_external/data/wai-gems"

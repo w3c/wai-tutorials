@@ -10,7 +10,7 @@ title: "Web Accessibility Initiative (WAI)"
 email: your-email@domain.com
 description: > # this means to ignore newlines until "baseurl:"
   The Website of the World Wide Web Consortium’s Web Accessibility Initiative.
-baseurl: "/wai-tutorials" # the subpath of your site, e.g. /blog
+baseurl: "/tutorials" # the subpath of your site, e.g. /blog
 url: "https://w3c.github.io" # the base hostname & protocol for your site
 twitter:
   username: w3c_wai
@@ -37,8 +37,7 @@ ytkey: AIzaSyCiZ9uToWu9jb7BTx47NtzCvmGGXKXp8nI
 remote_theme: w3c/wai-website-theme
 
 defaults:
-  -
-    scope:
+  - scope:
       path: ""
     values:
       layout: "default"
@@ -51,4 +50,3 @@ plugins:
   - jekyll-paginate
   - jekyll-remote-theme
   - wai-website-plugin
-  - jekyll-last-modified-at
