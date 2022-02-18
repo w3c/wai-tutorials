@@ -63,7 +63,7 @@
         {% else %}
           Updated
         {% endif %}
-        {{ page.last_modified_at | date: '%d %B %Y' }}
+        {{ page.last_updated | date: '%d %B %Y' }}
         {% if page.first_published %}
         (first published {{ page.first_published }})
         {% endif %}
