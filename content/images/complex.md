@@ -53,7 +53,7 @@ In these cases, a two-part text alternative is required. The first part is the s
 
 There are situations where the composition of an image is important and needs to be provided in the long description. For example, the sequence of colors used and the relative heights of the columns in a bar chart may be relevant information about the structure of the chart, in addition to the actual values and trends that it depicts.
 
-Remember that complex images can be difficult to understand by many people – in particular people with learning disabilities and people with low vision. Long descriptions benefit many people, and it is good practice to make them available to everyone, for example, as part of the main content. It may also be possible to reduce unnecessary complexity in your images and make them easier to understand for everyone.
+Complex images can be difficult to understand by many people – especially those with low vision, learning disabilities, and limited subject-matter experience. Make long descriptions available to everyone to reach a wider audience with your content. For example, show the description as part of the main content. It may also be possible to reduce unnecessary complexity in your images and make them easier to understand for everyone.
 
 It is also good practice to refer to and summarize more complex images from the accompanying text. For example, a reference such as “The following graph shows that visitors were lost in the first quarter, but the numbers recovered in the second quarter” helps to point out the relevant information that the image is intended to present.
 
@@ -201,7 +201,7 @@ No browser indicates the presence of the <code>longdesc</code> attribute visuall
 
 The `longdesc` attribute can contain the URI of a separate web page that provides the long description for an image or a fragment identifier that refers to an element on the same page that provides the long description.
 
-When the `longdesc` attribute contains a URI to refer to another web page with the long description, it is recommended to also apply [Approach 3 (a text link to the long description adjacent to the image)](#a-text-link-to-the-long-description-adjacent-to-the-image). This method is a workaround for web browsers and assistive technologies that don’t fully support the `longdesc` attribute.
+When the `longdesc` attribute contains a URI to refer to another web page with the long description, it is recommended to also apply [Approach 1 (a text link to the long description adjacent to the image)](#a-text-link-to-the-long-description-adjacent-to-the-image). This method is a workaround for web browsers and assistive technologies that don’t fully support the `longdesc` attribute.
 
 {::nomarkdown}
 {% include box.html type="start" title="Code" class="example" %}

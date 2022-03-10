@@ -299,7 +299,7 @@ document.getElementById('ex3').addEventListener('submit', function(event){
 		setError(exp, 'Use the format MM/YYYY.');
 	}
 	var usr = document.getElementById('username4');
-	if (taken_usernames.indexOf(usr.value.trim())+1 == false) {
+	if (taken_usernames.includes(usr.value.trim()) == false) {
 		setSuccess(usr);
 	} else {
 		setError(usr, 'Username already taken');
@@ -397,7 +397,7 @@ In the following example, the availability of a username is checked instantly wh
 		}
 		var val = this.value;
 		if (val !== "") {
-			if (taken_usernames.indexOf(val.trim())+1) {
+			if (taken_usernames.includes(val.trim())) {
 				setError(this, '&cross; Sorry, this username is taken.');
 			} else {
 				setSuccess(this, '&check; You can use this username.');
@@ -447,7 +447,7 @@ document.getElementById('username').addEventListener('keyup', function(){
 	}
 	var val = this.value;
 	if (val !== "") {
-		if (taken_usernames.indexOf(val.trim())+1) {
+		if (taken_usernames.includes(val.trim())) {
 			setError(this, '&cross; Sorry, this username is taken.');
 		} else {
 			setSuccess(this, '&check; You can use this username.');
@@ -574,9 +574,6 @@ In the example below, the user is expected to provide an expiry date. The input 
 		<input type="text" name="expire" id="expire5" value="03.2015" aria-describedby="expDesc3">
 		<span id="expDesc3" aria-live="assertive"></span>
 	</div>
-	<div class="error">
-		<button type="submit">Submit</button>
-	</div>
 </form>
 
 <script>
@@ -600,7 +597,7 @@ for (var i = inputs.length - 1; i >= 0; i--) {
 				setError(this, 'Use the format MM/YYYY.');
 			}
 		} else if (this.id == 'username5') {
-			if (taken_usernames.indexOf(this.value.trim())+1 == false) {
+			if (taken_usernames.includes(this.value.trim()) == false) {
 				setSuccess(this);
 			} else {
 				setError(this, 'Username already taken.');
