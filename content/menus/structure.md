@@ -21,7 +21,9 @@ wcag_success_criteria:
 wcag_techniques:
   - ARIA6
   - ARIA11
+
 metafooter: true
+last_updated: 2017-04-13
 editors:
   - Eric Eggert: "https://www.w3.org/People/yatil/"
   - Shadi Abou-Zahra: "https://www.w3.org/People/shadi/"

@@ -17,6 +17,7 @@ navigation:
   next: /tutorials/menus/application-menus-code/
 
 metafooter: true
+last_updated: 2018-08-02
 editors:
   - Eric Eggert: "https://www.w3.org/People/yatil/"
   - Shadi Abou-Zahra: "https://www.w3.org/People/shadi/"
