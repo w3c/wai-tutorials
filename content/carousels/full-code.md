@@ -15,8 +15,9 @@ resource:
 navigation:
   previous: /tutorials/carousels/working-example/
 
-first_published: "May 2015"
 metafooter: true
+first_published: "May 2015"
+last_updated: 2017-04-13
 editors:
   - Eric Eggert: "https://www.w3.org/People/yatil/"
   - Shadi Abou-Zahra: "https://www.w3.org/People/shadi/"
