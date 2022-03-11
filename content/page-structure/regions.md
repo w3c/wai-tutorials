@@ -10,9 +10,9 @@ lang: en
 # - name: Contributor 1
 # - name: Contributor 2
 github:
+  branch: 'master-2.0'
   repository: w3c/wai-tutorials
   path: content/regions.md
-metafooter: true
 
 resource:
   ref: /tutorials/page-structure/
@@ -28,7 +28,8 @@ wcag_success_criteria:
 wcag_techniques:
   - ARIA11
 
-
+metafooter: true
+last_updated: 2022-02-08
 editors:
 - Eric Eggert: "https://www.w3.org/People/yatil/"
 - Shadi Abou-Zahra: "https://www.w3.org/People/shadi/"

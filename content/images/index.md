@@ -3,10 +3,11 @@ title: "Images Tutorial"
 permalink: /tutorials/images/
 ref: /tutorials/images/
 lang: en
-last_updated: 2019-07-27
+last_updated: 2022-02-08
 description:
 image: /content-images/wai-tutorials/images/social.png
 github:
+  branch: 'master-2.0'
   repository: w3c/wai-tutorials
   path: 'content/images/index.md'
 metafooter: true

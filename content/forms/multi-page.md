@@ -3,13 +3,13 @@ title: Multi-page Forms
 permalink: /tutorials/forms/multi-page/
 ref: /tutorials/forms/multi-page/
 lang: en
-last_updated: 2019-07-27
+
 description:
 image: /content-images/wai-tutorials/forms/social.png
 github:
+  branch: 'master-2.0'
   repository: w3c/wai-tutorials
   path: 'content/forms/multi-page.md'
-metafooter: true
 
 resource:
   ref: /tutorials/forms/
@@ -30,7 +30,9 @@ wcag_techniques:
   - G198
   - SCR1
   - SCR16
+
 metafooter: true
+last_updated: 2019-07-27
 editors:
   - Eric Eggert: "https://www.w3.org/People/yatil/"
   - Shadi Abou-Zahra: "https://www.w3.org/People/shadi/"

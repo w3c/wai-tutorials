@@ -3,13 +3,13 @@ title: "Caption & Summary"
 permalink: /tutorials/tables/caption-summary/
 ref: /tutorials/tables/caption-summary/
 lang: en
-last_updated: 2019-07-27
+
 description:
 image: /content-images/wai-tutorials/tables/social.png
 github:
+  branch: 'master-2.0'
   repository: w3c/wai-tutorials
   path: 'content/tables/caption-summary.md'
-metafooter: true
 
 resource:
   ref: /tutorials/tables/
@@ -21,6 +21,8 @@ wcag_techniques:
 - H73
 - H39
 
+metafooter: true
+last_updated: 2019-07-27
 editors:
   - Eric Eggert: "https://www.w3.org/People/yatil/"
   - Shadi Abou-Zahra: "https://www.w3.org/People/shadi/"

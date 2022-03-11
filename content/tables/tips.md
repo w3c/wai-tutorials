@@ -3,20 +3,21 @@ title: "Tips and Tricks"
 permalink: /tutorials/tables/tips/
 ref: /tutorials/tables/tips/
 lang: en
-last_updated: 2019-07-27
+
 description:
 image: /content-images/wai-tutorials/tables/social.png
 github:
+  branch: 'master-2.0'
   repository: w3c/wai-tutorials
   path: 'content/tables/tips.md'
-metafooter: true
 
 resource:
   ref: /tutorials/tables/
 navigation:
   previous: /tutorials/tables/caption-summary/
 
-
+metafooter: true
+last_updated: 2019-07-27
 editors:
   - Eric Eggert: "https://www.w3.org/People/yatil/"
   - Shadi Abou-Zahra: "https://www.w3.org/People/shadi/"

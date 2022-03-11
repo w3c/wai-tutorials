@@ -6,6 +6,7 @@ permalink: /tutorials/menus/application-menus-code/
 ref: /tutorials/menus/application-menus-code/
 
 github:
+  branch: 'master-2.0'
   repository: w3c/wai-tutorials
   path: 'content/menus/application-menus-code.md'
 
@@ -14,8 +15,8 @@ resource:
 navigation:
   previous: /tutorials/menus/application-menus/
 
-
 metafooter: true
+last_updated: 2018-08-02
 editors:
   - Eric Eggert: "https://www.w3.org/People/yatil/"
   - Shadi Abou-Zahra: "https://www.w3.org/People/shadi/"

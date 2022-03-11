@@ -6,9 +6,9 @@ lang: en
 description:
 image: /content-images/wai-tutorials/images/social.png
 github:
+  branch: 'master-2.0'
   repository: w3c/wai-tutorials
   path: 'content/images/textual.md'
-metafooter: true
 
 resource:
   ref: /tutorials/images/
@@ -20,6 +20,8 @@ wcag_techniques:
 - C22
 - G94
 
+metafooter: true
+last_updated: 2017-04-12
 editors:
   - Eric Eggert: "https://www.w3.org/People/yatil/"
   - Shadi Abou-Zahra: "https://www.w3.org/People/shadi/"

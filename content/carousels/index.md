@@ -6,6 +6,7 @@ permalink: /tutorials/carousels/
 ref: /tutorials/carousels/
 
 github:
+  branch: 'master-2.0'
   repository: w3c/wai-tutorials
   path: 'content/carousels/index.md'
 
@@ -19,8 +20,10 @@ wcag_success_criteria:
   - 2.1.1
   - 2.2.2
   - 4.1.2
-first_published: "May 2015"
+
 metafooter: true
+first_published: "May 2015"
+last_updated: 2017-04-13
 editors:
   - Eric Eggert: "https://www.w3.org/People/yatil/"
   - Shadi Abou-Zahra: "https://www.w3.org/People/shadi/"

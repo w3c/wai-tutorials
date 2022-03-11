@@ -6,6 +6,7 @@ permalink: /tutorials/carousels/working-example/
 ref: /tutorials/carousels/working-example/
 
 github:
+  branch: 'master-2.0'
   repository: w3c/wai-tutorials
   path: 'content/carousels/working-example.md'
 
@@ -16,6 +17,7 @@ navigation:
   next: /tutorials/carousels/full-code/
 
 metafooter: true
+last_updated: 2017-04-13
 editors:
   - Eric Eggert: "https://www.w3.org/People/yatil/"
   - Shadi Abou-Zahra: "https://www.w3.org/People/shadi/"

@@ -3,13 +3,13 @@ title: Validating Input
 permalink: /tutorials/forms/validation/
 ref: /tutorials/forms/validation/
 lang: en
-last_updated: 2019-07-27
+
 description:
 image: /content-images/wai-tutorials/forms/social.png
 github:
+  branch: 'master-2.0'
   repository: w3c/wai-tutorials
   path: 'content/forms/validation.md'
-metafooter: true
 
 resource:
   ref: /tutorials/forms/
@@ -28,7 +28,9 @@ wcag_techniques:
   - G85
   - G155
   - G168
+
 metafooter: true
+last_updated: 2019-07-27
 editors:
   - Eric Eggert: "https://www.w3.org/People/yatil/"
   - Shadi Abou-Zahra: "https://www.w3.org/People/shadi/"

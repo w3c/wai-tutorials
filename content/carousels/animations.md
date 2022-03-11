@@ -6,6 +6,7 @@ permalink: /tutorials/carousels/animations/
 ref: /tutorials/carousels/animations/
 
 github:
+  branch: 'master-2.0'
   repository: w3c/wai-tutorials
   path: 'content/carousels/animations.md'
 
@@ -17,8 +18,10 @@ navigation:
 
 wcag_success_criteria:
   - 2.2.2
-first_published: "May 2015"
+
 metafooter: true
+first_published: "May 2015"
+last_updated: 2019-11-27
 editors:
   - Eric Eggert: "https://www.w3.org/People/yatil/"
   - Shadi Abou-Zahra: "https://www.w3.org/People/shadi/"

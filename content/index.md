@@ -1,18 +1,19 @@
 ---
 title: "Tutorials"
 permalink: /tutorials/
-ref: /tutorials
+ref: /tutorials/
 lang: en
-last_updated: 2019-07-27
+
 description:
 image: /content-images/wai-tutorials/images/social.png
 github:
+  branch: 'master-2.0'
   repository: w3c/wai-tutorials
   path: 'content/index.md'
 
 metafooter: true
+last_updated: 2019-07-27
 first_published: "September 2014"
-metafooter: true
 editors:
   - Eric Eggert: "https://www.w3.org/People/yatil/"
   - Shadi Abou-Zahra: "https://www.w3.org/People/shadi/"

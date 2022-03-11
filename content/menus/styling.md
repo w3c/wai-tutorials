@@ -6,6 +6,7 @@ permalink: /tutorials/menus/styling/
 ref: /tutorials/menus/styling/
 
 github:
+  branch: 'master-2.0'
   repository: w3c/wai-tutorials
   path: 'content/menus/styling.md'
 
@@ -22,7 +23,9 @@ wcag_techniques:
   - G128
   - G182
   - G183
+
 metafooter: true
+last_updated: 2017-04-13
 editors:
   - Eric Eggert: "https://www.w3.org/People/yatil/"
   - Shadi Abou-Zahra: "https://www.w3.org/People/shadi/"
