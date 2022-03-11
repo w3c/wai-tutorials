@@ -3,14 +3,13 @@ title: Labeling Controls
 permalink: /tutorials/forms/labels/
 ref: /tutorials/forms/labels/
 lang: en
-last_updated: 2019-07-27
+
 description:
 image: /content-images/wai-tutorials/forms/social.png
 github:
   branch: 'master-2.0'
   repository: w3c/wai-tutorials
   path: 'content/forms/labels.md'
-metafooter: true
 
 resource:
   ref: /tutorials/forms/
@@ -37,7 +36,9 @@ wcag_techniques:
   - H65
   - ARIA14
   - ARIA16
+
 metafooter: true
+last_updated: 2019-07-27
 editors:
   - Eric Eggert: "https://www.w3.org/People/yatil/"
   - Shadi Abou-Zahra: "https://www.w3.org/People/shadi/"

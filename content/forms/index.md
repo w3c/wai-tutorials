@@ -3,7 +3,7 @@ title: "Forms Tutorial"
 permalink: /tutorials/forms/
 ref: /tutorials/forms/
 lang: en
-last_updated: 2019-07-27
+
 description:
 image: /content-images/wai-tutorials/forms/social.png
 github:
@@ -23,8 +23,10 @@ wcag_success_criteria:
   - 2.4.6
   - 3.3.2
   - 4.1.2
-first_published: "September 2014"
+
 metafooter: true
+first_published: "September 2014"
+last_updated: 2019-07-27
 editors:
   - Eric Eggert: "https://www.w3.org/People/yatil/"
   - Shadi Abou-Zahra: "https://www.w3.org/People/shadi/"

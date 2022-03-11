@@ -3,7 +3,7 @@ title: Grouping Controls
 permalink: /tutorials/forms/grouping/
 ref: /tutorials/forms/grouping/
 lang: en
-last_updated: 2019-07-27
+
 description:
 image: /content-images/wai-tutorials/forms/social.png
 github:
@@ -25,7 +25,9 @@ wcag_techniques:
   - H71
   - ARIA17
   - H85
+
 metafooter: true
+last_updated: 2019-07-27
 editors:
   - Eric Eggert: "https://www.w3.org/People/yatil/"
   - Shadi Abou-Zahra: "https://www.w3.org/People/shadi/"
