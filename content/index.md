@@ -3,7 +3,7 @@ title: "Tutorials"
 permalink: /tutorials/
 ref: /tutorials/
 lang: en
-last_updated: 2019-07-27
+
 description:
 image: /content-images/wai-tutorials/images/social.png
 github:
@@ -12,6 +12,7 @@ github:
   path: 'content/index.md'
 
 metafooter: true
+last_updated: 2019-07-27
 first_published: "September 2014"
 editors:
   - Eric Eggert: "https://www.w3.org/People/yatil/"
