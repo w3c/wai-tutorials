@@ -3,17 +3,11 @@ title: "Labeling Regions"
 permalink: /tutorials/page-structure/labels/
 ref: /tutorials/page-structure/labels/
 lang: en
-# translators: # Uncomment (remove #) for translations, one - name line per translator.
-# - name: Translator 1
-# - name: Translator 2
-# contributors:
-# - name: Contributor 1
-# - name: Contributor 2
+
 github:
   branch: 'master-2.0'
   repository: w3c/wai-tutorials
   path: content/labels.md
-metafooter: true
 
 resource:
   ref: /tutorials/page-structure/
@@ -29,6 +23,8 @@ wcag_techniques:
   - H69
   - ARIA11
 
+metafooter: true
+last_updated: 2017-04-21
 editors:
 - Eric Eggert: "https://www.w3.org/People/yatil/"
 - Shadi Abou-Zahra: "https://www.w3.org/People/shadi/"

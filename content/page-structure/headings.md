@@ -13,7 +13,6 @@ github:
   branch: 'master-2.0'
   repository: w3c/wai-tutorials
   path: content/headings.md
-metafooter: true
 
 resource:
   ref: /tutorials/page-structure/
@@ -36,6 +35,8 @@ wcag_techniques:
   - ARIA12
   - H42
 
+metafooter: true
+last_updated: 2017-05-04
 editors:
   - Eric Eggert: "https://www.w3.org/People/yatil/"
   - Shadi Abou-Zahra: "https://www.w3.org/People/shadi/"

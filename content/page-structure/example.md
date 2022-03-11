@@ -4,12 +4,7 @@ nav_title: Code Example
 permalink: /tutorials/page-structure/example/
 ref: /tutorials/page-structure/example/
 lang: en
-# translators: # Uncomment (remove #) for translations, one - name line per translator.
-# - name: Translator 1
-# - name: Translator 2
-# contributors:
-# - name: Contributor 1
-# - name: Contributor 2
+
 github:
   branch: 'master-2.0'
   repository: w3c/wai-tutorials
@@ -23,6 +18,7 @@ navigation:
   previous: /tutorials/page-structure/content/
 
 metafooter: true
+last_updated: 2017-04-20
 editors:
 - Eric Eggert: "https://www.w3.org/People/yatil/"
 - Shadi Abou-Zahra: "https://www.w3.org/People/shadi/"
