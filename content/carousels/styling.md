@@ -6,6 +6,7 @@ permalink: /tutorials/carousels/styling/
 ref: /tutorials/carousels/styling/
 
 github:
+  branch: 'master-2.0'
   repository: w3c/wai-tutorials
   path: 'content/carousels/styling.md'
 

@@ -6,6 +6,7 @@ permalink: /tutorials/carousels/animations/
 ref: /tutorials/carousels/animations/
 
 github:
+  branch: 'master-2.0'
   repository: w3c/wai-tutorials
   path: 'content/carousels/animations.md'
 

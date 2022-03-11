@@ -5,6 +5,7 @@ lang: en
 description:
 image: /content-images/wai-tutorials/images/social.png
 github:
+  branch: 'master-2.0'
   repository: w3c/wai-tutorials
   path: 'content/images/imagemap.md'
 metafooter: true

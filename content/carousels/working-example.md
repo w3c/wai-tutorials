@@ -6,6 +6,7 @@ permalink: /tutorials/carousels/working-example/
 ref: /tutorials/carousels/working-example/
 
 github:
+  branch: 'master-2.0'
   repository: w3c/wai-tutorials
   path: 'content/carousels/working-example.md'
 

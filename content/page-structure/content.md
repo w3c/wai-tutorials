@@ -10,6 +10,7 @@ lang: en
 # - name: Contributor 1
 # - name: Contributor 2
 github:
+  branch: 'master-2.0'
   repository: w3c/wai-tutorials
   path: content/content.md
 

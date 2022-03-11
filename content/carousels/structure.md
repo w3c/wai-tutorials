@@ -5,6 +5,7 @@ permalink: /tutorials/carousels/structure/
 ref: /tutorials/carousels/structure/
 
 github:
+  branch: 'master-2.0'
   repository: w3c/wai-tutorials
   path: 'content/carousels/structure.md'
 

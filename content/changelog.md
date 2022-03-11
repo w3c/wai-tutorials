@@ -7,6 +7,7 @@ last_updated: 2019-07-27
 description:
 image: /content-images/wai-tutorials/images/social.png
 github:
+  branch: 'master-2.0'
   repository: w3c/wai-tutorials
   path: 'content/changelog.md'
 

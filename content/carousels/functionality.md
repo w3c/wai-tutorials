@@ -6,6 +6,7 @@ permalink: /tutorials/carousels/functionality/
 ref: /tutorials/carousels/functionality/
 
 github:
+  branch: 'master-2.0'
   repository: w3c/wai-tutorials
   path: 'content/carousels/functionality.md'
 

@@ -6,6 +6,7 @@ permalink: /tutorials/menus/flyout/
 ref: /tutorials/menus/flyout/
 
 github:
+  branch: 'master-2.0'
   repository: w3c/wai-tutorials
   path: 'content/menus/flyout.md'
 

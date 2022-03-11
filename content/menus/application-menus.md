@@ -6,6 +6,7 @@ permalink: /tutorials/menus/application-menus/
 ref: /tutorials/menus/application-menus/
 
 github:
+  branch: 'master-2.0'
   repository: w3c/wai-tutorials
   path: 'content/menus/application-menus.md'
 

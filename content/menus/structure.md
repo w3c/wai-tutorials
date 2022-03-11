@@ -6,6 +6,7 @@ permalink: /tutorials/menus/structure/
 ref: /tutorials/menus/structure/
 
 github:
+  branch: 'master-2.0'
   repository: w3c/wai-tutorials
   path: 'content/menus/structure.md'
 

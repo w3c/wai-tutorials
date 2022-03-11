@@ -6,6 +6,7 @@ permalink: /tutorials/carousels/full-code/
 ref: /tutorials/carousels/full-code/
 
 github:
+  branch: 'master-2.0'
   repository: w3c/wai-tutorials
   path: 'content/carousels/full-code.md'
 
