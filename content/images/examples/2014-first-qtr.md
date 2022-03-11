@@ -9,8 +9,9 @@ github:
   branch: 'master-2.0'
   repository: w3c/wai-tutorials
   path: 'content/images/examples/2014-first-qtr.md'
-metafooter: true
 
+metafooter: true
+last_updated: 2015-02-16
 
 wcag_techniques:
 - C22
