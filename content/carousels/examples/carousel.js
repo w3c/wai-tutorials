@@ -85,9 +85,9 @@ var myCarousel = (function() {
         // Add Play/Pause button if the slider is animated
 
         if (settings.startAnimated) {
-          li.innerHTML = '<button data-stop=true><span class="visuallyhidden">Stop Animation </span>￭</button>';
+          li.innerHTML = '<button data-action="stop" aria-label="Automatic animation" aria-pressed="false"><span>▶</span></button>';
         } else {
-          li.innerHTML = '<button data-start=true><span class="visuallyhidden">Start Animation </span>▶</button>';
+          li.innerHTML = '<button data-action="start" aria-label="Automatic animation" aria-pressed="true"><span>￭</span></button>';
         }
 
         slidenav.appendChild(li);
@@ -97,10 +97,9 @@ var myCarousel = (function() {
 
         // Add button for each slide if slidenav = true
         for (var i = slides.length - 1; i >= 0; i--) {
-          var klass = (i===0) ? 'class="current" ' : '';
-          var kurrent = (i===0) ? ' <span class="visuallyhidden">(Current Slide)</span>' : '';
+          var activeCurrent = (i===0) ? 'aria-current="true" ' : '';
 
-          li.innerHTML = '<button '+ klass +'data-slide="' + i + '"><span class="visuallyhidden">News</span> ' + (i+1) + kurrent + '</button>';
+          li.innerHTML = '<button '+ klass +'data-slide="' + i + '"><span class="visuallyhidden">News</span> ' + (i+1) + '</button>';
           slidenav.appendChild(li);
         }
       }
@@ -133,7 +132,7 @@ var myCarousel = (function() {
     slides[0].parentNode.addEventListener('transitionend', function (event) {
       var slide = event.target;
       removeClass(slide, 'in-transition');
-      if (hasClass(slide, 'current')) {
+      if (slide.getAttribute('aria-current') === 'true')  {
         // Also, if the global setFocus variable is set
         // and the transition ended on the current slide,
         // set the focus on this slide.
@@ -236,11 +235,11 @@ var myCarousel = (function() {
     if(settings.slidenav) {
       var buttons = carousel.querySelectorAll('.slidenav button[data-slide]');
       for (var j = buttons.length - 1; j >= 0; j--) {
-        buttons[j].className = '';
+        buttons[j].setAttribute("aria-current", "false");
         buttons[j].innerHTML = '<span class="visuallyhidden">News</span> ' + (j+1);
       }
-      buttons[new_current].className = "current";
-      buttons[new_current].innerHTML = '<span class="visuallyhidden">News</span> ' + (new_current+1) + ' <span class="visuallyhidden">(Current Slide)</span>';
+      buttons[new_current].setAttribute("aria-current", "true");
+      buttons[new_current].innerHTML = '<span class="visuallyhidden">News</span> ' + (new_current+1);
     }
 
     // Set the global index to the new current value
@@ -297,7 +296,9 @@ var myCarousel = (function() {
     settings.animate = false;
     animationSuspended = false;
     var _this = carousel.querySelector('[data-stop], [data-start]');
-    _this.innerHTML = '<span class="visuallyhidden">Start Animation </span>▶';
+    _this.innerHTML = '<span aria-hidden="true">▶</span>';
+    _this.setAttribute('aria-label', "Automatic animation");
+    _this.setAttribute("aria-pressed", "false");
     _this.removeAttribute('data-stop');
     _this.setAttribute('data-start', 'true');
   }
@@ -310,7 +311,9 @@ var myCarousel = (function() {
       nextSlide();
     }, 5000);
     var _this = carousel.querySelector('[data-stop], [data-start]');
-    _this.innerHTML = '<span class="visuallyhidden">Stop Animation </span>￭';
+    _this.innerHTML = '<span aria-hidden="true">￭</span>';
+    _this.setAttribute('aria-label', "Automatic animation");
+    _this.setAttribute("aria-pressed", "true");
     _this.setAttribute('data-stop', 'true');
     _this.removeAttribute('data-start');
   }
