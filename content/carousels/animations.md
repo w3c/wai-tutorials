@@ -5,6 +5,8 @@ lang: en
 permalink: /tutorials/carousels/animations/
 ref: /tutorials/carousels/animations/
 
+image: /content-images/wai-tutorials/social-images/carousels.png
+
 github:
   branch: 'master-2.0'
   repository: w3c/wai-tutorials

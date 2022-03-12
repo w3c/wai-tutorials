@@ -4,6 +4,8 @@ lang: en
 permalink: /tutorials/menus/
 ref: /tutorials/menus/
 
+image: /content-images/wai-tutorials/social-images/menus.png
+
 github:
   branch: 'master-2.0'
   repository: w3c/wai-tutorials

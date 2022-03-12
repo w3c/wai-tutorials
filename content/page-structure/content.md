@@ -4,6 +4,8 @@ permalink: /tutorials/page-structure/content/
 ref: /tutorials/page-structure/content/
 lang: en
 
+image: /content-images/wai-tutorials/social-images/page-structure.png
+
 github:
   branch: 'master-2.0'
   repository: w3c/wai-tutorials

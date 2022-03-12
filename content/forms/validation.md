@@ -5,7 +5,7 @@ ref: /tutorials/forms/validation/
 lang: en
 
 description:
-image: /content-images/wai-tutorials/forms/social.png
+image: /content-images/wai-tutorials/social-images/forms.png
 github:
   branch: 'master-2.0'
   repository: w3c/wai-tutorials

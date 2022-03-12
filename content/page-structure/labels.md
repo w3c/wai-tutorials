@@ -4,6 +4,8 @@ permalink: /tutorials/page-structure/labels/
 ref: /tutorials/page-structure/labels/
 lang: en
 
+image: /content-images/wai-tutorials/social-images/page-structure.png
+
 github:
   branch: 'master-2.0'
   repository: w3c/wai-tutorials

@@ -3,8 +3,10 @@ title: "Informative Images"
 permalink: /tutorials/images/informative/
 ref: /tutorials/images/informative/
 lang: en
+
 description:
-image: /content-images/wai-tutorials/images/social.png
+image: /content-images/wai-tutorials/social-images/images.png
+
 github:
   branch: 'master-2.0'
   repository: w3c/wai-tutorials

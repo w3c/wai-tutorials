@@ -3,12 +3,9 @@ title: "Page Regions"
 permalink: /tutorials/page-structure/regions/
 ref: /tutorials/page-structure/regions/
 lang: en
-# translators: # Uncomment (remove #) for translations, one - name line per translator.
-# - name: Translator 1
-# - name: Translator 2
-# contributors:
-# - name: Contributor 1
-# - name: Contributor 2
+
+image: /content-images/wai-tutorials/social-images/page-structure.png
+
 github:
   branch: 'master-2.0'
   repository: w3c/wai-tutorials

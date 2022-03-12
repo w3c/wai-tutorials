@@ -6,7 +6,7 @@ ref: /tutorials/tables/two-headers/
 lang: en
 
 description:
-image: /content-images/wai-tutorials/tables/social.png
+image: /content-images/wai-tutorials/social-images/tables.png
 github:
   branch: 'master-2.0'
   repository: w3c/wai-tutorials

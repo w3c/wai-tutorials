@@ -3,8 +3,10 @@ title: "Groups of Images"
 permalink: /tutorials/images/groups/
 ref: /tutorials/images/groups/
 lang: en
+
 description:
-image: /content-images/wai-tutorials/images/social.png
+image: /content-images/wai-tutorials/social-images/images.png
+
 github:
   branch: 'master-2.0'
   repository: w3c/wai-tutorials

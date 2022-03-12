@@ -3,8 +3,10 @@ title: "Images of Text"
 permalink: /tutorials/images/textual/
 ref: /tutorials/images/textual/
 lang: en
+
 description:
-image: /content-images/wai-tutorials/images/social.png
+image: /content-images/wai-tutorials/social-images/images.png
+
 github:
   branch: 'master-2.0'
   repository: w3c/wai-tutorials
@@ -21,7 +23,7 @@ wcag_techniques:
 - G94
 
 metafooter: true
-last_updated: 2017-04-12
+last_updated: 2017-04-13
 editors:
   - Eric Eggert: "https://www.w3.org/People/yatil/"
   - Shadi Abou-Zahra: "https://www.w3.org/People/shadi/"

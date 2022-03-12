@@ -4,8 +4,10 @@ title_html: "An <code>alt</code> Decision Tree"
 permalink: /tutorials/images/decision-tree/
 ref: /tutorials/images/decision-tree/
 lang: en
+
 description:
-image: /content-images/wai-tutorials/images/social.png
+image: /content-images/wai-tutorials/social-images/images.png
+
 github:
   branch: 'master-2.0'
   repository: w3c/wai-tutorials

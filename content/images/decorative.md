@@ -3,8 +3,10 @@ title: "Decorative Images"
 permalink: /tutorials/images/decorative/
 ref: /tutorials/images/decorative/
 lang: en
+
 description:
-image: /content-images/wai-tutorials/images/social.png
+image: /content-images/wai-tutorials/social-images/images.png
+
 github:
   branch: 'master-2.0'
   repository: w3c/wai-tutorials

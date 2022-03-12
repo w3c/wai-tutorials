@@ -3,12 +3,9 @@ title: "Headings"
 permalink: /tutorials/page-structure/headings/
 ref: /tutorials/page-structure/headings/
 lang: en
-# translators: # Uncomment (remove #) for translations, one - name line per translator.
-# - name: Translator 1
-# - name: Translator 2
-# contributors:
-# - name: Contributor 1
-# - name: Contributor 2
+
+image: /content-images/wai-tutorials/social-images/page-structure.png
+
 github:
   branch: 'master-2.0'
   repository: w3c/wai-tutorials
