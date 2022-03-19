@@ -328,9 +328,9 @@ var myCarousel = (function() {
         var li = document.createElement('li');
 
         if (settings.startAnimated) {
-          li.innerHTML = '<button data-action="stop"><span class="visuallyhidden">Stop Animation </span>￭</button>';
+          li.innerHTML = '<button data-action="stop" aria-label="Automatic animation" aria-pressed="false"><span>▶</span></button>';
         } else {
-          li.innerHTML = '<button data-action="start"><span class="visuallyhidden">Start Animation </span>▶</button>';
+          li.innerHTML = '<button data-action="start" aria-label="Automatic animation" aria-pressed="true"><span>￭</span></button>';
         }
 
         slidenav.appendChild(li);
@@ -339,10 +339,9 @@ var myCarousel = (function() {
       if (settings.slidenav) {
         forEachElement(slides, function(el, i){
           var li = document.createElement('li');
-          var klass = (i===0) ? 'class="current" ' : '';
-          var kurrent = (i===0) ? ' <span class="visuallyhidden">(Current Item)</span>' : '';
+          var activeCurrent = (i===0) ? 'aria-current="true" ' : '';
 
-          li.innerHTML = '<button '+ klass +'data-slide="' + i + '"><span class="visuallyhidden">News</span> ' + (i+1) + kurrent + '</button>';
+          li.innerHTML = '<button '+ activeCurrent +'data-slide="' + i + '"><span class="visuallyhidden">News</span> ' + (i+1) + '</button>';
           slidenav.appendChild(li);
         });
       }
@@ -374,7 +373,7 @@ var myCarousel = (function() {
       slides[0].parentNode.addEventListener('transitionend', function (event) {
         var slide = event.target;
         removeClass(slide, 'in-transition');
-        if (hasClass(slide, 'current'))  {
+        if (slide.getAttribute('aria-current') === 'true')  {
           if(setFocus) {
             slide.setAttribute('tabindex', '-1');
             slide.focus();
@@ -448,11 +447,11 @@ var myCarousel = (function() {
     if(settings.slidenav) {
       var buttons = carousel.querySelectorAll('.slidenav button[data-slide]');
       for (var j = buttons.length - 1; j >= 0; j--) {
-        buttons[j].className = '';
-        buttons[j].innerHTML = '<span class="visuallyhidden">News</span> ' + (j+1);
+       buttons[j].setAttribute("aria-current", "false");
+       buttons[j].innerHTML = '<span class="visuallyhidden">News</span> ' + (j+1);
       }
-      buttons[new_current].className = "current";
-      buttons[new_current].innerHTML = '<span class="visuallyhidden">News</span> ' + (new_current+1) + ' <span class="visuallyhidden">(Current Item)</span>';
+      buttons[new_current].setAttribute("aria-current", "true");
+      buttons[new_current].innerHTML = '<span class="visuallyhidden">News</span> ' + (new_current+1);
     }
 
     index = new_current;
@@ -496,7 +495,9 @@ var myCarousel = (function() {
     settings.animate = false;
     animationSuspended = false;
     _this = carousel.querySelector('[data-action]');
-    _this.innerHTML = '<span class="visuallyhidden">Start Animation </span>▶';
+    _this.innerHTML = '<span aria-hidden="true">▶</span>';
+    _this.setAttribute('aria-label', "Automatic animation");
+    _this.setAttribute("aria-pressed", "false");
     _this.setAttribute('data-action', 'start');
   }
 
@@ -505,7 +506,9 @@ var myCarousel = (function() {
     animationSuspended = false;
     timer = setTimeout(nextSlide, 5000);
     _this = carousel.querySelector('[data-action]');
-    _this.innerHTML = '<span class="visuallyhidden">Stop Animation </span>￭';
+    _this.innerHTML = '<span aria-hidden="true">￭</span>';
+    _this.setAttribute('aria-label', "Automatic animation");
+    _this.setAttribute("aria-pressed", "true");
     _this.setAttribute('data-action', 'stop');
   }
 
