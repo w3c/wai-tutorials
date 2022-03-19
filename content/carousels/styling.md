@@ -50,6 +50,8 @@ Since the navigation buttons added to the carousel are typically small, it is im
 
 In the following example, a filled square is used for buttons associated with items currently not shown. The button for the item shown has rounded corners and inverted colors. When users hover over these buttons using a mouse or focus them using a keyboard, their border is dotted.
 
+The state of the button is conveyed by `aria-current="true"`. Using a CSS attribute selector, it is possible to address the button in its active state.
+
 {::nomarkdown}
 {% include box.html type="start" title="Example" class="example" %}
 {:/}
@@ -68,7 +70,7 @@ In the following example, a filled square is used for buttons associated with it
   color: #fff;
 }
 
-.slidenav button.current {
+.slidenav button[aria-current="true"] {
   border-radius: .5em;
   background-color: #fff;
   color: #333;
