@@ -165,7 +165,7 @@
       pages:
       - name: Labeling Controls
         url: "/tutorials/forms/labels/"
-      - name: Gruping Controls
+      - name: Grouping Controls
         url: "/tutorials/forms/grouping/"
       - name: Form Instructions
         url: "/tutorials/forms/instructions/"
