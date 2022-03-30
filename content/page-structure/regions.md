@@ -130,7 +130,7 @@ View a [complete code example](/tutorials/page-structure/example/) for all regio
 
 {% include ednote.html note="Figure out how to display reference link now that the sidebar is not available anymore." %}
 
-The [Menus tutorial](/tutorials/menus) provides more details on creating menus.
+The [Menus tutorial](/tutorials/menus/) provides more details on creating menus.
 
 
 ## Main content
