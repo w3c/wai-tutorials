@@ -349,7 +349,7 @@ document.getElementById('ex3').addEventListener('submit', function(event){
 {:/}
 
 {::nomarkdown}
-{% include box.html type="start" title="Code:  'CSS" class="example" %}
+{% include box.html type="start" title="Code: CSS" class="example" %}
 {:/}
 
 ~~~css
@@ -432,7 +432,7 @@ In the following example, the availability of a username is checked instantly wh
 {:/}
 
 {::nomarkdown}
-{% include box.html type="start" title="Code:  'JavaScript" class="example" %}
+{% include box.html type="start" title="Code: JavaScript" class="example" %}
 {:/}
 
 ~~~ js
