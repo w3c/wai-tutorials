@@ -169,15 +169,15 @@ The HTML5 `<figure>` element can be used to enclose both the image and its long 
 <figure role="group">
   <img src="chart.png"
     alt="Bar chart showing monthly and total visitors for the first quarter 2014 for sites 1 to 3, described in detail below.">
-    <figcaption>
-      <h2>Overview</h2>
-      <p>The chart shows the website hits for the first quarter of 2014 …</p>
-      <h2>Values</h2>
-      <table>
-        <caption>Example.com Site visitors Jan to March 2014</caption>
-        <tr>…</tr>
-      </table>
-    </figcaption>
+  <figcaption>
+    <h2>Overview</h2>
+    <p>The chart shows the website hits for the first quarter of 2014 …</p>
+    <h2>Values</h2>
+    <table>
+      <caption>Example.com Site visitors Jan to March 2014</caption>
+      <tr>…</tr>
+    </table>
+  </figcaption>
 </figure>
 ~~~
 
