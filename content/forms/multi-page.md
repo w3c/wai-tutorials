@@ -14,8 +14,8 @@ github:
 resource:
   ref: /tutorials/forms/
 navigation:
-  previous: /tutorials/forms/validation/
-  next: /tutorials/forms/multi-page/
+  previous: /tutorials/forms/notifications/
+  next: /tutorials/forms/custom-controls/
 
 
 wcag_success_criteria:
