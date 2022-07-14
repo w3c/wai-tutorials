@@ -76,7 +76,7 @@ A common way to provide feedback is by using the main heading of the web page, u
 {% include box.html type="start" title="Note" class="simple notes" %}
 {:/}
 
-**Note:** The primary purpose of the main heading is still to identify the web page that the user is currently on. When the user is sent back to the same web page because of an error, then a simple indication using the word “error” and possibly the number of errors is helpful.
+The primary purpose of the main heading is still to identify the web page that the user is currently on. When the user is sent back to the same web page because of an error, then a simple indication using the word “error” and possibly the number of errors is helpful.
 
 {::nomarkdown}
 {% include box.html type="end" %}
@@ -466,12 +466,12 @@ document.getElementById('username').addEventListener('keyup', function(){
 {::nomarkdown}
 {% include box.html type="end" %}
 {:/}
-concepts for such error messages 
+
 {::nomarkdown}
 {% include box.html type="start" title="Note" class="simple notes" %}
 {:/}
 
-**Note:** The displayed message in this example is coded using a `<span>` element that has an `aria-live` attribute with the value `polite`. The contents of this so called “live region” are conveyed to screen readers and other assistive technology. The value “polite” de-emphasizes the importance of the message and does not cause screen readers to interrupt their current tasks to read aloud this message. Thus the message is only read once when the user stops typing rather than on every keystroke that the user makes.
+The displayed message in this example is coded using a `<span>` element that has an `aria-live` attribute with the value `polite`. The contents of this so called “live region” are conveyed to screen readers and other assistive technology. The value “polite” de-emphasizes the importance of the message and does not cause screen readers to interrupt their current tasks to read aloud this message. Thus the message is only read once when the user stops typing rather than on every keystroke that the user makes.
 
 {::nomarkdown}
 {% include box.html type="end" %}
@@ -634,7 +634,7 @@ for (var i = inputs.length - 1; i >= 0; i--) {
 {% include box.html type="start" title="Note" class="simple notes" %}
 {:/}
 
-**Note:** The displayed message in this example is coded using a `<span>` element that has an `aria-live` attribute with the value `assertive`. The contents of this so called “live region” is conveyed to screen readers and other assistive technology. The value “assertive” emphasizes the importance of the message and causes screen readers to interrupt their current tasks to read aloud this message. Thus the message is read aloud before the next element that received the focus is announced to the user.
+The displayed message in this example is coded using a `<span>` element that has an `aria-live` attribute with the value `assertive`. The contents of this so called “live region” is conveyed to screen readers and other assistive technology. The value “assertive” emphasizes the importance of the message and causes screen readers to interrupt their current tasks to read aloud this message. Thus the message is read aloud before the next element that received the focus is announced to the user.
 
 {::nomarkdown}
 {% include box.html type="end" %}
