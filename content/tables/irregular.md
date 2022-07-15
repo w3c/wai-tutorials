@@ -33,8 +33,17 @@ support: Developed with support from the <a href="https://www.w3.org/WAI/ACT/">W
 
 ---
 
+{::nomarkdown}
+{% include box.html type="start" h="2" title="Overview" class="full" %}
+{:/}
 
 {% include image.html src="tables/img-irreg.png" class="small right" %} This page covers tables with header cells that span multiple columns and/or rows. Several elements and attributes can be used to define the structure and relationships of the header and data cells.
+
+{::nomarkdown}
+{% include box.html type="end" %}
+{:/}
+
+{% include_cached toc.html %}
 
 For example, a header cell that spans three columns should be associated with corresponding data cells in the column group. This can be done by setting the `scope` attribute of the header cell to the value `colgroup`. The same principle applies to header cells spanning multiple rows. In this case, they are associated with by using the value `rowgroup` in the `scope`  attribute.
 
