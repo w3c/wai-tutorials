@@ -39,7 +39,17 @@ contributors:
 support: Developed with support from the <a href="https://www.w3.org/WAI/ACT/">WAI-ACT project</a>, co-funded by the <strong>European Commission <abbr title="Information Society Technologies">IST</abbr> Programme</strong>.
 ---
 
+{::nomarkdown}
+{% include box.html type="start" h="2" title="Overview" class="full" %}
+{:/}
+
 Provide feedback to users about the results of their form submission, whether successful or not. This includes in-line feedback at or near the form controls and overall feedback that is typically provided after form submission.
+
+{::nomarkdown}
+{% include box.html type="end" %}
+{:/}
+
+{% include_cached toc.html %}
 
 Notifications have to be concise and clear. In particular, error messages should be easy to understand and should provide simple instructions on how they can be resolved. Success messages are also important to confirm task completion.
 
@@ -466,7 +476,7 @@ document.getElementById('username').addEventListener('keyup', function(){
 {::nomarkdown}
 {% include box.html type="end" %}
 {:/}
-concepts for such error messages 
+concepts for such error messages
 {::nomarkdown}
 {% include box.html type="start" title="Note" class="simple notes" %}
 {:/}

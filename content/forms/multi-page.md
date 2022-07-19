@@ -42,7 +42,19 @@ contributors:
 support: Developed with support from the <a href="https://www.w3.org/WAI/ACT/">WAI-ACT project</a>, co-funded by the <strong>European Commission <abbr title="Information Society Technologies">IST</abbr> Programme</strong>.
 ---
 
-Where possible, divide long forms into multiple smaller forms that constitute a series of logical steps or stages. This helps make long forms less daunting and easier to understand, particularly for people who are less experienced using computers or who have various cognitive disabilities. The following basic principles should apply for multi-step forms:
+{::nomarkdown}
+{% include box.html type="start" h="2" title="Overview" class="full" %}
+{:/}
+
+Where possible, divide long forms into multiple smaller forms that constitute a series of logical steps or stages. This helps make long forms less daunting and easier to understand, particularly for people who are less experienced using computers or who have various cognitive disabilities.
+
+{::nomarkdown}
+{% include box.html type="end" %}
+{:/}
+
+{% include_cached toc.html %}
+
+The following basic principles should apply for multi-step forms:
 
 - Repeat [overall instructions](/tutorials/forms/instructions/#overall-instructions) on every page.
 - Split the form up according to its logical groups of controls. For example, in an online shop, shipping and payment information are typically separated.

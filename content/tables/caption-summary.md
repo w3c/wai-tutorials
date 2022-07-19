@@ -34,7 +34,17 @@ support: Developed with support from the <a href="https://www.w3.org/WAI/ACT/">W
 
 ---
 
+{::nomarkdown}
+{% include box.html type="start" h="2" title="Overview" class="full" %}
+{:/}
+
 {% include image.html src="tables/img-caption.png" class="small right" %} Captions and summaries provide information that can help users find, navigate, and understand tables. While they are not required in every case to meet WCAG, captions and summaries are fairly straightforward ways to provide such information that is often needed.
+
+{::nomarkdown}
+{% include box.html type="end" %}
+{:/}
+
+{% include_cached toc.html %}
 
 * A **caption** functions like a heading for a table. Most screen readers announce the content of captions. Captions help users to find a table and understand what it’s about and decide if they want to read it. If the user uses “Tables Mode”, captions are the primary mechanism to identify tables. The caption is provided by the `<caption>` element.
 

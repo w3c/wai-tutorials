@@ -34,7 +34,17 @@ support: Developed with support from the <a href="https://www.w3.org/WAI/ACT/">W
 
 ---
 
+{::nomarkdown}
+{% include box.html type="start" h="2" title="Overview" class="full" %}
+{:/}
+
 {% include image.html src="tables/img-simple.png" class="small right" %} This page covers tables that have one simple header for rows <strong>or</strong> one simple header for columns. Data in such tables is descriptive on its own and unambiguous.
+
+{::nomarkdown}
+{% include box.html type="end" %}
+{:/}
+
+{% include_cached toc.html %}
 
 If the table content is ambiguous or has both column and row headings, the `scope` attribute should be used to avoid confusion. For more guidance on such tables, see [tables with two headers](/tutorials/two-headers/).
 

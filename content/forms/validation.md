@@ -40,7 +40,17 @@ contributors:
 support: Developed with support from the <a href="https://www.w3.org/WAI/ACT/">WAI-ACT project</a>, co-funded by the <strong>European Commission <abbr title="Information Society Technologies">IST</abbr> Programme</strong>.
 ---
 
+{::nomarkdown}
+{% include box.html type="start" h="2" title="Overview" class="full" %}
+{:/}
+
 In addition to providing instructions, validate user input to help users avoid mistakes. HTML5 defines a range of built-in functionality to validate common types of input, such as email addresses and dates. In some situations, such as validating custom controls or supporting legacy browsers, additional scripting may be necessary to validate user input.
+
+{::nomarkdown}
+{% include box.html type="end" %}
+{:/}
+
+{% include_cached toc.html %}
 
 Custom validation needs to notify users in an accessible way as described in the [User Notifications](/tutorials/forms/notifications/) part of this tutorial. Client-side validation alone does not ensure security; therefore data needs to be validated on the server-side as well.
 
