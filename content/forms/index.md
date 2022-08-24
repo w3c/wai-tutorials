@@ -16,7 +16,7 @@ resource_title: Forms Tutorial
 resource:
   ref: /tutorials/
 navigation:
-  next: /tutorials/forms/one-header/
+  next: /tutorials/forms/labels/
 
 wcag_success_criteria:
   - 1.3.1

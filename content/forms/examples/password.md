@@ -3,9 +3,17 @@ title: Complete Password Example
 lang: en
 permalink: /tutorials/forms/examples/password/
 ref: /tutorials/forms/examples/password/
----
 
-[Back to page](/tutorials/forms/notifications/)
+github:
+  branch: 'master-2.0'
+  repository: w3c/wai-tutorials
+  path: 'content/forms/examples/password.md'
+
+resource_title: Forms Tutorial
+
+resource:
+  ref: /tutorials/forms/notifications/
+---
 
 **No data is sent using the following example input field. The password is shown in plain text for demonstration purposes.**
 

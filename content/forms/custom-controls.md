@@ -14,8 +14,7 @@ github:
 resource:
   ref: /tutorials/forms/
 navigation:
-  previous: /tutorials/forms/validation/
-  next: /tutorials/forms/custom-controls/
+  previous: /tutorials/forms/multi-page/
 
 
 wcag_success_criteria:
@@ -31,9 +30,19 @@ contributors:
 support: Developed with support from the <a href="https://www.w3.org/WAI/ACT/">WAI-ACT project</a>, co-funded by the <strong>European Commission <abbr title="Information Society Technologies">IST</abbr> Programme</strong>.
 ---
 
+{::nomarkdown}
+{% include box.html type="start" h="2" title="Overview" class="full" %}
+{:/}
+
 Sometimes form designs require something beyond what is achievable with standard form controls. In such cases, it is possible to build additional functionality and styling to standard controls. To ensure robustness, try to reuse HTML elements that do a subset of the functionality that the final control is intended to cover, and build from there. The following examples provide some general guidance on what to consider to ensure the additions are made accessible.
 
 For components where there is no adequate HTML element to build on, WAI-ARIA attributes can be useful to convey the functionality for people using assistive technologies.
+
+{::nomarkdown}
+{% include box.html type="end" %}
+{:/}
+
+{% include_cached toc.html %}
 
 ## A Share Button
 {:.ex}

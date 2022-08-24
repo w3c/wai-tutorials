@@ -35,7 +35,17 @@ support: Developed with support from the <a href="https://www.w3.org/WAI/ACT/">W
 
 ---
 
+{::nomarkdown}
+{% include box.html type="start" h="2" title="Overview" class="full" %}
+{:/}
+
 {% include image.html src="tables/img-multidir.png" class="small right" %} This page covers tables that have a simple row header and a simple column header. In such tables, the relationship between the headers and data cells becomes quickly ambiguous. For such tables, use the `<th>` element to identify the header cells and the `scope` attribute to declare the direction of each header. The `scope` attribute can be set to `row` or `col` to denote that a header applies to the entire row or column, respectively.
+
+{::nomarkdown}
+{% include box.html type="end" %}
+{:/}
+
+{% include_cached toc.html %}
 
 Additionally, you can use the `<caption>` element to identify the table in a document. This is particularly useful for screen-reader users browsing the web page in “table mode” where they can navigate from table to table. More background and guidance on the using `<caption>` element is provided on the [Caption & Summary page](/tutorials/tables/caption-summary/).
 

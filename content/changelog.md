@@ -15,6 +15,8 @@ resource:
   ref: /tutorials/
 ---
 
+_**Note:** Several pages have been updated in 2022, and the updates are not listed here._
+
 ## August 2018
 
 Fixing some issues:
