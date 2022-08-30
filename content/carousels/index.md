@@ -13,7 +13,7 @@ github:
 resource:
   ref: /tutorials/
 navigation:
-  next: /tutorials/carousels/structure
+  next: /tutorials/carousels/structure/
 
 wcag_success_criteria:
   - 1.3.1
