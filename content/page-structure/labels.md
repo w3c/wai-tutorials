@@ -84,7 +84,7 @@ Use the WAI-ARIA `aria-label` attribute to label the region. Consider this appro
 {:/}
 
 ~~~html
-<nav aria-label="Main Navigation">
+<nav aria-label="Main">
   …
 </nav>
 ~~~
