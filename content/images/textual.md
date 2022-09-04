@@ -231,7 +231,7 @@ The following image is the logo for the Web Accessibility Initiative. It is not 
 
 ## **Example 3:** Mathematical expressions
 
-Historically, math expressions have often been presented as images because of the difficulty of presenting equations and special math symbols with HTML. However, MathML is emerging as the preferred presentation of accessible math on the Web.
+Historically, math expressions have often been presented as images because of the difficulty of presenting equations and special math symbols with HTML. However, MathML is emerging as the preferred presentation of accessible math expressions on the Web.
 
 ### Using images
 
