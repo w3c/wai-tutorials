@@ -3,7 +3,6 @@ title: "Changelog"
 permalink: /tutorials/changelog/
 ref: /tutorials/changelog/
 lang: en
-last_updated: 2019-07-27
 description:
 image: /content-images/wai-tutorials/images/social.png
 github:
@@ -13,9 +12,14 @@ github:
 
 resource:
   ref: /tutorials/
+  
+footer: >
+   <p><strong>Editors:</strong> Eric Eggert, Shadi Abou-Zahra. Update Editor: Brian Elton. Contributors: Shawn Lawton Henry, Anna Belle Leiserson, Sharron Rush, Bim Egan, <a href="https://www.w3.org/groups/wg/ag/participants">AG WG participants</a>, <a href="https://www.w3.org/groups/wg/eowg/participants">EOWG participants</a>.</p>
+   <p>Developed by the Education and Outreach Working Group (<a href="https://www.w3.org/groups/wg/eowg/participants">EOWG</a>). Developed with support from the <a href="https://www.w3.org/WAI/ACT/">WAI-ACT project</a>, co-funded by the European Commission <abbr title="Information Society Technologies">IST</abbr> Programme.</p>  
 ---
 
-_**Note:** Several pages have been updated in 2022, and the updates are not listed here._
+## 2022
+We published several bug fixes and typo fixes throught 2022. When we make substantive edits later in 2022, we will list them on this page.
 
 ## August 2018
 
