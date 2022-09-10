@@ -23,7 +23,7 @@ The WAI Tutorials were developed by the [Education Outreach Working Group (EOWG)
 
 
 ## Project Leadership
-For the initial development:
+For the initial development and updates:
 
 -   **Project Coordinator:**
     -   Shadi Abou-Zahra, W3C WAI
@@ -33,10 +33,10 @@ For the initial development:
 -   **EOWG Co-Chairs:**
     -   Sharron Rush, Knowbility
     -   Brent Bakken, Pearson
--   **EOWG Staff Contact:** [Shawn Lawton
-    Henry](https://www.w3.org/People/shawn), W3C WAI
+-   **EOWG Staff Contact:**
+    -   [Shawn Lawton Henry](https://www.w3.org/People/shawn), W3C WAI
     
-For the updates:
+For the recent updates:
 -   **Project Coordinator:**
     -   Shawn Lawton Henry
 -   **Editor:**
