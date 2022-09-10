@@ -242,7 +242,7 @@ type for each link:
 
 1. If the format identification were written as part of the link text, the image might be considered [decorative](/tutorials/images/decorative/) and have a null (empty) `alt` attribute (`alt=""`). It could remain in the same link element (`<a>`) as the text, to include it in the clickable area. Further discussion is provided in [“Functional Images: Logo image within link text”](/tutorials/images/functional/#logo-image-within-link-text).
 
-2. This particular example is similar to the [Functional Images: icon within linked text in ](/tutorials/images/functional/#icon-image-conveying-information-within-link-text) in that the image conveys information that isn’t given in the link text.
+2. This particular example is similar to the [Functional Images: icon within linked text](/tutorials/images/functional/#icon-image-conveying-information-within-link-text) in that the image conveys information that isn’t given in the link text.
 
 {::nomarkdown}
 {% include box.html type="end" %}
