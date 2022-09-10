@@ -14,8 +14,8 @@ resource:
   ref: /tutorials/
   
 footer: >
-   <p><strong>Editors:</strong> Eric Eggert, Shadi Abou-Zahra. Update Editor: Brian Elton. Contributors: Shawn Lawton Henry, Anna Belle Leiserson, Sharron Rush, Bim Egan, <a href="https://www.w3.org/groups/wg/ag/participants">AG WG participants</a>, <a href="https://www.w3.org/groups/wg/eowg/participants">EOWG participants</a>.</p>
-   <p>Developed by the Education and Outreach Working Group (<a href="https://www.w3.org/groups/wg/eowg/participants">EOWG</a>). Developed with support from the <a href="https://www.w3.org/WAI/ACT/">WAI-ACT project</a>, co-funded by the European Commission <abbr title="Information Society Technologies">IST</abbr> Programme.</p>  
+   <p><strong>Editors:</strong> Eric Eggert, Shadi Abou-Zahra. <strong>Update Editor:</strong> Brian Elton. Contributors: Shawn Lawton Henry, Anna Belle Leiserson, Sharron Rush, Bim Egan, <a href="https://www.w3.org/groups/wg/ag/participants">AG WG participants</a>, <a href="https://www.w3.org/groups/wg/eowg/participants">EOWG participants</a>.</p>
+   <p>Developed by the Education and Outreach Working Group (<a href="https://www.w3.org/groups/wg/eowg">EOWG</a>). Developed with support from the <a href="https://www.w3.org/WAI/ACT/">WAI-ACT project</a>, co-funded by the European Commission <abbr title="Information Society Technologies">IST</abbr> Programme.</p>  
 ---
 
 ## 2022
