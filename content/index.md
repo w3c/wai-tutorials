@@ -11,26 +11,17 @@ github:
   repository: w3c/wai-tutorials
   path: 'content/index.md'
 
-metafooter: true
-last_updated: 2019-07-27
-first_published: "September 2014"
-editors:
-  - Eric Eggert: "https://www.w3.org/People/yatil/"
-  - Shadi Abou-Zahra: "https://www.w3.org/People/shadi/"
-contributors:
-  - Shawn Lawton Henry: "https://www.w3.org/People/Shawn/"
-  - Anna Belle Leiserson
-  - Sharron Rush
-  - Bim Egan
-  - the Web Content Accessibility Guidelines Working Group (<a href="https://www.w3.org/WAI/GL/">WCAG WG</a>)
-  - the Education and Outreach Working Group (<a href="https://www.w3.org/WAI/EO/">EOWG</a>)
-support: Developed with support from the <a href="https://www.w3.org/WAI/ACT/">WAI-ACT project</a>, co-funded by the <strong>European Commission <abbr title="Information Society Technologies">IST</abbr> Programme</strong>.
+footer: >
+   <p><strong>Date:</strong> Updated 9 September 2022. First published September 2014. CHANGELOG.</p>
+   <p><strong>Editors:</strong> Eric Eggert, Shadi Abou-Zahra. Update Editor: Brian Elton. Contributors: Shawn Lawton Henry, Anna Belle Leiserson, Sharron Rush, Bim Egan, <a href="https://www.w3.org/groups/wg/ag/participants">AG WG participants</a>, <a href="https://www.w3.org/groups/wg/eowg/participants">EOWG participants</a>. ACKNOWLEDGEMENTS.</p>
+   <p>Developed by the Education and Outreach Working Group (<a href="https://www.w3.org/groups/wg/eowg">EOWG</a>). Developed with support from the <a href="https://www.w3.org/WAI/ACT/">WAI-ACT project</a>, co-funded by the European Commission <abbr title="Information Society Technologies">IST</abbr> Programme.</p>
 
 resource:
   ref: /tutorials/
 
 changelog: /tutorials/changelog/
 acknowledgements: /tutorials/acknowledgements/
+
 ---
 
 This collection of tutorials shows you how to develop web content that is accessible to people with disabilities, and that provides a better user experience for everyone.
