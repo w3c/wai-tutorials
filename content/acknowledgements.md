@@ -19,7 +19,7 @@ footer: >
    
 ---
 
-The WAI Tutorials were developed by the [Education Outreach Working Group (EOWG)](https://www.w3.org/groups/wg/eowg/) with support from the [WAI-ACT project](https://www.w3.org/WAI/ACT/), co-funded by the European Commission <abbr title="Information Society Technologies">IST</abbr> Programme.</p>  
+The WAI Tutorials were developed by the [Education Outreach Working Group (EOWG)](https://www.w3.org/groups/wg/eowg/) with support from the [WAI-ACT project](https://www.w3.org/WAI/ACT/), co-funded by the European Commission <abbr title="Information Society Technologies">IST</abbr> Programme.
 
 
 ## Project Leadership
@@ -33,16 +33,16 @@ For the initial development:
 -   **EOWG Co-Chairs:**
     -   Sharron Rush, Knowbility
     -   Brent Bakken, Pearson
--   **EOWG Staff Contact:**
-    -    [Shawn Lawton Henry](https://www.w3.org/People/shawn), W3C WAI
+-   **EOWG Staff Contact:** [Shawn Lawton
+    Henry](https://www.w3.org/People/shawn), W3C WAI
     
 For the updates:
--   **Editor:**
-    -   Brian Elton
 -   **Project Coordinator:**
     -   Shawn Lawton Henry
+-   **Editor:**
+    -   Brian Elton
 
-## Contributing Working Group Participants
+## Contributing EOWG Participants
 * Shawn Lawton Henry
 * Anna Belle Leiserson
 * Sharron Rush
@@ -52,17 +52,17 @@ For the updates:
 
 ## Graphics, Photos, Example Text
 
-### Graphics:
+### Graphics
 
 * [Phone designed by Tom Walsh from the Noun Project](http://thenounproject.com/term/phone/52971/)
 * [Fax designed by Vasily Ledovsky from the Noun Project](http://thenounproject.com/term/fax/8017/)
 * [Farm Fresh Web Icons](http://www.fatcow.com/free-icons)
 
-### Photos:
+### Photos
 
 * [Peacock image](https://en.wikipedia.org/wiki/File:Pavo_Real_Venezolano.jpg), by The Photographer [<a href="http://creativecommons.org/publicdomain/zero/1.0/deed.en">CC0</a>], <a href="https://commons.wikimedia.org/wiki/File%3APavo_Real_Venezolano.jpg">via Wikimedia Commons</a>
 * [Burtons Creekside](https://secure.flickr.com/photos/makelessnoise/1423697879/in/set-72157602113996846/) by [Brian on Flickr](https://secure.flickr.com/photos/makelessnoise/)
 
-### Example text source:
+### Example text
 
 * Peacock description from Wikipedia article [Indian peafowl](https://en.wikipedia.org/w/index.php?title=Indian_peafowl&oldid=647099660) as accessed on February, 16th 2015.
