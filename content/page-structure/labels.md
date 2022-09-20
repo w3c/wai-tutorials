@@ -56,7 +56,7 @@ Use `aria-labelledby` to point to an existing element by its (unique) `id`. The 
 
 ~~~html
 <nav aria-labelledby="regionheading">
-  <h3 id="regionheading">On this Page</h3>
+  <h2 id="regionheading">On this Page</h2>
     …
 </nav>
 ~~~
@@ -84,7 +84,7 @@ Use the WAI-ARIA `aria-label` attribute to label the region. Consider this appro
 {:/}
 
 ~~~html
-<nav aria-label="Main Navigation">
+<nav aria-label="Main">
   …
 </nav>
 ~~~

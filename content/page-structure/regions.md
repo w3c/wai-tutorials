@@ -124,12 +124,12 @@ View a [complete code example](/tutorials/page-structure/example/) for all regio
 {:/}
 
 ~~~html
-<nav aria-label="Main Navigation">
+<nav aria-label="Main">
   …
 </nav>
 …
-<nav aria-labelledby="quicknav-heading">
-  <h5 id="quicknav-heading">Quick Navigation</h5>
+<nav aria-labelledby="regionheading">
+  <h2 id="regionheading">On this page</h2>
   …
 </nav>
 ~~~
