@@ -1,6 +1,7 @@
 ---
 title: "Image Maps"
 permalink: /tutorials/images/imagemap/
+ref: /tutorials/images/imagemap/
 lang: en
 description:
 image: /content-images/wai-tutorials/images/social.png
