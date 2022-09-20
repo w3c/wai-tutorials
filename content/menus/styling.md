@@ -155,7 +155,7 @@ See this code in action in the [live example](#example).
 For some types of menus, such as instructional steps, it may be useful to indicate menu items that a user had already visited. However, most menus are not expected to change based on the visited state.
 
 {::nomarkdown}
-{% include box.html type="start" title="Example" h=2 class="example large" %}
+{% include box.html type="start" title="Example" h=2 class="example large" id="example" %}
 {:/}
 
 <nav aria-label="(example) Main Navigation" id="currentnav">
