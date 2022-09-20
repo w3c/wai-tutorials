@@ -84,6 +84,24 @@
           {% if forloop.last %}</ul>{% endif %}
           {% endfor %}
       </div>
+      {% if page.updateeditors %}
+      <div>
+          Update Editor(s):
+          {% for updateeditor in page.updateeditors %}
+          {% if forloop.first %}<ul class="sentence">{% endif %}
+            {% assign editorsize = updateeditor | size %}
+            {% if editorsize == 1 %}
+              {% assign editor1 = updateeditor | replace: '"}', '' %}
+              {% assign editor2 = editor1 | replace: '{"', '' %}
+              {% assign editor3 = editor2 | split: '"=>"' %}
+            <li><a href="{{ editor3[1] }}">{{ editor3[0] }}</a></li>
+            {% else %}
+            <li>{{ updateeditor }}</li>
+            {% endif %}
+          {% if forloop.last %}</ul>{% endif %}
+          {% endfor %}
+      </div>
+      {% endif %}
       <div>
           Contributors:
           {% for contributor in page.contributors %}

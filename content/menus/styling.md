@@ -25,10 +25,12 @@ wcag_techniques:
   - G183
 
 metafooter: true
-last_updated: 2017-04-13
+last_updated: 2022-09-20
 editors:
   - Eric Eggert: "https://www.w3.org/People/yatil/"
   - Shadi Abou-Zahra: "https://www.w3.org/People/shadi/"
+updateeditors:
+  - Brian Elton
 contributors:
   - The Education and Outreach Working Group (<a href="https://www.w3.org/WAI/EO/">EOWG</a>)
 support: Developed with support from the <a href="https://www.w3.org/WAI/ACT/">WAI-ACT project</a>, co-funded by the <strong>European Commission <abbr title="Information Society Technologies">IST</abbr> Programme</strong>.
