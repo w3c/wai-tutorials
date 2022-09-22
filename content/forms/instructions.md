@@ -144,10 +144,10 @@ One approach is to use the WAI-ARIA `aria-labelledby` attribute to associate ins
 </style>
 <form method="post" action="#" id="ex3">
 	<div>
-		<label id="expLabel" for="expire4" tabindex="-1">Expiration date:</label>
+		<label id="expLabel" for="expire4">Expiration date:</label>
 		<span>
 			<input type="text" name="expire" id="expire4" aria-labelledby="expLabel expDesc2">
-			<span id="expDesc2" tabindex="-1">MM/YYYY</span>
+			<span id="expDesc2">MM/YYYY</span>
 		</span>
 	</div>
 </form>
