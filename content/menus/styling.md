@@ -25,10 +25,12 @@ wcag_techniques:
   - G183
 
 metafooter: true
-last_updated: 2017-04-13
+last_updated: 2022-09-20
 editors:
   - Eric Eggert: "https://www.w3.org/People/yatil/"
   - Shadi Abou-Zahra: "https://www.w3.org/People/shadi/"
+updateeditors:
+  - Brian Elton
 contributors:
   - The Education and Outreach Working Group (<a href="https://www.w3.org/WAI/EO/">EOWG</a>)
 support: Developed with support from the <a href="https://www.w3.org/WAI/ACT/">WAI-ACT project</a>, co-funded by the <strong>European Commission <abbr title="Information Society Technologies">IST</abbr> Programme</strong>.
@@ -155,7 +157,7 @@ See this code in action in the [live example](#example).
 For some types of menus, such as instructional steps, it may be useful to indicate menu items that a user had already visited. However, most menus are not expected to change based on the visited state.
 
 {::nomarkdown}
-{% include box.html type="start" title="Example" h=2 class="example large" %}
+{% include box.html type="start" title="Example" h=2 class="example large" id="example" %}
 {:/}
 
 <nav aria-label="(example) Main Navigation" id="currentnav">

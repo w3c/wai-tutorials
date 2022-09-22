@@ -42,7 +42,7 @@ For the recent updates:
 -   **Editor:**
     -   Brian Elton
 
-## Contributing EOWG Participants
+## Contributing Working Group Participants
 * Shawn Lawton Henry
 * Anna Belle Leiserson
 * Sharron Rush

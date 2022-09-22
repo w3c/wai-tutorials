@@ -144,10 +144,10 @@ One approach is to use the WAI-ARIA `aria-labelledby` attribute to associate ins
 </style>
 <form method="post" action="#" id="ex3">
 	<div>
-		<label id="expLabel" for="expire4" tabindex="-1">Expiration date:</label>
+		<label id="expLabel" for="expire4">Expiration date:</label>
 		<span>
 			<input type="text" name="expire" id="expire4" aria-labelledby="expLabel expDesc2">
-			<span id="expDesc2" tabindex="-1">MM/YYYY</span>
+			<span id="expDesc2">MM/YYYY</span>
 		</span>
 	</div>
 </form>
@@ -160,24 +160,12 @@ One approach is to use the WAI-ARIA `aria-labelledby` attribute to associate ins
 {:/}
 
 ~~~ html
-<label id="expLabel" for="expire" tabindex="-1">Expiration date:</label>
+<label id="expLabel" for="expire">Expiration date:</label>
 <span>
 	<input type="text" name="expire" id="expire" aria-labelledby="expLabel expDesc">
-	<span id="expDesc" tabindex="-1">MM/YYYY</span>
+	<span id="expDesc">MM/YYYY</span>
 </span>
 ~~~
-
-{::nomarkdown}
-{% include box.html type="end" %}
-{:/}
-
-{::nomarkdown}
-{% include box.html type="start" title="Note" class="simple notes" %}
-{:/}
-
-{% include ednote.html note="Remove this note" %}
-
-**Note:** At the time of writing those tutorials, it is necessary to add `tabindex="-1"` to elements that are referenced by `aria-labelledby` or `aria-describedby` if those attributes point to _two or more_ elements to make this technique work in Internet Explorer.
 
 {::nomarkdown}
 {% include box.html type="end" %}
