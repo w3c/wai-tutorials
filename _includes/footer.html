@@ -83,11 +83,11 @@
             {% endif%}
           {% if forloop.last %}</ul>{% endif %}
           {% endfor %}
-      </div>
-      {% if page.updateeditors %}
-      <div>
+          &nbsp;
+      {% if page.update_editors %}
+      
           Update Editor:
-          {% for updateeditor in page.updateeditors %}
+          {% for updateeditor in page.update_editors %}
           {% if forloop.first %}<ul class="sentence">{% endif %}
             {% assign editorsize = updateeditor | size %}
             {% if editorsize == 1 %}
@@ -100,9 +100,8 @@
             {% endif %}
           {% if forloop.last %}</ul>{% endif %}
           {% endfor %}
-      </div>
+          &nbsp;
       {% endif %}
-      <div>
           Contributors:
           {% for contributor in page.contributors %}
           {% if forloop.first %}<ul class="sentence">{% endif %}
