@@ -160,6 +160,7 @@ This picture of a sleeping dog is already sufficiently described by the adjacent
 </p>
 ~~~
 
+
 {::nomarkdown}
 {% include box.html type="end" %}
 {:/}
