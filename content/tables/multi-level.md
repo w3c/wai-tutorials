@@ -235,6 +235,8 @@ In this example, table headers are used as subheadings to describe what the next
             40
         </td>
     </tr>
+</tbody>
+<tbody>
     <tr>
         <th id="rome" class="span" colspan="5" scope="rowgroup">
             Rome
