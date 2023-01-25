@@ -180,7 +180,7 @@ In this example, table headers are used as subheadings to describe what the next
 </thead>
 <tbody>
     <tr>
-        <th id="par" class="span" colspan="5" scope="colgroup">
+        <th id="par" class="span" colspan="5" scope="rowgroup">
             Paris
         </th>
     </tr>
@@ -236,7 +236,7 @@ In this example, table headers are used as subheadings to describe what the next
         </td>
     </tr>
     <tr>
-        <th id="rome" class="span" colspan="5" scope="colgroup">
+        <th id="rome" class="span" colspan="5" scope="rowgroup">
             Rome
         </th>
     </tr>
