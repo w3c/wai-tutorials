@@ -20,8 +20,10 @@ last_updated: 2018-08-02
 editors:
   - Eric Eggert: "https://www.w3.org/People/yatil/"
   - Shadi Abou-Zahra: "https://www.w3.org/People/shadi/"
+update_editors:
+  - Brian Elton
 contributors:
-  - The Education and Outreach Working Group (<a href="https://www.w3.org/WAI/EO/">EOWG</a>)
+  - see <a href="/WAI/tutorials/acknowledgements/">Acknowledgements</a>
 support: Developed with support from the <a href="https://www.w3.org/WAI/ACT/">WAI-ACT project</a>, co-funded by the <strong>European Commission <abbr title="Information Society Technologies">IST</abbr> Programme</strong>.
 
 ---
