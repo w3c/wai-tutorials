@@ -156,7 +156,7 @@ This picture of a sleeping dog is already sufficiently described by the adjacent
 ~~~ html
 <p>
   <img src="sleepingdog.jpg" alt="">
-  <strong>Let sleeping dogs lie:</strong> ...
+  <strong>The sleeping dog:</strong> ...
 </p>
 ~~~
 
