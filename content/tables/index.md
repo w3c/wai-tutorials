@@ -14,7 +14,7 @@ github:
 resource_title: Tables Tutorial
 
 metafooter: true
-last_updated: 2019-07-27
+last_updated: 2023-02-16
 editors:
   - Eric Eggert: "https://www.w3.org/People/yatil/"
   - Shadi Abou-Zahra: "https://www.w3.org/People/shadi/"
@@ -31,9 +31,7 @@ navigation:
   next: /tutorials/tables/one-header/
 
 wcag_success_criteria:
-- 1.1.1
-- 1.4.5
-- 1.4.9
+- 1.3.1
 ---
 
 Data tables are used to organize data with a logical relationship in grids. Accessible tables need HTML markup that indicates header cells and data cells and defines their relationship. Assistive technologies use this information to provide context to users.
