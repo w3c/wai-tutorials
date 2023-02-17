@@ -14,17 +14,15 @@ github:
 resource_title: Tables Tutorial
 
 metafooter: true
-last_updated: 2019-07-27
+last_updated: 2023-02-16
 editors:
   - Eric Eggert: "https://www.w3.org/People/yatil/"
   - Shadi Abou-Zahra: "https://www.w3.org/People/shadi/"
+update_editors:
+  - Brian Elton
 contributors:
-  - Anna Belle Leiserson
-  - Shawn Lawton Henry: https://www.w3.org/People/Shawn/
-  - Sharron Rush
-  - the Web Content Accessibility Guidelines Working Group (<a href="https://www.w3.org/WAI/GL/">WCAG WG</a>)
-  - the Education and Outreach Working Group (<a href="https://www.w3.org/WAI/EO/">EOWG</a>)
-support: Developed with support from the <a href="https://www.w3.org/WAI/ACT/">WAI-ACT project</a>, co-funded by the <strong>European Commission <abbr title="Information Society Technologies">IST</abbr> Programme</strong>.
+  - see <a href="/WAI/tutorials/acknowledgements/">Acknowledgements</a>
+support: Developed by the Education and Outreach Working Group (<a href="https://www.w3.org/groups/wg/eowg">EOWG</a>). Developed with support from the <a href="https://www.w3.org/WAI/ACT/">WAI-ACT project</a>, co-funded by the <strong>European Commission <abbr title="Information Society Technologies">IST</abbr> Programme</strong>.
 
 
 resource:
@@ -33,9 +31,7 @@ navigation:
   next: /tutorials/tables/one-header/
 
 wcag_success_criteria:
-- 1.1.1
-- 1.4.5
-- 1.4.9
+- 1.3.1
 ---
 
 Data tables are used to organize data with a logical relationship in grids. Accessible tables need HTML markup that indicates header cells and data cells and defines their relationship. Assistive technologies use this information to provide context to users.

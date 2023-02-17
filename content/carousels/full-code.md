@@ -21,9 +21,11 @@ last_updated: 2017-04-13
 editors:
   - Eric Eggert: "https://www.w3.org/People/yatil/"
   - Shadi Abou-Zahra: "https://www.w3.org/People/shadi/"
+update_editors:
+  - Brian Elton
 contributors:
-  - The Education and Outreach Working Group (<a href="https://www.w3.org/WAI/EO/">EOWG</a>)
-support: Developed with support from the <a href="https://www.w3.org/WAI/ACT/">WAI-ACT project</a>, co-funded by the <strong>European Commission <abbr title="Information Society Technologies">IST</abbr> Programme</strong>.
+  - see <a href="/WAI/tutorials/acknowledgements/">Acknowledgements</a>
+support: Developed by the Education and Outreach Working Group (<a href="https://www.w3.org/groups/wg/eowg">EOWG</a>). Developed with support from the <a href="https://www.w3.org/WAI/ACT/">WAI-ACT project</a>, co-funded by the <strong>European Commission <abbr title="Information Society Technologies">IST</abbr> Programme</strong>.
 ---
 
 {::nomarkdown}
@@ -52,7 +54,7 @@ support: Developed with support from the <a href="https://www.w3.org/WAI/ACT/">W
     e.target.dispatchEvent( event );
   }
   function removePolyfill(e){
-if(!e.c1Generated){ // focus after focusin, so chrome will the first time trigger tow times focusin
+if(!e.c1Generated){ // focus after focusin, so chrome will the first time trigger two times focusin
   d.removeEventListener('focus' ,addPolyfill ,true);
   d.removeEventListener('blur' ,addPolyfill ,true);
   d.removeEventListener('focusin' ,removePolyfill ,true);
@@ -125,7 +127,7 @@ var myCarousel = (function() {
     carousel.className = 'active carousel';
 
 
-    // Create unordered list for controls, and attach click events fo previous and next slide
+    // Create unordered list for controls, and attach click events to previous and next slide
     var ctrls = document.createElement('ul');
 
     ctrls.className = 'controls';
@@ -147,7 +149,7 @@ var myCarousel = (function() {
 
     carousel.appendChild(ctrls);
 
-    // If the carousel is animated or a slide navigation is requested in the settings, anoter unordered list that contains those elements is added. (Note that you cannot supress the navigation when it is animated.)
+    // If the carousel is animated or a slide navigation is requested in the settings, another unordered list that contains those elements is added. (Note that you cannot supress the navigation when it is animated.)
     if (settings.slidenav || settings.animate) {
       slidenav = document.createElement('ul');
 

@@ -65,4 +65,4 @@ For the recent updates:
 
 ### Example text
 
-* Peacock description from Wikipedia article [Indian peafowl](https://en.wikipedia.org/w/index.php?title=Indian_peafowl&oldid=647099660) as accessed on February, 16th 2015.
+* Peacock description from Wikipedia article [Indian peafowl](https://en.wikipedia.org/w/index.php?title=Indian_peafowl&oldid=647099660) as accessed on 16 February 2015.
