@@ -423,7 +423,7 @@ Each figure is wrapped in a `<figure>` element and labeled using a nested `<figc
 {:/}
 
 ~~~html
-<p>The sales volume of our SpaceBear product was steadily the first three quarters but had a huge success in quarter four with the introduction of SuperBear in time for the holiday season. See graphic G3 for details.</p>
+<p>The sales volume of our SpaceBear product was steady for the first three quarters but had huge success in quarter four with the introduction of SuperBear in time for the holiday season. See graphic G3 for details.</p>
 
 <figure role="group" aria-labelledby="fig-t3-capt">
     <figcaption id="fig-t3-capt">G3: SpaceBear sales volume</figcaption>
