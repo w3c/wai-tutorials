@@ -17,7 +17,8 @@ navigation:
   next: /tutorials/page-structure/example/
 
 metafooter: true
-last_updated: 2017-04-13
+last_updated: 2023-02-24
+first_published: March 2015
 editors:
   - Eric Eggert: "https://www.w3.org/People/yatil/"
   - Shadi Abou-Zahra: "https://www.w3.org/People/shadi/"
