@@ -200,7 +200,7 @@ Array.prototype.forEach.call(appsMenuItems, function(el, i){
 		el.addEventListener("click",  function(event){
 			if (this.getAttribute('aria-expanded') == 'false' || this.getAttribute('aria-expanded') ==  null) {
 				this.setAttribute('aria-expanded', "true");
-				subindex = 0;
+				subIndex = 0;
 				gotoSubIndex(this.querySelector('ul'), 0);
 			} else {
 				this.setAttribute('aria-expanded', "false");
@@ -232,15 +232,15 @@ Array.prototype.forEach.call(appsMenuItems, function(el, i){
 				case keys.down:
 				case keys.space:
 					this.click();
-					subindex = 0;
+					subIndex = 0;
 					gotoSubIndex(this.querySelector('ul'), 0);
 					prevdef = true;
 					break;
 				case keys.up:
 					this.click();
 					var submenu = this.querySelector('ul');
-					subindex = submenu.querySelectorAll('li').length - 1;
-					gotoSubIndex(submenu, subindex);
+					subIndex = submenu.querySelectorAll('li').length - 1;
+					gotoSubIndex(submenu, subIndex);
 					prevdef = true;
 					break;
 				case keys.esc:
@@ -525,15 +525,15 @@ Array.prototype.forEach.call(appsMenuItems, function(el, i){
 				case keys.enter:
 				case keys.down:
 					this.click();
-					subindex = 0;
+					subIndex = 0;
 					gotoSubIndex(this.querySelector('ul'), 0);
 					prevdef = true;
 					break;
 				case keys.up:
 					this.click();
 					var submenu = this.querySelector('ul');
-					subindex = submenu.querySelectorAll('li').length - 1;
-					gotoSubIndex(submenu, subindex);
+					subIndex = submenu.querySelectorAll('li').length - 1;
+					gotoSubIndex(submenu, subIndex);
 					prevdef = true;
 					break;
 				case keys.esc:
