@@ -175,7 +175,7 @@ One approach is to use the WAI-ARIA `aria-labelledby` attribute to associate ins
 #### Using `aria-describedby`
 {:.ap}
 
-Another apporach to associate additional instructions with a form field is to use `aria-describedby`. Information referenced by this attribute is made available to the users after the label and other information is announced.
+Another approach to associate additional instructions with a form field is to use `aria-describedby`. Information referenced by this attribute is made available to the users after the label and other information is announced.
 
 {::nomarkdown}
 {% include box.html type="start" title="Code Snippet" class="example" %}
