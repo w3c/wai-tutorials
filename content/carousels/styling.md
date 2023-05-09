@@ -117,3 +117,6 @@ In the following example, a filled square is used for buttons associated with it
 {:/}
 
 {% include ednote.html note="The following paragraph was show in a side column before." %}A [working demo example](/tutorials/carousels/working-example/) for this code is available.
+
+## For smaller screens
+Avoid use of text that is too small for easy reading or that is cut off. [Navigation buttons](https://www.w3.org/WAI/tutorials/carousels/functionality/#add-navigation-buttons) to control the slides should still be present to avoid the reliance on swipe gestures.

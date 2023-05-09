@@ -305,3 +305,10 @@ If the image button (`<input type="image">`) is used, the label is set in the `a
 In left-to-right languages, it is customary to visually position labels to the right of radio buttons and checkboxes, and to the left or directly above other form fields. Maintaining this practice increases predictability and understandability of your form for all users.
 
 In general, placing labels above the form fields helps reduce horizontal scrolling for people with low vision and mobile device users. However, the usefulness of this approach depends on other design aspects, such as the proximity of other nearby form fields and content, and needs to be assessed individually. The aim should be to maintain a close and distinct visual relationship between the label and the form control.
+
+
+## Form field controls for mobile
+When HTML5 form fields are used, a virtual keyboard appears making it easier to input data.
+For example, a `number` field shows a numeric keyboard, a `date` field a native date picker.
+
+While some designs want visual field labels to be dropped, users prefer visible labels as they make the form easier to understand.
