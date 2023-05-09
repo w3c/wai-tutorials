@@ -183,6 +183,9 @@ The [Menus tutorial](/tutorials/menus/) provides more details on creating menus.
 {% include box.html type="end" %}
 {:/}
 
+## Responsive Design
+Components may be collapsed or even hidden on smaller screens, but components that show should appear in the same order for a particular view (set size and orientation). If possible, page structure should be consistent across different screen sizes and orientations, though not a specific WCAG requirement.
+
 {% include ednote.html note="Remove or drastically simplify the next two sections." status="proposed" %}
 
 ## Page Regions in HTML5 Using WAI-ARIA
