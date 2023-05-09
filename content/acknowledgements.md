@@ -47,6 +47,7 @@ For the recent updates:
 * Anna Belle Leiserson
 * Sharron Rush
 * Bim Egan
+* Laura Keen
 * [AG WG participants](https://www.w3.org/groups/wg/ag/participants)
 * [EOWG participants](https://www.w3.org/groups/wg/eowg/participants)
 
