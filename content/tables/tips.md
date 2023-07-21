@@ -31,7 +31,7 @@ support: Developed by the Education and Outreach Working Group (<a href="https:/
 
 -   **Keep it simple:** Complex tables are more work for content creators as well as being harder to interpret for users. It’s usually better to [break up complex tables into simple individual tables](/tutorials/tables/multi-level/#split-up-multi-level-tables), each containing the data for one sub-topic.
 
--   **Responsive design:** On smaller screens, responsive tables often change format. Ensure that the structural relationship is available in all formats.
+-   **Responsive design:** On smaller screens, or when viewing content in a small viewport, responsive tables often change format. Ensure that the structural relationship is available in all formats.
 
 -   **Table separation:** If several tables follow one another, don’t use a single table and put in an additional row of `<th>` cells. Screen readers may read aloud all `<th>` cells in a column, resulting in confusion. [Start a new `<table>` when the topic changes.](/tutorials/tables/multi-level/#split-up-multi-level-tables)
 
