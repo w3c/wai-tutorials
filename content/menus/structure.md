@@ -192,5 +192,5 @@ In the following example the link in the navigation points to the main content o
 {% include box.html type="end" %}
 {:/}
 
-## Responsive Design
-Menu structure should be consistent across screen sizes. Some menu items may be collapsed or even hidden in sub navigation menus, but items that show should appear in the same order and with the same wording and destination. Menus should be accessible by touch and keyboard.
+## Responsive design
+Menu structure should be consistent across screen sizes. Some menu items may be collapsed or even hidden in sub navigation menus, but items that show should appear in the same order and with the same wording and destination.
