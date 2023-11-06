@@ -44,7 +44,7 @@ Images of text display text that is intended to be read. With the current CSS ca
 
 {% include_cached toc.html %}
 
-## **Example 1:** Styled text with decorative effect
+## **Example 1:** Styled text with decorative effect {#styled-text-decorative-effect}
 
 This following image is used to convey a slogan text with decorative effects.
 
