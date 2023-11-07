@@ -201,9 +201,11 @@ progress {
 
 /* Apple Safari and Google Chrome */
 progress::-webkit-progress-bar {
+	background-color: #FFF;
+}
+progress::-webkit-progress-value {
 	background-color: #036;
 }
-
 /* Mozilla Firefox */
 progress::-moz-progress-bar {
 	background-color: #036;
