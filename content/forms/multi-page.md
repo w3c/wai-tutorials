@@ -153,9 +153,9 @@ progress {
   overflow:hidden;
 }
 
-/* progress::-webkit-progress-bar {
+progress::-webkit-progress-bar {
 	background-color:#FFF;
-} */
+}
 progress::-webkit-progress-value {
 	background-color: #036;
 }
