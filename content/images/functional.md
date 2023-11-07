@@ -89,7 +89,7 @@ The following image is the only content of a link that leads to the W3C home pag
 {% include box.html type="end" %}
 {:/}
 
-## **Example 2:** Logo image within link text
+## **Example 2:** Logo image within link text {#logo-image-within-link-text}
 
 In this example, the W3C logo is used to supplement text within a link that leads to the W3C home page. The image does not represent different functionality or convey other information than that already provided in the link text, so a null (empty) value is applied, (`alt=""`), to avoid redundancy and repetition. In effect the image is a decorative adjunct or visual cue to the link text:
 

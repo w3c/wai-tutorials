@@ -1,27 +1,38 @@
 ---
+# Translation instructions are after the "#" character in this first section. They are comments that do not show up in the web page. You do not need to translate the instructions after "#".
+# In this first section, do not translate the words before a colon. For example, do not translate "title:". Do translate the text after "title:".
+
 title: "An alt Decision Tree"
 title_html: "An <code>alt</code> Decision Tree"
-permalink: /tutorials/images/decision-tree/
-ref: /tutorials/images/decision-tree/
-lang: en
-description:
-image: /content-images/wai-tutorials/images/social.png
+lang: en  # Change "en" to the translated-language shortcode
+last_updated: 2017-04-12  # Put the date of this translation YYYY-MM-DD (with month in the middle)
+
+# translators: # remove from the beginning of this line and the lines below: "# " (the hash sign and the space)
+# - name: "Translator Name Here" # Add one -name: line for every translator
+# - name: "Jan Doe"   # Replace Jan Doe with translator name
+# - name: "Jan Doe"   # Replace Jan Doe with name, or delete this line if not multiple translators
+# contributors:
+# - name: "Jan Doe"   # Replace Jan Doe with contributor name, or delete this line if none
+# - name: "Jan Doe"   # Replace Jan Doe with name, or delete this line if not multiple contributors
+
 github:
   branch: 'master-2.0'
   repository: w3c/wai-tutorials
-  path: 'content/images/decision-tree.md'
+  path: 'content/images/decision-tree.md'  # Add the language shortcode to the middle of the filename, for example: content/index.fr.md
 
 resource:
-  ref: /tutorials/images/
+  ref: /tutorials/images/  # Do not change this
+
 navigation:
-  previous: /tutorials/images/imagemap/
-  next: /tutorials/images/tips/
+  previous: /tutorials/images/imagemap/  # Do not change this
+  next: /tutorials/images/tips/  # Do not change this
 
-wcag_techniques:
+permalink: /tutorials/images/decision-tree/ # Add the language shortcode to the end, with no slash at end, for example: /link/to/page/fr
+ref: /tutorials/images/decision-tree/ # Do not change this
 
-
+# In the footer below:
+# Translate the Working Group name. Leave the Working Group acronym in English.
 metafooter: true
-last_updated: 2017-04-12
 editors:
   - Eric Eggert: "https://www.w3.org/People/yatil/"
   - Shadi Abou-Zahra: "https://www.w3.org/People/shadi/"
@@ -50,7 +61,7 @@ This decision tree describes how to use the `alt` attribute of the `<img>` eleme
       _Use an empty `alt` attribute. See [Decorative Images](/tutorials/images/decorative/)._
     -   **… and the text has a specific function, for example is an icon.**
       _Use the `alt` attribute to communicate the function of the image. See [Functional Images](/tutorials/images/functional/)._
-    -   **… and the text in the image is not present otherwise.** _Use the `alt` attribute to include the text of the image. See [Images of Text](/tutorials/images/textual/#image-of-styled-text-with-decorative-effect)._
+    -   **… and the text in the image is not present otherwise.** _Use the `alt` attribute to include the text of the image. See [Images of Text](/tutorials/images/textual/#styled-text-decorative-effect)._
   - {:.no} **No:**
     - Continue.
 - **Is the image used in a link or a button, and would it be hard or impossible to understand what the link or the button does, if the image wasn’t there?**
