@@ -38,7 +38,7 @@ wcag_techniques:
   - ARIA16
 
 metafooter: true
-last_updated: 2019-07-27
+last_updated: 2023-11-08
 editors:
   - Eric Eggert: "https://www.w3.org/People/yatil/"
   - Shadi Abou-Zahra: "https://www.w3.org/People/shadi/"
