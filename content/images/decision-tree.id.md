@@ -55,35 +55,35 @@ Pohon keputusan ini menjelaskan cara menggunakan atribut `alt` dari elemen `<img
 
 - **Apakah gambar tersebut mengandung teks?**
   - {:.yes} **Ya:**
-    -   **… dan teks *sungguhan* yang sama tertulis di dekat gambar.**
+    -   **… dan teks *sungguhan* yang sama tertera di dekat gambar.**
       _Gunakan atribut `alt` kosong. Lihat [Gambar Dekoratif](/tutorials/images/decorative/)._
     -   **… dan teks tersebut ditampilkan hanya untuk efek visual.**
       _Gunakan atribut `alt` kosong. Lihat [Gambar Dekoratif](/tutorials/images/decorative/)._
-    -   **… dan teks tersebut memiliki fungsi yang spesifik, misalnya sebagai icon.**
+    -   **… dan teks tersebut memiliki fungsi yang spesifik, misalnya sebagai ikon.**
       _Gunakan atribut `alt` untuk mengkomunikasikan fungsi dari gambar. Lihat [Gambar Fungsional](/tutorials/images/functional/)._
     -   **… dan teks pada gambar tidak tersedia di tempat lain.** _Gunakan atribut `alt` untuk menyertakan teks pada gambar. Lihat [Gambar Teks](/tutorials/images/textual/#styled-text-decorative-effect)._
   - {:.no} **Tidak:**
     - Lanjut.
-- **Apakah gambar digunakan dalam tautan atau tombol, dan apakah tidak memungkinkan atau sulit untuk memahami fungsi tautan atau tombol tersebut jika gambar dihilangkan?**
+- **Apakah gambar digunakan dalam tautan atau tombol, dan jika gambar dihilangkan apakah fungsi tautan atau tombol tersebut akan sulit atau tidak bisa dipahami?**
   - {:.yes} **Ya:**
-    - _Gunakan atribut `alt` untuk mengkomunikasikan tujuan dari tautan atau aksi yang akan dijalankan. Lihat [Gambar Fungsional](/tutorials/images/functional/)._
+    - _Gunakan atribut `alt` untuk mengkomunikasikan halaman tujuan dari tautan atau aksi yang akan dijalankan. Lihat [Gambar Fungsional](/tutorials/images/functional/)._
   - {:.no} **Tidak:**
     - Lanjut.
-- **Apakah gambar tersebut berkontribusi pada makna halaman atau konteks saat ini?**
+- **Apakah gambar tersebut berkontribusi secara makna pada halaman atau konteks saat ini?**
   - {:.yes} **Ya:**
-    - **… dan berupa grafik atau foto yang sederhana.**
-      _Gunakan deskripsi singkat tentang gambar dengan cara yang bisa menyampaikan maknanya pada atribut `alt`. Lihat [Gambar Informatif](/tutorials/images/informative/)._
-    - **… dan berupa grafik atau penggalan informasi yang kompleks.**
-      _Sertakan informasi yang terkandung dalam gambar pada tempat lain di halaman. Lihat [Gambar Kompleks](/tutorials/images/complex/)._
-    - **… dan menampilkan konten duplikat pada teks *sungguhan* yang tertulis di dekatnya.**
+    - **… dan merupakan grafik atau foto yang sederhana.**
+      _Gunakan deskripsi singkat yang bisa menyampaikan makna gambar pada atribut `alt`. Lihat [Gambar Informatif](/tutorials/images/informative/)._
+    - **… dan merupakan grafik atau penggalan informasi yang kompleks.**
+      _Sertakan informasi yang terkandung dalam gambar di tempat lain pada halaman. Lihat [Gambar Kompleks](/tutorials/images/complex/)._
+    - **… dan merupakan konten duplikat pada teks *sungguhan* yang tertulis di dekatnya.**
       _Gunakan atribut `alt` kosong. Lihat (redundant) [Gambar Fungsional](/tutorials/images/functional/#logo-image-within-link-text)._
   - {:.no} **Tidak:**
     - Lanjut.
-- **Apakah gambar tersebut murni dekoratif atau tidak ditujukan untuk pengguna?**
+- **Apakah gambar tersebut murni dekoratif atau tidak ditujukan kepada pengguna?**
   - {:.yes} **Ya:**
     - _Gunakan atribut `alt` kosong. Lihat [Gambar Dekoratif](/tutorials/images/decorative/)._
   - {:.no} **Tidak:**
     - Lanjut.
-- **Apakah kegunaan gambar tidak tercantum pada daftar di atas atau tidak jelas `alt` teks apa yang perlu diberikan?**
-  - {:.yes} Pohon keputusan ini **tidak** mencakup semua kasus. Untuk informasi lebih rinci mengenai pemberian alternatif teks lihat pada [Halaman Konsep Gambar](/tutorials/images/).
+- **Apakah kegunaan gambar tidak tercantum di atas atau tidak jelas `alt` teks apa yang perlu diberikan?**
+  - {:.yes} Pohon keputusan ini **tidak** mencakup semua kasus. Untuk informasi lebih rinci mengenai pemberian alternatif teks lihat pada [Halaman Konsep Terkait Gambar](/tutorials/images/).
 {:.decision-tree}
