@@ -41,6 +41,8 @@ update_editors:
 contributors:
   - see <a href="/WAI/tutorials/acknowledgements/">Acknowledgements</a>
 support: Developed by the Education and Outreach Working Group (<a href="https://www.w3.org/groups/wg/eowg">EOWG</a>). Developed with support from the <a href="https://www.w3.org/WAI/ACT/">WAI-ACT project</a>, co-funded by the <strong>European Commission <abbr title="Information Society Technologies">IST</abbr> Programme</strong>.
+
+# Read Translations Notes for this resource at https://github.com/w3c/wai-tutorials#readme
 ---
 
 {::nomarkdown}
