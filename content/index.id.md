@@ -40,7 +40,7 @@ Sarana penulisan web (Sistem Manajemen Konten (CMS), editor <abbr title="What yo
 
 ## Hubungan ke WCAG
 
-Tutorial ini memberikan panduan praktik terbaik dalam menerapkan aksesibilitas pada berbagai situasi. Tutorial ini menggabungkan kriteria sukses dan teknik WCAG 2 dari berbagai tingkat pemenuhan. Setiap halaman tutorial mencantumkan kriteria sukses spesifik dan teknik yang digunakan pada halaman tersebut. Cakupan standar normatif [WCAG 2.0](https://www.w3.org/TR/WCAG20/) dan [WCAG 2.1](https://www.w3.org/TR/WCAG21/) yang lebih komprehensif dan materi pendukungnya tersedia di **[Cara Memenuhi WCAG 2: Referensi singkat yang dapat disesuaikan](https://www.w3.org/WAI/WCAG21/quickref/)**.
+Tutorial ini memberikan panduan praktik terbaik dalam menerapkan aksesibilitas pada berbagai situasi. Tutorial ini menggabungkan kriteria sukses dan teknik WCAG 2 dari berbagai tingkat pemenuhan. Setiap halaman tutorial mencantumkan kriteria sukses spesifik dan teknik yang digunakan pada halaman tersebut. Cakupan standar normatif [WCAG 2.0](https://www.w3.org/TR/WCAG20/) dan [WCAG 2.1](https://www.w3.org/TR/WCAG21/) yang lebih komprehensif dan materi pendukungnya tersedia di **[Cara Memenuhi WCAG 2: Referensi cepat yang dapat disesuaikan](https://www.w3.org/WAI/WCAG21/quickref/)**.
 
 ## Sumber Informasi Tambahan
 
