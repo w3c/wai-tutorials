@@ -5,7 +5,7 @@
 title: "Un arbre décisionnel pour l'attribut alt"
 title_html: "Un arbre décisionnel pour l'attribut <code>alt</code>"
 lang: fr  # Change "en" to the translated-language shortcode
-last_updated: 2023-09-20  # Put the date of this translation YYYY-MM-DD (with month in the middle)
+last_updated: 2024-01-15  # Put the date of this translation YYYY-MM-DD (with month in the middle)
 
 translators:
   - name: Rémi Bétin
@@ -75,7 +75,7 @@ Cet arbre décisionnel décrit comment utiliser l'attribut `alt` de l'élément 
       _Utilisez un attribut `alt` vide. Voir [Images fonctionnelles](/tutorials/images/functional/#logo-image-within-link-text) (redondantes)._
   - {:.no} **Non :**
     - Continuez.
-- **Est-ce que l'image est purement décorative, ou pas destinée à l'utilisateur ?**
+- **Est-ce que l'image est purement décorative, ou pas destinée aux utilisateurs ?**
   - {:.yes} **Oui :**
     - _Utilisez un attribut `alt` vide. Voir [Images décoratives](/tutorials/images/decorative/)._
   - {:.no} **Non :**
