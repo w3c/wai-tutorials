@@ -64,7 +64,7 @@ Pohon keputusan ini menjelaskan cara menggunakan atribut `alt` dari elemen `<img
     -   **… dan teks pada gambar tidak tersedia di tempat lain.** _Gunakan atribut `alt` untuk menyertakan teks pada gambar. Lihat [Gambar Teks](/tutorials/images/textual/#styled-text-decorative-effect)._
   - {:.no} **Tidak:**
     - Lanjut.
-- **Apakah gambar digunakan dalam tautan atau tombol, dan jika gambar dihilangkan apakah fungsi tautan atau tombol tersebut akan sulit atau tidak bisa dipahami?**
+- **Apakah gambar digunakan dalam tautan atau tombol, dan jika gambar dihilangkan apakah fungsi tautan atau tombol tersebut akan sulit atau tidak bisa dimengerti?**
   - {:.yes} **Ya:**
     - _Gunakan atribut `alt` untuk mengkomunikasikan halaman tujuan dari tautan atau aksi yang akan dijalankan. Lihat [Gambar Fungsional](/tutorials/images/functional/)._
   - {:.no} **Tidak:**
