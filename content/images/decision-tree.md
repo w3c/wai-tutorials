@@ -5,7 +5,7 @@
 title: "An alt Decision Tree"
 title_html: "An <code>alt</code> Decision Tree"
 lang: en  # Change "en" to the translated-language shortcode
-last_updated: 2017-04-12  # Put the date of this translation YYYY-MM-DD (with month in the middle)
+last_updated: 2024-01-15  # Put the date of this translation YYYY-MM-DD (with month in the middle)
 
 # translators: # remove from the beginning of this line and the lines below: "# " (the hash sign and the space)
 # - name: "Translator Name Here" # Add one -name: line for every translator
@@ -41,6 +41,8 @@ update_editors:
 contributors:
   - see <a href="/WAI/tutorials/acknowledgements/">Acknowledgements</a>
 support: Developed by the Education and Outreach Working Group (<a href="https://www.w3.org/groups/wg/eowg">EOWG</a>). Developed with support from the <a href="https://www.w3.org/WAI/ACT/">WAI-ACT project</a>, co-funded by the <strong>European Commission <abbr title="Information Society Technologies">IST</abbr> Programme</strong>.
+
+# Read Translations Notes for this resource at https://github.com/w3c/wai-tutorials#readme
 ---
 
 {::nomarkdown}
@@ -79,7 +81,7 @@ This decision tree describes how to use the `alt` attribute of the `<img>` eleme
       _Use an empty `alt` attribute. See (redundant) [Functional Images](/tutorials/images/functional/#logo-image-within-link-text)._
   - {:.no} **No:**
     - Continue.
-- **Is the image purely decorative or not intended for the user?**
+- **Is the image purely decorative or not intended for users?**
   - {:.yes} **Yes:**
     - _Use an empty `alt` attribute. See [Decorative Images](/tutorials/images/decorative/)._
   - {:.no} **No:**
