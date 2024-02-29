@@ -2,32 +2,27 @@
 # Translation instructions are after the "#" character in this first section. They are comments that do not show up in the web page. You do not need to translate the instructions after "#".
 # In this first section, do not translate the words before a colon. For example, do not translate "title:". Do translate the text after "title:".
 
-title: "An alt Decision Tree"
-title_html: "An <code>alt</code> Decision Tree"
-lang: en  # Change "en" to the translated-language shortcode
-last_updated: 2024-01-15  # Put the date of this translation YYYY-MM-DD (with month in the middle)
+title: "alt決定木"
+title_html: "<code>alt</code>決定木"
+lang: ja
+last_updated: 2024-02-23 # Put the date of this translation YYYY-MM-DD (with month in the middle)
 
-# translators: # remove from the beginning of this line and the lines below: "# " (the hash sign and the space)
-# - name: "Translator Name Here" # Add one -name: line for every translator
-# - name: "Jan Doe"   # Replace Jan Doe with translator name
-# - name: "Jan Doe"   # Replace Jan Doe with name, or delete this line if not multiple translators
-# contributors:
-# - name: "Jan Doe"   # Replace Jan Doe with contributor name, or delete this line if none
-# - name: "Jan Doe"   # Replace Jan Doe with name, or delete this line if not multiple contributors
+translators:
+  - name: "Hiroya UGA"
 
 github:
-  branch: 'master-2.0'
+  branch: "master-2.0"
   repository: w3c/wai-tutorials
-  path: 'content/images/decision-tree.md'  # Add the language shortcode to the middle of the filename, for example: content/index.fr.md
+  path: "content/images/decision-tree.ja.md"
 
 resource:
-  ref: /tutorials/images/  # Do not change this
+  ref: /tutorials/images/ # Do not change this
 
 navigation:
-  previous: /tutorials/images/imagemap/  # Do not change this
-  next: /tutorials/images/tips/  # Do not change this
+  previous: /tutorials/images/imagemap/ # Do not change this
+  next: /tutorials/images/tips/ # Do not change this
 
-permalink: /tutorials/images/decision-tree/ # Add the language shortcode to the end, with no slash at end, for example: /link/to/page/fr
+permalink: /tutorials/images/decision-tree/ja
 ref: /tutorials/images/decision-tree/ # Do not change this
 
 # In the footer below:
@@ -39,53 +34,51 @@ editors:
 update_editors:
   - Brian Elton
 contributors:
-  - see <a href="/WAI/tutorials/acknowledgements/">Acknowledgements</a>
-support: Developed by the Education and Outreach Working Group (<a href="https://www.w3.org/groups/wg/eowg">EOWG</a>). Developed with support from the <a href="https://www.w3.org/WAI/ACT/">WAI-ACT project</a>, co-funded by the <strong>European Commission <abbr title="Information Society Technologies">IST</abbr> Programme</strong>.
-
+  - 詳細：<a href="/WAI/tutorials/acknowledgements/">謝辞</a>
+support: 教育・啓発ワーキンググループ（<a href="https://www.w3.org/groups/wg/eowg"><abbr title="Education and Outreach Working Group">EOWG</abbr></a>）によって開発されました。このプロジェクトは<a href="https://www.w3.org/WAI/ACT/">WAI-ACTプロジェクト</a>の支援を受けて開発され、<strong>欧州委員会<abbr title="Information Society Technologies">IST</abbr>プログラム</strong>の共同資金援助を受けています。
 # Read Translations Notes for this resource at https://github.com/w3c/wai-tutorials#readme
 ---
 
 {::nomarkdown}
-{% include box.html type="start" h="2" title="Overview" class="full" %}
+{% include box.html type="start" h="2" title="概要" class="full" %}
 {:/}
 
-This decision tree describes how to use the `alt` attribute of the `<img>` element in various situations. For some types of images, there are alternative approaches, such as using CSS background images for decorative images or web fonts instead of images of text.
-
+この決定木（ディシジョンツリー）は、`<img>`要素の`alt`属性の使い方を状況に合わせて説明するためのものです。装飾目的の画像の代わりにCSS背景画像を用いたり、文字画像の代わりにWebフォントを利用するなど、一部の画像の種類には代替手段が存在します。
 {::nomarkdown}
 {% include box.html type="end" %}
 {:/}
 
-- **Does the image contain text?**
+- **その画像は文字を含んでいますか？**
   - {:.yes} **Yes:**
-    -   **… and the text is also present as *real* text nearby.**
-      _Use an empty `alt` attribute. See [Decorative Images](/tutorials/images/decorative/)._
-    -   **… and the text is only shown for visual effects.**
-      _Use an empty `alt` attribute. See [Decorative Images](/tutorials/images/decorative/)._
-    -   **… and the text has a specific function, for example is an icon.**
-      _Use the `alt` attribute to communicate the function of the image. See [Functional Images](/tutorials/images/functional/)._
-    -   **… and the text in the image is not present otherwise.** _Use the `alt` attribute to include the text of the image. See [Images of Text](/tutorials/images/textual/#styled-text-decorative-effect)._
+    - **かつ、その文言が*実際の*テキストとして近くに記載されている場合**
+      _空の`alt`属性を利用してください。詳細：[[装飾目的の画像]](/tutorials/images/decorative/)_
+    - **かつ、その文言が視覚効果のためだけに表示されている場合**
+      _空の`alt`属性を利用してください。詳細：[[装飾目的の画像]](/tutorials/images/decorative/)_
+    - **かつ、その文言がアイコンなど特定の機能を持つ場合**
+      _`alt`属性を、画像の機能を伝えるために用いてください。詳細：[[機能を持つ画像]](/tutorials/images/functional/)_
+    - **かつ、画像内のテキストがそれ以外の場所に存在しない場合** _`alt`属性には画像内の文言を含めてください。詳細：[[文字画像]](/tutorials/images/textual/#styled-text-decorative-effect)_
   - {:.no} **No:**
-    - Continue.
-- **Is the image used in a link or a button, and would it be hard or impossible to understand what the link or the button does, if the image wasn’t there?**
+    - 次へ
+- **その画像はリンクまたはボタンの中で使用されていますか？また、画像が存在しない場合はリンクやボタンがどのような動作をするか理解することが困難あるいは不可能ですか？**
   - {:.yes} **Yes:**
-    - _Use the `alt` attribute to communicate the destination of the link or action taken. See [Functional Images](/tutorials/images/functional/)._
+    - _`alt`属性を、リンク先や実行されるアクションを伝えるために用いてください。詳細：[[機能を持つ画像]](/tutorials/images/functional/)_
   - {:.no} **No:**
-    - Continue.
-- **Does the image contribute meaning to the current page or context?**
+    - 次へ
+- **その画像は現在のページや文脈に意味を与えていますか？**
   - {:.yes} **Yes:**
-    - **… and it’s a simple graphic or photograph.**
-      _Use a brief description of the image in a way that conveys that meaning in the `alt` attribute. See [Informative Images](/tutorials/images/informative/)._
-    - **… and it’s a graph or complex piece of information.**
-      _Include the information contained in the image elsewhere on the page. See [Complex Images](/tutorials/images/complex/)._
-    - **… and it shows content that is redundant to *real* text nearby.**
-      _Use an empty `alt` attribute. See (redundant) [Functional Images](/tutorials/images/functional/#logo-image-within-link-text)._
+    - **かつ、その画像が単純なグラフィックや写真の場合**
+      _`alt`属性値には、意味が伝わるように画像の簡単な説明を用いてください。詳細：[[意味のある画像]](/tutorials/images/informative/)_
+    - **かつ、その画像がグラフまたは複雑な情報の一部の場合**
+      _その画像に含まれている情報を、そのページ内の別の場所に含めてください。詳細：[[複雑な画像]](/tutorials/images/complex/)_
+    - **かつ、その画像が近くに記載されている*実際の*テキストと重複する内容を表している場合**
+      _空の`alt`属性を利用してください。詳細：（冗長な）[[機能を持つ画像]](/tutorials/images/functional/#logo-image-within-link-text)_
   - {:.no} **No:**
-    - Continue.
-- **Is the image purely decorative or not intended for users?**
+    - 次へ
+- **その画像は純粋な装飾目的、またはユーザー向けではないものですか？**
   - {:.yes} **Yes:**
-    - _Use an empty `alt` attribute. See [Decorative Images](/tutorials/images/decorative/)._
+    - _空の`alt`属性を利用してください。詳細：[[装飾目的の画像]](/tutorials/images/decorative/)_
   - {:.no} **No:**
-    - Continue.
-- **Is the image’s use not listed above or it’s unclear what `alt` text to provide?**
-  - {:.yes} This decision tree **does not** cover all cases. For detailed information on the provision of text alternatives refer to the [Image Concepts Page](/tutorials/images/).
+    - 次へ
+- **その画像の用途は前述の一覧にないですか？またはどのような代替テキストを提供するべきか曖昧ですか？**
+  - {:.yes} この決定木はすべてのケースをカバーしているわけでは**ありません**。代替テキストの提供に関する詳細については、「[画像チュートリアル](/tutorials/images/)」を参照してください。
 {:.decision-tree}
