@@ -56,7 +56,7 @@ support: 教育・啓発ワーキンググループ（<a href="https://www.w3.or
       _空の`alt`属性を利用してください。詳細：[[装飾目的の画像]](/tutorials/images/decorative/)_
     - **かつ、その文言がアイコンなど特定の機能を持つ場合**
       _`alt`属性を、画像の機能を伝えるために用いてください。詳細：[[機能を持つ画像]](/tutorials/images/functional/)_
-    - **かつ、画像内のテキストがそれ以外の場所に存在しない場合** _`alt`属性には画像内の文言を含めてください。詳細：[[文字画像]](/tutorials/images/textual/#styled-text-decorative-effect)_
+    - **かつ、画像内のテキストがそれ以外の場所に存在しない場合** _`alt`属性にはその画像内の文言を含めてください。詳細：[[文字画像]](/tutorials/images/textual/#styled-text-decorative-effect)_
   - {:.no} **No:**
     - 次へ
 - **その画像はリンクまたはボタンの中で使用されていますか？また、画像が存在しない場合はリンクやボタンがどのような動作をするか理解することが困難あるいは不可能ですか？**
