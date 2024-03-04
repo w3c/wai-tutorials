@@ -2,8 +2,8 @@
 # Translation instructions are after the "#" character in this first section. They are comments that do not show up in the web page. You do not need to translate the instructions after "#".
 # In this first section, do not translate the words before a colon. For example, do not translate "title:". Do translate the text after "title:".
 
-title: "alt決定木"
-title_html: "<code>alt</code>決定木"
+title: "altディシジョンツリー"
+title_html: "<code>alt</code>ディシジョンツリー"
 lang: ja
 last_updated: 2024-02-23 # Put the date of this translation YYYY-MM-DD (with month in the middle)
 
@@ -43,7 +43,7 @@ support: 教育・啓発ワーキンググループ（<a href="https://www.w3.or
 {% include box.html type="start" h="2" title="概要" class="full" %}
 {:/}
 
-この決定木（ディシジョンツリー）は、`<img>`要素の`alt`属性の使い方を状況に合わせて説明するものです。画像の種類によっては、装飾目的の画像の代わりにCSS背景画像を用いたり、文字画像の代わりにWebフォントを利用するなど、代替手段が存在します。
+このディシジョンツリー（決定木）は、`<img>`要素の`alt`属性の使い方を状況に合わせて説明するものです。画像の種類によっては、装飾目的の画像の代わりにCSS背景画像を用いたり、文字画像の代わりにWebフォントを利用するなど、代替手段が存在します。
 {::nomarkdown}
 {% include box.html type="end" %}
 {:/}
