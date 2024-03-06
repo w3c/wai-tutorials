@@ -9,9 +9,7 @@ last_updated: 2024-02-23 # Put the date of this translation YYYY-MM-DD (with mon
 
 translators:
   - name: "Hiroya UGA"
-
-contributors:
-  - name: "Naoki Nakamura"
+  - name: "寄稿者 Naoki Nakamura"
 
 github:
   branch: "master-2.0"
