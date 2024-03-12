@@ -38,7 +38,7 @@ wcag_techniques:
   - ARIA16
 
 metafooter: true
-last_updated: 2019-07-27
+last_updated: 2023-11-08
 editors:
   - Eric Eggert: "https://www.w3.org/People/yatil/"
   - Shadi Abou-Zahra: "https://www.w3.org/People/shadi/"
@@ -61,7 +61,7 @@ Provide labels to identify all form controls, including text fields, checkboxes,
 
 {% include_cached toc.html %}
 
-Labels need to describe the purpose of the form control. This section of the tutorial describes how to provide labels that are properly associated with form controls. Later sections explain how to provide [instructions](instructions.html), [validate user input](validation.html), and [provide feedback](notifications.html) to help users complete your form.
+Labels need to describe the purpose of the form control. This section of the tutorial describes how to provide labels that are properly associated with form controls. Later sections explain how to provide [instructions](/tutorials/forms/instructions), [validate user input](/tutorials/forms/validation), and [provide feedback](/tutorials/forms/notifications) to help users complete your form.
 
 A label and a form control should be associated with each other either implicitly or explicitly. Web browsers provide the label as a larger clickable area, for example, to select or activate the control. It also ensures that assistive technology can refer to the correct label when presenting a form control.
 
