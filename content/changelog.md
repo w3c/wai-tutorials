@@ -28,6 +28,13 @@ This changelog lists substantive content edits. It does **not** list typo fixes 
 {% include box.html type="end" %}
 {:/}
 
+## May 2023
+Added notes about responsive design/smaller screen considerations to:
+* Page Structure > Page Regions
+* Menus > Structure
+* Forms > Labeling Controls
+* Carousels > Styling
+
 ## February 2023
 
 * In Tables main page, corrected WCAG links under [Related WCAG resources](https://www.w3.org/WAI/tutorials/tables/#related)

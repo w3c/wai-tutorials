@@ -23,7 +23,7 @@ wcag_techniques:
   - ARIA11
 
 metafooter: true
-last_updated: 2017-04-13
+last_updated: 2023-11-08
 editors:
   - Eric Eggert: "https://www.w3.org/People/yatil/"
   - Shadi Abou-Zahra: "https://www.w3.org/People/shadi/"
@@ -191,3 +191,6 @@ In the following example the link in the navigation points to the main content o
 {::nomarkdown}
 {% include box.html type="end" %}
 {:/}
+
+## Responsive design
+Menu structure should be consistent across screen sizes. Some menu items may be collapsed or even hidden in sub navigation menus, but items that show should appear in the same order and with the same wording and destination.

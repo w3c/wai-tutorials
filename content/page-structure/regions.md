@@ -29,7 +29,7 @@ wcag_techniques:
   - ARIA11
 
 metafooter: true
-last_updated: 2022-02-08
+last_updated: 2023-11-08
 editors:
 - Eric Eggert: "https://www.w3.org/People/yatil/"
 - Shadi Abou-Zahra: "https://www.w3.org/People/shadi/"
@@ -183,9 +183,12 @@ The [Menus tutorial](/tutorials/menus/) provides more details on creating menus.
 {% include box.html type="end" %}
 {:/}
 
+## Responsive design
+Components may be collapsed or even hidden on smaller screens, but components that show should appear in the same order for a particular view (set size and orientation). If possible, page structure should be consistent across different screen sizes and orientations, though not a specific WCAG requirement.
+
 {% include ednote.html note="Remove or drastically simplify the next two sections." status="proposed" %}
 
-## Page Regions in HTML5 Using WAI-ARIA
+## Page regions in HTML5 using WAI-ARIA
 {:#accessupport}
 
 Most current web browsers support the above HTML5 elements and convey the information to assistive technology through the accessibility APIs. However, to maximize compatibility with web browsers and assistive technologies that support WAI-ARIA but do not yet support HTML5, it is currently advisable to use both the HTML5 elements and the corresponding WAI-ARIA roles.
@@ -212,7 +215,7 @@ Explore other WAI-ARIA resources:
 * [WAI-ARIA Overview](https://www.w3.org/WAI/intro/aria)
 * [Notes on Using ARIA in HTML](https://www.w3.org/TR/aria-in-html/)
 
-## Page Regions in HTML4 Using WAI-ARIA
+## Page regions in HTML4 using WAI-ARIA
 {:#accessupport-html4}
 
 If HTML5 cannot be used or if an HTML4 page is retrofitted to improve accessibility, add WAI-ARIA code to `div` elements that function as their HTML5 counterparts, for example:

@@ -24,7 +24,7 @@ wcag_success_criteria:
 
 metafooter: true
 first_published: "May 2015"
-last_updated: 2018-08-30
+last_updated: 2023-11-08
 editors:
   - Eric Eggert: "https://www.w3.org/People/yatil/"
   - Shadi Abou-Zahra: "https://www.w3.org/People/shadi/"
@@ -117,3 +117,7 @@ In the following example, a filled square is used for buttons associated with it
 {:/}
 
 {% include ednote.html note="The following paragraph was show in a side column before." %}A [working demo example](/tutorials/carousels/working-example/) for this code is available.
+
+## For smaller screens/small viewports
+Ensure all text is readable and not cut off or unnecessarily truncated. Make sure that [navigation buttons](https://www.w3.org/WAI/tutorials/carousels/functionality/#add-navigation-buttons) to control the slides are available, since some people cannot use swipe gestures.
+
