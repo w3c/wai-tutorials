@@ -120,7 +120,7 @@ if (announceItem) {
 
 Display buttons for each item in the carousel and highlight the current item. This allows users to get an overview of the carousel content, where they are in the sequence and will enable them to navigate directly to any item.
 
-The list with buttons in the example below is added using JavaScript, with a number on the button that corresponds to the carousel item. The buttons are numbered matching the corresponding carousel items. The button for the active carousel item is highlighted both visually, and by using text that is visually hidden (for screen readers).
+The list with buttons in the example below is added using JavaScript, with a number on the button that corresponds to the carousel item. The buttons are numbered matching the corresponding carousel items. The button for the active carousel item is marked as active using `aria-current="true"`, because <a href="https://adrianroselli.com/2020/12/be-careful-with-dynamic-accessible-names.html">assistive technologies such as screen readers have trouble with dynamic accessible names</a>. As a consequence, changing the programmatic button label from, e.g. "News 1" to "News 1 (Current Slide)" is way less robust than using an ARIA attribute than is meant to convey interface state in the first place (like the beforementioned `aria-current`).
 
 {% include ednote.html note="The following paragraph was show in a side column before." %} See the [carousel styling](/tutorials/carousels/styling/) page for more information on how to highlight the active carousel item in an accessible way.
 
@@ -131,9 +131,8 @@ The list with buttons in the example below is added using JavaScript, with a num
 ~~~html
 <ul class="slidenav">
   <li>
-    <button class="current" data-slide="0">
+    <button class="current" data-slide="0" aria-current="true">
       <span class="visuallyhidden">News</span> 1
-      <span class="visuallyhidden">(Current Slide)</span>
     </button>
   </li>
   <li>
@@ -170,7 +169,7 @@ The list with buttons in the example below is added using JavaScript, with a num
   color: #fff;
 }
 
-.slidenav button.current {
+.slidenav button[aria-current="true"] {
   border-radius: .5em;
   background-color: #fff;
   color: #333;
