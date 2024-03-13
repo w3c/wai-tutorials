@@ -67,7 +67,7 @@ In the table below, the headers for the top half of the tables are different to 
     Supplier contacts
   </caption>
   <tr>
-    <th id="blank">&nbsp;</th>
+    <td id="blank">&nbsp;</td>
     <th id="co1" headers="blank">Example 1 Ltd</th>
     <th id="co2" headers="blank">Example 2 Co</th>
   </tr>
@@ -87,7 +87,7 @@ In the table below, the headers for the top half of the tables are different to 
     <td headers="co2 e1">marie@2co.example.com</td>
   </tr>
   <tr>
-    <th>&nbsp;</th>
+    <td>&nbsp;</td>
     <th id="co3" headers="blank">Example 3 Ltd</th>
     <th id="co4" headers="blank">Example 4 Inc</th>
   </tr>
