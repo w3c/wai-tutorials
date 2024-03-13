@@ -154,9 +154,11 @@ progress {
 }
 
 progress::-webkit-progress-bar {
-	background-color:#036;
+	background-color:#FFF;
 }
-
+progress::-webkit-progress-value {
+	background-color: #036;
+}
 progress::-moz-progress-bar {
 	background-color:#036;
 }
@@ -201,6 +203,9 @@ progress {
 
 /* Apple Safari and Google Chrome */
 progress::-webkit-progress-bar {
+	background-color: #FFF;
+}
+progress::-webkit-progress-value {
 	background-color: #036;
 }
 
