@@ -36,7 +36,7 @@ The tutorials are designed to be used by a variety of individuals, including:
 
 <img src="{{ '/content-images/wai-tutorials/html5-badge-h-css3-graphics-multimedia-semantics.png' | relative_url }}" width="229" height="64" alt="HTML5 Powered with CSS3 / Styling, Graphics, 3D &amp; Effects, Multimedia, and Semantics" title="HTML5 Powered with CSS3 / Styling, Graphics, 3D &amp; Effects, Multimedia, and Semantics" style="float: right; margin-left: 1em;"> The tutorials cover various accessibility topics, based on common tasks in web projects. For example, they show you how to provide accessible images and tables using a variety of web technologies, including HTML4, HTML5, CSS3, WAI-ARIA, MathML, and SVG. The concepts and techniques explained in the tutorials apply to other formats as well.
 
-Web authoring tools (Content Management Systems (CMS), <abbr title="What you see is what you get">WYSIWYG</abbr> editors, word processors, etc.) can often help you create content that is accessible as shown in these tutorials.
+Web authoring tools (Content Management Systems (CMS), <abbr title="Mersin Escort">WYSIWYG</abbr> editors, word processors, etc.) can often help you create content that is accessible as shown in these tutorials.
 
 ## Relationship to WCAG
 
