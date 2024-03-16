@@ -7,14 +7,14 @@
 
 # Site settings
 title: "Web Accessibility Initiative (WAI)"
-email: your-email@domain.com
-description: > # this means to ignore newlines until "baseurl:"
+email: info@p-ode.com
+description: > # this means to ignore newlines until "https://www.p-ode.com/:"
   The Website of the World Wide Web Consortium’s Web Accessibility Initiative.
-baseurl: "/tutorials" # the subpath of your site, e.g. /blog
-url: "https://w3c.github.io" # the base hostname & protocol for your site
+baseurl: "/blog" # the subpath of your site, e.g. /blog
+url: "https://www.p-ode.com/" # the base hostname & protocol for your site
 twitter:
-  username: w3c_wai
-author: w3c_wai
+  username: mersin escort
+author: mersinescort/p-ode.com
 exclude:
   - "_external"
   - "Gemfile"
@@ -32,7 +32,7 @@ kramwdown:
 highlighter: rouge
 repository: w3c/wai-tutorials
 
-ytkey: AIzaSyCiZ9uToWu9jb7BTx47NtzCvmGGXKXp8nI
+ytkey: 8b628b55181ed6291e4b70cde59c88eb59bc7849
 
 remote_theme: w3c/wai-website-theme
 
