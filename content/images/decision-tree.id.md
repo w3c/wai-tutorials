@@ -5,7 +5,7 @@
 title: "Pohon Keputusan Penggunaan alt"
 title_html: "Pohon Keputusan Penggunaan <code>alt</code>"
 lang: id  # Change "en" to the translated-language shortcode
-last_updated: 2023-12-05  # Put the date of this translation YYYY-MM-DD (with month in the middle)
+last_updated: 2024-03-18  # Put the date of this translation YYYY-MM-DD (with month in the middle)
 
 translators: # remove from the beginning of this line and the lines below: "# " (the hash sign and the space)
 - name: "Fri Rasyidi" # Add one -name: line for every translator
@@ -55,7 +55,7 @@ Pohon keputusan ini menjelaskan cara menggunakan atribut `alt` dari elemen `<img
 
 - **Apakah gambar tersebut mengandung teks?**
   - {:.yes} **Ya:**
-    -   **… dan teks *sungguhan* yang sama tertera di dekat gambar.**
+    -   **… dan teks pada gambar tersebut juga tersedia secara tertulis di dekatnya.**
       _Gunakan atribut `alt` kosong. Lihat [Gambar Dekoratif](/tutorials/images/decorative/)._
     -   **… dan teks tersebut ditampilkan hanya untuk efek visual.**
       _Gunakan atribut `alt` kosong. Lihat [Gambar Dekoratif](/tutorials/images/decorative/)._
