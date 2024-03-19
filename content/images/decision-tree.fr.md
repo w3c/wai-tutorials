@@ -33,7 +33,7 @@ editors:
   - Shadi Abou-Zahra: "https://www.w3.org/People/shadi/"
 update_editors:
   - Brian Elton
-contributors:
+contributing_participants:
   - Voir <a href="/WAI/tutorials/acknowledgements/">Remerciements</a>
 support: Développé avec le groupe de travail Education et Promotion (<a href="https://www.w3.org/groups/wg/eowg">EOWG</a>). Développé avec le soutien du <a href="https://www.w3.org/WAI/ACT/">projet WAI-ACT</a>, co-financé par le <strong>programme <abbr title="Technologies de la Société de l'information">IST</abbr> de la Commission européenne</strong>.
 ---
