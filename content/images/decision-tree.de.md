@@ -6,6 +6,10 @@ last_updated: 2023-12-22
 
 translators:
   - name: "Alexej Rotar"
+contributors:
+  - name: "Jens Oliver Meiert"
+    link: "https://meiert.com/de/biography/"
+  - name: "Doro Hinrichs"
 
 github:
   branch: 'master-2.0'
@@ -27,7 +31,7 @@ editors:
   - Shadi Abou-Zahra: "https://www.w3.org/People/shadi/"
 update_editors:
   - Brian Elton
-contributors:
+contributing_participants:
   - siehe <a href="/WAI/tutorials/acknowledgements/">Danksagung</a>
 support: Entwickelt von der Arbeitsgruppe für Bildung und Öffentlichkeitsarbeit (<a href="https://www.w3.org/groups/wg/eowg">EOWG</a>). Entwickelt mit der Unterstützung vom <a href="https://www.w3.org/WAI/ACT/">WAI-ACT-Projekt</a>, kofinanziert vom <strong><abbr title="Information Society Technologies">IST</abbr>-Programm der Europäischen Kommission</strong>.
 
