@@ -33,7 +33,7 @@ editors:
   - Shadi Abou-Zahra: "https://www.w3.org/People/shadi/"
 update_editors:
   - Brian Elton
-contributors:
+contributing_participants:
   - <a href="/WAI/tutorials/acknowledgements/">감사의 말</a> 보기
 support: 교육 및 원조 워킹 그룹(<a href="https://www.w3.org/groups/wg/eowg">EOWG</a>)에 의해 개발되었습니다.<a href="https://www.w3.org/WAI/ACT/">WAI-ACT 프로젝트</a>의 지원을 받아 개발되었으며, <strong>유럽 위원회 <abbr title="Information Society Technologies">IST</abbr> 프로그램</strong>이 공동 자금을 지원합니다.
 # Read Translations Notes for this resource at https://github.com/w3c/wai-tutorials#readme
