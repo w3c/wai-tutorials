@@ -9,7 +9,8 @@ last_updated: 2024-02-23 # Put the date of this translation YYYY-MM-DD (with mon
 
 translators:
   - name: "Hiroya UGA"
-  - name: "寄稿者 Naoki Nakamura"
+contributors:
+  - name: "Naoki Nakamura"
 
 github:
   branch: "master-2.0"
@@ -34,7 +35,7 @@ editors:
   - Shadi Abou-Zahra: "https://www.w3.org/People/shadi/"
 update_editors:
   - Brian Elton
-contributors:
+contributing_participants:
   - 詳細：<a href="/WAI/tutorials/acknowledgements/">謝辞</a>
 support: 教育・啓発ワーキンググループ（<a href="https://www.w3.org/groups/wg/eowg"><abbr title="Education and Outreach Working Group">EOWG</abbr></a>）によって開発されました。このプロジェクトは<a href="https://www.w3.org/WAI/ACT/">WAI-ACTプロジェクト</a>の支援を受けて開発され、<strong>欧州委員会<abbr title="Information Society Technologies">IST</abbr>プログラム</strong>の共同資金援助を受けています。
 # Read Translations Notes for this resource at https://github.com/w3c/wai-tutorials#readme
