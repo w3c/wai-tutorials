@@ -4,7 +4,7 @@
 
 title: "alt 의사결정나무"
 title_html: "<code>alt</code> 의사결정나무"
-lang: kr  # Change "en" to the translated-language shortcode
+lang: ko  # Change "en" to the translated-language shortcode
 last_updated: 2024-03-12  # Put the date of this translation YYYY-MM-DD (with month in the middle)
 
 translators:
