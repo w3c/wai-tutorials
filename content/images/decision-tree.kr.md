@@ -9,7 +9,6 @@ last_updated: 2024-03-12  # Put the date of this translation YYYY-MM-DD (with mo
 
 translators:
   - name: "hwahyeon"
-  link: "https://github.com/hwahyeon"
 
 github:
   branch: 'master-2.0'
