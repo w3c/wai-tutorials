@@ -38,7 +38,7 @@ In [Tables tutorial](https://www.w3.org/WAI/tutorials/tables/)
 * Fixing a table header issue in [Tables with Multi-Level Headers](https://www.w3.org/WAI/tutorials/tables/multi-level/#table-with-multiple-column-headers-in-each-column)
   * [GitHub PR #726](https://github.com/w3c/wai-tutorials/pull/726)
 
-## May 2023
+## May 2024
 Added notes about responsive design/smaller screen considerations to:
 * Page Structure > Page Regions
 * Menus > Structure
