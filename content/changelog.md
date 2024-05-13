@@ -27,23 +27,22 @@ This changelog lists substantive content edits. It does **not** list typo fixes 
 {::nomarkdown}
 {% include box.html type="end" %}
 {:/}
-## April 16 2024
-In [Forms tutorial](https://www.w3.org/WAI/tutorials/forms/)
-* Fixing a broken link in [Form Instructions](https://www.w3.org/WAI/tutorials/forms/instructions/#placeholder-text)
+## May 13 2024
+In [Forms tutorial](/tutorials/forms/)
+* Fixing a broken link in [Form Instructions](/tutorials/forms/instructions/#placeholder-text)
   * [GitHub PR #735](https://github.com/w3c/wai-tutorials/pull/735)
-* Fixing a color contrast issue in [Multi-page Forms](https://www.w3.org/WAI/tutorials/forms/multi-page/#using-the-html5-progress-element)
+* Fixing a color contrast issue in [Multi-page Forms](/tutorials/forms/multi-page/#using-the-html5-progress-element)
   * [GitHub PR #732](https://github.com/w3c/wai-tutorials/pull/732)
 
-In [Tables tutorial](https://www.w3.org/WAI/tutorials/tables/)
-* Fixing a table header issue in [Tables with Multi-Level Headers](https://www.w3.org/WAI/tutorials/tables/multi-level/#table-with-multiple-column-headers-in-each-column)
+In [Tables tutorial](/tutorials/tables/)
+* Fixing a table header issue in [Tables with Multi-Level Headers](/tutorials/tables/multi-level/#table-with-multiple-column-headers-in-each-column)
   * [GitHub PR #726](https://github.com/w3c/wai-tutorials/pull/726)
 
-## May 2024
 Added notes about responsive design/smaller screen considerations to:
-* Page Structure > Page Regions
-* Menus > Structure
-* Forms > Labeling Controls
-* Carousels > Styling
+* [Page Structure > Page Regions](/tutorials/page-structure/regions/)
+* [Menus > Structure](/tutorials/menus/structure/)
+* [Forms > Labeling Controls](/tutorials/forms/labels/)
+* [Carousels > Styling](/tutorials/carousels/styling/)
 
 ## February 2023
 
