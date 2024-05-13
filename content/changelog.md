@@ -27,7 +27,7 @@ This changelog lists substantive content edits. It does **not** list typo fixes 
 {::nomarkdown}
 {% include box.html type="end" %}
 {:/}
-## May 13 2024
+## May 2024
 In [Forms tutorial](/tutorials/forms/)
 * Fixing a broken link in [Form Instructions](/tutorials/forms/instructions/#placeholder-text)
   * [GitHub PR #735](https://github.com/w3c/wai-tutorials/pull/735)
