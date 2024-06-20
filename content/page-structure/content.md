@@ -428,8 +428,7 @@ Each figure is wrapped in a `<figure>` element and labeled using a nested `<figc
 <figure role="group" aria-labelledby="fig-t3-capt">
     <figcaption id="fig-t3-capt">G3: SpaceBear sales volume</figcaption>
     <img src="…"
-         alt="SpaceBear sales diagram, showing the huge success in Q4"
-         longdesc="…">
+         alt="SpaceBear sales diagram, showing the huge success in Q4">
     <a href="…">Long Description</a>
 </figure>
 ~~~
