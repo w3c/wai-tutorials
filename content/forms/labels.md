@@ -59,6 +59,7 @@ Provide labels to identify all form controls, including text fields, checkboxes,
 {% include box.html type="end" %}
 {:/}
 
+{::options toc_levels="2,3,4" /}
 {% include_cached toc.html %}
 
 Labels need to describe the purpose of the form control. This section of the tutorial describes how to provide labels that are properly associated with form controls. Later sections explain how to provide [instructions](../instructions), [validate user input](../validation), and [provide feedback](../notifications) to help users complete your form.

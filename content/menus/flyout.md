@@ -45,6 +45,7 @@ People with reduced dexterity, such as tremors, often have trouble operating fly
 {% include box.html type="end" %}
 {:/}
 
+{::options toc_levels="2,3,4" /}
 {% include_cached toc.html %}
 
 ## Indicate submenus
