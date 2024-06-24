@@ -18,7 +18,6 @@ navigation:
   previous: /tutorials/forms/grouping/
   next: /tutorials/forms/validation/
 
-
 wcag_success_criteria:
   - 1.3.1
   - 2.4.6
@@ -56,6 +55,7 @@ Provide instructions to help users understand how to complete the form and use i
 {% include box.html type="end" %}
 {:/}
 
+{::options toc_levels="2,3,4" /}
 {% include_cached toc.html %}
 
 **Important:** Screen readers often switch to “Forms Mode” when they are processing content within a `<form>` element. In this mode they usually only read aloud form elements such as `<input>`, `<select>`, `<textarea>`, `<legend>`, and `<label>`. It is critical to include form instructions in ways that can be read aloud. This will be explained further below.

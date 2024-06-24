@@ -27,7 +27,6 @@ contributing_participants:
   - see <a href="/WAI/tutorials/acknowledgements/">Acknowledgements</a>
 support: Developed by the Education and Outreach Working Group (<a href="https://www.w3.org/groups/wg/eowg">EOWG</a>). Developed with support from the <a href="https://www.w3.org/WAI/ACT/">WAI-ACT project</a>, co-funded by the <strong>European Commission <abbr title="Information Society Technologies">IST</abbr> Programme</strong>.
 
-
 wcag_success_criteria:
   - 1.3.1
 wcag_techniques:
@@ -47,6 +46,7 @@ Mark up website content semantically, so that the website is extensible. Valid s
 {% include box.html type="end" %}
 {:/}
 
+{::options toc_levels="2,3,4" /}
 {% include_cached toc.html %}
 
 ## Articles

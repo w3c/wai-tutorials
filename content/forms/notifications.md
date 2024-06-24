@@ -17,7 +17,6 @@ navigation:
   previous: /tutorials/forms/validation/
   next: /tutorials/forms/multi-page/
 
-
 wcag_success_criteria:
   - 3.3.1
   - 3.3.3
@@ -50,6 +49,7 @@ Provide feedback to users about the results of their form submission, whether su
 {% include box.html type="end" %}
 {:/}
 
+{::options toc_levels="2,3,4" /}
 {% include_cached toc.html %}
 
 Notifications have to be concise and clear. In particular, error messages should be easy to understand and should provide simple instructions on how they can be resolved. Success messages are also important to confirm task completion.
